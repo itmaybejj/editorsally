@@ -1,10 +1,10 @@
 
 const currentUrl = window.location.href;
-const siteUrl = "https://george-gca.github.io";
-let updatedUrl = currentUrl.replace("https://george-gca.github.io/multi-language-al-folio", "");
+const siteUrl = "https://itmaybejj.github.io";
+let updatedUrl = currentUrl.replace("https://itmaybejj.github.io/editorsally", "");
 if (currentUrl.length == updatedUrl.length && currentUrl.startsWith("http://127.0.0.1")) {
   const otherSiteUrl = siteUrl.replace("localhost", "127.0.0.1");
-  updatedUrl = currentUrl.replace(otherSiteUrl + "/multi-language-al-folio", "");
+  updatedUrl = currentUrl.replace(otherSiteUrl + "/editorsally", "");
 }
 if ("pt-br".length > 0) {
   updatedUrl = updatedUrl.replace("/pt-br", "");
@@ -18,70 +18,70 @@ ninja.data = [{
     title: "sobre",
     section: "Menu de navegação",
     handler: () => {
-      window.location.href = "/multi-language-al-folio/pt-br/";
+      window.location.href = "/editorsally/pt-br/";
     },
   },{id: "nav-blog",
           title: "blog",
           description: "um tema simples para acadêmicos",
           section: "Menu de navegação",
           handler: () => {
-            window.location.href = "/multi-language-al-folio/pt-br/blog/";
+            window.location.href = "/editorsally/pt-br/blog/";
           },
         },{id: "nav-publicações",
           title: "publicações",
           description: "publicações por categoria em ordem cronológica reversa. gerado pelo jekyll-scholar.",
           section: "Menu de navegação",
           handler: () => {
-            window.location.href = "/multi-language-al-folio/pt-br/publications/";
+            window.location.href = "/editorsally/pt-br/publications/";
           },
         },{id: "nav-projetos",
           title: "projetos",
           description: "Uma crescente coleção de seus projetos interessantes.",
           section: "Menu de navegação",
           handler: () => {
-            window.location.href = "/multi-language-al-folio/pt-br/projects/";
+            window.location.href = "/editorsally/pt-br/projects/";
           },
         },{id: "nav-repositórios",
           title: "repositórios",
           description: "Edite o `_data/repositories.yml` e mude as listas `github_users` e `github_repos` para incluir seu próprio perfil do GitHub e repositórios.",
           section: "Menu de navegação",
           handler: () => {
-            window.location.href = "/multi-language-al-folio/pt-br/repositories/";
+            window.location.href = "/editorsally/pt-br/repositories/";
           },
         },{id: "nav-cv",
           title: "cv",
           description: "Esta é uma descrição da página. Você pode modificá-la em &#39;_pages/cv.md&#39;. Também pode alterar ou remover o botão no topo de download de pdf.",
           section: "Menu de navegação",
           handler: () => {
-            window.location.href = "/multi-language-al-folio/pt-br/cv/";
+            window.location.href = "/editorsally/pt-br/cv/";
           },
         },{id: "nav-ensino",
           title: "ensino",
           description: "Materiais de cursos que você ministrou. Substitua esse texto com sua descrição.",
           section: "Menu de navegação",
           handler: () => {
-            window.location.href = "/multi-language-al-folio/pt-br/teaching/";
+            window.location.href = "/editorsally/pt-br/teaching/";
           },
         },{id: "nav-membros",
           title: "membros",
           description: "membros do grupo de pesquisa ou laboratório",
           section: "Menu de navegação",
           handler: () => {
-            window.location.href = "/multi-language-al-folio/pt-br/people/";
+            window.location.href = "/editorsally/pt-br/people/";
           },
         },{id: "dropdown-estante-de-livros",
               title: "estante de livros",
               description: "",
               section: "Outras opções",
               handler: () => {
-                window.location.href = "/multi-language-al-folio/pt-br/books/";
+                window.location.href = "/editorsally/pt-br/books/";
               },
             },{id: "dropdown-blog",
               title: "blog",
               description: "",
               section: "Outras opções",
               handler: () => {
-                window.location.href = "/multi-language-al-folio/pt-br/blog/";
+                window.location.href = "/editorsally/pt-br/blog/";
               },
             },{id: "post-a-post-with-plotly-js",
         
@@ -91,7 +91,7 @@ ninja.data = [{
         section: "Postagens",
         handler: () => {
           
-            window.location.href = "/multi-language-al-folio/pt-br/blog/2025/plotly/";
+            window.location.href = "/editorsally/pt-br/blog/2025/plotly/";
           
         },
       },{id: "post-a-post-with-image-galleries",
@@ -102,18 +102,7 @@ ninja.data = [{
         section: "Postagens",
         handler: () => {
           
-            window.location.href = "/multi-language-al-folio/pt-br/blog/2024/photo-gallery/";
-          
-        },
-      },{id: "post-google-gemini-updates-flash-1-5-gemma-2-and-project-astra",
-        
-          title: 'Google Gemini updates: Flash 1.5, Gemma 2 and Project Astra <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
-        
-        description: "We’re sharing updates across our Gemini family of models and a glimpse of Project Astra, our vision for the future of AI assistants.",
-        section: "Postagens",
-        handler: () => {
-          
-            window.open("https://blog.google/technology/ai/google-gemini-update-flash-ai-assistant-io-2024/", "_blank");
+            window.location.href = "/editorsally/pt-br/blog/2024/photo-gallery/";
           
         },
       },{id: "post-a-post-with-tabs",
@@ -124,7 +113,7 @@ ninja.data = [{
         section: "Postagens",
         handler: () => {
           
-            window.location.href = "/multi-language-al-folio/pt-br/blog/2024/tabs/";
+            window.location.href = "/editorsally/pt-br/blog/2024/tabs/";
           
         },
       },{id: "post-a-post-with-typograms",
@@ -135,7 +124,7 @@ ninja.data = [{
         section: "Postagens",
         handler: () => {
           
-            window.location.href = "/multi-language-al-folio/pt-br/blog/2024/typograms/";
+            window.location.href = "/editorsally/pt-br/blog/2024/typograms/";
           
         },
       },{id: "post-a-post-that-can-be-cited",
@@ -146,7 +135,7 @@ ninja.data = [{
         section: "Postagens",
         handler: () => {
           
-            window.location.href = "/multi-language-al-folio/pt-br/blog/2024/post-citation/";
+            window.location.href = "/editorsally/pt-br/blog/2024/post-citation/";
           
         },
       },{id: "post-a-post-with-pseudo-code",
@@ -157,7 +146,7 @@ ninja.data = [{
         section: "Postagens",
         handler: () => {
           
-            window.location.href = "/multi-language-al-folio/pt-br/blog/2024/pseudocode/";
+            window.location.href = "/editorsally/pt-br/blog/2024/pseudocode/";
           
         },
       },{id: "post-a-post-with-code-diff",
@@ -168,7 +157,7 @@ ninja.data = [{
         section: "Postagens",
         handler: () => {
           
-            window.location.href = "/multi-language-al-folio/pt-br/blog/2024/code-diff/";
+            window.location.href = "/editorsally/pt-br/blog/2024/code-diff/";
           
         },
       },{id: "post-a-post-with-advanced-image-components",
@@ -179,7 +168,7 @@ ninja.data = [{
         section: "Postagens",
         handler: () => {
           
-            window.location.href = "/multi-language-al-folio/pt-br/blog/2024/advanced-images/";
+            window.location.href = "/editorsally/pt-br/blog/2024/advanced-images/";
           
         },
       },{id: "post-a-post-with-vega-lite",
@@ -190,7 +179,7 @@ ninja.data = [{
         section: "Postagens",
         handler: () => {
           
-            window.location.href = "/multi-language-al-folio/pt-br/blog/2024/vega-lite/";
+            window.location.href = "/editorsally/pt-br/blog/2024/vega-lite/";
           
         },
       },{id: "post-a-post-with-geojson",
@@ -201,7 +190,7 @@ ninja.data = [{
         section: "Postagens",
         handler: () => {
           
-            window.location.href = "/multi-language-al-folio/pt-br/blog/2024/geojson-map/";
+            window.location.href = "/editorsally/pt-br/blog/2024/geojson-map/";
           
         },
       },{id: "post-a-post-with-echarts",
@@ -212,7 +201,7 @@ ninja.data = [{
         section: "Postagens",
         handler: () => {
           
-            window.location.href = "/multi-language-al-folio/pt-br/blog/2024/echarts/";
+            window.location.href = "/editorsally/pt-br/blog/2024/echarts/";
           
         },
       },{id: "post-a-post-with-chart-js",
@@ -223,7 +212,7 @@ ninja.data = [{
         section: "Postagens",
         handler: () => {
           
-            window.location.href = "/multi-language-al-folio/pt-br/blog/2024/chartjs/";
+            window.location.href = "/editorsally/pt-br/blog/2024/chartjs/";
           
         },
       },{id: "post-a-post-with-tikzjax",
@@ -234,7 +223,7 @@ ninja.data = [{
         section: "Postagens",
         handler: () => {
           
-            window.location.href = "/multi-language-al-folio/pt-br/blog/2023/tikzjax/";
+            window.location.href = "/editorsally/pt-br/blog/2023/tikzjax/";
           
         },
       },{id: "post-a-post-with-bibliography",
@@ -245,7 +234,7 @@ ninja.data = [{
         section: "Postagens",
         handler: () => {
           
-            window.location.href = "/multi-language-al-folio/pt-br/blog/2023/post-bibliography/";
+            window.location.href = "/editorsally/pt-br/blog/2023/post-bibliography/";
           
         },
       },{id: "post-a-post-with-jupyter-notebook",
@@ -256,7 +245,7 @@ ninja.data = [{
         section: "Postagens",
         handler: () => {
           
-            window.location.href = "/multi-language-al-folio/pt-br/blog/2023/jupyter-notebook/";
+            window.location.href = "/editorsally/pt-br/blog/2023/jupyter-notebook/";
           
         },
       },{id: "post-a-post-with-custom-blockquotes",
@@ -267,7 +256,7 @@ ninja.data = [{
         section: "Postagens",
         handler: () => {
           
-            window.location.href = "/multi-language-al-folio/pt-br/blog/2023/custom-blockquotes/";
+            window.location.href = "/editorsally/pt-br/blog/2023/custom-blockquotes/";
           
         },
       },{id: "post-a-post-with-table-of-contents-on-a-sidebar",
@@ -278,7 +267,7 @@ ninja.data = [{
         section: "Postagens",
         handler: () => {
           
-            window.location.href = "/multi-language-al-folio/pt-br/blog/2023/sidebar-table-of-contents/";
+            window.location.href = "/editorsally/pt-br/blog/2023/sidebar-table-of-contents/";
           
         },
       },{id: "post-a-post-with-audios",
@@ -289,7 +278,7 @@ ninja.data = [{
         section: "Postagens",
         handler: () => {
           
-            window.location.href = "/multi-language-al-folio/pt-br/blog/2023/audios/";
+            window.location.href = "/editorsally/pt-br/blog/2023/audios/";
           
         },
       },{id: "post-a-post-with-videos",
@@ -300,7 +289,7 @@ ninja.data = [{
         section: "Postagens",
         handler: () => {
           
-            window.location.href = "/multi-language-al-folio/pt-br/blog/2023/videos/";
+            window.location.href = "/editorsally/pt-br/blog/2023/videos/";
           
         },
       },{id: "post-displaying-beautiful-tables-with-bootstrap-tables",
@@ -311,7 +300,7 @@ ninja.data = [{
         section: "Postagens",
         handler: () => {
           
-            window.location.href = "/multi-language-al-folio/pt-br/blog/2023/tables/";
+            window.location.href = "/editorsally/pt-br/blog/2023/tables/";
           
         },
       },{id: "post-a-post-with-table-of-contents",
@@ -322,7 +311,7 @@ ninja.data = [{
         section: "Postagens",
         handler: () => {
           
-            window.location.href = "/multi-language-al-folio/pt-br/blog/2023/table-of-contents/";
+            window.location.href = "/editorsally/pt-br/blog/2023/table-of-contents/";
           
         },
       },{id: "post-a-post-with-giscus-comments",
@@ -333,18 +322,7 @@ ninja.data = [{
         section: "Postagens",
         handler: () => {
           
-            window.location.href = "/multi-language-al-folio/pt-br/blog/2022/giscus-comments/";
-          
-        },
-      },{id: "post-displaying-external-posts-on-your-al-folio-blog",
-        
-          title: 'Displaying External Posts on Your al-folio Blog <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
-        
-        description: "",
-        section: "Postagens",
-        handler: () => {
-          
-            window.open("https://medium.com/@al-folio/displaying-external-posts-on-your-al-folio-blog-b60a1d241a0a?source=rss-17feae71c3c4------2", "_blank");
+            window.location.href = "/editorsally/pt-br/blog/2022/giscus-comments/";
           
         },
       },{id: "post-a-post-with-redirect",
@@ -355,7 +333,7 @@ ninja.data = [{
         section: "Postagens",
         handler: () => {
           
-            window.location.href = "/multi-language-al-folio/pt-br/assets/pdf/pt-br/example_pdf.pdf";
+            window.location.href = "/editorsally/pt-br/assets/pdf/pt-br/example_pdf.pdf";
           
         },
       },{id: "post-a-post-with-diagrams",
@@ -366,7 +344,7 @@ ninja.data = [{
         section: "Postagens",
         handler: () => {
           
-            window.location.href = "/multi-language-al-folio/pt-br/blog/2021/diagrams/";
+            window.location.href = "/editorsally/pt-br/blog/2021/diagrams/";
           
         },
       },{id: "post-a-post-with-twitter",
@@ -377,7 +355,7 @@ ninja.data = [{
         section: "Postagens",
         handler: () => {
           
-            window.location.href = "/multi-language-al-folio/pt-br/blog/2020/twitter/";
+            window.location.href = "/editorsally/pt-br/blog/2020/twitter/";
           
         },
       },{id: "post-a-distill-style-blog-post",
@@ -388,7 +366,7 @@ ninja.data = [{
         section: "Postagens",
         handler: () => {
           
-            window.location.href = "/multi-language-al-folio/pt-br/blog/2018/distill/";
+            window.location.href = "/editorsally/pt-br/blog/2018/distill/";
           
         },
       },{id: "post-a-post-with-disqus-comments",
@@ -399,7 +377,7 @@ ninja.data = [{
         section: "Postagens",
         handler: () => {
           
-            window.location.href = "/multi-language-al-folio/pt-br/blog/2015/disqus-comments/";
+            window.location.href = "/editorsally/pt-br/blog/2015/disqus-comments/";
           
         },
       },{id: "post-a-post-with-math",
@@ -410,7 +388,7 @@ ninja.data = [{
         section: "Postagens",
         handler: () => {
           
-            window.location.href = "/multi-language-al-folio/pt-br/blog/2015/math/";
+            window.location.href = "/editorsally/pt-br/blog/2015/math/";
           
         },
       },{id: "post-uma-postagem-com-código",
@@ -421,7 +399,7 @@ ninja.data = [{
         section: "Postagens",
         handler: () => {
           
-            window.location.href = "/multi-language-al-folio/pt-br/blog/2015/code/";
+            window.location.href = "/editorsally/pt-br/blog/2015/code/";
           
         },
       },{id: "post-a-post-with-images",
@@ -432,7 +410,7 @@ ninja.data = [{
         section: "Postagens",
         handler: () => {
           
-            window.location.href = "/multi-language-al-folio/pt-br/blog/2015/images/";
+            window.location.href = "/editorsally/pt-br/blog/2015/images/";
           
         },
       },{id: "post-a-post-with-formatting-and-links",
@@ -443,14 +421,14 @@ ninja.data = [{
         section: "Postagens",
         handler: () => {
           
-            window.location.href = "/multi-language-al-folio/pt-br/blog/2015/formatting-and-links/";
+            window.location.href = "/editorsally/pt-br/blog/2015/formatting-and-links/";
           
         },
       },{id: "books-the-godfather",
           title: 'The Godfather',
           description: "",
           section: "",handler: () => {
-              window.location.href = "/multi-language-al-folio/pt-br/books/the_godfather/";
+              window.location.href = "/editorsally/pt-br/books/the_godfather/";
             },},{id: "news-um-anúncio-simples-em-uma-linha",
           title: 'Um anúncio simples em uma linha.',
           description: "",
@@ -458,7 +436,7 @@ ninja.data = [{
           title: 'Um anúncio longo com detalhes',
           description: "",
           section: "Novidades",handler: () => {
-              window.location.href = "/multi-language-al-folio/pt-br/news/announcement_2/";
+              window.location.href = "/editorsally/pt-br/news/announcement_2/";
             },},{id: "news-um-anúncio-simples-em-uma-linha-com-markdown-emoji-sparkles-smile",
           title: 'Um anúncio simples em uma linha com Markdown emoji! :sparkles: :smile:',
           description: "",
@@ -466,53 +444,53 @@ ninja.data = [{
           title: 'projeto 1',
           description: "com imagem de fundo",
           section: "Projetos",handler: () => {
-              window.location.href = "/multi-language-al-folio/pt-br/projects/1_project/";
+              window.location.href = "/editorsally/pt-br/projects/1_project/";
             },},{id: "projects-projeto-2",
           title: 'projeto 2',
           description: "um projeto com imagem de fundo e comentários do giscus",
           section: "Projetos",handler: () => {
-              window.location.href = "/multi-language-al-folio/pt-br/projects/2_project/";
+              window.location.href = "/editorsally/pt-br/projects/2_project/";
             },},{id: "projects-projeto-3-com-um-nome-bem-longo",
           title: 'projeto 3 com um nome bem longo',
           description: "um projeto que redireciona pra outro website",
           section: "Projetos",handler: () => {
-              window.location.href = "/multi-language-al-folio/pt-br/projects/3_project/";
+              window.location.href = "/editorsally/pt-br/projects/3_project/";
             },},{id: "projects-projeto-4",
           title: 'projeto 4',
           description: "outro sem imagem",
           section: "Projetos",handler: () => {
-              window.location.href = "/multi-language-al-folio/pt-br/projects/4_project/";
+              window.location.href = "/editorsally/pt-br/projects/4_project/";
             },},{id: "projects-projeto-5",
           title: 'projeto 5',
           description: "um projeto com imagem de fundo",
           section: "Projetos",handler: () => {
-              window.location.href = "/multi-language-al-folio/pt-br/projects/5_project/";
+              window.location.href = "/editorsally/pt-br/projects/5_project/";
             },},{id: "projects-projeto-6",
           title: 'projeto 6',
           description: "um projeto sem imagem",
           section: "Projetos",handler: () => {
-              window.location.href = "/multi-language-al-folio/pt-br/projects/6_project/";
+              window.location.href = "/editorsally/pt-br/projects/6_project/";
             },},{id: "projects-project-7",
           title: 'project 7',
           description: "with background image",
           section: "Projetos",handler: () => {
-              window.location.href = "/multi-language-al-folio/pt-br/projects/7_project/";
+              window.location.href = "/editorsally/pt-br/projects/7_project/";
             },},{id: "projects-project-8",
           title: 'project 8',
           description: "an other project with a background image and giscus comments",
           section: "Projetos",handler: () => {
-              window.location.href = "/multi-language-al-folio/pt-br/projects/8_project/";
+              window.location.href = "/editorsally/pt-br/projects/8_project/";
             },},{id: "projects-project-9",
           title: 'project 9',
           description: "another project with an image 🎉",
           section: "Projetos",handler: () => {
-              window.location.href = "/multi-language-al-folio/pt-br/projects/9_project/";
+              window.location.href = "/editorsally/pt-br/projects/9_project/";
             },},{
         id: 'social-cv',
         title: 'CV',
         section: 'Redes sociais',
         handler: () => {
-          window.open("/multi-language-al-folio/assets/pdf/pt-br//assets/pdf/[LANG]/example_pdf.pdf", "_blank");
+          window.open("/editorsally/assets/pdf/pt-br//assets/pdf/[LANG]/example_pdf.pdf", "_blank");
         },
       },{
         id: 'social-email',
@@ -533,7 +511,7 @@ ninja.data = [{
         title: 'RSS Feed',
         section: 'Redes sociais',
         handler: () => {
-          window.open("/multi-language-al-folio/feed.xml", "_blank");
+          window.open("/editorsally/feed.xml", "_blank");
         },
       },{
         id: 'social-scholar',
@@ -554,14 +532,14 @@ ninja.data = [{
           title: 'en-us',
           section: 'Idiomas',
           handler: () => {
-            window.location.href = "/multi-language-al-folio" + updatedUrl;
+            window.location.href = "/editorsally" + updatedUrl;
           },
         },{
           id: 'lang-fr-ca',
           title: 'fr-ca',
           section: 'Idiomas',
           handler: () => {
-            window.location.href = "/multi-language-al-folio/fr-ca" + updatedUrl;
+            window.location.href = "/editorsally/fr-ca" + updatedUrl;
           },
         },{
       id: 'light-theme',
