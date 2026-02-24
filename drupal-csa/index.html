@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+  <head>
+    <link rel="icon" type="image/png" href="/assets/favicons/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicons/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/assets/favicons/site.webmanifest" />
+    <meta charset="utf-8" />
+    <title>Drupal CSA Docs — Editor's Ally</title>
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../assets/theme.css" rel="stylesheet" />
+    <meta name="theme-color" content="#712cf9" />
+  </head>
+  <body>
+    <main class="container col-lg-12 mx-auto py-4 docs">
+      <div class="row">
+        <div class="col-12 col-md-5 col-lg-3 mb-5">
+          <div id="on-this-page" class="list-group me-2 position-sticky top-0 pt-3">
+
+          </div>
+        </div>
+        <div class="col-12 col-md-7 col-lg-9 pt-3">
+          <div data-bs-spy="scroll" data-bs-target="#on-this-page" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0">
+            <h1>Drupal CSA Docs</h1>
+            <section>
+              <h2 id="concepts">Key concepts</h2>
+              <p>
+                <strong>Good configurations suppress unhelpful alerts, so content authors can focus on issues they should fix</strong>.</p>
+              <p>
+                Understanding key moments in the testing lifecycle helps put configuration options in context:
+              </p>
+              <ol>
+                <li>
+                  Gather elements in specified page regions, e.g.:<br><code>body > *:not('.ed11y-element')</code>
+                </li>
+                <li>
+                  Drop elements that match ignore selectors, e.g.:<br><code>.widgets, .utility-menu</code>
+                </li>
+                <li>
+                  Run tests and sync results to the dashboard.
+                </li>
+                <li>
+                  If split configuration is active and the user is a content editor, filter results:
+                  <ul>
+                    <li>Drop results on elements from outside specified <strong><em>content</em></strong> regions, e.g.:<br><code>main, footer</code></li>
+                    <li>Drop results on elements that match <strong><em>content</em></strong> ignore selectors.</li>
+                    <li>Drop results from tests set to "Developer only."</li>
+                  </ul>
+                </li>
+                <li>Open the panel and draw alerts if configuration matches an auto-open setting.</li>
+              </ol>
+            </section>
+            <section>
+              <h3 id="dismiss">Dismiss alerts</h3>
+              <p>Tests can be configured in the library as errors or warnings ("manual checks"). Warnings can be dismissed. There are two types of dismissals:</p>
+              <ul>
+                <li>"Ignore" is stored as a user preference: the alert is now hidden for the current user, but only the current user.</li>
+                <li>"Mark OK" hides the alert for all users.</li>
+              </ul>
+              <p>Whether a user is able to dismiss an alert is controlled at the role level in Drupal's user permissions. <strong>Most authors should be allowed to dismiss alerts</strong>. There is no point in assigning someone a manual check if they cannot mark the item as having been checked.</p>
+              <h3 id="specify-elements">Specify check areas</h3>
+              <p>These configuration settings are the most important!</p>
+              <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
+                <label for="edit-content-root">Check content in these containers</label>
+                <div><textarea id="edit-content-root" name="content_root" rows="1" cols="30" disabled></textarea>
+                </div>
+                <div class="mt-3">
+                  <label for="edit-ignore-elements">Skip over these elements</label>
+                  <div>
+                    <textarea id="edit-ignore-elements" disabled name="ignore_elements" rows="1" cols="30" class=""></textarea>
+                  </div>
+                </div>
+              </div>
+              <p>
+                Set the first to include any parts of the page content authors can edit. E.g., if they can edit the <code>main</code> content area, <code>.sidebar</code> and <code>.footer-column-two</code>, set those selectors as your content check area.
+              </p>
+              <p>
+                Use the second to "knock out" subsections. E.g., if <code>main</code> contains various widgets and embeds that only developers can modify, list those: <code>.widget-1, .social-embed</code>;
+              </p>
+              <p>If you are using the split configuration, you will see a similar pair of settings on the Developer Tests tab:</p>
+              <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
+                <div class="fieldset__wrapper">
+                  <fieldset ]aria-describedby="edit-dev-check-root--wrapper--description" id="edit-dev-check-root--wrapper">
+                  <legend>
+                    Developer check area
+                  </legend>
+                  <div class="fieldset__wrapper fieldset__wrapper--group">
+
+                    <div id="edit-dev-check-root">
+                      <div>
+                      <input aria-describedby="edit-dev-check-root--description" type="radio" id="edit-dev-check-root-automatic" name="dev_check_root" value="automatic" checked="checked">
+                      <label for="edit-dev-check-root-automatic" class="form-item__label option">All elements</label>
+                    </div>
+                      <div class="d-flex">
+                        <input aria-describedby="edit-dev-check-root--description" type="radio" id="edit-dev-check-root-match" name="dev_check_root" value="match" class="align-self-baseline mt-1 me-1">
+                        <label for="edit-dev-check-root-match" class="form-item__label option">Only the containers listed in the Content Setting tab</label>
+                      </div>
+                      <div class="">
+                        <input aria-describedby="edit-dev-check-root--description" type="radio" id="edit-dev-check-root-specify" name="dev_check_root" value="specify" class="form-radio form-boolean form-boolean--type-radio">
+                        <label for="edit-dev-check-root-specify" class="">The specific containers listed below</label>
+                      </div>
+                    </div>
+
+                  </div>
+                </fieldset>
+
+                  <div class="">
+                    <label for="edit-always-ignore" class="mt-3">Ignore for both developers and content editors</label>
+                    <div class="form-textarea-wrapper">
+                      <textarea  id="edit-always-ignore" name="always_ignore" rows="1" cols="20" placeholder=""></textarea>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+              <p>The key thing to know about the developer check areas is that they are <strong>not independent</strong> of the content check areas. The developer areas are checked, and then those results are filtered to match the content areas.</p>
+              <p>Any areas that are excluded for developers will also be excluded for content editors. Do not exclude editable content areas!</p>
+
+              <h3 id="pages">Specify pages/users</h3>
+              <p>
+                There is not currently a GUI for turning off tests by content type or route. There are two different selector-based configuration items that can accomplish this using selectors:
+              </p>
+              <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
+                <label for="edit-no-load" class="form-item__label">Do not check on pages with these elements</label>
+                <div class="form-textarea-wrapper">
+                  <textarea data-drupal-selector="edit-no-load" aria-describedby="edit-no-load--description" id="edit-no-load" name="no_load" rows="1" cols="20" class="form-textarea resize-vertical form-element form-element--type-textarea form-element--api-textarea"></textarea>
+                </div>
+
+                <label for="edit-ignore-all-if-absent" class="form-item__label">Hide all alerts on pages where these elements are not present</label>
+                <div class="form-textarea-wrapper">
+                  <textarea data-drupal-selector="edit-ignore-all-if-absent" aria-describedby="edit-ignore-all-if-absent--description" id="edit-ignore-all-if-absent" name="ignore_all_if_absent" rows="1" cols="20" class="form-textarea resize-vertical form-element form-element--type-textarea form-element--api-textarea"></textarea>
+                </div>
+
+              </div>
+              <p>
+                The first will hide the checker altogether: no tests will run or sync, and the toolbar will not show.
+              </p>
+              <p>
+                The second will start the checker minimized, and auto-mark (for the current user) all issues as "Ignored," even if they are errors. This allows the tests to run and update the dashboard, and allows the user to open the checker and use its tools.
+              </p>
+              <p>
+                If you want to use these to control which users see the checker, you may need to adjust your theme to output a class, e.g. <code>.user-247</code>
+              </p>
+
+              <h3 id="tests-off">Turn off tests</h3>
+              <p>When all else fails, both the content and developer tabs have options to turn off tests altogether.</p>
+
+              <h2 id="positioning">Fix tip positioning</h2>
+              <h2 id="modify-tips">Modify tips</h2>
+              <h2 id="custom-tests">Add custom tests</h2>
+              <h2 id="reports">Use &amp; refresh reports</h2>
+              <h2 id="runtime">Override config at runtime</h2>
+            </section>
+
+          </div>
+        </div>
+      </div>
+    </main>
+    <script
+      src="../assets/dist/js/bootstrap.bundle.min.js"
+      class="astro-vvvwv3sm"
+    ></script>
+    <script src="../assets/theme.js"></script>
+  </body>
+</html>
