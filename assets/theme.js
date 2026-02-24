@@ -15,6 +15,9 @@
             <li class="nav-item"><a href="../contacts" class="nav-link">Contacts</a></li>
           </ul>
         </header>`;*/
+  // const validTranslations = ['da', 'de', 'el', 'es', 'fr', 'hu', 'it', 'jp', 'nb', 'nl', 'pl', 'pt-br', 'pt-pt', 'sv', 'uk', 'zh'];\
+  const validTranslations = [];
+  const langCode = validTranslations.includes(document.documentElement.lang) ? document.documentElement.lang : 'en';
   const headerTemplate = `
     <header>
     <nav class="navbar navbar-expand-md bg-body-secondary">
@@ -33,17 +36,17 @@
         <div class="offcanvas-body">
           <ul class="navbar-nav justify-content-end flex-grow-1 pt-2 nav-pills">
             <li class="nav-item">
-              <a href="../about" class="nav-link">About</a>
+              <a href="/${langCode}/about" class="nav-link">About</a>
             </li>
-            <li class="nav-item"><a href="../projects" class="nav-link">Projects</a></li>
-            <li class="nav-item"><a href="../membership" class="nav-link">Membership</a></li>
-            <li class="nav-item"><a href="../contacts" class="nav-link">Contacts</a></li>
+            <li class="nav-item"><a href="/${langCode}/projects" class="nav-link">Projects</a></li>
+            <li class="nav-item"><a href="/${langCode}/membership" class="nav-link">Membership</a></li>
+            <li class="nav-item"><a href="/${langCode}/contacts" class="nav-link">Contacts</a></li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Docs
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="../drupal-csa">Drupal CSA Module</a></li>
+                <li><a class="dropdown-item" href="../drupal">Drupal CSA Module</a></li>
                 <!--<li><a class="dropdown-item" href="#">WordPress plugin</a></li>-->
                 <li>
                   <hr class="dropdown-divider">
@@ -62,11 +65,13 @@
     `
   const headerElement = document.createElement('div');
   headerElement.innerHTML = headerTemplate;
+
   document.querySelector('body').prepend(headerElement);
   const navLinks = document.querySelectorAll('header .nav-link');
   const currentPath = window.location.pathname;
   navLinks.forEach(link => {
-    if (currentPath.includes(link.getAttribute('href').replaceAll('.', ''))) {
+    if (link.getAttribute('href') !== '/' && currentPath.includes(link.getAttribute('href'))) {
+      console.log(link.href);
       link.classList.add('active');
       link.setAttribute('aria-current', 'page');
     }
@@ -74,6 +79,15 @@
   if (currentPath === '/') {
     navLinks[0].classList.add('active');
     navLinks[0].setAttribute('aria-current', 'page');
+    let goTo = 'en'
+    if (navigator.languages
+    ) {
+      const intersection = navigator.languages.filter(item => validTranslations.includes(item));
+      if (intersection.length) {
+        goTo = intersection[0];
+      }
+    };
+    window.location.replace(`/${goTo}/about`);
   }
 
   /* Footer **********************/
@@ -93,7 +107,8 @@
       const link = document.createElement('a');
       link.setAttribute('class', 'list-group-item list-group-item-action was-h2')
       link.textContent = heading.textContent;
-      link.setAttribute('href', `#${heading.id}`);
+      let theLink = heading.id ? heading.id : heading.closest('[id]').id;
+      link.setAttribute('href', `#${theLink}`);
       if (heading.tagName === 'H3') {
         link.classList.add('small', 'pt-1', 'pb-1', 'was-h3');
         link.classList.remove('was-h2');
