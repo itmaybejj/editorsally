@@ -21,9 +21,7 @@ const iframeBlob = new Blob([iframePlaceholder], { type: 'text/html' });
 const iSrc = URL.createObjectURL(iframeBlob);
 
 ed11yContain.innerHTML = `
-      <p>${Drupal.t('This page provides a simple text editor that demonstrates some common alerts, using your settings.')}</p>
-      		<div id="editoria11y-demo" style="font-size: 2rem; font-family: serif;">Editoria11y: All Tests</div>
-
+      <p>This page provides a simple text editor that demonstrates some common alerts.</p>
         <section id="headings">
 
             <h2 id="heading-tests">Headings</h2>
@@ -144,7 +142,7 @@ ed11yContain.innerHTML = `
 
 		<p>Video flagged as manual check needed for captioning:</p>
 		<div class="positive">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/QGsevnbItdU?si=W_b2i2o_n5v1ArvA" title="YouTube video player" sandbox="allow-scripts allow-same-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="origin" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/QGsevnbItdU?si=W_b2i2o_n5v1ArvA" title="YouTube video player" sandbox="allow-scripts allow-same-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="origin" allowfullscreen></iframe>
 
 		</div>
 		

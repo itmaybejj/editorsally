@@ -10,16 +10,13 @@
     <title>Editoria11y</title>
     <link href="/assets/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link href="/assets/theme.css" rel="stylesheet" />
+    <link rel="stylesheet" media="all" href="/assets/ed11y/css/editoria11y.min.css">
     <meta name="theme-color" content="#712cf9" />
   </head>
   <body>
     <main class="container col-lg-12 mx-auto py-5">
-      <h1 class="text-body-emphasis pt-2 pb-5">Community-supported.<br>Open Source.</h1>
-      <div id="ed11y-demo"></div>
-      <!--<div class="mb-5">
-        <a href="../examples" class="btn btn-primary btn-lg px-4"
-          >CTA</a
-        >-->
+      <h1 class="text-body-emphasis pt-2 pb-5">Editoria11y Demo</h1>
+      <div id="ed11y-demo" class="p-5" style="border: 1px solid;"></div>
 
     </main>
     <script
@@ -27,5 +24,92 @@
       class="astro-vvvwv3sm"
     ></script>
     <script src="/assets/theme.js"></script>
+    <script src="/assets/demo.js"></script>
+    <script src="/assets/ed11y/js/ed11y.umd.js"></script>
+    <script src="/assets/ed11y/js/lang/en.umd.js"></script>
+    <script>
+      const ed11y = new Ed11y.Ed11y({
+        alertMode : 'active',
+        panelNoCover: '#bd-theme',
+        embeddedContentPlugin: true,
+        linksAdvancedPlugin: true,
+        developerPlugin: true,
+
+        checks: {
+          IMAGE_FIGURE_DECORATIVE: true, // csa controlled
+          IMAGE_FIGURE_DUPLICATE_ALT: true,
+
+          // Link checks
+          LINK_FILE_EXT: true, // @todo test v LinkPurpose
+
+          // Embedded content checks
+          EMBED_UNFOCUSABLE: true,
+          EMBED_MISSING_TITLE: true,
+          EMBED_GENERAL: true,
+
+          // Quality assurance checks
+          QA_BAD_LINK: {
+            sources: '',
+          },
+          QA_NESTED_COMPONENTS: {
+            sources: '',
+          },
+          QA_JUSTIFY: true,
+
+          LINK_URL: {
+            maxLength: 20,
+          },
+
+          LINK_NEW_TAB: true,
+          IMAGE_DECORATIVE_CAROUSEL: true, // csa
+          IMAGE_FIGURE_DECORATIVE: true,
+          DUPLICATE_TITLE: {
+            dismissAll: true,
+          },
+          LINK_EMPTY_LABELLEDBY: true,
+          LINK_STOPWORD_ARIA: true,
+          LINK_IDENTICAL_NAME: {
+            dismissAll: true,
+          },
+          LABELS_MISSING_IMAGE_INPUT: true,
+          LABELS_INPUT_RESET: true,
+          LABELS_MISSING_LABEL: true,
+          LABELS_ARIA_LABEL_INPUT: true,
+          LABELS_NO_FOR_ATTRIBUTE: true,
+          LABELS_PLACEHOLDER: true,
+          EMBED_UNFOCUSABLE: true,
+          QA_SMALL_TEXT: true,
+          // Meta checks
+          META_LANG: true,
+          META_SCALABLE: true,
+          META_MAX: true,
+          META_REFRESH: true,
+          META_TITLE: true,
+          // Developer checks
+          DUPLICATE_ID: true,
+          UNCONTAINED_LI: true,
+          TABINDEX_ATTR: true,
+          HIDDEN_FOCUSABLE: true,
+          LABEL_IN_NAME: true,
+          BTN_EMPTY: true,
+          BTN_EMPTY_LABELLEDBY: true,
+          BTN_ROLE_IN_NAME: true,
+
+          // Contrast checks
+          CONTRAST_WARNING: {
+            dismissAll: true,
+          },
+          CONTRAST_INPUT: true,
+          CONTRAST_ERROR: true,
+          CONTRAST_PLACEHOLDER: true,
+          CONTRAST_PLACEHOLDER_UNSUPPORTED: true,
+          CONTRAST_ERROR_GRAPHIC: { type: 'warning' },
+          CONTRAST_WARNING_GRAPHIC: true,
+          CONTRAST_UNSUPPORTED: {
+            dismissAll: true,
+          },
+        },
+      });
+    </script>
   </body>
 </html>
