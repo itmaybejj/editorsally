@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-bs-theme="dark">
+<html lang="en" data-bs-theme="light">
   <head>
     <link rel="icon" type="image/png" href="/assets/favicons/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="/assets/favicons/favicon.svg" />
@@ -11,8 +11,31 @@
     <link href="/assets/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link href="/assets/theme.css" rel="stylesheet" />
     <meta name="theme-color" content="#712cf9" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
+    <header>
+      <nav class="navbar navbar-expand-md">
+        <div class="container col-sm-12 mx-auto">
+          <a href="../about" class="d-flex align-items-center  link-body-emphasis text-decoration-none navbar-brand">
+            <span class="fs-2">Editoria<span style="margin-left: -1px;">11</span>y</span>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Editora11y</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 nav-pills">
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
   <main class="container col-lg-12 mx-auto py-5 docs">
     <div class="row">
       <div class="col-12 col-md-7 col-lg-8 pt-3" data-bs-spy="scroll" data-bs-target="#on-this-page" data-bs-smooth-scroll="true" tabindex="0">
@@ -27,22 +50,22 @@
         </p>
 
         <div class="col-md-6 mt-2">
-          <h3 class="pt-0" id="plugins">CSA Plugins</h3>
+          <h3 class="pt-0" id="plugins">CSA plugins</h3>
           <ul>
             <li>
-              Developer and contrast tests
+              Add developer and contrast tests to the core test suite.
             </li>
             <li>
-              "Split configuration" for separate rulesets for developers and content creators.
+              Create "split configuration" for separate rulesets for developers and content creators.
             </li>
             <li>
-              Site-wide issue dismissals
+              Allow site-wide issue dismissals
             </li>
             <li>
-              Dashboard maintenance tools and crawlers
+              Provide dashboard maintenance tools and crawlers
             </li>
             <li>
-              <em>Future features from the project roadmap</em>
+              <em>Gain features from the project roadmap</em>
             </li>
           </ul>
         </div>
@@ -50,18 +73,18 @@
           <h3 class="pt-0" id="community">CSA Community</h3>
           <ul>
             <li>
-              Priority support and over-weighted voting in issue queues and on project Slack channels.
+              Given priority support and over-weighted voting in issue queues and on project Slack channels.
             </li>
             <li>
-              Ability to test and influence in-development features.
+              Can test and influence in-development features.
             </li>
-            <li>(Optional) public supporter credit.</li>
+            <li>(Optional) can ask for public supporter credit in this page.</li>
             <li>
-              Direct assistance* with plugin installation and configuration.
+              Receives direct assistance* with plugin installation and configuration.
             </li>
           </ul>
         </div>
-        <p>* <em>Everyone</em> is welcome to ask for help on Slack and the issue queues. Those contributing more than $200/year can also request to credit some of their support towards consulting hours rather than project development.</p>
+        <p>* <em>Everyone</em> is welcome to ask for help on Slack and the issue queues. Those contributing more than $200/year may request to direct some of their support towards consulting/advising hours rather than project development.</p>
       </div>
 
       <hr class="col-4 col-md-6 mx-auto pb-5">
@@ -77,20 +100,20 @@
               <span>Unlimited-site enterprise subscriptions.</span>
             </li>
             <li class="arrow">
-              <span>Subscription credits from grants or directly sponsored work.</span>
+              <span>Subscription credits from directly sponsored work.</span>
             </li>
             <li class="arrow">
-              <span>Subscription credits for approved contributions in Editoria11y issue queues.</span>
+              <span>Subscription credits for approved contributions of time and effort.</span>
             </li>
             <li class="arrow">
-              <span>Subscription credits for approved contributions to notably improve the accessibility of key open source projects.</span>
+              <span>Subscription credits for pre-approved major contributions of time and effort to improve the accessibility of related open source projects.</span>
             </li>
           </ul>
           <p>
             Subscriptions list at $10/site/month as of 2026, with various discounts listed on the plugin licensing pages. Expect the list price to scale with inflation. If future features require cloud APIs we will talk as a community whether to bundle those hosting costs or offer them as an optional add-on.
           </p>
           <p>
-            Project maintainers consider granting contribution credits based on effort and impact. Please seek pre-approval if you are working under the assumption of approval, or plan to request credit for more than a 12-month site credit.
+            Project maintainers consider granting contribution credits based on effort and impact. Please seek pre-approval if you are working under the assumption of approval or plan to request  for more than a one-site 12-month credit.
           </p>
           <!--<div class="my-5">
             <a href="../examples" class="btn btn-primary btn-lg px-4"

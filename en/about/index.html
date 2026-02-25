@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-bs-theme="dark">
+<html lang="en" data-bs-theme="light">
   <head>
     <link rel="icon" type="image/png" href="/assets/favicons/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="/assets/favicons/favicon.svg" />
@@ -11,10 +11,33 @@
     <link href="/assets/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link href="/assets/theme.css" rel="stylesheet" />
     <meta name="theme-color" content="#712cf9" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
+    <header>
+      <nav class="navbar navbar-expand-md">
+        <div class="container col-sm-12 mx-auto">
+          <a href="../about" class="d-flex align-items-center  link-body-emphasis text-decoration-none navbar-brand">
+            <span class="fs-2">Editoria<span style="margin-left: -1px;">11</span>y</span>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Editora11y</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 nav-pills">
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
     <main class="container col-lg-12 mx-auto py-5">
-      <h1 class="text-body-emphasis pt-2 pb-5">Community-supported.<br>Open Source.</h1>
+      <h1 class="text-body-emphasis pt-4 pb-5">Community-supported.<br>Open Source.</h1>
       <div class="row g-5 pb-5">
         <div class="col-md-6">
           <p class="fs-5">
@@ -43,29 +66,23 @@
         </div>
       </div>
 
-      <hr class="col-4 col-md-6 mx-auto pb-5">
 
       <div class="row g-5 pb-5">
         <h2 class="h1 text-body-emphasis text-balance pt-2">Editoria11y project members drive development, documentation &amp; support.</h2>
         <div>
           <ul class="fs-5 list-unstyled ps-0">
             <li class="arrow">
-              <span>Project <a href="../membership">membership</a> is maintained by contributions of time, sponsored work or plugin subscriptions.</span>
+              <span>The <a href="../community">community</a> contributes through developer time, sponsored work or add-on subscriptions.</span>
             </li>
             <li class="arrow">
-              <span>Discussions among community <a href="../contacts">contacts</a> guide next steps for feature development.</span>
+              <span>Discussions guide which feature requests are <a href="../contacts">selected for development</a> guide next steps for feature development.</span>
+            </li>
+            <li class="arrow">
+              <span>Members <a href="../community/">find support</a> in the forums and issue queues.</span>
             </li>
           </ul>
-          <div class="my-5">
-            <a href="../projects" class="btn btn-primary btn-lg px-4">Projects</a>
-          </div>
         </div>
       </div>
-      <!--<div class="mb-5">
-        <a href="../examples" class="btn btn-primary btn-lg px-4"
-          >CTA</a
-        >-->
-
     </main>
     <script
       src="/assets/dist/js/bootstrap.bundle.min.js"

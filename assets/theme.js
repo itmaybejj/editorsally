@@ -18,23 +18,8 @@
   // const validTranslations = ['da', 'de', 'el', 'es', 'fr', 'hu', 'it', 'jp', 'nb', 'nl', 'pl', 'pt-br', 'pt-pt', 'sv', 'uk', 'zh'];\
   const validTranslations = [];
   const langCode = validTranslations.includes(document.documentElement.lang) ? document.documentElement.lang : 'en';
-  const headerTemplate = `
-    <header>
-    <nav class="navbar navbar-expand-md bg-body-secondary">
-        <div class="container p-2 py-0 col-sm-12 mx-auto">
-        <a href="../about" class="d-flex align-items-center  link-body-emphasis text-decoration-none navbar-brand">
-            <span class="fs-2">Editoria<span style="margin-left: -1px;">11</span>y</span>
-          </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-        <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Editora11y</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
-          <ul class="navbar-nav justify-content-end flex-grow-1 pt-2 nav-pills">
+  const navTemplate = `
+    
             <li class="nav-item">
               <a href="/${langCode}/about" class="nav-link">About</a>
             </li>
@@ -49,30 +34,16 @@
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="../drupal">Drupal CSA Module</a></li>
                 <!--<li><a class="dropdown-item" href="#">WordPress plugin</a></li>-->
-                <li>
-                  <hr class="dropdown-divider">
-                </li>
                 <li><a class="dropdown-item" href="https://editoria11y.princeton.edu/install" title="External link">Library configuration <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-square" viewBox="0 0 16 16">
   <path fill-rule="evenodd" d="M15 2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1zM0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm4.5 5.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
 </svg></a></li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-        </div>
-      </div>
-    </nav>
-   </header>
     `
-  const headerElement = document.createElement('div');
-  headerElement.innerHTML = headerTemplate;
-
-  document.querySelector('body').prepend(headerElement);
-  const navLinks = document.querySelectorAll('header .nav-link');
+  const nav = document.querySelector('header .navbar-nav');
+  nav.innerHTML = navTemplate;
+  const navLinks = nav.querySelectorAll('a');
   const currentPath = window.location.pathname;
   navLinks.forEach(link => {
-    if (link.getAttribute('href') !== '/' && currentPath.includes(link.getAttribute('href'))) {
-      console.log(link.href);
+    if (link.getAttribute('href') !== '/' && currentPath.includes(link.getAttribute('href').replaceAll('..', ''))) {
       link.classList.add('active');
       link.setAttribute('aria-current', 'page');
     }
@@ -129,7 +100,7 @@
   }
 
   /* Theme switcher **********************/
-
+/*
   const themeSwitch = `
     <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
       <symbol id="arrow-right-circle" viewBox="0 0 16 16">
@@ -140,13 +111,13 @@
     </svg>`
   const themeSwitcher = document.createElement('div');
   themeSwitcher.innerHTML = themeSwitch;
-  document.body.appendChild(themeSwitcher);
+  document.body.appendChild(themeSwitcher);*/
   /*!
  * Color mode toggler for Bootstrap's docs (https://getbootstrap.com/)
  * Copyright 2011-2025 The Bootstrap Authors
  * Licensed under the Creative Commons Attribution 3.0 Unported License.
  */
-
+/*
   const getStoredTheme = () => localStorage.getItem('theme')
   const setStoredTheme = theme => localStorage.setItem('theme', theme)
 
@@ -216,7 +187,17 @@
           showActiveTheme(theme, true)
         })
       })
-  })
+  })*/
+  const circleIcon = document.createElement('span');
+  circleIcon.classList.add('d-none');
+  circleIcon.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+      <symbol id="arrow-right-circle" viewBox="0 0 16 16">
+        <path
+          d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"
+        ></path>
+      </symbol>
+    </svg>`
+  document.body.appendChild(circleIcon);
 
   const linkIcon = document.createElement('span');
   linkIcon.innerHTML = `<svg class="bi" width="16" height="16" aria-hidden="true">
