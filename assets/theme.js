@@ -23,14 +23,14 @@
     <nav class="navbar navbar-expand-md bg-body-secondary">
         <div class="container p-2 py-0 col-sm-12 mx-auto">
         <a href="../about" class="d-flex align-items-center  link-body-emphasis text-decoration-none navbar-brand">
-            <span class="fs-2"><span class="pe-1">Editor's</span><strong>Ally</strong></span>
+            <span class="fs-2">Editoria<span style="margin-left: -1px;">11</span>y</span>
           </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
         <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Editor's <strong>A11y</strong></h5>
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Editora11y</h5>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
@@ -38,12 +38,13 @@
             <li class="nav-item">
               <a href="/${langCode}/about" class="nav-link">About</a>
             </li>
-            <li class="nav-item"><a href="/${langCode}/projects" class="nav-link">Projects</a></li>
-            <li class="nav-item"><a href="/${langCode}/membership" class="nav-link">Membership</a></li>
-            <li class="nav-item"><a href="/${langCode}/contacts" class="nav-link">Contacts</a></li>
+            <!--<li class="nav-item"><a href="/${langCode}/projects" class="nav-link">Projects</a></li>-->
+            <li class="nav-item"><a href="/${langCode}/community" class="nav-link">Demo</a></li>
+            <li class="nav-item"><a href="/${langCode}/community" class="nav-link">Community</a></li>
+            <!--<li class="nav-item"><a href="/${langCode}/contacts" class="nav-link">Contacts</a></li>-->
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Docs
+                Getting Started
               </a>
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="../drupal">Drupal CSA Module</a></li>
@@ -94,8 +95,8 @@
 
   const footer = document.createElement('footer');
   footer.innerHTML = `
-      <a href="../about">Editor's A11y</a> &copy; 2026`;
-  footer.setAttribute('class', 'container col-lg-8 mx-auto pt-5 my-5 text-body-secondary border-top');
+      &copy; Editoria11y 2026`;
+  footer.setAttribute('class', 'container col-lg-12 mx-auto pt-5 my-5 text-body-secondary border-top');
   document.body.appendChild(footer);
 
   /* On this page **********************/
@@ -107,7 +108,11 @@
       const link = document.createElement('a');
       link.setAttribute('class', 'list-group-item list-group-item-action was-h2')
       link.textContent = heading.textContent;
-      let theLink = heading.id ? heading.id : heading.closest('[id]').id;
+      let theLink = heading.id ? heading.id : heading.closest('[id]')?.id;
+      if (!theLink) {
+        theLink = heading.textContent.toLowerCase().replace(/\s+/g, '-').replace(/[^\w-]+/g, '');
+        heading.setAttribute('id', theLink);
+      }
       link.setAttribute('href', `#${theLink}`);
       if (heading.tagName === 'H3') {
         link.classList.add('small', 'pt-1', 'pb-1', 'was-h3');
