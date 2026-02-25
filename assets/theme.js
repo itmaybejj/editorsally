@@ -39,7 +39,7 @@
               <a href="/${langCode}/about" class="nav-link">About</a>
             </li>
             <!--<li class="nav-item"><a href="/${langCode}/projects" class="nav-link">Projects</a></li>-->
-            <li class="nav-item"><a href="/${langCode}/community" class="nav-link">Demo</a></li>
+            <li class="nav-item"><a href="/${langCode}/demo" class="nav-link">Demo</a></li>
             <li class="nav-item"><a href="/${langCode}/community" class="nav-link">Community</a></li>
             <!--<li class="nav-item"><a href="/${langCode}/contacts" class="nav-link">Contacts</a></li>-->
             <li class="nav-item dropdown">
