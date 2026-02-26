@@ -16,7 +16,8 @@ body {
         --bs-list-group-action-color: var(--bs-body-color);
     }
     main a {
-        color: rgb(var(--bs-link-color-rgb))
+        color: rgb(var(--bs-link-color-rgb));
+        font-weight: 450;
     }
     a.btn {
         color: var(--bs-btn-color);
@@ -52,6 +53,9 @@ body {
     }
 }
 
+a, .nav-link {
+    transition: background-color .1s ease-out;
+}
 summary:focus-visible {
     box-shadow: inset 0 0 0 2px;
 }
@@ -429,4 +433,23 @@ body {
         width: 240px;
         max-width: 90%;
     }
+}
+
+/* Code ***********/
+.row pre {
+    filter: brightness(0.9) contrast(1.2) saturate(.85);
+    margin: 1rem 0 2rem;
+    .token.constant, .token.deleted, .token.property, .token.symbol, .token.tag {
+        color: #ff66e0;
+    }
+}
+
+footer {
+    a {
+        text-decoration: none;
+    }
+    .col {
+        margin-top: 2rem;
+    }
+
 }
