@@ -1,16 +1,5 @@
 const demo = async () => {
 
-  const ed11yContain = document.getElementById('ed11y-demo');
-  ed11yContain.setAttribute('contenteditable', '');
-  const main = document.querySelector('main');
-  if (main && !main.querySelector('#ed11y-demo')) {
-    main.appendChild(ed11yContain);
-  } else if (!main) {
-    let newMain = document.createElement('main');
-    ed11yContain.insertAdjacentElement('beforebegin', newMain);
-    newMain.insertAdjacentElement('afterbegin', ed11yContain);
-  }
-
   let iframePlaceholder = `
     <!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>example</title></head>
     <body><div style="position: absolute; top:0; bottom: 0; left:0; right:0; border: 2px #444; background: #eee; display: flex; align-items: center; justify-content: center; font-size: 10vw; font-family: monospace;">&lt; iframe &gt;</div>
