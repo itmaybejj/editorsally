@@ -5648,7 +5648,7 @@ URL: ${url2}`;
         document.addEventListener("keyup", (event) => {
           escapeWatch(event);
         });
-        if (UI.ignoreAll || !UI.inlineAlerts && UI.totalCount > 75) {
+        if (UI.ignoreAll || !UI.inlineAlerts && UI.totalCount > 99) {
           UI.showPanel = false;
         } else if (State.option.alertMode === "active" || !State.option.userPrefersShut || UI.showDismissed) {
           UI.showPanel = true;

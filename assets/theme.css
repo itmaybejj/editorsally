@@ -3,6 +3,20 @@ body {
     --bs-body-bg: #f9fafb;
     --bs-secondary-bg-rgb: 222,226,229;*/
 }
+a {
+    text-decoration-thickness: 2px;
+    &:hover {
+        text-decoration-thickness: 1px;
+    }
+}
+
+table {
+    margin-bottom: 1.5rem;
+    &, td, th {
+        padding: 10px;
+        box-shadow: 0 0 1px;
+    }
+}
 [data-bs-theme="light"] {
     --bs-body-bg: #f5faff;
     --bs-link-color-rgb: 1, 106, 141; /*14, 88, 197*/
@@ -158,7 +172,7 @@ body {
     .navbar-brand {
         font-weight: 200;
         font-size: 2.25rem;
-        padding: 30px 0 29px;
+        padding: 17px 0 17px;
     }
     .navbar {
         &, .container, .offcanvas .offcanvas-body, .navbar-nav {
@@ -212,6 +226,7 @@ body {
         border-radius: 0;
         background: white;
     }
+
     .dropdown:has(.active) > a {
         color: var(--bs-body-bg);
         background-color: var(--bs-nav-pills-link-active-bg);
@@ -221,18 +236,35 @@ body {
 @media (max-width: 768px) {
     .dropdown-toggle {
         pointer-events: none;
+        font-weight: 100;
+        &::after {
+            margin-left: -.175em;
+            vertical-align: initial;
+            content: ":";
+            border: 0;
+        }
     }
+    .navbar-toggler:focus:not(:focus-visible) {
+        box-shadow: none;
+    }
+    .navbar-toggler-icon {
+         filter: invert(1) brightness(2);
+     }
     .dropdown-menu {
         display: block;
-        padding-bottom: 0;
+        padding: 0;
+        border: 0;
+        border-left: 2px solid var(--bs-navbar-active-color);;
+        border-radius: 0;
+    }
+    .dropdown-item {
+        line-height: 1.25;
+    }
+    .show .nav-link {
+        color: inherit;
     }
 }
-.offcanvas.show {
-    .active {
-        margin-left: -.5rem;
-        padding-left: .5rem;
-    }
-}
+
 .navbar-toggler {
     border: 0;
 }
@@ -344,6 +376,9 @@ body {
             background-size: var(--bs-accordion-btn-icon-width);
             transition: var(--bs-accordion-btn-icon-transition);
         }
+        &:hover {
+            background-color: #03759c4f;
+        }
     }
     [open] {
         > *:not(summary) {
@@ -407,8 +442,8 @@ body {
     height: 100vh;
 }
 .bi {
-    vertical-align: -0.125em;
     fill: currentColor;
+    margin: -1px 1px 1px 0;
 }
 .nav-scroller {
     position: relative;

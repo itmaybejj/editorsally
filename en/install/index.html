@@ -40,10 +40,10 @@
       <div class="row">
 
         <div class="col-12 col-md-7 col-lg-8 pt-3">
-          <div data-bs-spy="scroll" data-bs-target="#on-this-page" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0">
+          <div data-bs-spy="scroll" data-bs-target="#on-this-page" data-bs-smooth-scroll="true">
             <h1>Install &amp; Configure</h1>
 
-            <h2 class="pt-3">Preconfigured versions</h2>
+            <h2 class="pt-3 pb-2">Preconfigured versions</h2>
             <ul class="list-unstyled ps-0">
               <li><a href="https://www.drupal.org/project/editoria11y" class="arrow"><strong>Drupal installer</strong></a></li>
 
@@ -92,7 +92,379 @@
 </script>
                 --></code></pre>
 
-          </div>
+                <h2 id="parameters">Parameters</h2>
+
+                <p>A complete implementation will only be called for logged-in editors (you don’t want your site visitors seeing your checker!), and can override any of <a href="https://github.com/itmaybejj/editoria11y/blob/3.0.x/src/js/utils/ed11y-default-options.js" class="liinternal"><strong>the default parameters</strong></a>.</p>
+
+                <p>Note that defaults are provided for all parameters; only include things you want to override.</p>
+
+                <p>A heavily customized implementation might look like this:</p>
+
+<pre class="language-javascript"><code><!--const ed11y = new Ed11y.Ed11y({
+
+  // Define content regions
+  checkRoot: 'main, .footer-content-zone',
+
+  // Add custom CSS files
+  cssUrls: [
+    '/css/editoria11y.min.css',
+    '/css/custom.css'
+  ],
+
+  // Define Web components to include in checks
+  shadowComponents: 'accordion, lightbox',
+
+  // We want the box to open automatically for errors:
+  alertMode: 'assertive',
+
+  // Our external link icon has visually hidden text
+  // to delete before checking if the link has text:
+  linkIgnoreStrings: ['(opens in new window)'],
+
+  // Content editors cannot edit these elements:
+  ignoreElements: 'nav *, #social-block',
+
+  // Prevent this user from hiding alerts.
+  allowHide: false,
+  allowOK: true,
+
+  // Don't scan while the editor toolbar is open:
+  preventCheckingIfPresent: ".editor-toolbar",
+
+  // Turn off warnings that an element might be visually hidden:
+  checkVisible: false,
+
+  // Dispatch a JS event before highlighting this,
+  // so our JS can modify it first:
+  hiddenHandlers: ".accordion-panel",
+
+  // Dispatch a JS event when the library is ready
+  // for custom tests, then wait for 3 ed11yResume
+  // events from our 3 tests to continue.
+  customTests: 3,
+
+  checks: {
+    // Turn off the HEADING_FIRST test
+    HEADING_FIRST: false,
+
+    // Allow dismissing the HEADING_SKIPPED_LEVEL test
+    HEADING_SKIPPED_LEVEL: {
+       type: 'warning',
+    }
+  }
+
+
+
+}); --></code></pre>
+
+                <p>Turnkey integrations often set these variables on the fly – e.g., loading pages in “assertive” mode when they were recently edited, and switching back to “polite” after several minutes.</p>
+
+                <h2 id="theming">Theming</h2>
+
+
+
+                <p>Several parameters allow for selecting a theme, overriding colors, and injecting CSS.</p>
+
+
+
+                <p>Only include the parameters you need to override to make future updates easier.</p>
+
+<pre class="language-javascript"><code><!--// Add custom CSS file
+cssUrls: ['/css/editoria11y.min.css', '/css/custom.css'],
+
+theme : 'darkTheme', // Select base theme
+darkTheme: {         // Override base colors
+    bg: '#0a2051',
+    bgHighlight: '#7b1919',
+    text: '#f4f7ff',
+    primary: '#4930a0',
+    primaryText: '#f4f7ff',
+    secondary: '#20160c',
+    warning: '#fad859',
+    alert: '#b80519',
+    button: '#dde8ff',
+    focusRing: 'cyan',
+    activeTab: '#0a2051',
+    tipHeader: '#4930a0',
+},
+
+// Override fonts
+baseFontSize: 14, // px
+baseFontFamily: '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif', --></code></pre>
+
+                <h2 class="wp-block-heading has-text-align-left has-secondary-background-color has-background has-large-font-size" id="js-events">Useful JS events</h2>
+
+
+
+                <p>Themers can hook these events to react and modify the page as needed.</p>
+
+
+
+                <p>In typical order of appearing…</p>
+
+
+
+                <ul class="wp-block-list">
+                  <li><strong><code>ed11yRunCustomTests</code></strong>: dispatched when the Results object is ready for custom results to be injected. Note that the customTests parameter must be set to the number of custom test functions you will be running (…probably one…) for this event to dispatch. Details in following section.</li>
+
+
+
+                  <li><strong><code>ed11yResults</code></strong>: dispatched when all checks are finished. API integrations can now harvest data out of the Ed11y.results object.</li>
+
+
+
+                  <li><strong><code>ed11yPanelOpened</code></strong>: dispatched if the panel opens, automatically or manually.</li>
+
+
+
+                  <li><strong><code>ed11yShowHidden</code></strong>: provides a <code>data-ed11y-result</code> number and a <code>viaJump</code> boolean. Only dispatched if the “ed11yShowHidden” parameter is set <em><strong>and</strong></em> the a parent of the element matches a selector . Used to reveal alerts in not-yet-open containers, e.g., accordions, tabs and carousels. Usage examples in next section.</li>
+
+
+
+                  <li><strong><code>ed11yPop</code></strong>: provides <code>data-ed11y-result</code> ID, as well as references to the <code>result</code> and <code>tip</code> objects. Dispatched when a tooltip appears, allowing you to modify the tips at runtime.</li>
+
+
+
+                  <li><strong><code>ed11yShut</code></strong>: provides <code>data-ed11y-result</code> ID. Dispatched when a tooltip closes.</li>
+
+
+
+                  <li><strong><code>ed11yDismissalUpdate</code></strong>: provides extended information when a user dismisses or restores an alert. Used for API integrations. Event object contains:
+                    <ul>
+                      <li><code>dismissPage</code></li>
+
+
+
+                      <li><code>dismissTest</code></li>
+
+
+
+                      <li><code>dismissKey</code></li>
+
+
+
+                      <li><code>dismissAction</code></li>
+                    </ul>
+                  </li>
+                </ul>
+
+                <p>Samples can be found in the following sections.</p>
+
+
+
+                <h2 class="wp-block-heading has-secondary-background-color has-background has-large-font-size" id="modify-tips">Modifying tips</h2>
+
+
+
+                <p>If all you want to do is modify the text of a tip, items in the ed11yLang.en global (before calling the library) or Ed11y.M (after calling the library) objects can be directly overridden. e.g., in the Drupal module where we aliased the language pack to Drupal.ed11yLang:</p>
+
+
+
+                <p><code>Drupal.ed11yLang.lang.testNames.title = "Please write shorter headings."</code></p>
+
+
+
+                <p>This is true of any of the <a href="https://github.com/itmaybejj/editoria11y/blob/3.0.x/src/lang/baseAll.js" data-type="link" data-id="https://github.com/itmaybejj/editoria11y/blob/2.3.x/js/ed11y-localization.js" class="liinternal">default keys in the localization file</a> or the active language-specific translation.</p>
+
+
+
+                <p>The Drupal module also adds custom edit links to the tips, using the <code>editLinks</code> parameter. Note “Page editor” and “Layout editor:”</p>
+
+
+
+                <figure class="wp-block-image size-full"><img data-recalc-dims="1" fetchpriority="high" decoding="async" width="580" height="300" src="https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?resize=580%2C300&amp;ssl=1" alt="Tooltip with &quot;Page editor&quot; and &quot;Layout editor&quot; links inserted." class="wp-image-523" srcset="https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?w=1290&amp;ssl=1 1290w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?resize=600%2C311&amp;ssl=1 600w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?resize=768%2C398&amp;ssl=1 768w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?resize=1200%2C621&amp;ssl=1 1200w" sizes="(max-width: 580px) 100vw, 580px"></figure>
+
+
+
+                <p>A simplified version of the code that sets that parameter:</p>
+
+<pre class="language-javascript"><code><!--const editLinks = document.createElement('div');
+const editLink = document.createElement('a');
+      editLink.href="/node/1/edit";
+      editLink.textContent = "Edit page";
+editLinks.appendChild(editLink);
+
+const ed11y = new Ed11y({
+               editLinks: editLinks,
+              }); --></code></pre>
+                <p>The Drupal module then uses the <strong><code>ed11yPop</code></strong> event to dynamically show and hide the edit link based on context when tips are shown. </p>
+
+
+
+                <p>This event provides references to the <code>result</code> and <code>tip</code> objects:</p>
+
+<pre class="language-javascript"><code><!--// Listen for event
+document.addEventListener('ed11yPop', e => {
+  if (e.detail.result.element.closest(
+    drupalSettings.editoria11y.hide_edit_links)
+  ) {
+      e.detail.tip.shadowRoot.querySelector(
+        '.ed11y-custom-edit-links'
+        )?.setAttribute('hidden', '');
+     }
+}); --></code></pre>
+
+
+
+             <h2 id="custom-tests">Custom tests</h2>
+
+
+
+
+                <p>If the <strong><em>customTests</em></strong> parameter is a <strong><em>number</em></strong>, Editoria11y will dispatch an “ed11yRunCustomTests” event while checking, and then pause for up to 500ms while listening for that number of “<code>ed11yResume</code>” events.</p>
+
+
+
+                <p>This can be leveraged to call as many scripts containing custom tests as you like, which can push their results into the results array before the tips are draws.</p>
+
+
+
+                <p>For example, if you wanted to create this tip, to flag links that have been pasted from emails with obfuscated URLs:</p>
+
+
+
+                <figure class="wp-block-image size-full"><img data-recalc-dims="1" decoding="async" width="580" height="462" src="https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2023/12/Screenshot-2023-12-06-at-5.13.38-PM.png?resize=580%2C462&amp;ssl=1" alt="Tip reading &quot;URL is Safe Link Encoded&quot;" class="wp-image-323" srcset="https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2023/12/Screenshot-2023-12-06-at-5.13.38-PM.png?w=1056&amp;ssl=1 1056w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2023/12/Screenshot-2023-12-06-at-5.13.38-PM.png?resize=600%2C478&amp;ssl=1 600w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2023/12/Screenshot-2023-12-06-at-5.13.38-PM.png?resize=768%2C612&amp;ssl=1 768w" sizes="(max-width: 580px) 100vw, 580px"></figure>
+
+
+
+                <p>You would:</p>
+
+
+
+                <ol class="wp-block-list">
+                  <li>Add a listener for the <code>ed11yRunCustomTests</code> event</li>
+
+
+
+                  <li>Find matching elements</li>
+
+
+
+                  <li>Define the tip message</li>
+
+
+
+                  <li>Dispatch the “resume” event to let Editoria11y draw the tip:</li>
+                </ol>
+
+
+
+            <pre class="language-javascript"><code><!--document.addEventListener('ed11yRunCustomTests', function() {
+
+  // 1. Write your custom test. This can be anything you want.
+  //
+  // This example searches the active root using the .getElements() function,
+  // which is aware of the checkRoots and ignoreElements parameters.
+
+  const safeLinks = Drupal.Ed11y.getElements('a[href*="safelinks.protection.outlook.com/?"]', 'root');
+
+
+  // This is just a utility function for this particular test...
+  const decodeSafelink = function(url) {
+      const params = new URL(url).searchParams;
+      let decoded = params.get('url');
+      if (!!decoded) {
+            decoded = Ed11y.sanitizeForHTML(decoded);
+            return `<p>The actual URL may be:<br><em style='word-wrap: break-word;'>${decoded}</em></p>`
+      }
+      return '';
+  }
+
+
+  // 2. Add the test name to the active language pack.
+
+  // Add a title:
+  Drupal.ed11yLang.lang.testNames.outlookSafeLink = 'URL is Safe Link encoded';
+
+
+  // 3. Push each item you want flagged to Ed11y.results.
+  //
+  // You must provide:
+  //   element:      The element itself
+  //   test:         A key for your test, matching step 2.
+  //   type:         warning or error
+  //   content:      The tip HTML.
+  //   position:     "beforebegin" for interactive elements,
+  //                 "afterbegin" for paragraphs and table cells.
+  //   dismiss:      false for errors,
+  //                 a unique string for manual checks.
+
+  safeLinks?.forEach((el) => {
+   Drupal.Ed11y.State.results.push({
+     element: el,
+     test:    'outlookSafeLink',
+     type:    'error',
+     content: `<div class="title">Please fix the URL in this link</div>
+               ${decodeSafelink(el.href)}
+               <div class="why">
+                <p>The URL for this link is an Outlook "Safe Link" that was copied from an email.
+                It includes the original recipient's email address,
+                and will break if Microsoft shuts down the service.</p>
+                <p>The pasted URL is:<br>
+                <em style='word-break: break-all;font-size: 90%;line-height: 1.2;
+                display: block;'>${Drupal.Ed11y.sanitizeHTML(el.href)}</em></p>
+               </div>
+            `,
+     position: 'beforebegin',
+     dismiss:  false,
+   });
+  });
+
+  // 4. When you are done with all your custom tests, dispatch an "ed11yResume" event:
+
+  let allDone = new CustomEvent('ed11yResume');
+  document.dispatchEvent(allDone);
+
+}) --></code></pre>
+
+
+                <h2 id="hidden-content">Dealing with alerts on hidden or size-constrained content</h2>
+
+
+
+
+                <p>Many interactive components (tabs, sliders, accordions) hide content. The Editoria11y info panel includes next/previous buttons to jump directly to issues. If Editoria11y thinks the issue’s tooltip is currently invisible, it will alert the user something is wrong, and then highlight the first visible ancestor – e.g., the div around an accordion.</p>
+
+
+
+                <p>Ideally, your theme will make those elements visible before Editoria11y’s visibility check runs, so everything just works like magic for your users — carousels auto-advance and accordions auto-open to display the issue.</p>
+
+
+
+                <p>To do this when the panel first opens (e.g., unfolding <strong><em>all</em></strong> accordion panels with issues) add a JS event listener for <code>ed11yPanelOpened</code>, then do a querySelectorAll for relevant <code>ed11y-element-result</code> elements, and then trigger whatever function your theme uses to reveal that part of the page. </p>
+
+
+
+                <p>Here’s a jQuery based example. When the panel opens, it disables a sticky menu (so elements are not covered), then looks for any <code>ed11y-element-result</code> elements inside closed accordion items and simulates a click on their toggle button:</p>
+
+<pre class="language-javascript"><code><!--document.addEventListener("ed11yPanelOpened", function () {
+  $('body').addClass('no-stick');
+  $('ed11y-element-result').each(function () {
+    if ($(this).parents('.ps-accordion-content[style*="display"]').length > 0) {
+    $(this).parents('.ps-accordion-content').prev().find('.ps-accordion-item-button').click();
+    }
+}) --></code></pre>
+
+
+                <p>To reveal content only when jumping to a <strong><em>specific</em></strong> tip via the panel’s “next” button (e.g., in a closed tab or the next carousel slide), you will need to set both <code>hiddenHandlers</code> to relevant CSS selectors and <code>checkVisible</code> to TRUE in your parameters. Then add an event listener for the <code>ed11yShowHidden</code> event. This is thrown if Editoria11y recognizes a tip is inside a container with one of the listed <code>hiddenHandlers</code> selectors provided in the options list. This JS event will include the ID of the tip that it is about to open. Editoria11y will then pause briefly after dispatching this event, to give your JS time to make the element visible.</p>
+
+
+
+                <p>Here’s an example from a Penn State implementation. It looks for the element matching the provided ID, then finds its parent interactive component container, and triggers its event to activate its toggle:</p>
+
+<pre class="language-javascript"><code><!--context.addEventListener('ed11yShowHidden', e => {
+  if (!e.detail.viaJump) {
+       return;
+  }
+  context.getElementById(e.detail.id)
+    .closest('[data-interactive-component]')
+    .dispatchEvent(new CustomEvent('component:activate'));
+}); --></code></pre>
+
+                <p>Last note: some themes are just not compatible with visibility checking — e.g., the <code>&lt;main&gt;</code> container has a height of 0px. Such sites should disable all visibility checking by setting <code>checkVisible</code> to false.</p>
+
+
+          </div><!-- End content column -->
         </div>
         <div class="col-12 col-md-5 col-lg-4 mb-5">
             <div id="on-this-page" class="list-group ms-2 ms-lg-5 position-sticky top-0 pt-3">
@@ -104,17 +476,17 @@
       <div class="container">
         <div class="row">
           <div class="col col-4 col-md-2">
-            <a href="https://github.com/itmaybejj/editoria11y"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-git" viewBox="0 0 16 16">
+            <a href="https://github.com/itmaybejj/editoria11y"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-git" viewBox="0 0 16 16">
               <path d="M15.698 7.287 8.712.302a1.03 1.03 0 0 0-1.457 0l-1.45 1.45 1.84 1.84a1.223 1.223 0 0 1 1.55 1.56l1.773 1.774a1.224 1.224 0 0 1 1.267 2.025 1.226 1.226 0 0 1-2.002-1.334L8.58 5.963v4.353a1.226 1.226 0 1 1-1.008-.036V5.887a1.226 1.226 0 0 1-.666-1.608L5.093 2.465l-4.79 4.79a1.03 1.03 0 0 0 0 1.457l6.986 6.986a1.03 1.03 0 0 0 1.457 0l6.953-6.953a1.03 1.03 0 0 0 0-1.457"/>
             </svg> <strong>Library</strong></a>
           </div>
           <div class="col col-4 col-md-2">
-            <a href="https://github.com/itmaybejj/editoria11y/discussions"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-right-heart-fill" viewBox="0 0 16 16">
+            <a href="https://github.com/itmaybejj/editoria11y/discussions"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chat-right-heart-fill" viewBox="0 0 16 16">
               <path d="M16 2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h9.586a1 1 0 0 1 .707.293l2.853 2.853a.5.5 0 0 0 .854-.353zM8 3.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132"/>
             </svg> <strong>Forum</strong></a>
           </div>
           <div class="col col-4 col-md-2">
-            <a href="https://github.com/itmaybejj/editoria11y/issues"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-patch-plus-fill" viewBox="0 0 16 16">
+            <a href="https://github.com/itmaybejj/editoria11y/issues"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-patch-plus-fill" viewBox="0 0 16 16">
               <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01zM8.5 6v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 1 0"/>
             </svg> <strong>Issues</strong></a>
           </div>

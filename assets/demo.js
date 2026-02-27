@@ -53,6 +53,8 @@ const demo = async () => {
     embeddedContentPlugin: true,
     linksAdvancedPlugin: true,
     developerPlugin: true,
+    contrastPlugin: true,
+    readabilityPlugin: true,
     checks: {
       IMAGE_FIGURE_DECORATIVE: true, // csa controlled
       IMAGE_FIGURE_DUPLICATE_ALT: true,
@@ -131,8 +133,13 @@ const demo = async () => {
       EMBED_VIDEO: {
         sources: 'youtube-nocookie.com',
       },
+      QA_DOCUMENT: true,
+      QA_BAD_LINK: {
+        sources: '[href*="tugboatqa"]',
+      }
     },
   });
+  window.Ed11y = Ed11y;
 }
 
 demo().then();

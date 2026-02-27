@@ -68,6 +68,7 @@
   if (onThisPage) {
     const headings = document.querySelectorAll('h2, h3');
     headings?.forEach(heading => {
+      heading.setAttribute('tabindex', '-1');
       const link = document.createElement('a');
       link.setAttribute('class', 'list-group-item list-group-item-action was-h2')
       link.textContent = heading.textContent;
@@ -192,7 +193,7 @@
   document.body.appendChild(circleIcon);
 
   const linkIcon = document.createElement('span');
-  linkIcon.innerHTML = `<svg class="bi" width="16" height="16" aria-hidden="true">
+  linkIcon.innerHTML = `<svg class="bi" width="20" height="20" aria-hidden="true">
                   <use xlink:href="#arrow-right-circle"></use>
                 </svg>`;
   const arrowItems = document.querySelectorAll('.arrow');
