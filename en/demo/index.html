@@ -38,14 +38,18 @@
     </nav>
   </header>
     <main class="container col-lg-12 mx-auto py-5">
-      <div class="row">
-        <div class="col-12 col-md-7 col-lg-8 pt-3 docs" data-bs-spy="scroll" data-bs-target="#on-this-page" data-bs-smooth-scroll="true" tabindex="0">
+      <div class="row docs">
+        <div class="col-12 col-md-5 col-lg-4 mb-5">
+          <div id="on-this-page" class="list-group ms-2 ms-lg-5 position-sticky top-0 pt-3">
+          </div>
+        </div>
+        <div class="col-12 col-md-7 col-lg-8 pt-3" data-bs-spy="scroll" data-bs-target="#on-this-page" data-bs-smooth-scroll="true" tabindex="0">
           <h1 class="text-body-emphasis pt-2 pb-5">Demo</h1>
           <p>This page provides a simple simulation of a rich text editor. Open tips, copy, paste and delete elements. Try dismissing an alert, or using the toolbar to view the heading outline.</p>
           <div id="ed11y-demo" class="p-5" contenteditable="">
             <section id="headings">
 
-              <h2 id="heading-tests" class="pt-1">Headings</h2>
+              <h2 class="pt-1">Headings</h2>
 
               <p>This heading skipped a level:</p>
               <div class="positive"><h6 id="this-h6-should-have-been-an-h3">Oops</h6></div>
@@ -66,8 +70,8 @@
             </section>
 
 
-            <section>
-              <h2 id="text-alternatives">Text alternatives for images</h2>
+            <section id="text-alternatives">
+              <h2>Text alternatives for images</h2>
 
               <p>This heading is made of an image of text with no alt:</p>
               <div class="positive">
@@ -132,8 +136,8 @@
                 <img alt="" class="carousel" src="/assets/images/px20240813sm.jpg">
               </div>
             </section>
-            <section>
-              <h2 id="contrast-tests">Contrast</h2>
+            <section id="contrast-tests">
+              <h2>Contrast</h2>
               <p>Illegible color combination:</p>
               <div class="positive"><p style="background: #ccc; color: #ddd;">Super legible.</p></div>
               <p>Color needs a manual check:</p>
@@ -159,206 +163,213 @@
 
 
             </section>
-            <h2 id="embeds">Embeds &amp; Media</h2>
+            <section id="embeds">
+              <h2>Embeds &amp; Media</h2>
 
-            <p>Video flagged as manual check needed for captioning:</p>
-            <div class="positive" style="width: 560px; aspect-ratio: 560 / 315; max-width: 100%; cursor: not-allowed;">
-              <iframe width="560" height="315" inert="" src="https://www.youtube-nocookie.com/embed/QGsevnbItdU?si=W_b2i2o_n5v1ArvA" style="width: 560px; aspect-ratio: 560 / 315; max-width: 100%; cursor: not-allowed;" title="YouTube: How it's done video. Playback is disabled." sandbox="allow-scripts allow-same-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="origin" allowfullscreen></iframe>
-              <div><small><em>Playback disabled to prevent cookies.</em></small></div>
-            </div>
-
-            <p>Audio needs a transcript:</p>
-            <div class="positive">
-              <div style="border: 1px solid #444; background: #ccc; width: 320px; height: 60px;"><audio style="height: 60px;"></audio>
+              <p>Video flagged as manual check needed for captioning:</p>
+              <div class="positive" style="width: 560px; aspect-ratio: 560 / 315; max-width: 100%; cursor: not-allowed;">
+                <iframe width="560" height="315" inert="" src="https://www.youtube-nocookie.com/embed/QGsevnbItdU?si=W_b2i2o_n5v1ArvA" style="width: 560px; aspect-ratio: 560 / 315; max-width: 100%; cursor: not-allowed;" title="YouTube: How it's done video. Playback is disabled." sandbox="allow-scripts allow-same-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="origin" allowfullscreen></iframe>
+                <div><small><em>Playback disabled to prevent cookies.</em></small></div>
               </div>
-            </div>
 
-            <p>Iframe missing a title that also needs a manual check:</p>
-            <div class="positive">
-              <iframe data-needs-src=""></iframe>
-            </div>
+              <p>Audio needs a transcript:</p>
+              <div class="positive">
+                <div style="border: 1px solid #444; background: #ccc; width: 320px; height: 60px;"><audio style="height: 60px;"></audio>
+                </div>
+              </div>
 
-            <p>Unfocusable iframe:</p>
-            <div class="positive">
-              <iframe title="example" sandbox="" tabindex="-1" data-needs-src=""></iframe>
-            </div>
+              <p>Iframe missing a title that also needs a manual check:</p>
+              <div class="positive">
+                <iframe data-needs-src=""></iframe>
+              </div>
 
-            <p>Nested interactive components</p>
-            <div class="positive">
-              <details><summary>Accordion</summary>
-                <details><summary>Accordion</summary>Surprise!</details>
-              </details>
-            </div>
+              <p>Unfocusable iframe:</p>
+              <div class="positive">
+                <iframe title="example" sandbox="" tabindex="-1" data-needs-src=""></iframe>
+              </div>
 
-            <h2 id="meaningful-links">Meaningful Links</h2>
+              <p>Nested interactive components</p>
+              <div class="positive">
+                <details><summary>Accordion</summary>
+                  <details><summary>Accordion</summary>Surprise!</details>
+                </details>
+              </div>
+            </section>
+            <section id="meaningful-links">
+              <h2>Meaningful Links</h2>
 
-            <p id="links-with-no-text-at-all">Links with no text at all</p>
-            <p class="positive"><a href="https://www.youtube.com/watch?v=DLzxrzFCyOs"
-                                   style="display: inline-block; width: 3rem; border-bottom: 1px solid;"></a> Empty links</p>
+              <p id="links-with-no-text-at-all">Links with no text at all</p>
+              <p class="positive"><a href="https://www.youtube.com/watch?v=DLzxrzFCyOs"
+                                     style="display: inline-block; width: 3rem; border-bottom: 1px solid;"></a> Empty links</p>
 
-            <p id="links-titled-with-a-url">Links only labelled with a URL:</p>
-            <p class="positive"><a  href="https://www.youtube.com/watch?v=DLzxrzFCyOs">https://www.youtube.com/watch?v=DLzxrzFCyOs</a></p>
+              <p id="links-titled-with-a-url">Links only labelled with a URL:</p>
+              <p class="positive"><a  href="https://www.youtube.com/watch?v=DLzxrzFCyOs">https://www.youtube.com/watch?v=DLzxrzFCyOs</a></p>
 
-            <p id="links-titled-with-a-symbol">Links only labelled with symbols:</p>
-            <p class="positive"><a href="https://www.youtube.com/watch?v=DLzxrzFCyOs">↣</a></p>
+              <p id="links-titled-with-a-symbol">Links only labelled with symbols:</p>
+              <p class="positive"><a href="https://www.youtube.com/watch?v=DLzxrzFCyOs">↣</a></p>
 
-            <p>Links with the same names go different places</p>
-            <p class="positive"><a href="https://www.youtube.com/watch?v=fjOeJssZX_Q">Turtles</a> <a href="https://www.youtube.com/watch?v=cWppAbqm9I8">Turtles</a></p>
+              <p>Links with the same names go different places</p>
+              <p class="positive"><a href="https://www.youtube.com/watch?v=fjOeJssZX_Q">Turtles</a> <a href="https://www.youtube.com/watch?v=cWppAbqm9I8">Turtles</a></p>
 
-            <p id="links-titled-with-doi">Links only labelled with a DOI number:</p>
-            <p class="positive"><a href="https://doi.org/10.1145/3493612.3520468">doi.org/10.1145/3493612.3520468</a></p>
+              <p id="links-titled-with-doi">Links only labelled with a DOI number:</p>
+              <p class="positive"><a href="https://doi.org/10.1145/3493612.3520468">doi.org/10.1145/3493612.3520468</a></p>
 
-            <p id="links-titled-with-click">Links with meaningless labels:</p>
-            <p class="positive"><a  href="https://www.youtube.com/watch?v=DLzxrzFCyOs" title="https://www.youtube.com/watch?v=DLzxrzFCyOs">Click here</a></p>
+              <p id="links-titled-with-click">Links with meaningless labels:</p>
+              <p class="positive"><a  href="https://www.youtube.com/watch?v=DLzxrzFCyOs" title="https://www.youtube.com/watch?v=DLzxrzFCyOs">Click here</a></p>
 
-            <p id="links-titled-with-empty">Linked icons without text alternatives:</p>
-            <p class="positive"><a href="https://www.youtube.com/watch?v=DLzxrzFCyOs"><svg style="width: 16px; height: 16px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376C296.3 401.1 253.9 416 208 416 93.1 416 0 322.9 0 208S93.1 0 208 0 416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg></a></p>
+              <p id="links-titled-with-empty">Linked icons without text alternatives:</p>
+              <p class="positive"><a href="https://www.youtube.com/watch?v=DLzxrzFCyOs"><svg style="width: 16px; height: 16px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376C296.3 401.1 253.9 416 208 416 93.1 416 0 322.9 0 208S93.1 0 208 0 416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg></a></p>
 
-            <p id="links-that-open-in-a-new-window-without-an-external-link-icon-or-text-warning">Links that open in a new window without an external link icon or text warning</p>
+              <p id="links-that-open-in-a-new-window-without-an-external-link-icon-or-text-warning">Links that open in a new window without an external link icon or text warning</p>
 
-            <p class="positive"><a href="https://www.youtube.com/watch?v=DLzxrzFCyOs" target="_blank">Alert for opens-in test.</a></p>
+              <p class="positive"><a href="https://www.youtube.com/watch?v=DLzxrzFCyOs" target="_blank">Alert for opens-in test.</a></p>
 
-            <p id="links-to-PDF">Links to PDFs</p>
-            <p class="positive"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ#.pdf" class="">Have fun.</a></p>
+              <p id="links-to-PDF">Links to PDFs</p>
+              <p class="positive"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ#.pdf" class="">Have fun.</a></p>
 
-            <p id="links-to-doc">Links to other documents</p>
-            <p class="positive"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ#.doc" class="">A fake doc link.</a></p>
+              <p id="links-to-doc">Links to other documents</p>
+              <p class="positive"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ#.doc" class="">A fake doc link.</a></p>
 
-            <p id="links-redundant">Links with redundant title attributes</p>
-            <p class="positive"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" title="Hover me">Hover me</a></p>
+              <p id="links-redundant">Links with redundant title attributes</p>
+              <p class="positive"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" title="Hover me">Hover me</a></p>
 
-            <p>Links with attributes that remove them from the tab index:</p>
-            <p class="positive"><a href="./editable.htm" aria-hidden="true">Aria-hidden links without a negative tabindex.</a></p>
+              <p>Links with attributes that remove them from the tab index:</p>
+              <p class="positive"><a href="./editable.htm" aria-hidden="true">Aria-hidden links without a negative tabindex.</a></p>
 
-            <p>Links aria-labelledby attributes to elements with no text:</p>
-            <p class="positive"><a href="./editable.htm" id="oops" aria-labelledby="oops"></a></p>
+              <p>Links aria-labelledby attributes to elements with no text:</p>
+              <p class="positive"><a href="./editable.htm" id="oops" aria-labelledby="oops"></a></p>
 
-            <p>Links with generic words in their aria label:</p>
-            <p class="positive"><a href="www.google.com/" aria-label="has aria label">learn more</a></p>
+              <p>Links with generic words in their aria label:</p>
+              <p class="positive"><a href="www.google.com/" aria-label="has aria label">learn more</a></p>
 
-            <p>Linked image with no alt text:</p>
-            <p class="positive"><a href="./editable.htm"><img alt="" src="/assets/images/px20240813sm.jpg" class=""></a></p>
+              <p>Linked image with no alt text:</p>
+              <p class="positive"><a href="./editable.htm"><img alt="" src="/assets/images/px20240813sm.jpg" class=""></a></p>
 
-            <p>Linked image with unpronounceable alt text:</p>
-            <p class="positive"><a href="./editable.htm"><img alt="'" src="/assets/images/px20240813sm.jpg" class=""></a></p>
+              <p>Linked image with unpronounceable alt text:</p>
+              <p class="positive"><a href="./editable.htm"><img alt="'" src="/assets/images/px20240813sm.jpg" class=""></a></p>
 
-            <p>Linked image with no alt text attribute:</p>
-            <p class="positive"><a href="./editable.htm"><img src="/assets/images/px20240813sm.jpg" class=""></a></p>
+              <p>Linked image with no alt text attribute:</p>
+              <p class="positive"><a href="./editable.htm"><img src="/assets/images/px20240813sm.jpg" class=""></a></p>
 
-            <p>Linked image with no alt text attribute in a link with text:</p>
-            <p class="positive"><a href="./editable.htm">Search <img src="/assets/images/px20240813sm.jpg" class=""></a></p>
+              <p>Linked image with no alt text attribute in a link with text:</p>
+              <p class="positive"><a href="./editable.htm">Search <img src="/assets/images/px20240813sm.jpg" class=""></a></p>
 
-            <p>Linked image with only a filename as alt text:</p>
-            <p class="positive"><a href="./editable.htm"><img alt="http://jpg.gif" src="/assets/images/px20240813sm.jpg">
-            </a></p>
+              <p>Linked image with only a filename as alt text:</p>
+              <p class="positive"><a href="./editable.htm"><img alt="http://jpg.gif" src="/assets/images/px20240813sm.jpg">
+              </a></p>
 
-            <p>Linked image with suspiciously long alt text:</p>
-            <p class="positive"><a href="./editable.htm"><img alt="Look at this doggy. This doggy is so happy. This doggy got to go on a walk and the walk went to a lake and there were all kinds of fascinating smells. What an amazing day this doggy had." src="/assets/images/px20240813sm.jpg">
-            </a></p>
+              <p>Linked image with suspiciously long alt text:</p>
+              <p class="positive"><a href="./editable.htm"><img alt="Look at this doggy. This doggy is so happy. This doggy got to go on a walk and the walk went to a lake and there were all kinds of fascinating smells. What an amazing day this doggy had." src="/assets/images/px20240813sm.jpg">
+              </a></p>
 
-            <p>Broken in page links</p>
-            <p class="positive">
-              <a href="#oh-no">There's no such ID.</a>
-            </p>
+              <p>Broken in page links</p>
+              <p class="positive">
+                <a href="#oh-no">There's no such ID.</a>
+              </p>
 
-            <p>Links to dev server</p>
-            <p class="positive">
-              <a href="https://tugboatqa.com">Oops</a>
-            </p>
+              <p>Links to dev server</p>
+              <p class="positive">
+                <a href="https://tugboatqa.com">Oops</a>
+              </p>
 
-            <p>Duplicate anchors</p>
-            <p class="positive"><a id="dupe" href="#dupe">Anchor 1</a> <a id="dupe" href="#dupe">Anchor 2</a></p>
+              <p>Duplicate anchors</p>
+              <p class="positive"><a id="dupe" href="#dupe">Anchor 1</a> <a id="dupe" href="#dupe">Anchor 2</a></p>
+            </section>
+            <section>
+              <h2 id="table-tests">Tables</h2>
 
-            <h2 id="table-tests">Tables</h2>
+              <p id="tables-without-valid-headers">Tables without valid headers</p>
 
-            <p id="tables-without-valid-headers">Tables without valid headers</p>
+              <table class="positive"><tbody><tr><td>A table without a TH header is invalid</td><td class="positive"><h4 >Outline headers do not count</h4></td><td class="negative"><p><strong>Disable should be content header test inside tables</strong></p></td></tr></tbody></table>
 
-            <table class="positive"><tbody><tr><td>A table without a TH header is invalid</td><td class="positive"><h4 >Outline headers do not count</h4></td><td class="negative"><p><strong>Disable should be content header test inside tables</strong></p></td></tr></tbody></table>
-
-            <table><thead>
-            <tr>
-              <th class="positive"></th>
-              <th class="negative">Empty headers</th>
-            </tr>
-            </thead>
-              <tbody>
-              <tr class="negative">
-                <th>I found</th>
-                <td>700 Videos of Turtles</td>
+              <table><thead>
+              <tr>
+                <th class="positive"></th>
+                <th class="negative">Empty headers</th>
               </tr>
-              <tr class="negative">
-                <th>Each</th>
-                <td>2 Seconds Long</td>
-              </tr>
-              </tbody>
-            </table>
-            <h2 id="legibility-tests">Legibility</h2>
+              </thead>
+                <tbody>
+                <tr class="negative">
+                  <th>I found</th>
+                  <td>700 Videos of Turtles</td>
+                </tr>
+                <tr class="negative">
+                  <th>Each</th>
+                  <td>2 Seconds Long</td>
+                </tr>
+                </tbody>
+              </table>
+            </section>
+            <section id="legibility-tests">
+              <h2>Legibility</h2>
 
-            <div class="positive"><p>SEVERAL WORDS IN A ROW OF CAPS LOCK TEXT WILL TRIGGER A MANUAL CHECK WARNING.</p></div>
+              <div class="positive"><p>SEVERAL WORDS IN A ROW OF CAPS LOCK TEXT WILL TRIGGER A MANUAL CHECK WARNING.</p></div>
 
-            <p class="positive"><u>Underlined text</u></p>
+              <p class="positive"><u>Underlined text</u></p>
 
-            <p class="positive"><em>A little italics is fine, but large blocks of of emphasized text are not very legible. A little is acceptable of course, but there are limits, and a whole paragraph is way too much. This, for example, is a whole paragraph. It's kind of hard to read, isn't it? But this test does not trip until it is this long, so you should not see false positives in your content unless you write really big paragraphs like this regularly.</em></p>
+              <p class="positive"><em>A little italics is fine, but large blocks of of emphasized text are not very legible. A little is acceptable of course, but there are limits, and a whole paragraph is way too much. This, for example, is a whole paragraph. It's kind of hard to read, isn't it? But this test does not trip until it is this long, so you should not see false positives in your content unless you write really big paragraphs like this regularly.</em></p>
 
-            <p class="positive" style="text-align: justify;">Justified text</p>
+              <p class="positive" style="text-align: justify;">Justified text</p>
 
-            <p class="positive">Excessive superscript or subscript; <sub>subscript should be used for small references and footnotes, not entire sentences or paragraphs.</sub></p>
+              <p class="positive">Excessive superscript or subscript; <sub>subscript should be used for small references and footnotes, not entire sentences or paragraphs.</sub></p>
 
-            <p class="positive"><span style="font-size: 10px;">Teeny fonts</span></p>
+              <p class="positive"><span style="font-size: 10px;">Teeny fonts</span></p>
 
-            <div class="positive">
-              <p>* Fake lists using common characters,</p><p>* letters, numbers and emoji.</p>
-            </div>
+              <div class="positive">
+                <p>* Fake lists using common characters,</p><p>* letters, numbers and emoji.</p>
+              </div>
 
-            <div class="positive"><li>Missing UL tag</li></div>
+              <div class="positive"><li>Missing UL tag</li></div>
+            </section>
 
-            <h2 id="forms-tests">Forms</h2>
+            <section id="forms">
+              <h2>Forms</h2>
 
-            <p>Button with no label</p>
-            <div class="positive">
-              <button class="btn btn-primary p-3 pt-4"></button>
-            </div>
+              <p>Button with no label</p>
+              <div class="positive">
+                <button class="btn btn-primary p-3 pt-4"></button>
+              </div>
 
-            <p>Inputs with an invisible label, asking if there is also a visible label.</p>
-            <div class="positive">
-              <input type="text" title="Email">
-            </div>
+              <p>Inputs with an invisible label, asking if there is also a visible label.</p>
+              <div class="positive">
+                <input type="text" title="Email">
+              </div>
 
-            <p>Inputs with only a placeholder label, asking if there is also a visible label.</p>
-            <div class="positive">
-              <input type="text" placeholder="Email">
-            </div>
+              <p>Inputs with only a placeholder label, asking if there is also a visible label.</p>
+              <div class="positive">
+                <input type="text" placeholder="Email">
+              </div>
 
-            <div class="positive">
-              <p>Button with an accessible label different from its visible label.</p>
-              <button class="btn btn-primary" aria-label="bye">Hi</button>
-            </div>
+              <div class="positive">
+                <p>Button with an accessible label different from its visible label.</p>
+                <button class="btn btn-primary" aria-label="bye">Hi</button>
+              </div>
 
-            <div class="positive">
-              <p>Button with an invalid aria-labelledby attribute.</p>
-              <button class="btn btn-primary" aria-labelledby="bye">Hi</button>
-            </div>
+              <div class="positive">
+                <p>Button with an invalid aria-labelledby attribute.</p>
+                <button class="btn btn-primary" aria-labelledby="bye">Hi</button>
+              </div>
 
-            <div class="positive">
-              <p>Button with redundant label.</p>
-              <button class="btn btn-primary">Press this button</button>
-            </div>
+              <div class="positive">
+                <p>Button with redundant label.</p>
+                <button class="btn btn-primary">Press this button</button>
+              </div>
 
-            <div class="positive">
-              <p>Reset button.</p>
-              <input class="btn btn-danger" type="reset">
-            </div>
+              <div class="positive">
+                <p>Reset button.</p>
+                <input class="btn btn-danger" type="reset">
+              </div>
 
-            <p class="positive"><a href="./editable.htm" tabindex="2">Jumbling the tab index</a></p>
+              <p class="positive"><a href="./editable.htm" tabindex="2">Jumbling the tab index</a></p>
+            </section>
+
+
+
+
+
 
           </div>
         </div>
-
-        <div class="col-12 col-md-5 col-lg-4 mb-5">
-          <div id="on-this-page" class="list-group ms-2 ms-lg-5 position-sticky top-0 pt-3">
-          </div>
-        </div>
-
 
       </div>
     </main>

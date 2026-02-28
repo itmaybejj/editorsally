@@ -1,3 +1,7 @@
+@view-transition {
+    navigation: auto;
+}
+
 body {
     /*--bs-body-bg: #d3e4f5
     --bs-body-bg: #f9fafb;
@@ -159,6 +163,11 @@ label {
     font-weight: 100 900; /* Defines the supported weight range (e.g., Thin to Black) */
     font-style: italic;
     font-display: swap; /* Recommended for better performance and user experience */
+}
+@media (min-width: 768px) {
+    .docs {
+        flex-direction: row-reverse;
+    }
 }
 
 body {
