@@ -1,15 +1,17 @@
 <!doctype html>
 <html lang="en" data-bs-theme="light">
   <head>
+<link rel="icon" type="image/png" href="/assets/favicons/favicon-512x512.png" sizes="512x512" />
+    <link rel="icon" type="image/png" href="/assets/favicons/favicon-192x192.png" sizes="192x192" />
     <link rel="icon" type="image/png" href="/assets/favicons/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="/assets/favicons/favicon.svg" />
     <link rel="shortcut icon" href="/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="manifest" href="/assets/favicons/site.webmanifest" />
     <meta charset="utf-8" />
     <title>Drupal CSA Docs — Editoria11y</title>
     <link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
     <link href="/assets/theme.css" rel="stylesheet" />
+    <link href="/assets/prism/prism.css" rel="stylesheet" />
     <meta name="theme-color" content="#712cf9" />
   </head>
   <body>
@@ -44,7 +46,37 @@
         <div class="col-12 col-md-7 col-lg-8 pt-3">
           <div data-bs-spy="scroll" data-bs-target="#on-this-page" data-bs-smooth-scroll="true">
             <h1>Drupal module</h1>
-            <h2>Install</h2>
+            <section id="features">
+              <h2 class="pt-3">Features</h2>
+
+              <figure class="figure my-3 rounded bg-body-secondary shadow" style="max-width: 600px;">
+                <img src="/assets/images/3x-generic-tip.png" class="figure-img img-fluid" height="798" width="1278"/>
+                <figcaption class="figure-caption px-3 pb-2 fs-6">Tooltips describe the issue, with buttons to jump into the page or layout editor, to ignore this alert (for the active user) or mark it OK (for all users). Depending on context and permissions, some alerts may also show a "Similar Alerts" menu, with options to mark multiple alerts on the same page as OK, or mark the same element on all pages as OK.</figcaption>
+              </figure>
+
+              <figure class="figure my-3 rounded bg-body-secondary shadow">
+                <img src="/assets/images/3x-editing.png" class="figure-img img-fluid" height="1088" width="2237"/>
+                <figcaption class="figure-caption px-3 pb-2 fs-6">Issues are detected both on-load the frontend and as-you-type in CKEditor and Gutenberg.</figcaption>
+              </figure>
+
+              <figure class="figure my-3 rounded bg-body-secondary shadow mb-5">
+                <img class="figure-img img-fluid" src="/assets/images/3x-dashboard.png" height="765" width="1600" alt="Reporting dashboard showing recent issues and pages with the most issues." />
+                <figcaption class="figure-caption px-3 pb-2 fs-6">A site-wide reporting dashboard provides filterable and exportable reports of alerts and dismissals.</figcaption>
+              </figure>
+
+              <p>As well as:</p>
+              <ul>
+                    <li>Dynamic configuration that adapts to context and user.</li>
+                    <li>An in-site (local) crawler to refresh the dashboard after major theming changes.</li>
+                    <li>Developer/author split configuration and reporting (CSA only).</li>
+                    <li>Configuration pages to help tune checks to eliminate repetitive or unhelpful alerts.</li>
+                    <li>Role-based configuration for which users will see the checker, which users can dismiss alerts, and which users can view site-wide reports.</li>
+                </ul>
+
+
+
+            </section>
+            <h2>Installation and key settings</h2>
             <p>The <a href="https://www.drupal.org/project/editoria11y/">bundled installer</a> at Drupal.org includes several modules:</p>
             <ul>
               <li>
@@ -59,10 +91,10 @@
             </ul>
             <p>Install like any other module, and then take these key steps:</p>
             <ol>
-              <li>Check permissions, and assign "Mark OK," "Mark as Ignored" and "View the dashboard" as appropriate.</li>
-              <li>Check key pages of the site, looking for alerts that are incorrect or should be hidden. Either mark them as OK or follow the directions in the next section to mark parts of the page as ignored.</li>
-              <li>Look for tips that are hard to see – offscreen, truncated, behind other elements, on hidden elements. Use the tips in "Fix tip positioning" below to fix.</li>
-              <li>If the site already has a lot of content, and you have a CSA subscription, visit the dashboard "recheck" tab, and crawl the site.</li>
+              <li><strong>Check permissions.</strong> Trusted authors should have "Mark OK," "Mark as Ignored" and "View the dashboard."</li>
+              <li><strong>Check key pages for repetitive or unhelpful alerts.</strong> Either mark them as OK in the tooltip, or adjust the configuration to ignore elements by selector.</li>
+              <li>Look for tips that are hard to see – offscreen, truncated, behind other elements, or on hidden elements. Use the tips in "Fix tip positioning" below to fix.</li>
+              <li>If the site already has content, and you have a CSA subscription, visit the dashboard "recheck" tab, and <strong>crawl the site</strong> to pre-load the site reports. This is optional, but older pages will not appear in reports until they are crawled or visited by a logged in user.</li>
             </ol>
 
             <h2 id="check-roots">Hide unhelpful alerts</h2>
@@ -101,16 +133,16 @@
             </ol>
 
             <h3 id="dismiss">Dismiss alerts</h3>
-            <p>Tests can be configured in the library as errors or warnings ("manual checks"). Warnings can be dismissed. There are two types of dismissals:</p>
+            <p>Tests can be configured in the library as errors or warnings ("manual checks"). Warnings can be dismissed. There are two types of dismissals available from the footer of each tooltip:</p>
+            <div class="my-2" style="background: url(/assets/images/3x-generic-tip.png) 100% 98%; max-width: 600px; padding-top: 6%; background-size: 108%;"></div>
             <ul>
               <li>"Ignore" is stored as a user preference: the alert is now hidden for the current user, but only the current user.</li>
               <li>"Mark OK" hides the alert for all users.</li>
             </ul>
             <p>Whether a user is able to dismiss an alert is controlled at the role level in Drupal's user permissions. <strong>Most authors should be allowed to dismiss alerts</strong>. There is no point in assigning someone a manual check if they cannot mark the item as having been checked.</p>
 
-
             <h3 id="roots">Ignore elements</h3>
-            <p>These configuration settings are the most important!</p>
+            <p>These two configuration settings are the most important!</p>
             <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
               <label for="edit-content-root">Check content in these containers</label>
               <div><textarea id="edit-content-root" name="content_root" rows="1" cols="30" disabled></textarea>
@@ -165,11 +197,9 @@
               </div>
 
             </div>
-            <p>The key thing to know about the developer check areas is that they are <strong>not independent</strong> of the content check areas. The developer areas are checked, and then those results are filtered to match the content areas.</p>
-            <p>Any areas that are excluded for developers will also be excluded for content editors. Do not exclude editable content areas!</p>
+            <p>The key thing to know about the developer check areas is that they are <strong>not independent</strong> of the content check areas. In a split configuration, the developer areas are checked, and then those results are <strong>filtered</strong> to match the content areas. Any areas that are excluded for developers will also be excluded for content editors. Do not exclude editable content areas!</p>
 
-            <h4>Change selectors for specific tests</h4>
-            <p>The configuration pages expose some, but not all, of the library parameters for controlling selectors. Look for them under:</p>
+            <p>Some tests allow for more precise configuration, to only hide certain alerts on affected elements. Look for them under:</p>
             <ul>
               <li>Content tests: Links to check</li>
               <li>Content tests: Embeds to check</li>
@@ -177,11 +207,9 @@
               <li>Developer tests: Contrast</li>
             </ul>
 
-
-
-            <h3 id="pages">Specify pages/users</h3>
+            <h3 id="pages">Hide for specific pages or users</h3>
             <p>
-              There is not currently a GUI for turning off tests by content type or route. There are two different selector-based configuration items that can accomplish this using selectors:
+              The easiest way to do this is by passing CSS classes or IDs to these options:
             </p>
             <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
               <label for="edit-no-load" class="form-item__label">Do not check on pages with these elements</label>
@@ -196,21 +224,178 @@
 
             </div>
             <p>
-              The first will hide the checker altogether: no tests will run or sync, and the toolbar will not show.
+              The first will prevent checks from running, and the toolbar will not show.
             </p>
             <p>
-              The second will start the checker minimized, and auto-mark (for the current user) all issues as "Ignored," even if they are errors. This allows the tests to run and update the dashboard, and allows the user to open the checker and use its tools.
+              The second will start the checker minimized, and auto-mark (for the current user) all issues as "Ignored," even if they are errors. This allows the tests to run and update the dashboard without bothering the user.
             </p>
             <p>
               If you want to use these to control which users see the checker, you may need to adjust your theme to output a class, e.g. <code>.user-247</code>
             </p>
 
-            <h2 id="reports">Use &amp; refresh reports</h2>
-            <h2 id="positioning">Fix hidden or offscreen tips</h2>
-            <p>These docs are in progress! This is why it's still in beta...</p>
-            <h2 id="runtime">Write your own config</h2>
-            <h2 id="modify-tips">Write your own tips</h2>
+            <h2 id="dashboard">The dashboard</h2>
+            <section id="refresh">
+              <h3 class="pt-3">Crawling and updating results</h3>
+              <p>Editoria11y is a <strong>real-time monitoring tool, not a crawler</strong>. Its site-wide reports update when authors view pages, so regular crawling is not generally needed. The CSA module <em>does</em> include a crawler, but it should only be needed in these three situations:</p>
+              <ol>
+                <li>
+                  When first installing Editoria11y on an existing site with many pages. Pages need to be visited before they will appear on the dashboard, so a quick initial crawl saves time.
+                </li>
+                <li>
+                  Major updates to themes or modules may fix (or cause) issues on many pages that will not appear until visited or crawled..
+                </li>
+                <li>
+                  Bulk actions in the admin interface like deleting pages or redirects tend to leave behind results from pages that no longer exist or have moved. In these cases it helps to use the "Refresh" tab's maintenance actions to refresh page URLs, and detect and drop deleted pages.
+                </li>
+              </ol>
+              <p>No data leaves your site during a crawl. The CSA crawler is not a cloud tool; it uses your browser to load and check the pages on your own site. The downside of this approach is that <strong>browsers pause background tabs</strong>. You will need to keep your computer on and awake during a crawl. Plan to open a new window for the crawler and leave it as the foreground tab for that window as it works. You can continue working in another window. The crawler will update its estimate after each batch of pages.</p>
+            </section>
+            <section id="reports">
+              <h3>Reports</h3>
+              <div class="my-4 border shadow" style="background: url(/assets/images/3x-dashboard.png) 86% 0%; padding-top: 28%; background-size: 106%;"></div>
+              <ul>
+                <li>
+                  <strong>Recent</strong> allows for exploring by individual alerts. This allows you to do things like filter to find all instances of the same alert type, or see which alerts are appearing frequently in recent content, or which authors still have a habit of making the same mistake.
+                </li>
+                <li>
+                  <strong>Pages</strong> shows alert counts per page, grouped by page. This allows you to find pages with the most issues, and to filter by page attributes like content type and published status.
+                </li>
+                <li>
+                  <strong>Alerts</strong> shows issues by type.
+                </li>
+                <li>
+                  <strong>Dismissals</strong> allows for monitoring whether authors are dismissing correctly, and has "reset" buttons to restore dismissed alerts.
+                </li>
+                <li>
+                  <strong>Export</strong> contains versions of the Pages, Alerts and Dismissals reports that can be filtered to prepare CSV downloads. <em>Provided by the CSV Export submodule</em>
+                </li>
+                <li>
+                  <strong>Refresh</strong> contains dashboard maintenance tools to drop alerts from deleted pages, drop alerts from parameterized pseudo-pages like /search?query=example, update stored page titles and URLs, and run a manual crawl. <em>Provided by the CSA submodule</em>
+                </li>
+              </ul>
+            </section>
 
+            <h2 id="positioning">Fix hidden or offscreen tips</h2>
+
+            <p>The module provides fields for two of the library's configuration options to change how tips are placed:</p>
+
+              <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
+                <label for="edit-element-hides-overflow" class="form-item__label">Elements with overflow hidden</label>
+                  <textarea data-drupal-selector="edit-element-hides-overflow" aria-describedby="edit-element-hides-overflow--description" id="edit-element-hides-overflow" name="element_hides_overflow" rows="1" cols="60" class="form-textarea resize-vertical form-element form-element--type-textarea form-element--api-textarea"></textarea>
+                <label for="edit-hidden-handlers" class="form-item__label">Theme JS will handle revealing hidden tooltips inside these containers</label>
+                  <textarea data-drupal-selector="edit-hidden-handlers" aria-describedby="edit-hidden-handlers--description" id="edit-hidden-handlers" name="hidden_handlers" rows="1" cols="60" class="form-textarea resize-vertical form-element form-element--type-textarea form-element--api-textarea"></textarea>
+              </div>
+            <p>Some themes have columns or widgets that hide horizontal or vertical overflow. The library automatically detects when a toggle would fall outside the visible part of the <strong>page.</strong> Telling the library that certain containers hide overflow means it will also attempt to position tips for elements in those container inside their borders.</p>
+            <p>Some themes have widgets that toggle the visibility of content, such as accordions, tabs and slideshows. Tips inside these elements will also be hidden. Providing a list of selectors for these widgets means Editoria11y will pause briefly when a user tries to jump to those tips using a next or previous button. Drupal themes and modules can then follow the directions from the library section on <a href="../install/#hidden-content">dealing with tips on hidden content</a> to reveal the hidden content.</p>
+
+            <h2 id="runtime">Write your own config</h2>
+            <p>In PHP: the Drupal module provides a <code>hook_editoria11y_alter_config</code> to change the content of <code>drupalSettings.editoria11y</code> in a module or theme. For example:</p>
+            <pre class="language-php"><code><!--<?php
+/**
+ * @file
+ * MY_MODULE module file.
+ */
+
+use Drupal\Core\Cache\CacheableMetadata;
+
+/**
+ * Implements hook_editoria11y_alter_config().
+ *
+ * Attaches Editoria11y library and config based on context.
+ */
+function MY_MODULE_editoria11y_alter_config(array &$attach, CacheableMetadata $cacheableMetadata): void {
+  $config = Drupal::config('editoria11y.settings');
+
+  // Module settings being changed need to bust the cache.
+  $cacheableMetadata->addCacheableDependency($config);
+
+  // Get and modify any of the values being passed to drupalSettings.editoria11y.
+  if (!empty($attach['allow_ok'])) {
+    $attach['allow_ok'] = 'okAll';
+  }
+}--></code></pre>
+            <p>Modifying <code>drupalSettings</code> only helps if the module JS is already set up to pass that value to the library. To add additional parameters, you need to modify the JS <code>options</code> object directly. The module checks for one global JS variable of <code>editoria11yOptionsOverride</code>. If this is set, it will pass the <code>options</code> object to an <code>editoria11yOptions</code> function you have provided in your module or theme. You can now set any of the <a href="https://editorsally.ddev.site/en/install/#params">library parameters</a>.</p>
+            <pre class="language-javascript"><code><!--var editoria11yOptionsOverride = true;
+var editoria11yOptions = function(options) {
+  // You now have access to the processed options object that will be passed to the library.
+
+  // E.g., to add a selector to the ignore list:
+  if (options['ignoreElements'] === false) {
+    // Provide the selector as the only value.
+    options['ignoreElements'] = `.example`;
+  } else {
+    // Append additional selectors with comma separator.
+    options['ignoreElements'] = `${options['ignoreElements']}, .example`
+  }
+
+  // Return your processed options.
+  return options;
+}
+--></code></pre>
+            <section id="custom-tests">
+            <h2>Write your own tests</h2>
+            <p>First, in the module config, add 1 to the "Custom tests" options so it knows to
+              watch for the tests.</p>
+            <p>Then create a Drupal JS library with your tests in your theme or module, using the <a href="../install/#custom-tests">library guide to writing custom tests</a>.</p>
+            <p>Here's a working example from Princeton, of a custom test to alert on Safe Links. Note that it accesses the Editoria11y class through <code>Drupal.Ed11y.</code></p>
+            <pre class="language-javascript"><code><!--const psEd11yCustomTests = function() {
+
+  // 1.
+  // Get elements to test, via Drupal.Ed11y.getElements.
+  // The 'root' parameter tells it to respect config for check areas and ignores.
+  const safeLinks = Drupal.Ed11y.getElements('a[href*="safelinks.protection.outlook.com/?"]', 'root');
+
+  // Add the test name to the lang object.
+  Drupal.ed11yLang.lang.testNames.outlookSafeLink = 'URL is Safe Link encoded';
+
+  // 2.
+  // Create the tip content.
+  const decodeSafelink = function(url) {
+    const params = new URL(url).searchParams;
+    let decoded = params.get('url');
+    const p = document.createElement('p');
+    if (!!decoded) {
+      p.innerHTML = `<p><span class="badge">To fix</span>Update this link with the correct URL, which is probably:<br>
+    <em style='word-wrap: break-word;font-size: 90%;line-height: 1.2;display: block;'></em></p>`
+      p.querySelector('em').textContent = Drupal.Ed11y.sanitizeHTML(decoded);
+    }
+    return p;
+  };
+  safeLinks?.forEach((el) => {
+    const content = document.createElement('div');
+    content.innerHTML = `<div class="title">Please fix this Outlook "Safe Link"</div>
+            <div class="why">
+                <p>The URL for this link is an Outlook "Safe Link" that was copied from an email.
+                It includes the original recipient's email address,
+                and will break if Microsoft shuts down the service.</p>
+                <p>The pasted URL is:<br>
+                <em style='word-break: break-all;font-size: 90%;line-height: 1.2;
+                display: block;'></em></p>
+            </div>
+            `;
+    content.querySelector('em').textContent = Drupal.Ed11y.sanitizeHTML(el.href);
+    content.querySelector('.why').insertAdjacentElement('beforebegin', decodeSafelink(el.href));
+
+    // 3.
+    // Push the tip to the library results object.
+    Drupal.Ed11y.State.results.push({
+      element: el,
+      test: 'outlookSafeLink',
+      type: 'error',
+      content: content,
+      position: 'beforebegin',
+      inline: false,
+      dismiss: false,
+    });
+  });
+
+  // 4.
+  // Tell Editoria11y you are done adding custom results.
+  const allDone = new CustomEvent('ed11yResume');
+  document.dispatchEvent(allDone);
+};--></code></pre>
+
+            </section>
           </div>
         </div>
       </div>
@@ -244,5 +429,6 @@
       class="astro-vvvwv3sm"
     ></script>
     <script src="/assets/theme.js"></script>
+    <script src="/assets/prism/prism.js"></script>
   </body>
 </html>
