@@ -113,6 +113,25 @@ main {
 label {
     font-weight: 600;
 }
+
+.logo-icon {
+    height: 1em;
+    width: 1em;
+    margin-right: .25em;
+    border: 1.5px solid;
+    border-radius: 1em;
+    opacity: .99;
+    transition: background-color .3s ease;
+}
+.navbar-brand:hover {
+    svg {
+        background-color: #fffe;
+    }
+    path {
+        fill: #03759c;
+    }
+}
+
 .docs {
     h2, h3 {
         padding-top: 8rem;
