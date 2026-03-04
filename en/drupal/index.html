@@ -13,6 +13,7 @@
     <link href="/assets/theme.css" rel="stylesheet" />
     <link href="/assets/prism/prism.css" rel="stylesheet" />
     <meta name="theme-color" content="#712cf9" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
     <header>
@@ -49,34 +50,33 @@
             <section id="features">
               <h2 class="pt-3">Features</h2>
 
-              <figure class="figure my-3 rounded bg-body-secondary shadow" style="max-width: 600px;">
-                <img src="/assets/images/3x-generic-tip.png" class="figure-img img-fluid" height="798" width="1278"/>
-                <figcaption class="figure-caption px-3 pb-2 fs-6">Tooltips describe the issue, with buttons to jump into the page or layout editor, to ignore this alert (for the active user) or mark it OK (for all users). Depending on context and permissions, some alerts may also show a "Similar Alerts" menu, with options to mark multiple alerts on the same page as OK, or mark the same element on all pages as OK.</figcaption>
-              </figure>
-
-              <figure class="figure my-3 rounded bg-body-secondary shadow">
+              <figure class="figure my-4 rounded shadow border">
                 <img src="/assets/images/3x-editing.png" class="figure-img img-fluid" height="1088" width="2237"/>
-                <figcaption class="figure-caption px-3 pb-2 fs-6">Issues are detected both on-load the frontend and as-you-type in CKEditor and Gutenberg.</figcaption>
+                <figcaption class="figure-caption p-3 pt-2 fs-6">Issues are detected both on-load the frontend and as-you-type in CKEditor and Gutenberg.</figcaption>
               </figure>
 
-              <figure class="figure my-3 rounded bg-body-secondary shadow mb-5">
+              <figure class="figure my-4 rounded shadow border" style="max-width: 600px;">
+                <img src="/assets/images/3x-generic-tip.png" class="figure-img img-fluid" height="798" width="1278"/>
+                <figcaption class="figure-caption p-3 pt-2 ps-5 fs-6">Tooltips describe the issue, with buttons to jump into the page or layout editor, to ignore this alert (for the active user) or mark it OK (for all users). Depending on context and permissions, some alerts may also show a "Similar Alerts" menu, with options to mark multiple alerts on the same page as OK, or mark the same element on all pages as OK.</figcaption>
+              </figure>
+
+              <figure class="figure my-4 rounded shadow mb-5 border">
                 <img class="figure-img img-fluid" src="/assets/images/3x-dashboard.png" height="765" width="1600" alt="Reporting dashboard showing recent issues and pages with the most issues." />
-                <figcaption class="figure-caption px-3 pb-2 fs-6">A site-wide reporting dashboard provides filterable and exportable reports of alerts and dismissals.</figcaption>
+                <figcaption class="figure-caption p-3 pt-2 fs-6">A site-wide reporting dashboard provides filterable and exportable reports of alerts and dismissals.</figcaption>
               </figure>
 
               <p>As well as:</p>
               <ul>
-                    <li>Dynamic configuration that adapts to context and user.</li>
-                    <li>An in-site (local) crawler to refresh the dashboard after major theming changes.</li>
-                    <li>Developer/author split configuration and reporting (CSA only).</li>
-                    <li>Configuration pages to help tune checks to eliminate repetitive or unhelpful alerts.</li>
-                    <li>Role-based configuration for which users will see the checker, which users can dismiss alerts, and which users can view site-wide reports.</li>
-                </ul>
+                <li>Starter configuration that automatically ignores Drupal, CKeditor, Gutenberg, Link Purpose and External Link elements, reacts to changes when editing in modal containers, and automatically positions the toolbar to avoid overlapping with Klaro and Same Page Preview elements.</li>
+                <li>Role-based configuration for which users will see the checker, which users can dismiss alerts, and which users can view site-wide reports.</li>
+                <li>An in-site (local) crawler to refresh the dashboard after major theming changes. <em>(CSA only)</em></li>
+                <li>Author/developer split configuration with separate tests (~30/~80) and issue lists. <em>(CSA only)</em></li>
+              </ul>
 
 
 
             </section>
-            <h2>Installation and key settings</h2>
+            <h2>Installation and key setup steps</h2>
             <p>The <a href="https://www.drupal.org/project/editoria11y/">bundled installer</a> at Drupal.org includes several modules:</p>
             <ul>
               <li>
@@ -96,6 +96,7 @@
               <li>Look for tips that are hard to see – offscreen, truncated, behind other elements, or on hidden elements. Use the tips in "Fix tip positioning" below to fix.</li>
               <li>If the site already has content, and you have a CSA subscription, visit the dashboard "recheck" tab, and <strong>crawl the site</strong> to pre-load the site reports. This is optional, but older pages will not appear in reports until they are crawled or visited by a logged in user.</li>
             </ol>
+            <p>View a <a href="https://youtu.be/uYvNYPg38nU?si=dqADyWpTtOhniHTP&t=696">video introduction to the configuration options</a> (v2.4).</p>
 
             <h2 id="check-roots">Hide unhelpful alerts</h2>
             <p>
@@ -233,7 +234,7 @@
               If you want to use these to control which users see the checker, you may need to adjust your theme to output a class, e.g. <code>.user-247</code>
             </p>
 
-            <h2 id="dashboard">The dashboard</h2>
+            <h2 id="dashboard">Manage site-wide results</h2>
             <section id="refresh">
               <h3 class="pt-3">Crawling and updating results</h3>
               <p>Editoria11y is a <strong>real-time monitoring tool, not a crawler</strong>. Its site-wide reports update when authors view pages, so regular crawling is not generally needed. The CSA module <em>does</em> include a crawler, but it should only be needed in these three situations:</p>
@@ -251,7 +252,7 @@
               <p>No data leaves your site during a crawl. The CSA crawler is not a cloud tool; it uses your browser to load and check the pages on your own site. The downside of this approach is that <strong>browsers pause background tabs</strong>. You will need to keep your computer on and awake during a crawl. Plan to open a new window for the crawler and leave it as the foreground tab for that window as it works. You can continue working in another window. The crawler will update its estimate after each batch of pages.</p>
             </section>
             <section id="reports">
-              <h3>Reports</h3>
+              <h3>Viewing reports</h3>
               <div class="my-4 border shadow" style="background: url(/assets/images/3x-dashboard.png) 86% 0%; padding-top: 28%; background-size: 106%;"></div>
               <ul>
                 <li>

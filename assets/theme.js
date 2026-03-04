@@ -25,7 +25,7 @@
             </li>
             <!--<li class="nav-item"><a href="/${langCode}/projects" class="nav-link">Projects</a></li>-->
             <li class="nav-item"><a href="/${langCode}/demo" class="nav-link">Demo</a></li>
-            <li class="nav-item"><a href="/${langCode}/community" class="nav-link">Community</a></li>
+            <li class="nav-item"><a href="/${langCode}/membership" class="nav-link">Membership</a></li>
             <!--<li class="nav-item"><a href="/${langCode}/contacts" class="nav-link">Contacts</a></li>-->
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -66,7 +66,7 @@
 
   const onThisPage = document.querySelector('#on-this-page');
   if (onThisPage) {
-    const headings = document.querySelectorAll('h2, h3');
+    const headings = document.querySelectorAll('h1, h2, h3');
     headings?.forEach(heading => {
       heading.setAttribute('tabindex', '-1');
       const link = document.createElement('a');
@@ -89,7 +89,15 @@
         link.prepend(sym);
       }
       onThisPage.appendChild(link);
-    })
+      link.addEventListener('click', (e) => {
+        const href = link.getAttribute('href');
+        const target = document.querySelector(href);
+        if (target) {
+          target.focus();
+          window.location.replace(href)
+        }
+      });
+    });
   }
 
   /* Theme switcher **********************/
