@@ -34,6 +34,10 @@ table {
     }
     .navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
         --bs-nav-pills-link-active-bg: var(--bs-navbar-active-color);
+        @media (max-width: 768px) {
+            padding-left: .5rem;
+            margin-left: -.5rem;
+        }
     }
     .navbar-brand {
         --bs-navbar-brand-color: #fff;
@@ -227,7 +231,7 @@ body {
             align-items: center;
             border-radius: 0;
             padding: 0 1.5rem;
-            font-size: 20px;
+            font-size: min(20px, 2.25vw);
             font-weight: 250;
             &.active, &:has(.active) {
                 border-radius: 0;
@@ -543,6 +547,13 @@ body {
 footer {
     a {
         text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @media (min-width: 768px) {
+            display: block;
+            text-wrap: nowrap;
+        }
     }
     .col {
         margin-top: 2rem;
