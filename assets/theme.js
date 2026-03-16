@@ -24,7 +24,7 @@
               <a href="/${langCode}/about" class="nav-link">About</a>
             </li>
             <!--<li class="nav-item"><a href="/${langCode}/projects" class="nav-link">Projects</a></li>-->
-            <li class="nav-item"><a href="/${langCode}/demo" class="nav-link">Demo</a></li>
+            <li class="nav-item"><a href="/${langCode}/features" class="nav-link">Features</a></li>
             <li class="nav-item"><a href="/${langCode}/membership" class="nav-link">Membership</a></li>
             <!--<li class="nav-item"><a href="/${langCode}/contacts" class="nav-link">Contacts</a></li>-->
             <li class="nav-item dropdown">
@@ -66,7 +66,7 @@
 
   const onThisPage = document.querySelector('#on-this-page');
   if (onThisPage) {
-    const headings = document.querySelectorAll('h1, h2, h3');
+    const headings = document.querySelectorAll(':is(h1, h2, h3):not(.nomenu)');
     headings?.forEach(heading => {
       heading.setAttribute('tabindex', '-1');
       const link = document.createElement('a');

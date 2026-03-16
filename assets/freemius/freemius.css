@@ -1,0 +1,19 @@
+.promotional-code__description::after {
+    content: "See editoria11y.com/discounts";
+    display: block;
+    opacity: .9;
+}
+.fs-line-item--has-smart-input .fs-line-item__wrapper > div, .fs-line-item__description {
+    width: 100%;
+}
+.promotional-code__description {
+    justify-content: space-between;
+}
+fs-upsell {
+    display: none;
+}
+.fs-select__dropdown-items {
+    max-height: calc(var(--fs-ds-appearance-control-height) * 9.5);
+    overflow-y: auto;
+    padding: var(--fs-ds-appearance-gutter-quarter) 0;
+}

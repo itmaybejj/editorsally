@@ -58,7 +58,7 @@
       PAGE_TITLE: "Oldalcím",
       RESULTS: "Eredmények",
       EXPORT_RESULTS: "Eredmények exportálása",
-      GENERATED: "Eredmények generálva %(tool)-vel.",
+      GENERATED: 'Eredmények generálva <a href="https://sa11y.netlify.app">Sa11y</a>-vel.',
       PREVIEW: "Előnézet",
       ELEMENT: "Elem",
       PATH: "Útvonal",
@@ -199,6 +199,7 @@
       LINK_NEW_TAB: 'A link figyelmeztetés nélkül új lapon vagy ablakban nyílik meg. Ez zavaró lehet, különösen azok számára, akik nehezen érzékelik a vizuális tartalmakat. Másodszor, nem mindig jó gyakorlat, ha valakinek az élményét irányítjuk, vagy döntéseket hozunk helyettük. Jelezze, hogy a link új ablakban nyílik meg a link szövegében<hr><strong>Tipp!</strong> Ismerje meg a legjobb gyakorlatokat: <a href="https://www.nngroup.com/articles/new-browser-windows-and-tabs/">Hivatkozások megnyitása új böngészőablakban és lapon.</a>',
       LINK_FILE_EXT: "A link figyelmeztetés nélkül PDF vagy letölthető fájlra (pl. MP3, Zip, Word Doc) mutat. A hivatkozás szövegében tüntesse fel a fájl típusát. Ha nagyméretű fájlról van szó, fontolja meg a fájlméret feltüntetését. <hr> <strong>Példa:</strong> Vezetői jelentés (PDF, 3MB)",
       LINK_IDENTICAL_NAME: "A link szövege megegyezik egy másik link szövegével, bár egy másik oldalra mutat. A több azonos szövegű hivatkozás zavart okozhat a képernyőolvasót használó emberek számára. <strong>Figyeljen arra, hogy a következő hivatkozás leíróbb legyen, hogy jobban megkülönböztethető legyen a többi hivatkozástól.</strong> <hr> <strong {B}>Hozzáférhető név</strong> <strong {C}>%(TEXT)</strong>",
+      LINK_UNPRONOUNCEABLE: "A hivatkozás szövege csak szimbólumokat tartalmaz. Ha úgy gondolja, hogy ez a hivatkozás másolási/beillesztési hiba miatt hibás, fontolja meg a törlését.",
       // Images
       ALT_UNPRONOUNCEABLE: "Az alt szöveg csak kiejthetetlen szimbólumokat és/vagy szóközöket tartalmaz. A képernyőolvasók bejelentik a képet, majd megállnak. Ha a kép dekoratív, győződjön meg róla, hogy az alt szöveg nem tartalmaz szóközöket. <hr> {ALT} <strong {C}>%(ALT_TEXT)</strong>",
       LINK_ALT_UNPRONOUNCEABLE: "A hivatkozott kép alt szövege csak kiejthetetlen szimbólumokat és/vagy szóközöket tartalmaz. A képernyőolvasók bejelentik a képet, majd megállnak. Győződjön meg róla, hogy az alt szöveg leírja a hivatkozás célját. <hr> {L} {ALT} <strong {C}>%(ALT_TEXT)</strong>",
@@ -357,6 +358,7 @@
     LINK_EMPTY: "Ez a hivatkozás nem tartalmaz szavakat.",
     LINK_EMPTY_LABELLEDBY: "A link érvénytelen aria‑labelledby értéket használ",
     LINK_EMPTY_NO_LABEL: "A linkhez címke szükséges",
+    LINK_UNPRONOUNCEABLE: "Ez a hivatkozás kiejthetetlen",
     LINK_FILE_EXT: "A link fájlra mutat figyelmeztetés nélkül",
     LINK_IDENTICAL_NAME: "Azonos szövegű linkek különböző oldalakra mutatnak",
     LINK_IMAGE_ALT: "Kézi ellenőrzés: alt‑szöveges kép a linkben",
@@ -453,6 +455,7 @@
     LINK_EMPTY: `<p>${why.fix}Adjon meg szöveget, amely leírja a célt, vagy törölje, ha csak egy gépelési hiba vagy csatolt szóköz.</p><div class="why"><p>Tipp: A képernyőolvasók nem tudják leírni az olyan linkeket, amelyek csak szóközöket vagy szimbólumokat tartalmaznak. Vagy csendben maradnak ("Link, [...kínos szünet, ahol a link címe lenne...]"), vagy felolvassák az URL-t: Link, H-T-T-P-S perjel perjel példa pont com.</p><p>Vegye figyelembe, hogy a csatolt szóközöket nehéz lehet törölni egyes tartalomszerkesztőkben; néha szükséges az "szakadás fölött" való törlés az elhárított szóközök mindkét oldalán található szavak eltávolításával és újraírásával.</p></div>`,
     LINK_EMPTY_LABELLEDBY: `<p>A link <code>aria-labelledby</code> értéke nem felel meg egyetlen <code>ID</code>-nek sem.</p><p>${why.fix}Adjon meg érvényes ID‑t vagy távolítsa el az attribútumot.</p>`,
     LINK_EMPTY_NO_LABEL: `<p><strong class="badge">Megoldás</strong> Adjon leíró szöveget a linkhez, vagy törölje, ha ez csak elgépelés volt.</p><div class="why"><p>Tipp: a képernyőolvasók nem tudják leírni az üres linkeket.</p><p>A linkelt szóközök törléséhez néha mindkét oldali szöveget újra kell írni.</p></div>`,
+    LINK_UNPRONOUNCEABLE: `<p>${why.fix}Adjon meg szöveget vagy címet, amely leírja a célt, vagy törölje, ha csak egy gépelési hiba vagy csatolt szóköz.</p><div class="why"><p>Tipp: A képernyőolvasók nem tudják leírni az olyan linkeket, amelyek csak szóközöket vagy szimbólumokat tartalmaznak. Vagy csendben maradnak ("Link, [...kínos szünet, ahol a link címe lenne...]"), vagy felolvassák a szimbólum nevét.</p></div>`,
     LINK_FILE_EXT: `<p>A link fájlra mutat (PDF, MP3, ZIP, Word stb.) előzetes tájékoztatás nélkül.</p><p>${why.fix}Jelezze a fájltípust a linkben (szöveggel vagy ikonnal): https://itmaybejj.github.io/linkpurpose/</a>.</p><p class="why">Nagy fájloknál érdemes a méretet is feltüntetni: „Éves jelentés (PDF, 3 MB)”.</p>`,
     LINK_IDENTICAL_NAME: `<p>Link szöveg: "<strong>%(TEXT)</strong>"</p><p><strong class="badge">Megoldás</strong> Fogalmazza át azokat a linkeket, amelyek különböző célokra mutatnak, és adjon mindegyiknek egyedi, célhoz illő szöveget.</p>${why.links}`,
     LINK_IMAGE_ALT: `Ügyeljen arra, hogy az alt szöveg a link célját írja le:</p><p> {L} {ALT} <strong {C}>%(ALT_TEXT)</strong></p>${why.imageLinks}`,
@@ -496,7 +499,7 @@
     TABLES_SEMANTIC_HEADING: ` <p>${why.fix}Távolítsa el a tartalmi címsort (h2, h3). Használjon inkább táblázatfejléceket. Ha több szint kell, bontsa több táblázatra.</p><div class="why"> <p>Magyarázat: a táblázatfejlécek irányhoz kötöttek (sor vagy oszlop). A tartalmi címsor az alatta következő teljes tartalomra hatással van.</p><table><tr><th>1</th><th>2</th><th>3</th><td rowspan="2">A <strong>táblázatfejléc</strong> a 2. cellában a B cellát jelöli.<br><br> A <strong>tartalmi címsor</strong> a 2. cellában a 3., A, B, C cellákat, valamint ezt a szöveget és a lábjegyzetet is „címkézi”.</td></tr> <tr><td>A</td><td>B</td><td>C</td></tr></table> </div>`
   };
   const interfaceStrings = {
-    CONSOLE_ERROR: 'Az akadálymentességi ellenőrző hibát észlelt ezen az oldalon. Kérjük, %(link)<a href="%(link)">jelentse a GitHubon</a>.',
+    CONSOLE_ERROR: 'Az akadálymentességi ellenőrző hibát észlelt ezen az oldalon. Kérjük, <a class="g-link">jelentse a GitHubon</a>.',
     SKIP_TO_ISSUE: "Figyelmeztetés megjelenítése",
     buttonFirstContent: "Első figyelmeztetés megjelenítése",
     ALERT_CLOSE: "Bezárás",
@@ -539,6 +542,9 @@
     main_toggle_hide_alerts: "Hozzáférhetőségi figyelmeztetések elrejtése",
     main_toggle_show: "Hozzáférhetőségi eszközök megjelenítése",
     main_toggle_show_alerts: "Hozzáférhetőségi figyelmeztetések megjelenítése",
+    main_toggle_1: "Egy akadálymentességi figyelmeztetés",
+    main_toggle_2: "Két akadálymentességi figyelmeztetés",
+    main_toggle_plural: `%(count) akadálymentességi figyelmeztetés`,
     MISSING_ROOT: `Az Editoria11y nem talált olyan elemeket, amelyek megfelelnek az ellenőrzési terület konfigurációjának: <code>%(root)</code>`,
     panelCheckAltText: `<p class="ed11y-small">Ellenőrizze, hogy minden kép visszaadja‑e a jelentését a kontextusban, és hogy nincs‑e „képben lévő szöveg”.</p>`,
     panelCheckOutline: `<p class="ed11y-small">Ez megjeleníti a címsorstruktúrát. Ellenőrizze, hogy megfelel‑e a vizuális szerkezetnek.</p>`,

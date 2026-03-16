@@ -31,7 +31,7 @@
     sprintf(string, ...args) {
       let transString = this._(string);
       transString = this.prepHTML(transString);
-      const el = document.createElement("div");
+      const el = document.createElement("span");
       el.innerHTML = transString;
       if (args?.length) {
         args.forEach((_arg, index) => {
@@ -39,9 +39,10 @@
         });
         args.forEach((arg, index) => {
           const replacement = el.querySelector(`[data-arg="${index}"]`);
-          if (replacement && arg !== null) {
-            replacement.textContent = arg;
-          }
+          if (!replacement || arg === null) return;
+          const match = String(arg).match(/{{langAttr:([\w-]+)\|([^}]+)}}/);
+          if (match) replacement.setAttribute("lang", match[1]);
+          replacement.textContent = match ? match[2] : arg;
         });
       }
       return el;
@@ -101,6 +102,7 @@
     autoDetectShadowComponents: false,
     pepper: window.location.hostname,
     // Provide a string to seed hashes.
+    unitTestMode: false,
     // Annotations
     showGoodImageButton: true,
     showGoodLinkButton: true,
@@ -216,6 +218,7 @@
         dismissAll: true
       },
       LINK_FILE_EXT: true,
+      LINK_UNPRONOUNCEABLE: true,
       // Form labels checks
       LABELS_MISSING_IMAGE_INPUT: true,
       LABELS_INPUT_RESET: true,
@@ -535,11 +538,16 @@
     const Sa11yPanel = document.querySelector("sa11y-control-panel").shadowRoot;
     const alert = Sa11yPanel.getElementById("panel-alert");
     const alertText = Sa11yPanel.getElementById("panel-alert-text");
-    Sa11yPanel.getElementById("panel-alert-preview");
+    const alertPreview = Sa11yPanel.getElementById("panel-alert-preview");
     const alertClose = Sa11yPanel.getElementById("close-alert");
     const skipButton = Sa11yPanel.getElementById("skip-button");
     alert.classList.add("active");
-    alertText.innerHTML = alertMessage;
+    if (typeof alertMessage === "string") {
+      alertText.textContent = alertMessage;
+    } else {
+      alertText.appendChild(alertMessage);
+    }
+    alertPreview.innerHTML = "";
     setTimeout(() => alertClose.focus(), 300);
     function closeAlert() {
       removeAlert();
@@ -634,35 +642,31 @@
             Constants.Root.Readability.push(root);
           });
         } else {
+          Root.Readability = Root.areaToCheck;
           console.error(
             `Sa11y: The target readability root (${desiredReadabilityRoot}) does not exist.`
           );
-        }
-      } catch {
-        Root.Readability.length = 0;
-      }
-      if (Root.Readability.length === 0 && Global.headless === false) {
-        if (Root.areaToCheck.length === 0) {
-          Root.Readability.push(document.body);
-        } else {
-          Root.Readability = Root.areaToCheck;
           setTimeout(() => {
             const { readabilityDetails, readabilityToggle } = Constants.Panel;
             const readabilityOn = readabilityToggle?.getAttribute("aria-pressed") === "true";
             const alert = Constants.Panel.readability.querySelector("#readability-alert");
             if (readabilityDetails && readabilityOn && !alert) {
-              const roots = Root.areaToCheck.map((el) => {
+              const roots2 = Root.areaToCheck.map((el) => {
                 if (el.id) return `#${el.id}`;
                 if (el.className) return `.${el.className.split(/\s+/).filter(Boolean).join(".")}`;
                 return el.tagName.toLowerCase();
               }).join(", ");
               const note = document.createElement("div");
               note.id = "readability-alert";
-              note.innerHTML = `<hr><p>${Lang.sprintf("MISSING_READABILITY_ROOT", roots, desiredReadabilityRoot)}</p>`;
+              note.appendChild(document.createElement("hr"));
+              const message = Lang.sprintf("MISSING_READABILITY_ROOT", roots2, desiredReadabilityRoot);
+              note.appendChild(message);
               readabilityDetails.insertAdjacentElement("afterend", note);
             }
           }, 100);
         }
+      } catch {
+        Root.Readability.length = 0;
       }
     }
     const Panel = {};
@@ -914,10 +918,6 @@
     if (!string) return "";
     return string.replace(/[^\p{L}\p{N}\s]/gu, "").replace(/\s+/g, " ").trim();
   }
-  function escapeHTML(string) {
-    if (!string) return "";
-    return string.replace(/[^\w. ]/gi, (c) => `&#${c.charCodeAt(0)};`);
-  }
   const invalidProtocolRegex = /^([^\w]*)(javascript|data|vbscript)/im;
   const htmlEntitiesRegex = /&#(\w+)(^\w|;)?/g;
   const htmlCtrlEntityRegex = /&(newline|tab);/gi;
@@ -957,7 +957,9 @@
     }
   };
   function sanitizeURL(url2) {
-    if (!url2) return BLANK_URL;
+    if (!url2 || typeof url2 !== "string") return BLANK_URL;
+    const isBase64Data = /^data:([a-z]+\/[a-z0-9-+.]+)?;base64,/i.test(url2.trim());
+    if (isBase64Data) return url2.trim();
     let charsToDecode;
     let decodedUrl = decodeURIs(url2.trim());
     do {
@@ -984,27 +986,147 @@
     }
     return backSanitized;
   }
+  const allowedTags = [
+    "a",
+    "abbr",
+    "address",
+    "article",
+    "aside",
+    "audio",
+    "b",
+    "bdo",
+    "blockquote",
+    "br",
+    "button",
+    "canvas",
+    "cite",
+    "code",
+    "data",
+    "dd",
+    "del",
+    "details",
+    "dfn",
+    "div",
+    "dl",
+    "dt",
+    "em",
+    "fieldset",
+    "figcaption",
+    "figure",
+    "footer",
+    "form",
+    "h1",
+    "h2",
+    "h3",
+    "h4",
+    "h5",
+    "h6",
+    "header",
+    "hr",
+    "i",
+    "iframe",
+    "img",
+    "input",
+    "ins",
+    "kbd",
+    "label",
+    "li",
+    "main",
+    "mark",
+    "meter",
+    "nav",
+    "noscript",
+    "ol",
+    "output",
+    "p",
+    "picture",
+    "pre",
+    "progress",
+    "q",
+    "rp",
+    "rt",
+    "s",
+    "samp",
+    "section",
+    "select",
+    "small",
+    "source",
+    "span",
+    "strong",
+    "sub",
+    "summary",
+    "sup",
+    "svg",
+    "table",
+    "tbody",
+    "td",
+    "textarea",
+    "tfoot",
+    "th",
+    "thead",
+    "time",
+    "tr",
+    "track",
+    "u",
+    "ul",
+    "var",
+    "video",
+    "wbr",
+    "path"
+  ];
+  const attrWhitelist = {
+    a: ["href", "title", "target", "rel", "download"],
+    img: ["src", "alt", "title", "width", "height", "loading", "srcset", "sizes"],
+    iframe: [
+      "src",
+      "width",
+      "height",
+      "title",
+      "frameborder",
+      "allowfullscreen",
+      "loading",
+      "sandbox"
+    ],
+    details: ["open"],
+    ol: ["start", "type", "reversed"],
+    li: ["value"],
+    td: ["colspan", "rowspan"],
+    th: ["colspan", "rowspan", "scope"],
+    global: ["class", "id", "role", "lang", "dir", "name"],
+    path: ["d", "fill", "fill-rule"]
+  };
   function sanitizeHTML(string) {
-    const doc = new DOMParser().parseFromString(string, "text/html");
-    const dangerousTags = "script, iframe, object, embed, applet, style";
-    doc.body.querySelectorAll(dangerousTags).forEach((node) => {
-      node.remove();
-    });
-    doc.body.querySelectorAll("*").forEach((node) => {
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(string, "text/html");
+    const allElements = doc.body.querySelectorAll("*");
+    allElements.forEach((node) => {
+      const tag = node.tagName.toLowerCase();
+      if (!allowedTags.includes(tag)) {
+        node.remove();
+        return;
+      }
+      const allowedForThisTag = attrWhitelist[tag] || [];
+      const globals = attrWhitelist.global;
       [...node.attributes].forEach(({ name, value }) => {
-        const val = value.replace(/\s+/g, "").toLowerCase();
-        const isEvent = name.startsWith("on");
-        const isUrl = ["src", "href", "xlink:href"].includes(name);
-        const isPhishy = val.includes("javascript:") || val.includes("data:text/html") || val.includes("vbscript:");
-        if (isEvent || isUrl && isPhishy) {
+        const isAria = name.startsWith("aria-");
+        const isAllowed = allowedForThisTag.includes(name) || globals.includes(name) || isAria;
+        const isUrlAttr = ["src", "href", "srcset"].includes(name);
+        if (!isAllowed) {
           node.removeAttribute(name);
+        } else if (isUrlAttr) {
+          const cleanURL = sanitizeURL(value);
+          if (!cleanURL) {
+            node.removeAttribute(name);
+          } else {
+            node.setAttribute(name, cleanURL);
+          }
         }
       });
     });
     return doc.body.innerHTML;
   }
+  const baseIgnores = "noscript,script,style,audio,video,form,iframe";
   function fnIgnore(element, selectors = []) {
-    const baseIgnores = "noscript,script,style,audio,video,form,iframe";
     const ignoreQuery = selectors.length ? `${baseIgnores},${selectors.join(",")}` : baseIgnores;
     if (!element || element.nodeType !== Node.ELEMENT_NODE) {
       return element ? element.cloneNode(true) : null;
@@ -1337,7 +1459,86 @@
       });
     }
   }
-  const version = "3.0.0-dev0211";
+  const version = "3.0.0-dev0312";
+  const spriteAlts = '<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 576 512"><path fill="currentColor" d="M160 80l352 0c9 0 16 7 16 16l0 224c0 8.8-7.2 16-16 16l-21 0L388 179c-4-7-12-11-20-11s-16 4-20 11l-52 80-12-17c-5-6-12-10-19-10s-15 4-19 10L176 336 160 336c-9 0-16-7-16-16l0-224c0-9 7-16 16-16zM96 96l0 224c0 35 29 64 64 64l352 0c35 0 64-29 64-64l0-224c0-35-29-64-64-64L160 32c-35 0-64 29-64 64zM48 120c0-13-11-24-24-24S0 107 0 120L0 344c0 75 61 136 136 136l320 0c13 0 24-11 24-24s-11-24-24-24l-320 0c-49 0-88-39-88-88l0-224zm208 24a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z"></path></svg>';
+  const spriteClose = '<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 384 512"><path fill="currentColor" d="M343 151c13-13 13-33 0-46s-33-13-45 0L192 211 87 105c-13-13-33-13-45 0s-13 33 0 45L147 256 41 361c-13 13-13 33 0 45s33 13 45 0L192 301 297 407c13 13 33 13 45 0s13-33 0-45L237 256 343 151z"></path></svg>';
+  const spriteCursor = '<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 256 512"><path fill="currentColor" d="M0 29C-1 47 12 62 29 64l8 1C71 67 96 95 96 128L96 224l-32 0c-18 0-32 14-32 32s14 32 32 32l32 0 0 96c0 33-26 61-59 64l-8 1C12 450-1 465 0 483s17 31 35 29l8-1c34-3 64-19 85-43c21 24 51 40 85 43l8 1c18 2 33-12 35-29s-12-33-29-35l-8-1C186 445 160 417 160 384l0-96 32 0c18 0 32-14 32-32s-14-32-32-32l-32 0 0-96c0-33 26-61 59-64l8-1c18-2 31-17 29-35S239-1 221 0l-8 1C179 4 149 20 128 44c-21-24-51-40-85-43l-8-1C17-1 2 12 0 29z"/></svg>';
+  const spriteDismiss = '<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="Currentcolor" d="M39 5C28-3 13-1 5 9S-1 35 9 43l592 464c10 8 26 6 34-4s6-26-4-34L526 387c39-41 66-86 78-118c3-8 3-17 0-25c-15-36-46-88-93-131C466 69 401 32 320 32c-68 0-125 26-169 61L39 5zM223 150C249 126 283 112 320 112c80 0 144 65 144 144c0 25-6 48-17 69L408 295c8-19 11-41 5-63c-11-42-48-69-89-71c-6-0-9 6-7 12c2 6 3 13 3 20c0 10-2 20-7 28l-90-71zM373 390c-16 7-34 10-53 10c-80 0-144-65-144-144c0-7 1-14 1-20L83 162C60 191 44 221 35 244c-3 8-3 17 0 25c15 36 46 86 93 131C175 443 239 480 320 480c47 0 89-13 126-33L373 390z"/></svg>';
+  const spriteUnDismiss = '<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="10" viewBox="-30 0 640 512"><path fill="Currentcolor" d="M288 32c-81 0-146 37-193 81C49 156 17 208 3 244c-3 8-3 17 0 25C17 304 49 356 95 399C142.5 443 207 480 288 480s146-37 193-81c47-44 78-95 93-131c3-8 3-17 0-25c-15-36-46-88-93-131C434 69 369 32 288 32zM144 256a144 144 0 1 1 288 0 144 144 0 1 1 -288 0zm144-64c0 35-29 64-64 64c-7 0-14-1-20-3c-6-2-12 2-12 7c.3 7 1 14 3 21c14 51 66 82 118 68s82-66 68-118c-11-42-48-69-89-71c-6-.2-9 6-7 12c2 6 3 13 3 20z"></path></svg>';
+  const spriteHeadings = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" aria-hidden="true"><path fill="currentColor" d="M0 96C0 78 14 64 32 64l384 0c18 0 32 14 32 32s-14 32-32 32L32 128C14 128 0 114 0 96zM64 256c0-18 14-32 32-32l384 0c18 0 32 14 32 32s-14 32-32 32L96 288c-18 0-32-14-32-32zM448 416c0 18-14 32-32 32L32 448c-18 0-32-14-32-32s14-32 32-32l384 0c18 0 32 14 32 32z"></path></svg>';
+  const spriteReadability = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" aria-hidden="true"><path fill="currentColor" d="M528.3 46.5l-139.8 0c-48.1 0-89.9 33.3-100.4 80.3-10.6-47-52.3-80.3-100.4-80.3L48 46.5C21.5 46.5 0 68 0 94.5L0 340.3c0 26.5 21.5 48 48 48l89.7 0c102.2 0 132.7 24.4 147.3 75 .7 2.8 5.2 2.8 6 0 14.7-50.6 45.2-75 147.3-75l89.7 0c26.5 0 48-21.5 48-48l0-245.7c0-26.4-21.3-47.9-47.7-48.1zM242 311.9c0 1.9-1.5 3.5-3.5 3.5l-160.3 0c-1.9 0-3.5-1.5-3.5-3.5l0-22.9c0-1.9 1.5-3.5 3.5-3.5l160.4 0c1.9 0 3.5 1.5 3.5 3.5l0 22.9-.1 0zm0-60.9c0 1.9-1.5 3.5-3.5 3.5l-160.3 0c-1.9 0-3.5-1.5-3.5-3.5l0-22.9c0-1.9 1.5-3.5 3.5-3.5l160.4 0c1.9 0 3.5 1.5 3.5 3.5l0 22.9-.1 0zm0-60.9c0 1.9-1.5 3.5-3.5 3.5l-160.3 0c-1.9 0-3.5-1.5-3.5-3.5l0-22.9c0-1.9 1.5-3.5 3.5-3.5l160.4 0c1.9 0 3.5 1.5 3.5 3.5l0 22.9-.1 0zM501.3 311.8c0 1.9-1.5 3.5-3.5 3.5l-160.3 0c-1.9 0-3.5-1.5-3.5-3.5l0-22.9c0-1.9 1.5-3.5 3.5-3.5l160.4 0c1.9 0 3.5 1.5 3.5 3.5l0 22.9-.1 0zm0-60.9c0 1.9-1.5 3.5-3.5 3.5l-160.3 0c-1.9 0-3.5-1.5-3.5-3.5l0-22.9c0-1.9 1.5-3.5 3.5-3.5l160.4 0c1.9 0 3.5 1.5 3.5 3.5l0 22.9-.1 0zm0-60.9c0 1.9-1.5 3.5-3.5 3.5l-160.3 0c-1.9 0-3.5-1.5-3.5-3.5l0-22.8c0-1.9 1.5-3.5 3.5-3.5l160.4 0c1.9 0 3.5 1.5 3.5 3.5l0 22.8-.1 0z"/></svg>';
+  const spriteNext = '<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="11" viewBox="0 -15 90 120"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="m30 00 50 50-50 50" stroke-width="18"></path></svg>';
+  const spriteToggleErrors = '<svg class="errors-icon" xmlns="http://www.w3.org/2000/svg" width="10" aria-hidden="true" viewBox="0 0 448 512"><path fill="currentColor" d="M64 32C64 14 50 0 32 0S0 14 0 32L0 64 0 368 0 480c0 18 14 32 32 32s32-14 32-32l0-128 64-16c41-10 85-5 123 13c44.2 22 96 25 142 7l35-13c13-5 21-17 21-30l0-248c0-23-24-38-45-28l-10 5c-46 23-101 23-147 0c-35-18-75-22-114-13L64 48l0-16z"></path></svg>';
+  const spriteTogglePass = '<svg class="pass-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="-.75 -3.5 10.1699 19.1777"><path fill="currentColor" d="M3.7031,10.5527c-.3633-.6562-.6426-1.1387-.8379-1.4473l-.3105-.4863-.2344-.3574c-.5117-.7969-1.0449-1.4551-1.5996-1.9746.3164-.2617.6113-.3926.8848-.3926.3359,0,.6348.123.8965.3691s.5918.7148.9902,1.4062c.4531-1.4727,1.0293-2.8691,1.7285-4.1895.3867-.7188.7314-1.2021,1.0342-1.4502s.7041-.3721,1.2041-.3721c.2656,0,.5938.041.9844.123-1.0039.8086-1.8066,1.7695-2.4082,2.8828s-1.3789,3.0762-2.332,5.8887Z"/></svg>';
+  const spriteToggleWarnings = '<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="close-icon" viewBox="0 0 384 512"><path fill="currentColor" d="M343 151c13-13 13-33 0-46s-33-13-45 0L192 211 87 105c-13-13-33-13-45 0s-13 33 0 45L147 256 41 361c-13 13-13 33 0 45s33 13 45 0L192 301 297 407c13 13 33 13 45 0s13-33 0-45L237 256 343 151z"></path></svg>';
+  const spriteVisualize = '<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="10" viewBox="0 10 512 512"><path fill="Currentcolor" d="M152 38c10 9 11 24 2 34l-72 80c-4 5-11 8-17 8s-13-2-18-7L7 113C-2 104-2 88 7 79s25-9 34 0l22 22 55-61c9-10 24-11 34-2zm0 160c10 9 11 24 2 34l-72 80c-4 5-11 8-17 8s-13-2-18-7L7 273c-9-9-9-25 0-34s25-9 35 0l22 22 55-61c9-10 24-11 34-2zM224 96c0-18 14-32 32-32l224 0c18 0 32 14 32 32s-14 32-32 32l-224 0c-18 0-32-14-32-32zm0 160c0-18 14-32 32-32l224 0c18 0 32 14 32 32s-14 32-32 32l-224 0c-18 0-32-14-32-32zM160 416c0-18 14-32 32-32l288 0c18 0 32 14 32 32s-14 32-32 32l-288 0c-18 0-32-14-32-32zM48 368a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"/></svg>';
+  class ConsoleErrors extends HTMLElement {
+    constructor(error) {
+      super();
+      this.error = error;
+    }
+    connectedCallback() {
+      const shadow = this.attachShadow({ mode: "open" });
+      const wrapper = document.createElement("div");
+      wrapper.ariaLabel = Lang._("ERROR");
+      wrapper.id = "dialog";
+      wrapper.classList.add("ed11y-wrapper", "ed11y-tip-wrapper", "ed11y-console-error");
+      wrapper.setAttribute("tabindex", "-1");
+      const content = document.createElement("div");
+      content.classList.add("content");
+      const url2 = sanitizeURL(window.location.href);
+      const template = `## Error Description
+\`\`\`javascript
+${this.error.stack}
+\`\`\`
+
+## Details
+- **URL:** ${url2}
+- **Version:** ${version}
+
+## Comments
+`;
+      const encodedTemplate = encodeURIComponent(template);
+      const github = `https://github.com/itmaybejj/editoria11y/issues/new?title=Bug%20report&body=${encodedTemplate}`;
+      const closeWrapper = document.createElement("div");
+      closeWrapper.innerHTML = `<button class="close ed11y-tip-close" title="Close">${spriteClose}</button>`;
+      const closeBtn = closeWrapper.querySelector(".close");
+      closeBtn.setAttribute("aria-label", Lang._("ALERT_CLOSE"));
+      const h2 = document.createElement("h2");
+      h2.classList.add("title");
+      h2.textContent = Lang._("ERROR");
+      const p1 = document.createElement("p");
+      p1.className = "p1";
+      p1.append(Lang.sprintf("CONSOLE_ERROR"));
+      if (p1.querySelector(".g-link")) {
+        p1.querySelector(".g-link").href = github;
+      }
+      const p2 = document.createElement("p");
+      p2.className = "error";
+      p2.append(
+        this.error.stack,
+        document.createElement("br"),
+        document.createElement("br"),
+        `Version: ${version}`,
+        document.createElement("br"),
+        `URL: ${url2}`
+      );
+      content.append(h2, p1, p2);
+      wrapper.append(closeWrapper, content);
+      shadow.appendChild(wrapper);
+      setTimeout(
+        () => {
+          wrapper.focus();
+          const close = content.querySelector(".close");
+          close.addEventListener("click", () => {
+            wrapper.remove();
+          });
+        },
+        0,
+        wrapper
+      );
+    }
+  }
   const UI = {
     editableHighlight: {},
     imageAlts: [],
@@ -1346,6 +1547,7 @@
     panel: false,
     message: {},
     panelElement: {},
+    panelInitial: 1,
     panelNoCover: [],
     panelToggle: {},
     panelToggleTitle: {},
@@ -1373,6 +1575,7 @@
     browserSpeed: 1,
     browserLag: 1,
     customTestsRemaining: 0,
+    testsRemaining: 0,
     customTestTimeout: 0,
     loopStop: false,
     oldResults: [],
@@ -1380,9 +1583,9 @@
     dismissKeys: {},
     roots: [],
     headingOutlineOverrides: [],
+    altMarks: /* @__PURE__ */ new Set(),
     elements: {
       // to be replaced by Sa11y find.
-      altMark: [],
       delayedReset: []
     },
     splitConfiguration: {
@@ -1418,68 +1621,6 @@
     positionedFrames: [],
     recentlyAddedNodes: /* @__PURE__ */ new WeakMap()
   };
-  class ConsoleErrors extends HTMLElement {
-    constructor(error) {
-      super();
-      this.error = error;
-    }
-    connectedCallback() {
-      const shadow = this.attachShadow({ mode: "open" });
-      const content = document.createElement("dialog");
-      content.ariaLabel = Lang._("ERROR");
-      const url2 = sanitizeURL(window.location);
-      const google = "";
-      const template = `## Error Description
-\`\`\`javascript
-${this.error.stack}
-\`\`\`
-
-## Details
-- **URL:** ${url2}
-- **Version:** ${UI.version}
-
-## Comments
-`;
-      const preContents = `Version: ${UI.version}
-URL: ${url2}`;
-      const encodedTemplate = encodeURIComponent(template);
-      const github = `https://github.com/itmaybejj/editoria11y/issues/new?title=Bug%20report&body=${encodedTemplate}`;
-      content.innerHTML = `
-      <button class="close-btn" aria-describedby="ed11y-console-error"><span aria-hidden="true">&times</span> ${Lang._("ALERT_CLOSE")}</button>
-      <h2 id="ed11y-console-error">${Lang._("ERROR")}</h2>
-      <p>${Lang.sprintf("CONSOLE_ERROR", google, github)}</p>
-      <p><strong>${Lang._("DEVELOPER_CHECKS")}:</strong></p>
-      <pre>
-</pre>
-  		<p><strong>${Lang._("ERRORS")}:</strong></p>
-<pre>${escapeHTML(this.error.stack)}</pre>
-    `;
-      shadow.appendChild(content);
-      const pre = content.querySelector("pre");
-      pre.textContent = preContents;
-      setTimeout(() => {
-        content.show();
-        const button = content.querySelector("button");
-        button.style.setProperty("padding", "1em;");
-        button.style.setProperty("filter", "invert(1)");
-        const hiddenItems = content.querySelectorAll(".visually-hidden");
-        hiddenItems?.forEach((hidden) => {
-          hidden.style.setProperty("position", "absolute");
-          hidden.style.setProperty("width", "1px");
-          hidden.style.setProperty("height", "1px");
-          hidden.style.setProperty("overflow", "hidden");
-        });
-        const preS = content.querySelectorAll("pre");
-        preS.forEach((pre2) => {
-          pre2.style.setProperty("margin-left", "18px");
-        });
-        const close = content.querySelector(".close-btn");
-        close.addEventListener("click", () => {
-          content.close();
-        });
-      }, 0);
-    }
-  }
   function getElements(selector, desiredRoot, exclude = Constants.Exclusions.Sa11yElements) {
     return find(selector, desiredRoot, exclude);
   }
@@ -1759,22 +1900,62 @@ URL: ${url2}`;
       });
     }
   }
+  const initialPanel = (ifNo) => {
+    if (UI.panelInitial && UI.totalCount >= UI.panelInitial) {
+      UI.panelToggle.classList.add("ed11y-preview");
+      UI.panelInitial = UI.totalCount;
+      if (UI.totalCount > 2) {
+        UI.panelToggleTitle.innerHTML = "";
+        UI.panelToggleTitle.appendChild(Lang.sprintf("main_toggle_plural", UI.totalCount));
+      } else if (UI.totalCount > 1) {
+        UI.panelToggleTitle.textContent = Lang._("main_toggle_2");
+      } else {
+        UI.panelToggleTitle.textContent = Lang._("main_toggle_1");
+      }
+      UI.panel.addEventListener("mouseover", () => {
+        hideInitialCount();
+      });
+      UI.panel.addEventListener("focus", () => {
+        hideInitialCount();
+      });
+    } else {
+      UI.panelInitial = false;
+      UI.panelToggle.classList.remove("ed11y-preview");
+      UI.panelToggleTitle.textContent = ifNo;
+    }
+  };
   function panelLabel(show = UI.showPanel) {
     if (show) {
       if (UI.english) {
-        UI.panelToggleTitle.textContent = UI.totalCount > 0 ? Lang._("main_toggle_hide_alerts") : Lang._("main_toggle_hide");
+        initialPanel(
+          UI.totalCount > 0 ? Lang._("main_toggle_hide_alerts") : Lang._("main_toggle_hide")
+        );
       } else {
-        UI.panelToggleTitle.textContent = Lang._("MAIN_TOGGLE_LABEL");
+        initialPanel(Lang._("MAIN_TOGGLE_LABEL"));
         UI.panelToggle.ariaExpanded = "true";
       }
     } else {
       if (UI.english) {
-        UI.panelToggleTitle.textContent = UI.totalCount > 0 ? Lang._("main_toggle_show_alerts") : Lang._("main_toggle_show");
+        initialPanel(
+          UI.totalCount > 0 ? Lang._("main_toggle_show_alerts") : Lang._("main_toggle_show")
+        );
       } else {
-        UI.panelToggleTitle.textContent = Lang._("MAIN_TOGGLE_LABEL");
+        initialPanel(Lang._("MAIN_TOGGLE_LABEL"));
         UI.panelToggle.ariaExpanded = "false";
       }
     }
+  }
+  function hideInitialCount() {
+    if (UI.panelInitial) {
+      UI.panelInitial = false;
+      panelLabel();
+    }
+    UI.panel.removeEventListener("mouseover", () => {
+      hideInitialCount();
+    });
+    UI.panel.removeEventListener("focus", () => {
+      hideInitialCount();
+    });
   }
   function pauseObservers() {
     UI.watching?.forEach((observer) => {
@@ -1834,6 +2015,7 @@ URL: ${url2}`;
     Elements.Found.reset?.forEach((el) => {
       el.remove();
     });
+    UI.altMarks.clear();
     Elements.Found.delayedReset = getElements(
       "ed11y-element-result, ed11y-element-tip",
       "document",
@@ -1877,8 +2059,7 @@ URL: ${url2}`;
     Elements.Found.Headings.forEach(($el, i) => {
       const accName = computeAccessibleName($el, Constants.Exclusions.HeaderSpan);
       const stringMatchExclusions = accName.replace(stringExclusionPattern, "");
-      const removeWhitespace$1 = removeWhitespace(stringMatchExclusions);
-      const headingText = escapeHTML(removeWhitespace$1);
+      const headingText = removeWhitespace(stringMatchExclusions);
       const rootContainsHeading = Constants.Root.areaToCheck.some((root) => root.contains($el));
       const rootContainsShadowHeading = Constants.Root.areaToCheck.some(
         (root) => root.contains($el.getRootNode().host)
@@ -1889,7 +2070,7 @@ URL: ${url2}`;
         prevLevel = headingStartsOverride;
       }
       const level = parseInt($el.getAttribute("aria-level") || $el.tagName.slice(1), 10);
-      const headingLength = removeWhitespace$1.length;
+      const headingLength = headingText.length;
       const maxHeadingLength = State.option.checks.HEADING_LONG.maxLength || 160;
       let test = null;
       let type = null;
@@ -2020,7 +2201,7 @@ URL: ${url2}`;
     "zip"
   ];
   const cssFileTypeSelectors = 'a[href$=".pdf"], a[href$=".doc"], a[href$=".docx"], a[href$=".zip"], a[href$=".mp3"], a[href$=".txt"], a[href$=".exe"], a[href$=".dmg"], a[href$=".rtf"], a[href$=".pptx"], a[href$=".ppt"], a[href$=".xls"], a[href$=".xlsx"], a[href$=".csv"], a[href$=".mp4"], a[href$=".mov"], a[href$=".avi"]';
-  const citationPattern = /(doi\.org\/|dl\.acm\.org\/|link\.springer\.com\/|pubmed\.ncbi\.nlm\.nih\.gov\/|scholar\.google\.com\/|ieeexplore\.ieee\.org\/|researchgate\.net\/publication\/|sciencedirect\.com\/science\/article\/)[a-z0-9/.-]+/i;
+  const citationPattern = /(doi\.org\/|dl\.acm\.org\/|link\.springer\.com\/|pubmed\.ncbi\.nlm\.nih\.gov\/|scholar\.google\.com\/|ieeexplore\.ieee\.org\/|researchgate\.net\/publication\/|sciencedirect\.com\/science\/article\/|10\.\d{4,}\/)[a-z0-9/.-]+/i;
   const urlEndings = /\b(?:\.edu\/|\.gob\/|\.gov\/|\.app\/|\.com\/|\.net\/|\.org\/|\.us\/|\.ca\/|\.de\/|\.icu\/|\.uk\/|\.ru\/|\.info\/|\.top\/|\.xyz\/|\.tk\/|\.cn\/|\.ga\/|\.cf\/|\.nl\/|\.io\/|\.fr\/|\.pe\/|\.nz\/|\.pt\/|\.es\/|\.pl\/|\.ua\/)\b/i;
   const specialCharPattern = /[^a-zA-Z0-9]/g;
   const htmlSymbols = /([<>↣↳←→↓«»↴]+)/;
@@ -2268,7 +2449,7 @@ URL: ${url2}`;
               });
             }
           }
-        } else if (matchedSymbol) {
+        } else if (matchedSymbol && linkText.length > 1) {
           if (State.option.checks.LINK_SYMBOLS) {
             State.results.push({
               test: "LINK_SYMBOLS",
@@ -2284,18 +2465,20 @@ URL: ${url2}`;
               developer: State.option.checks.LINK_SYMBOLS.developer || false
             });
           }
-        } else if (isSingleSpecialChar && !titleAttr) {
-          if (State.option.checks.LINK_EMPTY) {
+        } else if ((isSingleSpecialChar || matchedSymbol) && !titleAttr) {
+          if (State.option.checks.LINK_UNPRONOUNCEABLE) {
             State.results.push({
-              test: "LINK_EMPTY",
+              test: "LINK_UNPRONOUNCEABLE",
               element: $el,
-              type: State.option.checks.LINK_EMPTY.type || "error",
-              content: Lang.sprintf(State.option.checks.LINK_EMPTY.content || "LINK_EMPTY"),
+              type: State.option.checks.LINK_UNPRONOUNCEABLE.type || "error",
+              content: Lang.sprintf(
+                State.option.checks.LINK_UNPRONOUNCEABLE.content || Lang._("LINK_UNPRONOUNCEABLE") + Lang._("LINK_TIP")
+              ),
               inline: true,
               position: "afterend",
-              dismiss: prepareDismissal(`LINK_EMPTY ${href}`),
-              dismissAll: State.option.checks.LINK_EMPTY.dismissAll ? "LINK_EMPTY" : false,
-              developer: State.option.checks.LINK_EMPTY.developer || false
+              dismiss: prepareDismissal(`LINK_UNPRONOUNCEABLE ${href}`),
+              dismissAll: State.option.checks.LINK_UNPRONOUNCEABLE.dismissAll ? "LINK_UNPRONOUNCEABLE" : false,
+              developer: State.option.checks.LINK_UNPRONOUNCEABLE.developer || false
             });
           }
           return;
@@ -2758,15 +2941,12 @@ URL: ${url2}`;
         const ariaHidden = $el.getAttribute("aria-hidden") === "true";
         const negativeTabindex = $el.getAttribute("tabindex") === "-1";
         const hidden = isElementHidden($el);
-        if (hidden || ariaHidden && negativeTabindex) {
-          return;
-        }
+        if (hidden || ariaHidden && negativeTabindex) return;
         const computeName = computeAccessibleName($el);
         const inputName = removeWhitespace(computeName);
         const alt = $el.getAttribute("alt");
         const type = $el.getAttribute("type");
         const hasTitle = $el.getAttribute("title");
-        const hasPlaceholder = $el.placeholder && $el.placeholder !== 0;
         const hasAria = $el.getAttribute("aria-label") || $el.getAttribute("aria-labelledby");
         if (type === "submit" || type === "button" || type === "hidden") {
           return;
@@ -2803,20 +2983,22 @@ URL: ${url2}`;
           }
           return;
         }
-        if (hasAria || hasTitle || hasPlaceholder) {
-          if (hasPlaceholder && State.option.checks.LABELS_PLACEHOLDER) {
-            State.results.push({
-              test: "LABELS_PLACEHOLDER",
-              element: $el,
-              type: State.option.checks.LABELS_PLACEHOLDER.type || "warning",
-              content: Lang.sprintf(
-                State.option.checks.LABELS_PLACEHOLDER.content || "LABELS_PLACEHOLDER"
-              ),
-              dismiss: prepareDismissal(`LABELS_PLACEHOLDER ${type + inputName}`),
-              dismissAll: State.option.checks.LABELS_PLACEHOLDER.dismissAll ? "LABELS_PLACEHOLDER" : false,
-              developer: State.option.checks.LABELS_PLACEHOLDER.developer || true
-            });
-          } else if (inputName.length === 0) {
+        const hasPlaceholder = $el.placeholder && $el.placeholder !== 0;
+        if (hasPlaceholder && State.option.checks.LABELS_PLACEHOLDER) {
+          State.results.push({
+            test: "LABELS_PLACEHOLDER",
+            element: $el,
+            type: State.option.checks.LABELS_PLACEHOLDER.type || "warning",
+            content: Lang.sprintf(
+              State.option.checks.LABELS_PLACEHOLDER.content || "LABELS_PLACEHOLDER"
+            ),
+            dismiss: prepareDismissal(`LABELS_PLACEHOLDER ${type + inputName}`),
+            dismissAll: State.option.checks.LABELS_PLACEHOLDER.dismissAll ? "LABELS_PLACEHOLDER" : false,
+            developer: State.option.checks.LABELS_PLACEHOLDER.developer || true
+          });
+        }
+        if (hasAria || hasTitle) {
+          if (inputName.length === 0) {
             if (State.option.checks.LABELS_MISSING_LABEL) {
               State.results.push({
                 test: "LABELS_MISSING_LABEL",
@@ -2839,12 +3021,11 @@ URL: ${url2}`;
                 if (target && !isElementHidden(target)) return;
               }
             }
-            const escapedText = escapeHTML(inputName);
             State.results.push({
               test: "LABELS_ARIA_LABEL_INPUT",
               element: $el,
               type: State.option.checks.LABELS_ARIA_LABEL_INPUT.type || "warning",
-              content: State.option.checks.LABELS_ARIA_LABEL_INPUT.content ? Lang.sprintf(State.option.checks.LABELS_ARIA_LABEL_INPUT.content, escapedText) : Lang.sprintf(Lang._("LABELS_ARIA_LABEL_INPUT") + Lang._("ACC_NAME_TIP"), escapedText),
+              content: State.option.checks.LABELS_ARIA_LABEL_INPUT.content ? Lang.sprintf(State.option.checks.LABELS_ARIA_LABEL_INPUT.content, inputName) : Lang.sprintf(Lang._("LABELS_ARIA_LABEL_INPUT") + Lang._("ACC_NAME_TIP"), inputName),
               dismiss: prepareDismissal(`LABELS_ARIA_LABEL_INPUT ${type + inputName}`),
               dismissAll: State.option.checks.LABELS_ARIA_LABEL_INPUT.dismissAll ? "LABELS_ARIA_LABEL_INPUT" : false,
               developer: State.option.checks.LABELS_ARIA_LABEL_INPUT.developer || true
@@ -2853,25 +3034,27 @@ URL: ${url2}`;
           return;
         }
         const closestLabel = $el.closest("label");
-        const labelName = closestLabel ? removeWhitespace(computeAccessibleName(closestLabel)) : "";
+        const labelName = closestLabel ? computeAccessibleName(closestLabel) : "";
         if (closestLabel && labelName.length) return;
         const id = $el.getAttribute("id");
         if (id) {
-          if (!Elements.Found.Labels.some((label) => label.getAttribute("for") === id)) {
-            if (State.option.checks.LABELS_NO_FOR_ATTRIBUTE) {
-              State.results.push({
-                test: "LABELS_NO_FOR_ATTRIBUTE",
-                element: $el,
-                type: State.option.checks.LABELS_NO_FOR_ATTRIBUTE.type || "error",
-                content: Lang.sprintf(
-                  State.option.checks.LABELS_NO_FOR_ATTRIBUTE.content || "LABELS_NO_FOR_ATTRIBUTE",
-                  id
-                ),
-                dismiss: prepareDismissal(`LABELS_NO_FOR_ATTRIBUTE ${type + inputName}`),
-                dismissAll: State.option.checks.LABELS_NO_FOR_ATTRIBUTE.dismissAll ? "LABELS_NO_FOR_ATTRIBUTE" : false,
-                developer: State.option.checks.LABELS_NO_FOR_ATTRIBUTE.developer || true
-              });
-            }
+          const hasMatchingLabel = Elements.Found.Labels.some(
+            (label) => label.getAttribute("for") === id
+          );
+          if (hasMatchingLabel) return;
+          if (State.option.checks.LABELS_NO_FOR_ATTRIBUTE) {
+            State.results.push({
+              test: "LABELS_NO_FOR_ATTRIBUTE",
+              element: $el,
+              type: State.option.checks.LABELS_NO_FOR_ATTRIBUTE.type || "error",
+              content: Lang.sprintf(
+                State.option.checks.LABELS_NO_FOR_ATTRIBUTE.content || "LABELS_NO_FOR_ATTRIBUTE",
+                id
+              ),
+              dismiss: prepareDismissal(`LABELS_NO_FOR_ATTRIBUTE ${type + inputName}`),
+              dismissAll: State.option.checks.LABELS_NO_FOR_ATTRIBUTE.dismissAll ? "LABELS_NO_FOR_ATTRIBUTE" : false,
+              developer: State.option.checks.LABELS_NO_FOR_ATTRIBUTE.developer || true
+            });
           }
         } else if (State.option.checks.LABELS_MISSING_LABEL) {
           State.results.push({
@@ -2981,16 +3164,12 @@ URL: ${url2}`;
       Elements.Found.Blockquotes.forEach(($el) => {
         const text = getText($el);
         if (text.length !== 0 && text.length < 25) {
-          const escapedText = escapeHTML(text);
           State.results.push({
             test: "QA_BLOCKQUOTE",
             element: $el,
             type: State.option.checks.QA_BLOCKQUOTE.type || "warning",
-            content: Lang.sprintf(
-              State.option.checks.QA_BLOCKQUOTE.content || "QA_BLOCKQUOTE",
-              escapedText
-            ),
-            dismiss: prepareDismissal(`QA_BLOCKQUOTE ${escapedText}`),
+            content: Lang.sprintf(State.option.checks.QA_BLOCKQUOTE.content || "QA_BLOCKQUOTE", text),
+            dismiss: prepareDismissal(`QA_BLOCKQUOTE ${text}`),
             dismissAll: State.option.checks.QA_BLOCKQUOTE.dismissAll ? "QA_BLOCKQUOTE" : false,
             developer: State.option.checks.QA_BLOCKQUOTE.developer || false
           });
@@ -3077,8 +3256,7 @@ URL: ${url2}`;
         const maybeSentence = getText$1.match(/[.;?!"]/) === null;
         const typicalHeadingLength = getText$1.length >= 4 && getText$1.length <= 120;
         if (size >= 24 && !p.closest(ignoreParents) && typicalHeadingLength && maybeSentence && !isPreviousElementAHeading(p)) {
-          const escapedText = escapeHTML(getText$1);
-          addResult(p, escapedText);
+          addResult(p, getText$1);
         }
       };
       const computeBoldTextParagraphs = (p) => {
@@ -3092,7 +3270,7 @@ URL: ${url2}`;
         if (text.length < 3 || text.length > 120 || /[.:;?!"']/.test(text)) return;
         const paragraph = fnIgnore(p, ["strong", "b"]).textContent.trim();
         if (paragraph && paragraph.length <= 250) return;
-        addResult(possibleHeading, escapeHTML(text));
+        addResult(possibleHeading, text);
       };
       Elements.Found.Paragraphs.forEach((p) => {
         computeLargeParagraphs(p);
@@ -3101,9 +3279,9 @@ URL: ${url2}`;
     }
     if (State.option.checks.QA_FAKE_LIST) {
       const numberMatch = new RegExp(/(([023456789][\d\s])|(1\d))/, "");
-      const alphabeticMatch = new RegExp(/(^[aA1αаΑ]|[^p{Alphabetic}\s])[-\s.)]/, "u");
+      const alphabeticMatch = new RegExp(/(^[aA1αаΑ]|[^p{Alphabetic}\s])[-\s.)\]]/, "u");
       const emojiMatch = new RegExp(/\p{Extended_Pictographic}/, "u");
-      const secondTextNoMatch = ["a", "A", "α", "Α", "а", "А", "1"];
+      const secondTextNoMatch = ["a", "A", "α", "Α", "а", "А", "1", "i"];
       const specialCharsMatch = /[([{#]/;
       const prefixDecrement = {
         2: "1",
@@ -3114,29 +3292,32 @@ URL: ${url2}`;
         б: "а",
         Б: "А"
       };
-      const decrement = (element) => element.replace(/^b|^B|^б|^Б|^β|^В|^2/, (match) => prefixDecrement[match]);
+      const decrement = (element) => element.replace(/^b|^B|^б|^Б|^β|^В|^[2-9]/, (match) => prefixDecrement[match]);
       let activeMatch = "";
       let firstText = "";
       let lastHitWasEmoji = false;
       Elements.Found.Paragraphs.forEach((p, i) => {
         let secondText = false;
         let hit = false;
-        firstText = firstText || getText(p).replace("(", "");
+        firstText = firstText || getText(p).replace(/[([]/, "");
         const firstPrefix = firstText.substring(0, 2);
         const isAlphabetic = firstPrefix.match(alphabeticMatch);
         const isNumber = firstPrefix.match(numberMatch);
         const isEmoji = firstPrefix.match(emojiMatch);
         const isSpecialChar = specialCharsMatch.test(firstPrefix.charAt(0));
         if (firstPrefix.length > 0 && firstPrefix !== activeMatch && !isNumber && (isAlphabetic || isEmoji || isSpecialChar)) {
+          if (/^[A-Z]\.[A-Z]\./.test(firstText)) return;
           const secondP = Elements.Found.Paragraphs[i + 1];
           if (secondP) {
-            secondText = getText(secondP).replace("(", "").substring(0, 2);
+            secondText = getText(secondP).replace(/[([]/, "").substring(0, 2);
             if (secondTextNoMatch.includes(secondText?.toLowerCase().trim())) {
               return;
             }
             const secondPrefix = decrement(secondText);
             if (isAlphabetic) {
-              if (firstPrefix !== "A " && firstPrefix === secondPrefix) {
+              const firstChar = firstPrefix.charAt(0);
+              const secondChar = secondText.charAt(0);
+              if (decrement(secondChar) === firstChar && !/\w/.test(secondText.charAt(1))) {
                 hit = true;
               }
             } else if (isEmoji && !lastHitWasEmoji) {
@@ -4088,16 +4269,15 @@ URL: ${url2}`;
       const nodeText = fnIgnore(element, ["State.option:not(State.option:first-child)"]);
       const text = getText(nodeText);
       const truncatedText = truncateString(text, 80);
-      const sanitizedText = escapeHTML(truncatedText);
       let previewText;
       if (item.type === "placeholder" || item.type === "placeholder-unsupported") {
-        previewText = escapeHTML($el.placeholder);
+        previewText = $el.placeholder;
       } else if (item.type === "svg-error" || item.type === "svg-warning") {
         previewText = "";
       } else {
-        previewText = sanitizedText;
+        previewText = truncatedText;
       }
-      updatedItem.sanitizedText = previewText;
+      updatedItem.previewText = previewText;
       const isWcag = State.option.contrastAlgorithm === "AA" || State.option.contrastAlgorithm === "AAA";
       const normal = State.option.contrastAlgorithm === "AAA" ? "7:1" : "4.5:1";
       const large = State.option.contrastAlgorithm === "AAA" ? "4.5:1" : "3:1";
@@ -4114,7 +4294,7 @@ URL: ${url2}`;
                 State.option.checks.CONTRAST_ERROR.content || (isWcag ? `${Lang._("CONTRAST_ERROR")} ${Lang._(ratioRequirementKey)}` : Lang._("CONTRAST_ERROR")),
                 ratioToDisplay2
               ),
-              dismiss: prepareDismissal(`CONTRAST_ERROR ${sanitizedText}`),
+              dismiss: prepareDismissal(`CONTRAST_ERROR ${previewText}`),
               dismissAll: State.option.checks.CONTRAST_ERROR.dismissAll ? "CONTRAST_ERROR" : false,
               developer: State.option.checks.CONTRAST_ERROR.developer || false,
               contrastDetails: updatedItem
@@ -4123,7 +4303,6 @@ URL: ${url2}`;
           break;
         case "input":
           if (State.option.checks.CONTRAST_INPUT) {
-            const sanitizedInput = sanitizeHTML($el.outerHTML);
             State.results.push({
               test: "CONTRAST_INPUT",
               element,
@@ -4133,7 +4312,7 @@ URL: ${url2}`;
                 ratio,
                 ratioToDisplay2
               ),
-              dismiss: prepareDismissal(`CONTRAST_INPUT ${sanitizedInput}`),
+              dismiss: prepareDismissal(`CONTRAST_INPUT ${$el.outerHTML}`),
               dismissAll: State.option.checks.CONTRAST_INPUT.dismissAll ? "CONTRAST_INPUT" : false,
               developer: State.option.checks.CONTRAST_INPUT.developer || true,
               contrastDetails: updatedItem
@@ -4142,7 +4321,6 @@ URL: ${url2}`;
           break;
         case "placeholder":
           if (State.option.checks.CONTRAST_PLACEHOLDER) {
-            const sanitizedPlaceholder = sanitizeHTML($el.outerHTML);
             State.results.push({
               test: "CONTRAST_PLACEHOLDER",
               element: $el,
@@ -4152,7 +4330,7 @@ URL: ${url2}`;
                 ratioToDisplay2
               ),
               position: "afterend",
-              dismiss: prepareDismissal(`CONTRAST_PLACEHOLDER ${sanitizedPlaceholder}`),
+              dismiss: prepareDismissal(`CONTRAST_PLACEHOLDER ${$el.outerHTML}`),
               dismissAll: State.option.checks.CONTRAST_PLACEHOLDER.dismissAll ? "CONTRAST_PLACEHOLDER" : false,
               developer: State.option.checks.CONTRAST_PLACEHOLDER.developer || true,
               contrastDetails: updatedItem
@@ -4161,7 +4339,6 @@ URL: ${url2}`;
           break;
         case "placeholder-unsupported":
           if (State.option.checks.CONTRAST_PLACEHOLDER_UNSUPPORTED) {
-            const sanitizedPlaceholder = sanitizeHTML($el.outerHTML);
             State.results.push({
               test: "CONTRAST_PLACEHOLDER_UNSUPPORTED",
               element: $el,
@@ -4171,7 +4348,7 @@ URL: ${url2}`;
                 ratioToDisplay2
               ),
               position: "afterend",
-              dismiss: prepareDismissal(`CONTRAST_PLACEHOLDER_UNSUPPORTED ${sanitizedPlaceholder}`),
+              dismiss: prepareDismissal(`CONTRAST_PLACEHOLDER_UNSUPPORTED ${$el.outerHTML}`),
               dismissAll: State.option.checks.CONTRAST_PLACEHOLDER_UNSUPPORTED.dismissAll ? "CONTRAST_PLACEHOLDER_UNSUPPORTED" : false,
               developer: State.option.checks.CONTRAST_PLACEHOLDER_UNSUPPORTED.developer || true,
               contrastDetails: updatedItem
@@ -4180,16 +4357,14 @@ URL: ${url2}`;
           break;
         case "svg-error":
           if (State.option.checks.CONTRAST_ERROR_GRAPHIC) {
-            const sanitizedSVG = sanitizeHTML($el.outerHTML);
             State.results.push({
               test: "CONTRAST_ERROR_GRAPHIC",
               element: $el,
               type: State.option.checks.CONTRAST_ERROR_GRAPHIC.type || "error",
-              // No trailing variable needed since the graphic tip is just static text
               content: Lang.sprintf(
                 State.option.checks.CONTRAST_ERROR_GRAPHIC.content || (State.option.contrastAlgorithm !== "APCA" ? `${Lang._("CONTRAST_ERROR_GRAPHIC")} ${Lang._("CONTRAST_TIP_GRAPHIC")}` : Lang._("CONTRAST_ERROR_GRAPHIC"))
               ),
-              dismiss: prepareDismissal(`CONTRAST_ERROR_GRAPHIC ${sanitizedSVG}`),
+              dismiss: prepareDismissal(`CONTRAST_ERROR_GRAPHIC ${$el.outerHTML}`),
               dismissAll: State.option.checks.CONTRAST_ERROR_GRAPHIC.dismissAll ? "CONTRAST_ERROR_GRAPHIC" : false,
               developer: State.option.checks.CONTRAST_ERROR_GRAPHIC.developer || true,
               contrastDetails: updatedItem,
@@ -4199,7 +4374,6 @@ URL: ${url2}`;
           break;
         case "svg-warning":
           if (State.option.checks.CONTRAST_WARNING_GRAPHIC) {
-            const sanitizedSVG = sanitizeHTML($el.outerHTML);
             State.results.push({
               test: "CONTRAST_WARNING_GRAPHIC",
               element: $el,
@@ -4207,7 +4381,7 @@ URL: ${url2}`;
               content: Lang.sprintf(
                 State.option.checks.CONTRAST_WARNING_GRAPHIC.content || (State.option.contrastAlgorithm !== "APCA" ? `${Lang._("CONTRAST_WARNING_GRAPHIC")} ${Lang._("CONTRAST_TIP_GRAPHIC")}` : Lang._("CONTRAST_WARNING_GRAPHIC"))
               ),
-              dismiss: prepareDismissal(`CONTRAST_WARNING_GRAPHIC ${sanitizedSVG}`),
+              dismiss: prepareDismissal(`CONTRAST_WARNING_GRAPHIC ${$el.outerHTML}`),
               dismissAll: State.option.checks.CONTRAST_WARNING_GRAPHIC.dismissAll ? "CONTRAST_WARNING_GRAPHIC" : false,
               developer: State.option.checks.CONTRAST_WARNING_GRAPHIC.developer || true,
               contrastDetails: updatedItem,
@@ -4225,7 +4399,7 @@ URL: ${url2}`;
                 State.option.checks.CONTRAST_WARNING.content || (isWcag ? `${Lang._("CONTRAST_WARNING")} ${Lang._(ratioRequirementKey)}` : Lang._("CONTRAST_WARNING")),
                 ratioToDisplay2
               ),
-              dismiss: prepareDismissal(`CONTRAST_WARNING ${sanitizedText}`),
+              dismiss: prepareDismissal(`CONTRAST_WARNING ${previewText}`),
               dismissAll: State.option.checks.CONTRAST_WARNING.dismissAll ? "CONTRAST_WARNING" : false,
               developer: State.option.checks.CONTRAST_WARNING.developer || false,
               contrastDetails: updatedItem
@@ -4242,7 +4416,7 @@ URL: ${url2}`;
                 State.option.checks.CONTRAST_UNSUPPORTED.content || (isWcag ? `${Lang._("CONTRAST_WARNING")} ${Lang._(ratioRequirementKey)}` : Lang._("CONTRAST_WARNING")),
                 ratioToDisplay2
               ),
-              dismiss: prepareDismissal(`CONTRAST_UNSUPPORTED ${sanitizedText}`),
+              dismiss: prepareDismissal(`CONTRAST_UNSUPPORTED ${previewText}`),
               dismissAll: State.option.checks.CONTRAST_UNSUPPORTED.dismissAll ? "CONTRAST_UNSUPPORTED" : false,
               developer: State.option.checks.CONTRAST_UNSUPPORTED.developer || false,
               contrastDetails: updatedItem
@@ -4430,7 +4604,9 @@ URL: ${url2}`;
               test: "BTN_EMPTY",
               element: $el,
               type: State.option.checks.BTN_EMPTY.type || "error",
-              content: Lang.sprintf(State.option.checks.BTN_EMPTY.content || Lang._("BTN_EMPTY") + Lang._("BTN_TIP")),
+              content: Lang.sprintf(
+                State.option.checks.BTN_EMPTY.content || Lang._("BTN_EMPTY") + Lang._("BTN_TIP")
+              ),
               dismiss: prepareDismissal(
                 `BTN_EMPTY ${$el.tagName + $el.id + $el.className + accName}`
               ),
@@ -4442,15 +4618,11 @@ URL: ${url2}`;
         }
         const isVisibleTextInAccName$1 = isVisibleTextInAccName($el, accName);
         if (State.option.checks.LABEL_IN_NAME && hasAria && isVisibleTextInAccName$1) {
-          const escapedText = escapeHTML(accName);
           State.results.push({
             test: "LABEL_IN_NAME",
             element: $el,
             type: State.option.checks.LABEL_IN_NAME.type || "warning",
-            content: State.option.checks.LABEL_IN_NAME.content ? Lang.sprintf(State.option.checks.LABEL_IN_NAME.content, escapedText) : Lang.sprintf(
-              Lang._("LABEL_IN_NAME") + Lang._("ACC_NAME_TIP"),
-              escapedText
-            ),
+            content: State.option.checks.LABEL_IN_NAME.content ? Lang.sprintf(State.option.checks.LABEL_IN_NAME.content, accName) : Lang.sprintf(Lang._("LABEL_IN_NAME") + Lang._("ACC_NAME_TIP"), accName),
             dismiss: prepareDismissal(
               `LABEL_IN_NAME ${$el.tagName + $el.id + $el.className + accName}`
             ),
@@ -5017,6 +5189,7 @@ URL: ${url2}`;
     UI.errorCount = 0;
     UI.warningCount = 0;
     UI.dismissedCount = 0;
+    const insertBefore = 'a, button, input, iframe, [role="button"], [role="link"]';
     for (let i = State.results.length - 1; i >= 0; i--) {
       if (State.results[i].dismissalStatus) {
         UI.dismissedCount++;
@@ -5031,10 +5204,12 @@ URL: ${url2}`;
           State.results[i].element = location.parentElement;
         }
       }
-      if (State.results[i].element.closest(
-        'a, button, img, svg, input, iframe, [role="button"], [role="link"]'
-      )) {
-        State.results[i].element = State.results[i].element.closest('a, button, input, [role="button"], [role="link"]') ?? State.results[i].element;
+      if (State.option.insertAnnotationBefore && State.results[i].element.closest(State.option.insertAnnotationBefore)) {
+        State.results[i].element = State.results[i].element.closest(
+          State.option.insertAnnotationBefore
+        );
+      } else if (State.results[i].element.closest(`${insertBefore}, img, svg`)) {
+        State.results[i].element = State.results[i].element.closest(insertBefore) ?? State.results[i].element;
       } else if (State.results[i].element.matches(
         "p, strong, em, i, u, table, td, th, li, blockquote, h1, h2, h3, h4, h5, h6"
       )) {
@@ -5047,6 +5222,8 @@ URL: ${url2}`;
       UI.errorCount = 0;
       UI.warningCount = 0;
       UI.totalCount = 0;
+    } else if (UI.showDismissed) {
+      UI.totalCount += UI.dismissedCount;
     }
   }
   const inDismissals = (result, i, splitConfiguration, digest) => {
@@ -5277,18 +5454,6 @@ URL: ${url2}`;
       }
     }
   }
-  const spriteAlts = '<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 576 512"><path fill="currentColor" d="M160 80l352 0c9 0 16 7 16 16l0 224c0 8.8-7.2 16-16 16l-21 0L388 179c-4-7-12-11-20-11s-16 4-20 11l-52 80-12-17c-5-6-12-10-19-10s-15 4-19 10L176 336 160 336c-9 0-16-7-16-16l0-224c0-9 7-16 16-16zM96 96l0 224c0 35 29 64 64 64l352 0c35 0 64-29 64-64l0-224c0-35-29-64-64-64L160 32c-35 0-64 29-64 64zM48 120c0-13-11-24-24-24S0 107 0 120L0 344c0 75 61 136 136 136l320 0c13 0 24-11 24-24s-11-24-24-24l-320 0c-49 0-88-39-88-88l0-224zm208 24a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z"></path></svg>';
-  const spriteClose = '<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 384 512"><path fill="currentColor" d="M343 151c13-13 13-33 0-46s-33-13-45 0L192 211 87 105c-13-13-33-13-45 0s-13 33 0 45L147 256 41 361c-13 13-13 33 0 45s33 13 45 0L192 301 297 407c13 13 33 13 45 0s13-33 0-45L237 256 343 151z"></path></svg>';
-  const spriteCursor = '<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 256 512"><path fill="currentColor" d="M0 29C-1 47 12 62 29 64l8 1C71 67 96 95 96 128L96 224l-32 0c-18 0-32 14-32 32s14 32 32 32l32 0 0 96c0 33-26 61-59 64l-8 1C12 450-1 465 0 483s17 31 35 29l8-1c34-3 64-19 85-43c21 24 51 40 85 43l8 1c18 2 33-12 35-29s-12-33-29-35l-8-1C186 445 160 417 160 384l0-96 32 0c18 0 32-14 32-32s-14-32-32-32l-32 0 0-96c0-33 26-61 59-64l8-1c18-2 31-17 29-35S239-1 221 0l-8 1C179 4 149 20 128 44c-21-24-51-40-85-43l-8-1C17-1 2 12 0 29z"/></svg>';
-  const spriteDismiss = '<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="Currentcolor" d="M39 5C28-3 13-1 5 9S-1 35 9 43l592 464c10 8 26 6 34-4s6-26-4-34L526 387c39-41 66-86 78-118c3-8 3-17 0-25c-15-36-46-88-93-131C466 69 401 32 320 32c-68 0-125 26-169 61L39 5zM223 150C249 126 283 112 320 112c80 0 144 65 144 144c0 25-6 48-17 69L408 295c8-19 11-41 5-63c-11-42-48-69-89-71c-6-0-9 6-7 12c2 6 3 13 3 20c0 10-2 20-7 28l-90-71zM373 390c-16 7-34 10-53 10c-80 0-144-65-144-144c0-7 1-14 1-20L83 162C60 191 44 221 35 244c-3 8-3 17 0 25c15 36 46 86 93 131C175 443 239 480 320 480c47 0 89-13 126-33L373 390z"/></svg>';
-  const spriteUnDismiss = '<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="10" viewBox="-30 0 640 512"><path fill="Currentcolor" d="M288 32c-81 0-146 37-193 81C49 156 17 208 3 244c-3 8-3 17 0 25C17 304 49 356 95 399C142.5 443 207 480 288 480s146-37 193-81c47-44 78-95 93-131c3-8 3-17 0-25c-15-36-46-88-93-131C434 69 369 32 288 32zM144 256a144 144 0 1 1 288 0 144 144 0 1 1 -288 0zm144-64c0 35-29 64-64 64c-7 0-14-1-20-3c-6-2-12 2-12 7c.3 7 1 14 3 21c14 51 66 82 118 68s82-66 68-118c-11-42-48-69-89-71c-6-.2-9 6-7 12c2 6 3 13 3 20z"></path></svg>';
-  const spriteHeadings = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" aria-hidden="true"><path fill="currentColor" d="M0 96C0 78 14 64 32 64l384 0c18 0 32 14 32 32s-14 32-32 32L32 128C14 128 0 114 0 96zM64 256c0-18 14-32 32-32l384 0c18 0 32 14 32 32s-14 32-32 32L96 288c-18 0-32-14-32-32zM448 416c0 18-14 32-32 32L32 448c-18 0-32-14-32-32s14-32 32-32l384 0c18 0 32 14 32 32z"></path></svg>';
-  const spriteReadability = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" aria-hidden="true"><path fill="currentColor" d="M528.3 46.5l-139.8 0c-48.1 0-89.9 33.3-100.4 80.3-10.6-47-52.3-80.3-100.4-80.3L48 46.5C21.5 46.5 0 68 0 94.5L0 340.3c0 26.5 21.5 48 48 48l89.7 0c102.2 0 132.7 24.4 147.3 75 .7 2.8 5.2 2.8 6 0 14.7-50.6 45.2-75 147.3-75l89.7 0c26.5 0 48-21.5 48-48l0-245.7c0-26.4-21.3-47.9-47.7-48.1zM242 311.9c0 1.9-1.5 3.5-3.5 3.5l-160.3 0c-1.9 0-3.5-1.5-3.5-3.5l0-22.9c0-1.9 1.5-3.5 3.5-3.5l160.4 0c1.9 0 3.5 1.5 3.5 3.5l0 22.9-.1 0zm0-60.9c0 1.9-1.5 3.5-3.5 3.5l-160.3 0c-1.9 0-3.5-1.5-3.5-3.5l0-22.9c0-1.9 1.5-3.5 3.5-3.5l160.4 0c1.9 0 3.5 1.5 3.5 3.5l0 22.9-.1 0zm0-60.9c0 1.9-1.5 3.5-3.5 3.5l-160.3 0c-1.9 0-3.5-1.5-3.5-3.5l0-22.9c0-1.9 1.5-3.5 3.5-3.5l160.4 0c1.9 0 3.5 1.5 3.5 3.5l0 22.9-.1 0zM501.3 311.8c0 1.9-1.5 3.5-3.5 3.5l-160.3 0c-1.9 0-3.5-1.5-3.5-3.5l0-22.9c0-1.9 1.5-3.5 3.5-3.5l160.4 0c1.9 0 3.5 1.5 3.5 3.5l0 22.9-.1 0zm0-60.9c0 1.9-1.5 3.5-3.5 3.5l-160.3 0c-1.9 0-3.5-1.5-3.5-3.5l0-22.9c0-1.9 1.5-3.5 3.5-3.5l160.4 0c1.9 0 3.5 1.5 3.5 3.5l0 22.9-.1 0zm0-60.9c0 1.9-1.5 3.5-3.5 3.5l-160.3 0c-1.9 0-3.5-1.5-3.5-3.5l0-22.8c0-1.9 1.5-3.5 3.5-3.5l160.4 0c1.9 0 3.5 1.5 3.5 3.5l0 22.8-.1 0z"/></svg>';
-  const spriteNext = '<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="11" viewBox="0 -15 90 120"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="m30 00 50 50-50 50" stroke-width="18"></path></svg>';
-  const spriteToggleErrors = '<svg class="errors-icon" xmlns="http://www.w3.org/2000/svg" width="10" aria-hidden="true" viewBox="0 0 448 512"><path fill="currentColor" d="M64 32C64 14 50 0 32 0S0 14 0 32L0 64 0 368 0 480c0 18 14 32 32 32s32-14 32-32l0-128 64-16c41-10 85-5 123 13c44.2 22 96 25 142 7l35-13c13-5 21-17 21-30l0-248c0-23-24-38-45-28l-10 5c-46 23-101 23-147 0c-35-18-75-22-114-13L64 48l0-16z"></path></svg>';
-  const spriteTogglePass = '<svg class="pass-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="-.75 -3.5 10.1699 19.1777"><path fill="currentColor" d="M3.7031,10.5527c-.3633-.6562-.6426-1.1387-.8379-1.4473l-.3105-.4863-.2344-.3574c-.5117-.7969-1.0449-1.4551-1.5996-1.9746.3164-.2617.6113-.3926.8848-.3926.3359,0,.6348.123.8965.3691s.5918.7148.9902,1.4062c.4531-1.4727,1.0293-2.8691,1.7285-4.1895.3867-.7188.7314-1.2021,1.0342-1.4502s.7041-.3721,1.2041-.3721c.2656,0,.5938.041.9844.123-1.0039.8086-1.8066,1.7695-2.4082,2.8828s-1.3789,3.0762-2.332,5.8887Z"/></svg>';
-  const spriteToggleWarnings = '<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="close-icon" viewBox="0 0 384 512"><path fill="currentColor" d="M343 151c13-13 13-33 0-46s-33-13-45 0L192 211 87 105c-13-13-33-13-45 0s-13 33 0 45L147 256 41 361c-13 13-13 33 0 45s33 13 45 0L192 301 297 407c13 13 33 13 45 0s13-33 0-45L237 256 343 151z"></path></svg>';
-  const spriteVisualize = '<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="10" viewBox="0 10 512 512"><path fill="Currentcolor" d="M152 38c10 9 11 24 2 34l-72 80c-4 5-11 8-17 8s-13-2-18-7L7 113C-2 104-2 88 7 79s25-9 34 0l22 22 55-61c9-10 24-11 34-2zm0 160c10 9 11 24 2 34l-72 80c-4 5-11 8-17 8s-13-2-18-7L7 273c-9-9-9-25 0-34s25-9 35 0l22 22 55-61c9-10 24-11 34-2zM224 96c0-18 14-32 32-32l224 0c18 0 32 14 32 32s-14 32-32 32l-224 0c-18 0-32-14-32-32zm0 160c0-18 14-32 32-32l224 0c18 0 32 14 32 32s-14 32-32 32l-224 0c-18 0-32-14-32-32zM160 416c0-18 14-32 32-32l288 0c18 0 32 14 32 32s-14 32-32 32l-288 0c-18 0-32-14-32-32zM48 368a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"/></svg>';
   const showAltPanel = () => {
     const altList = UI.panel?.querySelector("#ed11y-alt-list");
     if (!altList) {
@@ -5313,9 +5478,13 @@ URL: ${url2}`;
     });
     if (UI.imageAlts.length > 0) {
       altList.innerHTML = "";
+      const oldMarks = getElements("ed11y-element-alt", "root", []);
+      oldMarks?.forEach((mark) => {
+        mark.remove();
+      });
       for (let i = 0; i < UI.imageAlts.length; i++) {
         const image = UI.imageAlts[i];
-        const altText = computeAriaLabel(image.element) === "noAria" ? escapeHTML(image.element.getAttribute("alt")) : computeAriaLabel(image.element);
+        const altText = computeAriaLabel(image.element) === "noAria" ? image.element.getAttribute("alt") : computeAriaLabel(image.element);
         UI.imageAlts[i].altText = altText;
         if (UI.inlineAlerts) {
           const mark = document.createElement("ed11y-element-alt");
@@ -5381,6 +5550,7 @@ URL: ${url2}`;
       reset2?.forEach((el) => {
         el.remove();
       });
+      UI.altMarks.clear();
     }
     if (UI.visualizing) {
       UI.visualizing = false;
@@ -5655,6 +5825,7 @@ URL: ${url2}`;
         } else if (UI.totalCount > 0 && !UI.ignoreAll && (State.option.alertMode === "assertive" || State.option.alertMode === "polite" && UI.seen[encodeURI(State.option.currentPage)] !== UI.totalCount)) {
           UI.showPanel = true;
         }
+        UI.panelInitial = State.option.alertMode !== "polite" ? 1 : false;
       } else if (!UI.inlineAlerts) {
         UI.oldResultString = `${UI.errorCount} ${UI.warningCount}`;
         State.results.forEach((result) => {
@@ -6504,7 +6675,6 @@ URL: ${url2}`;
   }
   const enqueueTests = (queue) => {
     const test = queue.pop();
-    UI.testsRemaining--;
     try {
       switch (test) {
         case "group1":
@@ -6530,6 +6700,7 @@ URL: ${url2}`;
     } catch (error) {
       showError(error);
     }
+    UI.testsRemaining--;
     if (queue.length > 0) {
       if (UI.browserSpeed < 100 || State.option.headless) {
         enqueueTests(queue);
@@ -6542,7 +6713,7 @@ URL: ${url2}`;
           queue
         );
       }
-    } else {
+    } else if (UI.customTestsRemaining === 0) {
       continueCheck().then();
     }
   };
@@ -6552,10 +6723,15 @@ URL: ${url2}`;
     );
     State.option.customTests--;
     UI.customTestsRemaining = 0;
-    continueCheck(true).then();
+    if (UI.testsRemaining === 0) {
+      continueCheck().then();
+    }
     if (State.option.customTests === 0) {
       document.removeEventListener("ed11yResume", () => {
-        continueCheck(true).then();
+        UI.customTestsRemaining--;
+        if (UI.testsRemaining === 0 && UI.customTestsRemaining === 0) {
+          continueCheck().then();
+        }
       });
     }
   }
@@ -6593,17 +6769,6 @@ URL: ${url2}`;
     State.results.length = 0;
     UI.splitConfiguration.devResults.length = 0;
     buildElementList();
-    if (State.option.customTests > 0) {
-      UI.customTestsRemaining += State.option.customTests;
-      window.clearTimeout(UI.customTestTimeout);
-      UI.customTestTimeout = window.setTimeout(() => {
-        if (UI.customTestsRemaining > 0) {
-          removeCustomTest();
-        }
-      }, 1e3);
-      const customTests = new CustomEvent("ed11yRunCustomTests");
-      document.dispatchEvent(customTests);
-    }
     const queue = ["group1", "group2"];
     if (State.option.formLabelsPlugin) {
       queue.push("checkLabels");
@@ -6615,15 +6780,26 @@ URL: ${url2}`;
       queue.push("checkContrast");
     }
     UI.testsRemaining = queue.length;
+    if (State.option.customTests > 0) {
+      UI.customTestsRemaining = State.option.customTests;
+      const customTests = new CustomEvent("ed11yRunCustomTests");
+      document.dispatchEvent(customTests);
+      window.clearTimeout(UI.customTestTimeout);
+      const customTestRace = performance.now();
+      UI.customTestRace = customTestRace;
+      UI.customTestTimeout = window.setTimeout(
+        () => {
+          if (UI.customTestRace === customTestRace && UI.customTestsRemaining > 0) {
+            removeCustomTest();
+          }
+        },
+        1e3,
+        customTestRace
+      );
+    }
     enqueueTests(queue);
   }
-  async function continueCheck(customCheck = false) {
-    if (customCheck) {
-      UI.customTestsRemaining--;
-    }
-    if (UI.customTestsRemaining + UI.testsRemaining > 0) {
-      return;
-    }
+  async function continueCheck() {
     if (UI.splitConfiguration.active && State.results.length > 0) {
       await handleSyncOnlyResults();
     } else {
@@ -7135,7 +7311,7 @@ URL: ${url2}`;
     }
   }
   function generateContrastTools(contrastDetails) {
-    const { sanitizedText, color, background, fontWeight, fontSize, ratio, textUnderline } = contrastDetails;
+    const { previewText, color, background, fontWeight, fontSize, ratio, textUnderline } = contrastDetails;
     const hasBackgroundColor = background && background.type !== "image";
     const backgroundHex = hasBackgroundColor ? getHex(background) : "#000000";
     const foregroundHex = color ? getHex(color) : "#000000";
@@ -7159,7 +7335,7 @@ URL: ${url2}`;
       <div id="contrast" class="badge">${Lang._("CONTRAST")}</div>
       <div id="value" class="badge">${displayedRatio}</div>
       <div id="good" class="badge good-contrast" hidden>${Lang._("GOOD")} <span class="good-icon"></span></div>
-      <div id="contrast-preview" style="color:${foregroundHex};${hasBackgroundColor ? `background:${backgroundHex};` : ""}${hasFontWeight + hasFontSize + textDecoration}">${sanitizedText}</div>
+      <div id="contrast-preview" style="color:${foregroundHex};${hasBackgroundColor ? `background:${backgroundHex};` : ""}${hasFontWeight + hasFontSize + textDecoration}"></div>
       <div id="color-pickers">
         <label for="fg-text">${Lang._("FG")} ${unknownFGText}
           <div id="fg-color-wrapper" ${unknownFG}>
@@ -7172,6 +7348,7 @@ URL: ${url2}`;
           </div>
         </label>
       </div>`;
+    contrastTools.querySelector("#contrast-preview").textContent = previewText;
     return contrastTools;
   }
   function initializeContrastTools(container, contrastDetails) {
@@ -7302,38 +7479,76 @@ URL: ${url2}`;
     }, 0);
   }
   function generateColorSuggestion(contrastDetails) {
-    let adviceContainer;
-    const { color, background, fontWeight, fontSize, isLargeText, type } = contrastDetails;
-    if (color && background && background.type !== "image" && (type === "text" || type === "svg-error" || type === "input")) {
-      const suggested = Constants.Global.contrastAlgorithm === "APCA" ? suggestColorAPCA(color, background, fontWeight, fontSize) : suggestColorWCAG(
-        color,
-        background,
-        isLargeText,
-        Constants.Global.contrastAlgorithm
-      );
-      let advice;
-      const hr = '<hr aria-hidden="true">';
-      const bgHex = getHex(contrastDetails.background);
-      const style = `color:${suggested.color};background-color:${bgHex};`;
-      const colorBadge = `<button id="suggest" class="badge" style="${style}">${suggested.color}</button>`;
-      const sizeBadge = `<button id="suggest-size" class="normal-badge">${suggested.size}px</button>`;
-      if (Constants.Global.contrastAlgorithm === "AA" || Constants.Global.contrastAlgorithm === "AAA") {
-        if (suggested.color === null) {
-          advice = `${hr} ${Lang._("NO_SUGGESTION")}`;
-        } else {
-          advice = `${hr} ${Lang._("CONTRAST_COLOR")} ${colorBadge}`;
-        }
-      } else if (suggested.color && suggested.size) {
-        advice = `${hr} ${Lang._("CONTRAST_APCA")} ${colorBadge} ${sizeBadge}`;
-      } else if (suggested.color) {
-        advice = `${hr} ${Lang._("CONTRAST_COLOR")} ${colorBadge}`;
-      } else if (suggested.size) {
-        advice = `${hr} ${Lang._("CONTRAST_SIZE")} ${sizeBadge}`;
+    const { color, background, fontWeight, fontSize, isLargeText, type, opacity } = contrastDetails;
+    if (!color || !background || background.type === "image" || !(type === "text" || type === "svg-error" || type === "input")) {
+      return;
+    }
+    const suggested = Constants.Global.contrastAlgorithm === "APCA" ? suggestColorAPCA(color, background, fontWeight, fontSize) : suggestColorWCAG(
+      color,
+      background,
+      isLargeText,
+      Constants.Global.contrastAlgorithm
+    );
+    const adviceContainer = document.createElement("div");
+    adviceContainer.id = "advice";
+    const createHr = () => {
+      const hr = document.createElement("hr");
+      hr.setAttribute("aria-hidden", "true");
+      return hr;
+    };
+    const createColorBadge = (suggestedColor) => {
+      const btn = document.createElement("button");
+      btn.id = "suggest";
+      btn.className = "badge";
+      const bgHex = getHex(background);
+      btn.style.color = suggestedColor;
+      btn.style.backgroundColor = bgHex;
+      btn.textContent = suggestedColor;
+      return btn;
+    };
+    const createSizeBadge = (size) => {
+      const btn = document.createElement("button");
+      btn.id = "suggest-size";
+      btn.className = "normal-badge";
+      btn.textContent = `${size}px`;
+      return btn;
+    };
+    if (opacity < 1) {
+      adviceContainer.append(createHr(), " ", Lang.sprintf("CONTRAST_OPACITY"));
+      return adviceContainer;
+    }
+    const algo = Constants.Global.contrastAlgorithm;
+    if (algo === "AA" || algo === "AAA") {
+      if (suggested.color === null) {
+        adviceContainer.append(createHr(), " ", Lang._("NO_SUGGESTION"));
+      } else {
+        adviceContainer.append(
+          createHr(),
+          " ",
+          Lang._("CONTRAST_COLOR"),
+          " ",
+          createColorBadge(suggested.color)
+        );
       }
-      adviceContainer = document.createElement("div");
-      adviceContainer.id = "advice";
-      const suggestion = contrastDetails.opacity < 1 ? `<hr aria-hidden="true"> ${Lang.sprintf("CONTRAST_OPACITY")}` : advice;
-      adviceContainer.innerHTML = suggestion;
+    } else {
+      const hasColor = !!suggested.color;
+      const hasSize = !!suggested.size;
+      if (hasColor || hasSize) {
+        adviceContainer.append(createHr(), " ");
+        if (hasColor && hasSize) {
+          adviceContainer.append(
+            Lang._("CONTRAST_APCA"),
+            " ",
+            createColorBadge(suggested.color),
+            " ",
+            createSizeBadge(suggested.size)
+          );
+        } else if (hasColor) {
+          adviceContainer.append(Lang._("CONTRAST_COLOR"), " ", createColorBadge(suggested.color));
+        } else if (hasSize) {
+          adviceContainer.append(Lang._("CONTRAST_SIZE"), " ", createSizeBadge(suggested.size));
+        }
+      }
     }
     return adviceContainer;
   }
@@ -7346,6 +7561,7 @@ URL: ${url2}`;
     renderOnce() {
       this.initialized = true;
       this.open = true;
+      hideInitialCount();
       this.style.setProperty("opacity", "0");
       this.style.setProperty("outline", "0px solid transparent");
       const shadow = this.attachShadow({ mode: "open" });
@@ -7705,7 +7921,7 @@ URL: ${url2}`;
       PAGE_TITLE: "Page title",
       RESULTS: "Results",
       EXPORT_RESULTS: "Export results",
-      GENERATED: "Results generated with %(tool).",
+      GENERATED: 'Results generated with <a href="https://sa11y.netlify.app">Sa11y.</a>',
       PREVIEW: "Preview",
       ELEMENT: "Element",
       PATH: "Path",
@@ -7849,6 +8065,7 @@ URL: ${url2}`;
       LINK_NEW_TAB: `Link opens in a new tab or window without warning. Doing so can be disorienting, especially for people who have difficulty perceiving visual content. Secondly, it is not always a good practice to control someone's experience or make decisions for them. Indicate that the link opens in a new window within the link text. <hr> <strong>Tip!</strong> Learn best practices: <a href="https://www.nngroup.com/articles/new-browser-windows-and-tabs/">opening links in new browser windows and tabs.</a>`,
       LINK_FILE_EXT: 'Link points to a PDF or downloadable file (e.g. MP3, Zip, Word Doc) without warning. Indicate the file type within the link text. If it is a large file, consider including the file size. For example: "Executive Report (PDF, 3MB)"',
       LINK_IDENTICAL_NAME: "Link has identical text as another link, although it points to a different page. Multiple links with the same text may cause confusion for people who use screen readers. <strong>Consider making the following link more descriptive to help distinguish it from other links.</strong> <hr> <strong {B}>Accessible Name</strong> <strong {C}>%(TEXT)</strong>",
+      LINK_UNPRONOUNCEABLE: "Link text only contains symbols. If you think this link is an error due to a copy/paste bug, consider deleting it.",
       // Images
       ALT_UNPRONOUNCEABLE: "The alt text only contains unpronounceable symbols and/or spaces. Screen readers will announce the image and then pause. If the image is decorative, ensure there are no spaces within the alt text. <hr> {ALT} <strong {C}>%(ALT_TEXT)</strong>",
       LINK_ALT_UNPRONOUNCEABLE: "The alt text within this linked image only contains unpronounceable symbols and/or spaces. Screen readers will announce the image and then pause. Ensure the alt text describes the destination of the link. <hr> {L} {ALT} <strong {C}>%(ALT_TEXT)</strong>",
@@ -8007,6 +8224,7 @@ URL: ${url2}`;
     LINK_EMPTY: "This link contains no words",
     LINK_EMPTY_LABELLEDBY: 'Link with invalid "aria-labelledby" attribute',
     LINK_EMPTY_NO_LABEL: "This link needs a label",
+    LINK_UNPRONOUNCEABLE: "This link is unpronounceable",
     LINK_FILE_EXT: "Link points to a file without warning",
     LINK_IDENTICAL_NAME: "Links with the same text link to different pages",
     LINK_IMAGE_ALT: "Does this alt text describe the link or the image?",
@@ -8109,6 +8327,7 @@ URL: ${url2}`;
     LINK_EMPTY: `<p>${why.fix}Add text describing its destination, or delete it if is just a typo or linked space character.</p><div class="why"><p>Tip: screen readers cannot describe links that only contain spaces or symbols. They either fall silent ("Link, [...awkward pause where the link title should be...]"), or read the URL: Link, H-T-T-P-S forward-slash forward-slash example dot com."</p><p>Note that linked space characters can be hard to delete in some content editors; it is sometimes necessary to delete "across the gap" by removing and retyping the words on both sides of a linked space.</p></div>`,
     LINK_EMPTY_LABELLEDBY: `<p>This link has an <code>aria-labelledby</code> attribute that does not match the <code>ID</code> of any element on the page.</p><p>${why.fix}Provide a valid <code>ID</code>, or remove this attribute and describe the button in another way.</p>`,
     LINK_EMPTY_NO_LABEL: `<p>${why.fix}Add text describing its destination, or delete it if is just a typo like a linked space character.</p><div class="why"><p>Tip: screen readers cannot describe empty links. They either fall silent ("Link, [...awkward pause where the link title should be...]"), or read the URL: Link, H-T-T-P-S forward-slash forward-slash example dot com."</p><p>Note that linked space characters can be hard to delete in some content editors; it is sometimes necessary to delete "across the gap" by removing and retyping the words on both sides of a linked space.</p></div>`,
+    LINK_UNPRONOUNCEABLE: `<p>${why.fix}Add text or a title describing its destination, or delete it if is just a typo or linked space character.</p><div class="why"><p>Tip: screen readers cannot describe links that only contain spaces or symbols. They either fall silent ("Link, [...awkward pause where the link title should be...]"), or read the name of the symbol.</p></div>`,
     LINK_FILE_EXT: `<p>This link points to a PDF or downloadable file (e.g. MP3, Zip, Word Doc) without warning.</p><p>${why.fix}Use text or an icon to <a href="https://itmaybejj.github.io/linkpurpose/">indicate the file type</a> within the link text.</p><p class="why">For large files, consider including the file size. For example: "Executive Report (PDF, 3MB)"</p>`,
     LINK_IDENTICAL_NAME: `<p>Link text: "<strong>%(TEXT)</strong>"</p><p>${why.fix}Reword links that go different places with the unique titles of their different destinations.</p>${why.links}`,
     LINK_IMAGE_ALT: `<p>Make sure this alt describes the link destination, not just the visual contents of the image:</p><p> {L} {ALT} <strong {C}>%(ALT_TEXT)</strong></p>${why.imageLinks}`,
@@ -8154,7 +8373,7 @@ URL: ${url2}`;
   const interfaceStrings = {
     ALERT_CLOSE: "Close",
     ALT: "Alt Text: ",
-    CONSOLE_ERROR: 'There is an issue with the accessibility checker on this page. Please %(link)<a href="%(link)">report it on GitHub</a>.',
+    CONSOLE_ERROR: 'There is an issue with the accessibility checker on this page. Please <a class="g-link">report it on GitHub</a>.',
     DECORATIVE: "Marked decorative",
     DISMISS: "Ignore",
     DISMISS_ALL: "On this page: ignore",
@@ -8195,6 +8414,9 @@ URL: ${url2}`;
     main_toggle_hide_alerts: "Hide accessibility alerts",
     main_toggle_show: "Show accessibility tools",
     main_toggle_show_alerts: "Show accessibility alerts",
+    main_toggle_1: "One accessibility alert",
+    main_toggle_2: "Two accessibility alerts",
+    main_toggle_plural: `%(count) accessibility alerts`,
     MISSING_ROOT: `Editoria11y did not find any elements that matched the check area configuration: <code>%(root)</code>`,
     panelCheckAltText: '<p class="ed11y-small">Check that each image describes what it means in context, and that there are no images of text.</p>',
     panelCheckOutline: '<p class="ed11y-small">This shows the heading outline. Check that it matches how the content is organized visually.</p>',
@@ -8227,7 +8449,7 @@ URL: ${url2}`;
       "courtesy of",
       "alt text"
     ],
-    // todo Ed11y test use to catch these at the end as well as the beginning.
+    // todo Ed11y test used to catch these at the end as well as the beginning.
     extraPlaceholderStopWords: "placeholder, alt text, tbd, todo, to do",
     // updated
     // please add, please insert, add alt text
@@ -8311,7 +8533,9 @@ URL: ${url2}`;
     dismissAnnotations: true,
     dismissAll: true,
     ignoreHiddenOverflow: "",
+    // Not yet implemented.
     insertAnnotationBefore: "",
+    // Not yet implemented.
     // Readability
     readabilityPlugin: false,
     readabilityRoot: "main",
@@ -8609,7 +8833,7 @@ URL: ${url2}`;
         sources: ""
       },
       EMBED_VIDEO: {
-        sources: ""
+        sources: "youtube-nocookie.com"
       },
       EMBED_DATA_VIZ: {
         sources: ""
@@ -8692,41 +8916,6 @@ URL: ${url2}`;
       State.option.lang = lang;
     }
     Lang.addI18n(State.option.lang.strings);
-    Lang.testNames = State.option.lang.testNames;
-    const titles = Object.entries(Lang.testNames);
-    for (let i = 0; i < titles.length; i++) {
-      Lang.langStrings[titles[i][0]] = `<div class="title" tabindex="-1">${Lang.testNames[`${titles[i][0]}`]}</div>${Lang.langStrings[titles[i][0]]}`;
-    }
-    UI.english = Lang.langStrings.LANG_CODE.startsWith("en");
-    if (UI.english) {
-      State.option.extraPlaceholderStopWords = userOptions.extraPlaceholderStopWords ? userOptions.extraPlaceholderStopWords.Lang.langStrings.extraPlaceholderStopWords : Lang.langStrings.extraPlaceholderStopWords;
-    }
-    if (State.option.fixedRoots) {
-      State.option.checkRoot = State.option.fixedRoots;
-    } else if (!State.option.checkRoot) {
-      State.option.checkRoot = document.querySelector("main") !== null ? "main" : "body";
-    }
-    if (userOptions.splitConfiguration) {
-      UI.splitConfiguration.active = true;
-      UI.splitConfiguration.showDev = userOptions.splitConfiguration.showDev;
-      UI.splitConfiguration.devOptions = userOptions.splitConfiguration.devOptions;
-      UI.splitConfiguration.contentOptions = {};
-      Object.keys(UI.splitConfiguration.devOptions).forEach((key) => {
-        UI.splitConfiguration.contentOptions[key] = userOptions[key];
-      });
-      UI.splitConfiguration.devChecks = new Set(userOptions.splitConfiguration.devChecks);
-      Object.assign(State.option, UI.splitConfiguration.devOptions);
-    }
-    State.option.headless = userOptions.alertMode === "headless";
-    if (userOptions.panelAttachTo) {
-      UI.panelAttachTo = userOptions.panelAttachTo;
-    }
-    UI.theme.push = State.option[State.option.theme];
-    UI.theme.baseFontSize = State.option.baseFontSize;
-    UI.theme.buttonZIndex = State.option.buttonZIndex;
-    UI.theme.baseFontFamily = State.option.baseFontFamily;
-    UI.inlineAlerts = !document.querySelector("[contenteditable]") && State.option.inlineAlerts;
-    UI.showDismissed = State.option.showDismissed;
     let cssUrls = userOptions.cssUrls;
     if (!cssUrls) {
       const cssLink = document.querySelector(
@@ -8758,6 +8947,41 @@ URL: ${url2}`;
       const link = cssBundle.cloneNode(true);
       appendTo.appendChild(link);
     };
+    Lang.testNames = State.option.lang.testNames;
+    const titles = Object.entries(Lang.testNames);
+    for (let i = 0; i < titles.length; i++) {
+      Lang.langStrings[titles[i][0]] = `<div class="title" tabindex="-1">${Lang.testNames[`${titles[i][0]}`]}</div>${Lang.langStrings[titles[i][0]]}`;
+    }
+    UI.english = Lang.langStrings.LANG_CODE.startsWith("en");
+    if (UI.english) {
+      State.option.extraPlaceholderStopWords = userOptions.extraPlaceholderStopWords ? `${userOptions.extraPlaceholderStopWords}, ${Lang.langStrings.extraPlaceholderStopWords}` : Lang.langStrings.extraPlaceholderStopWords;
+    }
+    if (State.option.fixedRoots) {
+      State.option.checkRoot = State.option.fixedRoots;
+    } else if (!State.option.checkRoot) {
+      State.option.checkRoot = document.querySelector("main") !== null ? "main" : "body";
+    }
+    if (userOptions.splitConfiguration) {
+      UI.splitConfiguration.active = true;
+      UI.splitConfiguration.showDev = userOptions.splitConfiguration.showDev;
+      UI.splitConfiguration.devOptions = userOptions.splitConfiguration.devOptions;
+      UI.splitConfiguration.contentOptions = {};
+      Object.keys(UI.splitConfiguration.devOptions).forEach((key) => {
+        UI.splitConfiguration.contentOptions[key] = userOptions[key];
+      });
+      UI.splitConfiguration.devChecks = new Set(userOptions.splitConfiguration.devChecks);
+      Object.assign(State.option, UI.splitConfiguration.devOptions);
+    }
+    State.option.headless = userOptions.alertMode === "headless";
+    if (userOptions.panelAttachTo) {
+      UI.panelAttachTo = userOptions.panelAttachTo;
+    }
+    UI.theme.push = State.option[State.option.theme];
+    UI.theme.baseFontSize = State.option.baseFontSize;
+    UI.theme.buttonZIndex = State.option.buttonZIndex;
+    UI.theme.baseFontFamily = State.option.baseFontFamily;
+    UI.inlineAlerts = !document.querySelector("[contenteditable]") && State.option.inlineAlerts;
+    UI.showDismissed = State.option.showDismissed;
   };
   const postProcessOptions = (userOptions) => {
     Constants.Exclusions.Sa11yElements = [".ed11y-element", "ed11y-element-heading-label"];
@@ -8816,10 +9040,13 @@ URL: ${url2}`;
         return false;
       }
       UI.running = true;
-      checkAll();
       document.addEventListener("ed11yResume", () => {
-        continueCheck(true).then();
+        UI.customTestsRemaining--;
+        if (UI.testsRemaining === 0 && UI.customTestsRemaining === 0) {
+          continueCheck().then();
+        }
       });
+      checkAll();
       window.addEventListener(
         "keydown",
         () => {
@@ -8866,7 +9093,13 @@ URL: ${url2}`;
   class Ed11y {
     constructor(userOptions) {
       if (CSS.supports("selector(:has(body))")) {
-        initialize(userOptions).catch((error) => console.error(error.message));
+        initialize(userOptions).catch((error) => {
+          customElements.define("ed11y-console-error", ConsoleErrors);
+          const consoleErrors = new ConsoleErrors(error);
+          document.body.appendChild(consoleErrors);
+          UI.attachCSS(consoleErrors.shadowRoot.querySelector("*"));
+          throw Error(error);
+        });
       }
     }
   }

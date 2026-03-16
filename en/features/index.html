@@ -45,13 +45,167 @@
           </div>
         </div>
         <div class="col-12 col-md-7 col-lg-8 pt-3" data-bs-spy="scroll" data-bs-target="#on-this-page" data-bs-smooth-scroll="true" tabindex="0">
-          <h1 class="text-body-emphasis pt-2 pb-5">Demo</h1>
+          <section id="features">
+            <h1 class="text-body-emphasis pt-2 pb-5">Features</h1>
+            <p class="fs-6">Editoria11y core is set of ~90 tests for common digital accessibility issues; decisions that hurt legibility, mistakes that make screen readers less effective, and errors that reduce SEO.</p>
+            <p class="fs-6">Its tests focus on issues that appear after sites are turned over to content authors. Sites need to be tested with manual auditing tools, keyboards and screen readers before launch; humans and AI are quite creative at inventing new ways to prevent screen readers from accessing content, so studies show automated checkers used alone generally catch less than half of a site's issues.</p>
+            <p class="fs-6">What makes Editoria11y stand out among accessibility tools is that its tests run live, in browser, as authors edit and preview their work. <strong>Authors are more likely to react to immediate, inline feedback</strong>, notice alerts and make corrections.</p>
+          </section>
+          <section id="authoring">
+            <h2>The author's experience</h2>
+            <div class="clearfix">
+              <img src="/assets/images/3x-toolbar" class="image-fluid float-start me-3" alt="Screenshot of the Editoria11y toolbar, showing 4 errors." width="97" height="50" loading="lazy">
+              <p>Authors see the Editoria11y toolbar while editing content. When issues are detected, it becomes yellow or red, and displays an issue count. Clicking the count scrolls to the first alert and opens its tooltip.</p>
+            </div>
+            <div class="row">
+              <p class="col-6 col-lg-4">Tips appear inline, with a plain language description of the error, suggestions for correction, and notes on why the issue matters.</p>
+             <img loading="lazy" src="/assets/images/3x-generic-tip.png" class="img-fluid col-6 col-lg-8" height="798" width="1278" alt="Tip indicated a link is only named click here. ">
+            </div>
+            <div class="row">
+              <p class="col-6 col-lg-4">The toolbar contains additional tools for manual checks, including heading outline and alt text visualizers and readability scoring.</p>
+              <img loading="lazy" class="img-fluid rounded shadow col-6 col-lg-8" src="/assets/images/3x-tools.jpg" height="473" width="405" alt="Heading outline visualizer overlaid on page">
+            </div>            
+          </section>
+          <section id="admins">
+            <h2>Site admin controls</h2>
+            <p>Every visible aspect of the checker can be customized. Parameters and events allow for removing tests, rewriting tips, inserting custom tests and setting custom themes.</p>
+            <p>Plugins for Drupal and WordPress add additional features, such as synchronized dismissals, site-wide dashboards and CSV report exports.</p>
+            <figure class="figure my-4 rounded shadow mb-5 border">
+                <img loading="lazy" class="figure-img img-fluid" src="/assets/images/3x-dashboard.png" height="765" width="1600" alt="Reporting dashboard showing recent issues and pages with the most issues.">
+                <figcaption class="figure-caption p-3 pt-2">The Drupal dashboard, which includes filterable lists of issues, pages with issues, and dismissals.</figcaption>
+              </figure>
+          </section>
+          <section id="tests">
+            <h2>Tests</h2>
+            <p class="fs-6">Editoria11y's tests focus on improving the experience of the Web for all users, as measured by humans, not just technical standards. While key tests are intended to help achieve Web Content Accessibility Guidelines (<a href="https://www.w3.org/WAI/WCAG22/quickref/">WCAG 2.2 AA</a>), others are influenced by the work of the <a href="https://www.w3.org/TR/coga-usable/">Cognitive and Learning Disabilities Accessibility Task Force</a>, as well as general usability and design best practices.</p>
+            <p class="fs-6 pb-3">Individual tests can be turned off by site admins.</p>
+            <div class="row listgrid">
+              <div class="col-12 col-xl-4">
+                <h3 class="fs-5 nomenu pt-0">Image alt text</h3>
+                <ul>
+                  <li>Image missing alt attribute</li>
+                  <li>Alt text is a filename</li>
+                  <li>Alt text is a placeholder ("TBD")</li>
+                  <li>Alt text is unpronounceable symbols</li>
+                  <li>Alt text contains redundant words ("image of&hellip;")</li>
+                  <li>Alt text is too long</li>
+                  <li>Decorative image may have value</li>
+                  <li>Carousel image marked decorative</li>
+                  <li>Captioned image has no alt text</li>
+                  <li>Alt text duplicates the caption</li>
+                </ul>
+                <h3 class="fs-5 nomenu pt-0">Linked images</h3>
+                <ul>
+                  <li>Linked image has no alt text</li>
+                  <li>Linked image alt is a URL or filename</li>
+                  <li>Linked image alt is a placeholder</li>
+                  <li>Linked image alt is unpronounceable symbols</li>
+                  <li>Linked image alt describes the image, not the link</li>
+                  <li>Linked image alt contains redundant words</li>
+                  <li>Linked image alt is too long</li>
+                  <li>Image in link with text has no alt attribute</li>
+                </ul>
+                <h3 class="fs-5 nomenu pt-0">Embedded media</h3>
+                <ul>
+                  <li>Video needs captions</li>
+                  <li>Audio needs a transcript</li>
+                  <li>Data visualization needs an accessible alternative</li>
+                  <li>Frame missing a title</li>
+                  <li>Frame excluded from keyboard navigation</li>
+                  <li>Frame content needs manual accessibility check</li>
+                  <li>Linked document may not be screen-reader accessible</li>
+                  <li>PDF lacks an accessible alternative</li>
+                  <li>Nested interactive layout components</li>
+                </ul>
+              </div>
+              <div class="col-12 col-xl-4">
+                <h3 class="fs-5 nomenu pt-0">Meaningful links</h3>
+                <ul>
+                  <li>Empty link</li>
+                  <li>Link text is a URL</li>
+                  <li>Link text is only a DOI number</li>
+                  <li>Link text says "click here"</li>
+                  <li>Link text is only generic words ("read more")</li>
+                  <li>Different links share the same text</li>
+                  <li>Linked icon or image has no text alternative</li>
+                  <li>Link opens a new tab without warning</li>
+                  <li>Link points to a file without warning</li>
+                  <li>Link text is only symbols or emoji</li>
+                  <li>Meaningful link text hidden from sighted users</li>
+                  <li>Redundant link tooltip</li>
+                  <li>Broken in-page anchor link</li>
+                  <li>Duplicate ID attribute</li>
+                  <li>Link may point to a development environment</li>
+                </ul>
+                <h3 class="fs-5 nomenu pt-0">Headings</h3>
+                <ul>
+                  <li>Page is missing a Heading 1</li>
+                  <li>First heading is a subheading</li>
+                  <li>Heading skips a level</li>
+                  <li>Heading is empty</li>
+                  <li>Image used as heading needs alt text</li>
+                  <li>Heading is very long</li>
+                  <li>Bold paragraph might be a heading</li>
+                  <li>Short blockquote might be a heading</li>
+                </ul>
+                <h3 class="fs-5 nomenu pt-0">Text legibility</h3>
+                <ul>
+                  <li>Excessive uppercase text</li>
+                  <li>Large block of bold or italic text</li>
+                  <li>Text is too small</li>
+                  <li>Non-link text is underlined</li>
+                  <li>Text is justified</li>
+                  <li>Subscript or superscript misused as formatting</li>
+                  <li>Fake list using characters or symbols</li>
+                  <li>List item outside a list</li>
+                </ul>
+               
+              </div>
+              <div class="col-12 col-xl-4">
+                <h3 class="fs-5 nomenu pt-0">Color contrast</h3>
+                <ul>
+                  <li>Text has insufficient contrast</li>
+                  <li>Text contrast requires manual check</li>
+                  <li>Icon or graphic has insufficient contrast</li>
+                  <li>Icon or graphic contrast requires manual check</li>
+                  <li>Input text has insufficient contrast</li>
+                  <li>Placeholder text has insufficient contrast</li>
+                </ul>
+                <h3 class="fs-5 nomenu pt-0">Tables</h3>
+                <ul>
+                  <li>Table missing a header row or column</li>
+                  <li>Table header cell is empty</li>
+                  <li>Content heading used inside a table</li>
+                </ul>
+                <h3 class="fs-5 nomenu pt-0">Forms &amp; interactive elements</h3>
+                <ul>
+                  <li>Button has no accessible label</li>
+                  <li>Button has an invalid ARIA label</li>
+                  <li>Button label includes the word "button"</li>
+                  <li>Visible label doesn't match accessible name</li>
+                  <li>Input has no associated label</li>
+                  <li>Input uses only an invisible label</li>
+                  <li>Input uses only a placeholder as a label</li>
+                  <li>Reset button may cause accidental data loss</li>
+                  <li>Element hidden from screen readers but still keyboard-focusable</li>
+                  <li>Positive tabindex breaks reading and tab order</li>
+                </ul>
+                <h3 class="fs-5 nomenu pt-0">Page metadata</h3>
+                <ul>
+                  <li>Page title missing</li>
+                  <li>Page language not declared</li>
+                  <li>Viewport prevents text scaling</li>
+                  <li>Page auto-refreshes</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <h2 class="pt-4" id="demo">Demo</h2>
           <p class="fs-5">View a <a href="https://youtu.be/uYvNYPg38nU?si=6YANYrJpVzNAJYDl&t=260">video introduction to the checker's history and features</a>, or try editing the demo content below, opening and dismissing alerts, and using the toolbar to view the heading outline.</p>
-          <p class="fs-5"></p>
           <div id="ed11y-demo" class="p-5" contenteditable="">
             <section id="headings">
 
-              <h2 class="pt-1">Headings</h2>
+              <h3 class="pt-1">Headings</h2>
 
               <p>This heading skipped a level:</p>
               <div class="positive"><h6 id="this-h6-should-have-been-an-h3">Oops</h6></div>
@@ -73,73 +227,73 @@
 
 
             <section id="text-alternatives">
-              <h2>Text alternatives for images</h2>
+              <h3>Text alternatives for images</h2>
 
               <p>This heading is made of an image of text with no alt:</p>
               <div class="positive">
-                <h4><img alt="" src="/assets/images/px20240813sm.jpg" ></h4>
+                <h4><img loading="lazy" alt="" src="/assets/images/px20240813sm.jpg" ></h4>
               </div>
 
               <p>Image with no alt attribute at all:</p>
-              <p class="positive"><img src="/assets/images/px20240813sm.jpg"></p>
+              <p class="positive"><img loading="lazy" src="/assets/images/px20240813sm.jpg"></p>
 
               <p>Image with an invalid alt attribute, e.g., <code class="language-plaintext highlighter-rouge">alt="'"</code></p>
 
-              <p class="positive"><img alt="'" src="/assets/images/px20240813sm.jpg"></p>
+              <p class="positive"><img loading="lazy" alt="'" src="/assets/images/px20240813sm.jpg"></p>
 
               <p id="image-with-a-filename-as-an-alt">Image with a filename as an alt</p>
 
-              <p class="positive"><img alt="filename.jpg" src="/assets/images/px20240813sm.jpg"></p>
+              <p class="positive"><img loading="lazy" alt="filename.jpg" src="/assets/images/px20240813sm.jpg"></p>
 
               <p id="image-with-redundant-text-in-its-alt">Image with redundant text in its alt, such as “image of:”</p>
 
-              <p class="positive"><img alt="Image of a dog." src="/assets/images/px20240813sm.jpg"></p>
+              <p class="positive"><img loading="lazy" alt="Image of a dog." src="/assets/images/px20240813sm.jpg"></p>
 
               <p id="linked-image-with-redundant-text-in-its-alt">Linked image with redundant text in its alt, such as “image of:”</p>
 
-              <p class="positive"><a href="./editable.htm"><img alt="Image of a dog." src="/assets/images/px20240813sm.jpg"></a></p>
+              <p class="positive"><a href="./editable.htm"><img loading="lazy" alt="Image of a dog." src="/assets/images/px20240813sm.jpg"></a></p>
 
               <p id="image-with-placeholder-alt">Image with placeholder alt:</p>
-              <p class="positive"><img alt="TBD" src="/assets/images/px20240813sm.jpg"></p>
+              <p class="positive"><img loading="lazy" alt="TBD" src="/assets/images/px20240813sm.jpg"></p>
 
               <p id="linked-image-with-placeholder-alt"><strong>Linked</strong> image with placeholder alt:</p>
-              <p class="positive"><a href="./editable.htm"><img alt="TBD" src="/assets/images/px20240813sm.jpg"></a></p>
+              <p class="positive"><a href="./editable.htm"><img loading="lazy" alt="TBD" src="/assets/images/px20240813sm.jpg"></a></p>
 
               <p id="image-with-machine-alt">Image with machine code alt:</p>
-              <p class="positive"><img alt="$700VIDEOSABOUTTURTLESALL2SECONDSLONG" src="/assets/images/px20240813sm.jpg"></p>
+              <p class="positive"><img loading="lazy" alt="$700VIDEOSABOUTTURTLESALL2SECONDSLONG" src="/assets/images/px20240813sm.jpg"></p>
 
               <p id="linked-image-with-machine-alt">Linked image with machine code alt:</p>
-              <p class="positive"><a href="./editable.htm"><img alt="$700VIDEOSABOUTTURTLESALL2SECONDSLONG" src="/assets/images/px20240813sm.jpg"></a></p>
+              <p class="positive"><a href="./editable.htm"><img loading="lazy" alt="$700VIDEOSABOUTTURTLESALL2SECONDSLONG" src="/assets/images/px20240813sm.jpg"></a></p>
 
               <p id="image-with-very-long-alt-text">Image with very long alt text:</p>
 
-              <p class="positive"><img alt="Look at this doggy. This doggy is so happy. This doggy got to go on a walk and the walk went to a lake and there were all kinds of fascinating smells. What an amazing day this doggy had." src="/assets/images/px20240813sm.jpg"></p>
+              <p class="positive"><img loading="lazy" alt="Look at this doggy. This doggy is so happy. This doggy got to go on a walk and the walk went to a lake and there were all kinds of fascinating smells. What an amazing day this doggy had." src="/assets/images/px20240813sm.jpg"></p>
 
               <p id="images-in-links-where-the-alt-text-may-be-describing-the-image-instead-of-the-link">Images in links where the alt text may be describing the image instead of the link</p>
 
-              <p class="positive"><a  href="https://www.youtube.com/watch?v=DLzxrzFCyOs">This link has text and an image.<img alt="A lovely gray box" src="/assets/images/px20240813sm.jpg"></a></p>
+              <p class="positive"><a  href="https://www.youtube.com/watch?v=DLzxrzFCyOs">This link has text and an image.<img loading="lazy" alt="A lovely gray box" src="/assets/images/px20240813sm.jpg"></a></p>
 
               <p id="images-in-links-decorative">Any linked image (test off by default)</p>
-              <p class="positive"><a href="https://www.youtube.com/watch?v=DLzxrzFCyOs"><img alt="Hello there" src="/assets/images/px20240813sm.jpg"></a></p>
+              <p class="positive"><a href="https://www.youtube.com/watch?v=DLzxrzFCyOs"><img loading="lazy" alt="Hello there" src="/assets/images/px20240813sm.jpg"></a></p>
 
               <p>Image in figure marked decorative:</p>
               <figure class="positive">
-                <img alt="" src="/assets/images/px20240813sm.jpg">
+                <img loading="lazy" alt="" src="/assets/images/px20240813sm.jpg">
                 <figcaption>Figcaption is present.</figcaption>
               </figure>
 
               <p>Image in figure with an alt the same as the figcaption:</p>
               <figure class="positive">
-                <img alt="Figcaption is the same as alt" src="/assets/images/px20240813sm.jpg">
+                <img loading="lazy" alt="Figcaption is the same as alt" src="/assets/images/px20240813sm.jpg">
                 <figcaption>Figcaption is the same as alt</figcaption>
               </figure>
               <p>Image in a carousel without an alt:</p>
               <div class="positive">
-                <img alt="" class="carousel" src="/assets/images/px20240813sm.jpg">
+                <img loading="lazy" alt="" class="carousel" src="/assets/images/px20240813sm.jpg">
               </div>
             </section>
             <section id="contrast-tests">
-              <h2>Contrast</h2>
+              <h3>Contrast</h2>
               <p>Illegible color combination:</p>
               <div class="positive"><p style="background: #ccc; color: #ddd;">Super legible.</p></div>
               <p>Color needs a manual check:</p>
@@ -166,7 +320,7 @@
 
             </section>
             <section id="embeds">
-              <h2>Embeds &amp; Media</h2>
+              <h3>Embeds &amp; Media</h2>
 
               <p>Video flagged as manual check needed for captioning:</p>
               <div class="positive" style="width: 560px; aspect-ratio: 560 / 315; max-width: 100%; cursor: not-allowed;">
@@ -198,7 +352,7 @@
               </div>
             </section>
             <section id="meaningful-links">
-              <h2>Meaningful Links</h2>
+              <h3>Meaningful Links</h2>
 
               <p id="links-with-no-text-at-all">Links with no text at all</p>
               <p class="positive"><a href="https://www.youtube.com/watch?v=DLzxrzFCyOs"
@@ -245,23 +399,23 @@
               <p class="positive"><a href="www.google.com/" aria-label="has aria label">learn more</a></p>
 
               <p>Linked image with no alt text:</p>
-              <p class="positive"><a href="./editable.htm"><img alt="" src="/assets/images/px20240813sm.jpg" class=""></a></p>
+              <p class="positive"><a href="./editable.htm"><img loading="lazy" alt="" src="/assets/images/px20240813sm.jpg" class=""></a></p>
 
               <p>Linked image with unpronounceable alt text:</p>
-              <p class="positive"><a href="./editable.htm"><img alt="'" src="/assets/images/px20240813sm.jpg" class=""></a></p>
+              <p class="positive"><a href="./editable.htm"><img loading="lazy" alt="'" src="/assets/images/px20240813sm.jpg" class=""></a></p>
 
               <p>Linked image with no alt text attribute:</p>
-              <p class="positive"><a href="./editable.htm"><img src="/assets/images/px20240813sm.jpg" class=""></a></p>
+              <p class="positive"><a href="./editable.htm"><img loading="lazy" src="/assets/images/px20240813sm.jpg" class=""></a></p>
 
               <p>Linked image with no alt text attribute in a link with text:</p>
-              <p class="positive"><a href="./editable.htm">Search <img src="/assets/images/px20240813sm.jpg" class=""></a></p>
+              <p class="positive"><a href="./editable.htm">Search <img loading="lazy" src="/assets/images/px20240813sm.jpg" class=""></a></p>
 
               <p>Linked image with only a filename as alt text:</p>
-              <p class="positive"><a href="./editable.htm"><img alt="http://jpg.gif" src="/assets/images/px20240813sm.jpg">
+              <p class="positive"><a href="./editable.htm"><img loading="lazy" alt="http://jpg.gif" src="/assets/images/px20240813sm.jpg">
               </a></p>
 
               <p>Linked image with suspiciously long alt text:</p>
-              <p class="positive"><a href="./editable.htm"><img alt="Look at this doggy. This doggy is so happy. This doggy got to go on a walk and the walk went to a lake and there were all kinds of fascinating smells. What an amazing day this doggy had." src="/assets/images/px20240813sm.jpg">
+              <p class="positive"><a href="./editable.htm"><img loading="lazy" alt="Look at this doggy. This doggy is so happy. This doggy got to go on a walk and the walk went to a lake and there were all kinds of fascinating smells. What an amazing day this doggy had." src="/assets/images/px20240813sm.jpg">
               </a></p>
 
               <p>Broken in page links</p>
@@ -278,7 +432,7 @@
               <p class="positive"><a id="dupe" href="#dupe">Anchor 1</a> <a id="dupe" href="#dupe">Anchor 2</a></p>
             </section>
             <section>
-              <h2 id="table-tests">Tables</h2>
+              <h3 id="table-tests">Tables</h2>
 
               <p id="tables-without-valid-headers">Tables without valid headers</p>
 
@@ -303,7 +457,7 @@
               </table>
             </section>
             <section id="legibility-tests">
-              <h2>Legibility</h2>
+              <h3>Legibility</h2>
 
               <div class="positive"><p>SEVERAL WORDS IN A ROW OF CAPS LOCK TEXT WILL TRIGGER A MANUAL CHECK WARNING.</p></div>
 
@@ -325,7 +479,7 @@
             </section>
 
             <section id="forms">
-              <h2>Forms</h2>
+              <h3>Forms</h2>
 
               <p>Button with no label</p>
               <div class="positive">
@@ -378,12 +532,12 @@
     <footer class="container col-lg-12 mx-auto pt-3 my-5 text-body-secondary border-top text-center text-md-start">
       <div class="container">
         <div class="row">
-          <div class="col col-4 col-md-2">
+          <div class="col col-3 col-md-2">
             <a href="https://github.com/itmaybejj/editoria11y"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-git" viewBox="0 0 16 16">
               <path d="M15.698 7.287 8.712.302a1.03 1.03 0 0 0-1.457 0l-1.45 1.45 1.84 1.84a1.223 1.223 0 0 1 1.55 1.56l1.773 1.774a1.224 1.224 0 0 1 1.267 2.025 1.226 1.226 0 0 1-2.002-1.334L8.58 5.963v4.353a1.226 1.226 0 1 1-1.008-.036V5.887a1.226 1.226 0 0 1-.666-1.608L5.093 2.465l-4.79 4.79a1.03 1.03 0 0 0 0 1.457l6.986 6.986a1.03 1.03 0 0 0 1.457 0l6.953-6.953a1.03 1.03 0 0 0 0-1.457"/>
             </svg> <strong>Library</strong></a>
           </div>
-          <div class="col col-4 col-md-2">
+          <div class="col col-3 col-md-2">
             <a href="https://github.com/itmaybejj/editoria11y/discussions"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chat-right-heart-fill" viewBox="0 0 16 16">
               <path d="M16 2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h9.586a1 1 0 0 1 .707.293l2.853 2.853a.5.5 0 0 0 .854-.353zM8 3.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132"/>
             </svg> <strong>Forum</strong></a>
