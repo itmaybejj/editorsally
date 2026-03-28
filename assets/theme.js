@@ -17,6 +17,7 @@
         </header>`;*/
   // const validTranslations = ['da', 'de', 'el', 'es', 'fr', 'hu', 'it', 'jp', 'nb', 'nl', 'pl', 'pt-br', 'pt-pt', 'sv', 'uk', 'zh'];\
   const validTranslations = [];
+  const validPaths = ['about', 'features', 'add-ons', 'contacts', 'install', 'drupal'];
   const langCode = validTranslations.includes(document.documentElement.lang) ? document.documentElement.lang : 'en';
   const navTemplate = `
     
@@ -25,7 +26,7 @@
             </li>
             <!--<li class="nav-item"><a href="/${langCode}/projects" class="nav-link">Projects</a></li>-->
             <li class="nav-item"><a href="/${langCode}/features" class="nav-link">Features</a></li>
-            <li class="nav-item"><a href="/${langCode}/membership" class="nav-link">Membership</a></li>
+            <li class="nav-item"><a href="/${langCode}/add-ons" class="nav-link">Add-ons</a></li>
             <!--<li class="nav-item"><a href="/${langCode}/contacts" class="nav-link">Contacts</a></li>-->
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -51,8 +52,9 @@
     }
   });
   if (currentPath === '/') {
-    navLinks[0].classList.add('active');
-    navLinks[0].setAttribute('aria-current', 'page');
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const typeValue = urlParams.get('p');
     let goTo = 'en'
     if (navigator.languages
     ) {
@@ -61,7 +63,11 @@
         goTo = intersection[0];
       }
     };
-    window.location.replace(`/${goTo}/about`);
+    if (typeValue && validPaths.includes(typeValue)) {
+      window.location.replace(`/${langCode}/${typeValue}`);
+    } else {
+      window.location.replace(`/${goTo}/about`);
+  }
   }
 
   /* On this page **********************/
@@ -100,6 +106,156 @@
         }
       });
     });
+  }
+
+  const pricePicker = document.getElementById('price-pick');
+  const pricing = {
+    monthly: {
+      USD: {
+        1: '9.99',
+        5: '39',
+        25: '99',
+        50: '199',
+        100: '299',
+        500: '999',
+        1000: '1,999',
+        unlimited: '2,999'
+      },
+      GBP: {
+        1: '6.99',
+        5: '29',
+        25: '75',
+        50: '149',
+        100: '222',
+        500: '749',
+        1000: '1,499',
+        unlimited: '2,299'
+      },
+      EUR: {
+        1: '8.99',
+        5: '35',
+        25: '89',
+        50: '179',
+        100: '259',
+        500: '899',
+        1000: '1,799',
+        unlimited: '2,699'
+      }
+    },
+    yearly: {
+      USD: {
+        1: '99',
+        5: '399',
+        25: '999',
+        50: '1,999',
+        100: '2,999',
+        500: '9,999',
+        1000: '19,999',
+        unlimited: '29,999'
+      },
+      GBP: {
+        1: '75',
+        5: '299',
+        25: '755',
+        50: '1,499',
+        100: '2,222',
+        500: '7,499',
+        1000: '14,999',
+        unlimited: '22,999'
+      },
+      EUR: {
+        1: '99',
+        5: '399',
+        25: '899',
+        50: '1,799',
+        100: '2,599',
+        500: '8,999',
+        1000: '17,999',
+        unlimited: '26,999'
+      }
+    }
+  };
+  if (pricePicker) {
+    const currencySelect = document.getElementById('currency');
+    const annualCheckbox = document.getElementById('annual-pricing');
+    const supportSelect = document.getElementById('support-level');
+    const currencySymbols = { EUR: '€', USD: '$', GBP: '£' };
+
+    function formatPrice(num) {
+      const str = num.toFixed(2);
+      const clean = str.endsWith('.00') ? str.slice(0, -3) : str;
+      return clean.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+    }
+
+    function applyPrice(container, baseStr, multiplier, symbol, periodText) {
+      const base = parseFloat(baseStr.replace(/,/g, ''));
+      const final = base * multiplier;
+      container.querySelector('.currency').textContent = symbol;
+      container.querySelector('.price').textContent = formatPrice(final);
+      container.querySelector('.period').textContent = periodText;
+    }
+
+    function updatePrices() {
+      const supportLevel = parseInt(supportSelect.value, 10);
+      const currency = currencySelect.value;
+      const symbol = currencySymbols[currency];
+      const multiplier = supportLevel / 100;
+      const isAnnual = annualCheckbox.checked;
+      const period = isAnnual ? 'yearly' : 'monthly';
+      const periodText = isAnnual ? '/year' : '/month';
+      const prices = pricing[period][currency];
+
+      document.querySelectorAll('.no-credit')?.forEach(el => el.classList.remove('no-credit'));
+
+      if (
+          (supportLevel < 50 && ['5','10','25','50','100'].includes(pricePicker.value)) ||
+          (supportLevel < 75 && ['5','10'].includes(pricePicker.value)) ||
+          (supportLevel < 100 && pricePicker.value === '5')
+        ) {
+        document.querySelector('#agency').classList.add('no-credit');
+      }
+
+      if (supportLevel !== 100) {
+        applyPrice(document.getElementById('individual'), pricing['yearly'][currency]['1'], multiplier, symbol, '/year');
+        document.querySelector('#individual').classList.add('annual-only');
+      } else {
+        applyPrice(document.getElementById('individual'), prices['1'], multiplier, symbol, periodText);
+        document.querySelector('#individual').classList.remove('annual-only');
+      }
+      if (pricePicker.value === '5' && supportLevel < 66) {
+        applyPrice(document.getElementById('price-result'), pricing['yearly'][currency]['5'], multiplier, symbol, '/year');
+        document.querySelector('#agency').classList.add('annual-only');
+      } else {
+        applyPrice(document.getElementById('price-result'), prices[pricePicker.value], multiplier, symbol, periodText);
+        document.querySelector('#agency').classList.remove('annual-only');
+      }
+      applyPrice(document.getElementById('enterprise'), prices['unlimited'], multiplier, symbol, periodText);
+    }
+
+    /*function forceAnnual() {
+      const supportLevel = parseInt(supportSelect.value, 10);
+      if (supportLevel < 100) {
+        if (!annualCheckbox.checked) {
+          annualCheckbox.dataset.originallyChecked = 'false';
+        } else {
+          annualCheckbox.dataset.originallyChecked = 'true';
+        }
+        annualCheckbox.setAttribute('disabled', 'disabled');
+        annualCheckbox.checked = true;
+      } else {
+        annualCheckbox.removeAttribute('disabled');
+        if (annualCheckbox.dataset.originallyChecked === 'false') {
+          annualCheckbox.checked = false;
+        }
+      }
+      updatePrices();
+    }*/
+
+    pricePicker.addEventListener('change', updatePrices);
+    currencySelect.addEventListener('change', updatePrices);
+    annualCheckbox.addEventListener('change', updatePrices);
+    supportSelect.addEventListener('change', updatePrices);
+    updatePrices();
   }
 
   /* Theme switcher **********************/

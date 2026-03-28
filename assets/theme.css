@@ -21,6 +21,13 @@ table {
     }
 }
 
+label {
+    margin-bottom: .25rem;
+}
+.form-select {
+    font-weight: 500;
+}
+
 .fs-6 {
     font-size: 1.125rem !important;
 }
@@ -34,6 +41,10 @@ table {
     --bs-link-color-rgb: 1, 106, 141; /*14, 88, 197*/
     --bs-link-hover-color-rgb: 0, 39, 52;
     --bs-primary-bg-subtle: #03759c;
+    --bs-primary-rgb: 3, 117, 156;
+    --bs-info-rgb: 87, 206, 247;
+    --bs-border-color: #03759c;
+    
     .navbar-nav {
         --bs-navbar-active-color: #003140;
         --bs-nav-link-hover-color: rgba(var(--bs-link-hover-color-rgb),.5);
@@ -569,4 +580,27 @@ footer {
         margin-top: 2rem;
     }
 
+}
+
+#price-grid {
+    margin: 2rem 0;
+    font-weight: 500;
+    @media (min-width: 1024px) {
+        margin: 2rem -2rem;
+        width: calc(100% + 4rem);
+    }
+    .no-credit .credit {
+        display: none;
+    }
+    .annual-only {
+        .full {
+            display: none;
+        }
+        .period-warning {
+            display: block !important;
+        }
+    }
+    .text-bg-info + .text-bg-info {
+        min-height: 16rem;
+    }
 }
