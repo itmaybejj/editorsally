@@ -17,7 +17,7 @@
         </header>`;*/
   // const validTranslations = ['da', 'de', 'el', 'es', 'fr', 'hu', 'it', 'jp', 'nb', 'nl', 'pl', 'pt-br', 'pt-pt', 'sv', 'uk', 'zh'];\
   const validTranslations = [];
-  const validPaths = ['about', 'features', 'add-ons', 'contacts', 'install', 'drupal'];
+  const validPaths = ['about', 'features', 'add-ons', 'contacts', 'install', 'drupal', 'license'];
   const langCode = validTranslations.includes(document.documentElement.lang) ? document.documentElement.lang : 'en';
   const navTemplate = `
     
@@ -34,6 +34,7 @@
               </a>
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="../install">Install &amp; Configure</a></li>
+                <li><a class="dropdown-item" href="../license">License &amp; Contribute</a></li>
                 <li><a class="dropdown-item" href="../drupal">Drupal Module</a></li>
                 <li><a class="dropdown-item" href="https://wordpress.org/plugins/editoria11y-accessibility-checker/" title="External link">WordPress Plugin <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="14" fill="currentColor" class="bi bi-arrow-right-square" viewBox="0 0 16 16">
   <path fill-rule="evenodd" d="M15 2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1zM0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm4.5 5.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
@@ -112,66 +113,66 @@
   const pricing = {
     monthly: {
       USD: {
-        1: '9.99',
-        5: '39',
-        25: '99',
-        50: '199',
-        100: '299',
-        500: '999',
-        1000: '1,999',
-        unlimited: '2,999'
+        1: '16.65',
+        5: '82',
+        25: '183',
+        50: '332',
+        200: '749',
+        500: '1665',
+        1000: '3332',
+        unlimited: '4499'
       },
       GBP: {
-        1: '6.99',
-        5: '29',
-        25: '75',
-        50: '149',
-        100: '222',
-        500: '749',
-        1000: '1,499',
-        unlimited: '2,299'
+        1: '13.33',
+        5: '65',
+        25: '149',
+        50: '265',
+        200: '549',
+        500: '1333',
+        1000: '2666',
+        unlimited: '3333'
       },
       EUR: {
-        1: '8.99',
-        5: '35',
-        25: '89',
-        50: '179',
-        100: '259',
-        500: '899',
-        1000: '1,799',
-        unlimited: '2,699'
+        1: '14.99',
+        5: '73',
+        25: '165',
+        50: '333',
+        200: '664',
+        500: '1497',
+        1000: '2999',
+        unlimited: '3999'
       }
     },
     yearly: {
       USD: {
-        1: '99',
-        5: '399',
-        25: '999',
-        50: '1,999',
-        100: '2,999',
-        500: '9,999',
-        1000: '19,999',
-        unlimited: '29,999'
+        1: '165.5',
+        5: '709',
+        25: '1833',
+        50: '3332',
+        200: '4999',
+        500: '16666',
+        1000: '29999',
+        unlimited: '44999'
       },
       GBP: {
-        1: '75',
-        5: '299',
-        25: '755',
-        50: '1,499',
-        100: '2,222',
-        500: '7,499',
-        1000: '14,999',
-        unlimited: '22,999'
+        1: '133',
+        5: '649',
+        25: '1499',
+        50: '2665',
+        200: '5499',
+        500: '13333',
+        1000: '26666',
+        unlimited: '33333'
       },
       EUR: {
-        1: '99',
-        5: '399',
-        25: '899',
-        50: '1,799',
-        100: '2,599',
-        500: '8,999',
-        1000: '17,999',
-        unlimited: '26,999'
+        1: '149',
+        5: '665',
+        25: '1666',
+        50: '2999',
+        200: '4666',
+        500: '14999',
+        1000: '28333',
+        unlimited: '39999'
       }
     }
   };
@@ -183,7 +184,7 @@
 
     function formatPrice(num) {
       const str = num.toFixed(2);
-      const clean = str.endsWith('.00') ? str.slice(0, -3) : str;
+      const clean = str.endsWith('.00') || num > 16 ? str.slice(0, -3) : str;
       return clean.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
     }
 
@@ -205,24 +206,34 @@
       const periodText = isAnnual ? '/year' : '/month';
       const prices = pricing[period][currency];
 
+      // 75px aka 50% is the lowest value to allow for monthly.
+
       document.querySelectorAll('.no-credit')?.forEach(el => el.classList.remove('no-credit'));
 
-      if (
-          (supportLevel < 50 && ['5','10','25','50','100'].includes(pricePicker.value)) ||
-          (supportLevel < 75 && ['5','10'].includes(pricePicker.value)) ||
-          (supportLevel < 100 && pricePicker.value === '5')
-        ) {
-        document.querySelector('#agency').classList.add('no-credit');
-      }
-
-      if (supportLevel !== 100) {
+      // Individual logic.
+      
+      if (supportLevel < 50) {
         applyPrice(document.getElementById('individual'), pricing['yearly'][currency]['1'], multiplier, symbol, '/year');
         document.querySelector('#individual').classList.add('annual-only');
       } else {
         applyPrice(document.getElementById('individual'), prices['1'], multiplier, symbol, periodText);
         document.querySelector('#individual').classList.remove('annual-only');
       }
-      if (pricePicker.value === '5' && supportLevel < 66) {
+      if (supportLevel < 100) {
+        document.querySelector('#individual').classList.add('no-credit');
+      }
+
+      // Agency Credits
+      if (
+          (supportLevel < 22 && ['5','10','25','50','200'].includes(pricePicker.value)) ||
+          (supportLevel < 33 && ['5','10','25','50'].includes(pricePicker.value)) ||
+          (supportLevel < 50 && ['5','10','25'].includes(pricePicker.value))
+        ) {
+        document.querySelector('#agency').classList.add('no-credit');
+      }
+
+      // Agency annual-only.
+      if (pricePicker.value === '5' && supportLevel < 22) {
         applyPrice(document.getElementById('price-result'), pricing['yearly'][currency]['5'], multiplier, symbol, '/year');
         document.querySelector('#agency').classList.add('annual-only');
       } else {
@@ -231,25 +242,6 @@
       }
       applyPrice(document.getElementById('enterprise'), prices['unlimited'], multiplier, symbol, periodText);
     }
-
-    /*function forceAnnual() {
-      const supportLevel = parseInt(supportSelect.value, 10);
-      if (supportLevel < 100) {
-        if (!annualCheckbox.checked) {
-          annualCheckbox.dataset.originallyChecked = 'false';
-        } else {
-          annualCheckbox.dataset.originallyChecked = 'true';
-        }
-        annualCheckbox.setAttribute('disabled', 'disabled');
-        annualCheckbox.checked = true;
-      } else {
-        annualCheckbox.removeAttribute('disabled');
-        if (annualCheckbox.dataset.originallyChecked === 'false') {
-          annualCheckbox.checked = false;
-        }
-      }
-      updatePrices();
-    }*/
 
     pricePicker.addEventListener('change', updatePrices);
     currencySelect.addEventListener('change', updatePrices);

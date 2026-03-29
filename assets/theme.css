@@ -328,7 +328,7 @@ label {
         top: calc(100% - 3px);
         padding: 0;
         left: auto;
-        right: auto;
+        right: 0;
         border-radius: 0;
         --bs-dropdown-border-color: rgb(var(--bs-link-color-rgb));
         min-width: calc(100% + 4px);
@@ -584,23 +584,47 @@ footer {
 
 #price-grid {
     margin: 2rem 0;
-    font-weight: 500;
+    font-weight: 300;
+    label {
+        font-weight: 400;
+    }
+    .border-bottom {
+        font-weight: 500;
+    }
+    strong, .price, .currency, .rounded-top {
+        font-weight: 600;
+    }
     @media (min-width: 1024px) {
         margin: 2rem -2rem;
         width: calc(100% + 4rem);
     }
+    ul {
+        max-width: max-content;
+        margin: 0 auto 1rem;
+        padding-left: 0;
+    }
+    .credit, .full {
+        opacity: 1;
+        transition: opacity 1s ease;
+    }
     .no-credit .credit {
-        display: none;
+        visibility: hidden;
+        height: 0;
+        overflow: hidden;
+        opacity: 0;
     }
     .annual-only {
         .full {
-            display: none;
+            visibility: hidden;
+            height: 0;
+            overflow: hidden;
+            opacity: 0;
         }
         .period-warning {
             display: block !important;
         }
     }
     .text-bg-info + .text-bg-info {
-        min-height: 16rem;
+        min-height: 25rem;
     }
 }
