@@ -1,6 +1,7 @@
 .promotional-code__description::after {
-    content: "See editoria11y.com/discounts";
+    content: "editoria11y.com/codes";
     display: block;
+    font-weight: 700;
     opacity: .9;
 }
 .fs-line-item--has-smart-input .fs-line-item__wrapper > div, .fs-line-item__description {

@@ -17,7 +17,7 @@
         </header>`;*/
   // const validTranslations = ['da', 'de', 'el', 'es', 'fr', 'hu', 'it', 'jp', 'nb', 'nl', 'pl', 'pt-br', 'pt-pt', 'sv', 'uk', 'zh'];\
   const validTranslations = [];
-  const validPaths = ['about', 'features', 'add-ons', 'contacts', 'install', 'drupal', 'license'];
+  const validPaths = ['about', 'features', 'add-ons', 'contacts', 'install', 'drupal', 'license', 'codes'];
   const langCode = validTranslations.includes(document.documentElement.lang) ? document.documentElement.lang : 'en';
   const navTemplate = `
     
@@ -52,7 +52,8 @@
       link.setAttribute('aria-current', 'page');
     }
   });
-  if (currentPath === '/') {
+
+  if (currentPath === '/' || (currentPath === '/codes/')) {
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
     const typeValue = urlParams.get('p');
@@ -64,11 +65,13 @@
         goTo = intersection[0];
       }
     };
-    if (typeValue && validPaths.includes(typeValue)) {
+    if (currentPath === '/codes/') {
+      window.location.replace(`/${langCode}/license`);
+    } else if (typeValue && validPaths.includes(typeValue)) {
       window.location.replace(`/${langCode}/${typeValue}`);
     } else {
       window.location.replace(`/${goTo}/about`);
-  }
+    }
   }
 
   /* On this page **********************/
