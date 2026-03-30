@@ -628,3 +628,8 @@ footer {
         min-height: 25rem;
     }
 }
+
+
+.tox.tox-tinymce-inline {
+    z-index: 9999;
+}
