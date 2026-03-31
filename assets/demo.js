@@ -51,7 +51,7 @@ const demo = async () => {
     theme: 'sleekTheme',
     panelNoCover: '#bd-theme',
     embeddedContentPlugin: true,
-    containerIgnore: '.tox-editor-header *, .ed11y-ignore *',
+    containerIgnore: '.tox-editor-header, .ed11y-ignore, .mt-5.pt-5.text-center',
     linksAdvancedPlugin: true,
     developerPlugin: true,
     contrastPlugin: true,
