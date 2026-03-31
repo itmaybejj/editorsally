@@ -1,0 +1,103 @@
+---
+name: translations
+description: Translate HTML pages and update stale translations for the project's 16 target languages.
+---
+
+# HTML Translation Workflow
+
+This site is a static HTML marketing site. The canonical English pages live at `en/<page>/index.html`. Translated pages live at `<langCode>/<page>/index.html`.
+
+## The 16 Target Languages
+
+`da`, `de`, `el`, `es`, `fr`, `hu`, `it`, `jp`, `nb`, `nl`, `pl`, `pt-br`, `pt-pt`, `sv`, `uk`, `zh`
+
+## Pages
+
+`about`, `contacts`, `demo`, `drupal`, `features`, `install`, `license`
+
+## Invoking this Skill
+
+Usage: `/translations <langCode> [page]`
+
+- `/translations es` — translate or update all pages for Spanish
+- `/translations es about` — translate or update only the about page for Spanish
+- `/translations --status` — show which translations are stale or missing
+
+## Translation Steps
+
+### 1. Check Manifest
+
+Read `lang/manifest.json`. For the requested language+page:
+- If the entry is `null`: this is a **new translation** — translate the full English page.
+- If the entry is a commit hash: run `git diff <hash> HEAD -- en/<page>/index.html` to see what changed. If empty, the translation is current. If there are changes, this is an **update** — apply only the changed sections to the existing translation.
+
+### 2. Read the English Source
+
+Read `en/<page>/index.html` in full. This is the canonical source.
+
+### 3. Translate (new page)
+
+Create `<langCode>/<page>/index.html` by translating the English source:
+
+#### What to Translate
+- All visible text content (headings, paragraphs, list items, button labels, link text)
+- `<title>` tag content
+- `alt` attributes on images
+- `aria-label` attributes
+- The `lang` attribute on `<html>` — set to the target language code
+- CTA button text (e.g., "About", "Features", "Pricing & Contributions")
+- Footer link labels (Library, Forum, Issues, Contacts)
+
+#### What to Preserve Verbatim
+- All HTML structure, classes, IDs, and `data-*` attributes
+- `<code>` and `<pre>` blocks (code examples must not be translated)
+- URLs and `href`/`src` values (exception: internal relative links — see below)
+- `<script>` tags and JavaScript content
+- SVG markup
+- Image `src` paths
+- CSS class names
+- The brand name "Editoria11y" (never translate)
+- Technical terms: HTML, CSS, JavaScript, Drupal, WordPress, CMS, API, WYSIWYG, CKEditor, TinyMCE, Gutenberg
+
+#### Internal Link Handling
+Replace relative internal links (`../about`, `../features`, etc.) with absolute paths using the target language code: `/<langCode>/about`, `/<langCode>/features`, etc.
+
+If the language has translated URL slugs defined in `lang/i18n.js`, use those instead.
+
+### 4. Update (changed sections only)
+
+When updating an existing translation based on a git diff:
+
+1. Read the git diff to understand what changed in the English source.
+2. Read the existing translated page.
+3. Locate the corresponding sections in the translation.
+4. Apply the changes — translate only the new/modified English text while preserving the surrounding translated content.
+5. Do NOT retranslate unchanged sections.
+
+### 5. Update the Manifest
+
+After translating, update `lang/manifest.json`:
+- Set the page entry to the current `HEAD` commit hash (run `git rev-parse HEAD`).
+
+### 6. Update i18n.js (first page for a new language only)
+
+When creating the first page for a new language:
+1. Add a `nav` entry in `lang/i18n.js` with translated navigation strings.
+2. If the language will use translated URL slugs, add a `paths` entry.
+
+## Translation Quality Guidelines
+
+- Use natural, fluent phrasing — not word-for-word translation.
+- Match the tone: friendly, professional, informative.
+- Keep technical accuracy (accessibility terminology should use the accepted terms in the target language).
+- `pt-pt` and `pt-br` differ significantly — do not copy one for the other.
+- Japanese (`jp`) and Chinese (`zh`) have no plural forms.
+- Polish (`pl`) and Ukrainian (`uk`) have 3 plural forms.
+
+## Status Check
+
+When invoked with `--status`, read `lang/manifest.json` and for each language+page:
+- `null` → "Missing"
+- Has a commit hash → run `git diff <hash> HEAD -- en/<page>/index.html`. If diff is empty → "Current". If diff has changes → "Stale (N lines changed)".
+
+Print a summary table.

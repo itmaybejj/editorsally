@@ -15,39 +15,50 @@
             <li class="nav-item"><a href="../contacts" class="nav-link">Contacts</a></li>
           </ul>
         </header>`;*/
-  // const validTranslations = ['da', 'de', 'el', 'es', 'fr', 'hu', 'it', 'jp', 'nb', 'nl', 'pl', 'pt-br', 'pt-pt', 'sv', 'uk', 'zh'];\
-  const validTranslations = [];
-  const validPaths = ['about', 'features', 'demo', 'contacts', 'install', 'drupal', 'license', 'codes'];
+  /* i18n configuration from lang/i18n.js (loaded before theme.js) */
+  const i18n = (typeof defined_i18n !== 'undefined') ? defined_i18n : null;
+  const validTranslations = i18n ? i18n.supportedLanguages : [];
+  const validPaths = i18n ? i18n.canonicalPaths.concat(['codes']) : ['about', 'features', 'demo', 'contacts', 'install', 'drupal', 'license', 'codes'];
   const langCode = validTranslations.includes(document.documentElement.lang) ? document.documentElement.lang : 'en';
+  const strings = i18n ? i18n.getNav(langCode) : null;
+  const externalIcon = `<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="14" fill="currentColor" class="bi bi-arrow-right-square" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M15 2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1zM0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm4.5 5.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
+</svg>`;
+
+  function p(enSlug) {
+    return i18n ? i18n.buildPath(langCode, enSlug) : `/${langCode}/${enSlug}`;
+  }
+  function l(enSlug) {
+    return strings ? strings.label[enSlug] : { about: 'About', features: 'Features', demo: 'Demo', contacts: 'Contacts', install: 'Install &amp; Configure', drupal: 'Drupal Module', license: 'Pricing &amp; Contributions' }[enSlug];
+  }
+
   const navTemplate = `
-    
             <li class="nav-item">
-              <a href="/${langCode}/about" class="nav-link">About</a>
+              <a href="${p('about')}" class="nav-link">${l('about')}</a>
             </li>
-            <!--<li class="nav-item"><a href="/${langCode}/projects" class="nav-link">Projects</a></li>-->
-            <li class="nav-item"><a href="/${langCode}/features" class="nav-link">Features</a></li>
-            <li class="nav-item"><a href="/${langCode}/demo" class="nav-link">Demo</a></li>
-            <!--<li class="nav-item"><a href="/${langCode}/contacts" class="nav-link">Contacts</a></li>-->
+            <li class="nav-item"><a href="${p('features')}" class="nav-link">${l('features')}</a></li>
+            <li class="nav-item"><a href="${p('demo')}" class="nav-link">${l('demo')}</a></li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Getting Started
+                ${strings ? strings.gettingStarted : 'Getting Started'}
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="../install">Install &amp; Configure</a></li>
-                <li><a class="dropdown-item" href="../license">Pricing &amp; Contributions</a></li>
-                <li><a class="dropdown-item" href="../drupal">Drupal Module</a></li>
-                <li><a class="dropdown-item" href="https://wordpress.org/plugins/editoria11y-accessibility-checker/" title="External link">WordPress Plugin <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="14" fill="currentColor" class="bi bi-arrow-right-square" viewBox="0 0 16 16">
-  <path fill-rule="evenodd" d="M15 2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1zM0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm4.5 5.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
-</svg></a></li>
-                <li><a class="dropdown-item" href="../contacts">Contacts</a></li>
+                <li><a class="dropdown-item" href="${p('install')}">${l('install')}</a></li>
+                <li><a class="dropdown-item" href="${p('license')}">${l('license')}</a></li>
+                <li><a class="dropdown-item" href="${p('drupal')}">${l('drupal')}</a></li>
+                <li><a class="dropdown-item" href="https://wordpress.org/plugins/editoria11y-accessibility-checker/" title="External link">${strings ? strings.wpLabel : 'WordPress Plugin'} ${externalIcon}</a></li>
+                <li><a class="dropdown-item" href="${p('contacts')}">${l('contacts')}</a></li>
 
-    `
+    `;
   const nav = document.querySelector('header .navbar-nav');
   nav.innerHTML = navTemplate;
+
+  /* Active link highlighting */
   const navLinks = nav.querySelectorAll('a');
   const currentPath = window.location.pathname;
   navLinks.forEach(link => {
-    if (link.getAttribute('href') !== '/' && currentPath.includes(link.getAttribute('href').replaceAll('..', ''))) {
+    const href = link.getAttribute('href');
+    if (href && href !== '/' && !href.startsWith('http') && currentPath.includes(href.replace(/\.\./g, ''))) {
       link.classList.add('active');
       link.setAttribute('aria-current', 'page');
     }

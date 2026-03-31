@@ -1,0 +1,150 @@
+{
+  "_doc": "Tracks which English commit each translation was last synced to. Use `git diff <synced_commit> HEAD -- en/<page>/index.html` to detect stale translations. Set to null for pages not yet translated.",
+  "source_lang": "en",
+  "languages": {
+    "da": {
+      "about": null,
+      "contacts": null,
+      "demo": null,
+      "drupal": null,
+      "features": null,
+      "install": null,
+      "license": null
+    },
+    "de": {
+      "about": null,
+      "contacts": null,
+      "demo": null,
+      "drupal": null,
+      "features": null,
+      "install": null,
+      "license": null
+    },
+    "el": {
+      "about": null,
+      "contacts": null,
+      "demo": null,
+      "drupal": null,
+      "features": null,
+      "install": null,
+      "license": null
+    },
+    "es": {
+      "about": null,
+      "contacts": null,
+      "demo": null,
+      "drupal": null,
+      "features": null,
+      "install": null,
+      "license": null
+    },
+    "fr": {
+      "about": null,
+      "contacts": null,
+      "demo": null,
+      "drupal": null,
+      "features": null,
+      "install": null,
+      "license": null
+    },
+    "hu": {
+      "about": null,
+      "contacts": null,
+      "demo": null,
+      "drupal": null,
+      "features": null,
+      "install": null,
+      "license": null
+    },
+    "it": {
+      "about": null,
+      "contacts": null,
+      "demo": null,
+      "drupal": null,
+      "features": null,
+      "install": null,
+      "license": null
+    },
+    "jp": {
+      "about": null,
+      "contacts": null,
+      "demo": null,
+      "drupal": null,
+      "features": null,
+      "install": null,
+      "license": null
+    },
+    "nb": {
+      "about": null,
+      "contacts": null,
+      "demo": null,
+      "drupal": null,
+      "features": null,
+      "install": null,
+      "license": null
+    },
+    "nl": {
+      "about": null,
+      "contacts": null,
+      "demo": null,
+      "drupal": null,
+      "features": null,
+      "install": null,
+      "license": null
+    },
+    "pl": {
+      "about": null,
+      "contacts": null,
+      "demo": null,
+      "drupal": null,
+      "features": null,
+      "install": null,
+      "license": null
+    },
+    "pt-br": {
+      "about": null,
+      "contacts": null,
+      "demo": null,
+      "drupal": null,
+      "features": null,
+      "install": null,
+      "license": null
+    },
+    "pt-pt": {
+      "about": null,
+      "contacts": null,
+      "demo": null,
+      "drupal": null,
+      "features": null,
+      "install": null,
+      "license": null
+    },
+    "sv": {
+      "about": null,
+      "contacts": null,
+      "demo": null,
+      "drupal": null,
+      "features": null,
+      "install": null,
+      "license": null
+    },
+    "uk": {
+      "about": null,
+      "contacts": null,
+      "demo": null,
+      "drupal": null,
+      "features": null,
+      "install": null,
+      "license": null
+    },
+    "zh": {
+      "about": null,
+      "contacts": null,
+      "demo": null,
+      "drupal": null,
+      "features": null,
+      "install": null,
+      "license": null
+    }
+  }
+}
