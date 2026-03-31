@@ -117,65 +117,65 @@
     monthly: {
       USD: {
         1: '16.65',
-        5: '82',
-        25: '183',
-        50: '332',
-        200: '749',
+        5: '81',
+        25: '181',
+        50: '331',
+        200: '748',
         500: '1665',
-        1000: '3332',
-        unlimited: '4499'
+        1000: '3331',
+        unlimited: '4498'
       },
       GBP: {
         1: '13.33',
         5: '65',
-        25: '149',
+        25: '148',
         50: '265',
-        200: '549',
-        500: '1333',
-        1000: '2666',
-        unlimited: '3333'
+        200: '548',
+        500: '1331',
+        1000: '2665',
+        unlimited: '3331'
       },
       EUR: {
         1: '14.99',
         5: '73',
         25: '165',
-        50: '333',
+        50: '331',
         200: '664',
         500: '1497',
-        1000: '2999',
-        unlimited: '3999'
+        1000: '2998',
+        unlimited: '3998'
       }
     },
     yearly: {
       USD: {
-        1: '165.5',
-        5: '709',
-        25: '1833',
-        50: '3332',
-        200: '4999',
-        500: '16666',
-        1000: '29999',
-        unlimited: '44999'
+        1: '165',
+        5: '708',
+        25: '1831',
+        50: '3331',
+        200: '4998',
+        500: '16665',
+        1000: '29998',
+        unlimited: '44998'
       },
       GBP: {
-        1: '133',
-        5: '649',
-        25: '1499',
-        50: '2665',
-        200: '5499',
-        500: '13333',
-        1000: '26666',
-        unlimited: '33333'
+        1: '131',
+        5: '648',
+        25: '1498',
+        50: '2664',
+        200: '5498',
+        500: '13331',
+        1000: '26664',
+        unlimited: '33331'
       },
       EUR: {
-        1: '149',
+        1: '148',
         5: '665',
-        25: '1666',
-        50: '2999',
-        200: '4666',
-        500: '14999',
+        25: '1665',
+        50: '2998',
+        200: '4665',
+        500: '14998',
         1000: '28333',
-        unlimited: '39999'
+        unlimited: '39998'
       }
     }
   };
@@ -184,10 +184,24 @@
     const annualCheckbox = document.getElementById('annual-pricing');
     const supportSelect = document.getElementById('support-level');
     const currencySymbols = { EUR: '€', USD: '$', GBP: '£' };
+    const couponCodes = { 100: null, 80: '120', 60: '100', 50: '75', 44: '66', 33: '50', 22: '33', 17: '25' };
+
+    function buildCheckoutUrl(licenses) {
+      const currency = currencySelect.value.toLowerCase();
+      const billingCycle = annualCheckbox.checked ? 'annual' : 'monthly';
+      const couponPrefix = couponCodes[parseInt(supportSelect.value, 10)];
+      const periodSuffix = annualCheckbox.checked ? 'a' : 'm';
+      const licenseUrl = `https://editoria11y.com/${langCode}/license`;
+      let url = `https://checkout.freemius.com/bundle/26223/plan/43392/licenses/${licenses}/currency/${currency}/?sandbox=true&show_upsells=false&disable_licenses_selector=true&billing_cycle=${billingCycle}&annual_discount=false&cart=false&&bundle_discount=false&multisite_discount=false&cancel_url=${encodeURIComponent(licenseUrl)}`;
+      if (couponPrefix) {
+        url += `&coupon=${couponPrefix}px${periodSuffix}&hide_coupon=true`;
+      }
+      return url;
+    }
 
     function formatPrice(num) {
       const str = num.toFixed(2);
-      const clean = str.endsWith('.00') || num > 16 ? str.slice(0, -3) : str;
+      const clean = str.endsWith('.00') || num > 16 ? Math.ceil(num).toString() : str;
       return clean.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
     }
 
@@ -214,7 +228,7 @@
       document.querySelectorAll('.no-credit')?.forEach(el => el.classList.remove('no-credit'));
 
       // Individual logic.
-      
+
       if (supportLevel < 50) {
         applyPrice(document.getElementById('individual'), pricing['yearly'][currency]['1'], multiplier, symbol, '/year');
         document.querySelector('#individual').classList.add('annual-only');
@@ -226,24 +240,28 @@
         document.querySelector('#individual').classList.add('no-credit');
       }
 
-      // Agency Credits
+      // team Credits
       if (
-          (supportLevel < 22 && ['5','10','25','50','200'].includes(pricePicker.value)) ||
-          (supportLevel < 33 && ['5','10','25','50'].includes(pricePicker.value)) ||
-          (supportLevel < 50 && ['5','10','25'].includes(pricePicker.value))
-        ) {
-        document.querySelector('#agency').classList.add('no-credit');
+        (supportLevel < 22 && ['5', '10', '25', '50', '200'].includes(pricePicker.value)) ||
+        (supportLevel < 33 && ['5', '10', '25', '50'].includes(pricePicker.value)) ||
+        (supportLevel < 50 && ['5', '10', '25'].includes(pricePicker.value))
+      ) {
+        document.querySelector('#team').classList.add('no-credit');
       }
 
-      // Agency annual-only.
+      // team annual-only.
       if (pricePicker.value === '5' && supportLevel < 22) {
         applyPrice(document.getElementById('price-result'), pricing['yearly'][currency]['5'], multiplier, symbol, '/year');
-        document.querySelector('#agency').classList.add('annual-only');
+        document.querySelector('#team').classList.add('annual-only');
       } else {
         applyPrice(document.getElementById('price-result'), prices[pricePicker.value], multiplier, symbol, periodText);
-        document.querySelector('#agency').classList.remove('annual-only');
+        document.querySelector('#team').classList.remove('annual-only');
       }
       applyPrice(document.getElementById('enterprise'), prices['unlimited'], multiplier, symbol, periodText);
+
+      document.querySelector('#individual .btn').href = buildCheckoutUrl(1);
+      document.querySelector('#price-result .btn').href = buildCheckoutUrl(pricePicker.value);
+      document.querySelector('#enterprise .btn').href = buildCheckoutUrl('unlimited');
     }
 
     pricePicker.addEventListener('change', updatePrices);
@@ -254,94 +272,94 @@
   }
 
   /* Theme switcher **********************/
-/*
-  const themeSwitch = `
-    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
-      <symbol id="arrow-right-circle" viewBox="0 0 16 16">
-        <path
-          d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"
-        ></path>
-      </symbol>
-    </svg>`
-  const themeSwitcher = document.createElement('div');
-  themeSwitcher.innerHTML = themeSwitch;
-  document.body.appendChild(themeSwitcher);*/
+  /*
+    const themeSwitch = `
+      <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+        <symbol id="arrow-right-circle" viewBox="0 0 16 16">
+          <path
+            d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"
+          ></path>
+        </symbol>
+      </svg>`
+    const themeSwitcher = document.createElement('div');
+    themeSwitcher.innerHTML = themeSwitch;
+    document.body.appendChild(themeSwitcher);*/
   /*!
  * Color mode toggler for Bootstrap's docs (https://getbootstrap.com/)
  * Copyright 2011-2025 The Bootstrap Authors
  * Licensed under the Creative Commons Attribution 3.0 Unported License.
  */
-/*
-  const getStoredTheme = () => localStorage.getItem('theme')
-  const setStoredTheme = theme => localStorage.setItem('theme', theme)
-
-  const getPreferredTheme = () => {
-    const storedTheme = getStoredTheme()
-    if (storedTheme) {
-      return storedTheme
+  /*
+    const getStoredTheme = () => localStorage.getItem('theme')
+    const setStoredTheme = theme => localStorage.setItem('theme', theme)
+  
+    const getPreferredTheme = () => {
+      const storedTheme = getStoredTheme()
+      if (storedTheme) {
+        return storedTheme
+      }
+  
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
     }
-
-    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
-  }
-
-  const setTheme = theme => {
-    if (theme === 'auto') {
-      document.documentElement.setAttribute('data-bs-theme', (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'))
-    } else {
-      document.documentElement.setAttribute('data-bs-theme', theme)
+  
+    const setTheme = theme => {
+      if (theme === 'auto') {
+        document.documentElement.setAttribute('data-bs-theme', (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'))
+      } else {
+        document.documentElement.setAttribute('data-bs-theme', theme)
+      }
     }
-  }
-
-  setTheme(getPreferredTheme())
-
-  const showActiveTheme = (theme, focus = false) => {
-    const themeSwitcher = document.querySelector('#bd-theme')
-
-    if (!themeSwitcher) {
-      return
-    }
-
-    const themeSwitcherText = document.querySelector('#bd-theme-text')
-    const activeThemeIcon = document.querySelector('.theme-icon-active use')
-    const btnToActive = document.querySelector(`[data-bs-theme-value="${theme}"]`)
-    const svgOfActiveBtn = btnToActive.querySelector('svg use').getAttribute('href')
-
-    document.querySelectorAll('[data-bs-theme-value]').forEach(element => {
-      element.classList.remove('active')
-      element.setAttribute('aria-pressed', 'false')
-    })
-
-    btnToActive.classList.add('active')
-    btnToActive.setAttribute('aria-pressed', 'true')
-    activeThemeIcon.setAttribute('href', svgOfActiveBtn)
-    const themeSwitcherLabel = `${themeSwitcherText.textContent} (${btnToActive.dataset.bsThemeValue})`
-    themeSwitcher.setAttribute('aria-label', themeSwitcherLabel)
-
-    if (focus) {
-      themeSwitcher.focus()
-    }
-  }
-
-  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
-    const storedTheme = getStoredTheme()
-    if (storedTheme !== 'light' && storedTheme !== 'dark') {
-      setTheme(getPreferredTheme())
-    }
-  })
-
-  window.addEventListener('DOMContentLoaded', () => {
-    showActiveTheme(getPreferredTheme())
-
-    document.querySelectorAll('[data-bs-theme-value]')
-      .forEach(toggle => {
-        toggle.addEventListener('click', () => {
-          const theme = toggle.getAttribute('data-bs-theme-value')
-          setStoredTheme(theme)
-          setTheme(theme)
-          showActiveTheme(theme, true)
-        })
+  
+    setTheme(getPreferredTheme())
+  
+    const showActiveTheme = (theme, focus = false) => {
+      const themeSwitcher = document.querySelector('#bd-theme')
+  
+      if (!themeSwitcher) {
+        return
+      }
+  
+      const themeSwitcherText = document.querySelector('#bd-theme-text')
+      const activeThemeIcon = document.querySelector('.theme-icon-active use')
+      const btnToActive = document.querySelector(`[data-bs-theme-value="${theme}"]`)
+      const svgOfActiveBtn = btnToActive.querySelector('svg use').getAttribute('href')
+  
+      document.querySelectorAll('[data-bs-theme-value]').forEach(element => {
+        element.classList.remove('active')
+        element.setAttribute('aria-pressed', 'false')
       })
-  })*/
+  
+      btnToActive.classList.add('active')
+      btnToActive.setAttribute('aria-pressed', 'true')
+      activeThemeIcon.setAttribute('href', svgOfActiveBtn)
+      const themeSwitcherLabel = `${themeSwitcherText.textContent} (${btnToActive.dataset.bsThemeValue})`
+      themeSwitcher.setAttribute('aria-label', themeSwitcherLabel)
+  
+      if (focus) {
+        themeSwitcher.focus()
+      }
+    }
+  
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+      const storedTheme = getStoredTheme()
+      if (storedTheme !== 'light' && storedTheme !== 'dark') {
+        setTheme(getPreferredTheme())
+      }
+    })
+  
+    window.addEventListener('DOMContentLoaded', () => {
+      showActiveTheme(getPreferredTheme())
+  
+      document.querySelectorAll('[data-bs-theme-value]')
+        .forEach(toggle => {
+          toggle.addEventListener('click', () => {
+            const theme = toggle.getAttribute('data-bs-theme-value')
+            setStoredTheme(theme)
+            setTheme(theme)
+            showActiveTheme(theme, true)
+          })
+        })
+    })*/
   const circleIcon = document.createElement('span');
   circleIcon.classList.add('d-none');
   circleIcon.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" class="d-none">
