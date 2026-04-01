@@ -46,142 +46,142 @@
         </div>
         <div class="col-12 col-md-7 col-lg-8 pt-3">
           <div data-bs-spy="scroll" data-bs-target="#on-this-page" data-bs-smooth-scroll="true">
-            <h1>Drupal module</h1>
+            <h1>Drupal モジュール</h1>
             <section id="features">
-              <h2 class="pt-3">Features</h2>
+              <h2 class="pt-3">機能</h2>
 
               <figure class="figure my-4 rounded shadow border">
-                <img loading="lazy" src="/assets/images/3x-editing.png" class="figure-img img-fluid" height="1088" width="2237" alt="Drupal editor with inline tips"/>
-                <figcaption class="figure-caption p-3 pt-2 fs-6">Issues are detected both on-load the frontend and as-you-type in CKEditor and Gutenberg.</figcaption>
+                <img loading="lazy" src="/assets/images/3x-editing.png" class="figure-img img-fluid" height="1088" width="2237" alt="インラインのヒントが表示されたDrupalエディター"/>
+                <figcaption class="figure-caption p-3 pt-2 fs-6">問題はフロントエンドの読み込み時と、CKEditor・Gutenbergでの入力中の両方で検出されます。</figcaption>
               </figure>
 
               <figure class="figure my-4 rounded shadow border" style="max-width: 600px;">
-                <img loading="lazy" src="/assets/images/3x-generic-tip.png" class="figure-img img-fluid" height="798" width="1278" alt="Tip indicated a link is only named click here."/>
-                <figcaption class="figure-caption p-3 pt-2 ps-5 fs-6">Tooltips describe the issue, with buttons to jump into the page or layout editor, to ignore this alert (for the active user) or mark it OK (for all users). Depending on context and permissions, some alerts may also show a "Similar Alerts" menu, with options to mark multiple alerts on the same page as OK, or mark the same element on all pages as OK.</figcaption>
+                <img loading="lazy" src="/assets/images/3x-generic-tip.png" class="figure-img img-fluid" height="798" width="1278" alt="リンクの名前が「click here」のみであることを示すヒント。"/>
+                <figcaption class="figure-caption p-3 pt-2 ps-5 fs-6">ツールチップは問題の内容を説明し、ページやレイアウトエディターにジャンプするボタン、このアラートを無視する（現在のユーザーのみ）またはOKにする（全ユーザー対象）ボタンを含みます。コンテキストや権限によっては、「類似のアラート」メニューも表示され、同じページの複数のアラートをまとめてOKにしたり、全ページで同じ要素をOKにしたりできます。</figcaption>
               </figure>
 
               <figure class="figure my-4 rounded shadow mb-5 border">
-                <img loading="lazy" class="figure-img img-fluid" src="/assets/images/3x-dashboard.png" height="765" width="1600" alt="Reporting dashboard showing recent issues and pages with the most issues." />
-                <figcaption class="figure-caption p-3 pt-2 fs-6">A site-wide reporting dashboard provides filterable and exportable reports of alerts and dismissals.</figcaption>
+                <img loading="lazy" class="figure-img img-fluid" src="/assets/images/3x-dashboard.png" height="765" width="1600" alt="最近の問題と最も問題が多いページを表示するレポートダッシュボード。" />
+                <figcaption class="figure-caption p-3 pt-2 fs-6">サイト全体のレポートダッシュボードでは、アラートと非表示設定のフィルタリング可能・エクスポート可能なレポートを提供します。</figcaption>
               </figure>
 
-              <p>As well as:</p>
+              <p>その他にも以下の機能があります：</p>
               <ul>
-                <li>Starter configuration that automatically ignores Drupal, CKeditor, Gutenberg, Link Purpose and External Link elements, reacts to changes when editing in modal containers, and automatically positions the toolbar to avoid overlapping with Klaro and Same Page Preview elements.</li>
-                <li>Role-based configuration for which users will see the checker, which users can dismiss alerts, and which users can view site-wide reports.</li>
-                <li>An in-site (local) crawler to refresh the dashboard after major theming changes. <em>(CSA only)</em></li>
-                <li>Author/developer split configuration with separate tests (~30/~80) and issue lists. <em>(CSA only)</em></li>
+                <li>Drupal、CKeditor、Gutenberg、リンクの目的、外部リンク要素を自動的に無視し、モーダルコンテナ内の編集時の変更に反応し、KlaroやSame Page Previewの要素と重ならないようにツールバーを自動配置するスターター設定。</li>
+                <li>どのユーザーがチェッカーを表示するか、どのユーザーがアラートを非表示にできるか、どのユーザーがサイト全体のレポートを表示できるかを制御するロールベースの設定。</li>
+                <li>大きなテーマ変更後にダッシュボードを更新するためのサイト内（ローカル）クローラー。<em>（CSAのみ）</em></li>
+                <li>個別のテスト（約30件/約80件）と問題リストを持つ作成者/開発者の分割設定。<em>（CSAのみ）</em></li>
               </ul>
 
 
 
             </section>
-            <h2>Installation and key setup steps</h2>
-            <p>The <a href="https://www.drupal.org/project/editoria11y/">bundled installer</a> at Drupal.org includes several modules:</p>
+            <h2>インストールと主要なセットアップ手順</h2>
+            <p>Drupal.orgの<a href="https://www.drupal.org/project/editoria11y/">バンドルインストーラー</a>には複数のモジュールが含まれています：</p>
             <ul>
               <li>
-                Editoria11y: the core content checker and dashboard.
+                Editoria11y: コアコンテンツチェッカーとダッシュボード。
               </li>
               <li>
-                Editoria11y CSA: developer tests and dashboard maintenance tools.
+                Editoria11y CSA: 開発者テストとダッシュボードのメンテナンスツール。
               </li>
               <li>
-                Editoria11y Export: CSV reporting tools.
+                Editoria11y Export: CSVレポートツール。
               </li>
             </ul>
-            <p>Install like any other module, and then take these key steps:</p>
+            <p>他のモジュールと同様にインストールし、以下の主要な手順を実行してください：</p>
             <ol>
-              <li><strong>Check permissions.</strong> Trusted authors should have "Mark OK," "Mark as Ignored" and "View the dashboard."</li>
-              <li><strong>Check key pages for repetitive or unhelpful alerts.</strong> Either mark them as OK in the tooltip, or adjust the configuration to ignore elements by selector.</li>
-              <li>Look for tips that are hard to see – offscreen, truncated, behind other elements, or on hidden elements. Use the tips in "Fix tip positioning" below to fix.</li>
-              <li>If the site already has content, and you have a CSA subscription, visit the dashboard "recheck" tab, and <strong>crawl the site</strong> to pre-load the site reports. This is optional, but older pages will not appear in reports until they are crawled or visited by a logged in user.</li>
+              <li><strong>権限を確認する。</strong> 信頼できる作成者には「OK にする」、「無視としてマーク」、「ダッシュボードを表示する」が必要です。</li>
+              <li><strong>繰り返し表示される、または役に立たないアラートがないか主要ページを確認する。</strong> ツールチップでOKとしてマークするか、設定でセレクターによる要素の無視を調整してください。</li>
+              <li>見つけにくいヒント（画面外、切り詰め、他の要素の後ろ、非表示要素など）を探す。以下の「ヒントの配置を修正する」のヒントを使って修正してください。</li>
+              <li>サイトにすでにコンテンツがあり、CSAサブスクリプションを持っている場合は、ダッシュボードの「再確認」タブを訪問し、<strong>サイトをクロール</strong>してサイトレポートを事前に読み込んでください。これは任意ですが、古いページはクロールされるかログインユーザーが訪問するまでレポートに表示されません。</li>
             </ol>
-            <p>View a <a href="https://youtu.be/uYvNYPg38nU?si=dqADyWpTtOhniHTP&t=696">video introduction to the configuration options</a> (v2.4).</p>
+            <p><a href="https://youtu.be/uYvNYPg38nU?si=dqADyWpTtOhniHTP&t=696">設定オプションの動画紹介</a>（v2.4）をご覧ください。</p>
 
-            <h2 id="check-roots">Hide unhelpful alerts</h2>
+            <h2 id="check-roots">役に立たないアラートを非表示にする</h2>
             <p>
-              <strong>Good configurations suppress unhelpful alerts, so content authors can focus on issues they should fix</strong>.</p>
-            <p>While you can turn off tests altogether, it is usually better to hide alerts on specific elements or pages.</p>
+              <strong>適切な設定は役に立たないアラートを抑制し、コンテンツ作成者が修正すべき問題に集中できるようにします</strong>。</p>
+            <p>テストを完全にオフにすることもできますが、通常は特定の要素やページのアラートを非表示にする方が良いでしょう。</p>
             <hr>
             <p>
-              During each test run, Editoria11y gathers a single set of elements from the "Check content in these containers" setting, and then filters it several times. This is what a test run looks like:
+              各テスト実行中、Editoria11yは「これらのコンテナ内のコンテンツを確認する」設定から要素の単一セットを収集し、それを何度かフィルタリングします。テスト実行の流れは次のとおりです：
             </p>
             <ol>
               <li>
-                Cancel checking if configuration prevents checking on this page or for this user.
+                設定がこのページまたはこのユーザーのチェックを禁止している場合、チェックをキャンセルする。
               </li>
               <li>
-                <strong>Gather</strong> elements in specified page regions, e.g.:<br><code>body > *:not('.ed11y-element')</code><br>
-                <em>For Editoria11y CSA users, these are the regions on the <strong>Developer tests</strong> tab.</em>
+                指定されたページ領域の要素を<strong>収集</strong>する。例：<br><code>body > *:not('.ed11y-element')</code><br>
+                <em>Editoria11y CSAユーザーの場合、これらは<strong>開発者テスト</strong>タブの領域です。</em>
               </li>
               <li>
-                <strong>Drop</strong> elements that match ignore selectors, e.g.:<br><code>.widgets, .utility-menu</code><br>
-                <em>For Editoria11y CSA users, these are the selectors on the <strong>Developer tests</strong> tab.</em>
+                無視セレクターに一致する要素を<strong>除外</strong>する。例：<br><code>.widgets, .utility-menu</code><br>
+                <em>Editoria11y CSAユーザーの場合、これらは<strong>開発者テスト</strong>タブのセレクターです。</em>
               </li>
               <li>
-                Run tests and sync results to the dashboard.
+                テストを実行し、結果をダッシュボードに同期する。
               </li>
               <li>
-                If split configuration is active and the user is a content editor, filter developer results:
+                分割設定が有効でユーザーがコンテンツエディターの場合、開発者の結果をフィルタリングする：
                 <ul>
-                  <li><strong>Drop</strong> results from tests set to "Developer only."</li>
-                  <li><strong>Drop</strong> results on elements from outside specified <strong><em>content</em></strong> regions, e.g.:<br><code>main, footer</code></li>
-                  <li><strong>Drop</strong> results on elements that match <strong><em>content</em></strong> ignore selectors.</li>
+                  <li>「開発者のみ」に設定されたテストの結果を<strong>除外</strong>する。</li>
+                  <li>指定された<strong><em>コンテンツ</em></strong>領域外の要素の結果を<strong>除外</strong>する。例：<br><code>main, footer</code></li>
+                  <li><strong><em>コンテンツ</em></strong>の無視セレクターに一致する要素の結果を<strong>除外</strong>する。</li>
                 </ul>
-                Note that there is not a second "gather" phase. The developer page regions must include the content regions.
+                2回目の「収集」フェーズはありません。開発者のページ領域にはコンテンツ領域を含める必要があります。
               </li>
-              <li>Open the panel and draw alerts if configuration matches an auto-open setting.</li>
+              <li>設定が自動開き設定と一致する場合、パネルを開きアラートを表示する。</li>
             </ol>
 
-            <h3 id="dismiss">Dismiss alerts</h3>
-            <p>Tests can be configured in the library as errors or warnings ("manual checks"). Warnings can be dismissed. There are two types of dismissals available from the footer of each tooltip:</p>
+            <h3 id="dismiss">アラートを非表示にする</h3>
+            <p>テストはライブラリでエラーまたは警告（「手動チェック」）として設定できます。警告は非表示にできます。各ツールチップのフッターから2種類の非表示設定が利用できます：</p>
             <div class="my-2" style="background: url(/assets/images/3x-generic-tip.png) 100% 98%; max-width: 600px; padding-top: 6%; background-size: 108%;"></div>
             <ul>
-              <li>"Ignore" is stored as a user preference: the alert is now hidden for the current user, but only the current user.</li>
-              <li>"Mark OK" hides the alert for all users.</li>
+              <li>「無視」はユーザー設定として保存されます：アラートは現在のユーザーには非表示になりますが、そのユーザーのみです。</li>
+              <li>「OK にする」はすべてのユーザーに対してアラートを非表示にします。</li>
             </ul>
-            <p>Whether a user is able to dismiss an alert is controlled at the role level in Drupal's user permissions. <strong>Most authors should be allowed to dismiss alerts</strong>. There is no point in assigning someone a manual check if they cannot mark the item as having been checked.</p>
+            <p>ユーザーがアラートを非表示にできるかどうかは、Drupalのユーザー権限のロールレベルで制御されます。<strong>ほとんどの作成者はアラートを非表示にできるべきです</strong>。アイテムを確認済みとしてマークできない場合、手動チェックを割り当てる意味がありません。</p>
 
-            <h3 id="roots">Ignore elements</h3>
-            <p>These two configuration settings are the most important!</p>
+            <h3 id="roots">要素を無視する</h3>
+            <p>これら2つの設定が最も重要です！</p>
             <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
-              <label for="edit-content-root">Check content in these containers</label>
+              <label for="edit-content-root">これらのコンテナ内のコンテンツを確認する</label>
               <div><textarea id="edit-content-root" name="content_root" rows="1" cols="30" disabled></textarea>
               </div>
               <div class="mt-3">
-                <label for="edit-ignore-elements">Skip over these elements</label>
+                <label for="edit-ignore-elements">これらの要素をスキップする</label>
                 <div>
                   <textarea id="edit-ignore-elements" disabled name="ignore_elements" rows="1" cols="30" class=""></textarea>
                 </div>
               </div>
             </div>
             <p>
-              Set the first to include any parts of the page content authors can edit. E.g., if they can edit the <code>main</code> content area, <code>.sidebar</code> and <code>.footer-column-two</code>, set those selectors as your content check area.
+              最初の設定には、コンテンツ作成者が編集できるページの任意の部分を含めてください。例えば、<code>main</code>コンテンツエリア、<code>.sidebar</code>、<code>.footer-column-two</code>を編集できる場合は、それらのセレクターをコンテンツ確認エリアとして設定します。
             </p>
             <p>
-              Use the second to "knock out" subsections. E.g., if <code>main</code> contains various widgets and embeds that only developers can modify, list those: <code>.widget-1, .social-embed</code>;
+              2番目の設定はサブセクションを「除外」するために使用します。例えば、<code>main</code>に開発者のみが変更できるウィジェットや埋め込みが含まれている場合は、それらをリストアップします：<code>.widget-1, .social-embed</code>。
             </p>
-            <p>If you are using the split configuration, you will see a similar pair of settings on the Developer Tests tab:</p>
+            <p>分割設定を使用している場合、開発者テストタブに同様の設定ペアが表示されます：</p>
             <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
               <div>
                 <fieldset>
                 <legend>
-                  Developer check area
+                  開発者チェックエリア
                 </legend>
                 <div class="fieldset__wrapper fieldset__wrapper--group">
 
                   <div id="edit-dev-check-root">
                     <div>
                     <input aria-describedby="edit-dev-check-root--description" type="radio" id="edit-dev-check-root-automatic" name="dev_check_root" value="automatic" checked="checked">
-                    <label for="edit-dev-check-root-automatic" class="form-item__label option">All elements</label>
+                    <label for="edit-dev-check-root-automatic" class="form-item__label option">すべての要素</label>
                   </div>
                     <div class="d-flex">
                       <input aria-describedby="edit-dev-check-root--description" type="radio" id="edit-dev-check-root-match" name="dev_check_root" value="match" class="align-self-baseline mt-1 me-1">
-                      <label for="edit-dev-check-root-match" class="form-item__label option">Only the containers listed in the Content Setting tab</label>
+                      <label for="edit-dev-check-root-match" class="form-item__label option">コンテンツ設定タブに記載されているコンテナのみ</label>
                     </div>
                     <div class="">
                       <input aria-describedby="edit-dev-check-root--description" type="radio" id="edit-dev-check-root-specify" name="dev_check_root" value="specify" class="form-radio form-boolean form-boolean--type-radio">
-                      <label for="edit-dev-check-root-specify" class="">The specific containers listed below</label>
+                      <label for="edit-dev-check-root-specify" class="">以下に記載された特定のコンテナ</label>
                     </div>
                   </div>
 
@@ -189,7 +189,7 @@
               </fieldset>
 
                 <div class="">
-                  <label for="edit-always-ignore" class="mt-3">Ignore for both developers and content editors</label>
+                  <label for="edit-always-ignore" class="mt-3">開発者とコンテンツ編集者の両方で無視する</label>
                   <div class="form-textarea-wrapper">
                     <textarea  id="edit-always-ignore" name="always_ignore" rows="1" cols="20" placeholder=""></textarea>
                   </div>
@@ -198,99 +198,99 @@
               </div>
 
             </div>
-            <p>The key thing to know about the developer check areas is that they are <strong>not independent</strong> of the content check areas. In a split configuration, the developer areas are checked, and then those results are <strong>filtered</strong> to match the content areas. Any areas that are excluded for developers will also be excluded for content editors. Do not exclude editable content areas!</p>
+            <p>開発者チェックエリアについて知っておくべき重要なことは、コンテンツチェックエリアとは<strong>独立していない</strong>ということです。分割設定では、開発者エリアがチェックされ、その結果がコンテンツエリアと一致するように<strong>フィルタリング</strong>されます。開発者から除外されたエリアはコンテンツ編集者からも除外されます。編集可能なコンテンツエリアを除外しないでください！</p>
 
-            <p>Some tests allow for more precise configuration, to only hide certain alerts on affected elements. Look for them under:</p>
+            <p>一部のテストでは、影響を受ける要素の特定のアラートのみを非表示にするための、より精密な設定が可能です。以下から探してください：</p>
             <ul>
-              <li>Content tests: Links to check</li>
-              <li>Content tests: Embeds to check</li>
-              <li>Content tests: Detecting dynamic and shadow content</li>
-              <li>Developer tests: Contrast</li>
+              <li>コンテンツテスト：確認するリンク</li>
+              <li>コンテンツテスト：確認する埋め込み</li>
+              <li>コンテンツテスト：動的コンテンツとシャドウコンテンツの検出</li>
+              <li>開発者テスト：コントラスト</li>
             </ul>
 
-            <h3 id="pages">Hide for specific pages or users</h3>
+            <h3 id="pages">特定のページまたはユーザーに対して非表示にする</h3>
             <p>
-              The easiest way to do this is by passing CSS classes or IDs to these options:
+              最も簡単な方法は、CSSクラスまたはIDをこれらのオプションに渡すことです：
             </p>
             <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
-              <label for="edit-no-load" class="form-item__label">Do not check on pages with these elements</label>
+              <label for="edit-no-load" class="form-item__label">これらの要素があるページではチェックしない</label>
               <div class="form-textarea-wrapper">
                 <textarea data-drupal-selector="edit-no-load" aria-describedby="edit-no-load--description" id="edit-no-load" name="no_load" rows="1" cols="20" class="form-textarea resize-vertical form-element form-element--type-textarea form-element--api-textarea"></textarea>
               </div>
 
-              <label for="edit-ignore-all-if-absent" class="form-item__label">Hide all alerts on pages where these elements are not present</label>
+              <label for="edit-ignore-all-if-absent" class="form-item__label">これらの要素が存在しないページではすべてのアラートを非表示にする</label>
               <div class="form-textarea-wrapper">
                 <textarea data-drupal-selector="edit-ignore-all-if-absent" aria-describedby="edit-ignore-all-if-absent--description" id="edit-ignore-all-if-absent" name="ignore_all_if_absent" rows="1" cols="20" class="form-textarea resize-vertical form-element form-element--type-textarea form-element--api-textarea"></textarea>
               </div>
 
             </div>
             <p>
-              The first will prevent checks from running, and the toolbar will not show.
+              最初の設定はチェックの実行を防ぎ、ツールバーは表示されません。
             </p>
             <p>
-              The second will start the checker minimized, and auto-mark (for the current user) all issues as "Ignored," even if they are errors. This allows the tests to run and update the dashboard without bothering the user.
+              2番目の設定はチェッカーを最小化した状態で起動し、エラーであっても（現在のユーザーに対して）すべての問題を自動的に「無視」としてマークします。これにより、ユーザーを煩わせることなくテストを実行してダッシュボードを更新できます。
             </p>
             <p>
-              If you want to use these to control which users see the checker, you may need to adjust your theme to output a class, e.g. <code>.user-247</code>
+              チェッカーを表示するユーザーを制御するためにこれらを使用する場合、テーマを調整してクラスを出力する必要があるかもしれません。例：<code>.user-247</code>
             </p>
 
-            <h2 id="dashboard">Manage site-wide results</h2>
+            <h2 id="dashboard">サイト全体の結果を管理する</h2>
             <section id="refresh">
-              <h3 class="pt-3">Crawling and updating results</h3>
-              <p>Editoria11y is a <strong>real-time monitoring tool, not a crawler</strong>. Its site-wide reports update when authors view pages, so regular crawling is not generally needed. The CSA module <em>does</em> include a crawler, but it should only be needed in these three situations:</p>
+              <h3 class="pt-3">クロールと結果の更新</h3>
+              <p>Editoria11yは<strong>リアルタイムの監視ツールであり、クローラーではありません</strong>。サイト全体のレポートは作成者がページを表示したときに更新されるため、定期的なクロールは通常必要ありません。CSAモジュールにはクローラーが含まれていますが、以下の3つの状況でのみ必要となります：</p>
               <ol>
                 <li>
-                  When first installing Editoria11y on an existing site with many pages. Pages need to be visited before they will appear on the dashboard, so a quick initial crawl saves time.
+                  多くのページを持つ既存サイトにEditoria11yを最初にインストールするとき。ページはダッシュボードに表示される前に訪問される必要があるため、最初にクイッククロールを実行すると時間を節約できます。
                 </li>
                 <li>
-                  Major updates to themes or modules may fix (or cause) issues on many pages that will not appear until visited or crawled..
+                  テーマやモジュールの大規模な更新は、訪問またはクロールされるまで表示されない多くのページの問題を修正（または引き起こす）する可能性があります。
                 </li>
                 <li>
-                  Bulk actions in the admin interface like deleting pages or redirects tend to leave behind results from pages that no longer exist or have moved. In these cases it helps to use the "Refresh" tab's maintenance actions to refresh page URLs, and detect and drop deleted pages.
+                  ページの削除やリダイレクトなどの管理インターフェースでの一括操作は、存在しなくなったページや移動したページの結果を残しがちです。このような場合、「更新」タブのメンテナンスアクションを使用してページURLを更新し、削除されたページを検出して除外することが役立ちます。
                 </li>
               </ol>
-              <p>No data leaves your site during a crawl. The CSA crawler is not a cloud tool; it uses your browser to load and check the pages on your own site. The downside of this approach is that <strong>browsers pause background tabs</strong>. You will need to keep your computer on and awake during a crawl. Plan to open a new window for the crawler and leave it as the foreground tab for that window as it works. You can continue working in another window. The crawler will update its estimate after each batch of pages.</p>
+              <p>クロール中にサイトからデータが外部に送信されることはありません。CSAクローラーはクラウドツールではなく、ブラウザを使用してサイト上のページを読み込んでチェックします。このアプローチのデメリットは、<strong>ブラウザがバックグラウンドタブを一時停止する</strong>ことです。クロール中はコンピューターの電源を入れたまま起動した状態にしておく必要があります。クローラー用に新しいウィンドウを開き、作業中はそのウィンドウのフォアグラウンドタブとして残しておくことを計画してください。別のウィンドウで作業を続けることができます。クローラーはページのバッチごとに見積もりを更新します。</p>
             </section>
             <section id="reports">
-              <h3>Viewing reports</h3>
+              <h3>レポートの表示</h3>
               <div class="my-4 border shadow" style="background: url(/assets/images/3x-dashboard.png) 86% 0%; padding-top: 28%; background-size: 106%;"></div>
               <ul>
                 <li>
-                  <strong>Recent</strong> allows for exploring by individual alerts. This allows you to do things like filter to find all instances of the same alert type, or see which alerts are appearing frequently in recent content, or which authors still have a habit of making the same mistake.
+                  <strong>最近</strong>では個別のアラートを探索できます。同じアラートタイプのすべてのインスタンスを見つけるフィルタリング、最近のコンテンツで頻繁に表示されているアラートの確認、同じミスをする習慣がある作成者の特定などができます。
                 </li>
                 <li>
-                  <strong>Pages</strong> shows alert counts per page, grouped by page. This allows you to find pages with the most issues, and to filter by page attributes like content type and published status.
+                  <strong>ページ</strong>ではページごとのアラート数をページ別にグループ化して表示します。最も問題が多いページを見つけたり、コンテンツタイプや公開ステータスなどのページ属性でフィルタリングしたりできます。
                 </li>
                 <li>
-                  <strong>Alerts</strong> shows issues by type.
+                  <strong>アラート</strong>では問題をタイプ別に表示します。
                 </li>
                 <li>
-                  <strong>Dismissals</strong> allows for monitoring whether authors are dismissing correctly, and has "reset" buttons to restore dismissed alerts.
+                  <strong>非表示設定</strong>では作成者が正しく非表示にしているかどうかを監視でき、非表示にしたアラートを元に戻す「リセット」ボタンがあります。
                 </li>
                 <li>
-                  <strong>Export</strong> contains versions of the Pages, Alerts and Dismissals reports that can be filtered to prepare CSV downloads. <em>Provided by the CSV Export submodule</em>
+                  <strong>エクスポート</strong>には、CSVダウンロードを準備するためにフィルタリングできる、ページ、アラート、非表示設定レポートのバージョンが含まれています。<em>CSVエクスポートサブモジュールが提供</em>
                 </li>
                 <li>
-                  <strong>Refresh</strong> contains dashboard maintenance tools to drop alerts from deleted pages, drop alerts from parameterized pseudo-pages like /search?query=example, update stored page titles and URLs, and run a manual crawl. <em>Provided by the CSA submodule</em>
+                  <strong>更新</strong>には、削除されたページからアラートを除外したり、/search?query=exampleのようなパラメーター付き疑似ページからアラートを除外したり、保存されたページタイトルとURLを更新したり、手動クロールを実行したりするダッシュボードのメンテナンスツールが含まれています。<em>CSAサブモジュールが提供</em>
                 </li>
               </ul>
             </section>
 
-            <h2 id="positioning">Fix hidden or offscreen tips</h2>
+            <h2 id="positioning">非表示または画面外のヒントを修正する</h2>
 
-            <p>The module provides fields for two of the library's configuration options to change how tips are placed:</p>
+            <p>モジュールはヒントの配置方法を変更するためのライブラリの設定オプション2つのフィールドを提供します：</p>
 
               <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
-                <label for="edit-element-hides-overflow" class="form-item__label">Elements with overflow hidden</label>
+                <label for="edit-element-hides-overflow" class="form-item__label">オーバーフローが非表示の要素</label>
                   <textarea data-drupal-selector="edit-element-hides-overflow" aria-describedby="edit-element-hides-overflow--description" id="edit-element-hides-overflow" name="element_hides_overflow" rows="1" cols="60" class="form-textarea resize-vertical form-element form-element--type-textarea form-element--api-textarea"></textarea>
-                <label for="edit-hidden-handlers" class="form-item__label">Theme JS will handle revealing hidden tooltips inside these containers</label>
+                <label for="edit-hidden-handlers" class="form-item__label">テーマのJSがこれらのコンテナ内の非表示のツールチップを表示する処理を行う</label>
                   <textarea data-drupal-selector="edit-hidden-handlers" aria-describedby="edit-hidden-handlers--description" id="edit-hidden-handlers" name="hidden_handlers" rows="1" cols="60" class="form-textarea resize-vertical form-element form-element--type-textarea form-element--api-textarea"></textarea>
               </div>
-            <p>Some themes have columns or widgets that hide horizontal or vertical overflow. The library automatically detects when a toggle would fall outside the visible part of the <strong>page.</strong> Telling the library that certain containers hide overflow means it will also attempt to position tips for elements in those container inside their borders.</p>
-            <p>Some themes have widgets that toggle the visibility of content, such as accordions, tabs and slideshows. Tips inside these elements will also be hidden. Providing a list of selectors for these widgets means Editoria11y will pause briefly when a user tries to jump to those tips using a next or previous button. Drupal themes and modules can then follow the directions from the library section on <a href="/jp/install/#hidden-content">dealing with tips on hidden content</a> to reveal the hidden content.</p>
+            <p>一部のテーマには、水平または垂直のオーバーフローを非表示にする列やウィジェットがあります。ライブラリはトグルが<strong>ページ</strong>の表示部分の外に落ちる場合を自動的に検出します。特定のコンテナがオーバーフローを非表示にすることをライブラリに伝えると、そのコンテナ内の要素のヒントもコンテナの境界内に配置しようとします。</p>
+            <p>一部のテーマには、アコーディオン、タブ、スライドショーなどのコンテンツの可視性を切り替えるウィジェットがあります。これらの要素内のヒントも非表示になります。これらのウィジェットのセレクターリストを提供すると、ユーザーが次へ・前へボタンを使ってヒントにジャンプしようとしたときにEditoria11yが一時的に停止します。Drupalのテーマとモジュールは、ライブラリセクションの<a href="/jp/install/#hidden-content">非表示コンテンツのヒントへの対応</a>に関する説明に従って非表示コンテンツを表示できます。</p>
 
-            <h2 id="runtime">Write your own config</h2>
-            <p>In PHP: the Drupal module provides a <code>hook_editoria11y_alter_config</code> to change the content of <code>drupalSettings.editoria11y</code> in a module or theme. For example:</p>
+            <h2 id="runtime">独自の設定を記述する</h2>
+            <p>PHPでは：Drupalモジュールはモジュールまたはテーマで<code>drupalSettings.editoria11y</code>の内容を変更するための<code>hook_editoria11y_alter_config</code>を提供します。例：</p>
             <pre class="language-php"><code><!--<?php
 /**
  * @file
@@ -315,7 +315,7 @@ function MY_MODULE_editoria11y_alter_config(array &$attach, CacheableMetadata $c
     $attach['allow_ok'] = 'okAll';
   }
 }--></code></pre>
-            <p>Modifying <code>drupalSettings</code> only helps if the module JS is already set up to pass that value to the library. To add additional parameters, you need to modify the JS <code>options</code> object directly. The module checks for one global JS variable of <code>editoria11yOptionsOverride</code>. If this is set, it will pass the <code>options</code> object to an <code>editoria11yOptions</code> function you have provided in your module or theme. You can now set any of the <a href="https://editorsally.ddev.site/en/install/#params">library parameters</a>.</p>
+            <p><code>drupalSettings</code>の変更は、モジュールのJSがその値をライブラリに渡すように設定されている場合にのみ有効です。追加のパラメーターを加えるには、JSの<code>options</code>オブジェクトを直接変更する必要があります。モジュールは<code>editoria11yOptionsOverride</code>というグローバルJS変数を1つチェックします。これが設定されている場合、モジュールまたはテーマで提供した<code>editoria11yOptions</code>関数に<code>options</code>オブジェクトを渡します。これで<a href="https://editorsally.ddev.site/en/install/#params">ライブラリのパラメーター</a>をすべて設定できます。</p>
             <pre class="language-javascript"><code><!--var editoria11yOptionsOverride = true;
 var editoria11yOptions = function(options) {
   // You now have access to the processed options object that will be passed to the library.
@@ -334,11 +334,10 @@ var editoria11yOptions = function(options) {
 }
 --></code></pre>
             <section id="custom-tests">
-            <h2>Write your own tests</h2>
-            <p>First, in the module config, add 1 to the "Custom tests" options so it knows to
-              watch for the tests.</p>
-            <p>Then create a Drupal JS library with your tests in your theme or module, using the <a href="/jp/install/#custom-tests">library guide to writing custom tests</a>.</p>
-            <p>Here's a working example from Princeton, of a custom test to alert on Safe Links. Note that it accesses the Editoria11y class through <code>Drupal.Ed11y.</code></p>
+            <h2>独自のテストを記述する</h2>
+            <p>まず、モジュールの設定で「カスタムテスト」オプションに1を追加し、テストを監視するよう設定します。</p>
+            <p>次に、<a href="/jp/install/#custom-tests">カスタムテストの記述に関するライブラリガイド</a>を使用して、テーマまたはモジュールにテストを含むDrupal JSライブラリを作成します。</p>
+            <p>以下はPrincetonによるSafe Linksに関するアラートを出すカスタムテストの実際の動作例です。<code>Drupal.Ed11y.</code>を通じてEditoria11yクラスにアクセスしていることに注意してください。</p>
             <pre class="language-javascript"><code><!--const psEd11yCustomTests = function() {
 
   // 1.

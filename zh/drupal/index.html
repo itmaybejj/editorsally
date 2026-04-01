@@ -46,142 +46,142 @@
         </div>
         <div class="col-12 col-md-7 col-lg-8 pt-3">
           <div data-bs-spy="scroll" data-bs-target="#on-this-page" data-bs-smooth-scroll="true">
-            <h1>Drupal module</h1>
+            <h1>Drupal 模块</h1>
             <section id="features">
-              <h2 class="pt-3">Features</h2>
+              <h2 class="pt-3">功能特性</h2>
 
               <figure class="figure my-4 rounded shadow border">
-                <img loading="lazy" src="/assets/images/3x-editing.png" class="figure-img img-fluid" height="1088" width="2237" alt="Drupal editor with inline tips"/>
-                <figcaption class="figure-caption p-3 pt-2 fs-6">Issues are detected both on-load the frontend and as-you-type in CKEditor and Gutenberg.</figcaption>
+                <img loading="lazy" src="/assets/images/3x-editing.png" class="figure-img img-fluid" height="1088" width="2237" alt="Drupal 编辑器显示内联提示"/>
+                <figcaption class="figure-caption p-3 pt-2 fs-6">问题会在前端页面加载时以及在 CKEditor 和 Gutenberg 中输入内容时实时检测。</figcaption>
               </figure>
 
               <figure class="figure my-4 rounded shadow border" style="max-width: 600px;">
-                <img loading="lazy" src="/assets/images/3x-generic-tip.png" class="figure-img img-fluid" height="798" width="1278" alt="Tip indicated a link is only named click here."/>
-                <figcaption class="figure-caption p-3 pt-2 ps-5 fs-6">Tooltips describe the issue, with buttons to jump into the page or layout editor, to ignore this alert (for the active user) or mark it OK (for all users). Depending on context and permissions, some alerts may also show a "Similar Alerts" menu, with options to mark multiple alerts on the same page as OK, or mark the same element on all pages as OK.</figcaption>
+                <img loading="lazy" src="/assets/images/3x-generic-tip.png" class="figure-img img-fluid" height="798" width="1278" alt="提示指出某链接仅被命名为"点击此处"。"/>
+                <figcaption class="figure-caption p-3 pt-2 ps-5 fs-6">工具提示会描述问题，并提供按钮以跳转至页面或布局编辑器、忽略当前提示（仅对当前用户有效）或将其标记为无误（对所有用户有效）。根据上下文和权限，部分提示还可能显示"相似提示"菜单，支持将同一页面上的多个提示批量标记为无误，或将所有页面上的相同元素标记为无误。</figcaption>
               </figure>
 
               <figure class="figure my-4 rounded shadow mb-5 border">
-                <img loading="lazy" class="figure-img img-fluid" src="/assets/images/3x-dashboard.png" height="765" width="1600" alt="Reporting dashboard showing recent issues and pages with the most issues." />
-                <figcaption class="figure-caption p-3 pt-2 fs-6">A site-wide reporting dashboard provides filterable and exportable reports of alerts and dismissals.</figcaption>
+                <img loading="lazy" class="figure-img img-fluid" src="/assets/images/3x-dashboard.png" height="765" width="1600" alt="报告仪表板，显示最近的问题及问题最多的页面。" />
+                <figcaption class="figure-caption p-3 pt-2 fs-6">全站报告仪表板提供可筛选、可导出的提示与忽略记录报告。</figcaption>
               </figure>
 
-              <p>As well as:</p>
+              <p>此外还包括：</p>
               <ul>
-                <li>Starter configuration that automatically ignores Drupal, CKeditor, Gutenberg, Link Purpose and External Link elements, reacts to changes when editing in modal containers, and automatically positions the toolbar to avoid overlapping with Klaro and Same Page Preview elements.</li>
-                <li>Role-based configuration for which users will see the checker, which users can dismiss alerts, and which users can view site-wide reports.</li>
-                <li>An in-site (local) crawler to refresh the dashboard after major theming changes. <em>(CSA only)</em></li>
-                <li>Author/developer split configuration with separate tests (~30/~80) and issue lists. <em>(CSA only)</em></li>
+                <li>开箱即用的初始配置，自动忽略 Drupal、CKEditor、Gutenberg、链接目的与外部链接等元素，在模态容器中编辑时响应内容变化，并自动调整工具栏位置以避免与 Klaro 和同页预览元素重叠。</li>
+                <li>基于角色的配置，控制哪些用户可以看到检查器、哪些用户可以忽略提示，以及哪些用户可以查看全站报告。</li>
+                <li>站内（本地）爬虫，用于在主题发生重大变更后刷新仪表板。<em>（仅限 CSA）</em></li>
+                <li>作者/开发者分离配置，含独立的测试集（约 30 条/约 80 条）和问题列表。<em>（仅限 CSA）</em></li>
               </ul>
 
 
 
             </section>
-            <h2>Installation and key setup steps</h2>
-            <p>The <a href="https://www.drupal.org/project/editoria11y/">bundled installer</a> at Drupal.org includes several modules:</p>
+            <h2>安装与关键配置步骤</h2>
+            <p>Drupal.org 上的<a href="https://www.drupal.org/project/editoria11y/">捆绑安装包</a>包含以下几个模块：</p>
             <ul>
               <li>
-                Editoria11y: the core content checker and dashboard.
+                Editoria11y：核心内容检查器与仪表板。
               </li>
               <li>
-                Editoria11y CSA: developer tests and dashboard maintenance tools.
+                Editoria11y CSA：开发者测试与仪表板维护工具。
               </li>
               <li>
-                Editoria11y Export: CSV reporting tools.
+                Editoria11y Export：CSV 报告工具。
               </li>
             </ul>
-            <p>Install like any other module, and then take these key steps:</p>
+            <p>像安装其他模块一样完成安装，然后执行以下关键步骤：</p>
             <ol>
-              <li><strong>Check permissions.</strong> Trusted authors should have "Mark OK," "Mark as Ignored" and "View the dashboard."</li>
-              <li><strong>Check key pages for repetitive or unhelpful alerts.</strong> Either mark them as OK in the tooltip, or adjust the configuration to ignore elements by selector.</li>
-              <li>Look for tips that are hard to see – offscreen, truncated, behind other elements, or on hidden elements. Use the tips in "Fix tip positioning" below to fix.</li>
-              <li>If the site already has content, and you have a CSA subscription, visit the dashboard "recheck" tab, and <strong>crawl the site</strong> to pre-load the site reports. This is optional, but older pages will not appear in reports until they are crawled or visited by a logged in user.</li>
+              <li><strong>检查权限。</strong>受信任的作者应拥有"标记为无误"、"标记为已忽略"和"查看仪表板"权限。</li>
+              <li><strong>检查关键页面，排查重复或无用的提示。</strong>可在工具提示中将其标记为无误，或通过调整配置按选择器忽略相关元素。</li>
+              <li>寻找难以看到的提示——例如超出屏幕、被截断、位于其他元素之后或处于隐藏元素中的提示。请参考下方"修复提示定位"中的建议进行修复。</li>
+              <li>如果站点已有内容，且您拥有 CSA 订阅，请访问仪表板的"重新检查"标签页，<strong>爬取整个站点</strong>以预先加载站点报告。此步骤为可选，但较旧的页面在被爬取或被已登录用户访问之前不会显示在报告中。</li>
             </ol>
-            <p>View a <a href="https://youtu.be/uYvNYPg38nU?si=dqADyWpTtOhniHTP&t=696">video introduction to the configuration options</a> (v2.4).</p>
+            <p>观看<a href="https://youtu.be/uYvNYPg38nU?si=dqADyWpTtOhniHTP&t=696">配置选项视频介绍</a>（v2.4）。</p>
 
-            <h2 id="check-roots">Hide unhelpful alerts</h2>
+            <h2 id="check-roots">隐藏无用提示</h2>
             <p>
-              <strong>Good configurations suppress unhelpful alerts, so content authors can focus on issues they should fix</strong>.</p>
-            <p>While you can turn off tests altogether, it is usually better to hide alerts on specific elements or pages.</p>
+              <strong>良好的配置能屏蔽无用提示，让内容作者专注于真正需要修复的问题</strong>。</p>
+            <p>虽然可以完全关闭某些测试，但通常更好的做法是针对特定元素或页面隐藏提示。</p>
             <hr>
             <p>
-              During each test run, Editoria11y gathers a single set of elements from the "Check content in these containers" setting, and then filters it several times. This is what a test run looks like:
+              每次测试运行时，Editoria11y 会从"检查这些容器中的内容"设置中获取一组元素，并对其进行多次过滤。测试运行的流程如下：
             </p>
             <ol>
               <li>
-                Cancel checking if configuration prevents checking on this page or for this user.
+                若配置阻止在当前页面或对当前用户进行检查，则取消检查。
               </li>
               <li>
-                <strong>Gather</strong> elements in specified page regions, e.g.:<br><code>body > *:not('.ed11y-element')</code><br>
-                <em>For Editoria11y CSA users, these are the regions on the <strong>Developer tests</strong> tab.</em>
+                <strong>收集</strong>指定页面区域中的元素，例如：<br><code>body > *:not('.ed11y-element')</code><br>
+                <em>对于 Editoria11y CSA 用户，这些区域显示在<strong>开发者测试</strong>标签页中。</em>
               </li>
               <li>
-                <strong>Drop</strong> elements that match ignore selectors, e.g.:<br><code>.widgets, .utility-menu</code><br>
-                <em>For Editoria11y CSA users, these are the selectors on the <strong>Developer tests</strong> tab.</em>
+                <strong>排除</strong>匹配忽略选择器的元素，例如：<br><code>.widgets, .utility-menu</code><br>
+                <em>对于 Editoria11y CSA 用户，这些选择器显示在<strong>开发者测试</strong>标签页中。</em>
               </li>
               <li>
-                Run tests and sync results to the dashboard.
+                运行测试并将结果同步至仪表板。
               </li>
               <li>
-                If split configuration is active and the user is a content editor, filter developer results:
+                若已启用分离配置且当前用户是内容编辑，则过滤开发者结果：
                 <ul>
-                  <li><strong>Drop</strong> results from tests set to "Developer only."</li>
-                  <li><strong>Drop</strong> results on elements from outside specified <strong><em>content</em></strong> regions, e.g.:<br><code>main, footer</code></li>
-                  <li><strong>Drop</strong> results on elements that match <strong><em>content</em></strong> ignore selectors.</li>
+                  <li><strong>排除</strong>设置为"仅开发者"的测试结果。</li>
+                  <li><strong>排除</strong>指定<strong><em>内容</em></strong>区域之外的元素结果，例如：<br><code>main, footer</code></li>
+                  <li><strong>排除</strong>匹配<strong><em>内容</em></strong>忽略选择器的元素结果。</li>
                 </ul>
-                Note that there is not a second "gather" phase. The developer page regions must include the content regions.
+                请注意，不存在第二个"收集"阶段。开发者页面区域必须包含内容区域。
               </li>
-              <li>Open the panel and draw alerts if configuration matches an auto-open setting.</li>
+              <li>若配置匹配自动展开设置，则打开面板并显示提示。</li>
             </ol>
 
-            <h3 id="dismiss">Dismiss alerts</h3>
-            <p>Tests can be configured in the library as errors or warnings ("manual checks"). Warnings can be dismissed. There are two types of dismissals available from the footer of each tooltip:</p>
+            <h3 id="dismiss">忽略提示</h3>
+            <p>测试可在库中配置为错误或警告（"手动检查"）。警告可被忽略。每个工具提示底部提供两种忽略方式：</p>
             <div class="my-2" style="background: url(/assets/images/3x-generic-tip.png) 100% 98%; max-width: 600px; padding-top: 6%; background-size: 108%;"></div>
             <ul>
-              <li>"Ignore" is stored as a user preference: the alert is now hidden for the current user, but only the current user.</li>
-              <li>"Mark OK" hides the alert for all users.</li>
+              <li>"忽略"作为用户偏好保存：该提示现在仅对当前用户隐藏，不影响其他用户。</li>
+              <li>"标记为无误"将对所有用户隐藏该提示。</li>
             </ul>
-            <p>Whether a user is able to dismiss an alert is controlled at the role level in Drupal's user permissions. <strong>Most authors should be allowed to dismiss alerts</strong>. There is no point in assigning someone a manual check if they cannot mark the item as having been checked.</p>
+            <p>用户是否能忽略提示，由 Drupal 用户权限中的角色级别控制。<strong>大多数作者应被允许忽略提示</strong>。如果用户无法将某项标记为已检查，那么为其分配手动检查任务便毫无意义。</p>
 
-            <h3 id="roots">Ignore elements</h3>
-            <p>These two configuration settings are the most important!</p>
+            <h3 id="roots">忽略元素</h3>
+            <p>以下两项配置设置最为重要！</p>
             <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
-              <label for="edit-content-root">Check content in these containers</label>
+              <label for="edit-content-root">检查这些容器中的内容</label>
               <div><textarea id="edit-content-root" name="content_root" rows="1" cols="30" disabled></textarea>
               </div>
               <div class="mt-3">
-                <label for="edit-ignore-elements">Skip over these elements</label>
+                <label for="edit-ignore-elements">跳过这些元素</label>
                 <div>
                   <textarea id="edit-ignore-elements" disabled name="ignore_elements" rows="1" cols="30" class=""></textarea>
                 </div>
               </div>
             </div>
             <p>
-              Set the first to include any parts of the page content authors can edit. E.g., if they can edit the <code>main</code> content area, <code>.sidebar</code> and <code>.footer-column-two</code>, set those selectors as your content check area.
+              第一项应包含内容作者可编辑的所有页面区域。例如，若作者可编辑 <code>main</code> 内容区、<code>.sidebar</code> 和 <code>.footer-column-two</code>，则将这些选择器设置为内容检查区域。
             </p>
             <p>
-              Use the second to "knock out" subsections. E.g., if <code>main</code> contains various widgets and embeds that only developers can modify, list those: <code>.widget-1, .social-embed</code>;
+              第二项用于"屏蔽"子区域。例如，若 <code>main</code> 包含仅开发者可修改的各种小部件和嵌入内容，则在此列出：<code>.widget-1, .social-embed</code>。
             </p>
-            <p>If you are using the split configuration, you will see a similar pair of settings on the Developer Tests tab:</p>
+            <p>如果您使用分离配置，则会在"开发者测试"标签页看到一对类似的设置：</p>
             <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
               <div>
                 <fieldset>
                 <legend>
-                  Developer check area
+                  开发者检查区域
                 </legend>
                 <div class="fieldset__wrapper fieldset__wrapper--group">
 
                   <div id="edit-dev-check-root">
                     <div>
                     <input aria-describedby="edit-dev-check-root--description" type="radio" id="edit-dev-check-root-automatic" name="dev_check_root" value="automatic" checked="checked">
-                    <label for="edit-dev-check-root-automatic" class="form-item__label option">All elements</label>
+                    <label for="edit-dev-check-root-automatic" class="form-item__label option">所有元素</label>
                   </div>
                     <div class="d-flex">
                       <input aria-describedby="edit-dev-check-root--description" type="radio" id="edit-dev-check-root-match" name="dev_check_root" value="match" class="align-self-baseline mt-1 me-1">
-                      <label for="edit-dev-check-root-match" class="form-item__label option">Only the containers listed in the Content Setting tab</label>
+                      <label for="edit-dev-check-root-match" class="form-item__label option">仅"内容设置"标签页中列出的容器</label>
                     </div>
                     <div class="">
                       <input aria-describedby="edit-dev-check-root--description" type="radio" id="edit-dev-check-root-specify" name="dev_check_root" value="specify" class="form-radio form-boolean form-boolean--type-radio">
-                      <label for="edit-dev-check-root-specify" class="">The specific containers listed below</label>
+                      <label for="edit-dev-check-root-specify" class="">下方指定的特定容器</label>
                     </div>
                   </div>
 
@@ -189,7 +189,7 @@
               </fieldset>
 
                 <div class="">
-                  <label for="edit-always-ignore" class="mt-3">Ignore for both developers and content editors</label>
+                  <label for="edit-always-ignore" class="mt-3">对开发者和内容编辑均忽略</label>
                   <div class="form-textarea-wrapper">
                     <textarea  id="edit-always-ignore" name="always_ignore" rows="1" cols="20" placeholder=""></textarea>
                   </div>
@@ -198,99 +198,99 @@
               </div>
 
             </div>
-            <p>The key thing to know about the developer check areas is that they are <strong>not independent</strong> of the content check areas. In a split configuration, the developer areas are checked, and then those results are <strong>filtered</strong> to match the content areas. Any areas that are excluded for developers will also be excluded for content editors. Do not exclude editable content areas!</p>
+            <p>关于开发者检查区域，有一点至关重要：它们与内容检查区域<strong>并非相互独立</strong>。在分离配置中，开发者区域会被检查，随后其结果会被<strong>过滤</strong>以匹配内容区域。对开发者排除的区域同样会对内容编辑排除。请勿排除可编辑的内容区域！</p>
 
-            <p>Some tests allow for more precise configuration, to only hide certain alerts on affected elements. Look for them under:</p>
+            <p>部分测试支持更精细的配置，可仅对受影响的元素隐藏特定提示。相关选项位于：</p>
             <ul>
-              <li>Content tests: Links to check</li>
-              <li>Content tests: Embeds to check</li>
-              <li>Content tests: Detecting dynamic and shadow content</li>
-              <li>Developer tests: Contrast</li>
+              <li>内容测试：要检查的链接</li>
+              <li>内容测试：要检查的嵌入内容</li>
+              <li>内容测试：检测动态内容与 Shadow DOM 内容</li>
+              <li>开发者测试：对比度</li>
             </ul>
 
-            <h3 id="pages">Hide for specific pages or users</h3>
+            <h3 id="pages">针对特定页面或用户隐藏</h3>
             <p>
-              The easiest way to do this is by passing CSS classes or IDs to these options:
+              最简便的方法是将 CSS 类或 ID 传递给以下选项：
             </p>
             <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
-              <label for="edit-no-load" class="form-item__label">Do not check on pages with these elements</label>
+              <label for="edit-no-load" class="form-item__label">不在含有这些元素的页面上执行检查</label>
               <div class="form-textarea-wrapper">
                 <textarea data-drupal-selector="edit-no-load" aria-describedby="edit-no-load--description" id="edit-no-load" name="no_load" rows="1" cols="20" class="form-textarea resize-vertical form-element form-element--type-textarea form-element--api-textarea"></textarea>
               </div>
 
-              <label for="edit-ignore-all-if-absent" class="form-item__label">Hide all alerts on pages where these elements are not present</label>
+              <label for="edit-ignore-all-if-absent" class="form-item__label">在不含这些元素的页面上隐藏所有提示</label>
               <div class="form-textarea-wrapper">
                 <textarea data-drupal-selector="edit-ignore-all-if-absent" aria-describedby="edit-ignore-all-if-absent--description" id="edit-ignore-all-if-absent" name="ignore_all_if_absent" rows="1" cols="20" class="form-textarea resize-vertical form-element form-element--type-textarea form-element--api-textarea"></textarea>
               </div>
 
             </div>
             <p>
-              The first will prevent checks from running, and the toolbar will not show.
+              第一项将阻止检查运行，工具栏也不会显示。
             </p>
             <p>
-              The second will start the checker minimized, and auto-mark (for the current user) all issues as "Ignored," even if they are errors. This allows the tests to run and update the dashboard without bothering the user.
+              第二项将以最小化状态启动检查器，并自动将所有问题（包括错误）对当前用户标记为"已忽略"。这样测试仍可运行并更新仪表板，而不会打扰用户。
             </p>
             <p>
-              If you want to use these to control which users see the checker, you may need to adjust your theme to output a class, e.g. <code>.user-247</code>
+              若要通过这些设置控制哪些用户可以看到检查器，您可能需要调整主题以输出特定的 CSS 类，例如 <code>.user-247</code>。
             </p>
 
-            <h2 id="dashboard">Manage site-wide results</h2>
+            <h2 id="dashboard">管理全站结果</h2>
             <section id="refresh">
-              <h3 class="pt-3">Crawling and updating results</h3>
-              <p>Editoria11y is a <strong>real-time monitoring tool, not a crawler</strong>. Its site-wide reports update when authors view pages, so regular crawling is not generally needed. The CSA module <em>does</em> include a crawler, but it should only be needed in these three situations:</p>
+              <h3 class="pt-3">爬取与更新结果</h3>
+              <p>Editoria11y 是一个<strong>实时监控工具，而非爬虫</strong>。其全站报告在作者浏览页面时更新，因此通常无需定期爬取。CSA 模块<em>确实</em>包含一个爬虫，但仅在以下三种情况下才需要使用：</p>
               <ol>
                 <li>
-                  When first installing Editoria11y on an existing site with many pages. Pages need to be visited before they will appear on the dashboard, so a quick initial crawl saves time.
+                  在现有多页面站点上首次安装 Editoria11y 时。页面需要被访问后才会出现在仪表板中，因此进行一次初始爬取可节省时间。
                 </li>
                 <li>
-                  Major updates to themes or modules may fix (or cause) issues on many pages that will not appear until visited or crawled..
+                  主题或模块的重大更新可能会修复（或引入）许多页面上的问题，这些变化在页面被访问或爬取之前不会反映出来。
                 </li>
                 <li>
-                  Bulk actions in the admin interface like deleting pages or redirects tend to leave behind results from pages that no longer exist or have moved. In these cases it helps to use the "Refresh" tab's maintenance actions to refresh page URLs, and detect and drop deleted pages.
+                  在管理界面批量删除页面或重定向等操作往往会留下已不存在或已移动页面的残留结果。此时，使用"刷新"标签页中的维护功能来刷新页面 URL、检测并清除已删除页面会很有帮助。
                 </li>
               </ol>
-              <p>No data leaves your site during a crawl. The CSA crawler is not a cloud tool; it uses your browser to load and check the pages on your own site. The downside of this approach is that <strong>browsers pause background tabs</strong>. You will need to keep your computer on and awake during a crawl. Plan to open a new window for the crawler and leave it as the foreground tab for that window as it works. You can continue working in another window. The crawler will update its estimate after each batch of pages.</p>
+              <p>爬取过程中不会有任何数据离开您的站点。CSA 爬虫并非云端工具；它使用您的浏览器加载并检查您自己站点上的页面。这种方式的不足之处在于<strong>浏览器会暂停后台标签页</strong>。爬取期间需要保持电脑开启且不进入休眠。建议为爬虫单独开一个窗口，并在爬取过程中将其保持为该窗口的前台标签页。您可以在另一个窗口中继续工作。爬虫将在每批页面处理完成后更新进度估算。</p>
             </section>
             <section id="reports">
-              <h3>Viewing reports</h3>
+              <h3>查看报告</h3>
               <div class="my-4 border shadow" style="background: url(/assets/images/3x-dashboard.png) 86% 0%; padding-top: 28%; background-size: 106%;"></div>
               <ul>
                 <li>
-                  <strong>Recent</strong> allows for exploring by individual alerts. This allows you to do things like filter to find all instances of the same alert type, or see which alerts are appearing frequently in recent content, or which authors still have a habit of making the same mistake.
+                  <strong>最近</strong>支持按单条提示浏览，可用于筛选同一类型提示的所有实例、查看近期内容中频繁出现的提示，或了解哪些作者仍在重复同类错误。
                 </li>
                 <li>
-                  <strong>Pages</strong> shows alert counts per page, grouped by page. This allows you to find pages with the most issues, and to filter by page attributes like content type and published status.
+                  <strong>页面</strong>按页面显示提示数量，并按页面分组，便于找出问题最多的页面，也可按内容类型和发布状态等页面属性进行筛选。
                 </li>
                 <li>
-                  <strong>Alerts</strong> shows issues by type.
+                  <strong>提示</strong>按类型显示问题。
                 </li>
                 <li>
-                  <strong>Dismissals</strong> allows for monitoring whether authors are dismissing correctly, and has "reset" buttons to restore dismissed alerts.
+                  <strong>忽略记录</strong>支持监控作者的忽略操作是否得当，并提供"重置"按钮以恢复已忽略的提示。
                 </li>
                 <li>
-                  <strong>Export</strong> contains versions of the Pages, Alerts and Dismissals reports that can be filtered to prepare CSV downloads. <em>Provided by the CSV Export submodule</em>
+                  <strong>导出</strong>包含可筛选的页面、提示与忽略记录报告版本，可准备 CSV 下载。<em>由 CSV Export 子模块提供</em>
                 </li>
                 <li>
-                  <strong>Refresh</strong> contains dashboard maintenance tools to drop alerts from deleted pages, drop alerts from parameterized pseudo-pages like /search?query=example, update stored page titles and URLs, and run a manual crawl. <em>Provided by the CSA submodule</em>
+                  <strong>刷新</strong>包含仪表板维护工具，可清除已删除页面的提示、清除 /search?query=example 等参数化伪页面的提示、更新已存储的页面标题和 URL，以及运行手动爬取。<em>由 CSA 子模块提供</em>
                 </li>
               </ul>
             </section>
 
-            <h2 id="positioning">Fix hidden or offscreen tips</h2>
+            <h2 id="positioning">修复隐藏或超出屏幕的提示</h2>
 
-            <p>The module provides fields for two of the library's configuration options to change how tips are placed:</p>
+            <p>该模块为库的两个配置选项提供了字段，用于调整提示的定位方式：</p>
 
               <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
-                <label for="edit-element-hides-overflow" class="form-item__label">Elements with overflow hidden</label>
+                <label for="edit-element-hides-overflow" class="form-item__label">隐藏溢出内容的元素</label>
                   <textarea data-drupal-selector="edit-element-hides-overflow" aria-describedby="edit-element-hides-overflow--description" id="edit-element-hides-overflow" name="element_hides_overflow" rows="1" cols="60" class="form-textarea resize-vertical form-element form-element--type-textarea form-element--api-textarea"></textarea>
-                <label for="edit-hidden-handlers" class="form-item__label">Theme JS will handle revealing hidden tooltips inside these containers</label>
+                <label for="edit-hidden-handlers" class="form-item__label">主题 JS 将负责在这些容器中显示被隐藏的工具提示</label>
                   <textarea data-drupal-selector="edit-hidden-handlers" aria-describedby="edit-hidden-handlers--description" id="edit-hidden-handlers" name="hidden_handlers" rows="1" cols="60" class="form-textarea resize-vertical form-element form-element--type-textarea form-element--api-textarea"></textarea>
               </div>
-            <p>Some themes have columns or widgets that hide horizontal or vertical overflow. The library automatically detects when a toggle would fall outside the visible part of the <strong>page.</strong> Telling the library that certain containers hide overflow means it will also attempt to position tips for elements in those container inside their borders.</p>
-            <p>Some themes have widgets that toggle the visibility of content, such as accordions, tabs and slideshows. Tips inside these elements will also be hidden. Providing a list of selectors for these widgets means Editoria11y will pause briefly when a user tries to jump to those tips using a next or previous button. Drupal themes and modules can then follow the directions from the library section on <a href="/zh/install/#hidden-content">dealing with tips on hidden content</a> to reveal the hidden content.</p>
+            <p>部分主题的列或小部件会隐藏水平或垂直方向的溢出内容。库会自动检测切换按钮是否会超出<strong>页面</strong>的可见区域。告知库哪些容器会隐藏溢出内容，库便会尝试将这些容器内元素的提示定位在容器边框范围之内。</p>
+            <p>部分主题包含可切换内容可见性的小部件，如手风琴、标签页和幻灯片。位于这些元素内部的提示也会被隐藏。为这些小部件提供选择器列表后，当用户尝试使用"前一个"或"后一个"按钮跳转到这些提示时，Editoria11y 会短暂暂停。Drupal 主题和模块随后可参照库中关于<a href="/zh/install/#hidden-content">处理隐藏内容中的提示</a>的说明来显示隐藏的内容。</p>
 
-            <h2 id="runtime">Write your own config</h2>
-            <p>In PHP: the Drupal module provides a <code>hook_editoria11y_alter_config</code> to change the content of <code>drupalSettings.editoria11y</code> in a module or theme. For example:</p>
+            <h2 id="runtime">编写自定义配置</h2>
+            <p>在 PHP 中：Drupal 模块提供了 <code>hook_editoria11y_alter_config</code>，可在模块或主题中修改 <code>drupalSettings.editoria11y</code> 的内容。例如：</p>
             <pre class="language-php"><code><!--<?php
 /**
  * @file
@@ -315,7 +315,7 @@ function MY_MODULE_editoria11y_alter_config(array &$attach, CacheableMetadata $c
     $attach['allow_ok'] = 'okAll';
   }
 }--></code></pre>
-            <p>Modifying <code>drupalSettings</code> only helps if the module JS is already set up to pass that value to the library. To add additional parameters, you need to modify the JS <code>options</code> object directly. The module checks for one global JS variable of <code>editoria11yOptionsOverride</code>. If this is set, it will pass the <code>options</code> object to an <code>editoria11yOptions</code> function you have provided in your module or theme. You can now set any of the <a href="https://editorsally.ddev.site/en/install/#params">library parameters</a>.</p>
+            <p>修改 <code>drupalSettings</code> 仅在模块 JavaScript 已配置好将该值传递给库的情况下才有效。若要添加额外参数，需要直接修改 JavaScript 的 <code>options</code> 对象。该模块会检测一个名为 <code>editoria11yOptionsOverride</code> 的全局 JavaScript 变量。若该变量已设置，模块将把 <code>options</code> 对象传递给您在模块或主题中提供的 <code>editoria11yOptions</code> 函数。届时即可设置任意<a href="https://editorsally.ddev.site/en/install/#params">库参数</a>。</p>
             <pre class="language-javascript"><code><!--var editoria11yOptionsOverride = true;
 var editoria11yOptions = function(options) {
   // You now have access to the processed options object that will be passed to the library.
@@ -334,11 +334,10 @@ var editoria11yOptions = function(options) {
 }
 --></code></pre>
             <section id="custom-tests">
-            <h2>Write your own tests</h2>
-            <p>First, in the module config, add 1 to the "Custom tests" options so it knows to
-              watch for the tests.</p>
-            <p>Then create a Drupal JS library with your tests in your theme or module, using the <a href="/zh/install/#custom-tests">library guide to writing custom tests</a>.</p>
-            <p>Here's a working example from Princeton, of a custom test to alert on Safe Links. Note that it accesses the Editoria11y class through <code>Drupal.Ed11y.</code></p>
+            <h2>编写自定义测试</h2>
+            <p>首先，在模块配置中将"自定义测试"选项设为 1，以便模块知道要监听这些测试。</p>
+            <p>然后在您的主题或模块中创建一个包含自定义测试的 Drupal JavaScript 库，参考<a href="/zh/install/#custom-tests">编写自定义测试的库指南</a>。</p>
+            <p>以下是普林斯顿大学提供的一个实际示例，用于对 Safe Links 发出警告的自定义测试。请注意，它通过 <code>Drupal.Ed11y.</code> 访问 Editoria11y 类。</p>
             <pre class="language-javascript"><code><!--const psEd11yCustomTests = function() {
 
   // 1.

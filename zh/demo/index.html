@@ -8,7 +8,7 @@
     <link rel="shortcut icon" href="/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <meta charset="utf-8" />
-    <title>Add-ons — Editoria11y</title>
+    <title>演示 — Editoria11y</title>
     <link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
     <link href="/assets/theme.css" rel="stylesheet" />
     <meta name="theme-color" content="#712cf9" />
@@ -44,111 +44,111 @@
         </div>
       </div>
       <div class="col-12 col-md-7 col-lg-8 pt-3" data-bs-spy="scroll" data-bs-target="#on-this-page" data-bs-smooth-scroll="true" tabindex="0">
-        
-        
 
-        <h2 class="pt-4" id="demo">Demo</h2>
-          <p class="fs-5">View a <a href="https://youtu.be/uYvNYPg38nU?si=6YANYrJpVzNAJYDl&t=260">video introduction to the checker's history and features</a>,
-            or try editing the demo content below, opening and dismissing alerts, 
-            and using the toolbar <span style="text-wrap: nowrap;">(<img src="/assets/images/3x-toolbar" class="inline-block" style="width: 5rem; height: auto;" alt="Screenshot of the Editoria11y toolbar, showing 4 errors." width="97" height="50" loading="lazy">)</span> to view the heading outline. This demo includes both the core tests and the CSA suite.</p>
-          <p class="fs-5 mb-5 pb-5">This demo uses a TinyMCE editor. Editoria11y is compatible with most text editors, and has turnkey implementations for CKEditor and Gutenberg in WordPress and Drupal.</p>
+
+
+        <h2 class="pt-4" id="demo">演示</h2>
+          <p class="fs-5">观看<a href="https://youtu.be/uYvNYPg38nU?si=6YANYrJpVzNAJYDl&t=260">检查器历史与功能的视频介绍</a>，
+            或尝试编辑下方的演示内容、打开并关闭提示，
+            并使用工具栏 <span style="text-wrap: nowrap;">(<img src="/assets/images/3x-toolbar" class="inline-block" style="width: 5rem; height: auto;" alt="Editoria11y 工具栏截图，显示 4 个错误。" width="97" height="50" loading="lazy">)</span> 查看标题大纲。本演示包含核心测试和 CSA 套件。</p>
+          <p class="fs-5 mb-5 pb-5">本演示使用 TinyMCE 编辑器。Editoria11y 兼容大多数文本编辑器，并为 WordPress 和 Drupal 中的 CKEditor 和 Gutenberg 提供开箱即用的集成方案。</p>
             <div id="ed11y-demo" class="p-5" contenteditable="">
             <section id="headings">
 
-              <h3 class="pt-1">Headings</h3>
+              <h3 class="pt-1">标题</h3>
 
-              <p>This heading skipped a level:</p>
-              <div class="positive"><h6 id="this-h6-should-have-been-an-h3">Oops</h6></div>
+              <p>此标题跳过了一个层级：</p>
+              <div class="positive"><h6 id="this-h6-should-have-been-an-h3">哎呀</h6></div>
 
-              <p>This heading has no text at all:</p>
+              <p>此标题完全没有文字：</p>
               <div class="positive"><h4 class="empty-example"> </h4>
               </div>
 
-              <p>This short blockquote might be heading:</p>
-              <div class="positive"><blockquote>I'm a fake heading</blockquote></div>
+              <p>这个简短的块引用可能是标题：</p>
+              <div class="positive"><blockquote>我是伪标题</blockquote></div>
 
-              <p>This all-bold paragraph might be a heading:</p>
-              <p class="positive"><strong>I am a fake heading</strong></p>
+              <p>这个全粗体段落可能是标题：</p>
+              <p class="positive"><strong>我是伪标题</strong></p>
 
-              <p>This heading is really long:</p>
-              <div class="positive"><h4>Headings and subheadings create a navigable table of contents for assistive devices. The numbers indicate indents in a nesting relationship. Very long headings probably mean the author is saying too much in the heading.</h4></div>
+              <p>此标题非常长：</p>
+              <div class="positive"><h4>标题和子标题为辅助技术创建可导航的目录。数字表示嵌套关系中的缩进层级。标题过长可能意味着作者在标题中表达了过多内容。</h4></div>
 
             </section>
 
 
             <section id="text-alternatives">
-              <h3 data-section="text-alternatives">Text alternatives for images</h3>
+              <h3 data-section="text-alternatives">图像的文字替代</h3>
 
-              <p>This heading is made of an image of text with no alt:</p>
+              <p>此标题由一张没有替代文字的文字图像构成：</p>
               <div class="positive">
                 <h4><img loading="lazy" alt="" src="/assets/images/px20240813sm.jpg" ></h4>
               </div>
 
-              <p>Image with no alt attribute at all:</p>
+              <p>完全没有 alt 属性的图像：</p>
               <p class="positive"><img loading="lazy" src="/assets/images/px20240813sm.jpg"></p>
 
-              <p>Image with an invalid alt attribute, e.g., <code class="language-plaintext highlighter-rouge">alt="'"</code></p>
+              <p>具有无效 alt 属性的图像，例如 <code class="language-plaintext highlighter-rouge">alt="'"</code></p>
 
               <p class="positive"><img loading="lazy" alt="'" src="/assets/images/px20240813sm.jpg"></p>
 
-              <p id="image-with-a-filename-as-an-alt">Image with a filename as an alt</p>
+              <p id="image-with-a-filename-as-an-alt">以文件名作为 alt 的图像</p>
 
               <p class="positive"><img loading="lazy" alt="filename.jpg" src="/assets/images/px20240813sm.jpg"></p>
 
-              <p id="image-with-redundant-text-in-its-alt">Image with redundant text in its alt, such as “image of:”</p>
+              <p id="image-with-redundant-text-in-its-alt">alt 中含有冗余文字的图像，例如"图片："</p>
 
               <p class="positive"><img loading="lazy" alt="Image of a dog." src="/assets/images/px20240813sm.jpg"></p>
 
-              <p id="linked-image-with-redundant-text-in-its-alt">Linked image with redundant text in its alt, such as “image of:”</p>
+              <p id="linked-image-with-redundant-text-in-its-alt">alt 中含有冗余文字的链接图像，例如"图片："</p>
 
               <p class="positive"><a href="./editable.htm"><img loading="lazy" alt="Image of a dog." src="/assets/images/px20240813sm.jpg"></a></p>
 
-              <p id="image-with-placeholder-alt">Image with placeholder alt:</p>
+              <p id="image-with-placeholder-alt">具有占位符 alt 的图像：</p>
               <p class="positive"><img loading="lazy" alt="TBD" src="/assets/images/px20240813sm.jpg"></p>
 
-              <p id="linked-image-with-placeholder-alt"><strong>Linked</strong> image with placeholder alt:</p>
+              <p id="linked-image-with-placeholder-alt"><strong>链接</strong>图像具有占位符 alt：</p>
               <p class="positive"><a href="./editable.htm"><img loading="lazy" alt="TBD" src="/assets/images/px20240813sm.jpg"></a></p>
 
-              <p id="image-with-machine-alt">Image with machine code alt:</p>
+              <p id="image-with-machine-alt">具有机器码 alt 的图像：</p>
               <p class="positive"><img loading="lazy" alt="$700VIDEOSABOUTTURTLESALL2SECONDSLONG" src="/assets/images/px20240813sm.jpg"></p>
 
-              <p id="linked-image-with-machine-alt">Linked image with machine code alt:</p>
+              <p id="linked-image-with-machine-alt">具有机器码 alt 的链接图像：</p>
               <p class="positive"><a href="./editable.htm"><img loading="lazy" alt="$700VIDEOSABOUTTURTLESALL2SECONDSLONG" src="/assets/images/px20240813sm.jpg"></a></p>
 
-              <p id="image-with-very-long-alt-text">Image with very long alt text:</p>
+              <p id="image-with-very-long-alt-text">具有非常长的替代文字的图像：</p>
 
               <p class="positive"><img loading="lazy" alt="Look at this doggy. This doggy is so happy. This doggy got to go on a walk and the walk went to a lake and there were all kinds of fascinating smells. What an amazing day this doggy had." src="/assets/images/px20240813sm.jpg"></p>
 
-              <p id="images-in-links-where-the-alt-text-may-be-describing-the-image-instead-of-the-link">Images in links where the alt text may be describing the image instead of the link</p>
+              <p id="images-in-links-where-the-alt-text-may-be-describing-the-image-instead-of-the-link">链接中的图像，其 alt 文字可能描述的是图像而非链接</p>
 
-              <p class="positive"><a  href="https://www.youtube.com/watch?v=DLzxrzFCyOs">This link has text and an image.<img loading="lazy" alt="A lovely gray box" src="/assets/images/px20240813sm.jpg"></a></p>
+              <p class="positive"><a  href="https://www.youtube.com/watch?v=DLzxrzFCyOs">此链接包含文字和图像。<img loading="lazy" alt="A lovely gray box" src="/assets/images/px20240813sm.jpg"></a></p>
 
-              <p id="images-in-links-decorative">Any linked image (test off by default)</p>
+              <p id="images-in-links-decorative">任何链接图像（默认关闭测试）</p>
               <p class="positive"><a href="https://www.youtube.com/watch?v=DLzxrzFCyOs"><img loading="lazy" alt="Hello there" src="/assets/images/px20240813sm.jpg"></a></p>
 
-              <p>Image in figure marked decorative:</p>
+              <p>figure 中标记为装饰性的图像：</p>
               <figure class="positive">
                 <img loading="lazy" alt="" src="/assets/images/px20240813sm.jpg">
-                <figcaption>Figcaption is present.</figcaption>
+                <figcaption>figcaption 已存在。</figcaption>
               </figure>
 
-              <p>Image in figure with an alt the same as the figcaption:</p>
+              <p>figure 中图像的 alt 与 figcaption 相同：</p>
               <figure class="positive">
                 <img loading="lazy" alt="Figcaption is the same as alt" src="/assets/images/px20240813sm.jpg">
                 <figcaption>Figcaption is the same as alt</figcaption>
               </figure>
-              <p>Image in a carousel without an alt:</p>
+              <p>轮播图中没有 alt 的图像：</p>
               <div class="positive">
                 <img loading="lazy" alt="" class="carousel" src="/assets/images/px20240813sm.jpg">
               </div>
             </section>
             <section id="contrast">
-              <h3 data-section="contrast">Contrast</h3>
-              <p>Illegible color combination:</p>
-              <div class="positive"><p style="background: #ccc; color: #ddd;">Super legible.</p></div>
-              <p>Color needs a manual check:</p>
-              <div class="positive"><p style="background: linear-gradient(45deg,#ccc 25%,#0000 25% 75%,#ccc 75%,#ccc),linear-gradient(45deg,#ccc 25%,#0000 25% 75%,#ccc 75%,#ccc)">And incalculable.</p></div>
-              <div class="positive"><label>Input with low contrast
+              <h3 data-section="contrast">对比度</h3>
+              <p>无法辨识的颜色组合：</p>
+              <div class="positive"><p style="background: #ccc; color: #ddd;">非常清晰。</p></div>
+              <p>颜色需要人工检查：</p>
+              <div class="positive"><p style="background: linear-gradient(45deg,#ccc 25%,#0000 25% 75%,#ccc 75%,#ccc),linear-gradient(45deg,#ccc 25%,#0000 25% 75%,#ccc 75%,#ccc)">无法计算。</p></div>
+              <div class="positive"><label>低对比度输入框
                 <input class="form-text" type="text" style="color: #777;"></label></div>
 
               <style>
@@ -157,222 +157,222 @@
                 }
               </style>
 
-              <label for="unsupported-placeholder">Color of placeholder cannot be calculated</label>
+              <label for="unsupported-placeholder">占位符颜色无法计算</label>
               <div class="positive" style="background: transparent;"><input type="text" id="unsupported-placeholder" placeholder="Rec2020 color space"></div>
 
 
-              <p>SVG graphic without enough contrast</p>
+              <p>对比度不足的 SVG 图形</p>
               <div class="positive"><svg style="width: 16px; height: 16px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path fill="#999" d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376C296.3 401.1 253.9 416 208 416 93.1 416 0 322.9 0 208S93.1 0 208 0 416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg></div>
 
-              <p>SVG graphic where contrast needs a manual check</p>
+              <p>对比度需要人工检查的 SVG 图形</p>
               <div class="positive" style="background: linear-gradient(45deg,#ccc 45%,#0000 45% 75%,#ccc 75%,#ccc),linear-gradient(145deg,#ccc 45%,#0000 45% 75%,#ccc 75%,#ccc)"><svg style="width: 16px; height: 16px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path fill="color(rec2020 0.9 0.4 0.2)" d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376C296.3 401.1 253.9 416 208 416 93.1 416 0 322.9 0 208S93.1 0 208 0 416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg></div>
 
 
             </section>
             <section id="embed-media">
-              <h3 data-section="embed-media">Embeds &amp; Media</h3>
+              <h3 data-section="embed-media">嵌入内容与媒体</h3>
 
-              <p>Video flagged as manual check needed for captioning:</p>
+              <p>视频已标记为需要人工检查字幕：</p>
               <div class="positive" style="width: 560px; aspect-ratio: 560 / 315; max-width: 100%; cursor: not-allowed;">
                 <iframe width="560" height="315" inert="" src="https://www.youtube-nocookie.com/embed/QGsevnbItdU?si=W_b2i2o_n5v1ArvA" style="width: 560px; aspect-ratio: 560 / 315; max-width: 100%; cursor: not-allowed;" title="YouTube: How it's done video. Playback is disabled." sandbox="allow-scripts allow-same-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="origin" allowfullscreen></iframe>
-                <div><small><em>Playback disabled to prevent cookies.</em></small></div>
+                <div><small><em>已禁用播放以防止 Cookie。</em></small></div>
               </div>
 
-              <p>Audio needs a transcript:</p>
+              <p>音频需要提供文字稿：</p>
               <div class="positive">
                 <div style="border: 1px solid #444; background: #ccc; width: 320px; height: 60px;"><audio style="height: 60px;"></audio>
                 </div>
               </div>
 
-              <p>Iframe missing a title that also needs a manual check:</p>
+              <p>缺少 title 且需要人工检查的 iframe：</p>
               <div class="positive">
                 <iframe data-needs-src=""></iframe>
               </div>
 
-              <p>Unfocusable iframe:</p>
+              <p>无法聚焦的 iframe：</p>
               <div class="positive">
                 <iframe title="example" sandbox="" tabindex="-1" data-needs-src=""></iframe>
               </div>
 
-              <p>Nested interactive components</p>
+              <p>嵌套的交互组件</p>
               <div class="positive">
-                <details><summary>Accordion</summary>
-                  <details><summary>Accordion</summary>Surprise!</details>
+                <details><summary>折叠面板</summary>
+                  <details><summary>折叠面板</summary>惊喜！</details>
                 </details>
               </div>
             </section>
             <section id="meaningful-links">
-              <h3 data-section="meaningful-links">Meaningful Links</h3>
+              <h3 data-section="meaningful-links">有意义的链接</h3>
 
-              <p id="links-with-no-text-at-all">Links with no text at all</p>
+              <p id="links-with-no-text-at-all">完全没有文字的链接</p>
               <p class="positive"><a href="https://www.youtube.com/watch?v=DLzxrzFCyOs"
-                                     style="display: inline-block; width: 3rem; border-bottom: 1px solid;"></a> Empty links</p>
+                                     style="display: inline-block; width: 3rem; border-bottom: 1px solid;"></a> 空链接</p>
 
-              <p id="links-titled-with-a-url">Links only labelled with a URL:</p>
+              <p id="links-titled-with-a-url">仅以 URL 作为标签的链接：</p>
               <p class="positive"><a  href="https://www.youtube.com/watch?v=DLzxrzFCyOs">https://www.youtube.com/watch?v=DLzxrzFCyOs</a></p>
 
-              <p id="links-titled-with-a-symbol">Links only labelled with symbols:</p>
+              <p id="links-titled-with-a-symbol">仅以符号作为标签的链接：</p>
               <p class="positive"><a href="https://www.youtube.com/watch?v=DLzxrzFCyOs">↣</a></p>
 
-              <p>Links with the same names go different places</p>
-              <p class="positive"><a href="https://www.youtube.com/watch?v=fjOeJssZX_Q">Turtles</a> <a href="https://www.youtube.com/watch?v=cWppAbqm9I8">Turtles</a></p>
+              <p>名称相同但指向不同目标的链接</p>
+              <p class="positive"><a href="https://www.youtube.com/watch?v=fjOeJssZX_Q">乌龟</a> <a href="https://www.youtube.com/watch?v=cWppAbqm9I8">乌龟</a></p>
 
-              <p id="links-titled-with-doi">Links only labelled with a DOI number:</p>
+              <p id="links-titled-with-doi">仅以 DOI 编号作为标签的链接：</p>
               <p class="positive"><a href="https://doi.org/10.1145/3493612.3520468">doi.org/10.1145/3493612.3520468</a></p>
 
-              <p id="links-titled-with-click">Links with meaningless labels:</p>
-              <p class="positive"><a  href="https://www.youtube.com/watch?v=DLzxrzFCyOs" title="https://www.youtube.com/watch?v=DLzxrzFCyOs">Click here</a></p>
+              <p id="links-titled-with-click">使用无意义标签的链接：</p>
+              <p class="positive"><a  href="https://www.youtube.com/watch?v=DLzxrzFCyOs" title="https://www.youtube.com/watch?v=DLzxrzFCyOs">点击这里</a></p>
 
-              <p id="links-titled-with-empty">Linked icons without text alternatives:</p>
+              <p id="links-titled-with-empty">没有文字替代的链接图标：</p>
               <p class="positive"><a href="https://www.youtube.com/watch?v=DLzxrzFCyOs"><svg style="width: 16px; height: 16px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376C296.3 401.1 253.9 416 208 416 93.1 416 0 322.9 0 208S93.1 0 208 0 416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg></a></p>
 
-              <p id="links-that-open-in-a-new-window-without-an-external-link-icon-or-text-warning">Links that open in a new window without an external link icon or text warning</p>
+              <p id="links-that-open-in-a-new-window-without-an-external-link-icon-or-text-warning">在新窗口打开但没有外部链接图标或文字提示的链接</p>
 
-              <p class="positive"><a href="https://www.youtube.com/watch?v=DLzxrzFCyOs" target="_blank">Alert for opens-in test.</a></p>
+              <p class="positive"><a href="https://www.youtube.com/watch?v=DLzxrzFCyOs" target="_blank">在新窗口打开测试的提示。</a></p>
 
-              <p id="links-to-PDF">Links to PDFs</p>
-              <p class="positive"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ#.pdf" class="">Have fun.</a></p>
+              <p id="links-to-PDF">指向 PDF 的链接</p>
+              <p class="positive"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ#.pdf" class="">祝你好运。</a></p>
 
-              <p id="links-to-doc">Links to other documents</p>
-              <p class="positive"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ#.doc" class="">A fake doc link.</a></p>
+              <p id="links-to-doc">指向其他文档的链接</p>
+              <p class="positive"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ#.doc" class="">一个假文档链接。</a></p>
 
-              <p id="links-redundant">Links with redundant title attributes</p>
-              <p class="positive"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" title="Hover me">Hover me</a></p>
+              <p id="links-redundant">具有冗余 title 属性的链接</p>
+              <p class="positive"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" title="悬停我">悬停我</a></p>
 
-              <p>Links with attributes that remove them from the tab index:</p>
-              <p class="positive"><a href="./editable.htm" aria-hidden="true">Aria-hidden links without a negative tabindex.</a></p>
+              <p>具有将其从 Tab 顺序中移除的属性的链接：</p>
+              <p class="positive"><a href="./editable.htm" aria-hidden="true">没有负 tabindex 的 aria-hidden 链接。</a></p>
 
-              <p>Links aria-labelledby attributes to elements with no text:</p>
+              <p>链接的 aria-labelledby 指向没有文字的元素：</p>
               <p class="positive"><a href="./editable.htm" id="oops" aria-labelledby="oops"></a></p>
 
-              <p>Links with generic words in their aria label:</p>
-              <p class="positive"><a href="www.google.com/" aria-label="has aria label">learn more</a></p>
+              <p>aria 标签中含有泛泛词汇的链接：</p>
+              <p class="positive"><a href="www.google.com/" aria-label="has aria label">了解更多</a></p>
 
-              <p>Linked image with no alt text:</p>
+              <p>没有替代文字的链接图像：</p>
               <p class="positive"><a href="./editable.htm"><img loading="lazy" alt="" src="/assets/images/px20240813sm.jpg" class=""></a></p>
 
-              <p>Linked image with unpronounceable alt text:</p>
+              <p>具有无法朗读的替代文字的链接图像：</p>
               <p class="positive"><a href="./editable.htm"><img loading="lazy" alt="'" src="/assets/images/px20240813sm.jpg" class=""></a></p>
 
-              <p>Linked image with no alt text attribute:</p>
+              <p>没有 alt 属性的链接图像：</p>
               <p class="positive"><a href="./editable.htm"><img loading="lazy" src="/assets/images/px20240813sm.jpg" class=""></a></p>
 
-              <p>Linked image with no alt text attribute in a link with text:</p>
-              <p class="positive"><a href="./editable.htm">Search <img loading="lazy" src="/assets/images/px20240813sm.jpg" class=""></a></p>
+              <p>链接中含有文字但图像没有 alt 属性：</p>
+              <p class="positive"><a href="./editable.htm">搜索 <img loading="lazy" src="/assets/images/px20240813sm.jpg" class=""></a></p>
 
-              <p>Linked image with only a filename as alt text:</p>
+              <p>仅以文件名作为替代文字的链接图像：</p>
               <p class="positive"><a href="./editable.htm"><img loading="lazy" alt="http://jpg.gif" src="/assets/images/px20240813sm.jpg">
               </a></p>
 
-              <p>Linked image with suspiciously long alt text:</p>
+              <p>具有异常长替代文字的链接图像：</p>
               <p class="positive"><a href="./editable.htm"><img loading="lazy" alt="Look at this doggy. This doggy is so happy. This doggy got to go on a walk and the walk went to a lake and there were all kinds of fascinating smells. What an amazing day this doggy had." src="/assets/images/px20240813sm.jpg">
               </a></p>
 
-              <p>Broken in page links</p>
+              <p>页内链接失效</p>
               <p class="positive">
-                <a href="#oh-no">There's no such ID.</a>
+                <a href="#oh-no">不存在此 ID。</a>
               </p>
 
-              <p>Links to dev server</p>
+              <p>指向开发服务器的链接</p>
               <p class="positive">
-                <a href="https://tugboatqa.com">Oops</a>
+                <a href="https://tugboatqa.com">哎呀</a>
               </p>
 
-              <p>Duplicate anchors</p>
-              <p class="positive"><a id="dupe" href="#dupe">Anchor 1</a> <a id="dupe" href="#dupe">Anchor 2</a></p>
+              <p>重复锚点</p>
+              <p class="positive"><a id="dupe" href="#dupe">锚点 1</a> <a id="dupe" href="#dupe">锚点 2</a></p>
             </section>
             <section>
-              <h3 id="table-tests">Tables</h3>
+              <h3 id="table-tests">表格</h3>
 
-              <p id="tables-without-valid-headers">Tables without valid headers</p>
+              <p id="tables-without-valid-headers">没有有效表头的表格</p>
 
-              <table class="positive"><tbody><tr><td>A table without a TH header is invalid</td><td class="positive"><h4 >Outline headers do not count</h4></td><td class="negative"><p><strong>Disable should be content header test inside tables</strong></p></td></tr></tbody></table>
+              <table class="positive"><tbody><tr><td>没有 TH 表头的表格无效</td><td class="positive"><h4 >大纲标题不算数</h4></td><td class="negative"><p><strong>表格内部应禁用内容标题测试</strong></p></td></tr></tbody></table>
 
               <table><thead>
               <tr>
                 <th class="positive"></th>
-                <th class="negative">Empty headers</th>
+                <th class="negative">空表头</th>
               </tr>
               </thead>
                 <tbody>
                 <tr class="negative">
-                  <th>I found</th>
-                  <td>700 Videos of Turtles</td>
+                  <th>我找到了</th>
+                  <td>700 个关于乌龟的视频</td>
                 </tr>
                 <tr class="negative">
-                  <th>Each</th>
-                  <td>2 Seconds Long</td>
+                  <th>每个</th>
+                  <td>2 秒长</td>
                 </tr>
                 </tbody>
               </table>
             </section>
             <section id="legibility">
-              <h3 data-section="legibility">Legibility</h3>
+              <h3 data-section="legibility">可读性</h3>
 
-              <div class="positive"><p>SEVERAL WORDS IN A ROW OF CAPS LOCK TEXT WILL TRIGGER A MANUAL CHECK WARNING.</p></div>
+              <div class="positive"><p>连续多个大写字母单词将触发人工检查警告。</p></div>
 
-              <p class="positive"><u>Underlined text</u></p>
+              <p class="positive"><u>下划线文字</u></p>
 
-              <p class="positive"><em>A little italics is fine, but large blocks of of emphasized text are not very legible. A little is acceptable of course, but there are limits, and a whole paragraph is way too much. This, for example, is a whole paragraph. It's kind of hard to read, isn't it? But this test does not trip until it is this long, so you should not see false positives in your content unless you write really big paragraphs like this regularly.</em></p>
+              <p class="positive"><em>少量斜体文字没有问题，但大段强调文字的可读性不佳。少量当然可以接受，但总有限度，整段文字太多了。例如这就是整段文字。这样读起来有点费力，不是吗？但此测试要到这么长才会触发，因此除非您经常书写这样的超长段落，否则不会在内容中出现误报。</em></p>
 
-              <p class="positive" style="text-align: justify;">Justified text</p>
+              <p class="positive" style="text-align: justify;">两端对齐文字</p>
 
-              <p class="positive">Excessive superscript or subscript; <sub>subscript should be used for small references and footnotes, not entire sentences or paragraphs.</sub></p>
+              <p class="positive">过多的上标或下标；<sub>下标应用于小型引用和脚注，而非整句或整段文字。</sub></p>
 
-              <p class="positive"><span style="font-size: 10px;">Teeny fonts</span></p>
+              <p class="positive"><span style="font-size: 10px;">极小字体</span></p>
 
               <div class="positive">
-                <p>* Fake lists using common characters,</p><p>* letters, numbers and emoji.</p>
+                <p>* 使用常见字符制作的假列表，</p><p>* 字母、数字和 emoji。</p>
               </div>
 
-              <div class="positive"><li>Missing UL tag</li></div>
+              <div class="positive"><li>缺少 UL 标签</li></div>
             </section>
 
             <section id="form-elements">
-              <h3 data-section="form-elements">Forms</h3>
+              <h3 data-section="form-elements">表单</h3>
 
-              <p>Button with no label</p>
+              <p>没有标签的按钮</p>
               <div class="positive">
                 <button class="btn btn-primary p-3 pt-4"></button>
               </div>
 
-              <p>Inputs with an invisible label, asking if there is also a visible label.</p>
+              <p>具有不可见标签的输入框，询问是否还有可见标签。</p>
               <div class="positive">
                 <input type="text" title="Email">
               </div>
 
-              <p>Inputs with only a placeholder label, asking if there is also a visible label.</p>
+              <p>仅有占位符标签的输入框，询问是否还有可见标签。</p>
               <div class="positive">
                 <input type="text" placeholder="Email">
               </div>
 
               <div class="positive">
-                <p>Button with an accessible label different from its visible label.</p>
+                <p>无障碍标签与可见标签不同的按钮。</p>
                 <button class="btn btn-primary" aria-label="bye">Hi</button>
               </div>
 
               <div class="positive">
-                <p>Button with an invalid aria-labelledby attribute.</p>
+                <p>具有无效 aria-labelledby 属性的按钮。</p>
                 <button class="btn btn-primary" aria-labelledby="bye">Hi</button>
               </div>
 
               <div class="positive">
-                <p>Button with redundant label.</p>
-                <button class="btn btn-primary">Press this button</button>
+                <p>具有冗余标签的按钮。</p>
+                <button class="btn btn-primary">按下此按钮</button>
               </div>
 
               <div class="positive">
-                <p>Reset button.</p>
+                <p>重置按钮。</p>
                 <input class="btn btn-danger" type="reset">
               </div>
 
-              <p class="positive"><a href="./editable.htm" tabindex="2">Jumbling the tab index</a></p>
+              <p class="positive"><a href="./editable.htm" tabindex="2">打乱 Tab 顺序</a></p>
             </section>
 
 
 
 
-          
+
 
           </div>
           <div class="mt-5 pt-5 text-center"><a class="btn btn-primary btn-lg" href="/zh/about/">关于</a> <a class="btn btn-primary btn-lg" href="/zh/features/">功能</a> <a class="btn btn-dark btn-lg" aria-current="page" href="/zh/demo/">演示</a> <a class="btn btn-primary btn-lg" href="/zh/license/">定价与贡献</a></div>

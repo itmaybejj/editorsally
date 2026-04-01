@@ -8,7 +8,7 @@
     <link rel="shortcut icon" href="/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <meta charset="utf-8" />
-    <title>Install — Editoria11y</title>
+    <title>Instalar — Editoria11y</title>
     <link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
     <link href="/assets/prism/prism.css" rel="stylesheet" />
     <link href="/assets/theme.css" rel="stylesheet" />
@@ -45,23 +45,23 @@
               </div>
             </div>
             <div class="col-12 col-md-7 col-lg-8 pt-3" data-bs-spy="scroll" data-bs-target="#on-this-page" data-bs-smooth-scroll="true">
-                <h1>Install &amp; Configure</h1>
+                <h1>Instalar e Configurar</h1>
 
-                <section id="modules">
-                    <h2 class="pt-3 pb-2">Preconfigured versions</h2>
-                    <ul class="list-unstyled ps-0">
-                        <li><a href="https://www.drupal.org/project/editoria11y" class="arrow"><strong>Drupal installer</strong></a></li>
-                        <li><a href="https://wordpress.org/plugins/editoria11y-accessibility-checker/" class="arrow"><strong>WordPress installer</strong></a></li>
-                        <li><a href="https://codeberg.org/sebastiangreger/kirby-a11yprompter" class="arrow"><strong>Kirby installer</strong></a> <em>(contrib)</em></li>
-                        <li><a href="https://plugins.craftcms.com/editoria11y" class="arrow"><strong>CraftCMS installer</strong></a> <em>(contrib)</em></li>
+                <section id=”modules”>
+                    <h2 class=”pt-3 pb-2”>Versões pré-configuradas</h2>
+                    <ul class=”list-unstyled ps-0”>
+                        <li><a href=”https://www.drupal.org/project/editoria11y” class=”arrow”><strong>Instalador para Drupal</strong></a></li>
+                        <li><a href=”https://wordpress.org/plugins/editoria11y-accessibility-checker/” class=”arrow”><strong>Instalador para WordPress</strong></a></li>
+                        <li><a href=”https://codeberg.org/sebastiangreger/kirby-a11yprompter” class=”arrow”><strong>Instalador para Kirby</strong></a> <em>(contrib)</em></li>
+                        <li><a href=”https://plugins.craftcms.com/editoria11y” class=”arrow”><strong>Instalador para CraftCMS</strong></a> <em>(contrib)</em></li>
                     </ul>
                 </section>
-                <section id="diy">
+                <section id=”diy”>
                     <h2>
-                        Custom installation
+                        Instalação personalizada
                     </h2>
-                    <p>To build your own implementation, <a href="https://github.com/itmaybejj/editoria11y" data-type="URL" data-id="https://github.com/itmaybejj/editoria11y" class="liinternal">download a local copy</a> (or reference a <a href="https://cdn.jsdelivr.net/gh/itmaybejj/editoria11y@2/dist/editoria11y.min.js" class="liinternal">CDN version</a>) of a Language pack, the JS min file, and the CSS min file, and then create a new “Ed11y” instance.</p>
-                    <p>For <strong>ESM/JS module imports</strong>: </p>
+                    <p>Para criar a sua própria implementação, <a href=”https://github.com/itmaybejj/editoria11y” data-type=”URL” data-id=”https://github.com/itmaybejj/editoria11y” class=”liinternal”>descarregue uma cópia local</a> (ou referencie uma <a href=”https://cdn.jsdelivr.net/gh/itmaybejj/editoria11y@2/dist/editoria11y.min.js” class=”liinternal”>versão CDN</a>) de um pacote de idiomas, do ficheiro JS minificado e do ficheiro CSS minificado, e depois crie uma nova instância “Ed11y”.</p>
+                    <p>Para <strong>importações de módulos ESM/JS</strong>: </p>
                     <pre class="language-markup"><code><!--// Load CSS
 <link href="/dist/css/editoria11y.min.css?v=3.0" rel="stylesheet">
 // Load JS and language pack
@@ -75,7 +75,7 @@
   });
 </script>
 --></code></pre>
-                    <p>Use the .umd JavaScript files for legacy browsers and systems:</p>
+                    <p>Utilize os ficheiros JavaScript .umd para navegadores e sistemas mais antigos:</p>
                     <pre class="language-markup"><code><!--
 // Call CSS, JS and a Language Pack
 <link href="/dist/editoria11y.min.css" rel="stylesheet">
@@ -92,10 +92,10 @@
                 </section>
 
                 <section id="params">
-                    <h2>Parameters</h2>
-                    <p>A complete implementation will only be called for logged-in editors (you don’t want your site visitors seeing your checker!), and can override any of <a href="https://github.com/itmaybejj/editoria11y/blob/3.0.x/src/js/utils/ed11y-default-options.js" class="liinternal"><strong>the default parameters</strong></a>.</p>
-                    <p>Note that defaults are provided for all parameters; only include things you want to override.</p>
-                    <p>A heavily customized implementation might look like this:</p>
+                    <h2>Parâmetros</h2>
+                    <p>Uma implementação completa só deve ser ativada para editores com sessão iniciada (não vai querer que os visitantes do seu sítio vejam o verificador!), e pode substituir qualquer um dos <a href="https://github.com/itmaybejj/editoria11y/blob/3.0.x/src/js/utils/ed11y-default-options.js" class="liinternal"><strong>parâmetros predefinidos</strong></a>.</p>
+                    <p>Note que todos os parâmetros têm valores predefinidos; inclua apenas os que pretende alterar.</p>
+                    <p>Uma implementação muito personalizada poderá ter este aspeto:</p>
                     <pre class="language-javascript"><code><!--const ed11y = new Ed11y.Ed11y({
   // Define content regions
   checkRoot: 'main, .footer-content-zone',
@@ -137,15 +137,15 @@
   }
 
 }); --></code></pre>
-                    <p>Turnkey integrations often set these variables on the fly – e.g., loading pages in “assertive” mode when they were recently edited, and switching back to “polite” after several minutes.</p>
+                    <p>As integrações prontas a usar definem frequentemente estas variáveis de forma dinâmica — por exemplo, carregando páginas em modo “assertive” quando foram editadas recentemente, e regressando ao modo “polite” após alguns minutos.</p>
                 </section>
 
                 <section id="theme">
-                    <h2>Theming</h2>
+                    <h2>Tematização</h2>
 
-                    <p>Several parameters allow for selecting a theme, overriding colors, and injecting CSS.</p>
+                    <p>Vários parâmetros permitem selecionar um tema, substituir cores e injetar CSS.</p>
 
-                    <p>Only include the parameters you need to override to make future updates easier.</p>
+                    <p>Inclua apenas os parâmetros que precisa de substituir, para facilitar futuras atualizações.</p>
                     <pre class="language-javascript"><code><!--// Add custom CSS file
 cssUrls: ['/css/editoria11y.min.css', '/css/custom.css'],
 theme : 'darkTheme', // Select base theme
@@ -168,27 +168,27 @@ baseFontSize: 14, // px
 baseFontFamily: '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif', --></code></pre>
                 </section>
 
-                <section id="js-events">
-                    <h2 class="wp-block-heading has-text-align-left has-secondary-background-color has-background has-large-font-size">Useful JS events</h2>
+                <section id=”js-events”>
+                    <h2 class=”wp-block-heading has-text-align-left has-secondary-background-color has-background has-large-font-size”>Eventos JS úteis</h2>
 
-                    <p>Themers can hook these events to react and modify the page as needed.</p>
+                    <p>Os tematizadores podem associar-se a estes eventos para reagir e modificar a página conforme necessário.</p>
 
-                    <p>In typical order of appearing…</p>
+                    <p>Por ordem típica de ocorrência…</p>
 
-                    <ul class="wp-block-list">
-                        <li><strong><code>ed11yRunCustomTests</code></strong>: dispatched when the Results object is ready for custom results to be injected. Note that the customTests parameter must be set to the number of custom test functions you will be running (…probably one…) for this event to dispatch. Details in following section.</li>
+                    <ul class=”wp-block-list”>
+                        <li><strong><code>ed11yRunCustomTests</code></strong>: emitido quando o objeto Results está pronto para receber resultados personalizados. Note que o parâmetro customTests deve ser definido com o número de funções de teste personalizadas que irá executar (…provavelmente uma…) para que este evento seja emitido. Mais detalhes na secção seguinte.</li>
 
-                        <li><strong><code>ed11yResults</code></strong>: dispatched when all checks are finished. API integrations can now harvest data out of the Ed11y.results object.</li>
+                        <li><strong><code>ed11yResults</code></strong>: emitido quando todas as verificações estão concluídas. As integrações API podem agora extrair dados do objeto Ed11y.results.</li>
 
-                        <li><strong><code>ed11yPanelOpened</code></strong>: dispatched if the panel opens, automatically or manually.</li>
+                        <li><strong><code>ed11yPanelOpened</code></strong>: emitido se o painel abrir, automaticamente ou manualmente.</li>
 
-                        <li><strong><code>ed11yShowHidden</code></strong>: provides a <code>data-ed11y-result</code> number and a <code>viaJump</code> boolean. Only dispatched if the “ed11yShowHidden” parameter is set <em><strong>and</strong></em> the a parent of the element matches a selector . Used to reveal alerts in not-yet-open containers, e.g., accordions, tabs and carousels. Usage examples in next section.</li>
+                        <li><strong><code>ed11yShowHidden</code></strong>: fornece um número <code>data-ed11y-result</code> e um booleano <code>viaJump</code>. Apenas emitido se o parâmetro “ed11yShowHidden” estiver definido <em><strong>e</strong></em> um elemento ancestral corresponder a um seletor. Utilizado para revelar alertas em contêineres ainda fechados, como acordeões, separadores e carrosséis. Exemplos de utilização na secção seguinte.</li>
 
-                        <li><strong><code>ed11yPop</code></strong>: provides <code>data-ed11y-result</code> ID, as well as references to the <code>result</code> and <code>tip</code> objects. Dispatched when a tooltip appears, allowing you to modify the tips at runtime.</li>
+                        <li><strong><code>ed11yPop</code></strong>: fornece o ID de <code>data-ed11y-result</code>, bem como referências aos objetos <code>result</code> e <code>tip</code>. Emitido quando uma dica de contexto aparece, permitindo modificar as dicas em tempo de execução.</li>
 
-                        <li><strong><code>ed11yShut</code></strong>: provides <code>data-ed11y-result</code> ID. Dispatched when a tooltip closes.</li>
+                        <li><strong><code>ed11yShut</code></strong>: fornece o ID de <code>data-ed11y-result</code>. Emitido quando uma dica de contexto fecha.</li>
 
-                        <li><strong><code>ed11yDismissalUpdate</code></strong>: provides extended information when a user dismisses or restores an alert. Used for API integrations. Event object contains:
+                        <li><strong><code>ed11yDismissalUpdate</code></strong>: fornece informação detalhada quando um utilizador dispensa ou restaura um alerta. Utilizado para integrações API. O objeto do evento contém:
                             <ul>
                                 <li><code>dismissPage</code></li>
 
@@ -200,23 +200,23 @@ baseFontFamily: '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica N
                             </ul>
                         </li>
                     </ul>
-                    <p>Samples can be found in the following sections.</p>
+                    <p>Exemplos podem ser encontrados nas secções seguintes.</p>
                 </section>
 
-                <section id="modify-tips">
-                    <h2 class="wp-block-heading has-secondary-background-color has-background has-large-font-size">Modifying tips</h2>
+                <section id=”modify-tips”>
+                    <h2 class=”wp-block-heading has-secondary-background-color has-background has-large-font-size”>Modificar dicas de contexto</h2>
 
-                    <p>If all you want to do is modify the text of a tip, items in the ed11yLang.en global (before calling the library) or Ed11y.M (after calling the library) objects can be directly overridden. e.g., in the Drupal module where we aliased the language pack to Drupal.ed11yLang:</p>
+                    <p>Se apenas pretender modificar o texto de uma dica, os itens nos objetos globais ed11yLang.en (antes de chamar a biblioteca) ou Ed11y.M (depois de chamar a biblioteca) podem ser substituídos diretamente. Por exemplo, no módulo Drupal onde aliámos o pacote de idiomas a Drupal.ed11yLang:</p>
 
-                    <p><code>Drupal.ed11yLang.lang.testNames.title = "Please write shorter headings."</code></p>
+                    <p><code>Drupal.ed11yLang.lang.testNames.title = “Please write shorter headings.”</code></p>
 
-                    <p>This is true of any of the <a href="https://github.com/itmaybejj/editoria11y/blob/3.0.x/src/lang/baseAll.js" data-type="link" data-id="https://github.com/itmaybejj/editoria11y/blob/2.3.x/js/ed11y-localization.js" class="liinternal">default keys in the localization file</a> or the active language-specific translation.</p>
+                    <p>Isto aplica-se a qualquer uma das <a href=”https://github.com/itmaybejj/editoria11y/blob/3.0.x/src/lang/baseAll.js” data-type=”link” data-id=”https://github.com/itmaybejj/editoria11y/blob/2.3.x/js/ed11y-localization.js” class=”liinternal”>chaves predefinidas no ficheiro de localização</a> ou na tradução específica do idioma ativo.</p>
 
-                    <p>The Drupal module also adds custom edit links to the tips, using the <code>editLinks</code> parameter. Note “Page editor” and “Layout editor:”</p>
+                    <p>O módulo Drupal também adiciona hiperligações de edição personalizadas às dicas, utilizando o parâmetro <code>editLinks</code>. Veja “Page editor” e “Layout editor”:</p>
 
-                    <figure class="wp-block-image size-full"><img loading="lazy" data-recalc-dims="1" fetchpriority="high" decoding="async" width="580" height="300" src="https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?resize=580%2C300&amp;ssl=1" alt="Tooltip with &quot;Page editor&quot; and &quot;Layout editor&quot; links inserted." class="wp-image-523" srcset="https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?w=1290&amp;ssl=1 1290w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?resize=600%2C311&amp;ssl=1 600w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?resize=768%2C398&amp;ssl=1 768w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?resize=1200%2C621&amp;ssl=1 1200w" sizes="(max-width: 580px) 100vw, 580px"></figure>
+                    <figure class=”wp-block-image size-full”><img loading=”lazy” data-recalc-dims=”1” fetchpriority=”high” decoding=”async” width=”580” height=”300” src=”https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?resize=580%2C300&amp;ssl=1” alt=”Dica de contexto com hiperligações &quot;Page editor&quot; e &quot;Layout editor&quot; inseridas.” class=”wp-image-523” srcset=”https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?w=1290&amp;ssl=1 1290w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?resize=600%2C311&amp;ssl=1 600w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?resize=768%2C398&amp;ssl=1 768w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?resize=1200%2C621&amp;ssl=1 1200w” sizes=”(max-width: 580px) 100vw, 580px”></figure>
 
-                    <p>A simplified version of the code that sets that parameter:</p>
+                    <p>Uma versão simplificada do código que define esse parâmetro:</p>
                     <pre class="language-javascript"><code><!--const editLinks = document.createElement('div');
 const editLink = document.createElement('a');
       editLink.href="/node/1/edit";
@@ -225,9 +225,9 @@ editLinks.appendChild(editLink);
 const ed11y = new Ed11y({
                editLinks: editLinks,
               }); --></code></pre>
-                    <p>The Drupal module then uses the <strong><code>ed11yPop</code></strong> event to dynamically show and hide the edit link based on context when tips are shown. </p>
+                    <p>O módulo Drupal utiliza depois o evento <strong><code>ed11yPop</code></strong> para mostrar e ocultar dinamicamente a hiperligação de edição com base no contexto quando as dicas são exibidas. </p>
 
-                    <p>This event provides references to the <code>result</code> and <code>tip</code> objects:</p>
+                    <p>Este evento fornece referências aos objetos <code>result</code> e <code>tip</code>:</p>
                     <pre class="language-javascript"><code><!--// Listen for event
 document.addEventListener('ed11yPop', e => {
   if (e.detail.result.element.closest(
@@ -240,27 +240,27 @@ document.addEventListener('ed11yPop', e => {
 }); --></code></pre>
                 </section>
 
-                <section id="custom-tests">
-                    <h2>Custom tests</h2>
+                <section id=”custom-tests”>
+                    <h2>Testes personalizados</h2>
 
-                    <p>If the <strong><em>customTests</em></strong> parameter is a <strong><em>number</em></strong>, Editoria11y will dispatch an “ed11yRunCustomTests” event while checking, and then pause for up to 500ms while listening for that number of “<code>ed11yResume</code>” events.</p>
+                    <p>Se o parâmetro <strong><em>customTests</em></strong> for um <strong><em>número</em></strong>, o Editoria11y emitirá um evento “ed11yRunCustomTests” durante a verificação, e aguardará até 500ms enquanto escuta esse número de eventos “<code>ed11yResume</code>”.</p>
 
-                    <p>This can be leveraged to call as many scripts containing custom tests as you like, which can push their results into the results array before the tips are draws.</p>
+                    <p>Isto pode ser aproveitado para chamar tantos scripts com testes personalizados quantos desejar, que podem inserir os seus resultados na matriz de resultados antes de as dicas serem desenhadas.</p>
 
-                    <p>For example, if you wanted to create this tip, to flag links that have been pasted from emails with obfuscated URLs:</p>
+                    <p>Por exemplo, se quisesse criar esta dica para assinalar hiperligações coladas de mensagens de correio eletrónico com URLs ofuscados:</p>
 
-                    <figure class="wp-block-image size-full"><img loading="lazy" data-recalc-dims="1" decoding="async" width="580" height="462" src="https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2023/12/Screenshot-2023-12-06-at-5.13.38-PM.png?resize=580%2C462&amp;ssl=1" alt="Tip reading &quot;URL is Safe Link Encoded&quot;" class="wp-image-323" srcset="https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2023/12/Screenshot-2023-12-06-at-5.13.38-PM.png?w=1056&amp;ssl=1 1056w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2023/12/Screenshot-2023-12-06-at-5.13.38-PM.png?resize=600%2C478&amp;ssl=1 600w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2023/12/Screenshot-2023-12-06-at-5.13.38-PM.png?resize=768%2C612&amp;ssl=1 768w" sizes="(max-width: 580px) 100vw, 580px"></figure>
+                    <figure class=”wp-block-image size-full”><img loading=”lazy” data-recalc-dims=”1” decoding=”async” width=”580” height=”462” src=”https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2023/12/Screenshot-2023-12-06-at-5.13.38-PM.png?resize=580%2C462&amp;ssl=1” alt=”Dica com o texto &quot;URL is Safe Link Encoded&quot;” class=”wp-image-323” srcset=”https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2023/12/Screenshot-2023-12-06-at-5.13.38-PM.png?w=1056&amp;ssl=1 1056w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2023/12/Screenshot-2023-12-06-at-5.13.38-PM.png?resize=600%2C478&amp;ssl=1 600w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2023/12/Screenshot-2023-12-06-at-5.13.38-PM.png?resize=768%2C612&amp;ssl=1 768w” sizes=”(max-width: 580px) 100vw, 580px”></figure>
 
-                    <p>You would:</p>
+                    <p>Deverá:</p>
 
-                    <ol class="wp-block-list">
-                        <li>Add a listener for the <code>ed11yRunCustomTests</code> event</li>
+                    <ol class=”wp-block-list”>
+                        <li>Adicionar um listener para o evento <code>ed11yRunCustomTests</code></li>
 
-                        <li>Find matching elements</li>
+                        <li>Encontrar os elementos correspondentes</li>
 
-                        <li>Define the tip message</li>
+                        <li>Definir a mensagem da dica</li>
 
-                        <li>Dispatch the “resume” event to let Editoria11y draw the tip:</li>
+                        <li>Emitir o evento “resume” para permitir que o Editoria11y desenhe a dica:</li>
                     </ol>
 
                     <pre class="language-javascript"><code><!--document.addEventListener('ed11yRunCustomTests', function() {
@@ -323,16 +323,16 @@ document.addEventListener('ed11yPop', e => {
                 </section>
 
                 <section id="hidden-content">
-                    <h2>Dealing with alerts on hidden or size-constrained content</h2>
+                    <h2>Lidar com alertas em conteúdo oculto ou com restrições de tamanho</h2>
 
 
-                    <p>Many interactive components (tabs, sliders, accordions) hide content. The Editoria11y info panel includes next/previous buttons to jump directly to issues. If Editoria11y thinks the issue’s tooltip is currently invisible, it will alert the user something is wrong, and then highlight the first visible ancestor – e.g., the div around an accordion.</p>
+                    <p>Muitos componentes interativos (separadores, controlos de deslize, acordeões) ocultam conteúdo. O painel de informação do Editoria11y inclui botões de próximo/anterior para saltar diretamente para os problemas. Se o Editoria11y considerar que a dica de contexto do problema está atualmente invisível, alertará o utilizador de que algo está errado e destacará o primeiro ancestral visível — por exemplo, o div em torno de um acordeão.</p>
 
-                    <p>Ideally, your theme will make those elements visible before Editoria11y’s visibility check runs, so everything just works like magic for your users — carousels auto-advance and accordions auto-open to display the issue.</p>
+                    <p>Idealmente, o seu tema tornará esses elementos visíveis antes de a verificação de visibilidade do Editoria11y ser executada, para que tudo funcione como magia para os seus utilizadores — os carrosséis avançam automaticamente e os acordeões abrem-se automaticamente para mostrar o problema.</p>
 
-                    <p>To do this when the panel first opens (e.g., unfolding <strong><em>all</em></strong> accordion panels with issues) add a JS event listener for <code>ed11yPanelOpened</code>, then do a querySelectorAll for relevant <code>ed11y-element-result</code> elements, and then trigger whatever function your theme uses to reveal that part of the page. </p>
+                    <p>Para o fazer quando o painel abre pela primeira vez (por exemplo, expandindo <strong><em>todos</em></strong> os painéis de acordeão com problemas), adicione um listener de eventos JS para <code>ed11yPanelOpened</code>, execute depois um querySelectorAll para os elementos <code>ed11y-element-result</code> relevantes, e acione a função que o seu tema usa para revelar essa parte da página. </p>
 
-                    <p>Here’s a jQuery based example. When the panel opens, it disables a sticky menu (so elements are not covered), then looks for any <code>ed11y-element-result</code> elements inside closed accordion items and simulates a click on their toggle button:</p>
+                    <p>Eis um exemplo baseado em jQuery. Quando o painel abre, desativa um menu fixo (para que os elementos não fiquem cobertos), procura depois quaisquer elementos <code>ed11y-element-result</code> dentro de itens de acordeão fechados e simula um clique no respetivo botão de alternância:</p>
                     <pre class="language-javascript"><code><!--document.addEventListener("ed11yPanelOpened", function () {
   $('body').addClass('no-stick');
   $('ed11y-element-result').each(function () {
@@ -341,9 +341,9 @@ document.addEventListener('ed11yPop', e => {
     }
 }) --></code></pre>
 
-                    <p>To reveal content only when jumping to a <strong><em>specific</em></strong> tip via the panel’s “next” button (e.g., in a closed tab or the next carousel slide), you will need to set both <code>hiddenHandlers</code> to relevant CSS selectors and <code>checkVisible</code> to TRUE in your parameters. Then add an event listener for the <code>ed11yShowHidden</code> event. This is thrown if Editoria11y recognizes a tip is inside a container with one of the listed <code>hiddenHandlers</code> selectors provided in the options list. This JS event will include the ID of the tip that it is about to open. Editoria11y will then pause briefly after dispatching this event, to give your JS time to make the element visible.</p>
+                    <p>Para revelar conteúdo apenas ao saltar para uma dica <strong><em>específica</em></strong> através do botão “seguinte” do painel (por exemplo, num separador fechado ou no próximo diapositivo de carrossel), precisará de definir tanto <code>hiddenHandlers</code> com os seletores CSS relevantes como <code>checkVisible</code> como TRUE nos seus parâmetros. Adicione depois um listener de eventos para o evento <code>ed11yShowHidden</code>. Este é emitido se o Editoria11y reconhecer que uma dica está dentro de um contêiner com um dos seletores <code>hiddenHandlers</code> listados nas opções. Este evento JS incluirá o ID da dica que está prestes a abrir. O Editoria11y fará uma breve pausa após emitir este evento, para dar tempo ao seu JavaScript de tornar o elemento visível.</p>
 
-                    <p>Here’s an example from a Penn State implementation. It looks for the element matching the provided ID, then finds its parent interactive component container, and triggers its event to activate its toggle:</p>
+                    <p>Eis um exemplo de uma implementação da Penn State. Procura o elemento correspondente ao ID fornecido, encontra o seu contêiner de componente interativo ancestral e aciona o respetivo evento para ativar o seu alternador:</p>
                     <pre class="language-javascript"><code><!--context.addEventListener('ed11yShowHidden', e => {
   if (!e.detail.viaJump) {
        return;
@@ -352,11 +352,11 @@ document.addEventListener('ed11yPop', e => {
     .closest('[data-interactive-component]')
     .dispatchEvent(new CustomEvent('component:activate'));
 }); --></code></pre>
-                    <p>Last note: some themes are just not compatible with visibility checking — e.g., the <code>&lt;main&gt;</code> container has a height of 0px. Such sites should disable all visibility checking by setting <code>checkVisible</code> to false.</p>
+                    <p>Nota final: alguns temas simplesmente não são compatíveis com a verificação de visibilidade — por exemplo, o contêiner <code>&lt;main&gt;</code> tem uma altura de 0px. Esses sítios devem desativar toda a verificação de visibilidade definindo <code>checkVisible</code> como false.</p>
 
                 </section>
 
-          </div><!-- End content column -->
+          </div><!-- Fim da coluna de conteúdo -->
 
       </div>
     </main>

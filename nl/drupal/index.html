@@ -46,142 +46,142 @@
         </div>
         <div class="col-12 col-md-7 col-lg-8 pt-3">
           <div data-bs-spy="scroll" data-bs-target="#on-this-page" data-bs-smooth-scroll="true">
-            <h1>Drupal module</h1>
+            <h1>Drupal-module</h1>
             <section id="features">
-              <h2 class="pt-3">Features</h2>
+              <h2 class="pt-3">Functies</h2>
 
               <figure class="figure my-4 rounded shadow border">
-                <img loading="lazy" src="/assets/images/3x-editing.png" class="figure-img img-fluid" height="1088" width="2237" alt="Drupal editor with inline tips"/>
-                <figcaption class="figure-caption p-3 pt-2 fs-6">Issues are detected both on-load the frontend and as-you-type in CKEditor and Gutenberg.</figcaption>
+                <img loading="lazy" src="/assets/images/3x-editing.png" class="figure-img img-fluid" height="1088" width="2237" alt="Drupal-editor met inline tips"/>
+                <figcaption class="figure-caption p-3 pt-2 fs-6">Problemen worden zowel bij het laden van de frontend als tijdens het typen in CKEditor en Gutenberg gedetecteerd.</figcaption>
               </figure>
 
               <figure class="figure my-4 rounded shadow border" style="max-width: 600px;">
-                <img loading="lazy" src="/assets/images/3x-generic-tip.png" class="figure-img img-fluid" height="798" width="1278" alt="Tip indicated a link is only named click here."/>
-                <figcaption class="figure-caption p-3 pt-2 ps-5 fs-6">Tooltips describe the issue, with buttons to jump into the page or layout editor, to ignore this alert (for the active user) or mark it OK (for all users). Depending on context and permissions, some alerts may also show a "Similar Alerts" menu, with options to mark multiple alerts on the same page as OK, or mark the same element on all pages as OK.</figcaption>
+                <img loading="lazy" src="/assets/images/3x-generic-tip.png" class="figure-img img-fluid" height="798" width="1278" alt="Tip geeft aan dat een link alleen de naam 'klik hier' heeft."/>
+                <figcaption class="figure-caption p-3 pt-2 ps-5 fs-6">Tooltips beschrijven het probleem, met knoppen om naar de pagina- of lay-outeditor te springen, om deze melding te negeren (voor de actieve gebruiker) of als OK te markeren (voor alle gebruikers). Afhankelijk van de context en rechten kunnen sommige meldingen ook een menu "Vergelijkbare meldingen" tonen, met opties om meerdere meldingen op dezelfde pagina als OK te markeren, of hetzelfde element op alle pagina's als OK te markeren.</figcaption>
               </figure>
 
               <figure class="figure my-4 rounded shadow mb-5 border">
-                <img loading="lazy" class="figure-img img-fluid" src="/assets/images/3x-dashboard.png" height="765" width="1600" alt="Reporting dashboard showing recent issues and pages with the most issues." />
-                <figcaption class="figure-caption p-3 pt-2 fs-6">A site-wide reporting dashboard provides filterable and exportable reports of alerts and dismissals.</figcaption>
+                <img loading="lazy" class="figure-img img-fluid" src="/assets/images/3x-dashboard.png" height="765" width="1600" alt="Rapportagedashboard met recente problemen en pagina's met de meeste problemen." />
+                <figcaption class="figure-caption p-3 pt-2 fs-6">Een sitebreed rapportagedashboard biedt filterbare en exporteerbare rapporten van meldingen en afwijzingen.</figcaption>
               </figure>
 
-              <p>As well as:</p>
+              <p>Daarnaast ook:</p>
               <ul>
-                <li>Starter configuration that automatically ignores Drupal, CKeditor, Gutenberg, Link Purpose and External Link elements, reacts to changes when editing in modal containers, and automatically positions the toolbar to avoid overlapping with Klaro and Same Page Preview elements.</li>
-                <li>Role-based configuration for which users will see the checker, which users can dismiss alerts, and which users can view site-wide reports.</li>
-                <li>An in-site (local) crawler to refresh the dashboard after major theming changes. <em>(CSA only)</em></li>
-                <li>Author/developer split configuration with separate tests (~30/~80) and issue lists. <em>(CSA only)</em></li>
+                <li>Starterconfiguratie die automatisch Drupal-, CKeditor-, Gutenberg-, Link Purpose- en External Link-elementen negeert, reageert op wijzigingen bij het bewerken in modale containers, en de werkbalk automatisch positioneert om overlapping met Klaro- en Same Page Preview-elementen te vermijden.</li>
+                <li>Op rollen gebaseerde configuratie voor welke gebruikers de checker zien, welke gebruikers meldingen kunnen afwijzen, en welke gebruikers sitebrede rapporten kunnen bekijken.</li>
+                <li>Een interne (lokale) crawler om het dashboard te vernieuwen na grote themawijzigingen. <em>(Alleen CSA)</em></li>
+                <li>Gesplitste auteur/ontwikkelaar-configuratie met afzonderlijke tests (~30/~80) en probleemlijsten. <em>(Alleen CSA)</em></li>
               </ul>
 
 
 
             </section>
-            <h2>Installation and key setup steps</h2>
-            <p>The <a href="https://www.drupal.org/project/editoria11y/">bundled installer</a> at Drupal.org includes several modules:</p>
+            <h2>Installatie en belangrijkste stappen</h2>
+            <p>Het <a href="https://www.drupal.org/project/editoria11y/">gebundelde installatiepakket</a> op Drupal.org bevat meerdere modules:</p>
             <ul>
               <li>
-                Editoria11y: the core content checker and dashboard.
+                Editoria11y: de kern inhoudscontrole en het dashboard.
               </li>
               <li>
-                Editoria11y CSA: developer tests and dashboard maintenance tools.
+                Editoria11y CSA: ontwikkelaarstests en dashboardonderhoudsmiddelen.
               </li>
               <li>
-                Editoria11y Export: CSV reporting tools.
+                Editoria11y Export: CSV-rapportagetools.
               </li>
             </ul>
-            <p>Install like any other module, and then take these key steps:</p>
+            <p>Installeer zoals elke andere module en voer vervolgens deze belangrijkste stappen uit:</p>
             <ol>
-              <li><strong>Check permissions.</strong> Trusted authors should have "Mark OK," "Mark as Ignored" and "View the dashboard."</li>
-              <li><strong>Check key pages for repetitive or unhelpful alerts.</strong> Either mark them as OK in the tooltip, or adjust the configuration to ignore elements by selector.</li>
-              <li>Look for tips that are hard to see – offscreen, truncated, behind other elements, or on hidden elements. Use the tips in "Fix tip positioning" below to fix.</li>
-              <li>If the site already has content, and you have a CSA subscription, visit the dashboard "recheck" tab, and <strong>crawl the site</strong> to pre-load the site reports. This is optional, but older pages will not appear in reports until they are crawled or visited by a logged in user.</li>
+              <li><strong>Controleer rechten.</strong> Vertrouwde auteurs moeten "Mark OK," "Mark as Ignored" en "View the dashboard" hebben.</li>
+              <li><strong>Controleer belangrijke pagina's op herhalende of onnuttige meldingen.</strong> Markeer ze als OK in de tooltip, of pas de configuratie aan om elementen via selector te negeren.</li>
+              <li>Zoek naar tips die moeilijk te zien zijn – buiten het scherm, afgeknopt, achter andere elementen, of op verborgen elementen. Gebruik de tips in "Verborgen of buiten beeld geplaatste tips oplossen" hieronder om dit te corrigeren.</li>
+              <li>Als de site al inhoud heeft en u een CSA-abonnement heeft, bezoek dan het tabblad "recheck" van het dashboard en <strong>crawl de site</strong> om de siterapporten voor te laden. Dit is optioneel, maar oudere pagina's verschijnen niet in rapporten totdat ze zijn gecrawld of bezocht door een ingelogde gebruiker.</li>
             </ol>
-            <p>View a <a href="https://youtu.be/uYvNYPg38nU?si=dqADyWpTtOhniHTP&t=696">video introduction to the configuration options</a> (v2.4).</p>
+            <p>Bekijk een <a href="https://youtu.be/uYvNYPg38nU?si=dqADyWpTtOhniHTP&t=696">video-introductie van de configuratieopties</a> (v2.4).</p>
 
-            <h2 id="check-roots">Hide unhelpful alerts</h2>
+            <h2 id="check-roots">Onnuttige meldingen verbergen</h2>
             <p>
-              <strong>Good configurations suppress unhelpful alerts, so content authors can focus on issues they should fix</strong>.</p>
-            <p>While you can turn off tests altogether, it is usually better to hide alerts on specific elements or pages.</p>
+              <strong>Goede configuraties onderdrukken onnuttige meldingen, zodat inhoudsauteurs zich kunnen richten op problemen die ze moeten oplossen</strong>.</p>
+            <p>Hoewel u tests volledig kunt uitschakelen, is het meestal beter om meldingen op specifieke elementen of pagina's te verbergen.</p>
             <hr>
             <p>
-              During each test run, Editoria11y gathers a single set of elements from the "Check content in these containers" setting, and then filters it several times. This is what a test run looks like:
+              Bij elke testrun verzamelt Editoria11y één set elementen uit de instelling "Controleer inhoud in deze containers" en filtert die vervolgens meerdere keren. Dit is hoe een testrun eruit ziet:
             </p>
             <ol>
               <li>
-                Cancel checking if configuration prevents checking on this page or for this user.
+                Controle annuleren als de configuratie controle op deze pagina of voor deze gebruiker verhindert.
               </li>
               <li>
-                <strong>Gather</strong> elements in specified page regions, e.g.:<br><code>body > *:not('.ed11y-element')</code><br>
-                <em>For Editoria11y CSA users, these are the regions on the <strong>Developer tests</strong> tab.</em>
+                <strong>Verzamel</strong> elementen in opgegeven paginaregio's, bijv.:<br><code>body > *:not('.ed11y-element')</code><br>
+                <em>Voor Editoria11y CSA-gebruikers zijn dit de regio's op het tabblad <strong>Ontwikkelaarstests</strong>.</em>
               </li>
               <li>
-                <strong>Drop</strong> elements that match ignore selectors, e.g.:<br><code>.widgets, .utility-menu</code><br>
-                <em>For Editoria11y CSA users, these are the selectors on the <strong>Developer tests</strong> tab.</em>
+                <strong>Verwijder</strong> elementen die overeenkomen met negeringsselectors, bijv.:<br><code>.widgets, .utility-menu</code><br>
+                <em>Voor Editoria11y CSA-gebruikers zijn dit de selectors op het tabblad <strong>Ontwikkelaarstests</strong>.</em>
               </li>
               <li>
-                Run tests and sync results to the dashboard.
+                Voer tests uit en synchroniseer resultaten naar het dashboard.
               </li>
               <li>
-                If split configuration is active and the user is a content editor, filter developer results:
+                Als de gesplitste configuratie actief is en de gebruiker een inhoudsredacteur is, filter dan ontwikkelaarsresultaten:
                 <ul>
-                  <li><strong>Drop</strong> results from tests set to "Developer only."</li>
-                  <li><strong>Drop</strong> results on elements from outside specified <strong><em>content</em></strong> regions, e.g.:<br><code>main, footer</code></li>
-                  <li><strong>Drop</strong> results on elements that match <strong><em>content</em></strong> ignore selectors.</li>
+                  <li><strong>Verwijder</strong> resultaten van tests ingesteld op "Alleen ontwikkelaar."</li>
+                  <li><strong>Verwijder</strong> resultaten op elementen buiten opgegeven <strong><em>inhouds</em></strong>regio's, bijv.:<br><code>main, footer</code></li>
+                  <li><strong>Verwijder</strong> resultaten op elementen die overeenkomen met <strong><em>inhouds</em></strong>negeringsselectors.</li>
                 </ul>
-                Note that there is not a second "gather" phase. The developer page regions must include the content regions.
+                Let op: er is geen tweede "verzamel"-fase. De ontwikkelaarspaginaregio's moeten de inhoudsregio's omvatten.
               </li>
-              <li>Open the panel and draw alerts if configuration matches an auto-open setting.</li>
+              <li>Open het paneel en toon meldingen als de configuratie overeenkomt met een automatisch-openen-instelling.</li>
             </ol>
 
-            <h3 id="dismiss">Dismiss alerts</h3>
-            <p>Tests can be configured in the library as errors or warnings ("manual checks"). Warnings can be dismissed. There are two types of dismissals available from the footer of each tooltip:</p>
+            <h3 id="dismiss">Meldingen afwijzen</h3>
+            <p>Tests kunnen in de bibliotheek worden geconfigureerd als fouten of waarschuwingen ("handmatige controles"). Waarschuwingen kunnen worden afgewezen. Er zijn twee soorten afwijzingen beschikbaar vanuit de voettekst van elke tooltip:</p>
             <div class="my-2" style="background: url(/assets/images/3x-generic-tip.png) 100% 98%; max-width: 600px; padding-top: 6%; background-size: 108%;"></div>
             <ul>
-              <li>"Ignore" is stored as a user preference: the alert is now hidden for the current user, but only the current user.</li>
-              <li>"Mark OK" hides the alert for all users.</li>
+              <li>"Ignore" wordt opgeslagen als gebruikersvoorkeur: de melding is nu verborgen voor de huidige gebruiker, maar alleen voor de huidige gebruiker.</li>
+              <li>"Mark OK" verbergt de melding voor alle gebruikers.</li>
             </ul>
-            <p>Whether a user is able to dismiss an alert is controlled at the role level in Drupal's user permissions. <strong>Most authors should be allowed to dismiss alerts</strong>. There is no point in assigning someone a manual check if they cannot mark the item as having been checked.</p>
+            <p>Of een gebruiker een melding kan afwijzen wordt bepaald op rolniveau in de gebruikersrechten van Drupal. <strong>De meeste auteurs moeten meldingen kunnen afwijzen</strong>. Het heeft geen zin iemand een handmatige controle toe te wijzen als ze het item niet als gecontroleerd kunnen markeren.</p>
 
-            <h3 id="roots">Ignore elements</h3>
-            <p>These two configuration settings are the most important!</p>
+            <h3 id="roots">Elementen negeren</h3>
+            <p>Deze twee configuratie-instellingen zijn het belangrijkst!</p>
             <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
-              <label for="edit-content-root">Check content in these containers</label>
+              <label for="edit-content-root">Controleer inhoud in deze containers</label>
               <div><textarea id="edit-content-root" name="content_root" rows="1" cols="30" disabled></textarea>
               </div>
               <div class="mt-3">
-                <label for="edit-ignore-elements">Skip over these elements</label>
+                <label for="edit-ignore-elements">Sla deze elementen over</label>
                 <div>
                   <textarea id="edit-ignore-elements" disabled name="ignore_elements" rows="1" cols="30" class=""></textarea>
                 </div>
               </div>
             </div>
             <p>
-              Set the first to include any parts of the page content authors can edit. E.g., if they can edit the <code>main</code> content area, <code>.sidebar</code> and <code>.footer-column-two</code>, set those selectors as your content check area.
+              Stel de eerste in om alle delen van de pagina op te nemen die inhoudsauteurs kunnen bewerken. Als ze bijvoorbeeld het inhoudsgebied <code>main</code>, <code>.sidebar</code> en <code>.footer-column-two</code> kunnen bewerken, stel die selectors dan in als uw inhoudscontrolegebied.
             </p>
             <p>
-              Use the second to "knock out" subsections. E.g., if <code>main</code> contains various widgets and embeds that only developers can modify, list those: <code>.widget-1, .social-embed</code>;
+              Gebruik de tweede om subsecties "uit te sluiten". Als <code>main</code> bijvoorbeeld diverse widgets en insluitingen bevat die alleen ontwikkelaars kunnen aanpassen, vermeld die dan: <code>.widget-1, .social-embed</code>;
             </p>
-            <p>If you are using the split configuration, you will see a similar pair of settings on the Developer Tests tab:</p>
+            <p>Als u de gesplitste configuratie gebruikt, ziet u een vergelijkbaar paar instellingen op het tabblad Ontwikkelaarstests:</p>
             <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
               <div>
                 <fieldset>
                 <legend>
-                  Developer check area
+                  Ontwikkelaarcontrolegebied
                 </legend>
                 <div class="fieldset__wrapper fieldset__wrapper--group">
 
                   <div id="edit-dev-check-root">
                     <div>
                     <input aria-describedby="edit-dev-check-root--description" type="radio" id="edit-dev-check-root-automatic" name="dev_check_root" value="automatic" checked="checked">
-                    <label for="edit-dev-check-root-automatic" class="form-item__label option">All elements</label>
+                    <label for="edit-dev-check-root-automatic" class="form-item__label option">Alle elementen</label>
                   </div>
                     <div class="d-flex">
                       <input aria-describedby="edit-dev-check-root--description" type="radio" id="edit-dev-check-root-match" name="dev_check_root" value="match" class="align-self-baseline mt-1 me-1">
-                      <label for="edit-dev-check-root-match" class="form-item__label option">Only the containers listed in the Content Setting tab</label>
+                      <label for="edit-dev-check-root-match" class="form-item__label option">Alleen de containers vermeld op het tabblad Inhoudsinstellingen</label>
                     </div>
                     <div class="">
                       <input aria-describedby="edit-dev-check-root--description" type="radio" id="edit-dev-check-root-specify" name="dev_check_root" value="specify" class="form-radio form-boolean form-boolean--type-radio">
-                      <label for="edit-dev-check-root-specify" class="">The specific containers listed below</label>
+                      <label for="edit-dev-check-root-specify" class="">De hieronder vermelde specifieke containers</label>
                     </div>
                   </div>
 
@@ -189,7 +189,7 @@
               </fieldset>
 
                 <div class="">
-                  <label for="edit-always-ignore" class="mt-3">Ignore for both developers and content editors</label>
+                  <label for="edit-always-ignore" class="mt-3">Negeren voor zowel ontwikkelaars als inhoudsredacteuren</label>
                   <div class="form-textarea-wrapper">
                     <textarea  id="edit-always-ignore" name="always_ignore" rows="1" cols="20" placeholder=""></textarea>
                   </div>
@@ -198,99 +198,99 @@
               </div>
 
             </div>
-            <p>The key thing to know about the developer check areas is that they are <strong>not independent</strong> of the content check areas. In a split configuration, the developer areas are checked, and then those results are <strong>filtered</strong> to match the content areas. Any areas that are excluded for developers will also be excluded for content editors. Do not exclude editable content areas!</p>
+            <p>Het belangrijkste om te weten over de ontwikkelaarcontrolegebieden is dat ze <strong>niet onafhankelijk</strong> zijn van de inhoudscontrolegebieden. In een gesplitste configuratie worden de ontwikkelaarsgebieden gecontroleerd, en die resultaten worden vervolgens <strong>gefilterd</strong> om overeen te komen met de inhoudsgebieden. Gebieden die zijn uitgesloten voor ontwikkelaars worden ook uitgesloten voor inhoudsredacteuren. Sluit bewerkbare inhoudsgebieden niet uit!</p>
 
-            <p>Some tests allow for more precise configuration, to only hide certain alerts on affected elements. Look for them under:</p>
+            <p>Sommige tests maken nauwkeurigere configuratie mogelijk, om alleen bepaalde meldingen op betreffende elementen te verbergen. Zoek ze op onder:</p>
             <ul>
-              <li>Content tests: Links to check</li>
-              <li>Content tests: Embeds to check</li>
-              <li>Content tests: Detecting dynamic and shadow content</li>
-              <li>Developer tests: Contrast</li>
+              <li>Inhoudstest: Te controleren links</li>
+              <li>Inhoudstest: Te controleren insluitingen</li>
+              <li>Inhoudstest: Dynamische en shadow-inhoud detecteren</li>
+              <li>Ontwikkelaarstests: Contrast</li>
             </ul>
 
-            <h3 id="pages">Hide for specific pages or users</h3>
+            <h3 id="pages">Verbergen voor specifieke pagina's of gebruikers</h3>
             <p>
-              The easiest way to do this is by passing CSS classes or IDs to these options:
+              De eenvoudigste manier om dit te doen is door CSS-klassen of ID's door te geven aan deze opties:
             </p>
             <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
-              <label for="edit-no-load" class="form-item__label">Do not check on pages with these elements</label>
+              <label for="edit-no-load" class="form-item__label">Niet controleren op pagina's met deze elementen</label>
               <div class="form-textarea-wrapper">
                 <textarea data-drupal-selector="edit-no-load" aria-describedby="edit-no-load--description" id="edit-no-load" name="no_load" rows="1" cols="20" class="form-textarea resize-vertical form-element form-element--type-textarea form-element--api-textarea"></textarea>
               </div>
 
-              <label for="edit-ignore-all-if-absent" class="form-item__label">Hide all alerts on pages where these elements are not present</label>
+              <label for="edit-ignore-all-if-absent" class="form-item__label">Alle meldingen verbergen op pagina's waar deze elementen niet aanwezig zijn</label>
               <div class="form-textarea-wrapper">
                 <textarea data-drupal-selector="edit-ignore-all-if-absent" aria-describedby="edit-ignore-all-if-absent--description" id="edit-ignore-all-if-absent" name="ignore_all_if_absent" rows="1" cols="20" class="form-textarea resize-vertical form-element form-element--type-textarea form-element--api-textarea"></textarea>
               </div>
 
             </div>
             <p>
-              The first will prevent checks from running, and the toolbar will not show.
+              De eerste voorkomt dat controles worden uitgevoerd, en de werkbalk wordt niet weergegeven.
             </p>
             <p>
-              The second will start the checker minimized, and auto-mark (for the current user) all issues as "Ignored," even if they are errors. This allows the tests to run and update the dashboard without bothering the user.
+              De tweede start de checker geminimaliseerd en markeert automatisch (voor de huidige gebruiker) alle problemen als "Ignored," zelfs als het fouten zijn. Dit maakt het mogelijk dat tests worden uitgevoerd en het dashboard wordt bijgewerkt zonder de gebruiker te storen.
             </p>
             <p>
-              If you want to use these to control which users see the checker, you may need to adjust your theme to output a class, e.g. <code>.user-247</code>
+              Als u deze wilt gebruiken om te bepalen welke gebruikers de checker zien, moet u mogelijk uw thema aanpassen om een klasse uit te voeren, bijv. <code>.user-247</code>
             </p>
 
-            <h2 id="dashboard">Manage site-wide results</h2>
+            <h2 id="dashboard">Sitebrede resultaten beheren</h2>
             <section id="refresh">
-              <h3 class="pt-3">Crawling and updating results</h3>
-              <p>Editoria11y is a <strong>real-time monitoring tool, not a crawler</strong>. Its site-wide reports update when authors view pages, so regular crawling is not generally needed. The CSA module <em>does</em> include a crawler, but it should only be needed in these three situations:</p>
+              <h3 class="pt-3">Crawlen en resultaten bijwerken</h3>
+              <p>Editoria11y is een <strong>realtime bewakingsinstrument, geen crawler</strong>. De sitebrede rapporten worden bijgewerkt wanneer auteurs pagina's bekijken, zodat regelmatig crawlen over het algemeen niet nodig is. De CSA-module <em>bevat</em> wel een crawler, maar die is alleen nodig in deze drie situaties:</p>
               <ol>
                 <li>
-                  When first installing Editoria11y on an existing site with many pages. Pages need to be visited before they will appear on the dashboard, so a quick initial crawl saves time.
+                  Bij de eerste installatie van Editoria11y op een bestaande site met veel pagina's. Pagina's moeten worden bezocht voordat ze op het dashboard verschijnen, zodat een snelle eerste crawl tijd bespaart.
                 </li>
                 <li>
-                  Major updates to themes or modules may fix (or cause) issues on many pages that will not appear until visited or crawled..
+                  Grote updates van thema's of modules kunnen problemen op veel pagina's oplossen (of veroorzaken) die pas verschijnen nadat ze zijn bezocht of gecrawld.
                 </li>
                 <li>
-                  Bulk actions in the admin interface like deleting pages or redirects tend to leave behind results from pages that no longer exist or have moved. In these cases it helps to use the "Refresh" tab's maintenance actions to refresh page URLs, and detect and drop deleted pages.
+                  Bulkacties in de beheerinterface, zoals het verwijderen van pagina's of omleidingen, laten doorgaans resultaten achter van pagina's die niet meer bestaan of zijn verplaatst. In deze gevallen helpt het om de onderhoudsmiddelen van het tabblad "Refresh" te gebruiken om pagina-URL's te vernieuwen en verwijderde pagina's te detecteren en te verwijderen.
                 </li>
               </ol>
-              <p>No data leaves your site during a crawl. The CSA crawler is not a cloud tool; it uses your browser to load and check the pages on your own site. The downside of this approach is that <strong>browsers pause background tabs</strong>. You will need to keep your computer on and awake during a crawl. Plan to open a new window for the crawler and leave it as the foreground tab for that window as it works. You can continue working in another window. The crawler will update its estimate after each batch of pages.</p>
+              <p>Er verlaten geen gegevens uw site tijdens een crawl. De CSA-crawler is geen cloudtool; hij gebruikt uw browser om de pagina's op uw eigen site te laden en te controleren. Het nadeel van deze aanpak is dat <strong>browsers achtergrondtabbladen pauzeren</strong>. U moet uw computer ingeschakeld en wakker houden tijdens een crawl. Plan om een nieuw venster te openen voor de crawler en laat het het voorgrondtabblad van dat venster zijn terwijl het werkt. U kunt in een ander venster blijven werken. De crawler werkt zijn schatting bij na elke batch pagina's.</p>
             </section>
             <section id="reports">
-              <h3>Viewing reports</h3>
+              <h3>Rapporten bekijken</h3>
               <div class="my-4 border shadow" style="background: url(/assets/images/3x-dashboard.png) 86% 0%; padding-top: 28%; background-size: 106%;"></div>
               <ul>
                 <li>
-                  <strong>Recent</strong> allows for exploring by individual alerts. This allows you to do things like filter to find all instances of the same alert type, or see which alerts are appearing frequently in recent content, or which authors still have a habit of making the same mistake.
+                  <strong>Recent</strong> maakt het mogelijk om individuele meldingen te verkennen. Zo kunt u bijvoorbeeld filteren om alle instanties van hetzelfde meldingstype te vinden, of zien welke meldingen vaak voorkomen in recente inhoud, of welke auteurs nog steeds dezelfde fout maken.
                 </li>
                 <li>
-                  <strong>Pages</strong> shows alert counts per page, grouped by page. This allows you to find pages with the most issues, and to filter by page attributes like content type and published status.
+                  <strong>Pagina's</strong> toont meldingenaantallen per pagina, gegroepeerd per pagina. Hiermee kunt u pagina's met de meeste problemen vinden en filteren op pagina-attributen zoals inhoudstype en publicatiestatus.
                 </li>
                 <li>
-                  <strong>Alerts</strong> shows issues by type.
+                  <strong>Meldingen</strong> toont problemen per type.
                 </li>
                 <li>
-                  <strong>Dismissals</strong> allows for monitoring whether authors are dismissing correctly, and has "reset" buttons to restore dismissed alerts.
+                  <strong>Afwijzingen</strong> maakt het mogelijk om te bewaken of auteurs correct afwijzen, en bevat "reset"-knoppen om afgewezen meldingen te herstellen.
                 </li>
                 <li>
-                  <strong>Export</strong> contains versions of the Pages, Alerts and Dismissals reports that can be filtered to prepare CSV downloads. <em>Provided by the CSV Export submodule</em>
+                  <strong>Export</strong> bevat versies van de rapporten Pagina's, Meldingen en Afwijzingen die kunnen worden gefilterd om CSV-downloads voor te bereiden. <em>Geleverd door de CSV Export-submodule</em>
                 </li>
                 <li>
-                  <strong>Refresh</strong> contains dashboard maintenance tools to drop alerts from deleted pages, drop alerts from parameterized pseudo-pages like /search?query=example, update stored page titles and URLs, and run a manual crawl. <em>Provided by the CSA submodule</em>
+                  <strong>Refresh</strong> bevat dashboardonderhoudsmiddelen om meldingen van verwijderde pagina's te verwijderen, meldingen van geparametriseerde pseudo-pagina's zoals /search?query=example te verwijderen, opgeslagen paginatitels en -URL's bij te werken, en een handmatige crawl uit te voeren. <em>Geleverd door de CSA-submodule</em>
                 </li>
               </ul>
             </section>
 
-            <h2 id="positioning">Fix hidden or offscreen tips</h2>
+            <h2 id="positioning">Verborgen of buiten beeld geplaatste tips oplossen</h2>
 
-            <p>The module provides fields for two of the library's configuration options to change how tips are placed:</p>
+            <p>De module biedt velden voor twee van de configuratieopties van de bibliotheek om te wijzigen hoe tips worden geplaatst:</p>
 
               <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
-                <label for="edit-element-hides-overflow" class="form-item__label">Elements with overflow hidden</label>
+                <label for="edit-element-hides-overflow" class="form-item__label">Elementen met verborgen overloop</label>
                   <textarea data-drupal-selector="edit-element-hides-overflow" aria-describedby="edit-element-hides-overflow--description" id="edit-element-hides-overflow" name="element_hides_overflow" rows="1" cols="60" class="form-textarea resize-vertical form-element form-element--type-textarea form-element--api-textarea"></textarea>
-                <label for="edit-hidden-handlers" class="form-item__label">Theme JS will handle revealing hidden tooltips inside these containers</label>
+                <label for="edit-hidden-handlers" class="form-item__label">Thema-JS verwerkt het onthullen van verborgen tooltips binnen deze containers</label>
                   <textarea data-drupal-selector="edit-hidden-handlers" aria-describedby="edit-hidden-handlers--description" id="edit-hidden-handlers" name="hidden_handlers" rows="1" cols="60" class="form-textarea resize-vertical form-element form-element--type-textarea form-element--api-textarea"></textarea>
               </div>
-            <p>Some themes have columns or widgets that hide horizontal or vertical overflow. The library automatically detects when a toggle would fall outside the visible part of the <strong>page.</strong> Telling the library that certain containers hide overflow means it will also attempt to position tips for elements in those container inside their borders.</p>
-            <p>Some themes have widgets that toggle the visibility of content, such as accordions, tabs and slideshows. Tips inside these elements will also be hidden. Providing a list of selectors for these widgets means Editoria11y will pause briefly when a user tries to jump to those tips using a next or previous button. Drupal themes and modules can then follow the directions from the library section on <a href="/nl/install/#hidden-content">dealing with tips on hidden content</a> to reveal the hidden content.</p>
+            <p>Sommige thema's hebben kolommen of widgets die horizontale of verticale overloop verbergen. De bibliotheek detecteert automatisch wanneer een schakelaar buiten het zichtbare deel van de <strong>pagina</strong> zou vallen. Door de bibliotheek te vertellen dat bepaalde containers overloop verbergen, probeert ze ook tips voor elementen in die containers binnen hun grenzen te plaatsen.</p>
+            <p>Sommige thema's hebben widgets die de zichtbaarheid van inhoud in- en uitschakelen, zoals accordeons, tabbladen en diashows. Tips in deze elementen worden ook verborgen. Door een lijst van selectors voor deze widgets op te geven, pauzeert Editoria11y kort wanneer een gebruiker naar die tips probeert te springen via een volgende of vorige knop. Drupal-thema's en modules kunnen vervolgens de instructies volgen uit het bibliotheekgedeelte over <a href="/nl/install/#hidden-content">omgaan met tips op verborgen inhoud</a> om de verborgen inhoud te onthullen.</p>
 
-            <h2 id="runtime">Write your own config</h2>
-            <p>In PHP: the Drupal module provides a <code>hook_editoria11y_alter_config</code> to change the content of <code>drupalSettings.editoria11y</code> in a module or theme. For example:</p>
+            <h2 id="runtime">Uw eigen configuratie schrijven</h2>
+            <p>In PHP: de Drupal-module biedt een <code>hook_editoria11y_alter_config</code> om de inhoud van <code>drupalSettings.editoria11y</code> te wijzigen in een module of thema. Bijvoorbeeld:</p>
             <pre class="language-php"><code><!--<?php
 /**
  * @file
@@ -315,7 +315,7 @@ function MY_MODULE_editoria11y_alter_config(array &$attach, CacheableMetadata $c
     $attach['allow_ok'] = 'okAll';
   }
 }--></code></pre>
-            <p>Modifying <code>drupalSettings</code> only helps if the module JS is already set up to pass that value to the library. To add additional parameters, you need to modify the JS <code>options</code> object directly. The module checks for one global JS variable of <code>editoria11yOptionsOverride</code>. If this is set, it will pass the <code>options</code> object to an <code>editoria11yOptions</code> function you have provided in your module or theme. You can now set any of the <a href="https://editorsally.ddev.site/en/install/#params">library parameters</a>.</p>
+            <p>Het aanpassen van <code>drupalSettings</code> helpt alleen als de module-JS al is ingesteld om die waarde door te geven aan de bibliotheek. Om extra parameters toe te voegen, moet u het JS-object <code>options</code> rechtstreeks aanpassen. De module controleert op één globale JS-variabele <code>editoria11yOptionsOverride</code>. Als deze is ingesteld, geeft hij het object <code>options</code> door aan een functie <code>editoria11yOptions</code> die u in uw module of thema hebt opgegeven. U kunt nu elk van de <a href="https://editorsally.ddev.site/en/install/#params">bibliotheekparameters</a> instellen.</p>
             <pre class="language-javascript"><code><!--var editoria11yOptionsOverride = true;
 var editoria11yOptions = function(options) {
   // You now have access to the processed options object that will be passed to the library.
@@ -334,11 +334,10 @@ var editoria11yOptions = function(options) {
 }
 --></code></pre>
             <section id="custom-tests">
-            <h2>Write your own tests</h2>
-            <p>First, in the module config, add 1 to the "Custom tests" options so it knows to
-              watch for the tests.</p>
-            <p>Then create a Drupal JS library with your tests in your theme or module, using the <a href="/nl/install/#custom-tests">library guide to writing custom tests</a>.</p>
-            <p>Here's a working example from Princeton, of a custom test to alert on Safe Links. Note that it accesses the Editoria11y class through <code>Drupal.Ed11y.</code></p>
+            <h2>Uw eigen tests schrijven</h2>
+            <p>Voeg eerst in de moduleconfiguratie 1 toe aan de opties "Aangepaste tests" zodat de module weet dat hij op de tests moet letten.</p>
+            <p>Maak vervolgens een Drupal JS-bibliotheek met uw tests in uw thema of module, met behulp van de <a href="/nl/install/#custom-tests">bibliotheekgids voor het schrijven van aangepaste tests</a>.</p>
+            <p>Hier is een werkend voorbeeld van Princeton, van een aangepaste test om te waarschuwen voor Safe Links. Let op dat het toegang heeft tot de klasse Editoria11y via <code>Drupal.Ed11y.</code></p>
             <pre class="language-javascript"><code><!--const psEd11yCustomTests = function() {
 
   // 1.
