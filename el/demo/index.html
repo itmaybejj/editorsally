@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang="el" data-bs-theme="light">
+  <head>
+<link rel="icon" type="image/png" href="/assets/favicons/favicon-512x512.png" sizes="512x512" />
+    <link rel="icon" type="image/png" href="/assets/favicons/favicon-192x192.png" sizes="192x192" />
+    <link rel="icon" type="image/png" href="/assets/favicons/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicons/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <meta charset="utf-8" />
+    <title>Επίδειξη — Editoria11y</title>
+    <link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/assets/theme.css" rel="stylesheet" />
+    <meta name="theme-color" content="#712cf9" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-md">
+        <div class="container col-sm-12 mx-auto">
+          <a href="/el/about" class="d-flex align-items-center  navbar-brand">
+            <svg class="logo-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="-.75 -3.5 10.1699 19.1777"><path fill="currentColor" d="M3.7031,10.5527c-.3633-.6562-.6426-1.1387-.8379-1.4473l-.3105-.4863-.2344-.3574c-.5117-.7969-1.0449-1.4551-1.5996-1.9746.3164-.2617.6113-.3926.8848-.3926.3359,0,.6348.123.8965.3691s.5918.7148.9902,1.4062c.4531-1.4727,1.0293-2.8691,1.7285-4.1895.3867-.7188.7314-1.2021,1.0342-1.4502s.7041-.3721,1.2041-.3721c.2656,0,.5938.041.9844.123-1.0039.8086-1.8066,1.7695-2.4082,2.8828s-1.3789,3.0762-2.332,5.8887Z"/></svg> Editoria<span style="margin-left: -1px;">11</span>y
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Εναλλαγή πλοήγησης">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Editora11y</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Κλείσιμο"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 nav-pills">
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+  <main class="container col-lg-12 mx-auto py-5">
+    <div class="row docs">
+      <div class="col-12 col-md-5 col-lg-4 mb-5">
+        <div id="on-this-page" class="list-group ms-2 ms-lg-5 position-sticky top-0 pt-3">
+        </div>
+      </div>
+      <div class="col-12 col-md-7 col-lg-8 pt-3" data-bs-spy="scroll" data-bs-target="#on-this-page" data-bs-smooth-scroll="true" tabindex="0">
+        
+        
+
+        <h2 class=”pt-4” id=”demo”>Επίδειξη</h2>
+          <p class=”fs-5”>Δείτε μια <a href=”https://youtu.be/uYvNYPg38nU?si=6YANYrJpVzNAJYDl&t=260”>βιντεοπαρουσίαση του ιστορικού και των δυνατοτήτων του ελεγκτή</a>,
+            ή δοκιμάστε να επεξεργαστείτε το περιεχόμενο επίδειξης παρακάτω, να ανοίξετε και να κλείσετε ειδοποιήσεις,
+            και να χρησιμοποιήσετε τη γραμμή εργαλείων <span style=”text-wrap: nowrap;”>(<img src=”/assets/images/3x-toolbar” class=”inline-block” style=”width: 5rem; height: auto;” alt=”Στιγμιότυπο οθόνης της γραμμής εργαλείων Editoria11y, που δείχνει 4 σφάλματα.” width=”97” height=”50” loading=”lazy”>)</span> για να δείτε τη δομή επικεφαλίδων. Αυτή η επίδειξη περιλαμβάνει τόσο τους βασικούς ελέγχους όσο και τη σουίτα CSA.</p>
+          <p class=”fs-5 mb-5 pb-5”>Αυτή η επίδειξη χρησιμοποιεί τον επεξεργαστή TinyMCE. Το Editoria11y είναι συμβατό με τους περισσότερους επεξεργαστές κειμένου και διαθέτει έτοιμες υλοποιήσεις για CKEditor και Gutenberg σε WordPress και Drupal.</p>
+            <div id=”ed11y-demo” class=”p-5” contenteditable=””>
+            <section id=”headings”>
+
+              <h3 class=”pt-1”>Επικεφαλίδες</h3>
+
+              <p>Αυτή η επικεφαλίδα παρέλειψε ένα επίπεδο:</p>
+              <div class=”positive”><h6 id=”this-h6-should-have-been-an-h3”>Ωχ</h6></div>
+
+              <p>Αυτή η επικεφαλίδα δεν έχει καθόλου κείμενο:</p>
+              <div class=”positive”><h4 class=”empty-example”> </h4>
+              </div>
+
+              <p>Αυτό το σύντομο παράθεμα μπορεί να είναι επικεφαλίδα:</p>
+              <div class=”positive”><blockquote>Είμαι μια ψεύτικη επικεφαλίδα</blockquote></div>
+
+              <p>Αυτή η παράγραφος με πλήρη έντονη γραφή μπορεί να είναι επικεφαλίδα:</p>
+              <p class=”positive”><strong>Είμαι μια ψεύτικη επικεφαλίδα</strong></p>
+
+              <p>Αυτή η επικεφαλίδα είναι πολύ μεγάλη:</p>
+              <div class=”positive”><h4>Οι επικεφαλίδες και οι υποεπικεφαλίδες δημιουργούν έναν πλοηγήσιμο πίνακα περιεχομένων για βοηθητικές τεχνολογίες. Οι αριθμοί υποδεικνύουν εσοχές σε μια σχέση ένθεσης. Πολύ μεγάλες επικεφαλίδες πιθανώς σημαίνουν ότι ο συγγραφέας λέει πάρα πολλά στην επικεφαλίδα.</h4></div>
+
+            </section>
+
+
+            <section id=”text-alternatives”>
+              <h3 data-section=”text-alternatives”>Εναλλακτικό κείμενο για εικόνες</h3>
+
+              <p>Αυτή η επικεφαλίδα αποτελείται από εικόνα κειμένου χωρίς alt:</p>
+              <div class=”positive”>
+                <h4><img loading=”lazy” alt=”” src=”/assets/images/px20240813sm.jpg” ></h4>
+              </div>
+
+              <p>Εικόνα χωρίς χαρακτηριστικό alt:</p>
+              <p class=”positive”><img loading=”lazy” src=”/assets/images/px20240813sm.jpg”></p>
+
+              <p>Εικόνα με μη έγκυρο χαρακτηριστικό alt, π.χ., <code class=”language-plaintext highlighter-rouge”>alt=”'”</code></p>
+
+              <p class=”positive”><img loading=”lazy” alt=”'” src=”/assets/images/px20240813sm.jpg”></p>
+
+              <p id=”image-with-a-filename-as-an-alt”>Εικόνα με όνομα αρχείου ως alt</p>
+
+              <p class=”positive”><img loading=”lazy” alt=”filename.jpg” src=”/assets/images/px20240813sm.jpg”></p>
+
+              <p id=”image-with-redundant-text-in-its-alt”>Εικόνα με πλεονάζον κείμενο στο alt, όπως «εικόνα του:»</p>
+
+              <p class=”positive”><img loading=”lazy” alt=”Εικόνα ενός σκύλου.” src=”/assets/images/px20240813sm.jpg”></p>
+
+              <p id=”linked-image-with-redundant-text-in-its-alt”>Συνδεδεμένη εικόνα με πλεονάζον κείμενο στο alt, όπως «εικόνα του:»</p>
+
+              <p class=”positive”><a href=”./editable.htm”><img loading=”lazy” alt=”Εικόνα ενός σκύλου.” src=”/assets/images/px20240813sm.jpg”></a></p>
+
+              <p id=”image-with-placeholder-alt”>Εικόνα με προσωρινό alt:</p>
+              <p class=”positive”><img loading=”lazy” alt=”TBD” src=”/assets/images/px20240813sm.jpg”></p>
+
+              <p id=”linked-image-with-placeholder-alt”><strong>Συνδεδεμένη</strong> εικόνα με προσωρινό alt:</p>
+              <p class=”positive”><a href=”./editable.htm”><img loading=”lazy” alt=”TBD” src=”/assets/images/px20240813sm.jpg”></a></p>
+
+              <p id=”image-with-machine-alt”>Εικόνα με αυτόματα παραγόμενο alt:</p>
+              <p class=”positive”><img loading=”lazy” alt=”$700VIDEOSABOUTTURTLESALL2SECONDSLONG” src=”/assets/images/px20240813sm.jpg”></p>
+
+              <p id=”linked-image-with-machine-alt”>Συνδεδεμένη εικόνα με αυτόματα παραγόμενο alt:</p>
+              <p class=”positive”><a href=”./editable.htm”><img loading=”lazy” alt=”$700VIDEOSABOUTTURTLESALL2SECONDSLONG” src=”/assets/images/px20240813sm.jpg”></a></p>
+
+              <p id=”image-with-very-long-alt-text”>Εικόνα με πολύ μεγάλο εναλλακτικό κείμενο:</p>
+
+              <p class=”positive”><img loading=”lazy” alt=”Κοιτάξτε αυτό το σκυλάκι. Αυτό το σκυλάκι είναι τόσο χαρούμενο. Αυτό το σκυλάκι πήγε βόλτα και η βόλτα πήγε σε μια λίμνη και υπήρχαν κάθε λογής συναρπαστικές μυρωδιές. Τι καταπληκτική μέρα είχε αυτό το σκυλάκι.” src=”/assets/images/px20240813sm.jpg”></p>
+
+              <p id=”images-in-links-where-the-alt-text-may-be-describing-the-image-instead-of-the-link”>Εικόνες σε συνδέσμους όπου το εναλλακτικό κείμενο μπορεί να περιγράφει την εικόνα αντί τον σύνδεσμο</p>
+
+              <p class=”positive”><a  href=”https://www.youtube.com/watch?v=DLzxrzFCyOs”>Αυτός ο σύνδεσμος έχει κείμενο και μια εικόνα.<img loading=”lazy” alt=”Ένα όμορφο γκρι πλαίσιο” src=”/assets/images/px20240813sm.jpg”></a></p>
+
+              <p id=”images-in-links-decorative”>Οποιαδήποτε συνδεδεμένη εικόνα (έλεγχος απενεργοποιημένος από προεπιλογή)</p>
+              <p class=”positive”><a href=”https://www.youtube.com/watch?v=DLzxrzFCyOs”><img loading=”lazy” alt=”Γεια σας” src=”/assets/images/px20240813sm.jpg”></a></p>
+
+              <p>Εικόνα σε figure με σήμανση διακοσμητικής:</p>
+              <figure class=”positive”>
+                <img loading=”lazy” alt=”” src=”/assets/images/px20240813sm.jpg”>
+                <figcaption>Υπάρχει figcaption.</figcaption>
+              </figure>
+
+              <p>Εικόνα σε figure με alt ίδιο με το figcaption:</p>
+              <figure class=”positive”>
+                <img loading=”lazy” alt=”Το figcaption είναι ίδιο με το alt” src=”/assets/images/px20240813sm.jpg”>
+                <figcaption>Το figcaption είναι ίδιο με το alt</figcaption>
+              </figure>
+              <p>Εικόνα σε καρουζέλ χωρίς alt:</p>
+              <div class=”positive”>
+                <img loading=”lazy” alt=”” class=”carousel” src=”/assets/images/px20240813sm.jpg”>
+              </div>
+            </section>
+            <section id=”contrast”>
+              <h3 data-section=”contrast”>Αντίθεση</h3>
+              <p>Μη αναγνώσιμος συνδυασμός χρωμάτων:</p>
+              <div class=”positive”><p style=”background: #ccc; color: #ddd;”>Εξαιρετικά ευανάγνωστο.</p></div>
+              <p>Το χρώμα χρειάζεται χειροκίνητο έλεγχο:</p>
+              <div class=”positive”><p style=”background: linear-gradient(45deg,#ccc 25%,#0000 25% 75%,#ccc 75%,#ccc),linear-gradient(45deg,#ccc 25%,#0000 25% 75%,#ccc 75%,#ccc)”>Και μη υπολογίσιμο.</p></div>
+              <div class=”positive”><label>Πεδίο εισαγωγής με χαμηλή αντίθεση
+                <input class=”form-text” type=”text” style=”color: #777;”></label></div>
+
+              <style>
+                #unsupported-placeholder::placeholder {
+                  color: color(rec2020 0.9 0.4 0.2);
+                }
+              </style>
+
+              <label for=”unsupported-placeholder”>Το χρώμα του placeholder δεν μπορεί να υπολογιστεί</label>
+              <div class=”positive” style=”background: transparent;”><input type=”text” id=”unsupported-placeholder” placeholder=”Rec2020 color space”></div>
+
+
+              <p>Γραφικό SVG χωρίς επαρκή αντίθεση</p>
+              <div class=”positive”><svg style=”width: 16px; height: 16px;” xmlns=”http://www.w3.org/2000/svg” viewBox=”0 0 512 512”><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path fill=”#999” d=”M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376C296.3 401.1 253.9 416 208 416 93.1 416 0 322.9 0 208S93.1 0 208 0 416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z”/></svg></div>
+
+              <p>Γραφικό SVG όπου η αντίθεση χρειάζεται χειροκίνητο έλεγχο</p>
+              <div class=”positive” style=”background: linear-gradient(45deg,#ccc 45%,#0000 45% 75%,#ccc 75%,#ccc),linear-gradient(145deg,#ccc 45%,#0000 45% 75%,#ccc 75%,#ccc)”><svg style=”width: 16px; height: 16px;” xmlns=”http://www.w3.org/2000/svg” viewBox=”0 0 512 512”><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path fill=”color(rec2020 0.9 0.4 0.2)” d=”M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376C296.3 401.1 253.9 416 208 416 93.1 416 0 322.9 0 208S93.1 0 208 0 416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z”/></svg></div>
+
+
+            </section>
+            <section id=”embed-media”>
+              <h3 data-section=”embed-media”>Ενσωματώσεις &amp; Πολυμέσα</h3>
+
+              <p>Βίντεο που επισημάνθηκε ότι χρειάζεται χειροκίνητο έλεγχο υποτίτλων:</p>
+              <div class=”positive” style=”width: 560px; aspect-ratio: 560 / 315; max-width: 100%; cursor: not-allowed;”>
+                <iframe width=”560” height=”315” inert=”” src=”https://www.youtube-nocookie.com/embed/QGsevnbItdU?si=W_b2i2o_n5v1ArvA” style=”width: 560px; aspect-ratio: 560 / 315; max-width: 100%; cursor: not-allowed;” title=”YouTube: Βίντεο πώς γίνεται. Η αναπαραγωγή είναι απενεργοποιημένη.” sandbox=”allow-scripts allow-same-origin” allow=”accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share” referrerpolicy=”origin” allowfullscreen></iframe>
+                <div><small><em>Η αναπαραγωγή απενεργοποιήθηκε για αποφυγή cookies.</em></small></div>
+              </div>
+
+              <p>Ο ήχος χρειάζεται απομαγνητοφώνηση:</p>
+              <div class=”positive”>
+                <div style=”border: 1px solid #444; background: #ccc; width: 320px; height: 60px;”><audio style=”height: 60px;”></audio>
+                </div>
+              </div>
+
+              <p>Iframe χωρίς τίτλο που χρειάζεται επίσης χειροκίνητο έλεγχο:</p>
+              <div class=”positive”>
+                <iframe data-needs-src=””></iframe>
+              </div>
+
+              <p>Μη εστιάσιμο iframe:</p>
+              <div class=”positive”>
+                <iframe title=”example” sandbox=”” tabindex=”-1” data-needs-src=””></iframe>
+              </div>
+
+              <p>Ένθετα διαδραστικά στοιχεία</p>
+              <div class=”positive”>
+                <details><summary>Ακορντεόν</summary>
+                  <details><summary>Ακορντεόν</summary>Έκπληξη!</details>
+                </details>
+              </div>
+            </section>
+            <section id=”meaningful-links”>
+              <h3 data-section=”meaningful-links”>Σημαντικοί σύνδεσμοι</h3>
+
+              <p id=”links-with-no-text-at-all”>Σύνδεσμοι χωρίς καθόλου κείμενο</p>
+              <p class=”positive”><a href=”https://www.youtube.com/watch?v=DLzxrzFCyOs”
+                                     style=”display: inline-block; width: 3rem; border-bottom: 1px solid;”></a> Κενοί σύνδεσμοι</p>
+
+              <p id=”links-titled-with-a-url”>Σύνδεσμοι με ετικέτα μόνο URL:</p>
+              <p class=”positive”><a  href=”https://www.youtube.com/watch?v=DLzxrzFCyOs”>https://www.youtube.com/watch?v=DLzxrzFCyOs</a></p>
+
+              <p id=”links-titled-with-a-symbol”>Σύνδεσμοι με ετικέτα μόνο σύμβολα:</p>
+              <p class=”positive”><a href=”https://www.youtube.com/watch?v=DLzxrzFCyOs”>↣</a></p>
+
+              <p>Σύνδεσμοι με τα ίδια ονόματα οδηγούν σε διαφορετικά μέρη</p>
+              <p class=”positive”><a href=”https://www.youtube.com/watch?v=fjOeJssZX_Q”>Χελώνες</a> <a href=”https://www.youtube.com/watch?v=cWppAbqm9I8”>Χελώνες</a></p>
+
+              <p id=”links-titled-with-doi”>Σύνδεσμοι με ετικέτα μόνο αριθμό DOI:</p>
+              <p class=”positive”><a href=”https://doi.org/10.1145/3493612.3520468”>doi.org/10.1145/3493612.3520468</a></p>
+
+              <p id=”links-titled-with-click”>Σύνδεσμοι με ετικέτες χωρίς νόημα:</p>
+              <p class=”positive”><a  href=”https://www.youtube.com/watch?v=DLzxrzFCyOs” title=”https://www.youtube.com/watch?v=DLzxrzFCyOs”>Κάντε κλικ εδώ</a></p>
+
+              <p id=”links-titled-with-empty”>Συνδεδεμένα εικονίδια χωρίς εναλλακτικό κείμενο:</p>
+              <p class=”positive”><a href=”https://www.youtube.com/watch?v=DLzxrzFCyOs”><svg style=”width: 16px; height: 16px;” xmlns=”http://www.w3.org/2000/svg” viewBox=”0 0 512 512”><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d=”M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376C296.3 401.1 253.9 416 208 416 93.1 416 0 322.9 0 208S93.1 0 208 0 416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z”/></svg></a></p>
+
+              <p id=”links-that-open-in-a-new-window-without-an-external-link-icon-or-text-warning”>Σύνδεσμοι που ανοίγουν σε νέο παράθυρο χωρίς εικονίδιο εξωτερικού συνδέσμου ή προειδοποίηση κειμένου</p>
+
+              <p class=”positive”><a href=”https://www.youtube.com/watch?v=DLzxrzFCyOs” target=”_blank”>Ειδοποίηση για έλεγχο ανοίγματος-σε.</a></p>
+
+              <p id=”links-to-PDF”>Σύνδεσμοι σε PDF</p>
+              <p class=”positive”><a href=”https://www.youtube.com/watch?v=dQw4w9WgXcQ#.pdf” class=””>Καλή διασκέδαση.</a></p>
+
+              <p id=”links-to-doc”>Σύνδεσμοι σε άλλα έγγραφα</p>
+              <p class=”positive”><a href=”https://www.youtube.com/watch?v=dQw4w9WgXcQ#.doc” class=””>Ένας ψεύτικος σύνδεσμος εγγράφου.</a></p>
+
+              <p id=”links-redundant”>Σύνδεσμοι με πλεονάζοντα χαρακτηριστικά title</p>
+              <p class=”positive”><a href=”https://www.youtube.com/watch?v=dQw4w9WgXcQ” title=”Περάστε από πάνω”>Περάστε από πάνω</a></p>
+
+              <p>Σύνδεσμοι με χαρακτηριστικά που τους αφαιρούν από τη σειρά tab:</p>
+              <p class=”positive”><a href=”./editable.htm” aria-hidden=”true”>Σύνδεσμοι aria-hidden χωρίς αρνητικό tabindex.</a></p>
+
+              <p>Σύνδεσμοι με aria-labelledby που δείχνουν σε στοιχεία χωρίς κείμενο:</p>
+              <p class=”positive”><a href=”./editable.htm” id=”oops” aria-labelledby=”oops”></a></p>
+
+              <p>Σύνδεσμοι με γενικές λέξεις στην ετικέτα aria:</p>
+              <p class=”positive”><a href=”www.google.com/” aria-label=”has aria label”>μάθετε περισσότερα</a></p>
+
+              <p>Συνδεδεμένη εικόνα χωρίς εναλλακτικό κείμενο:</p>
+              <p class=”positive”><a href=”./editable.htm”><img loading=”lazy” alt=”” src=”/assets/images/px20240813sm.jpg” class=””></a></p>
+
+              <p>Συνδεδεμένη εικόνα με μη προφέρσιμο εναλλακτικό κείμενο:</p>
+              <p class=”positive”><a href=”./editable.htm”><img loading=”lazy” alt=”'” src=”/assets/images/px20240813sm.jpg” class=””></a></p>
+
+              <p>Συνδεδεμένη εικόνα χωρίς χαρακτηριστικό alt:</p>
+              <p class=”positive”><a href=”./editable.htm”><img loading=”lazy” src=”/assets/images/px20240813sm.jpg” class=””></a></p>
+
+              <p>Συνδεδεμένη εικόνα χωρίς χαρακτηριστικό alt σε σύνδεσμο με κείμενο:</p>
+              <p class=”positive”><a href=”./editable.htm”>Αναζήτηση <img loading=”lazy” src=”/assets/images/px20240813sm.jpg” class=””></a></p>
+
+              <p>Συνδεδεμένη εικόνα με μόνο όνομα αρχείου ως εναλλακτικό κείμενο:</p>
+              <p class=”positive”><a href=”./editable.htm”><img loading=”lazy” alt=”http://jpg.gif” src=”/assets/images/px20240813sm.jpg”>
+              </a></p>
+
+              <p>Συνδεδεμένη εικόνα με ύποπτα μεγάλο εναλλακτικό κείμενο:</p>
+              <p class=”positive”><a href=”./editable.htm”><img loading=”lazy” alt=”Κοιτάξτε αυτό το σκυλάκι. Αυτό το σκυλάκι είναι τόσο χαρούμενο. Αυτό το σκυλάκι πήγε βόλτα και η βόλτα πήγε σε μια λίμνη και υπήρχαν κάθε λογής συναρπαστικές μυρωδιές. Τι καταπληκτική μέρα είχε αυτό το σκυλάκι.” src=”/assets/images/px20240813sm.jpg”>
+              </a></p>
+
+              <p>Σπασμένοι σύνδεσμοι εντός σελίδας</p>
+              <p class=”positive”>
+                <a href=”#oh-no”>Δεν υπάρχει τέτοιο ID.</a>
+              </p>
+
+              <p>Σύνδεσμοι σε διακομιστή ανάπτυξης</p>
+              <p class=”positive”>
+                <a href=”https://tugboatqa.com”>Ωχ</a>
+              </p>
+
+              <p>Διπλότυπες αγκυρώσεις</p>
+              <p class=”positive”><a id=”dupe” href=”#dupe”>Αγκύρωση 1</a> <a id=”dupe” href=”#dupe”>Αγκύρωση 2</a></p>
+            </section>
+            <section>
+              <h3 id=”table-tests”>Πίνακες</h3>
+
+              <p id=”tables-without-valid-headers”>Πίνακες χωρίς έγκυρες κεφαλίδες</p>
+
+              <table class=”positive”><tbody><tr><td>Ένας πίνακας χωρίς κεφαλίδα TH δεν είναι έγκυρος</td><td class=”positive”><h4 >Οι επικεφαλίδες δομής δεν μετράνε</h4></td><td class=”negative”><p><strong>Η απενεργοποίηση πρέπει να είναι έλεγχος κεφαλίδας περιεχομένου μέσα σε πίνακες</strong></p></td></tr></tbody></table>
+
+              <table><thead>
+              <tr>
+                <th class=”positive”></th>
+                <th class=”negative”>Κενές κεφαλίδες</th>
+              </tr>
+              </thead>
+                <tbody>
+                <tr class=”negative”>
+                  <th>Βρήκα</th>
+                  <td>700 βίντεο με χελώνες</td>
+                </tr>
+                <tr class=”negative”>
+                  <th>Καθένα</th>
+                  <td>Διάρκειας 2 δευτερολέπτων</td>
+                </tr>
+                </tbody>
+              </table>
+            </section>
+            <section id=”legibility”>
+              <h3 data-section=”legibility”>Αναγνωσιμότητα</h3>
+
+              <div class=”positive”><p>ΑΡΚΕΤΕΣ ΛΕΞΕΙΣ ΣΤΗ ΣΕΙΡΑ ΜΕ ΚΕΦΑΛΑΙΑ ΓΡΑΜΜΑΤΑ ΘΑ ΕΝΕΡΓΟΠΟΙΗΣΟΥΝ ΠΡΟΕΙΔΟΠΟΙΗΣΗ ΧΕΙΡΟΚΙΝΗΤΟΥ ΕΛΕΓΧΟΥ.</p></div>
+
+              <p class=”positive”><u>Υπογραμμισμένο κείμενο</u></p>
+
+              <p class=”positive”><em>Λίγη πλάγια γραφή είναι εντάξει, αλλά μεγάλα μπλοκ τονισμένου κειμένου δεν είναι πολύ ευανάγνωστα. Λίγο είναι αποδεκτό φυσικά, αλλά υπάρχουν όρια, και μια ολόκληρη παράγραφος είναι υπερβολικά πολύ. Αυτό, για παράδειγμα, είναι μια ολόκληρη παράγραφος. Είναι κάπως δύσκολο να διαβαστεί, έτσι δεν είναι; Αλλά αυτός ο έλεγχος δεν ενεργοποιείται μέχρι να είναι τόσο μεγάλο, οπότε δεν θα βλέπετε ψευδώς θετικά αποτελέσματα στο περιεχόμενό σας εκτός αν γράφετε τακτικά τόσο μεγάλες παραγράφους.</em></p>
+
+              <p class=”positive” style=”text-align: justify;”>Πλήρης στοίχιση κειμένου</p>
+
+              <p class=”positive”>Υπερβολικός εκθέτης ή δείκτης· <sub>ο δείκτης πρέπει να χρησιμοποιείται για μικρές αναφορές και υποσημειώσεις, όχι για ολόκληρες προτάσεις ή παραγράφους.</sub></p>
+
+              <p class=”positive”><span style=”font-size: 10px;”>Πολύ μικρές γραμματοσειρές</span></p>
+
+              <div class=”positive”>
+                <p>* Ψεύτικες λίστες με κοινούς χαρακτήρες,</p><p>* γράμματα, αριθμούς και emoji.</p>
+              </div>
+
+              <div class=”positive”><li>Ετικέτα UL λείπει</li></div>
+            </section>
+
+            <section id=”form-elements”>
+              <h3 data-section=”form-elements”>Φόρμες</h3>
+
+              <p>Κουμπί χωρίς ετικέτα</p>
+              <div class=”positive”>
+                <button class=”btn btn-primary p-3 pt-4”></button>
+              </div>
+
+              <p>Πεδία εισαγωγής με αόρατη ετικέτα, ρωτώντας αν υπάρχει και ορατή ετικέτα.</p>
+              <div class=”positive”>
+                <input type=”text” title=”Email”>
+              </div>
+
+              <p>Πεδία εισαγωγής μόνο με ετικέτα placeholder, ρωτώντας αν υπάρχει και ορατή ετικέτα.</p>
+              <div class=”positive”>
+                <input type=”text” placeholder=”Email”>
+              </div>
+
+              <div class=”positive”>
+                <p>Κουμπί με προσβάσιμη ετικέτα διαφορετική από την ορατή ετικέτα.</p>
+                <button class=”btn btn-primary” aria-label=”bye”>Hi</button>
+              </div>
+
+              <div class=”positive”>
+                <p>Κουμπί με μη έγκυρο χαρακτηριστικό aria-labelledby.</p>
+                <button class=”btn btn-primary” aria-labelledby=”bye”>Hi</button>
+              </div>
+
+              <div class=”positive”>
+                <p>Κουμπί με πλεονάζουσα ετικέτα.</p>
+                <button class=”btn btn-primary”>Πατήστε αυτό το κουμπί</button>
+              </div>
+
+              <div class=”positive”>
+                <p>Κουμπί επαναφοράς.</p>
+                <input class=”btn btn-danger” type=”reset”>
+              </div>
+
+              <p class=”positive”><a href=”./editable.htm” tabindex=”2”>Ανακάτεμα της σειράς tab</a></p>
+            </section>
+
+
+
+
+          
+
+          </div>
+          <div class="mt-5 pt-5 text-center"><a class="btn btn-primary btn-lg" href="/el/about/">Σχετικά</a> <a class="btn btn-primary btn-lg" href="/el/features/">Λειτουργίες</a> <a class="btn btn-dark btn-lg" aria-current="page" href="/el/demo/">Demo</a> <a class="btn btn-primary btn-lg" href="/el/license/">Τιμολόγηση και εισφορές</a></div>
+
+      </div>
+    </div>
+
+    </main>
+    <footer class="container col-lg-12 mx-auto pt-3 my-5 text-body-secondary border-top text-center text-md-start">
+      <div class="container">
+        <div class="row">
+          <div class="col col-3 col-md-2">
+            <a href="https://github.com/itmaybejj/editoria11y"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-git" viewBox="0 0 16 16">
+              <path d="M15.698 7.287 8.712.302a1.03 1.03 0 0 0-1.457 0l-1.45 1.45 1.84 1.84a1.223 1.223 0 0 1 1.55 1.56l1.773 1.774a1.224 1.224 0 0 1 1.267 2.025 1.226 1.226 0 0 1-2.002-1.334L8.58 5.963v4.353a1.226 1.226 0 1 1-1.008-.036V5.887a1.226 1.226 0 0 1-.666-1.608L5.093 2.465l-4.79 4.79a1.03 1.03 0 0 0 0 1.457l6.986 6.986a1.03 1.03 0 0 0 1.457 0l6.953-6.953a1.03 1.03 0 0 0 0-1.457"/>
+            </svg> <strong>Βιβλιοθήκη</strong></a>
+          </div>
+          <div class="col col-3 col-md-2">
+            <a href="https://github.com/itmaybejj/editoria11y/discussions"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chat-right-heart-fill" viewBox="0 0 16 16">
+              <path d="M16 2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h9.586a1 1 0 0 1 .707.293l2.853 2.853a.5.5 0 0 0 .854-.353zM8 3.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132"/>
+            </svg> <strong>Φόρουμ</strong></a>
+          </div>
+          <div class="col col-3 col-md-2">
+            <a href="https://github.com/itmaybejj/editoria11y/issues"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-patch-plus-fill" viewBox="0 0 16 16">
+              <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01zM8.5 6v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 1 0"/>
+            </svg> <strong>Ζητήματα</strong></a>
+          </div>
+          <div class="col col-3 col-md-2">
+            <a href="/el/contacts"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-person-lines-fill" height="24" width="24" viewBox="0 0 16 18">
+              <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z"></path>
+            </svg> <strong>Επικοινωνία</strong></a>
+          </div>
+          <div class="col col-12 col-md-4 text-center text-md-end">
+            &copy; Editoria11y 2026
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/lang/i18n.js"></script>
+    <script src="/assets/theme.js"></script>
+    <script
+      src="/assets/bootstrap/js/bootstrap.bundle.min.js"
+      class="astro-vvvwv3sm"
+    ></script>
+
+    <script src="../../assets/tinymce/tinymce.min.js"></script>
+    <script>
+      tinymce.init({
+        selector: '#ed11y-demo',
+        license_key: 'gpl',
+        plugins: 'image lists table',
+        toolbar: 'blocks bold italic underline strikethrough blockquote  image numlist indent outdent bullist table tabledelete',
+        inline: true,
+            toolbar_persist: true,
+      });
+    </script>
+    <link rel="stylesheet" media="all" href="/assets/ed11y/css/editoria11y.min.css">
+    <script src="/assets/demo.js" type="module"></script>
+  </body>
+</html>

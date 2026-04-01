@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="pt-br" data-bs-theme="light">
+
+<head>
+  <link rel="icon" type="image/png" href="/assets/favicons/favicon-512x512.png" sizes="512x512" />
+  <link rel="icon" type="image/png" href="/assets/favicons/favicon-192x192.png" sizes="192x192" />
+  <link rel="icon" type="image/png" href="/assets/favicons/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/assets/favicons/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <meta charset="utf-8" />
+  <title>Preços e contribuições — Editoria11y</title>
+  <link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="/assets/theme.css" rel="stylesheet" />
+  <meta name="theme-color" content="#712cf9" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-md">
+      <div class="container col-sm-12 mx-auto">
+        <a href="/pt-br/about" class="d-flex align-items-center  navbar-brand">
+          <svg class="logo-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+            viewBox="-.75 -3.5 10.1699 19.1777">
+            <path fill="currentColor"
+              d="M3.7031,10.5527c-.3633-.6562-.6426-1.1387-.8379-1.4473l-.3105-.4863-.2344-.3574c-.5117-.7969-1.0449-1.4551-1.5996-1.9746.3164-.2617.6113-.3926.8848-.3926.3359,0,.6348.123.8965.3691s.5918.7148.9902,1.4062c.4531-1.4727,1.0293-2.8691,1.7285-4.1895.3867-.7188.7314-1.2021,1.0342-1.4502s.7041-.3721,1.2041-.3721c.2656,0,.5938.041.9844.123-1.0039.8086-1.8066,1.7695-2.4082,2.8828s-1.3789,3.0762-2.332,5.8887Z" />
+          </svg> Editoria<span style="margin-left: -1px;">11</span>y
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar" aria-label="Alternar navegação">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Editora11y</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Fechar"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 nav-pills">
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main class="container col-lg-12 mx-auto py-5">
+    <div class="row">
+      <div class="col-12">
+        <section id="join">
+          <div class="row justify-content-center">
+            <div class="col-lg-10">
+              <h1 class="text-body-emphasis pt-2 pb-2" data-section="membership">Pricing &amp; Contributions</h1>
+              <p class="fs-5">Editoria11y core is free to all.</p>
+              <p class="fs-5">Development & support comes from the Community Supported Add-ons project, which is
+                maintained through a contribute-what-you-can model.</p>
+              <h2 class="nomenu pt-3">CSA membership through purchased plugins</h2>
+              <p>Since the CSA provides self-hosted and open-source tools, we have very little overhead. ~€9/site/month
+                is enough to pay our developers and support our users. Comparable commercial tools charge €15 (basic
+                checkers) to €1000+ (unlimited page dashboards) per site per month.</p>
+            </div>
+
+          </div>
+
+          <div class="container text-center fs-5 p-3 pt-0 rounded-3" id="price-grid">
+            <div class="row">
+              <div class="col-lg-3"></div>
+              <div class="row col-lg-9 py-4 pt-0 align-items-start text-start">
+                <div class="col">
+                  <label for="support-level">Sponsorship</label>
+                  <select id="support-level" class="form-select ">
+                    <option value="100">150%</option>
+                    <option value="80">120%</option>
+                    <option value="60" selected>Full support</option>
+                    <option value="50">75% (academic/charity)</option>
+                    <option value="44">66%</option>
+                    <option value="33">50%</option>
+                    <option value="22">33%</option>
+                    <option value="17">25%</option>
+                  </select>
+                </div>
+                <div class="col">
+                  <label for="currency">Currency</label>
+                  <select class="form-select" id="currency">
+                    <option value="EUR">€ EUR</option>
+                    <option value="USD">$ USD</option>
+                    <option value="GBP">£ GBP</option>
+                  </select>
+                </div>
+
+                <div class="col">
+                  <div class="row pb-3 form-check form-switch ps-0">
+                    <div><label class="" for="annual-pricing">
+                        Annual
+                      </label></div>
+                    <input class="form-check-input ms-3 fs-3 border-2" type="checkbox" value="" id="annual-pricing"
+                      switch>
+
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div class="row">
+              <div class="col-lg-3 py-4 px-0" id="free">
+                <div class="bg-light me-3 border border-secondary-subtle shadow overflow-hidden rounded">
+                  <div class="p-2 border-bottom border-secondary-subtle">Free</div>
+                  <div class="p-3 pb-1">
+                    <div class="fs-6 text-start">
+                      <p class="small"><a
+                          href="https://wordpress.org/support/topic/shockingly-full-featured/">"<em>Shockingly</em> full
+                          featured"</a></p>
+                      <ul class="small ms-3">
+                        <li><a href="https://www.drupal.org/project/editoria11y/">Drupal</a> & <a
+                            href="https://wordpress.org/plugins/editoria11y-accessibility-checker/">WordPress</a></li>
+                        <li class="fw-semibold">50+ content tests</li>
+                        <li class="fw-semibold">As-you-type alerts</li>
+                        <li class="fw-semibold">Site-wide dashboards</li>
+                        <li class="fw-semibold">CSV exports</li>
+                        <li class="fw-semibold">Unlimited sites & pages</li>
+                        <li>Forum + Slack support</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 py-4 px-0" id="individual">
+                <div class="bg-light shadow overflow-hidden rounded-start">
+                  <div class="text-bg-info p-2 border-bottom border-light-subtle">Personal</div>
+                  <div class="text-bg-info p-3 pb-1">
+                    <p class="lh-1"><span class="currency">€</span><span class="price fs-3">9</span><span
+                        class="period">/month</span></p>
+                    <div class="fs-5 text-start">
+                      <p class="small text-center">Everything in free plus:</p>
+                      <ul class="small">
+                        <li><strong>30+ Developer tests</strong></li>
+                        <li><strong>Custom builder</strong></li>
+                        <li><strong>Crawler tools</strong></li>
+                        <li class="credit"><strong>Setup assistance</strong></li>
+                        <li class="credit"><strong>Supporter credit</strong></li>
+                        <li class="period-warning" hidden=""><em>Annual billing only</em></li>
+                      </ul>
+                    </div>
+                    <p class=""><a class="btn btn-dark" title="Individual">Subscribe</a></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 border-info px-0 fs-4 border rounded-3 shadow-lg" style="z-index: 3;" id="team">
+                <div class="text-bg-info p-2 rounded-top">Team</div>
+                <div class="p-2 pb-3 rounded-bottom">
+                  <div class="py-3">
+                    <select class="form-select fw-bold" style="width: auto; display: inline-block;" id="price-pick">
+                      <option value="5">5</option>
+                      <option value="25" selected>25</option>
+                      <option value="50">50</option>
+                      <option value="200">200</option>
+                      <option value="500">500</option>
+                      <option value="1000">1000</option>
+                    </select> <label for="price-pick" class="fs-6">sites</label>
+                  </div>
+                  <div id="price-result">
+                    <p class="lh-1"><span class="currency">€</span><span class="price fs-3">9.99</span><span
+                        class="period fs-5">/month</span></p>
+                    <div class="fs-5 text-start">
+                      <p class="small text-center full">Everything in personal plus:</p>
+                      <ul class="small">
+                        <li class="full"><strong>Setup assistance</strong></li>
+                        <li class="credit"><strong>Annual consultation</strong></li>
+                        <li class="credit"><strong>Supporter credit</strong></li>
+                        <li class="period-warning" hidden><em>Annual billing only</em></li>
+                      </ul>
+                    </div>
+                    <p class=""><a class="btn btn-dark" title="Team">Subscribe</a></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 py-4 px-0">
+                <div class="shadow overflow-hidden rounded-end" id="enterprise">
+                  <div class="text-bg-info p-2 border-bottom border-light-subtle">Enterprise</div>
+                  <div class="text-bg-info p-3 pb-1">
+                    <p class="lh-1"><span class="currency">€</span><span class="price fs-3">2700</span><span
+                        class="period">/month</span></p>
+                    <div class="fs-5 text-start">
+                      <p class="small text-center">Everything in personal plus:</p>
+                      <ul class="small">
+                        <li><strong>Unlimited sites</strong></li>
+                        <li><strong>Setup assistance</strong></li>
+                        <li class="credit"><strong>Quarterly consultations</strong></li>
+                        <li class="credit"><strong>Supporter credit</strong></li>
+                      </ul>
+                    </div>
+                    <p class=""><a class="btn btn-dark" title="Enterprise">Subscribe</a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-3"></div>
+              <div class="col-lg-9 px-0 pt-4">
+                <p class="small"><em>Prices shown are rounded to the nearest integer. Sales tax/VAT calculated at
+                    checkout</em>
+                </p>
+
+              </div>
+
+            </div>
+          </div>
+
+          <div class="row justify-content-center pt-5">
+            <div class="col-lg-10">
+              <h2>CSA membership through partnership &amp; contribution</h2>
+              <p class="fs-6">License keys can be directly purchased, but there are many other ways to support a
+                project:</p>
+              <ul class="list-unstyled ps-0">
+                <li class="arrow">
+                  <span>Subscription credits for approved contributions of time and effort.</span>
+                </li>
+                <li class="arrow">
+                  <span>Subscription credits for directly sponsored work and partnerships.</span>
+                </li>
+                <li class="arrow">
+                  <span>Subscription credits for pre-approved major contributions of time and effort to improve the
+                    accessibility of related open source projects.</span>
+                </li>
+              </ul>
+              <p class="mb-1"><a class="btn btn-bd-primary" href="https://form.jotform.com/260628163281153">Apply for
+                  subscription credits</a></p>
+              <p class="small">
+                <em>Please discuss feature contributions with project maintainers before beginning work.</em>
+              </p>
+            </div>
+          </div>
+        </section>
+        <section id="existing" class="row mt-5 pt-5">
+          <div class="col-lg-10 mx-auto">
+            <h2 data-section="existing">Resources for existing members</h2>
+            <div class="accord col-lg-8">
+              <details class="rounded bd-info">
+                <summary>Change sponsorship level</summary>
+                <p class="text-start small pt-3 pb-2">Subscriptions renew at the same sponsorship level. If you
+                  choose to change your sponsorship level at renewal, note that all tiers have access to the same
+                  features, but not all tiers are eligible for supporter credits and regular consultation calls.</p>
+                <table id="renewal-codes" class="table mb-0 table-secondary text-center">
+                  <thead>
+                    <tr>
+                      <th>Sponsorship level</th>
+                      <th>Annual renewal code</th>
+                      <th>Monthly renewal code</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>150%</td>
+                      <td>--</td>
+                      <td>--</td>
+                    </tr>
+                    <tr>
+                      <td>120%</td>
+                      <td>120pxa</td>
+                      <td>120pxm</td>
+                    </tr>
+                    <tr>
+                      <td>Full (100%)</td>
+                      <td>100pxa</td>
+                      <td>100pxm</td>
+                    </tr>
+                    <tr>
+                      <td>75%</td>
+                      <td>75pxa</td>
+                      <td>75pxm</td>
+                    </tr>
+                    <tr>
+                      <td>66%</td>
+                      <td>66pxa</td>
+                      <td>66pxm</td>
+                    </tr>
+                    <tr>
+                      <td>50%</td>
+                      <td>50pxa</td>
+                      <td>50pxm</td>
+                    </tr>
+                    <tr>
+                      <td>33%</td>
+                      <td>33pxa</td>
+                      <td>33pxm</td>
+                    </tr>
+                    <tr>
+                      <td>25%</td>
+                      <td>25pxa</td>
+                      <td>25pxm</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </details>
+            </div>
+            <ul class="fs-5 mt-3">
+              <li><a href="/pt-br/contacts">Contato</a> for support requests</li>
+              <li>
+                <a href="https://customers.freemius.com/login">Subscription management portal</a>
+              </li>
+            </ul>
+
+
+
+          </div>
+
+        </section>
+        <div class="mt-5 pt-5 text-center"><a class="btn btn-primary btn-lg" href="/pt-br/about">Sobre</a> <a
+            class="btn btn-primary btn-lg" href="/pt-br/features/">Funcionalidades</a> <a class="btn btn-primary btn-lg"
+            href="/pt-br/demo/">Demo</a> <a class="btn btn-dark btn-lg" aria-current="page" href="/pt-br/license/">Preços e contribuições</a></div>
+
+
+
+
+      </div>
+    </div>
+  </main>
+  <footer class="container col-lg-12 mx-auto pt-3 my-5 text-body-secondary border-top text-center text-md-start">
+    <div class="container">
+      <div class="row">
+        <div class="col col-3 col-md-2">
+          <a href="https://github.com/itmaybejj/editoria11y"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+              height="20" fill="currentColor" class="bi bi-git" viewBox="0 0 16 16">
+              <path
+                d="M15.698 7.287 8.712.302a1.03 1.03 0 0 0-1.457 0l-1.45 1.45 1.84 1.84a1.223 1.223 0 0 1 1.55 1.56l1.773 1.774a1.224 1.224 0 0 1 1.267 2.025 1.226 1.226 0 0 1-2.002-1.334L8.58 5.963v4.353a1.226 1.226 0 1 1-1.008-.036V5.887a1.226 1.226 0 0 1-.666-1.608L5.093 2.465l-4.79 4.79a1.03 1.03 0 0 0 0 1.457l6.986 6.986a1.03 1.03 0 0 0 1.457 0l6.953-6.953a1.03 1.03 0 0 0 0-1.457" />
+            </svg> <strong>Biblioteca</strong></a>
+        </div>
+        <div class="col col-3 col-md-2">
+          <a href="https://github.com/itmaybejj/editoria11y/discussions"><svg xmlns="http://www.w3.org/2000/svg"
+              width="20" height="20" fill="currentColor" class="bi bi-chat-right-heart-fill" viewBox="0 0 16 16">
+              <path
+                d="M16 2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h9.586a1 1 0 0 1 .707.293l2.853 2.853a.5.5 0 0 0 .854-.353zM8 3.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132" />
+            </svg> <strong>Fórum</strong></a>
+        </div>
+        <div class="col col-3 col-md-2">
+          <a href="https://github.com/itmaybejj/editoria11y/issues"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+              height="20" fill="currentColor" class="bi bi-patch-plus-fill" viewBox="0 0 16 16">
+              <path
+                d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01zM8.5 6v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 1 0" />
+            </svg> <strong>Problemas</strong></a>
+        </div>
+        <div class="col col-3 col-md-2">
+          <a href="/pt-br/contacts"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+              class="bi bi-person-lines-fill" height="24" width="24" viewBox="0 0 16 18">
+              <path
+                d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z">
+              </path>
+            </svg> <strong>Contato</strong></a>
+        </div>
+        <div class="col col-12 col-md-4 text-center text-md-end">
+          &copy; Editoria11y 2026
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/lang/i18n.js"></script>
+  <script src="/assets/theme.js"></script>
+  <script src="/assets/bootstrap/js/bootstrap.bundle.min.js" class="astro-vvvwv3sm"></script>
+</body>
+
+</html>

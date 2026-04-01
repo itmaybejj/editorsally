@@ -31,38 +31,46 @@ Read `lang/manifest.json`. For the requested language+page:
 - If the entry is `null`: this is a **new translation** — translate the full English page.
 - If the entry is a commit hash: run `git diff <hash> HEAD -- en/<page>/index.html` to see what changed. If empty, the translation is current. If there are changes, this is an **update** — apply only the changed sections to the existing translation.
 
-### 2. Read the English Source
+### 2. Scaffold new pages
 
-Read `en/<page>/index.html` in full. This is the canonical source.
+For **new translations** (manifest entry is `null`), run the scaffold script first:
 
-### 3. Translate (new page)
+```bash
+node scripts/scaffold-translation.js <langCode> [page]
+```
 
-Create `<langCode>/<page>/index.html` by translating the English source:
+This copies the English source and automatically handles:
+- `lang` attribute on `<html>`
+- `<title>` tag translation
+- Internal link rewriting (`../slug` → `/<langCode>/slug`)
+- Nav `aria-label` translations (Toggle navigation, Close)
+- Footer link labels (Library → Biblioteca, etc.)
+- CTA button labels at the bottom of each page
+
+The script requires a `nav` entry in `lang/i18n.js` for the target language (including `footer` strings). If this is the first page for a new language, add the nav entry first (see step 6).
+
+The script will skip pages that already exist at the destination path.
+
+### 3. Translate the `<main>` content
+
+After scaffolding, the file has all chrome localized but the `<main>` content is still in English. Translate only the prose content inside `<main>`:
 
 #### What to Translate
 - All visible text content (headings, paragraphs, list items, button labels, link text)
-- `<title>` tag content
+- The demo content. Because the checker itself is multilingual, the demo content is not English-specific and should be translated along with the rest of the page.
 - `alt` attributes on images
-- `aria-label` attributes
-- The `lang` attribute on `<html>` — set to the target language code
-- CTA button text (e.g., "About", "Features", "Pricing & Contributions")
-- Footer link labels (Library, Forum, Issues, Contacts)
+- `aria-label` attributes on non-chrome elements (within `<main>`)
 
 #### What to Preserve Verbatim
 - All HTML structure, classes, IDs, and `data-*` attributes
 - `<code>` and `<pre>` blocks (code examples must not be translated)
-- URLs and `href`/`src` values (exception: internal relative links — see below)
+- URLs and `href`/`src` values (internal links are already rewritten by the scaffold)
 - `<script>` tags and JavaScript content
 - SVG markup
 - Image `src` paths
 - CSS class names
 - The brand name "Editoria11y" (never translate)
 - Technical terms: HTML, CSS, JavaScript, Drupal, WordPress, CMS, API, WYSIWYG, CKEditor, TinyMCE, Gutenberg
-
-#### Internal Link Handling
-Replace relative internal links (`../about`, `../features`, etc.) with absolute paths using the target language code: `/<langCode>/about`, `/<langCode>/features`, etc.
-
-If the language has translated URL slugs defined in `lang/i18n.js`, use those instead.
 
 ### 4. Update (changed sections only)
 
@@ -82,8 +90,9 @@ After translating, update `lang/manifest.json`:
 ### 6. Update i18n.js (first page for a new language only)
 
 When creating the first page for a new language:
-1. Add a `nav` entry in `lang/i18n.js` with translated navigation strings.
+1. Add a `nav` entry in `lang/i18n.js` with translated navigation strings, including `label`, `footer`, `gettingStarted`, `wpLabel`, `toggleNav`, and `close`.
 2. If the language will use translated URL slugs, add a `paths` entry.
+3. Then run the scaffold script — it reads these strings to localize the page chrome.
 
 ## Translation Quality Guidelines
 
