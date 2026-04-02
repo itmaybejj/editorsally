@@ -1,20 +1,6 @@
 (() => {
   'use strict'
 
-  /*const headerTemplate = `
-        <header class="container d-flex flex-wrap justify-content-center p-4 py-3 border-bottom col-sm-12 mx-auto">
-          <a href="../about" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-            <span class="fs-4">Editor's <strong>Ally</strong></span>
-          </a>
-          <ul class="navbar navbar-expand-lg nav nav-pills">
-            <li class="nav-item">
-              <a href="../about" class="nav-link">About</a>
-            </li>
-            <li class="nav-item"><a href="../projects" class="nav-link">Projects</a></li>
-            <li class="nav-item"><a href="../membership" class="nav-link">Membership</a></li>
-            <li class="nav-item"><a href="../contacts" class="nav-link">Contacts</a></li>
-          </ul>
-        </header>`;*/
   /* i18n configuration from lang/i18n.js (loaded before theme.js) */
   const i18n = (typeof defined_i18n !== 'undefined') ? defined_i18n : null;
   const validTranslations = i18n ? i18n.supportedLanguages : [];
