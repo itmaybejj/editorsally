@@ -19,7 +19,8 @@
   const i18n = (typeof defined_i18n !== 'undefined') ? defined_i18n : null;
   const validTranslations = i18n ? i18n.supportedLanguages : [];
   const validPaths = i18n ? i18n.canonicalPaths.concat(['codes']) : ['about', 'features', 'demo', 'contacts', 'install', 'drupal', 'license', 'codes'];
-  const langCode = validTranslations.includes(document.documentElement.lang) ? document.documentElement.lang : 'en';
+  const allLangs = i18n ? i18n.allLanguages : ['en'];
+  const langCode = allLangs.includes(document.documentElement.lang) ? document.documentElement.lang : 'en';
   const strings = i18n ? i18n.getNav(langCode) : null;
   const externalIcon = `<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="14" fill="currentColor" class="bi bi-arrow-right-square" viewBox="0 0 16 16">
   <path fill-rule="evenodd" d="M15 2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1zM0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm4.5 5.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
@@ -53,16 +54,55 @@
   const nav = document.querySelector('header .navbar-nav');
   nav.innerHTML = navTemplate;
 
+  /* Override brand link to point to language root */
+  const brandLink = document.querySelector('header .navbar-brand');
+  if (brandLink) brandLink.setAttribute('href', p('about'));
+
+  /* Determine current canonical slug from URL */
+  const currentPath = window.location.pathname;
+  const pathParts = currentPath.replace(/^\/|\/$/g, '').split('/');
+  const currentSlug = pathParts.length > 1 ? pathParts[pathParts.length - 1] : 'about';
+  const currentCanonical = i18n ? i18n.getCanonicalSlug(langCode, currentSlug) : currentSlug;
+
   /* Active link highlighting */
   const navLinks = nav.querySelectorAll('a');
-  const currentPath = window.location.pathname;
   navLinks.forEach(link => {
     const href = link.getAttribute('href');
-    if (href && href !== '/' && !href.startsWith('http') && currentPath.includes(href.replace(/\.\./g, ''))) {
+    if (!href || href === '#' || href.startsWith('http')) return;
+    const linkParts = href.replace(/^\/|\/$/g, '').split('/');
+    const linkSlug = linkParts.length > 1 ? linkParts[linkParts.length - 1] : 'about';
+    const linkCanonical = i18n ? i18n.getCanonicalSlug(langCode, linkSlug) : linkSlug;
+    if (linkCanonical === currentCanonical) {
       link.classList.add('active');
       link.setAttribute('aria-current', 'page');
     }
   });
+
+  /* Language picker */
+  const pickerEl = document.getElementById('lang-picker');
+  if (pickerEl && i18n) {
+    const translateIcon = `<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-translate" viewBox="0 0 16 16">
+      <path d="M4.545 6.714 4.11 8H3l1.862-5h1.284L8 8H6.833l-.435-1.286zm1.634-.736L5.5 3.956h-.049l-.679 2.022z"></path>
+      <path d="M0 2a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v3h3a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-3H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zm7.138 9.995q.289.451.63.846c-.748.575-1.673 1.001-2.768 1.292.178.217.451.635.555.867 1.125-.359 2.08-.844 2.886-1.494.777.665 1.739 1.165 2.93 1.472.133-.254.414-.673.629-.89-1.125-.253-2.057-.694-2.82-1.284.681-.747 1.222-1.651 1.621-2.757H14V8h-3v1.047h.765c-.318.844-.74 1.546-1.272 2.13a6 6 0 0 1-.415-.492 2 2 0 0 1-.94.31"></path>
+    </svg>`;
+    const items = i18n.allLanguages
+      .filter(code => code !== langCode)
+      .map(code => {
+        const href = i18n.buildPath(code, currentCanonical);
+        const name = i18n.nativeNames[code] || code;
+        return `<li><a class="dropdown-item" href="${href}">${name}</a></li>`;
+      })
+      .join('');
+    pickerEl.innerHTML = `
+      <div class="dropdown lang-picker d-flex align-items-center">
+        <button type="button" data-bs-toggle="dropdown" title="Language" aria-expanded="false"
+          class="btn btn-outline-primary btn-sm dropdown-toggle rounded-0 rounded-bottom border-top-0 mx-auto">
+          ${translateIcon}
+          <span>${langCode.toUpperCase()}</span>
+        </button>
+        <ul class="dropdown-menu">${items}</ul>
+      </div>`;
+  }
 
   if (currentPath === '/' || (currentPath === '/codes/')) {
     const queryString = window.location.search;
@@ -79,9 +119,9 @@
     if (currentPath === '/codes/') {
       window.location.replace(`/${langCode}/license`);
     } else if (typeValue && validPaths.includes(typeValue)) {
-      window.location.replace(`/${langCode}/${typeValue}`);
+      window.location.replace(i18n ? i18n.buildPath(goTo, typeValue) : `/${goTo}/${typeValue}`);
     } else {
-      window.location.replace(`/${goTo}/about`);
+      window.location.replace(`/${goTo}/`);
     }
   }
 
@@ -255,13 +295,13 @@
       if (
         (supportLevel < 22 && ['5', '10', '25', '50', '200'].includes(pricePicker.value)) ||
         (supportLevel < 33 && ['5', '10', '25', '50'].includes(pricePicker.value)) ||
-        (supportLevel < 50 && ['5', '10', '25'].includes(pricePicker.value))
+        (supportLevel < 50 && ['5', '10', '25', '50'].includes(pricePicker.value))
       ) {
         document.querySelector('#team').classList.add('no-credit');
       }
 
       // team annual-only.
-      if (pricePicker.value === '5' && supportLevel < 22) {
+      if (['5', '10', '25'].includes(pricePicker.value) && supportLevel < 22) {
         applyPrice(document.getElementById('price-result'), pricing['yearly'][currency]['5'], multiplier, symbol, '/year');
         document.querySelector('#team').classList.add('annual-only');
       } else {

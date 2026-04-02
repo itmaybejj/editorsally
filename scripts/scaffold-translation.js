@@ -74,18 +74,25 @@ let created = 0;
 let skipped = 0;
 
 for (const page of pages) {
-  const srcPath = path.join(ROOT, 'en', page, 'index.html');
-  const destDir = path.join(ROOT, langCode, page);
+  const srcPath = page === 'about'
+    ? path.join(ROOT, 'en', 'index.html')
+    : path.join(ROOT, 'en', page, 'index.html');
+  const destDir = page === 'about'
+    ? path.join(ROOT, langCode)
+    : path.join(ROOT, langCode, page);
   const destPath = path.join(destDir, 'index.html');
 
+  const srcLabel = page === 'about' ? 'en/index.html' : `en/${page}/index.html`;
+  const destLabel = page === 'about' ? `${langCode}/index.html` : `${langCode}/${page}/index.html`;
+
   if (!fs.existsSync(srcPath)) {
-    console.error(`  ✗ Source not found: en/${page}/index.html`);
+    console.error(`  ✗ Source not found: ${srcLabel}`);
     skipped++;
     continue;
   }
 
   if (fs.existsSync(destPath)) {
-    console.error(`  ✗ Already exists: ${langCode}/${page}/index.html (skipping)`);
+    console.error(`  ✗ Already exists: ${destLabel} (skipping)`);
     skipped++;
     continue;
   }
@@ -95,16 +102,18 @@ for (const page of pages) {
   // 1. Set lang attribute
   html = html.replace(/(<html\s[^>]*?)lang="en"/, `$1lang="${langCode}"`);
 
-  // 2. Rewrite internal relative links: ../slug and ../slug/
-  //    Also handles ../slug/#anchor and ../slug#anchor
+  // 2. Rewrite internal relative links: ../slug, ./slug, and variants with trailing / and #fragments
   for (const slug of i18n.canonicalPaths) {
-    const trSlug = i18n.getPath(langCode, slug);
-    // ../slug/ or ../slug/# patterns
-    html = html.replaceAll(`"../${slug}/"`, `"/${langCode}/${trSlug}/"`);
-    html = html.replaceAll(`"../${slug}"`, `"/${langCode}/${trSlug}"`);
-    // Handle ../slug/#fragment (after the first pass won't catch these if / was already replaced)
-    const fragPattern = new RegExp(`"\\.\\./${escapeRe(slug)}/(#[^"]*)"`, 'g');
-    html = html.replace(fragPattern, `"/${langCode}/${trSlug}/$1"`);
+    const dest = i18n.buildPath(langCode, slug);
+    // ../slug/ or ../slug patterns (used by subpages)
+    html = html.replaceAll(`"../${slug}/"`, `"${dest}"`);
+    html = html.replaceAll(`"../${slug}"`, `"${dest}"`);
+    // ./slug/ or ./slug patterns (used by the about page at lang root)
+    html = html.replaceAll(`"./${slug}/"`, `"${dest}"`);
+    html = html.replaceAll(`"./${slug}"`, `"${dest}"`);
+    // Handle fragment links: ../slug/#frag and ./slug/#frag
+    const fragPattern = new RegExp(`"(?:\\.\\.|\\.)/${escapeRe(slug)}/(#[^"]*)"`, 'g');
+    html = html.replace(fragPattern, `"${dest}$1"`);
   }
 
   // 3. Translate <title> — pattern: "EnLabel — Editoria11y" or just "Editoria11y"
@@ -150,12 +159,12 @@ for (const page of pages) {
     const trBtnLabel = htmlEnc(trNav.label[slug]);
     if (enBtnLabel === trBtnLabel) continue;
 
-    const trSlug = i18n.getPath(langCode, slug);
-    // Match: href="/<lang>/<slug>..." followed by >EnLabel</a>
+    const dest = i18n.buildPath(langCode, slug);
+    // Match: href="<dest>..." followed by >EnLabel</a>
     // Use \s* and dotAll to handle labels that wrap across lines.
     const flexLabel = escapeRe(enBtnLabel).replace(/\s+/g, '\\s+');
     const btnPattern = new RegExp(
-      `(href="/${escapeRe(langCode)}/${escapeRe(trSlug)}/?(?:#[^"]*)?"[^>]*>)` +
+      `(href="${escapeRe(dest)}(?:#[^"]*)?"[^>]*>)` +
       `\\s*${flexLabel}\\s*(</a>)`,
       'gs'
     );
@@ -165,7 +174,7 @@ for (const page of pages) {
   // ── Write output ──────────────────────────────────────────────────────────
   fs.mkdirSync(destDir, { recursive: true });
   fs.writeFileSync(destPath, html);
-  console.log(`  ✓ ${langCode}/${page}/index.html`);
+  console.log(`  ✓ ${destLabel}`);
   created++;
 }
 

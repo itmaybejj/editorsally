@@ -29,6 +29,38 @@ const defined_i18n = (() => {
   ];
 
   /**
+   * All languages with translated pages (used by the language picker).
+   * Unlike supportedLanguages, this always includes every translation.
+   */
+  const allLanguages = [
+    'en', 'da', 'de', 'el', 'es', 'fr', 'hu', 'it', 'jp',
+    'nb', 'nl', 'pl', 'pt-br', 'pt-pt', 'sv', 'uk', 'zh',
+  ];
+
+  /**
+   * Native display names for the language picker.
+   */
+  const nativeNames = {
+    en: 'English',
+    da: 'Dansk',
+    de: 'Deutsch',
+    el: 'Ελληνικά',
+    es: 'Español',
+    fr: 'Français',
+    hu: 'Magyar',
+    it: 'Italiano',
+    jp: '日本語',
+    nb: 'Norsk bokmål',
+    nl: 'Nederlands',
+    pl: 'Polski',
+    'pt-br': 'Português (BR)',
+    'pt-pt': 'Português (PT)',
+    sv: 'Svenska',
+    uk: 'Українська',
+    zh: '中文',
+  };
+
+  /**
    * Canonical English path slugs, in navigation order.
    */
   const canonicalPaths = ['about', 'features', 'demo', 'contacts', 'install', 'drupal', 'license'];
@@ -450,11 +482,14 @@ const defined_i18n = (() => {
    * Build the full path for a page: /<langCode>/<slug>/
    */
   function buildPath(lang, enSlug) {
+    if (enSlug === 'about') return `/${lang}/`;
     return `/${lang}/${getPath(lang, enSlug)}`;
   }
 
   return {
     supportedLanguages,
+    allLanguages,
+    nativeNames,
     canonicalPaths,
     paths,
     nav,

@@ -51,6 +51,21 @@ label {
     --bs-info-rgb: 87, 206, 247;
     --bs-border-color: #03759c;
 
+    .btn-outline-primary {
+        --bs-btn-color: var(--bs-primary-bg-subtle);
+        --bs-btn-border-color: var(--bs-primary-bg-subtle);
+        --bs-btn-color: var(--bs-primary-bg-subtle);
+        --bs-btn-border-color: var(--bs-primary-bg-subtle);
+        --bs-btn-hover-bg: var(--bs-primary-bg-subtle);
+        --bs-btn-hover-border-color: var(--bs-primary-bg-subtle);
+    }
+
+    .btn:hover {
+        color: var(--bs-btn-hover-color);
+        background-color: var(--bs-btn-hover-bg);
+        border-color: var(--bs-btn-hover-border-color);
+    }
+
     .navbar-nav {
         --bs-navbar-active-color: #003140;
         --bs-nav-link-hover-color: rgba(var(--bs-link-hover-color-rgb), .5);
@@ -61,6 +76,7 @@ label {
     .navbar-nav .nav-link.active,
     .navbar-nav .nav-link.show {
         --bs-nav-pills-link-active-bg: var(--bs-navbar-active-color);
+        color: var(--bs-body-bg);
 
         @media (max-width: 768px) {
             padding-left: .5rem;
@@ -340,7 +356,7 @@ label {
         }
     }
 
-    .navbar-nav .nav-link.show {
+    .navbar .navbar-nav .nav-link.show {
         color: var(--bs-navbar-active-color);
         box-shadow: -1px -1px var(--bs-navbar-color), 1px -1px var(--bs-navbar-color);
         border-radius: 0;
@@ -773,6 +789,9 @@ footer {
     }
 }
 
+#lang-picker {
+    min-height: 1.875em;
+}
 
 .tox.tox-tinymce-inline {
     z-index: 9999;

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="it" data-bs-theme="light">
+<html lang="pl" data-bs-theme="light">
   <head>
     <link rel="icon" type="image/png" href="/assets/favicons/favicon-512x512.png" sizes="512x512" />
     <link rel="icon" type="image/png" href="/assets/favicons/favicon-192x192.png" sizes="192x192" />
@@ -20,16 +20,16 @@
     <header>
       <nav class="navbar navbar-expand-md">
         <div class="container col-sm-12 mx-auto">
-          <a href="/it/about" class="d-flex align-items-center  navbar-brand">
+          <a href="/pl/" class="d-flex align-items-center  navbar-brand">
            <svg class="logo-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="-.75 -3.5 10.1699 19.1777"><path fill="currentColor" d="M3.7031,10.5527c-.3633-.6562-.6426-1.1387-.8379-1.4473l-.3105-.4863-.2344-.3574c-.5117-.7969-1.0449-1.4551-1.5996-1.9746.3164-.2617.6113-.3926.8848-.3926.3359,0,.6348.123.8965.3691s.5918.7148.9902,1.4062c.4531-1.4727,1.0293-2.8691,1.7285-4.1895.3867-.7188.7314-1.2021,1.0342-1.4502s.7041-.3721,1.2041-.3721c.2656,0,.5938.041.9844.123-1.0039.8086-1.8066,1.7695-2.4082,2.8828s-1.3789,3.0762-2.332,5.8887Z"/></svg> Editoria<span style="margin-left: -1px;">11</span>y
           </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Attiva/disattiva navigazione">
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Przełącz nawigację">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
             <div class="offcanvas-header">
               <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Editora11y</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Chiudi"></button>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Zamknij"></button>
             </div>
             <div class="offcanvas-body">
               <ul class="navbar-nav justify-content-end flex-grow-1 nav-pills">
@@ -38,27 +38,28 @@
           </div>
         </div>
       </nav>
+    <div id="lang-picker"></div>
     </header>
     <main class="container col-lg-12 mx-auto py-5">
-      <h1 class="text-body-emphasis py-5">Sostenuto dalla community.<br>Open Source.</h1>
+      <h1 class="text-body-emphasis py-5">Wspierany przez społeczność.<br>Open Source.</h1>
       <div class="col-md-9 text-balance pt-5">
         <p class="fs-3 text-balance">
-          Il controllo di accessibilità Editoria11y è utilizzato con fiducia da oltre 40.000 siti web per supportare gli autori nel loro lavoro quotidiano:
+          Narzędzie Editoria11y do sprawdzania dostępności jest używane przez ponad 40 000 stron internetowych, aby pomagać autorom treści dokładnie tam, gdzie tego potrzebują:
         </p>
       </div>
       <div class="row g-5 pb-5">
         <div class="col-md-6">
           <ul class="fs-6">
-            <li>Più di 80 test vengono eseguiti in tempo reale, offrendo correzioni e suggerimenti in linea <strong>mentre gli autori scrivono</strong> in CKEditor, TinyMCE e Gutenberg.</li>
-            <li>Le correzioni in linea funzionano senza sforzo. Gli autori non devono installare nulla, avviare test o consultare una dashboard.</li>
-            <li>I suggerimenti usano un linguaggio chiaro che corregge e, al tempo stesso, educa.</li>
-            <li>I risultati sono privati. I test vengono eseguiti nel browser e i rapporti vengono salvati sul proprio server.</li>
+            <li>Ponad 80 testów działa w czasie rzeczywistym, oferując poprawki i wskazówki bezpośrednio w tekście <strong>podczas pisania</strong> w CKEditor, TinyMCE i Gutenberg.</li>
+            <li>Poprawki w tekście „działają od razu". Autorzy nie muszą instalować narzędzia, uruchamiać testu ani odwiedzać panelu administracyjnego.</li>
+            <li>Wskazówki używają prostego języka, który jednocześnie koryguje i uczy.</li>
+            <li>Wyniki są prywatne. Testy działają w przeglądarce, a raporty są przechowywane na Twoim własnym serwerze.</li>
           </ul>
         </div>
 
         <div class="col-md-6">
           <p class="fs-5">
-            I plugin di Editoria11y si integrano in profondità con i sistemi di gestione dei contenuti più diffusi, abilitando la verifica durante la digitazione e i rapporti sull'intero sito:
+            Wtyczki Editoria11y głęboko integrują się z popularnymi systemami zarządzania treścią, umożliwiając sprawdzanie podczas pisania oraz raportowanie w skali całego serwisu:
           </p>
           <ul class="list-unstyled ps-0">
             <li><a href="https://www.drupal.org/project/editoria11y" class="arrow"><strong>Drupal</strong></a></li>
@@ -71,42 +72,42 @@
           </ul>
         </div>
         <div class="col-12 col-xl-10 mt-3 mx-auto py-5">
-          <img loading="lazy" src="/assets/images/alt_text_describe.png" alt="Suggerimento aperto che segnala come il testo alternativo non descriva l'immagine" class="img-fluid" height="830" width="1648"/>
+          <img loading="lazy" src="/assets/images/alt_text_describe.png" alt="Otwarta wskazówka informująca, że tekst alternatywny nie opisuje obrazu" class="img-fluid" height="830" width="1648"/>
         </div>
       </div>
 
       <div class="row g-5 pb-5 my-5">
-        <h2 class="h1 text-body-emphasis text-balance pt-2">Gli strumenti di amministrazione rendono il monitoraggio semplice</h2>
+        <h2 class="h1 text-body-emphasis text-balance pt-2">Narzędzia administracyjne upraszczają monitorowanie</h2>
         <div class="mt-4">
           <ul class="fs-5 list-unstyled ps-0">
             <li class="arrow">
-              <span>Le dashboard intuitive permettono di navigare e filtrare i risultati per problema, pagina e utente.</span>
+              <span>Przejrzyste pulpity nawigacyjne umożliwiają przeglądanie i filtrowanie według problemu, strony i użytkownika.</span>
             </li>
             <li class="arrow"><span>
-              I risultati si aggiornano in tempo reale mentre gli autori lavorano.
+              Wyniki aktualizują się w czasie rzeczywistym, gdy autorzy pracują.
             </span></li>
             <li class="arrow">
-              <span>Gli strumenti di configurazione del sito e i pulsanti di chiusura dei suggerimenti rendono facile nascondere gli avvisi non pertinenti.</span>
+              <span>Narzędzia konfiguracji serwisu i przyciski odrzucania wskazówek ułatwiają ukrywanie nieistotnych alertów.</span>
             </li>
           </ul>
-          <img loading="lazy" class="img-fluid shadow my-5 mt-4" src="/assets/images/3x-dashboard.png" height="765" width="1600" alt="Dashboard dei rapporti con i problemi recenti e le pagine con più segnalazioni." />
+          <img loading="lazy" class="img-fluid shadow my-5 mt-4" src="/assets/images/3x-dashboard.png" height="765" width="1600" alt="Panel raportowania pokazujący ostatnie problemy i strony z największą liczbą problemów." />
 
         </div>
       </div>
 
       <div class="row g-5 pb-5 my-5">
-        <div class="col-12 col-md-6 col-lg-5"><img loading="lazy" class="img-fluid rounded shadow" src="/assets/images/3x-tools.jpg" height="1418" width="1214" alt="Visualizzatore della struttura dei titoli sovrapposto alla pagina" /></div>
+        <div class="col-12 col-md-6 col-lg-5"><img loading="lazy" class="img-fluid rounded shadow" src="/assets/images/3x-tools.jpg" height="1418" width="1214" alt="Wizualizacja struktury nagłówków nałożona na stronę" /></div>
         <div class="col-12 col-md-6 col-lg-7">
-          <h2 class="h1 text-body-emphasis text-balance pt-2 pb-5">Le configurazioni separate mantengono gli strumenti per sviluppatori...agli sviluppatori.</h2>
+          <h2 class="h1 text-body-emphasis text-balance pt-2 pb-5">Rozdzielone konfiguracje zachowują narzędzia deweloperskie dla...deweloperów.</h2>
           <ul class="fs-5 list-unstyled ps-0">
             <li class="arrow">
-              <span>Il controllo del contrasto, il calcolo dei nomi accessibili e i test sui metadati di pagina vengono eseguiti dal vivo a ogni aggiornamento della pagina.</span>
+              <span>Sprawdzanie kontrastu, obliczanie dostępnych nazw i testy metadanych strony działają na żywo przy każdym odświeżeniu strony.</span>
             </li>
             <li class="arrow">
-              <span>La configurazione a livello di test consente un controllo preciso su chi vede ogni avviso.</span>
+              <span>Konfiguracja na poziomie testu pozwala precyzyjnie kontrolować, kto widzi każdy alert.</span>
             </li>
             <li class="arrow">
-              <span>Gli strumenti aggiuntivi nella pagina permettono la revisione manuale della struttura, del testo alternativo e della leggibilità.</span>
+              <span>Dodatkowe funkcje na stronie umożliwiają ręczne przeglądanie struktury strony, tekstów alternatywnych i czytelności.</span>
             </li>
           </ul>
         </div>
@@ -114,19 +115,19 @@
       </div>
 
       <div class="row g-5 pb-5 my-5">
-        <h2 class="h1 text-body-emphasis text-balance pt-5">I membri del progetto guidano lo sviluppo, la documentazione e il supporto.</h2>
+        <h2 class="h1 text-body-emphasis text-balance pt-5">Członkowie projektu napędzają rozwój, dokumentację i wsparcie.</h2>
 
-        <div class="col-12 col-lg-7"><a href="https://youtu.be/uYvNYPg38nU?si=6YANYrJpVzNAJYDl&t=260"><img loading="lazy" src="/assets/images/a11ytalks.jpg" class="img-fluid shadow" alt="Video di presentazione delle funzionalità del controllo a un evento della community." height="817" width="1600"/></a></div>
+        <div class="col-12 col-lg-7"><a href="https://youtu.be/uYvNYPg38nU?si=6YANYrJpVzNAJYDl&t=260"><img loading="lazy" src="/assets/images/a11ytalks.jpg" class="img-fluid shadow" alt="Film przedstawiający funkcje narzędzia podczas wydarzenia społecznościowego." height="817" width="1600"/></a></div>
         <div class="col-12 col-lg-5">
           <ul class="fs-5 list-unstyled ps-0">
             <li class="arrow">
-              <span>La <a href="../membership">community</a> contribuisce attraverso il tempo degli sviluppatori, lavori sponsorizzati o abbonamenti ai componenti aggiuntivi.</span>
+              <span><a href="../membership">Społeczność</a> wnosi wkład poprzez czas deweloperów, sponsorowane prace lub subskrypcje dodatków.</span>
             </li>
             <li class="arrow">
-              <span>Le discussioni guidano quali richieste di funzionalità vengono <a href="/it/contacts">selezionate per lo sviluppo</a>.</span>
+              <span>Dyskusje decydują o tym, które propozycje funkcji są <a href="/pl/contacts">wybierane do realizacji</a>.</span>
             </li>
             <li class="arrow">
-              <span>I membri <a href="../membership/">trovano supporto</a> nei forum e nelle code delle segnalazioni.</span>
+              <span>Członkowie <a href="../membership/">znajdują wsparcie</a> na forach i w kolejkach zgłoszeń.</span>
             </li>
           </ul>
         </div>
@@ -134,15 +135,15 @@
 
       <div class="row g-5 mt-5">
 
-        <div class="col-12 col-lg-5"><h2 class="h1 text-body-emphasis text-balance pt-5">Non facciamo promesse eccessive.</h2></div>
+        <div class="col-12 col-lg-5"><h2 class="h1 text-body-emphasis text-balance pt-5">Nie składamy obietnic bez pokrycia.</h2></div>
 
         <div class="col-12 col-lg-7">
-          <p class="fs-5">I test automatici sono molto efficaci nell'individuare gli errori prevedibili. Editoria11y riconosce quando un autore inserisce una tabella senza intestazioni o un'immagine con il nome del file come testo alternativo.</p>
-          <p class="fs-5">I test automatici non sono invece adatti a individuare le "sorprese" di sviluppatori inesperti o generati dall'IA, come un pulsante critico che funziona solo con il mouse del desktop, o metà del contenuto della pagina racchiuso in un'immagine di testo.</p>
-          <p class="fs-5">Le organizzazioni apprezzano Editoria11y perché è uno strumento eccellente per mantenere la qualità dei contenuti <strong>dopo</strong> i test manuali. Non sostituisce i test manuali e <a href="https://overlayfactsheet.com">non fa promesse che non può mantenere</a>.</p>
+          <p class="fs-5">Automatyczne testy dobrze wychwytują przewidywalne błędy. Editoria11y rozpoznaje, gdy autorzy treści wstawiają tabelę bez nagłówków lub obraz z nazwą pliku jako tekstem alternatywnym.</p>
+          <p class="fs-5">Automatyczne testy nie radzą sobie z wychwytywaniem „niespodzianek" od niedoświadczonych deweloperów lub AI, takich jak krytyczny przycisk działający tylko z myszą na komputerze stacjonarnym czy połowa treści strony ukryta w obrazie tekstowym.</p>
+          <p class="fs-5">Firmy cenią Editoria11y, ponieważ doskonale sprawdza się w utrzymaniu jakości treści <strong>po</strong> ręcznym testowaniu. Nie zastępuje ręcznego testowania i <a href="https://overlayfactsheet.com">nie składa obietnic, których nie może dotrzymać</a>.</p>
         </div>
 
-        <div class="mt-5 pt-5 text-center"><a class="btn btn-dark btn-lg" aria-current="page" href="/it/about">Informazioni</a> <a class="btn btn-primary btn-lg" href="/it/features/">Funzionalità</a> <a class="btn btn-primary btn-lg" href="/it/demo/">Demo</a> <a class="btn btn-primary btn-lg" href="/it/license/">Prezzi e contributi</a></div>
+        <div class="mt-5 pt-5 text-center"><a class="btn btn-dark btn-lg" aria-current="page" href="/pl/">O nas</a> <a class="btn btn-primary btn-lg" href="/pl/features/">Funkcje</a> <a class="btn btn-primary btn-lg" href="/pl/demo/">Demo</a> <a class="btn btn-primary btn-lg" href="/pl/license/">Cennik i wkłady</a></div>
 
       </div>
     </main>
@@ -152,7 +153,7 @@
           <div class="col col-3 col-md-2">
             <a href="https://github.com/itmaybejj/editoria11y"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-git" viewBox="0 0 16 16">
               <path d="M15.698 7.287 8.712.302a1.03 1.03 0 0 0-1.457 0l-1.45 1.45 1.84 1.84a1.223 1.223 0 0 1 1.55 1.56l1.773 1.774a1.224 1.224 0 0 1 1.267 2.025 1.226 1.226 0 0 1-2.002-1.334L8.58 5.963v4.353a1.226 1.226 0 1 1-1.008-.036V5.887a1.226 1.226 0 0 1-.666-1.608L5.093 2.465l-4.79 4.79a1.03 1.03 0 0 0 0 1.457l6.986 6.986a1.03 1.03 0 0 0 1.457 0l6.953-6.953a1.03 1.03 0 0 0 0-1.457"/>
-            </svg> <strong>Libreria</strong></a>
+            </svg> <strong>Biblioteka</strong></a>
           </div>
           <div class="col col-3 col-md-2">
             <a href="https://github.com/itmaybejj/editoria11y/discussions"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chat-right-heart-fill" viewBox="0 0 16 16">
@@ -162,12 +163,12 @@
           <div class="col col-3 col-md-2">
             <a href="https://github.com/itmaybejj/editoria11y/issues"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-patch-plus-fill" viewBox="0 0 16 16">
               <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01zM8.5 6v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 1 0"/>
-            </svg> <strong>Segnalazioni</strong></a>
+            </svg> <strong>Zgłoszenia</strong></a>
           </div>
           <div class="col col-3 col-md-2">
-            <a href="/it/contacts"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-person-lines-fill" height="24" width="24" viewBox="0 0 16 18">
+            <a href="/pl/contacts"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-person-lines-fill" height="24" width="24" viewBox="0 0 16 18">
               <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z"></path>
-            </svg> <strong>Contatti</strong></a>
+            </svg> <strong>Kontakt</strong></a>
           </div>
           <div class="col col-12 col-md-4 text-center text-md-end">
             &copy; Editoria11y 2026
