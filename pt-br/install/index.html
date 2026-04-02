@@ -48,20 +48,20 @@
             <div class="col-12 col-md-7 col-lg-8 pt-3" data-bs-spy="scroll" data-bs-target="#on-this-page" data-bs-smooth-scroll="true">
                 <h1>Instalar &amp; Configurar</h1>
 
-                <section id=”modules”>
-                    <h2 class=”pt-3 pb-2”>Versões pré-configuradas</h2>
-                    <ul class=”list-unstyled ps-0”>
-                        <li><a href=”https://www.drupal.org/project/editoria11y” class=”arrow”><strong>Instalador para Drupal</strong></a></li>
-                        <li><a href=”https://wordpress.org/plugins/editoria11y-accessibility-checker/” class=”arrow”><strong>Instalador para WordPress</strong></a></li>
-                        <li><a href=”https://codeberg.org/sebastiangreger/kirby-a11yprompter” class=”arrow”><strong>Instalador para Kirby</strong></a> <em>(contrib)</em></li>
-                        <li><a href=”https://plugins.craftcms.com/editoria11y” class=”arrow”><strong>Instalador para CraftCMS</strong></a> <em>(contrib)</em></li>
+                <section id="modules">
+                    <h2 class="pt-3 pb-2">Versões pré-configuradas</h2>
+                    <ul class="list-unstyled ps-0">
+                        <li><a href="https://www.drupal.org/project/editoria11y" class="arrow"><strong>Instalador para Drupal</strong></a></li>
+                        <li><a href="https://wordpress.org/plugins/editoria11y-accessibility-checker/" class="arrow"><strong>Instalador para WordPress</strong></a></li>
+                        <li><a href="https://codeberg.org/sebastiangreger/kirby-a11yprompter" class="arrow"><strong>Instalador para Kirby</strong></a> <em>(contrib)</em></li>
+                        <li><a href="https://plugins.craftcms.com/editoria11y" class="arrow"><strong>Instalador para CraftCMS</strong></a> <em>(contrib)</em></li>
                     </ul>
                 </section>
-                <section id=”diy”>
+                <section id="diy">
                     <h2>
                         Instalação personalizada
                     </h2>
-                    <p>Para criar sua própria implementação, <a href=”https://github.com/itmaybejj/editoria11y” data-type=”URL” data-id=”https://github.com/itmaybejj/editoria11y” class=”liinternal”>baixe uma cópia local</a> (ou referencie uma <a href=”https://cdn.jsdelivr.net/gh/itmaybejj/editoria11y@2/dist/editoria11y.min.js” class=”liinternal”>versão via CDN</a>) do pacote de idiomas, do arquivo JS minificado e do arquivo CSS minificado e, em seguida, crie uma nova instância “Ed11y”.</p>
+                    <p>Para criar sua própria implementação, <a href="https://github.com/itmaybejj/editoria11y" data-type="URL" data-id="https://github.com/itmaybejj/editoria11y" class="liinternal">baixe uma cópia local</a> (ou referencie uma <a href="https://cdn.jsdelivr.net/gh/itmaybejj/editoria11y@2/dist/editoria11y.min.js" class="liinternal">versão via CDN</a>) do pacote de idiomas, do arquivo JS minificado e do arquivo CSS minificado e, em seguida, crie uma nova instância “Ed11y”.</p>
                     <p>Para <strong>importações de módulos ESM/JS</strong>: </p>
                     <pre class="language-markup"><code><!--// Load CSS
 <link href="/dist/css/editoria11y.min.css?v=3.0" rel="stylesheet">
@@ -169,14 +169,14 @@ baseFontSize: 14, // px
 baseFontFamily: '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif', --></code></pre>
                 </section>
 
-                <section id=”js-events”>
-                    <h2 class=”wp-block-heading has-text-align-left has-secondary-background-color has-background has-large-font-size”>Eventos JS úteis</h2>
+                <section id="js-events">
+                    <h2 class="wp-block-heading has-text-align-left has-secondary-background-color has-background has-large-font-size">Eventos JS úteis</h2>
 
                     <p>Desenvolvedores de temas podem capturar esses eventos para reagir e modificar a página conforme necessário.</p>
 
                     <p>Na ordem típica de ocorrência…</p>
 
-                    <ul class=”wp-block-list”>
+                    <ul class="wp-block-list">
                         <li><strong><code>ed11yRunCustomTests</code></strong>: disparado quando o objeto Results está pronto para receber resultados personalizados. Observe que o parâmetro customTests deve ser definido com o número de funções de teste personalizadas que você executará (…provavelmente uma…) para que este evento seja disparado. Detalhes na seção seguinte.</li>
 
                         <li><strong><code>ed11yResults</code></strong>: disparado quando todas as verificações são concluídas. Integrações com API podem agora extrair dados do objeto Ed11y.results.</li>
@@ -204,14 +204,14 @@ baseFontFamily: '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica N
                     <p>Exemplos podem ser encontrados nas seções seguintes.</p>
                 </section>
 
-                <section id=”modify-tips”>
-                    <h2 class=”wp-block-heading has-secondary-background-color has-background has-large-font-size”>Modificar dicas de ferramenta</h2>
+                <section id="modify-tips">
+                    <h2 class="wp-block-heading has-secondary-background-color has-background has-large-font-size">Modificar dicas de ferramenta</h2>
 
                     <p>Se tudo o que você deseja é modificar o texto de uma dica, os itens nos objetos globais ed11yLang.en (antes de chamar a biblioteca) ou Ed11y.M (após chamar a biblioteca) podem ser substituídos diretamente. Por exemplo, no módulo Drupal, onde criamos um alias do pacote de idiomas para Drupal.ed11yLang:</p>
 
                     <p><code>Drupal.ed11yLang.lang.testNames.title = “Please write shorter headings.”</code></p>
 
-                    <p>Isso se aplica a qualquer uma das <a href=”https://github.com/itmaybejj/editoria11y/blob/3.0.x/src/lang/baseAll.js” data-type=”link” data-id=”https://github.com/itmaybejj/editoria11y/blob/2.3.x/js/ed11y-localization.js” class=”liinternal”>chaves padrão no arquivo de localização</a> ou na tradução específica do idioma ativo.</p>
+                    <p>Isso se aplica a qualquer uma das <a href="https://github.com/itmaybejj/editoria11y/blob/3.0.x/src/lang/baseAll.js" data-type="link" data-id="https://github.com/itmaybejj/editoria11y/blob/2.3.x/js/ed11y-localization.js" class="liinternal">chaves padrão no arquivo de localização</a> ou na tradução específica do idioma ativo.</p>
 
                     <p>O módulo Drupal também adiciona links de edição personalizados às dicas, usando o parâmetro <code>editLinks</code>. Observe “Page editor” e “Layout editor:”</p>
 
@@ -241,7 +241,7 @@ document.addEventListener('ed11yPop', e => {
 }); --></code></pre>
                 </section>
 
-                <section id=”custom-tests”>
+                <section id="custom-tests">
                     <h2>Testes personalizados</h2>
 
                     <p>Se o parâmetro <strong><em>customTests</em></strong> for um <strong><em>número</em></strong>, o Editoria11y irá disparar um evento “ed11yRunCustomTests” durante a verificação e, em seguida, pausar por até 500ms aguardando esse número de eventos “<code>ed11yResume</code>”.</p>
@@ -254,7 +254,7 @@ document.addEventListener('ed11yPop', e => {
 
                     <p>Você precisaria:</p>
 
-                    <ol class=”wp-block-list”>
+                    <ol class="wp-block-list">
                         <li>Adicionar um listener para o evento <code>ed11yRunCustomTests</code></li>
 
                         <li>Encontrar os elementos correspondentes</li>

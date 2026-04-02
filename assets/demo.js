@@ -8,10 +8,10 @@ const demo = async () => {
 
   const iframeBlob = new Blob([iframePlaceholder], { type: 'text/html' });
 
-// 3. Generate a blob URL from the Blob object
+  // 3. Generate a blob URL from the Blob object
   const iSrc = URL.createObjectURL(iframeBlob);
 
-  document.querySelectorAll('[data-needs-src]')?.forEach(frame=> {
+  document.querySelectorAll('[data-needs-src]')?.forEach(frame => {
     frame.src = iSrc;
   });
 
@@ -46,8 +46,10 @@ const demo = async () => {
   ];
 
   const [Ed11y, ed11yLang] = await Promise.all(modulePromises).then();
+
   const foo = new Ed11y.Ed11y({
-    alertMode : 'active',
+    lang: ed11yLang.lang,
+    alertMode: 'active',
     theme: 'sleekTheme',
     panelNoCover: '#bd-theme',
     embeddedContentPlugin: true,

@@ -72,6 +72,11 @@ After scaffolding, the file has all chrome localized but the `<main>` content is
 - The brand name "Editoria11y" (never translate)
 - Technical terms: HTML, CSS, JavaScript, Drupal, WordPress, CMS, API, WYSIWYG, CKEditor, TinyMCE, Gutenberg
 
+#### Smart Quotes in HTML Tags (Critical)
+Never use smart/curly quotes (`"` `"` `'` `'`) inside HTML tags. All attribute values must use straight quotes (`"` or `'`). LLMs tend to produce smart quotes when generating translated HTML. After translating, verify that no smart quotes have been introduced inside `<` `>` delimiters. For example:
+- **Wrong**: `<h2 class="pt-4" id="demo">`
+- **Correct**: `<h2 class="pt-4" id="demo">`
+
 ### 4. Update (changed sections only)
 
 When updating an existing translation based on a git diff:

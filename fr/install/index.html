@@ -48,20 +48,20 @@
             <div class="col-12 col-md-7 col-lg-8 pt-3" data-bs-spy="scroll" data-bs-target="#on-this-page" data-bs-smooth-scroll="true">
                 <h1>Installation et configuration</h1>
 
-                <section id=”modules”>
-                    <h2 class=”pt-3 pb-2”>Versions preconfigur&eacute;es</h2>
-                    <ul class=”list-unstyled ps-0”>
-                        <li><a href=”https://www.drupal.org/project/editoria11y” class=”arrow”><strong>Installateur Drupal</strong></a></li>
-                        <li><a href=”https://wordpress.org/plugins/editoria11y-accessibility-checker/” class=”arrow”><strong>Installateur WordPress</strong></a></li>
-                        <li><a href=”https://codeberg.org/sebastiangreger/kirby-a11yprompter” class=”arrow”><strong>Installateur Kirby</strong></a> <em>(contrib)</em></li>
-                        <li><a href=”https://plugins.craftcms.com/editoria11y” class=”arrow”><strong>Installateur CraftCMS</strong></a> <em>(contrib)</em></li>
+                <section id="modules">
+                    <h2 class="pt-3 pb-2">Versions preconfigur&eacute;es</h2>
+                    <ul class="list-unstyled ps-0">
+                        <li><a href="https://www.drupal.org/project/editoria11y" class="arrow"><strong>Installateur Drupal</strong></a></li>
+                        <li><a href="https://wordpress.org/plugins/editoria11y-accessibility-checker/" class="arrow"><strong>Installateur WordPress</strong></a></li>
+                        <li><a href="https://codeberg.org/sebastiangreger/kirby-a11yprompter" class="arrow"><strong>Installateur Kirby</strong></a> <em>(contrib)</em></li>
+                        <li><a href="https://plugins.craftcms.com/editoria11y" class="arrow"><strong>Installateur CraftCMS</strong></a> <em>(contrib)</em></li>
                     </ul>
                 </section>
-                <section id=”diy”>
+                <section id="diy">
                     <h2>
                         Installation personnalis&eacute;e
                     </h2>
-                    <p>Pour cr&eacute;er votre propre impl&eacute;mentation, <a href=”https://github.com/itmaybejj/editoria11y” data-type=”URL” data-id=”https://github.com/itmaybejj/editoria11y” class=”liinternal”>t&eacute;l&eacute;chargez une copie locale</a> (ou r&eacute;f&eacute;rencez une <a href=”https://cdn.jsdelivr.net/gh/itmaybejj/editoria11y@2/dist/editoria11y.min.js” class=”liinternal”>version CDN</a>) d'un pack de langue, du fichier JS minifi&eacute; et du fichier CSS minifi&eacute;, puis cr&eacute;ez une nouvelle instance “Ed11y”.</p>
+                    <p>Pour cr&eacute;er votre propre impl&eacute;mentation, <a href="https://github.com/itmaybejj/editoria11y" data-type="URL" data-id="https://github.com/itmaybejj/editoria11y" class="liinternal">t&eacute;l&eacute;chargez une copie locale</a> (ou r&eacute;f&eacute;rencez une <a href="https://cdn.jsdelivr.net/gh/itmaybejj/editoria11y@2/dist/editoria11y.min.js" class="liinternal">version CDN</a>) d'un pack de langue, du fichier JS minifi&eacute; et du fichier CSS minifi&eacute;, puis cr&eacute;ez une nouvelle instance “Ed11y”.</p>
                     <p>Pour les <strong>imports de modules ESM/JS</strong> : </p>
                     <pre class="language-markup"><code><!--// Load CSS
 <link href="/dist/css/editoria11y.min.css?v=3.0" rel="stylesheet">
@@ -169,14 +169,14 @@ baseFontSize: 14, // px
 baseFontFamily: '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif', --></code></pre>
                 </section>
 
-                <section id=”js-events”>
-                    <h2 class=”wp-block-heading has-text-align-left has-secondary-background-color has-background has-large-font-size”>&Eacute;v&eacute;nements JavaScript utiles</h2>
+                <section id="js-events">
+                    <h2 class="wp-block-heading has-text-align-left has-secondary-background-color has-background has-large-font-size">&Eacute;v&eacute;nements JavaScript utiles</h2>
 
                     <p>Les d&eacute;veloppeurs de th&egrave;mes peuvent intercepter ces &eacute;v&eacute;nements pour r&eacute;agir et modifier la page selon les besoins.</p>
 
                     <p>Dans l'ordre typique d'apparition&hellip;</p>
 
-                    <ul class=”wp-block-list”>
+                    <ul class="wp-block-list">
                         <li><strong><code>ed11yRunCustomTests</code></strong> : d&eacute;clench&eacute; lorsque l'objet Results est pr&ecirc;t &agrave; recevoir des r&eacute;sultats personnalis&eacute;s. Notez que le param&egrave;tre customTests doit &ecirc;tre d&eacute;fini sur le nombre de fonctions de tests personnalis&eacute;s que vous allez ex&eacute;cuter (&hellip;probablement un seul&hellip;) pour que cet &eacute;v&eacute;nement soit d&eacute;clench&eacute;. D&eacute;tails dans la section suivante.</li>
 
                         <li><strong><code>ed11yResults</code></strong> : d&eacute;clench&eacute; lorsque toutes les v&eacute;rifications sont termin&eacute;es. Les int&eacute;grations API peuvent alors r&eacute;cup&eacute;rer les donn&eacute;es de l'objet Ed11y.results.</li>
@@ -204,18 +204,18 @@ baseFontFamily: '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica N
                     <p>Des exemples sont disponibles dans les sections suivantes.</p>
                 </section>
 
-                <section id=”modify-tips”>
-                    <h2 class=”wp-block-heading has-secondary-background-color has-background has-large-font-size”>Modifier les infobulles</h2>
+                <section id="modify-tips">
+                    <h2 class="wp-block-heading has-secondary-background-color has-background has-large-font-size">Modifier les infobulles</h2>
 
                     <p>Si vous souhaitez simplement modifier le texte d'une infobulle, les &eacute;l&eacute;ments de l'objet global ed11yLang.en (avant l'appel de la biblioth&egrave;que) ou Ed11y.M (apr&egrave;s l'appel de la biblioth&egrave;que) peuvent &ecirc;tre directement remplac&eacute;s. Par exemple, dans le module Drupal o&ugrave; nous avons cr&eacute;&eacute; un alias du pack de langue vers Drupal.ed11yLang :</p>
 
                     <p><code>Drupal.ed11yLang.lang.testNames.title = “Please write shorter headings.”</code></p>
 
-                    <p>Cela est vrai pour toutes les <a href=”https://github.com/itmaybejj/editoria11y/blob/3.0.x/src/lang/baseAll.js” data-type=”link” data-id=”https://github.com/itmaybejj/editoria11y/blob/2.3.x/js/ed11y-localization.js” class=”liinternal”>cl&eacute;s par d&eacute;faut du fichier de localisation</a> ou la traduction active sp&eacute;cifique &agrave; la langue.</p>
+                    <p>Cela est vrai pour toutes les <a href="https://github.com/itmaybejj/editoria11y/blob/3.0.x/src/lang/baseAll.js" data-type="link" data-id="https://github.com/itmaybejj/editoria11y/blob/2.3.x/js/ed11y-localization.js" class="liinternal">cl&eacute;s par d&eacute;faut du fichier de localisation</a> ou la traduction active sp&eacute;cifique &agrave; la langue.</p>
 
                     <p>Le module Drupal ajoute &eacute;galement des liens d'&eacute;dition personnalis&eacute;s aux infobulles, &agrave; l'aide du param&egrave;tre <code>editLinks</code>. Notez “Page editor” et “Layout editor” :</p>
 
-                    <figure class=”wp-block-image size-full”><img loading=”lazy” data-recalc-dims=”1” fetchpriority=”high” decoding=”async” width=”580” height=”300” src=”https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?resize=580%2C300&amp;ssl=1” alt=”Infobulle avec les liens &laquo; Page editor &raquo; et &laquo; Layout editor &raquo; ins&eacute;r&eacute;s.” class=”wp-image-523” srcset=”https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?w=1290&amp;ssl=1 1290w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?resize=600%2C311&amp;ssl=1 600w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?resize=768%2C398&amp;ssl=1 768w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?resize=1200%2C621&amp;ssl=1 1200w” sizes=”(max-width: 580px) 100vw, 580px”></figure>
+                    <figure class="wp-block-image size-full"><img loading="lazy" data-recalc-dims="1" fetchpriority="high" decoding="async" width="580" height="300" src="https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?resize=580%2C300&amp;ssl=1" alt="Infobulle avec les liens &laquo; Page editor &raquo; et &laquo; Layout editor &raquo; ins&eacute;r&eacute;s." class="wp-image-523" srcset="https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?w=1290&amp;ssl=1 1290w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?resize=600%2C311&amp;ssl=1 600w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?resize=768%2C398&amp;ssl=1 768w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?resize=1200%2C621&amp;ssl=1 1200w" sizes="(max-width: 580px) 100vw, 580px"></figure>
 
                     <p>Une version simplifi&eacute;e du code qui d&eacute;finit ce param&egrave;tre :</p>
                     <pre class="language-javascript"><code><!--const editLinks = document.createElement('div');
@@ -241,7 +241,7 @@ document.addEventListener('ed11yPop', e => {
 }); --></code></pre>
                 </section>
 
-                <section id=”custom-tests”>
+                <section id="custom-tests">
                     <h2>Tests personnalis&eacute;s</h2>
 
                     <p>Si le param&egrave;tre <strong><em>customTests</em></strong> est un <strong><em>nombre</em></strong>, Editoria11y d&eacute;clenchera un &eacute;v&eacute;nement “ed11yRunCustomTests” pendant la v&eacute;rification, puis se mettra en pause pendant 500 ms maximum en attendant ce nombre d'&eacute;v&eacute;nements “<code>ed11yResume</code>”.</p>
@@ -250,11 +250,11 @@ document.addEventListener('ed11yPop', e => {
 
                     <p>Par exemple, si vous souhaitiez cr&eacute;er cette infobulle pour signaler des liens coll&eacute;s depuis des e-mails avec des URL obscurcies :</p>
 
-                    <figure class=”wp-block-image size-full”><img loading=”lazy” data-recalc-dims=”1” decoding=”async” width=”580” height=”462” src=”https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2023/12/Screenshot-2023-12-06-at-5.13.38-PM.png?resize=580%2C462&amp;ssl=1” alt=”Infobulle affichant &laquo; URL is Safe Link Encoded &raquo;” class=”wp-image-323” srcset=”https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2023/12/Screenshot-2023-12-06-at-5.13.38-PM.png?w=1056&amp;ssl=1 1056w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2023/12/Screenshot-2023-12-06-at-5.13.38-PM.png?resize=600%2C478&amp;ssl=1 600w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2023/12/Screenshot-2023-12-06-at-5.13.38-PM.png?resize=768%2C612&amp;ssl=1 768w” sizes=”(max-width: 580px) 100vw, 580px”></figure>
+                    <figure class="wp-block-image size-full"><img loading="lazy" data-recalc-dims="1" decoding="async" width="580" height="462" src="https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2023/12/Screenshot-2023-12-06-at-5.13.38-PM.png?resize=580%2C462&amp;ssl=1" alt="Infobulle affichant &laquo; URL is Safe Link Encoded &raquo;" class="wp-image-323" srcset="https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2023/12/Screenshot-2023-12-06-at-5.13.38-PM.png?w=1056&amp;ssl=1 1056w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2023/12/Screenshot-2023-12-06-at-5.13.38-PM.png?resize=600%2C478&amp;ssl=1 600w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2023/12/Screenshot-2023-12-06-at-5.13.38-PM.png?resize=768%2C612&amp;ssl=1 768w" sizes="(max-width: 580px) 100vw, 580px"></figure>
 
                     <p>Vous devriez :</p>
 
-                    <ol class=”wp-block-list”>
+                    <ol class="wp-block-list">
                         <li>Ajouter un &eacute;couteur pour l'&eacute;v&eacute;nement <code>ed11yRunCustomTests</code></li>
 
                         <li>Trouver les &eacute;l&eacute;ments correspondants</li>

@@ -48,109 +48,109 @@
         
         
 
-        <h2 class=”pt-4” id=”demo”>Demo</h2>
-          <p class=”fs-5”>Nézze meg az <a href=”https://youtu.be/uYvNYPg38nU?si=6YANYrJpVzNAJYDl&t=260”>ellenorzo tortenetét és funkcióit bemutató videót</a>,
+        <h2 class="pt-4" id="demo">Demo</h2>
+          <p class="fs-5">Nézze meg az <a href="https://youtu.be/uYvNYPg38nU?si=6YANYrJpVzNAJYDl&t=260">ellenorzo tortenetét és funkcióit bemutató videót</a>,
             vagy próbálja ki az alábbi demo tartalom szerkesztését, a figyelmeztetések megnyitását és elvetését,
-            valamint az eszköztár <span style=”text-wrap: nowrap;”>(<img src=”/assets/images/3x-toolbar” class=”inline-block” style=”width: 5rem; height: auto;” alt=”Az Editoria11y eszköztár képernyoképe, 4 hibával.” width=”97” height=”50” loading=”lazy”>)</span> használatát a címsorvázlat megtekintéséhez. Ez a demo az alapteszteket és a CSA csomagot egyaránt tartalmazza.</p>
-          <p class=”fs-5 mb-5 pb-5”>Ez a demo TinyMCE szerkesztot használ. Az Editoria11y a legtöbb szövegszerkesztovel kompatibilis, és kulcsrakész megvalósításokkal rendelkezik a CKEditor és a Gutenberg számára WordPress és Drupal környezetben.</p>
-            <div id=”ed11y-demo” class=”p-5” contenteditable=””>
-            <section id=”headings”>
+            valamint az eszköztár <span style="text-wrap: nowrap;">(<img src="/assets/images/3x-toolbar" class="inline-block" style="width: 5rem; height: auto;" alt="Az Editoria11y eszköztár képernyoképe, 4 hibával." width="97" height="50" loading="lazy">)</span> használatát a címsorvázlat megtekintéséhez. Ez a demo az alapteszteket és a CSA csomagot egyaránt tartalmazza.</p>
+          <p class="fs-5 mb-5 pb-5">Ez a demo TinyMCE szerkesztot használ. Az Editoria11y a legtöbb szövegszerkesztovel kompatibilis, és kulcsrakész megvalósításokkal rendelkezik a CKEditor és a Gutenberg számára WordPress és Drupal környezetben.</p>
+            <div id="ed11y-demo" class="p-5" contenteditable="">
+            <section id="headings">
 
-              <h3 class=”pt-1”>Címsorok</h3>
+              <h3 class="pt-1">Címsorok</h3>
 
               <p>Ez a címsor kihagyott egy szintet:</p>
-              <div class=”positive”><h6 id=”this-h6-should-have-been-an-h3”>Hoppá</h6></div>
+              <div class="positive"><h6 id="this-h6-should-have-been-an-h3">Hoppá</h6></div>
 
               <p>Ennek a címsornak egyáltalán nincs szövege:</p>
-              <div class=”positive”><h4 class=”empty-example”> </h4>
+              <div class="positive"><h4 class="empty-example"> </h4>
               </div>
 
               <p>Ez a rövid idézet lehet, hogy címsor:</p>
-              <div class=”positive”><blockquote>Hamis címsor vagyok</blockquote></div>
+              <div class="positive"><blockquote>Hamis címsor vagyok</blockquote></div>
 
               <p>Ez a teljesen félkövér bekezdés lehet, hogy címsor:</p>
-              <p class=”positive”><strong>Hamis címsor vagyok</strong></p>
+              <p class="positive"><strong>Hamis címsor vagyok</strong></p>
 
               <p>Ez a címsor nagyon hosszú:</p>
-              <div class=”positive”><h4>A címsorok és alcímsorok navigálható tartalomjegyzéket hoznak létre a kisegíto eszközök számára. A számok egy beágyazási hierarchiában jelölnek behúzásokat. A nagyon hosszú címsorok valószínuleg azt jelentik, hogy a szerzo túl sokat mond a címsorban.</h4></div>
+              <div class="positive"><h4>A címsorok és alcímsorok navigálható tartalomjegyzéket hoznak létre a kisegíto eszközök számára. A számok egy beágyazási hierarchiában jelölnek behúzásokat. A nagyon hosszú címsorok valószínuleg azt jelentik, hogy a szerzo túl sokat mond a címsorban.</h4></div>
 
             </section>
 
 
-            <section id=”text-alternatives”>
-              <h3 data-section=”text-alternatives”>Szöveges alternatívák képekhez</h3>
+            <section id="text-alternatives">
+              <h3 data-section="text-alternatives">Szöveges alternatívák képekhez</h3>
 
               <p>Ez a címsor egy szöveget ábrázoló képbol áll, alt nélkül:</p>
-              <div class=”positive”>
-                <h4><img loading=”lazy” alt=”” src=”/assets/images/px20240813sm.jpg” ></h4>
+              <div class="positive">
+                <h4><img loading="lazy" alt="" src="/assets/images/px20240813sm.jpg" ></h4>
               </div>
 
               <p>Kép alt attribútum nélkül:</p>
-              <p class=”positive”><img loading=”lazy” src=”/assets/images/px20240813sm.jpg”></p>
+              <p class="positive"><img loading="lazy" src="/assets/images/px20240813sm.jpg"></p>
 
-              <p>Kép érvénytelen alt attribútummal, pl. <code class=”language-plaintext highlighter-rouge”>alt=”'”</code></p>
+              <p>Kép érvénytelen alt attribútummal, pl. <code class="language-plaintext highlighter-rouge">alt=”'”</code></p>
 
-              <p class=”positive”><img loading=”lazy” alt=”'” src=”/assets/images/px20240813sm.jpg”></p>
+              <p class="positive"><img loading="lazy" alt="'" src="/assets/images/px20240813sm.jpg"></p>
 
-              <p id=”image-with-a-filename-as-an-alt”>Kép fájlnévvel az alt-ban</p>
+              <p id="image-with-a-filename-as-an-alt">Kép fájlnévvel az alt-ban</p>
 
-              <p class=”positive”><img loading=”lazy” alt=”filename.jpg” src=”/assets/images/px20240813sm.jpg”></p>
+              <p class="positive"><img loading="lazy" alt="filename.jpg" src="/assets/images/px20240813sm.jpg"></p>
 
-              <p id=”image-with-redundant-text-in-its-alt”>Kép felesleges szöveggel az alt-ban, például „kép errol:”</p>
+              <p id="image-with-redundant-text-in-its-alt">Kép felesleges szöveggel az alt-ban, például „kép errol:”</p>
 
-              <p class=”positive”><img loading=”lazy” alt=”Kép egy kutyáról.” src=”/assets/images/px20240813sm.jpg”></p>
+              <p class="positive"><img loading="lazy" alt="Kép egy kutyáról." src="/assets/images/px20240813sm.jpg"></p>
 
-              <p id=”linked-image-with-redundant-text-in-its-alt”>Linkelt kép felesleges szöveggel az alt-ban, például „kép errol:”</p>
+              <p id="linked-image-with-redundant-text-in-its-alt">Linkelt kép felesleges szöveggel az alt-ban, például „kép errol:”</p>
 
-              <p class=”positive”><a href=”./editable.htm”><img loading=”lazy” alt=”Kép egy kutyáról.” src=”/assets/images/px20240813sm.jpg”></a></p>
+              <p class="positive"><a href="./editable.htm"><img loading="lazy" alt="Kép egy kutyáról." src="/assets/images/px20240813sm.jpg"></a></p>
 
-              <p id=”image-with-placeholder-alt”>Kép helyorzo alt szöveggel:</p>
-              <p class=”positive”><img loading=”lazy” alt=”TBD” src=”/assets/images/px20240813sm.jpg”></p>
+              <p id="image-with-placeholder-alt">Kép helyorzo alt szöveggel:</p>
+              <p class="positive"><img loading="lazy" alt="TBD" src="/assets/images/px20240813sm.jpg"></p>
 
-              <p id=”linked-image-with-placeholder-alt”><strong>Linkelt</strong> kép helyorzo alt szöveggel:</p>
-              <p class=”positive”><a href=”./editable.htm”><img loading=”lazy” alt=”TBD” src=”/assets/images/px20240813sm.jpg”></a></p>
+              <p id="linked-image-with-placeholder-alt"><strong>Linkelt</strong> kép helyorzo alt szöveggel:</p>
+              <p class="positive"><a href="./editable.htm"><img loading="lazy" alt="TBD" src="/assets/images/px20240813sm.jpg"></a></p>
 
-              <p id=”image-with-machine-alt”>Kép gépi kóddal az alt-ban:</p>
-              <p class=”positive”><img loading=”lazy” alt=”$700VIDEOSABOUTTURTLESALL2SECONDSLONG” src=”/assets/images/px20240813sm.jpg”></p>
+              <p id="image-with-machine-alt">Kép gépi kóddal az alt-ban:</p>
+              <p class="positive"><img loading="lazy" alt="$700VIDEOSABOUTTURTLESALL2SECONDSLONG" src="/assets/images/px20240813sm.jpg"></p>
 
-              <p id=”linked-image-with-machine-alt”>Linkelt kép gépi kóddal az alt-ban:</p>
-              <p class=”positive”><a href=”./editable.htm”><img loading=”lazy” alt=”$700VIDEOSABOUTTURTLESALL2SECONDSLONG” src=”/assets/images/px20240813sm.jpg”></a></p>
+              <p id="linked-image-with-machine-alt">Linkelt kép gépi kóddal az alt-ban:</p>
+              <p class="positive"><a href="./editable.htm"><img loading="lazy" alt="$700VIDEOSABOUTTURTLESALL2SECONDSLONG" src="/assets/images/px20240813sm.jpg"></a></p>
 
-              <p id=”image-with-very-long-alt-text”>Kép nagyon hosszú alt szöveggel:</p>
+              <p id="image-with-very-long-alt-text">Kép nagyon hosszú alt szöveggel:</p>
 
-              <p class=”positive”><img loading=”lazy” alt=”Nézd ezt a kutyust. Ez a kutyus nagyon boldog. Ez a kutyus sétálni ment, és a séta egy tóhoz vezetett, ahol mindenféle lenyugozo illatok voltak. Micsoda csodálatos napja volt ennek a kutyusnak.” src=”/assets/images/px20240813sm.jpg”></p>
+              <p class="positive"><img loading="lazy" alt="Nézd ezt a kutyust. Ez a kutyus nagyon boldog. Ez a kutyus sétálni ment, és a séta egy tóhoz vezetett, ahol mindenféle lenyugozo illatok voltak. Micsoda csodálatos napja volt ennek a kutyusnak." src="/assets/images/px20240813sm.jpg"></p>
 
-              <p id=”images-in-links-where-the-alt-text-may-be-describing-the-image-instead-of-the-link”>Képek linkekben, ahol az alt szöveg a képet írhatja le a link helyett</p>
+              <p id="images-in-links-where-the-alt-text-may-be-describing-the-image-instead-of-the-link">Képek linkekben, ahol az alt szöveg a képet írhatja le a link helyett</p>
 
-              <p class=”positive”><a  href=”https://www.youtube.com/watch?v=DLzxrzFCyOs”>Ez a link szöveget és képet tartalmaz.<img loading=”lazy” alt=”Egy szép szürke doboz” src=”/assets/images/px20240813sm.jpg”></a></p>
+              <p class="positive"><a  href="https://www.youtube.com/watch?v=DLzxrzFCyOs">Ez a link szöveget és képet tartalmaz.<img loading="lazy" alt="Egy szép szürke doboz" src="/assets/images/px20240813sm.jpg"></a></p>
 
-              <p id=”images-in-links-decorative”>Bármely linkelt kép (teszt alapértelmezetten kikapcsolva)</p>
-              <p class=”positive”><a href=”https://www.youtube.com/watch?v=DLzxrzFCyOs”><img loading=”lazy” alt=”Helló” src=”/assets/images/px20240813sm.jpg”></a></p>
+              <p id="images-in-links-decorative">Bármely linkelt kép (teszt alapértelmezetten kikapcsolva)</p>
+              <p class="positive"><a href="https://www.youtube.com/watch?v=DLzxrzFCyOs"><img loading="lazy" alt="Helló" src="/assets/images/px20240813sm.jpg"></a></p>
 
               <p>Kép figure elemben, dekoratívként jelölve:</p>
-              <figure class=”positive”>
-                <img loading=”lazy” alt=”” src=”/assets/images/px20240813sm.jpg”>
+              <figure class="positive">
+                <img loading="lazy" alt="" src="/assets/images/px20240813sm.jpg">
                 <figcaption>A figcaption jelen van.</figcaption>
               </figure>
 
               <p>Kép figure elemben, ahol az alt megegyezik a figcaption-nel:</p>
-              <figure class=”positive”>
-                <img loading=”lazy” alt=”A figcaption megegyezik az alt-tal” src=”/assets/images/px20240813sm.jpg”>
+              <figure class="positive">
+                <img loading="lazy" alt="A figcaption megegyezik az alt-tal" src="/assets/images/px20240813sm.jpg">
                 <figcaption>A figcaption megegyezik az alt-tal</figcaption>
               </figure>
               <p>Kép körhintában alt nélkül:</p>
-              <div class=”positive”>
-                <img loading=”lazy” alt=”” class=”carousel” src=”/assets/images/px20240813sm.jpg”>
+              <div class="positive">
+                <img loading="lazy" alt="" class="carousel" src="/assets/images/px20240813sm.jpg">
               </div>
             </section>
-            <section id=”contrast”>
-              <h3 data-section=”contrast”>Kontraszt</h3>
+            <section id="contrast">
+              <h3 data-section="contrast">Kontraszt</h3>
               <p>Olvashatatlan színkombináció:</p>
-              <div class=”positive”><p style=”background: #ccc; color: #ddd;”>Szuper olvasható.</p></div>
+              <div class="positive"><p style="background: #ccc; color: #ddd;">Szuper olvasható.</p></div>
               <p>Szín, amelyhez kézi ellenorzés szükséges:</p>
-              <div class=”positive”><p style=”background: linear-gradient(45deg,#ccc 25%,#0000 25% 75%,#ccc 75%,#ccc),linear-gradient(45deg,#ccc 25%,#0000 25% 75%,#ccc 75%,#ccc)”>És kiszámíthatatlan.</p></div>
-              <div class=”positive”><label>Beviteli mezo alacsony kontraszttal
-                <input class=”form-text” type=”text” style=”color: #777;”></label></div>
+              <div class="positive"><p style="background: linear-gradient(45deg,#ccc 25%,#0000 25% 75%,#ccc 75%,#ccc),linear-gradient(45deg,#ccc 25%,#0000 25% 75%,#ccc 75%,#ccc)">És kiszámíthatatlan.</p></div>
+              <div class="positive"><label>Beviteli mezo alacsony kontraszttal
+                <input class="form-text" type="text" style="color: #777;"></label></div>
 
               <style>
                 #unsupported-placeholder::placeholder {
@@ -158,216 +158,216 @@
                 }
               </style>
 
-              <label for=”unsupported-placeholder”>A helyorzo szín nem számítható ki</label>
-              <div class=”positive” style=”background: transparent;”><input type=”text” id=”unsupported-placeholder” placeholder=”Rec2020 color space”></div>
+              <label for="unsupported-placeholder">A helyorzo szín nem számítható ki</label>
+              <div class="positive" style="background: transparent;"><input type="text" id="unsupported-placeholder" placeholder="Rec2020 color space"></div>
 
 
               <p>SVG grafika nem elegendo kontraszttal</p>
-              <div class=”positive”><svg style=”width: 16px; height: 16px;” xmlns=”http://www.w3.org/2000/svg” viewBox=”0 0 512 512”><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path fill=”#999” d=”M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376C296.3 401.1 253.9 416 208 416 93.1 416 0 322.9 0 208S93.1 0 208 0 416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z”/></svg></div>
+              <div class="positive"><svg style="width: 16px; height: 16px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path fill="#999" d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376C296.3 401.1 253.9 416 208 416 93.1 416 0 322.9 0 208S93.1 0 208 0 416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg></div>
 
               <p>SVG grafika, amelynek kontrasztjához kézi ellenorzés szükséges</p>
-              <div class=”positive” style=”background: linear-gradient(45deg,#ccc 45%,#0000 45% 75%,#ccc 75%,#ccc),linear-gradient(145deg,#ccc 45%,#0000 45% 75%,#ccc 75%,#ccc)”><svg style=”width: 16px; height: 16px;” xmlns=”http://www.w3.org/2000/svg” viewBox=”0 0 512 512”><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path fill=”color(rec2020 0.9 0.4 0.2)” d=”M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376C296.3 401.1 253.9 416 208 416 93.1 416 0 322.9 0 208S93.1 0 208 0 416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z”/></svg></div>
+              <div class="positive" style="background: linear-gradient(45deg,#ccc 45%,#0000 45% 75%,#ccc 75%,#ccc),linear-gradient(145deg,#ccc 45%,#0000 45% 75%,#ccc 75%,#ccc)"><svg style="width: 16px; height: 16px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path fill="color(rec2020 0.9 0.4 0.2)" d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376C296.3 401.1 253.9 416 208 416 93.1 416 0 322.9 0 208S93.1 0 208 0 416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg></div>
 
 
             </section>
-            <section id=”embed-media”>
-              <h3 data-section=”embed-media”>Beágyazások és média</h3>
+            <section id="embed-media">
+              <h3 data-section="embed-media">Beágyazások és média</h3>
 
               <p>Videó, amelynél kézi ellenorzés szükséges a feliratozáshoz:</p>
-              <div class=”positive” style=”width: 560px; aspect-ratio: 560 / 315; max-width: 100%; cursor: not-allowed;”>
-                <iframe width=”560” height=”315” inert=”” src=”https://www.youtube-nocookie.com/embed/QGsevnbItdU?si=W_b2i2o_n5v1ArvA” style=”width: 560px; aspect-ratio: 560 / 315; max-width: 100%; cursor: not-allowed;” title=”YouTube: Hogyan készül videó. A lejátszás le van tiltva.” sandbox=”allow-scripts allow-same-origin” allow=”accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share” referrerpolicy=”origin” allowfullscreen></iframe>
+              <div class="positive" style="width: 560px; aspect-ratio: 560 / 315; max-width: 100%; cursor: not-allowed;">
+                <iframe width="560" height="315" inert="" src="https://www.youtube-nocookie.com/embed/QGsevnbItdU?si=W_b2i2o_n5v1ArvA" style="width: 560px; aspect-ratio: 560 / 315; max-width: 100%; cursor: not-allowed;" title="YouTube: Hogyan készül videó. A lejátszás le van tiltva." sandbox="allow-scripts allow-same-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="origin" allowfullscreen></iframe>
                 <div><small><em>A lejátszás le van tiltva a sütik megakadályozása érdekében.</em></small></div>
               </div>
 
               <p>A hanganyaghoz átirat szükséges:</p>
-              <div class=”positive”>
-                <div style=”border: 1px solid #444; background: #ccc; width: 320px; height: 60px;”><audio style=”height: 60px;”></audio>
+              <div class="positive">
+                <div style="border: 1px solid #444; background: #ccc; width: 320px; height: 60px;"><audio style="height: 60px;"></audio>
                 </div>
               </div>
 
               <p>Iframe cím nélkül, amelyhez kézi ellenorzés is szükséges:</p>
-              <div class=”positive”>
-                <iframe data-needs-src=””></iframe>
+              <div class="positive">
+                <iframe data-needs-src=""></iframe>
               </div>
 
               <p>Nem fókuszálható iframe:</p>
-              <div class=”positive”>
-                <iframe title=”példa” sandbox=”” tabindex=”-1” data-needs-src=””></iframe>
+              <div class="positive">
+                <iframe title="példa" sandbox="" tabindex="-1" data-needs-src=""></iframe>
               </div>
 
               <p>Beágyazott interaktív komponensek</p>
-              <div class=”positive”>
+              <div class="positive">
                 <details><summary>Lenyíló</summary>
                   <details><summary>Lenyíló</summary>Meglepetés!</details>
                 </details>
               </div>
             </section>
-            <section id=”meaningful-links”>
-              <h3 data-section=”meaningful-links”>Értelmeshivatkozások</h3>
+            <section id="meaningful-links">
+              <h3 data-section="meaningful-links">Értelmeshivatkozások</h3>
 
-              <p id=”links-with-no-text-at-all”>Linkek szöveg nélkül</p>
-              <p class=”positive”><a href=”https://www.youtube.com/watch?v=DLzxrzFCyOs”
-                                     style=”display: inline-block; width: 3rem; border-bottom: 1px solid;”></a> Üres linkek</p>
+              <p id="links-with-no-text-at-all">Linkek szöveg nélkül</p>
+              <p class="positive"><a href="https://www.youtube.com/watch?v=DLzxrzFCyOs"
+                                     style="display: inline-block; width: 3rem; border-bottom: 1px solid;"></a> Üres linkek</p>
 
-              <p id=”links-titled-with-a-url”>Linkek, amelyek csak URL-lel vannak címkézve:</p>
-              <p class=”positive”><a  href=”https://www.youtube.com/watch?v=DLzxrzFCyOs”>https://www.youtube.com/watch?v=DLzxrzFCyOs</a></p>
+              <p id="links-titled-with-a-url">Linkek, amelyek csak URL-lel vannak címkézve:</p>
+              <p class="positive"><a  href="https://www.youtube.com/watch?v=DLzxrzFCyOs">https://www.youtube.com/watch?v=DLzxrzFCyOs</a></p>
 
-              <p id=”links-titled-with-a-symbol”>Linkek, amelyek csak szimbólumokkal vannak címkézve:</p>
-              <p class=”positive”><a href=”https://www.youtube.com/watch?v=DLzxrzFCyOs”>↣</a></p>
+              <p id="links-titled-with-a-symbol">Linkek, amelyek csak szimbólumokkal vannak címkézve:</p>
+              <p class="positive"><a href="https://www.youtube.com/watch?v=DLzxrzFCyOs">↣</a></p>
 
               <p>Azonos nevu linkek különbözo helyekre mutatnak</p>
-              <p class=”positive”><a href=”https://www.youtube.com/watch?v=fjOeJssZX_Q”>Teknosök</a> <a href=”https://www.youtube.com/watch?v=cWppAbqm9I8”>Teknosök</a></p>
+              <p class="positive"><a href="https://www.youtube.com/watch?v=fjOeJssZX_Q">Teknosök</a> <a href="https://www.youtube.com/watch?v=cWppAbqm9I8">Teknosök</a></p>
 
-              <p id=”links-titled-with-doi”>Linkek, amelyek csak DOI számmal vannak címkézve:</p>
-              <p class=”positive”><a href=”https://doi.org/10.1145/3493612.3520468”>doi.org/10.1145/3493612.3520468</a></p>
+              <p id="links-titled-with-doi">Linkek, amelyek csak DOI számmal vannak címkézve:</p>
+              <p class="positive"><a href="https://doi.org/10.1145/3493612.3520468">doi.org/10.1145/3493612.3520468</a></p>
 
-              <p id=”links-titled-with-click”>Linkek értelmetlen címkékkel:</p>
-              <p class=”positive”><a  href=”https://www.youtube.com/watch?v=DLzxrzFCyOs” title=”https://www.youtube.com/watch?v=DLzxrzFCyOs”>Kattintson ide</a></p>
+              <p id="links-titled-with-click">Linkek értelmetlen címkékkel:</p>
+              <p class="positive"><a  href="https://www.youtube.com/watch?v=DLzxrzFCyOs" title="https://www.youtube.com/watch?v=DLzxrzFCyOs">Kattintson ide</a></p>
 
-              <p id=”links-titled-with-empty”>Linkelt ikonok szöveges alternatíva nélkül:</p>
-              <p class=”positive”><a href=”https://www.youtube.com/watch?v=DLzxrzFCyOs”><svg style=”width: 16px; height: 16px;” xmlns=”http://www.w3.org/2000/svg” viewBox=”0 0 512 512”><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d=”M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376C296.3 401.1 253.9 416 208 416 93.1 416 0 322.9 0 208S93.1 0 208 0 416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z”/></svg></a></p>
+              <p id="links-titled-with-empty">Linkelt ikonok szöveges alternatíva nélkül:</p>
+              <p class="positive"><a href="https://www.youtube.com/watch?v=DLzxrzFCyOs"><svg style="width: 16px; height: 16px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376C296.3 401.1 253.9 416 208 416 93.1 416 0 322.9 0 208S93.1 0 208 0 416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg></a></p>
 
-              <p id=”links-that-open-in-a-new-window-without-an-external-link-icon-or-text-warning”>Linkek, amelyek új ablakban nyílnak meg külso link ikon vagy szöveges figyelmeztetés nélkül</p>
+              <p id="links-that-open-in-a-new-window-without-an-external-link-icon-or-text-warning">Linkek, amelyek új ablakban nyílnak meg külso link ikon vagy szöveges figyelmeztetés nélkül</p>
 
-              <p class=”positive”><a href=”https://www.youtube.com/watch?v=DLzxrzFCyOs” target=”_blank”>Figyelmeztetés az új ablakban megnyíló teszthez.</a></p>
+              <p class="positive"><a href="https://www.youtube.com/watch?v=DLzxrzFCyOs" target="_blank">Figyelmeztetés az új ablakban megnyíló teszthez.</a></p>
 
-              <p id=”links-to-PDF”>Linkek PDF-ekhez</p>
-              <p class=”positive”><a href=”https://www.youtube.com/watch?v=dQw4w9WgXcQ#.pdf” class=””>Jó szórakozást.</a></p>
+              <p id="links-to-PDF">Linkek PDF-ekhez</p>
+              <p class="positive"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ#.pdf" class="">Jó szórakozást.</a></p>
 
-              <p id=”links-to-doc”>Linkek egyéb dokumentumokhoz</p>
-              <p class=”positive”><a href=”https://www.youtube.com/watch?v=dQw4w9WgXcQ#.doc” class=””>Egy hamis dokumentum link.</a></p>
+              <p id="links-to-doc">Linkek egyéb dokumentumokhoz</p>
+              <p class="positive"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ#.doc" class="">Egy hamis dokumentum link.</a></p>
 
-              <p id=”links-redundant”>Linkek felesleges title attribútumokkal</p>
-              <p class=”positive”><a href=”https://www.youtube.com/watch?v=dQw4w9WgXcQ” title=”Vidd rám az egeret”>Vidd rám az egeret</a></p>
+              <p id="links-redundant">Linkek felesleges title attribútumokkal</p>
+              <p class="positive"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" title="Vidd rám az egeret">Vidd rám az egeret</a></p>
 
               <p>Linkek olyan attribútumokkal, amelyek eltávolítják oket a tab indexbol:</p>
-              <p class=”positive”><a href=”./editable.htm” aria-hidden=”true”>Aria-hidden linkek negatív tabindex nélkül.</a></p>
+              <p class="positive"><a href="./editable.htm" aria-hidden="true">Aria-hidden linkek negatív tabindex nélkül.</a></p>
 
               <p>Linkek aria-labelledby attribútummal, amelyek szöveg nélküli elemekre mutatnak:</p>
-              <p class=”positive”><a href=”./editable.htm” id=”oops” aria-labelledby=”oops”></a></p>
+              <p class="positive"><a href="./editable.htm" id="oops" aria-labelledby="oops"></a></p>
 
               <p>Linkek általános szavakkal az aria címkéjükben:</p>
-              <p class=”positive”><a href=”www.google.com/” aria-label=”has aria label”>tudjon meg többet</a></p>
+              <p class="positive"><a href="www.google.com/" aria-label="has aria label">tudjon meg többet</a></p>
 
               <p>Linkelt kép alt szöveg nélkül:</p>
-              <p class=”positive”><a href=”./editable.htm”><img loading=”lazy” alt=”” src=”/assets/images/px20240813sm.jpg” class=””></a></p>
+              <p class="positive"><a href="./editable.htm"><img loading="lazy" alt="" src="/assets/images/px20240813sm.jpg" class=""></a></p>
 
               <p>Linkelt kép kiejthetetlen alt szöveggel:</p>
-              <p class=”positive”><a href=”./editable.htm”><img loading=”lazy” alt=”'” src=”/assets/images/px20240813sm.jpg” class=””></a></p>
+              <p class="positive"><a href="./editable.htm"><img loading="lazy" alt="'" src="/assets/images/px20240813sm.jpg" class=""></a></p>
 
               <p>Linkelt kép alt attribútum nélkül:</p>
-              <p class=”positive”><a href=”./editable.htm”><img loading=”lazy” src=”/assets/images/px20240813sm.jpg” class=””></a></p>
+              <p class="positive"><a href="./editable.htm"><img loading="lazy" src="/assets/images/px20240813sm.jpg" class=""></a></p>
 
               <p>Linkelt kép alt attribútum nélkül egy szöveges linkben:</p>
-              <p class=”positive”><a href=”./editable.htm”>Keresés <img loading=”lazy” src=”/assets/images/px20240813sm.jpg” class=””></a></p>
+              <p class="positive"><a href="./editable.htm">Keresés <img loading="lazy" src="/assets/images/px20240813sm.jpg" class=""></a></p>
 
               <p>Linkelt kép, amelynek alt szövege csak fájlnév:</p>
-              <p class=”positive”><a href=”./editable.htm”><img loading=”lazy” alt=”http://jpg.gif” src=”/assets/images/px20240813sm.jpg”>
+              <p class="positive"><a href="./editable.htm"><img loading="lazy" alt="http://jpg.gif" src="/assets/images/px20240813sm.jpg">
               </a></p>
 
               <p>Linkelt kép gyanaúsan hosszú alt szöveggel:</p>
-              <p class=”positive”><a href=”./editable.htm”><img loading=”lazy” alt=”Nézd ezt a kutyust. Ez a kutyus nagyon boldog. Ez a kutyus sétálni ment, és a séta egy tóhoz vezetett, ahol mindenféle lenyugozo illatok voltak. Micsoda csodálatos napja volt ennek a kutyusnak.” src=”/assets/images/px20240813sm.jpg”>
+              <p class="positive"><a href="./editable.htm"><img loading="lazy" alt="Nézd ezt a kutyust. Ez a kutyus nagyon boldog. Ez a kutyus sétálni ment, és a séta egy tóhoz vezetett, ahol mindenféle lenyugozo illatok voltak. Micsoda csodálatos napja volt ennek a kutyusnak." src="/assets/images/px20240813sm.jpg">
               </a></p>
 
               <p>Törött oldalon belüli linkek</p>
-              <p class=”positive”>
-                <a href=”#oh-no”>Nincs ilyen azonosító.</a>
+              <p class="positive">
+                <a href="#oh-no">Nincs ilyen azonosító.</a>
               </p>
 
               <p>Linkek fejlesztoi szerverre</p>
-              <p class=”positive”>
-                <a href=”https://tugboatqa.com”>Hoppá</a>
+              <p class="positive">
+                <a href="https://tugboatqa.com">Hoppá</a>
               </p>
 
               <p>Duplikált horgonyok</p>
-              <p class=”positive”><a id=”dupe” href=”#dupe”>Horgony 1</a> <a id=”dupe” href=”#dupe”>Horgony 2</a></p>
+              <p class="positive"><a id="dupe" href="#dupe">Horgony 1</a> <a id="dupe" href="#dupe">Horgony 2</a></p>
             </section>
             <section>
-              <h3 id=”table-tests”>Táblázatok</h3>
+              <h3 id="table-tests">Táblázatok</h3>
 
-              <p id=”tables-without-valid-headers”>Táblázatok érvényes fejlécek nélkül</p>
+              <p id="tables-without-valid-headers">Táblázatok érvényes fejlécek nélkül</p>
 
-              <table class=”positive”><tbody><tr><td>Egy TH fejléc nélküli táblázat érvénytelen</td><td class=”positive”><h4 >A vázlat címsorok nem számítanak</h4></td><td class=”negative”><p><strong>A tartalomfejléc-tesztet le kell tiltani a táblázatokon belül</strong></p></td></tr></tbody></table>
+              <table class="positive"><tbody><tr><td>Egy TH fejléc nélküli táblázat érvénytelen</td><td class="positive"><h4 >A vázlat címsorok nem számítanak</h4></td><td class="negative"><p><strong>A tartalomfejléc-tesztet le kell tiltani a táblázatokon belül</strong></p></td></tr></tbody></table>
 
               <table><thead>
               <tr>
-                <th class=”positive”></th>
-                <th class=”negative”>Üres fejlécek</th>
+                <th class="positive"></th>
+                <th class="negative">Üres fejlécek</th>
               </tr>
               </thead>
                 <tbody>
-                <tr class=”negative”>
+                <tr class="negative">
                   <th>Találtam</th>
                   <td>700 videó teknosökrol</td>
                 </tr>
-                <tr class=”negative”>
+                <tr class="negative">
                   <th>Mindegyik</th>
                   <td>2 másodperc hosszú</td>
                 </tr>
                 </tbody>
               </table>
             </section>
-            <section id=”legibility”>
-              <h3 data-section=”legibility”>Olvashatóság</h3>
+            <section id="legibility">
+              <h3 data-section="legibility">Olvashatóság</h3>
 
-              <div class=”positive”><p>TÖBB EGYMÁS UTÁNI SZÓ CSUPA NAGYBETUS SZÖVEG KÉZI ELLENORZÉSI FIGYELMEZTETÉST VÁT KI.</p></div>
+              <div class="positive"><p>TÖBB EGYMÁS UTÁNI SZÓ CSUPA NAGYBETUS SZÖVEG KÉZI ELLENORZÉSI FIGYELMEZTETÉST VÁT KI.</p></div>
 
-              <p class=”positive”><u>Aláhúzott szöveg</u></p>
+              <p class="positive"><u>Aláhúzott szöveg</u></p>
 
-              <p class=”positive”><em>Egy kis dolt betus szöveg rendben van, de a kiemelt szöveg nagy blokkjai nem túl olvashatóak. Egy kis mennyiség természetesen elfogadható, de vannak határok, és egy egész bekezdés már túl sok. Ez például egy egész bekezdés. Elég nehéz olvasni, nem igaz? De ez a teszt csak ilyen hosszúságnál aktiválódik, tehát nem kellene hamis pozitívokat látnia a tartalmában, hacsak nem ír rendszeresen ilyen nagy bekezdéseket.</em></p>
+              <p class="positive"><em>Egy kis dolt betus szöveg rendben van, de a kiemelt szöveg nagy blokkjai nem túl olvashatóak. Egy kis mennyiség természetesen elfogadható, de vannak határok, és egy egész bekezdés már túl sok. Ez például egy egész bekezdés. Elég nehéz olvasni, nem igaz? De ez a teszt csak ilyen hosszúságnál aktiválódik, tehát nem kellene hamis pozitívokat látnia a tartalmában, hacsak nem ír rendszeresen ilyen nagy bekezdéseket.</em></p>
 
-              <p class=”positive” style=”text-align: justify;”>Sorkizárt szöveg</p>
+              <p class="positive" style="text-align: justify;">Sorkizárt szöveg</p>
 
-              <p class=”positive”>Túlzott felso vagy alsó index; <sub>az alsó indexet kis hivatkozásokhoz és lábjegyzetekhez kell használni, nem egész mondatokhoz vagy bekezdésekhez.</sub></p>
+              <p class="positive">Túlzott felso vagy alsó index; <sub>az alsó indexet kis hivatkozásokhoz és lábjegyzetekhez kell használni, nem egész mondatokhoz vagy bekezdésekhez.</sub></p>
 
-              <p class=”positive”><span style=”font-size: 10px;”>Apró betuméretek</span></p>
+              <p class="positive"><span style="font-size: 10px;">Apró betuméretek</span></p>
 
-              <div class=”positive”>
+              <div class="positive">
                 <p>* Hamis listák gyakori karakterekkel,</p><p>* betukkel, számokkal és emojikkal.</p>
               </div>
 
-              <div class=”positive”><li>Hiányzó UL címke</li></div>
+              <div class="positive"><li>Hiányzó UL címke</li></div>
             </section>
 
-            <section id=”form-elements”>
-              <h3 data-section=”form-elements”>Urlapok</h3>
+            <section id="form-elements">
+              <h3 data-section="form-elements">Urlapok</h3>
 
               <p>Gomb címke nélkül</p>
-              <div class=”positive”>
-                <button class=”btn btn-primary p-3 pt-4”></button>
+              <div class="positive">
+                <button class="btn btn-primary p-3 pt-4"></button>
               </div>
 
               <p>Beviteli mezok láthatatlan címkével, kérdés, hogy van-e látható címke is.</p>
-              <div class=”positive”>
-                <input type=”text” title=”Email”>
+              <div class="positive">
+                <input type="text" title="Email">
               </div>
 
               <p>Beviteli mezok, amelyeknek csak helyorzo címkéje van, kérdés, hogy van-e látható címke is.</p>
-              <div class=”positive”>
-                <input type=”text” placeholder=”Email”>
+              <div class="positive">
+                <input type="text" placeholder="Email">
               </div>
 
-              <div class=”positive”>
+              <div class="positive">
                 <p>Gomb, amelynek akadálymentes címkéje eltér a látható címkéjétol.</p>
-                <button class=”btn btn-primary” aria-label=”bye”>Szia</button>
+                <button class="btn btn-primary" aria-label="bye">Szia</button>
               </div>
 
-              <div class=”positive”>
+              <div class="positive">
                 <p>Gomb érvénytelen aria-labelledby attribútummal.</p>
-                <button class=”btn btn-primary” aria-labelledby=”bye”>Szia</button>
+                <button class="btn btn-primary" aria-labelledby="bye">Szia</button>
               </div>
 
-              <div class=”positive”>
+              <div class="positive">
                 <p>Gomb felesleges címkével.</p>
-                <button class=”btn btn-primary”>Nyomja meg ezt a gombot</button>
+                <button class="btn btn-primary">Nyomja meg ezt a gombot</button>
               </div>
 
-              <div class=”positive”>
+              <div class="positive">
                 <p>Visszaállítás gomb.</p>
-                <input class=”btn btn-danger” type=”reset”>
+                <input class="btn btn-danger" type="reset">
               </div>
 
-              <p class=”positive”><a href=”./editable.htm” tabindex=”2”>A tab sorrend összekeverése</a></p>
+              <p class="positive"><a href="./editable.htm" tabindex="2">A tab sorrend összekeverése</a></p>
             </section>
 
 

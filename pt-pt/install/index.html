@@ -48,20 +48,20 @@
             <div class="col-12 col-md-7 col-lg-8 pt-3" data-bs-spy="scroll" data-bs-target="#on-this-page" data-bs-smooth-scroll="true">
                 <h1>Instalar e Configurar</h1>
 
-                <section id=”modules”>
-                    <h2 class=”pt-3 pb-2”>Versões pré-configuradas</h2>
-                    <ul class=”list-unstyled ps-0”>
-                        <li><a href=”https://www.drupal.org/project/editoria11y” class=”arrow”><strong>Instalador para Drupal</strong></a></li>
-                        <li><a href=”https://wordpress.org/plugins/editoria11y-accessibility-checker/” class=”arrow”><strong>Instalador para WordPress</strong></a></li>
-                        <li><a href=”https://codeberg.org/sebastiangreger/kirby-a11yprompter” class=”arrow”><strong>Instalador para Kirby</strong></a> <em>(contrib)</em></li>
-                        <li><a href=”https://plugins.craftcms.com/editoria11y” class=”arrow”><strong>Instalador para CraftCMS</strong></a> <em>(contrib)</em></li>
+                <section id="modules">
+                    <h2 class="pt-3 pb-2">Versões pré-configuradas</h2>
+                    <ul class="list-unstyled ps-0">
+                        <li><a href="https://www.drupal.org/project/editoria11y" class="arrow"><strong>Instalador para Drupal</strong></a></li>
+                        <li><a href="https://wordpress.org/plugins/editoria11y-accessibility-checker/" class="arrow"><strong>Instalador para WordPress</strong></a></li>
+                        <li><a href="https://codeberg.org/sebastiangreger/kirby-a11yprompter" class="arrow"><strong>Instalador para Kirby</strong></a> <em>(contrib)</em></li>
+                        <li><a href="https://plugins.craftcms.com/editoria11y" class="arrow"><strong>Instalador para CraftCMS</strong></a> <em>(contrib)</em></li>
                     </ul>
                 </section>
-                <section id=”diy”>
+                <section id="diy">
                     <h2>
                         Instalação personalizada
                     </h2>
-                    <p>Para criar a sua própria implementação, <a href=”https://github.com/itmaybejj/editoria11y” data-type=”URL” data-id=”https://github.com/itmaybejj/editoria11y” class=”liinternal”>descarregue uma cópia local</a> (ou referencie uma <a href=”https://cdn.jsdelivr.net/gh/itmaybejj/editoria11y@2/dist/editoria11y.min.js” class=”liinternal”>versão CDN</a>) de um pacote de idiomas, do ficheiro JS minificado e do ficheiro CSS minificado, e depois crie uma nova instância “Ed11y”.</p>
+                    <p>Para criar a sua própria implementação, <a href="https://github.com/itmaybejj/editoria11y" data-type="URL" data-id="https://github.com/itmaybejj/editoria11y" class="liinternal">descarregue uma cópia local</a> (ou referencie uma <a href="https://cdn.jsdelivr.net/gh/itmaybejj/editoria11y@2/dist/editoria11y.min.js" class="liinternal">versão CDN</a>) de um pacote de idiomas, do ficheiro JS minificado e do ficheiro CSS minificado, e depois crie uma nova instância “Ed11y”.</p>
                     <p>Para <strong>importações de módulos ESM/JS</strong>: </p>
                     <pre class="language-markup"><code><!--// Load CSS
 <link href="/dist/css/editoria11y.min.css?v=3.0" rel="stylesheet">
@@ -169,14 +169,14 @@ baseFontSize: 14, // px
 baseFontFamily: '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif', --></code></pre>
                 </section>
 
-                <section id=”js-events”>
-                    <h2 class=”wp-block-heading has-text-align-left has-secondary-background-color has-background has-large-font-size”>Eventos JS úteis</h2>
+                <section id="js-events">
+                    <h2 class="wp-block-heading has-text-align-left has-secondary-background-color has-background has-large-font-size">Eventos JS úteis</h2>
 
                     <p>Os tematizadores podem associar-se a estes eventos para reagir e modificar a página conforme necessário.</p>
 
                     <p>Por ordem típica de ocorrência…</p>
 
-                    <ul class=”wp-block-list”>
+                    <ul class="wp-block-list">
                         <li><strong><code>ed11yRunCustomTests</code></strong>: emitido quando o objeto Results está pronto para receber resultados personalizados. Note que o parâmetro customTests deve ser definido com o número de funções de teste personalizadas que irá executar (…provavelmente uma…) para que este evento seja emitido. Mais detalhes na secção seguinte.</li>
 
                         <li><strong><code>ed11yResults</code></strong>: emitido quando todas as verificações estão concluídas. As integrações API podem agora extrair dados do objeto Ed11y.results.</li>
@@ -204,18 +204,18 @@ baseFontFamily: '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica N
                     <p>Exemplos podem ser encontrados nas secções seguintes.</p>
                 </section>
 
-                <section id=”modify-tips”>
-                    <h2 class=”wp-block-heading has-secondary-background-color has-background has-large-font-size”>Modificar dicas de contexto</h2>
+                <section id="modify-tips">
+                    <h2 class="wp-block-heading has-secondary-background-color has-background has-large-font-size">Modificar dicas de contexto</h2>
 
                     <p>Se apenas pretender modificar o texto de uma dica, os itens nos objetos globais ed11yLang.en (antes de chamar a biblioteca) ou Ed11y.M (depois de chamar a biblioteca) podem ser substituídos diretamente. Por exemplo, no módulo Drupal onde aliámos o pacote de idiomas a Drupal.ed11yLang:</p>
 
                     <p><code>Drupal.ed11yLang.lang.testNames.title = “Please write shorter headings.”</code></p>
 
-                    <p>Isto aplica-se a qualquer uma das <a href=”https://github.com/itmaybejj/editoria11y/blob/3.0.x/src/lang/baseAll.js” data-type=”link” data-id=”https://github.com/itmaybejj/editoria11y/blob/2.3.x/js/ed11y-localization.js” class=”liinternal”>chaves predefinidas no ficheiro de localização</a> ou na tradução específica do idioma ativo.</p>
+                    <p>Isto aplica-se a qualquer uma das <a href="https://github.com/itmaybejj/editoria11y/blob/3.0.x/src/lang/baseAll.js" data-type="link" data-id="https://github.com/itmaybejj/editoria11y/blob/2.3.x/js/ed11y-localization.js" class="liinternal">chaves predefinidas no ficheiro de localização</a> ou na tradução específica do idioma ativo.</p>
 
                     <p>O módulo Drupal também adiciona hiperligações de edição personalizadas às dicas, utilizando o parâmetro <code>editLinks</code>. Veja “Page editor” e “Layout editor”:</p>
 
-                    <figure class=”wp-block-image size-full”><img loading=”lazy” data-recalc-dims=”1” fetchpriority=”high” decoding=”async” width=”580” height=”300” src=”https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?resize=580%2C300&amp;ssl=1” alt=”Dica de contexto com hiperligações &quot;Page editor&quot; e &quot;Layout editor&quot; inseridas.” class=”wp-image-523” srcset=”https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?w=1290&amp;ssl=1 1290w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?resize=600%2C311&amp;ssl=1 600w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?resize=768%2C398&amp;ssl=1 768w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?resize=1200%2C621&amp;ssl=1 1200w” sizes=”(max-width: 580px) 100vw, 580px”></figure>
+                    <figure class="wp-block-image size-full"><img loading="lazy" data-recalc-dims="1" fetchpriority="high" decoding="async" width="580" height="300" src="https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?resize=580%2C300&amp;ssl=1" alt="Dica de contexto com hiperligações &quot;Page editor&quot; e &quot;Layout editor&quot; inseridas." class="wp-image-523" srcset="https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?w=1290&amp;ssl=1 1290w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?resize=600%2C311&amp;ssl=1 600w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?resize=768%2C398&amp;ssl=1 768w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?resize=1200%2C621&amp;ssl=1 1200w" sizes="(max-width: 580px) 100vw, 580px"></figure>
 
                     <p>Uma versão simplificada do código que define esse parâmetro:</p>
                     <pre class="language-javascript"><code><!--const editLinks = document.createElement('div');
@@ -241,7 +241,7 @@ document.addEventListener('ed11yPop', e => {
 }); --></code></pre>
                 </section>
 
-                <section id=”custom-tests”>
+                <section id="custom-tests">
                     <h2>Testes personalizados</h2>
 
                     <p>Se o parâmetro <strong><em>customTests</em></strong> for um <strong><em>número</em></strong>, o Editoria11y emitirá um evento “ed11yRunCustomTests” durante a verificação, e aguardará até 500ms enquanto escuta esse número de eventos “<code>ed11yResume</code>”.</p>
@@ -250,11 +250,11 @@ document.addEventListener('ed11yPop', e => {
 
                     <p>Por exemplo, se quisesse criar esta dica para assinalar hiperligações coladas de mensagens de correio eletrónico com URLs ofuscados:</p>
 
-                    <figure class=”wp-block-image size-full”><img loading=”lazy” data-recalc-dims=”1” decoding=”async” width=”580” height=”462” src=”https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2023/12/Screenshot-2023-12-06-at-5.13.38-PM.png?resize=580%2C462&amp;ssl=1” alt=”Dica com o texto &quot;URL is Safe Link Encoded&quot;” class=”wp-image-323” srcset=”https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2023/12/Screenshot-2023-12-06-at-5.13.38-PM.png?w=1056&amp;ssl=1 1056w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2023/12/Screenshot-2023-12-06-at-5.13.38-PM.png?resize=600%2C478&amp;ssl=1 600w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2023/12/Screenshot-2023-12-06-at-5.13.38-PM.png?resize=768%2C612&amp;ssl=1 768w” sizes=”(max-width: 580px) 100vw, 580px”></figure>
+                    <figure class="wp-block-image size-full"><img loading="lazy" data-recalc-dims="1" decoding="async" width="580" height="462" src="https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2023/12/Screenshot-2023-12-06-at-5.13.38-PM.png?resize=580%2C462&amp;ssl=1" alt="Dica com o texto &quot;URL is Safe Link Encoded&quot;" class="wp-image-323" srcset="https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2023/12/Screenshot-2023-12-06-at-5.13.38-PM.png?w=1056&amp;ssl=1 1056w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2023/12/Screenshot-2023-12-06-at-5.13.38-PM.png?resize=600%2C478&amp;ssl=1 600w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2023/12/Screenshot-2023-12-06-at-5.13.38-PM.png?resize=768%2C612&amp;ssl=1 768w" sizes="(max-width: 580px) 100vw, 580px"></figure>
 
                     <p>Deverá:</p>
 
-                    <ol class=”wp-block-list”>
+                    <ol class="wp-block-list">
                         <li>Adicionar um listener para o evento <code>ed11yRunCustomTests</code></li>
 
                         <li>Encontrar os elementos correspondentes</li>

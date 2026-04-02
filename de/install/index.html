@@ -48,20 +48,20 @@
             <div class="col-12 col-md-7 col-lg-8 pt-3" data-bs-spy="scroll" data-bs-target="#on-this-page" data-bs-smooth-scroll="true">
                 <h1>Installation &amp; Konfiguration</h1>
 
-                <section id=”modules”>
-                    <h2 class=”pt-3 pb-2”>Vorkonfigurierte Versionen</h2>
-                    <ul class=”list-unstyled ps-0”>
-                        <li><a href=”https://www.drupal.org/project/editoria11y” class=”arrow”><strong>Drupal-Installer</strong></a></li>
-                        <li><a href=”https://wordpress.org/plugins/editoria11y-accessibility-checker/” class=”arrow”><strong>WordPress-Installer</strong></a></li>
-                        <li><a href=”https://codeberg.org/sebastiangreger/kirby-a11yprompter” class=”arrow”><strong>Kirby-Installer</strong></a> <em>(Beitrag)</em></li>
-                        <li><a href=”https://plugins.craftcms.com/editoria11y” class=”arrow”><strong>CraftCMS-Installer</strong></a> <em>(Beitrag)</em></li>
+                <section id="modules">
+                    <h2 class="pt-3 pb-2">Vorkonfigurierte Versionen</h2>
+                    <ul class="list-unstyled ps-0">
+                        <li><a href="https://www.drupal.org/project/editoria11y" class="arrow"><strong>Drupal-Installer</strong></a></li>
+                        <li><a href="https://wordpress.org/plugins/editoria11y-accessibility-checker/" class="arrow"><strong>WordPress-Installer</strong></a></li>
+                        <li><a href="https://codeberg.org/sebastiangreger/kirby-a11yprompter" class="arrow"><strong>Kirby-Installer</strong></a> <em>(Beitrag)</em></li>
+                        <li><a href="https://plugins.craftcms.com/editoria11y" class="arrow"><strong>CraftCMS-Installer</strong></a> <em>(Beitrag)</em></li>
                     </ul>
                 </section>
-                <section id=”diy”>
+                <section id="diy">
                     <h2>
                         Benutzerdefinierte Installation
                     </h2>
-                    <p>Um Ihre eigene Implementierung zu erstellen, <a href=”https://github.com/itmaybejj/editoria11y” data-type=”URL” data-id=”https://github.com/itmaybejj/editoria11y” class=”liinternal”>laden Sie eine lokale Kopie herunter</a> (oder verweisen Sie auf eine <a href=”https://cdn.jsdelivr.net/gh/itmaybejj/editoria11y@2/dist/editoria11y.min.js” class=”liinternal”>CDN-Version</a>) eines Sprachpakets, der minimierten JS-Datei und der CSS-Datei, und erstellen Sie dann eine neue „Ed11y”-Instanz.</p>
+                    <p>Um Ihre eigene Implementierung zu erstellen, <a href="https://github.com/itmaybejj/editoria11y" data-type="URL" data-id="https://github.com/itmaybejj/editoria11y" class="liinternal">laden Sie eine lokale Kopie herunter</a> (oder verweisen Sie auf eine <a href="https://cdn.jsdelivr.net/gh/itmaybejj/editoria11y@2/dist/editoria11y.min.js" class="liinternal">CDN-Version</a>) eines Sprachpakets, der minimierten JS-Datei und der CSS-Datei, und erstellen Sie dann eine neue „Ed11y”-Instanz.</p>
                     <p>Für <strong>ESM/JS-Modulimporte</strong>: </p>
                     <pre class="language-markup"><code><!--// Load CSS
 <link href="/dist/css/editoria11y.min.css?v=3.0" rel="stylesheet">
@@ -141,7 +141,7 @@
                     <p>Schlüsselfertige Integrationen setzen diese Variablen oft dynamisch — z. B. Seiten im „assertive”-Modus laden, wenn sie kürzlich bearbeitet wurden, und nach einigen Minuten wieder in den „polite”-Modus wechseln.</p>
                 </section>
 
-                <section id=”theme”>
+                <section id="theme">
                     <h2>Theming</h2>
 
                     <p>Mehrere Parameter ermöglichen die Auswahl eines Themes, das Überschreiben von Farben und das Einbetten von CSS.</p>
@@ -169,14 +169,14 @@ baseFontSize: 14, // px
 baseFontFamily: '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif', --></code></pre>
                 </section>
 
-                <section id=”js-events”>
-                    <h2 class=”wp-block-heading has-text-align-left has-secondary-background-color has-background has-large-font-size”>Nützliche JS-Ereignisse</h2>
+                <section id="js-events">
+                    <h2 class="wp-block-heading has-text-align-left has-secondary-background-color has-background has-large-font-size">Nützliche JS-Ereignisse</h2>
 
                     <p>Theme-Entwickler können diese Ereignisse nutzen, um auf Änderungen zu reagieren und die Seite bei Bedarf anzupassen.</p>
 
                     <p>In typischer Reihenfolge des Auftretens…</p>
 
-                    <ul class=”wp-block-list”>
+                    <ul class="wp-block-list">
                         <li><strong><code>ed11yRunCustomTests</code></strong>: wird ausgelöst, wenn das Results-Objekt bereit ist, benutzerdefinierte Ergebnisse zu empfangen. Beachten Sie, dass der customTests-Parameter auf die Anzahl der auszuführenden benutzerdefinierten Testfunktionen gesetzt sein muss (…wahrscheinlich eine…), damit dieses Ereignis ausgelöst wird. Details im folgenden Abschnitt.</li>
 
                         <li><strong><code>ed11yResults</code></strong>: wird ausgelöst, wenn alle Prüfungen abgeschlossen sind. API-Integrationen können nun Daten aus dem Ed11y.results-Objekt abrufen.</li>
@@ -204,18 +204,18 @@ baseFontFamily: '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica N
                     <p>Beispiele finden sich in den folgenden Abschnitten.</p>
                 </section>
 
-                <section id=”modify-tips”>
-                    <h2 class=”wp-block-heading has-secondary-background-color has-background has-large-font-size”>Hinweise anpassen</h2>
+                <section id="modify-tips">
+                    <h2 class="wp-block-heading has-secondary-background-color has-background has-large-font-size">Hinweise anpassen</h2>
 
                     <p>Wenn Sie lediglich den Text eines Hinweises ändern möchten, können Einträge im globalen ed11yLang.en-Objekt (vor dem Aufruf der Bibliothek) oder Ed11y.M (nach dem Aufruf) direkt überschrieben werden. Z. B. im Drupal-Modul, wo wir das Sprachpaket als Drupal.ed11yLang aliasiert haben:</p>
 
                     <p><code>Drupal.ed11yLang.lang.testNames.title = “Please write shorter headings.”</code></p>
 
-                    <p>Dies gilt für alle <a href=”https://github.com/itmaybejj/editoria11y/blob/3.0.x/src/lang/baseAll.js” data-type=”link” data-id=”https://github.com/itmaybejj/editoria11y/blob/2.3.x/js/ed11y-localization.js” class=”liinternal”>Standardschlüssel in der Lokalisierungsdatei</a> oder der aktiven sprachspezifischen Übersetzung.</p>
+                    <p>Dies gilt für alle <a href="https://github.com/itmaybejj/editoria11y/blob/3.0.x/src/lang/baseAll.js" data-type="link" data-id="https://github.com/itmaybejj/editoria11y/blob/2.3.x/js/ed11y-localization.js" class="liinternal">Standardschlüssel in der Lokalisierungsdatei</a> oder der aktiven sprachspezifischen Übersetzung.</p>
 
                     <p>Das Drupal-Modul fügt den Hinweisen auch benutzerdefinierte Bearbeitungslinks hinzu, mithilfe des <code>editLinks</code>-Parameters. Beachten Sie „Seiteneditor” und „Layout-Editor:”</p>
 
-                    <figure class=”wp-block-image size-full”><img loading=”lazy” data-recalc-dims=”1” fetchpriority=”high” decoding=”async” width=”580” height=”300” src=”https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?resize=580%2C300&amp;ssl=1” alt=”Tooltip mit eingefügten Links „Seiteneditor” und „Layout-Editor”.” class=”wp-image-523” srcset=”https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?w=1290&amp;ssl=1 1290w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?resize=600%2C311&amp;ssl=1 600w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?resize=768%2C398&amp;ssl=1 768w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?resize=1200%2C621&amp;ssl=1 1200w” sizes=”(max-width: 580px) 100vw, 580px”></figure>
+                    <figure class="wp-block-image size-full"><img loading="lazy" data-recalc-dims="1" fetchpriority="high" decoding="async" width="580" height="300" src="https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?resize=580%2C300&amp;ssl=1" alt="Tooltip mit eingefügten Links „Seiteneditor" und „Layout-Editor"." class="wp-image-523" srcset="https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?w=1290&amp;ssl=1 1290w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?resize=600%2C311&amp;ssl=1 600w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?resize=768%2C398&amp;ssl=1 768w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?resize=1200%2C621&amp;ssl=1 1200w" sizes="(max-width: 580px) 100vw, 580px"></figure>
 
                     <p>Eine vereinfachte Version des Codes, der diesen Parameter setzt:</p>
                     <pre class="language-javascript"><code><!--const editLinks = document.createElement('div');
@@ -241,7 +241,7 @@ document.addEventListener('ed11yPop', e => {
 }); --></code></pre>
                 </section>
 
-                <section id=”custom-tests”>
+                <section id="custom-tests">
                     <h2>Benutzerdefinierte Tests</h2>
 
                     <p>Wenn der <strong><em>customTests</em></strong>-Parameter eine <strong><em>Zahl</em></strong> ist, löst Editoria11y beim Prüfen ein „ed11yRunCustomTests”-Ereignis aus und wartet dann bis zu 500 ms auf diese Anzahl von „<code>ed11yResume</code>”-Ereignissen.</p>
@@ -254,7 +254,7 @@ document.addEventListener('ed11yPop', e => {
 
                     <p>Dazu würden Sie:</p>
 
-                    <ol class=”wp-block-list”>
+                    <ol class="wp-block-list">
                         <li>Einen Listener für das <code>ed11yRunCustomTests</code>-Ereignis hinzufügen</li>
 
                         <li>Passende Elemente finden</li>
