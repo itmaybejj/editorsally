@@ -52,9 +52,17 @@
           <div class="row justify-content-center">
             <div class="col-lg-10">
               <h1 class="text-body-emphasis pt-2 pb-2" data-section="membership">Tarifs et contributions</h1>
-              <p class="fs-5">Le coeur d'Editoria11y est gratuit pour tous.</p>
-              <p class="fs-5">Le d&eacute;veloppement et le support proviennent du projet Community Supported Add-ons (CSA), qui fonctionne selon un mod&egrave;le de contribution libre.</p>
-              <h2 class="nomenu pt-3">Adh&eacute;sion au CSA par l'achat de plugins</h2>
+              <p class="fs-5">
+                Editoria11y promeut l'accessibilit&eacute; d'une mani&egrave;re unique. Ses outils sont tr&egrave;s efficaces pour aider les auteurs non techniques &agrave; pr&eacute;parer du contenu qui peut &ecirc;tre appr&eacute;ci&eacute; de mani&egrave;re &eacute;gale par les utilisateurs du Web en situation de handicap. Nous consid&eacute;rons cela comme un bien public, c'est pourquoi <strong>Editoria11y sera toujours gratuit &agrave; utiliser</strong>.
+              </p>
+              <p class="fs-5">
+                Editoria11y n'est cependant pas gratuit &agrave; d&eacute;velopper ou &agrave; supporter.
+              </p>
+              <p class="fs-5">
+                Le projet &laquo;&nbsp;Community Supported Add-ons&nbsp;&raquo; (CSA) comble ce manque&nbsp;: les membres du projet financent le d&eacute;veloppement de la biblioth&egrave;que Editoria11y, de ses plugins CMS, et de la suite CSA&nbsp;: un ensemble d'outils d'assurance qualit&eacute; en pleine expansion qui offrent des fonctionnalit&eacute;s similaires aux produits commerciaux, en open source et auto-h&eacute;berg&eacute;.</p>
+              <p>La suite CSA pour Drupal est actuellement gratuite en version b&ecirc;ta, et sera disponible pour WordPress au T3 2026.
+              </p>
+              <h2 class="nomenu pt-3">Adh&eacute;sion au CSA par les contributions</h2>
               <p>Le CSA fournissant des outils auto-h&eacute;berg&eacute;s et open source, nos frais g&eacute;n&eacute;raux sont tr&egrave;s faibles. ~9&nbsp;&euro;/site/mois suffisent &agrave; r&eacute;mun&eacute;rer nos d&eacute;veloppeurs et accompagner nos utilisateurs. Les outils commerciaux comparables facturent de 15&nbsp;&euro; (v&eacute;rificateurs basiques) &agrave; plus de 1000&nbsp;&euro; (tableaux de bord illimit&eacute;s) par site et par mois.</p>
             </div>
 
@@ -64,20 +72,20 @@
             <div class="row">
               <div class="col-lg-3"></div>
               <div class="row col-lg-9 py-4 pt-0 align-items-start text-start">
-                <div class="col">
-                  <label for="support-level">Parrainage</label>
+                <div class="col-md-4 mb-3">
+                  <label for="support-level">Contribution</label>
                   <select id="support-level" class="form-select ">
                     <option value="100">150%</option>
                     <option value="80">120%</option>
-                    <option value="60" selected>Soutien complet</option>
-                    <option value="50">75% (universitaire/associatif)</option>
+                    <option value="60" selected>100% du besoin estim&eacute;</option>
+                    <option value="50">75%</option>
                     <option value="44">66%</option>
                     <option value="33">50%</option>
                     <option value="22">33%</option>
                     <option value="17">25%</option>
                   </select>
                 </div>
-                <div class="col">
+                <div class="col-md-4 mb-3">
                   <label for="currency">Devise</label>
                   <select class="form-select" id="currency">
                     <option value="EUR">€ EUR</option>
@@ -86,7 +94,7 @@
                   </select>
                 </div>
 
-                <div class="col">
+                <div class="col-md-4 mb-3">
                   <div class="row pb-3 form-check form-switch ps-0">
                     <div><label class="" for="annual-pricing">
                         Annuel
@@ -116,7 +124,7 @@
                         <li class="fw-semibold">Rapports du site</li>
                         <li class="fw-semibold">Exports de rapports</li>
                         <li class="fw-semibold">Pages illimit&eacute;es</li>
-                        <li>Support Forum + Slack</li>
+                        <li class="fw-semibold">Support forum</li>
                       </ul>
                     </div>
                   </div>
@@ -124,12 +132,12 @@
               </div>
               <div class="col-lg-3 py-4 px-0" id="individual">
                 <div class="bg-light shadow overflow-hidden rounded-start">
-                  <div class="text-bg-info p-2 border-bottom border-light-subtle">1-Site</div>
+                  <div class="text-bg-info p-2 border-bottom border-light-subtle">Personnel</div>
                   <div class="text-bg-info p-3 pb-1 d-flex flex-column justify-content-center">
                     <p class="lh-1"><span class="currency">&euro;</span><span class="price fs-3">9</span><span
                         class="period">/mois</span></p>
                     <div class="fs-5 text-start">
-                      <p class="fs-6 text-center"><em class="small">Tout ce qui est inclus dans Gratuit, plus&nbsp;:</em></p>
+                      <p class="fs-6 text-center"><em class="fs-6 ms-1 mb-2">Tout ce qui est inclus dans Gratuit, plus&nbsp;:</em></p>
                       <ul class="small">
                         <li><strong>Plus de 30 tests pour d&eacute;veloppeurs</strong></li>
                         <li><strong>Outil de test personnalis&eacute;</strong></li>
@@ -138,10 +146,10 @@
                         <li><strong>Actualisation des crawlers</strong></li>
                         <li class="credit"><strong>Aide &agrave; la mise en place</strong></li>
                         <li class="credit"><strong>Cr&eacute;dit de soutien</strong></li>
-                        <li class="period-warning" hidden=""><em>Facturation annuelle uniquement</em></li>
                       </ul>
                     </div>
                     <p class=""><a class="btn btn-dark" title="Individual">S'abonner</a></p>
+                    <p class="period-warning fs-6" hidden><em>Facturation annuelle uniquement</em></p>
                   </div>
                 </div>
               </div>
@@ -162,15 +170,16 @@
                     <p class="lh-1"><span class="currency">&euro;</span><span class="price fs-3">9.99</span><span
                         class="period fs-5">/mois</span></p>
                     <div class="fs-5 text-start">
-                      <p class="fs-6 text-center"><em class="small">Tout ce qui est inclus dans 1-Site, plus&nbsp;:</em></p>
+                      <p class="fs-6 text-center full"><em class="fs-6 ms-1 mb-2">Tout ce qui est inclus dans Personnel, plus&nbsp;:</em></p>
                       <ul class="small">
                         <li class="full"><strong>Aide &agrave; la mise en place</strong></li>
+                        <li class="credit"><strong>Support par e-mail</strong></li>
                         <li class="credit"><strong>Consultation annuelle</strong></li>
                         <li class="credit"><strong>Cr&eacute;dit de soutien</strong></li>
-                        <li class="period-warning" hidden><em>Facturation annuelle uniquement</em></li>
                       </ul>
                     </div>
                     <p class=""><a class="btn btn-dark" title="Team">S'abonner</a></p>
+                    <p class="period-warning fs-6" hidden><em>Facturation annuelle uniquement</em></p>
                   </div>
                 </div>
               </div>
@@ -181,12 +190,13 @@
                     <p class="lh-1"><span class="currency">&euro;</span><span class="price fs-3">2700</span><span
                         class="period">/mois</span></p>
                     <div class="fs-5 text-start">
-                      <p class="fs-6 text-center"><em class="small">Tout ce qui est inclus dans 1-Site, plus&nbsp;:</em></p>
+                      <p class="fs-6 text-center"><em class="fs-6 ms-1 mb-2">Tout ce qui est inclus dans Personnel, plus&nbsp;:</em></p>
                       <ul class="small">
                         <li><strong>Sites illimit&eacute;s</strong></li>
                         <li><strong>Aide &agrave; la mise en place</strong></li>
-                        <li class="credit"><strong>Consultations trimestrielles</strong></li>
-                        <li class="credit"><strong>Cr&eacute;dit de soutien</strong></li>
+                        <li><strong>Consultation annuelle</strong></li>
+                        <li class="full"><strong>Support par e-mail</strong></li>
+                        <li><strong>Cr&eacute;dit de soutien</strong></li>
                       </ul>
                     </div>
                     <p class=""><a class="btn btn-dark" title="Enterprise">S'abonner</a></p>
@@ -207,7 +217,7 @@
 
           <div class="row justify-content-center pt-5">
             <div class="col-lg-10">
-              <h2>Adh&eacute;sion au CSA par le partenariat et la contribution</h2>
+              <h2>Adh&eacute;sion au CSA par le partenariat</h2>
               <p class="fs-6">Les cl&eacute;s de licence peuvent &ecirc;tre achet&eacute;es directement, mais il existe de nombreuses autres fa&ccedil;ons de soutenir le projet&nbsp;:</p>
               <ul class="list-unstyled ps-0">
                 <li class="arrow">
@@ -232,12 +242,13 @@
             <h2 data-section="existing">Ressources pour les membres existants</h2>
             <div class="accord col-lg-8">
               <details class="rounded bd-info">
-                <summary>Modifier le niveau de parrainage</summary>
-                <p class="text-start small pt-3 pb-2">Les abonnements se renouvellent au m&ecirc;me niveau de parrainage. Si vous choisissez de modifier votre niveau de parrainage lors du renouvellement, notez que tous les paliers donnent acc&egrave;s aux m&ecirc;mes fonctionnalit&eacute;s, mais que tous les paliers ne sont pas &eacute;ligibles aux cr&eacute;dits de soutien et aux appels de consultation r&eacute;guliers.</p>
+                <summary>Niveaux de contribution pour le renouvellement de licence</summary>
+                <p class="text-start small pt-3 pb-2">Les abonnements se renouvellent au m&ecirc;me niveau de contribution par d&eacute;faut.</p>
+                <p>Si vous choisissez de modifier votre niveau de contribution lors du renouvellement, notez que tous les paliers donnent acc&egrave;s aux m&ecirc;mes fonctionnalit&eacute;s des plugins, mais que tous les paliers ne sont pas &eacute;ligibles aux m&ecirc;mes avantages d'adh&eacute;sion. Consultez le tableau en haut de la page.</p>
                 <table id="renewal-codes" class="table mb-0 table-secondary text-center">
                   <thead>
                     <tr>
-                      <th>Niveau de parrainage</th>
+                      <th>Niveau de contribution</th>
                       <th>Code de renouvellement annuel</th>
                       <th>Code de renouvellement mensuel</th>
                     </tr>

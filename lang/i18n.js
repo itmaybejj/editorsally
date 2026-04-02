@@ -110,6 +110,8 @@ const defined_i18n = (() => {
       wpLabel: 'WordPress Plugin',
       toggleNav: 'Toggle navigation',
       close: 'Close',
+      perYear: '/year',
+      perMonth: '/month',
     },
     es: {
       label: {
@@ -131,6 +133,8 @@ const defined_i18n = (() => {
       wpLabel: 'Plugin de WordPress',
       toggleNav: 'Alternar navegación',
       close: 'Cerrar',
+      perYear: '/año',
+      perMonth: '/mes',
     },
     de: {
       label: {
@@ -152,6 +156,8 @@ const defined_i18n = (() => {
       wpLabel: 'WordPress-Plugin',
       toggleNav: 'Navigation umschalten',
       close: 'Schließen',
+      perYear: '/Jahr',
+      perMonth: '/Monat',
     },
     da: {
       label: {
@@ -173,6 +179,8 @@ const defined_i18n = (() => {
       wpLabel: 'WordPress-plugin',
       toggleNav: 'Skift navigation',
       close: 'Luk',
+      perYear: '/år',
+      perMonth: '/måned',
     },
     el: {
       label: {
@@ -194,6 +202,8 @@ const defined_i18n = (() => {
       wpLabel: 'Πρόσθετο WordPress',
       toggleNav: 'Εναλλαγή πλοήγησης',
       close: 'Κλείσιμο',
+      perYear: '/έτος',
+      perMonth: '/μήνα',
     },
     fr: {
       label: {
@@ -215,6 +225,8 @@ const defined_i18n = (() => {
       wpLabel: 'Extension WordPress',
       toggleNav: 'Basculer la navigation',
       close: 'Fermer',
+      perYear: '/an',
+      perMonth: '/mois',
     },
     hu: {
       label: {
@@ -236,6 +248,8 @@ const defined_i18n = (() => {
       wpLabel: 'WordPress bővítmény',
       toggleNav: 'Navigáció váltása',
       close: 'Bezárás',
+      perYear: '/év',
+      perMonth: '/hónap',
     },
     it: {
       label: {
@@ -257,6 +271,8 @@ const defined_i18n = (() => {
       wpLabel: 'Plugin WordPress',
       toggleNav: 'Attiva/disattiva navigazione',
       close: 'Chiudi',
+      perYear: '/anno',
+      perMonth: '/mese',
     },
     jp: {
       label: {
@@ -278,6 +294,8 @@ const defined_i18n = (() => {
       wpLabel: 'WordPressプラグイン',
       toggleNav: 'ナビゲーションを切り替え',
       close: '閉じる',
+      perYear: '/年',
+      perMonth: '/月',
     },
     nb: {
       label: {
@@ -299,6 +317,8 @@ const defined_i18n = (() => {
       wpLabel: 'WordPress-plugin',
       toggleNav: 'Slå av/på navigasjon',
       close: 'Lukk',
+      perYear: '/år',
+      perMonth: '/måned',
     },
     nl: {
       label: {
@@ -320,6 +340,8 @@ const defined_i18n = (() => {
       wpLabel: 'WordPress-plugin',
       toggleNav: 'Navigatie in-/uitschakelen',
       close: 'Sluiten',
+      perYear: '/jaar',
+      perMonth: '/maand',
     },
     pl: {
       label: {
@@ -341,6 +363,8 @@ const defined_i18n = (() => {
       wpLabel: 'Wtyczka WordPress',
       toggleNav: 'Przełącz nawigację',
       close: 'Zamknij',
+      perYear: '/rok',
+      perMonth: '/miesiąc',
     },
     'pt-br': {
       label: {
@@ -362,6 +386,8 @@ const defined_i18n = (() => {
       wpLabel: 'Plugin WordPress',
       toggleNav: 'Alternar navegação',
       close: 'Fechar',
+      perYear: '/ano',
+      perMonth: '/mês',
     },
     'pt-pt': {
       label: {
@@ -383,6 +409,8 @@ const defined_i18n = (() => {
       wpLabel: 'Plugin WordPress',
       toggleNav: 'Alternar navegação',
       close: 'Fechar',
+      perYear: '/ano',
+      perMonth: '/mês',
     },
     sv: {
       label: {
@@ -404,6 +432,8 @@ const defined_i18n = (() => {
       wpLabel: 'WordPress-plugin',
       toggleNav: 'Växla navigering',
       close: 'Stäng',
+      perYear: '/år',
+      perMonth: '/månad',
     },
     uk: {
       label: {
@@ -425,6 +455,8 @@ const defined_i18n = (() => {
       wpLabel: 'Плагін WordPress',
       toggleNav: 'Перемкнути навігацію',
       close: 'Закрити',
+      perYear: '/рік',
+      perMonth: '/місяць',
     },
     zh: {
       label: {
@@ -446,6 +478,8 @@ const defined_i18n = (() => {
       wpLabel: 'WordPress插件',
       toggleNav: '切换导航',
       close: '关闭',
+      perYear: '/年',
+      perMonth: '/月',
     },
   };
 

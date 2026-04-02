@@ -52,10 +52,17 @@
           <div class="row justify-content-center">
             <div class="col-lg-10">
               <h1 class="text-body-emphasis pt-2 pb-2" data-section="membership">Ціни та внески</h1>
-              <p class="fs-5">Ядро Editoria11y є безкоштовним для всіх.</p>
-              <p class="fs-5">Розробка та підтримка здійснюються в рамках проєкту Community Supported Add-ons, який
-                підтримується за моделлю «внось стільки, скільки можеш».</p>
-              <h2 class="nomenu pt-3">Членство в CSA через придбані плагіни</h2>
+              <p class="fs-5">
+                Editoria11y просуває доступність унікальним способом. Його інструменти надзвичайно ефективні, допомагаючи нетехнічним авторам готувати контент, яким можуть однаково користуватися відвідувачі вебу з інвалідністю. Ми вважаємо це суспільним благом, тому Editoria11y завжди буде безкоштовним у використанні.
+              </p>
+              <p class="fs-5">
+                Однак розробка та підтримка Editoria11y не є безкоштовними.
+              </p>
+              <p class="fs-5">
+                Проєкт «Community Supported Add-ons» (CSA) заповнює цю прогалину: учасники проєкту фінансують розробку бібліотеки Editoria11y, її плагінів для CMS та набору CSA: набору інструментів контролю якості, що швидко зростає та пропонує функціональність, аналогічну комерційним продуктам, з відкритим кодом та власним розміщенням.</p>
+              <p>Набір CSA для Drupal наразі безкоштовний у бета-версії та з'явиться для WordPress у 3-му кварталі 2026 року.
+              </p>
+              <h2 class="nomenu pt-3">Членство в CSA через внески</h2>
               <p>Оскільки CSA надає інструменти з власним хостингом і відкритим кодом, наші накладні витрати дуже невеликі. ~€9/сайт/місяць
                 достатньо для оплати роботи розробників і підтримки користувачів. Порівнянні комерційні інструменти коштують від €15 (базові
                 перевірки) до €1000+ (необмежені панелі сторінок) за сайт на місяць.</p>
@@ -67,20 +74,20 @@
             <div class="row">
               <div class="col-lg-3"></div>
               <div class="row col-lg-9 py-4 pt-0 align-items-start text-start">
-                <div class="col">
-                  <label for="support-level">Спонсорство</label>
+                <div class="col-md-4 mb-3">
+                  <label for="support-level">Внесок</label>
                   <select id="support-level" class="form-select ">
                     <option value="100">150%</option>
                     <option value="80">120%</option>
-                    <option value="60" selected>Повна підтримка</option>
-                    <option value="50">75% (академічні/благодійні)</option>
+                    <option value="60" selected>100% від розрахункової потреби</option>
+                    <option value="50">75%</option>
                     <option value="44">66%</option>
                     <option value="33">50%</option>
                     <option value="22">33%</option>
                     <option value="17">25%</option>
                   </select>
                 </div>
-                <div class="col">
+                <div class="col-md-4 mb-3">
                   <label for="currency">Валюта</label>
                   <select class="form-select" id="currency">
                     <option value="EUR">€ EUR</option>
@@ -89,7 +96,7 @@
                   </select>
                 </div>
 
-                <div class="col">
+                <div class="col-md-4 mb-3">
                   <div class="row pb-3 form-check form-switch ps-0">
                     <div><label class="" for="annual-pricing">
                         Щорічно
@@ -119,7 +126,7 @@
                         <li class="fw-semibold">Звіти по сайту</li>
                         <li class="fw-semibold">Експорт звітів</li>
                         <li class="fw-semibold">Необмежена кількість сторінок</li>
-                        <li>Підтримка на форумі та у Slack</li>
+                        <li class="fw-semibold">Підтримка на форумі</li>
                       </ul>
                     </div>
                   </div>
@@ -127,12 +134,12 @@
               </div>
               <div class="col-lg-3 py-4 px-0" id="individual">
                 <div class="bg-light shadow overflow-hidden rounded-start">
-                  <div class="text-bg-info p-2 border-bottom border-light-subtle">1-Site</div>
+                  <div class="text-bg-info p-2 border-bottom border-light-subtle">Персональний</div>
                   <div class="text-bg-info p-3 pb-1 d-flex flex-column justify-content-center">
                     <p class="lh-1"><span class="currency">€</span><span class="price fs-3">9</span><span
                         class="period">/місяць</span></p>
                     <div class="fs-5 text-start">
-                      <p class="fs-6 text-center"><em class="small">Усе з безкоштовного плюс:</em></p>
+                      <p class="fs-6 text-center"><em class="fs-6 ms-1 mb-2">Усе з безкоштовного плюс:</em></p>
                       <ul class="small">
                         <li><strong>30+ тестів для розробників</strong></li>
                         <li><strong>Конструктор тестів</strong></li>
@@ -141,10 +148,10 @@
                         <li><strong>Оновлення краулерів</strong></li>
                         <li class="credit"><strong>Допомога з налаштуванням</strong></li>
                         <li class="credit"><strong>Кредит прихильника</strong></li>
-                        <li class="period-warning" hidden=""><em>Лише щорічне виставлення рахунку</em></li>
                       </ul>
                     </div>
                     <p class=""><a class="btn btn-dark" title="Individual">Підписатися</a></p>
+                    <p class="period-warning fs-6" hidden><em>Лише щорічне виставлення рахунку</em></p>
                   </div>
                 </div>
               </div>
@@ -165,15 +172,16 @@
                     <p class="lh-1"><span class="currency">€</span><span class="price fs-3">9.99</span><span
                         class="period fs-5">/місяць</span></p>
                     <div class="fs-5 text-start">
-                      <p class="fs-6 text-center"><em class="small">Усе з особистого плюс:</em></p>
+                      <p class="fs-6 text-center"><em class="fs-6 ms-1 mb-2">Усе з особистого плюс:</em></p>
                       <ul class="small">
                         <li class="full"><strong>Допомога з налаштуванням</strong></li>
+                        <li class="credit"><strong>Підтримка електронною поштою</strong></li>
                         <li class="credit"><strong>Щорічна консультація</strong></li>
                         <li class="credit"><strong>Кредит прихильника</strong></li>
-                        <li class="period-warning" hidden><em>Лише щорічне виставлення рахунку</em></li>
                       </ul>
                     </div>
                     <p class=""><a class="btn btn-dark" title="Team">Підписатися</a></p>
+                    <p class="period-warning fs-6" hidden><em>Лише щорічне виставлення рахунку</em></p>
                   </div>
                 </div>
               </div>
@@ -184,12 +192,13 @@
                     <p class="lh-1"><span class="currency">€</span><span class="price fs-3">2700</span><span
                         class="period">/місяць</span></p>
                     <div class="fs-5 text-start">
-                      <p class="fs-6 text-center"><em class="small">Усе з особистого плюс:</em></p>
+                      <p class="fs-6 text-center"><em class="fs-6 ms-1 mb-2">Усе з особистого плюс:</em></p>
                       <ul class="small">
                         <li><strong>Необмежена кількість сайтів</strong></li>
                         <li><strong>Допомога з налаштуванням</strong></li>
-                        <li class="credit"><strong>Щоквартальні консультації</strong></li>
-                        <li class="credit"><strong>Кредит прихильника</strong></li>
+                        <li><strong>Щорічна консультація</strong></li>
+                        <li class="full"><strong>Підтримка електронною поштою</strong></li>
+                        <li><strong>Кредит прихильника</strong></li>
                       </ul>
                     </div>
                     <p class=""><a class="btn btn-dark" title="Enterprise">Підписатися</a></p>
@@ -211,7 +220,7 @@
 
           <div class="row justify-content-center pt-5">
             <div class="col-lg-10">
-              <h2>Членство в CSA через партнерство та внески</h2>
+              <h2>Членство в CSA через партнерство</h2>
               <p class="fs-6">Ліцензійні ключі можна придбати безпосередньо, але є й багато інших способів підтримати
                 проєкт:</p>
               <ul class="list-unstyled ps-0">
@@ -239,14 +248,13 @@
             <h2 data-section="existing">Ресурси для чинних учасників</h2>
             <div class="accord col-lg-8">
               <details class="rounded bd-info">
-                <summary>Змінити рівень спонсорства</summary>
-                <p class="text-start small pt-3 pb-2">Підписки поновлюються на тому самому рівні спонсорства. Якщо ви
-                  вирішите змінити рівень спонсорства при поновленні, зверніть увагу, що всі рівні мають доступ до
-                  однакових функцій, але не всі рівні мають право на кредити прихильника та регулярні консультаційні дзвінки.</p>
+                <summary>Рівні внесків для поновлення ліцензії</summary>
+                <p class="text-start small pt-3 pb-2">Підписки поновлюються на тому самому рівні внесків за замовчуванням.</p>
+                <p>Якщо ви вирішите змінити рівень внесків при поновленні, зверніть увагу, що всі рівні мають доступ до однакових функцій плагінів, але не всі рівні мають право на однакові переваги членства. Зверніться до таблиці вгорі сторінки.</p>
                 <table id="renewal-codes" class="table mb-0 table-secondary text-center">
                   <thead>
                     <tr>
-                      <th>Рівень спонсорства</th>
+                      <th>Рівень внесків</th>
                       <th>Код щорічного поновлення</th>
                       <th>Код щомісячного поновлення</th>
                     </tr>
@@ -263,7 +271,7 @@
                       <td>120pxm</td>
                     </tr>
                     <tr>
-                      <td>Повний (100%)</td>
+                      <td>Повний внесок (100%)</td>
                       <td>100pxa</td>
                       <td>100pxm</td>
                     </tr>

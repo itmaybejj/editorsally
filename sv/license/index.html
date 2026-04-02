@@ -52,10 +52,17 @@
           <div class="row justify-content-center">
             <div class="col-lg-10">
               <h1 class="text-body-emphasis pt-2 pb-2" data-section="membership">Priser och bidrag</h1>
-              <p class="fs-5">Editoria11y-kärnan är gratis för alla.</p>
-              <p class="fs-5">Utveckling och support finansieras genom projektet Community Supported Add-ons, som
-                drivs enligt modellen "bidra vad du kan".</p>
-              <h2 class="nomenu pt-3">CSA-medlemskap via köpta tillägg</h2>
+              <p class="fs-5">
+                Editoria11y främjar tillgänglighet på ett unikt sätt. Dess verktyg är mycket effektiva för att hjälpa icke-tekniska författare att förbereda innehåll som kan användas lika bra av webbbesökare med funktionsnedsättningar. Vi anser att detta är en allmännytta, så Editoria11y kommer alltid att vara gratis att använda.
+              </p>
+              <p class="fs-5">
+                Editoria11y är dock inte gratis att utveckla eller ge support för.
+              </p>
+              <p class="fs-5">
+                Projektet "Community Supported Add-ons" (CSA) fyller luckan: projektmedlemmarna finansierar utvecklingen av Editoria11y-biblioteket, dess CMS-tillägg och CSA-sviten: en snabbt växande uppsättning kvalitetssäkringsverktyg som erbjuder liknande funktionalitet som kommersiella produkter, med öppen källkod och egen drift.</p>
+              <p>CSA-sviten för Drupal är för närvarande gratis i betaversion och kommer till WordPress under Q3 2026.
+              </p>
+              <h2 class="nomenu pt-3">CSA-medlemskap via bidrag</h2>
               <p>Eftersom CSA tillhandahåller självhostade och öppen källkod-verktyg har vi mycket låga omkostnader. ~€9/webbplats/månad
                 räcker för att betala våra utvecklare och stödja våra användare. Jämförbara kommersiella verktyg tar €15 (grundläggande
                 kontrollverktyg) till €1 000+ (obegränsade siddashboardar) per webbplats och månad.</p>
@@ -67,20 +74,20 @@
             <div class="row">
               <div class="col-lg-3"></div>
               <div class="row col-lg-9 py-4 pt-0 align-items-start text-start">
-                <div class="col">
-                  <label for="support-level">Sponsring</label>
+                <div class="col-md-4 mb-3">
+                  <label for="support-level">Bidrag</label>
                   <select id="support-level" class="form-select ">
                     <option value="100">150%</option>
                     <option value="80">120%</option>
-                    <option value="60" selected>Fullt stöd</option>
-                    <option value="50">75% (akademi/välgörenhet)</option>
+                    <option value="60" selected>100% av uppskattat behov</option>
+                    <option value="50">75%</option>
                     <option value="44">66%</option>
                     <option value="33">50%</option>
                     <option value="22">33%</option>
                     <option value="17">25%</option>
                   </select>
                 </div>
-                <div class="col">
+                <div class="col-md-4 mb-3">
                   <label for="currency">Valuta</label>
                   <select class="form-select" id="currency">
                     <option value="EUR">€ EUR</option>
@@ -89,7 +96,7 @@
                   </select>
                 </div>
 
-                <div class="col">
+                <div class="col-md-4 mb-3">
                   <div class="row pb-3 form-check form-switch ps-0">
                     <div><label class="" for="annual-pricing">
                         Årlig
@@ -120,7 +127,7 @@
                         <li class="fw-semibold">Webbplatsrapporter</li>
                         <li class="fw-semibold">Rapportexporter</li>
                         <li class="fw-semibold">Obegränsat antal sidor</li>
-                        <li>Forum + Slack-support</li>
+                        <li class="fw-semibold">Forumsupport</li>
                       </ul>
                     </div>
                   </div>
@@ -128,12 +135,12 @@
               </div>
               <div class="col-lg-3 py-4 px-0" id="individual">
                 <div class="bg-light shadow overflow-hidden rounded-start">
-                  <div class="text-bg-info p-2 border-bottom border-light-subtle">1-Site</div>
+                  <div class="text-bg-info p-2 border-bottom border-light-subtle">Personlig</div>
                   <div class="text-bg-info p-3 pb-1 d-flex flex-column justify-content-center">
                     <p class="lh-1"><span class="currency">€</span><span class="price fs-3">9</span><span
                         class="period">/månad</span></p>
                     <div class="fs-5 text-start">
-                      <p class="fs-6 text-center"><em class="small">Allt i gratis plus:</em></p>
+                      <p class="fs-6 text-center"><em class="fs-6 ms-1 mb-2">Allt i gratis plus:</em></p>
                       <ul class="small">
                         <li><strong>30+ utvecklartester</strong></li>
                         <li><strong>Anpassad testbyggare</strong></li>
@@ -142,10 +149,10 @@
                         <li><strong>Uppdatera crawlers</strong></li>
                         <li class="credit"><strong>Installationshjälp</strong></li>
                         <li class="credit"><strong>Supporterkreditering</strong></li>
-                        <li class="period-warning" hidden=""><em>Endast årlig fakturering</em></li>
                       </ul>
                     </div>
                     <p class=""><a class="btn btn-dark" title="Individual">Prenumerera</a></p>
+                    <p class="period-warning fs-6" hidden><em>Endast årlig fakturering</em></p>
                   </div>
                 </div>
               </div>
@@ -166,15 +173,16 @@
                     <p class="lh-1"><span class="currency">€</span><span class="price fs-3">9.99</span><span
                         class="period fs-5">/månad</span></p>
                     <div class="fs-5 text-start">
-                      <p class="fs-6 text-center"><em class="small">Allt i personlig plus:</em></p>
+                      <p class="fs-6 text-center"><em class="fs-6 ms-1 mb-2">Allt i personlig plus:</em></p>
                       <ul class="small">
                         <li class="full"><strong>Installationshjälp</strong></li>
+                        <li class="credit"><strong>E-postsupport</strong></li>
                         <li class="credit"><strong>Årlig konsultation</strong></li>
                         <li class="credit"><strong>Supporterkreditering</strong></li>
-                        <li class="period-warning" hidden><em>Endast årlig fakturering</em></li>
                       </ul>
                     </div>
                     <p class=""><a class="btn btn-dark" title="Team">Prenumerera</a></p>
+                    <p class="period-warning fs-6" hidden><em>Endast årlig fakturering</em></p>
                   </div>
                 </div>
               </div>
@@ -185,12 +193,13 @@
                     <p class="lh-1"><span class="currency">€</span><span class="price fs-3">2700</span><span
                         class="period">/månad</span></p>
                     <div class="fs-5 text-start">
-                      <p class="fs-6 text-center"><em class="small">Allt i personlig plus:</em></p>
+                      <p class="fs-6 text-center"><em class="fs-6 ms-1 mb-2">Allt i personlig plus:</em></p>
                       <ul class="small">
                         <li><strong>Obegränsat antal webbplatser</strong></li>
                         <li><strong>Installationshjälp</strong></li>
-                        <li class="credit"><strong>Kvartalsvisa konsultationer</strong></li>
-                        <li class="credit"><strong>Supporterkreditering</strong></li>
+                        <li><strong>Årlig konsultation</strong></li>
+                        <li class="full"><strong>E-postsupport</strong></li>
+                        <li><strong>Supporterkreditering</strong></li>
                       </ul>
                     </div>
                     <p class=""><a class="btn btn-dark" title="Enterprise">Prenumerera</a></p>
@@ -212,7 +221,7 @@
 
           <div class="row justify-content-center pt-5">
             <div class="col-lg-10">
-              <h2>CSA-medlemskap via partnerskap &amp; bidrag</h2>
+              <h2>CSA-medlemskap via partnerskap</h2>
               <p class="fs-6">Licensnycklar kan köpas direkt, men det finns många andra sätt att stödja ett
                 projekt:</p>
               <ul class="list-unstyled ps-0">
@@ -240,14 +249,13 @@
             <h2 data-section="existing">Resurser för befintliga medlemmar</h2>
             <div class="accord col-lg-8">
               <details class="rounded bd-info">
-                <summary>Ändra sponsringsnivå</summary>
-                <p class="text-start small pt-3 pb-2">Prenumerationer förnyas på samma sponsringsnivå. Om du
-                  väljer att ändra din sponsringsnivå vid förnyelse, tänk på att alla nivåer har tillgång till samma
-                  funktioner, men inte alla nivåer är berättigade till supporterkrediter och regelbundna konsultationssamtal.</p>
+                <summary>Bidragsnivåer för licensförnyelse</summary>
+                <p class="text-start small pt-3 pb-2">Prenumerationer förnyas på samma bidragsnivå som standard.</p>
+                <p>Om du väljer att ändra din bidragsnivå vid förnyelse, tänk på att alla nivåer har tillgång till samma tilläggsfunktioner, men inte alla nivåer är berättigade till samma medlemsförmåner. Se tabellen högst upp på sidan.</p>
                 <table id="renewal-codes" class="table mb-0 table-secondary text-center">
                   <thead>
                     <tr>
-                      <th>Sponsringsnivå</th>
+                      <th>Bidragsnivå</th>
                       <th>Årlig förnyelsekoord</th>
                       <th>Månadsvis förnyelsekoord</th>
                     </tr>
@@ -264,7 +272,7 @@
                       <td>120pxm</td>
                     </tr>
                     <tr>
-                      <td>Full (100%)</td>
+                      <td>Total (100%)</td>
                       <td>100pxa</td>
                       <td>100pxm</td>
                     </tr>

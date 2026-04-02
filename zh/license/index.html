@@ -52,9 +52,17 @@
           <div class="row justify-content-center">
             <div class="col-lg-10">
               <h1 class="text-body-emphasis pt-2 pb-2" data-section="membership">定价与贡献</h1>
-              <p class="fs-5">Editoria11y 核心版对所有人免费开放。</p>
-              <p class="fs-5">开发与支持工作来自"社区支持附加组件"项目，该项目采用量力而为的贡献模式维持运营。</p>
-              <h2 class="nomenu pt-3">通过购买插件获得 CSA 会员资格</h2>
+              <p class="fs-5">
+                Editoria11y 以独特的方式推动无障碍建设。其工具在帮助非技术类作者准备可供残障网络用户平等享用的内容方面极为有效。我们认为这是一项公共事业，因此 Editoria11y 将始终免费使用。
+              </p>
+              <p class="fs-5">
+                然而，Editoria11y 的开发和支持并非免费。
+              </p>
+              <p class="fs-5">
+                "社区支持附加组件"（CSA）项目弥补了这一缺口：项目成员资助 Editoria11y 库、其 CMS 插件和 CSA 套件的开发——这是一套快速增长的质量保证工具集，提供与商业产品类似的功能，开源且可自行托管。</p>
+              <p>Drupal 版 CSA 套件目前处于免费测试阶段，WordPress 版将于 2026 年第三季度推出。
+              </p>
+              <h2 class="nomenu pt-3">通过贡献获得 CSA 会员资格</h2>
               <p>由于 CSA 提供的是自托管开源工具，运营成本极低。每站点每月约 €9 即可支付开发者薪酬并为用户提供支持。同类商业工具的收费为每站点每月 €15（基础检查器）到 €1000+（无限页面仪表板）不等。</p>
             </div>
 
@@ -64,20 +72,20 @@
             <div class="row">
               <div class="col-lg-3"></div>
               <div class="row col-lg-9 py-4 pt-0 align-items-start text-start">
-                <div class="col">
-                  <label for="support-level">赞助比例</label>
+                <div class="col-md-4 mb-3">
+                  <label for="support-level">贡献</label>
                   <select id="support-level" class="form-select ">
                     <option value="100">150%</option>
                     <option value="80">120%</option>
-                    <option value="60" selected>完整支持</option>
-                    <option value="50">75%（学术/慈善）</option>
+                    <option value="60" selected>预估需求的 100%</option>
+                    <option value="50">75%</option>
                     <option value="44">66%</option>
                     <option value="33">50%</option>
                     <option value="22">33%</option>
                     <option value="17">25%</option>
                   </select>
                 </div>
-                <div class="col">
+                <div class="col-md-4 mb-3">
                   <label for="currency">货币</label>
                   <select class="form-select" id="currency">
                     <option value="EUR">€ EUR</option>
@@ -86,7 +94,7 @@
                   </select>
                 </div>
 
-                <div class="col">
+                <div class="col-md-4 mb-3">
                   <div class="row pb-3 form-check form-switch ps-0">
                     <div><label class="" for="annual-pricing">
                         按年计费
@@ -116,7 +124,7 @@
                         <li class="fw-semibold">站点报告</li>
                         <li class="fw-semibold">报告导出</li>
                         <li class="fw-semibold">无限页面</li>
-                        <li>论坛 + Slack 支持</li>
+                        <li class="fw-semibold">论坛支持</li>
                       </ul>
                     </div>
                   </div>
@@ -124,12 +132,12 @@
               </div>
               <div class="col-lg-3 py-4 px-0" id="individual">
                 <div class="bg-light shadow overflow-hidden rounded-start">
-                  <div class="text-bg-info p-2 border-bottom border-light-subtle">1-Site</div>
+                  <div class="text-bg-info p-2 border-bottom border-light-subtle">个人版</div>
                   <div class="text-bg-info p-3 pb-1 d-flex flex-column justify-content-center">
                     <p class="lh-1"><span class="currency">€</span><span class="price fs-3">9</span><span
                         class="period">/月</span></p>
                     <div class="fs-5 text-start">
-                      <p class="fs-6 text-center"><em class="small">免费版全部功能，另加：</em></p>
+                      <p class="fs-6 text-center"><em class="fs-6 ms-1 mb-2">免费版全部功能，另加：</em></p>
                       <ul class="small">
                         <li><strong>30+ 项开发者检测</strong></li>
                         <li><strong>自定义测试构建器</strong></li>
@@ -138,10 +146,10 @@
                         <li><strong>刷新爬虫</strong></li>
                         <li class="credit"><strong>安装协助</strong></li>
                         <li class="credit"><strong>支持者积分</strong></li>
-                        <li class="period-warning" hidden=""><em>仅限按年计费</em></li>
                       </ul>
                     </div>
                     <p class=""><a class="btn btn-dark" title="Individual">订阅</a></p>
+                    <p class="period-warning fs-6" hidden><em>仅限按年计费</em></p>
                   </div>
                 </div>
               </div>
@@ -162,15 +170,16 @@
                     <p class="lh-1"><span class="currency">€</span><span class="price fs-3">9.99</span><span
                         class="period fs-5">/月</span></p>
                     <div class="fs-5 text-start">
-                      <p class="fs-6 text-center"><em class="small">个人版全部功能，另加：</em></p>
+                      <p class="fs-6 text-center"><em class="fs-6 ms-1 mb-2">个人版全部功能，另加：</em></p>
                       <ul class="small">
                         <li class="full"><strong>安装协助</strong></li>
+                        <li class="credit"><strong>邮件支持</strong></li>
                         <li class="credit"><strong>年度咨询</strong></li>
                         <li class="credit"><strong>支持者积分</strong></li>
-                        <li class="period-warning" hidden><em>仅限按年计费</em></li>
                       </ul>
                     </div>
                     <p class=""><a class="btn btn-dark" title="Team">订阅</a></p>
+                    <p class="period-warning fs-6" hidden><em>仅限按年计费</em></p>
                   </div>
                 </div>
               </div>
@@ -181,12 +190,13 @@
                     <p class="lh-1"><span class="currency">€</span><span class="price fs-3">2700</span><span
                         class="period">/月</span></p>
                     <div class="fs-5 text-start">
-                      <p class="fs-6 text-center"><em class="small">个人版全部功能，另加：</em></p>
+                      <p class="fs-6 text-center"><em class="fs-6 ms-1 mb-2">个人版全部功能，另加：</em></p>
                       <ul class="small">
                         <li><strong>无限站点</strong></li>
                         <li><strong>安装协助</strong></li>
-                        <li class="credit"><strong>季度咨询</strong></li>
-                        <li class="credit"><strong>支持者积分</strong></li>
+                        <li><strong>年度咨询</strong></li>
+                        <li class="full"><strong>邮件支持</strong></li>
+                        <li><strong>支持者积分</strong></li>
                       </ul>
                     </div>
                     <p class=""><a class="btn btn-dark" title="Enterprise">订阅</a></p>
@@ -207,7 +217,7 @@
 
           <div class="row justify-content-center pt-5">
             <div class="col-lg-10">
-              <h2>通过合作与贡献获得 CSA 会员资格</h2>
+              <h2>通过合作获得 CSA 会员资格</h2>
               <p class="fs-6">许可证密钥可直接购买，但支持项目的方式还有很多：</p>
               <ul class="list-unstyled ps-0">
                 <li class="arrow">
@@ -232,12 +242,13 @@
             <h2 data-section="existing">现有会员资源</h2>
             <div class="accord col-lg-8">
               <details class="rounded bd-info">
-                <summary>更改赞助比例</summary>
-                <p class="text-start small pt-3 pb-2">订阅将按相同赞助比例续费。如您希望在续费时更改赞助比例，请注意所有等级均可使用相同功能，但并非所有等级均可享受支持者积分和定期咨询通话。</p>
+                <summary>许可证续费贡献等级</summary>
+                <p class="text-start small pt-3 pb-2">订阅默认按相同贡献等级续费。</p>
+                <p>如您选择在续费时更改贡献等级，请注意所有等级均可使用相同的插件功能，但并非所有等级均可享受相同的会员权益。请参阅页面顶部的对比表。</p>
                 <table id="renewal-codes" class="table mb-0 table-secondary text-center">
                   <thead>
                     <tr>
-                      <th>赞助比例</th>
+                      <th>贡献等级</th>
                       <th>年度续费代码</th>
                       <th>月度续费代码</th>
                     </tr>
@@ -254,7 +265,7 @@
                       <td>120pxm</td>
                     </tr>
                     <tr>
-                      <td>完整（100%）</td>
+                      <td>全额（100%）</td>
                       <td>100pxa</td>
                       <td>100pxm</td>
                     </tr>

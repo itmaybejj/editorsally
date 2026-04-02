@@ -52,10 +52,17 @@
           <div class="row justify-content-center">
             <div class="col-lg-10">
               <h1 class="text-body-emphasis pt-2 pb-2" data-section="membership">Prijzen en bijdragen</h1>
-              <p class="fs-5">Editoria11y core is voor iedereen gratis.</p>
-              <p class="fs-5">Ontwikkeling en ondersteuning komen uit het Community Supported Add-ons-project, dat
-                wordt onderhouden via een model waarbij je bijdraagt naar vermogen.</p>
-              <h2 class="nomenu pt-3">CSA-lidmaatschap via gekochte plugins</h2>
+              <p class="fs-5">
+                Editoria11y bevordert toegankelijkheid op een unieke manier. De tools zijn zeer effectief in het helpen van niet-technische auteurs bij het maken van content die in gelijke mate kan worden genoten door gehandicapte webgebruikers. Wij beschouwen dit als een publiek goed, dus <strong>Editoria11y zal altijd gratis te gebruiken zijn</strong>.
+              </p>
+              <p class="fs-5">
+                Editoria11y is echter niet gratis om te ontwikkelen of te ondersteunen.
+              </p>
+              <p class="fs-5">
+                Het "Community Supported Add-ons" (CSA)-project vult de kloof: projectleden financieren de ontwikkeling van de Editoria11y-bibliotheek, de CMS-plugins en de CSA-suite: een snel groeiende set kwaliteitsborgingstools die vergelijkbare functionaliteit bieden als commerciële producten, open-source en on-prem.</p>
+              <p>De CSA-suite voor Drupal is momenteel gratis in bèta, en komt beschikbaar voor WordPress in Q3 2026.
+              </p>
+              <h2 class="nomenu pt-3">CSA-lidmaatschap via bijdragen</h2>
               <p>Omdat de CSA zelfgehoste en open-sourcetools levert, hebben we heel weinig overhead. ~€9/site/maand
                 is genoeg om onze ontwikkelaars te betalen en onze gebruikers te ondersteunen. Vergelijkbare
                 commerciële tools rekenen €15 (eenvoudige checkers) tot €1000+ (onbeperkte pagina-dashboards) per
@@ -68,20 +75,20 @@
             <div class="row">
               <div class="col-lg-3"></div>
               <div class="row col-lg-9 py-4 pt-0 align-items-start text-start">
-                <div class="col">
-                  <label for="support-level">Sponsoring</label>
+                <div class="col-md-4 mb-3">
+                  <label for="support-level">Bijdrage</label>
                   <select id="support-level" class="form-select ">
                     <option value="100">150%</option>
                     <option value="80">120%</option>
-                    <option value="60" selected>Volledige ondersteuning</option>
-                    <option value="50">75% (academisch/goed doel)</option>
+                    <option value="60" selected>100% van geschatte behoefte</option>
+                    <option value="50">75%</option>
                     <option value="44">66%</option>
                     <option value="33">50%</option>
                     <option value="22">33%</option>
                     <option value="17">25%</option>
                   </select>
                 </div>
-                <div class="col">
+                <div class="col-md-4 mb-3">
                   <label for="currency">Valuta</label>
                   <select class="form-select" id="currency">
                     <option value="EUR">€ EUR</option>
@@ -90,7 +97,7 @@
                   </select>
                 </div>
 
-                <div class="col">
+                <div class="col-md-4 mb-3">
                   <div class="row pb-3 form-check form-switch ps-0">
                     <div><label class="" for="annual-pricing">
                         Jaarlijks
@@ -120,7 +127,7 @@
                         <li class="fw-semibold">Siterapporten</li>
                         <li class="fw-semibold">Rapportexports</li>
                         <li class="fw-semibold">Onbeperkte pagina's</li>
-                        <li>Forum + Slack ondersteuning</li>
+                        <li class="fw-semibold">Forumondersteuning</li>
                       </ul>
                     </div>
                   </div>
@@ -128,12 +135,12 @@
               </div>
               <div class="col-lg-3 py-4 px-0" id="individual">
                 <div class="bg-light shadow overflow-hidden rounded-start">
-                  <div class="text-bg-info p-2 border-bottom border-light-subtle">1-Site</div>
+                  <div class="text-bg-info p-2 border-bottom border-light-subtle">Persoonlijk</div>
                   <div class="text-bg-info p-3 pb-1 d-flex flex-column justify-content-center">
                     <p class="lh-1"><span class="currency">€</span><span class="price fs-3">9</span><span
                         class="period">/maand</span></p>
                     <div class="fs-5 text-start">
-                      <p class="fs-6 text-center"><em class="small">Alles uit gratis plus:</em></p>
+                      <p class="fs-6 text-center"><em class="fs-6 ms-1 mb-2">Alles uit Gratis plus:</em></p>
                       <ul class="small">
                         <li><strong>30+ ontwikkelaarscontroles</strong></li>
                         <li><strong>Aangepaste testbouwer</strong></li>
@@ -142,10 +149,12 @@
                         <li><strong>Vernieuwen van crawlers</strong></li>
                         <li class="credit"><strong>Installatiehulp</strong></li>
                         <li class="credit"><strong>Ondersteunerscrediet</strong></li>
-                        <li class="period-warning" hidden=""><em>Alleen jaarlijkse facturering</em></li>
                       </ul>
                     </div>
+
                     <p class=""><a class="btn btn-dark" title="Individual">Abonneren</a></p>
+                    <p class="period-warning fs-6" hidden><em>Alleen jaarlijkse facturering</em>
+                    </p>
                   </div>
                 </div>
               </div>
@@ -166,15 +175,18 @@
                     <p class="lh-1"><span class="currency">€</span><span class="price fs-3">9.99</span><span
                         class="period fs-5">/maand</span></p>
                     <div class="fs-5 text-start">
-                      <p class="fs-6 text-center full"><em class="small">Alles uit 1-site plus:</em></p>
+                      <p class="fs-6 text-center full"><em class="fs-6 ms-1 mb-2">Alles uit Persoonlijk plus:</em></p>
                       <ul class="small">
                         <li class="full"><strong>Installatiehulp</strong></li>
+                        <li class="credit"><strong>E-mailondersteuning</strong></li>
                         <li class="credit"><strong>Jaarlijks overleg</strong></li>
                         <li class="credit"><strong>Ondersteunerscrediet</strong></li>
-                        <li class="period-warning" hidden><em>Alleen jaarlijkse facturering</em></li>
                       </ul>
                     </div>
+
                     <p class=""><a class="btn btn-dark" title="Team">Abonneren</a></p>
+                    <p class="period-warning fs-6" hidden><em>Alleen jaarlijkse facturering</em>
+                    </p>
                   </div>
                 </div>
               </div>
@@ -185,12 +197,13 @@
                     <p class="lh-1"><span class="currency">€</span><span class="price fs-3">2700</span><span
                         class="period">/maand</span></p>
                     <div class="fs-5 text-start">
-                      <p class="fs-6 text-center"><em class="small">Alles uit 1-site plus:</em></p>
+                      <p class="fs-6 text-center"><em class="fs-6 ms-1 mb-2">Alles uit Persoonlijk plus:</em></p>
                       <ul class="small">
                         <li><strong>Onbeperkte sites</strong></li>
                         <li><strong>Installatiehulp</strong></li>
-                        <li class="credit"><strong>Kwartaaloverleg</strong></li>
-                        <li class="credit"><strong>Ondersteunerscrediet</strong></li>
+                        <li><strong>Jaarlijks overleg</strong></li>
+                        <li class="full"><strong>E-mailondersteuning</strong></li>
+                        <li><strong>Ondersteunerscrediet</strong></li>
                       </ul>
                     </div>
                     <p class=""><a class="btn btn-dark" title="Enterprise">Abonneren</a></p>
@@ -211,7 +224,7 @@
 
           <div class="row justify-content-center pt-5">
             <div class="col-lg-10">
-              <h2>CSA-lidmaatschap via partnerschap &amp; bijdrage</h2>
+              <h2>CSA-lidmaatschap via partnerschap</h2>
               <p class="fs-6">Licentiesleutels kunnen direct worden aangeschaft, maar er zijn ook veel andere manieren
                 om een project te ondersteunen:</p>
               <ul class="list-unstyled ps-0">
@@ -239,15 +252,13 @@
             <h2 data-section="existing">Bronnen voor bestaande leden</h2>
             <div class="accord col-lg-8">
               <details class="rounded bd-info">
-                <summary>Sponsorniveau wijzigen</summary>
-                <p class="text-start small pt-3 pb-2">Abonnementen worden verlengd op hetzelfde sponsorniveau. Als u
-                  bij verlenging het sponsorniveau wilt wijzigen, houd er dan rekening mee dat alle niveaus toegang
-                  hebben tot dezelfde functies, maar niet alle niveaus in aanmerking komen voor
-                  ondersteunerscrediet en reguliere overlegmomenten.</p>
+                <summary>Bijdrageniveaus bij licentiehernieuwing</summary>
+                <p class="text-start small pt-3 pb-2">Abonnementen worden standaard verlengd op hetzelfde bijdrageniveau.</p>
+                <p>Als u bij verlenging het bijdrageniveau wilt wijzigen, houd er dan rekening mee dat alle niveaus toegang hebben tot dezelfde pluginfuncties, maar niet alle niveaus in aanmerking komen voor dezelfde lidmaatschapsvoordelen. Raadpleeg de tabel bovenaan de pagina.</p>
                 <table id="renewal-codes" class="table mb-0 table-secondary text-center">
                   <thead>
                     <tr>
-                      <th>Sponsorniveau</th>
+                      <th>Bijdrageniveau</th>
                       <th>Jaarlijkse verlengingscode</th>
                       <th>Maandelijkse verlengingscode</th>
                     </tr>

@@ -52,9 +52,22 @@
           <div class="row justify-content-center">
             <div class="col-lg-10">
               <h1 class="text-body-emphasis pt-2 pb-2" data-section="membership">Priser og bidrag</h1>
-              <p class="fs-5">Editoria11y-kernen er gratis for alle.</p>
-              <p class="fs-5">Udvikling og support kommer fra Community Supported Add-ons-projektet, som vedligeholdes gennem en bidrag-hvad-du-kan-model.</p>
-              <h2 class="nomenu pt-3">CSA-medlemskab gennem køb af plugins</h2>
+              <p class="fs-5">
+                Editoria11y fremmer tilgængelighed på en unik måde. Dets værktøjer er yderst effektive til at hjælpe ikke-tekniske
+                forfattere med at forberede indhold, der kan nydes ligeligt af handicappede webbrugere. Vi betragter dette som et offentligt gode,
+                så <strong>Editoria11y vil altid være gratis at bruge</strong>.
+              </p>
+              <p class="fs-5">
+                Editoria11y er dog ikke gratis at udvikle eller supportere.
+              </p>
+              <p class="fs-5">
+                "Community Supported Add-ons" (CSA)-projektet udfylder hullet: projektmedlemmer finansierer udviklingen af
+                Editoria11y-biblioteket, dets CMS-plugins og
+                CSA-pakken: et hurtigt voksende sæt kvalitetssikringsværktøjer, der tilbyder lignende
+                funktionalitet som kommercielle produkter, open source og on-prem.</p>
+              <p>CSA-pakken til Drupal er i øjeblikket gratis i beta og kommer til WordPress i 3. kvartal 2026.
+              </p>
+              <h2 class="nomenu pt-3">CSA-medlemskab gennem bidrag</h2>
               <p>Da CSA leverer selvhostede og open source-værktøjer, har vi meget lave omkostninger. ~€9/websted/måned er nok til at betale vores udviklere og supportere vores brugere. Sammenlignelige kommercielle værktøjer koster €15 (basale kontroller) til €1000+ (ubegrænsede sideoversigter) pr. websted pr. måned.</p>
             </div>
 
@@ -64,20 +77,20 @@
             <div class="row">
               <div class="col-lg-3"></div>
               <div class="row col-lg-9 py-4 pt-0 align-items-start text-start">
-                <div class="col">
-                  <label for="support-level">Sponsorniveau</label>
+                <div class="col-md-4 mb-3">
+                  <label for="support-level">Bidrag</label>
                   <select id="support-level" class="form-select ">
                     <option value="100">150%</option>
                     <option value="80">120%</option>
-                    <option value="60" selected>Fuld support</option>
-                    <option value="50">75% (uddannelse/velgørenhed)</option>
+                    <option value="60" selected>100% af estimeret behov</option>
+                    <option value="50">75%</option>
                     <option value="44">66%</option>
                     <option value="33">50%</option>
                     <option value="22">33%</option>
                     <option value="17">25%</option>
                   </select>
                 </div>
-                <div class="col">
+                <div class="col-md-4 mb-3">
                   <label for="currency">Valuta</label>
                   <select class="form-select" id="currency">
                     <option value="EUR">€ EUR</option>
@@ -86,7 +99,7 @@
                   </select>
                 </div>
 
-                <div class="col">
+                <div class="col-md-4 mb-3">
                   <div class="row pb-3 form-check form-switch ps-0">
                     <div><label class="" for="annual-pricing">
                         Årlig
@@ -116,7 +129,7 @@
                         <li class="fw-semibold">Webstedsrapporter</li>
                         <li class="fw-semibold">Rapporteksport</li>
                         <li class="fw-semibold">Ubegrænsede sider</li>
-                        <li>Forum + Slack-support</li>
+                        <li class="fw-semibold">Forumsupport</li>
                       </ul>
                     </div>
                   </div>
@@ -124,12 +137,12 @@
               </div>
               <div class="col-lg-3 py-4 px-0" id="individual">
                 <div class="bg-light shadow overflow-hidden rounded-start">
-                  <div class="text-bg-info p-2 border-bottom border-light-subtle">1-websted</div>
+                  <div class="text-bg-info p-2 border-bottom border-light-subtle">Personlig</div>
                   <div class="text-bg-info p-3 pb-1 d-flex flex-column justify-content-center">
                     <p class="lh-1"><span class="currency">€</span><span class="price fs-3">9</span><span
                         class="period">/måned</span></p>
                     <div class="fs-5 text-start">
-                      <p class="fs-6 text-center"><em class="small">Alt i gratis plus:</em></p>
+                      <p class="fs-6 text-center"><em class="fs-6 ms-1 mb-2">Alt i gratis plus:</em></p>
                       <ul class="small">
                         <li><strong>30+ udviklertests</strong></li>
                         <li><strong>Tilpasset testbygger</strong></li>
@@ -138,10 +151,11 @@
                         <li><strong>Opdateringscrawlere</strong></li>
                         <li class="credit"><strong>Hjælp til opsætning</strong></li>
                         <li class="credit"><strong>Støttekredit</strong></li>
-                        <li class="period-warning" hidden=""><em>Kun årlig fakturering</em></li>
                       </ul>
                     </div>
+
                     <p class=""><a class="btn btn-dark" title="Individual">Abonner</a></p>
+                    <p class="period-warning fs-6" hidden><em>Kun årlig fakturering</em></p>
                   </div>
                 </div>
               </div>
@@ -162,15 +176,17 @@
                     <p class="lh-1"><span class="currency">€</span><span class="price fs-3">9.99</span><span
                         class="period fs-5">/måned</span></p>
                     <div class="fs-5 text-start">
-                      <p class="fs-6 text-center"><em class="small">Alt i personlig plus:</em></p>
+                      <p class="fs-6 text-center full"><em class="fs-6 ms-1 mb-2">Alt i personlig plus:</em></p>
                       <ul class="small">
                         <li class="full"><strong>Hjælp til opsætning</strong></li>
+                        <li class="credit"><strong>E-mail-support</strong></li>
                         <li class="credit"><strong>Årlig konsultation</strong></li>
                         <li class="credit"><strong>Støttekredit</strong></li>
-                        <li class="period-warning" hidden><em>Kun årlig fakturering</em></li>
                       </ul>
                     </div>
+
                     <p class=""><a class="btn btn-dark" title="Team">Abonner</a></p>
+                    <p class="period-warning fs-6" hidden><em>Kun årlig fakturering</em></p>
                   </div>
                 </div>
               </div>
@@ -181,12 +197,13 @@
                     <p class="lh-1"><span class="currency">€</span><span class="price fs-3">2700</span><span
                         class="period">/måned</span></p>
                     <div class="fs-5 text-start">
-                      <p class="fs-6 text-center"><em class="small">Alt i personlig plus:</em></p>
+                      <p class="fs-6 text-center"><em class="fs-6 ms-1 mb-2">Alt i personlig plus:</em></p>
                       <ul class="small">
                         <li><strong>Ubegrænsede websteder</strong></li>
                         <li><strong>Hjælp til opsætning</strong></li>
-                        <li class="credit"><strong>Kvartalsvise konsultationer</strong></li>
-                        <li class="credit"><strong>Støttekredit</strong></li>
+                        <li><strong>Årlig konsultation</strong></li>
+                        <li class="full"><strong>E-mail-support</strong></li>
+                        <li><strong>Støttekredit</strong></li>
                       </ul>
                     </div>
                     <p class=""><a class="btn btn-dark" title="Enterprise">Abonner</a></p>
@@ -207,7 +224,7 @@
 
           <div class="row justify-content-center pt-5">
             <div class="col-lg-10">
-              <h2>CSA-medlemskab gennem partnerskab og bidrag</h2>
+              <h2>CSA-medlemskab gennem partnerskab</h2>
               <p class="fs-6">Licensnøgler kan købes direkte, men der er mange andre måder at støtte projektet på:</p>
               <ul class="list-unstyled ps-0">
                 <li class="arrow">
@@ -232,12 +249,13 @@
             <h2 data-section="existing">Ressourcer for eksisterende medlemmer</h2>
             <div class="accord col-lg-8">
               <details class="rounded bd-info">
-                <summary>Skift sponsorniveau</summary>
-                <p class="text-start small pt-3 pb-2">Abonnementer fornyes på samme sponsorniveau. Hvis du vælger at ændre dit sponsorniveau ved fornyelse, bemærk at alle niveauer har adgang til de samme funktioner, men ikke alle niveauer er berettigede til støttekreditter og regelmæssige konsultationssamtaler.</p>
+                <summary>Bidragsniveauer ved licensfornyelse</summary>
+                <p class="text-start small pt-3 pb-2">Abonnementer fornyes på samme bidragsniveau som standard.</p>
+                <p>Hvis du vælger at ændre dit bidragsniveau ved fornyelse, bemærk at alle niveauer har adgang til de samme plugin-funktioner, men ikke alle niveauer er berettigede til de samme medlemsfordele. Se oversigten øverst på siden.</p>
                 <table id="renewal-codes" class="table mb-0 table-secondary text-center">
                   <thead>
                     <tr>
-                      <th>Sponsorniveau</th>
+                      <th>Bidragsniveau</th>
                       <th>Årlig fornyelseskode</th>
                       <th>Månedlig fornyelseskode</th>
                     </tr>

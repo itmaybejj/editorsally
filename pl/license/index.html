@@ -52,10 +52,17 @@
           <div class="row justify-content-center">
             <div class="col-lg-10">
               <h1 class="text-body-emphasis pt-2 pb-2" data-section="membership">Cennik i wkłady</h1>
-              <p class="fs-5">Rdzeń Editoria11y jest bezpłatny dla wszystkich.</p>
-              <p class="fs-5">Rozwój i wsparcie pochodzą z projektu Community Supported Add-ons, który jest
-                utrzymywany w modelu „płać tyle, ile możesz".</p>
-              <h2 class="nomenu pt-3">Członkostwo w CSA poprzez zakupione wtyczki</h2>
+              <p class="fs-5">
+                Editoria11y promuje dostępność w wyjątkowy sposób. Jego narzędzia są bardzo skuteczne w pomaganiu nietechnicznym autorom w tworzeniu treści, z których mogą w równym stopniu korzystać niepełnosprawni użytkownicy internetu. Uważamy to za dobro publiczne, dlatego <strong>Editoria11y zawsze będzie bezpłatne w użyciu</strong>.
+              </p>
+              <p class="fs-5">
+                Editoria11y nie jest jednak bezpłatne w rozwoju ani wsparciu.
+              </p>
+              <p class="fs-5">
+                Projekt „Community Supported Add-ons" (CSA) wypełnia tę lukę: członkowie projektu finansują rozwój biblioteki Editoria11y, jej wtyczek CMS oraz pakietu CSA: szybko rosnącego zestawu narzędzi do zapewniania jakości, które oferują funkcjonalność porównywalną z produktami komercyjnymi, open-source i on-prem.</p>
+              <p>Pakiet CSA dla Drupala jest obecnie bezpłatny w wersji beta i będzie dostępny dla WordPressa w trzecim kwartale 2026.
+              </p>
+              <h2 class="nomenu pt-3">Członkostwo w CSA poprzez wkłady</h2>
               <p>Ponieważ CSA dostarcza narzędzia self-hosted i open-source, nasze koszty ogólne są bardzo niskie. ~€9/witrynę/miesiąc
                 wystarczy, aby opłacić naszych deweloperów i wspierać użytkowników. Porównywalne narzędzia komercyjne pobierają €15 (podstawowe
                 narzędzia sprawdzające) do €1000+ (nieograniczone pulpity nawigacyjne stron) na witrynę miesięcznie.</p>
@@ -67,20 +74,20 @@
             <div class="row">
               <div class="col-lg-3"></div>
               <div class="row col-lg-9 py-4 pt-0 align-items-start text-start">
-                <div class="col">
-                  <label for="support-level">Poziom sponsoringu</label>
+                <div class="col-md-4 mb-3">
+                  <label for="support-level">Wkład</label>
                   <select id="support-level" class="form-select ">
                     <option value="100">150%</option>
                     <option value="80">120%</option>
-                    <option value="60" selected>Pełne wsparcie</option>
-                    <option value="50">75% (akademickie/charytatywne)</option>
+                    <option value="60" selected>100% szacowanego zapotrzebowania</option>
+                    <option value="50">75%</option>
                     <option value="44">66%</option>
                     <option value="33">50%</option>
                     <option value="22">33%</option>
                     <option value="17">25%</option>
                   </select>
                 </div>
-                <div class="col">
+                <div class="col-md-4 mb-3">
                   <label for="currency">Waluta</label>
                   <select class="form-select" id="currency">
                     <option value="EUR">€ EUR</option>
@@ -89,7 +96,7 @@
                   </select>
                 </div>
 
-                <div class="col">
+                <div class="col-md-4 mb-3">
                   <div class="row pb-3 form-check form-switch ps-0">
                     <div><label class="" for="annual-pricing">
                         Roczny
@@ -120,7 +127,7 @@
                         <li class="fw-semibold">Raporty witryny</li>
                         <li class="fw-semibold">Eksport raportów</li>
                         <li class="fw-semibold">Nieograniczone strony</li>
-                        <li>Wsparcie Forum + Slack</li>
+                        <li class="fw-semibold">Wsparcie na forum</li>
                       </ul>
                     </div>
                   </div>
@@ -128,12 +135,12 @@
               </div>
               <div class="col-lg-3 py-4 px-0" id="individual">
                 <div class="bg-light shadow overflow-hidden rounded-start">
-                  <div class="text-bg-info p-2 border-bottom border-light-subtle">1-Site</div>
+                  <div class="text-bg-info p-2 border-bottom border-light-subtle">Osobisty</div>
                   <div class="text-bg-info p-3 pb-1 d-flex flex-column justify-content-center">
                     <p class="lh-1"><span class="currency">€</span><span class="price fs-3">9</span><span
                         class="period">/miesiąc</span></p>
                     <div class="fs-5 text-start">
-                      <p class="fs-6 text-center"><em class="small">Wszystko z bezpłatnego oraz:</em></p>
+                      <p class="fs-6 text-center"><em class="fs-6 ms-1 mb-2">Wszystko z Bezpłatnego oraz:</em></p>
                       <ul class="small">
                         <li><strong>30+ testów deweloperskich</strong></li>
                         <li><strong>Kreator własnych testów</strong></li>
@@ -142,10 +149,12 @@
                         <li><strong>Odświeżanie crawlerów</strong></li>
                         <li class="credit"><strong>Pomoc przy konfiguracji</strong></li>
                         <li class="credit"><strong>Uznanie dla wspierających</strong></li>
-                        <li class="period-warning" hidden=""><em>Tylko rozliczenie roczne</em></li>
                       </ul>
                     </div>
+
                     <p class=""><a class="btn btn-dark" title="Individual">Subskrybuj</a></p>
+                    <p class="period-warning fs-6" hidden><em>Tylko rozliczenie roczne</em>
+                    </p>
                   </div>
                 </div>
               </div>
@@ -166,15 +175,18 @@
                     <p class="lh-1"><span class="currency">€</span><span class="price fs-3">9.99</span><span
                         class="period fs-5">/miesiąc</span></p>
                     <div class="fs-5 text-start">
-                      <p class="fs-6 text-center"><em class="small">Wszystko z osobistego oraz:</em></p>
+                      <p class="fs-6 text-center full"><em class="fs-6 ms-1 mb-2">Wszystko z Osobistego oraz:</em></p>
                       <ul class="small">
                         <li class="full"><strong>Pomoc przy konfiguracji</strong></li>
+                        <li class="credit"><strong>Wsparcie e-mail</strong></li>
                         <li class="credit"><strong>Roczna konsultacja</strong></li>
                         <li class="credit"><strong>Uznanie dla wspierających</strong></li>
-                        <li class="period-warning" hidden><em>Tylko rozliczenie roczne</em></li>
                       </ul>
                     </div>
+
                     <p class=""><a class="btn btn-dark" title="Team">Subskrybuj</a></p>
+                    <p class="period-warning fs-6" hidden><em>Tylko rozliczenie roczne</em>
+                    </p>
                   </div>
                 </div>
               </div>
@@ -185,12 +197,13 @@
                     <p class="lh-1"><span class="currency">€</span><span class="price fs-3">2700</span><span
                         class="period">/miesiąc</span></p>
                     <div class="fs-5 text-start">
-                      <p class="fs-6 text-center"><em class="small">Wszystko z osobistego oraz:</em></p>
+                      <p class="fs-6 text-center"><em class="fs-6 ms-1 mb-2">Wszystko z Osobistego oraz:</em></p>
                       <ul class="small">
                         <li><strong>Nieograniczone witryny</strong></li>
                         <li><strong>Pomoc przy konfiguracji</strong></li>
-                        <li class="credit"><strong>Kwartalne konsultacje</strong></li>
-                        <li class="credit"><strong>Uznanie dla wspierających</strong></li>
+                        <li><strong>Roczna konsultacja</strong></li>
+                        <li class="full"><strong>Wsparcie e-mail</strong></li>
+                        <li><strong>Uznanie dla wspierających</strong></li>
                       </ul>
                     </div>
                     <p class=""><a class="btn btn-dark" title="Enterprise">Subskrybuj</a></p>
@@ -211,7 +224,7 @@
 
           <div class="row justify-content-center pt-5">
             <div class="col-lg-10">
-              <h2>Członkostwo w CSA poprzez partnerstwo i wkład</h2>
+              <h2>Członkostwo w CSA poprzez partnerstwo</h2>
               <p class="fs-6">Klucze licencyjne można kupić bezpośrednio, ale istnieje wiele innych sposobów na wsparcie projektu:</p>
               <ul class="list-unstyled ps-0">
                 <li class="arrow">
@@ -237,14 +250,13 @@
             <h2 data-section="existing">Zasoby dla obecnych członków</h2>
             <div class="accord col-lg-8">
               <details class="rounded bd-info">
-                <summary>Zmień poziom sponsoringu</summary>
-                <p class="text-start small pt-3 pb-2">Subskrypcje odnawiają się na tym samym poziomie sponsoringu. Jeśli
-                  zdecydujesz się zmienić poziom sponsoringu przy odnowieniu, pamiętaj, że wszystkie poziomy mają dostęp do tych samych
-                  funkcji, ale nie wszystkie kwalifikują się do kredytów dla wspierających i regularnych rozmów konsultacyjnych.</p>
+                <summary>Poziomy wkładów przy odnowieniu licencji</summary>
+                <p class="text-start small pt-3 pb-2">Subskrypcje odnawiają się domyślnie na tym samym poziomie wkładu.</p>
+                <p>Jeśli zdecydujesz się zmienić poziom wkładu przy odnowieniu, pamiętaj, że wszystkie poziomy mają dostęp do tych samych funkcji wtyczek, ale nie wszystkie poziomy kwalifikują się do tych samych korzyści członkowskich. Zapoznaj się z tabelą na górze strony.</p>
                 <table id="renewal-codes" class="table mb-0 table-secondary text-center">
                   <thead>
                     <tr>
-                      <th>Poziom sponsoringu</th>
+                      <th>Poziom wkładu</th>
                       <th>Kod odnowienia rocznego</th>
                       <th>Kod odnowienia miesięcznego</th>
                     </tr>

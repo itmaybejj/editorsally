@@ -52,9 +52,17 @@
           <div class="row justify-content-center">
             <div class="col-lg-10">
               <h1 class="text-body-emphasis pt-2 pb-2" data-section="membership">Preços e contribuições</h1>
-              <p class="fs-5">O núcleo do Editoria11y é gratuito para todos.</p>
-              <p class="fs-5">O desenvolvimento e o suporte são financiados pelo projeto Community Supported Add-ons (CSA), mantido por um modelo de contribuição conforme a possibilidade de cada um.</p>
-              <h2 class="nomenu pt-3">Adesão ao CSA por meio de plugins comprados</h2>
+              <p class="fs-5">
+                O Editoria11y promove a acessibilidade de uma maneira única. Suas ferramentas são altamente eficazes em ajudar autores não técnicos a preparar conteúdo que pode ser aproveitado igualmente por usuários da Web com deficiência. Consideramos isso um bem público, por isso <strong>o Editoria11y sempre será gratuito para uso</strong>.
+              </p>
+              <p class="fs-5">
+                O Editoria11y não é, no entanto, gratuito para desenvolver ou oferecer suporte.
+              </p>
+              <p class="fs-5">
+                O projeto "Community Supported Add-ons" (CSA) preenche essa lacuna: os membros do projeto financiam o desenvolvimento da biblioteca Editoria11y, seus plugins para CMS e o pacote CSA: um conjunto de ferramentas de garantia de qualidade em rápido crescimento que oferece funcionalidade semelhante a produtos comerciais, open-source e on-prem.</p>
+              <p>O pacote CSA para Drupal está atualmente gratuito em beta e chegará ao WordPress no terceiro trimestre de 2026.
+              </p>
+              <h2 class="nomenu pt-3">Adesão ao CSA por meio de contribuições</h2>
               <p>Como o CSA oferece ferramentas auto-hospedadas e de código aberto, nossos custos são muito baixos. ~€9/site/mês é suficiente para remunerar nossos desenvolvedores e apoiar nossos usuários. Ferramentas comerciais comparáveis cobram de €15 (verificadores básicos) a €1000+ (painéis ilimitados por página) por site por mês.</p>
             </div>
 
@@ -64,20 +72,20 @@
             <div class="row">
               <div class="col-lg-3"></div>
               <div class="row col-lg-9 py-4 pt-0 align-items-start text-start">
-                <div class="col">
-                  <label for="support-level">Patrocínio</label>
+                <div class="col-md-4 mb-3">
+                  <label for="support-level">Contribuição</label>
                   <select id="support-level" class="form-select ">
                     <option value="100">150%</option>
                     <option value="80">120%</option>
-                    <option value="60" selected>Suporte integral</option>
-                    <option value="50">75% (acadêmico/sem fins lucrativos)</option>
+                    <option value="60" selected>100% da necessidade estimada</option>
+                    <option value="50">75%</option>
                     <option value="44">66%</option>
                     <option value="33">50%</option>
                     <option value="22">33%</option>
                     <option value="17">25%</option>
                   </select>
                 </div>
-                <div class="col">
+                <div class="col-md-4 mb-3">
                   <label for="currency">Moeda</label>
                   <select class="form-select" id="currency">
                     <option value="EUR">€ EUR</option>
@@ -86,7 +94,7 @@
                   </select>
                 </div>
 
-                <div class="col">
+                <div class="col-md-4 mb-3">
                   <div class="row pb-3 form-check form-switch ps-0">
                     <div><label class="" for="annual-pricing">
                         Anual
@@ -116,7 +124,7 @@
                         <li class="fw-semibold">Relatórios do site</li>
                         <li class="fw-semibold">Exportações de relatórios</li>
                         <li class="fw-semibold">Páginas ilimitadas</li>
-                        <li>Suporte via fórum + Slack</li>
+                        <li class="fw-semibold">Suporte via fórum</li>
                       </ul>
                     </div>
                   </div>
@@ -124,12 +132,12 @@
               </div>
               <div class="col-lg-3 py-4 px-0" id="individual">
                 <div class="bg-light shadow overflow-hidden rounded-start">
-                  <div class="text-bg-info p-2 border-bottom border-light-subtle">1-Site</div>
+                  <div class="text-bg-info p-2 border-bottom border-light-subtle">Pessoal</div>
                   <div class="text-bg-info p-3 pb-1 d-flex flex-column justify-content-center">
                     <p class="lh-1"><span class="currency">€</span><span class="price fs-3">9</span><span
                         class="period">/mês</span></p>
                     <div class="fs-5 text-start">
-                      <p class="fs-6 text-center"><em class="small">Tudo do gratuito mais:</em></p>
+                      <p class="fs-6 text-center"><em class="fs-6 ms-1 mb-2">Tudo do Gratuito mais:</em></p>
                       <ul class="small">
                         <li><strong>30+ testes para desenvolvedores</strong></li>
                         <li><strong>Construtor de testes personalizado</strong></li>
@@ -138,10 +146,12 @@
                         <li><strong>Rastreadores atualizáveis</strong></li>
                         <li class="credit"><strong>Assistência na configuração</strong></li>
                         <li class="credit"><strong>Crédito de apoiador</strong></li>
-                        <li class="period-warning" hidden=""><em>Somente cobrança anual</em></li>
                       </ul>
                     </div>
+
                     <p class=""><a class="btn btn-dark" title="Individual">Assinar</a></p>
+                    <p class="period-warning fs-6" hidden><em>Somente cobrança anual</em>
+                    </p>
                   </div>
                 </div>
               </div>
@@ -162,15 +172,18 @@
                     <p class="lh-1"><span class="currency">€</span><span class="price fs-3">9.99</span><span
                         class="period fs-5">/mês</span></p>
                     <div class="fs-5 text-start">
-                      <p class="fs-6 text-center full"><em class="small">Tudo do 1-Site mais:</em></p>
+                      <p class="fs-6 text-center full"><em class="fs-6 ms-1 mb-2">Tudo do Pessoal mais:</em></p>
                       <ul class="small">
                         <li class="full"><strong>Assistência na configuração</strong></li>
+                        <li class="credit"><strong>Suporte por e-mail</strong></li>
                         <li class="credit"><strong>Consultoria anual</strong></li>
                         <li class="credit"><strong>Crédito de apoiador</strong></li>
-                        <li class="period-warning" hidden><em>Somente cobrança anual</em></li>
                       </ul>
                     </div>
+
                     <p class=""><a class="btn btn-dark" title="Team">Assinar</a></p>
+                    <p class="period-warning fs-6" hidden><em>Somente cobrança anual</em>
+                    </p>
                   </div>
                 </div>
               </div>
@@ -181,12 +194,13 @@
                     <p class="lh-1"><span class="currency">€</span><span class="price fs-3">2700</span><span
                         class="period">/mês</span></p>
                     <div class="fs-5 text-start">
-                      <p class="fs-6 text-center"><em class="small">Tudo do 1-Site mais:</em></p>
+                      <p class="fs-6 text-center"><em class="fs-6 ms-1 mb-2">Tudo do Pessoal mais:</em></p>
                       <ul class="small">
                         <li><strong>Sites ilimitados</strong></li>
                         <li><strong>Assistência na configuração</strong></li>
-                        <li class="credit"><strong>Consultorias trimestrais</strong></li>
-                        <li class="credit"><strong>Crédito de apoiador</strong></li>
+                        <li><strong>Consultoria anual</strong></li>
+                        <li class="full"><strong>Suporte por e-mail</strong></li>
+                        <li><strong>Crédito de apoiador</strong></li>
                       </ul>
                     </div>
                     <p class=""><a class="btn btn-dark" title="Enterprise">Assinar</a></p>
@@ -207,7 +221,7 @@
 
           <div class="row justify-content-center pt-5">
             <div class="col-lg-10">
-              <h2>Adesão ao CSA por parceria e contribuição</h2>
+              <h2>Adesão ao CSA por parceria</h2>
               <p class="fs-6">As chaves de licença podem ser compradas diretamente, mas há muitas outras formas de apoiar o projeto:</p>
               <ul class="list-unstyled ps-0">
                 <li class="arrow">
@@ -232,12 +246,13 @@
             <h2 data-section="existing">Recursos para membros atuais</h2>
             <div class="accord col-lg-8">
               <details class="rounded bd-info">
-                <summary>Alterar nível de patrocínio</summary>
-                <p class="text-start small pt-3 pb-2">As assinaturas são renovadas no mesmo nível de patrocínio. Caso queira alterar o nível de patrocínio na renovação, note que todos os planos têm acesso às mesmas funcionalidades, mas nem todos são elegíveis para créditos de apoiador e chamadas regulares de consultoria.</p>
+                <summary>Níveis de contribuição para renovação de licença</summary>
+                <p class="text-start small pt-3 pb-2">As assinaturas são renovadas no mesmo nível de contribuição por padrão.</p>
+                <p>Se você optar por alterar o nível de contribuição na renovação, observe que todos os planos têm acesso às mesmas funcionalidades dos plugins, mas nem todos os planos são elegíveis para os mesmos benefícios de membro. Consulte a tabela no topo da página.</p>
                 <table id="renewal-codes" class="table mb-0 table-secondary text-center">
                   <thead>
                     <tr>
-                      <th>Nível de patrocínio</th>
+                      <th>Nível de contribuição</th>
                       <th>Código de renovação anual</th>
                       <th>Código de renovação mensal</th>
                     </tr>

@@ -224,6 +224,7 @@
     const couponCodes = { 100: null, 80: '120', 60: '100', 50: '75', 44: '66', 33: '50', 22: '33', 17: '25' };
 
     function buildCheckoutUrl(licenses) {
+      // @todo: include language code in URL and re-enable when checkout supports it.
       const currency = currencySelect.value.toLowerCase();
       const billingCycle = annualCheckbox.checked ? 'annual' : 'monthly';
       const couponPrefix = couponCodes[parseInt(supportSelect.value, 10)];
@@ -257,7 +258,7 @@
       const multiplier = supportLevel / 100;
       const isAnnual = annualCheckbox.checked;
       const period = isAnnual ? 'yearly' : 'monthly';
-      const periodText = isAnnual ? '/year' : '/month';
+      const periodText = isAnnual ? (strings?.perYear || '/year') : (strings?.perMonth || '/month');
       const prices = pricing[period][currency];
 
       // 75px aka 50% is the lowest value to allow for monthly.
@@ -267,7 +268,7 @@
       // Individual logic.
 
       if (supportLevel < 50) {
-        applyPrice(document.getElementById('individual'), pricing['yearly'][currency]['1'], multiplier, symbol, '/year');
+        applyPrice(document.getElementById('individual'), pricing['yearly'][currency]['1'], multiplier, symbol, strings?.perYear || '/year');
         document.querySelector('#individual').classList.add('annual-only');
       } else {
         applyPrice(document.getElementById('individual'), prices['1'], multiplier, symbol, periodText);
@@ -288,7 +289,7 @@
 
       // team annual-only.
       if (['5', '10', '25'].includes(pricePicker.value) && supportLevel < 22) {
-        applyPrice(document.getElementById('price-result'), pricing['yearly'][currency]['5'], multiplier, symbol, '/year');
+        applyPrice(document.getElementById('price-result'), pricing['yearly'][currency]['5'], multiplier, symbol, strings?.perYear || '/year');
         document.querySelector('#team').classList.add('annual-only');
       } else {
         applyPrice(document.getElementById('price-result'), prices[pricePicker.value], multiplier, symbol, periodText);
@@ -299,6 +300,19 @@
       document.querySelector('#individual .btn').href = buildCheckoutUrl(1);
       document.querySelector('#price-result .btn').href = buildCheckoutUrl(pricePicker.value);
       document.querySelector('#enterprise .btn').href = buildCheckoutUrl('unlimited');
+
+      /* Temporarily disable links */
+      document.querySelector('#individual .btn').href = '#';
+      document.querySelector('#price-result .btn').href = '#';
+      document.querySelector('#enterprise .btn').href = '#';
+      document.querySelector('#individual .btn').className = 'btn btn-secondary';
+      document.querySelector('#individual .btn').title = 'Coming soon';
+      document.querySelector('#price-result .btn').className = 'btn btn-secondary';
+      document.querySelector('#price-result .btn').title = 'Coming soon';
+      document.querySelector('#enterprise .btn').className = 'btn btn-secondary';
+      document.querySelector('#enterprise .btn').title = 'Coming soon';
+
+
     }
 
     pricePicker.addEventListener('change', updatePrices);
