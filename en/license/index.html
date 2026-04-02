@@ -43,6 +43,36 @@
         </div>
       </div>
     </nav>
+    <div class="dropdown lang-picker d-flex align-content-center">
+      <button type="button" data-bs-toggle="dropdown" title="Language" aria-expanded="false"
+        class="btn btn-outline-secondary btn-sm dropdown-toggle rounded-0 rounded-bottom border-top-0 mx-auto">
+        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+          class="bi bi-translate" viewBox="0 0 16 16">
+          <path d="M4.545 6.714 4.11 8H3l1.862-5h1.284L8 8H6.833l-.435-1.286zm1.634-.736L5.5 3.956h-.049l-.679 2.022z">
+          </path>
+          <path
+            d="M0 2a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v3h3a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-3H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zm7.138 9.995q.289.451.63.846c-.748.575-1.673 1.001-2.768 1.292.178.217.451.635.555.867 1.125-.359 2.08-.844 2.886-1.494.777.665 1.739 1.165 2.93 1.472.133-.254.414-.673.629-.89-1.125-.253-2.057-.694-2.82-1.284.681-.747 1.222-1.651 1.621-2.757H14V8h-3v1.047h.765c-.318.844-.74 1.546-1.272 2.13a6 6 0 0 1-.415-.492 2 2 0 0 1-.94.31">
+          </path>
+        </svg>
+        <span id="current-lang">EN</span>
+      </button>
+
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="/de/license/">Deutsch</a></li>
+        <li><a class="dropdown-item" href="/es/license/">Español</a></li>
+
+        <li><a class="dropdown-item" href="/fr/license/">Francais</a></li>
+      </ul>
+    </div>
+
+    <ul class="dropdown-menu" style="">
+      <li><a class="dropdown-item" href="#">Deutsch</a></li>
+      <li><a class="dropdown-item" href="#">Español</a></li>
+
+      <li><a class="dropdown-item" href="#">Francais</a></li>
+    </ul>
+    </div>
+
   </header>
   <main class="container col-lg-12 mx-auto py-5">
     <div class="row">
@@ -114,10 +144,11 @@
                         <li><a href="https://www.drupal.org/project/editoria11y/">Drupal</a> & <a
                             href="https://wordpress.org/plugins/editoria11y-accessibility-checker/">WordPress</a></li>
                         <li class="fw-semibold">50+ content tests</li>
-                        <li class="fw-semibold">As-you-type alerts</li>
-                        <li class="fw-semibold">Site-wide dashboards</li>
-                        <li class="fw-semibold">CSV exports</li>
-                        <li class="fw-semibold">Unlimited sites & pages</li>
+                        <li class="fw-semibold">As-you-type checking</li>
+                        <li class="fw-semibold">Synced dismissals</li>
+                        <li class="fw-semibold">Site reports</li>
+                        <li class="fw-semibold">Report exports</li>
+                        <li class="fw-semibold">Unlimited pages</li>
                         <li>Forum + Slack support</li>
                       </ul>
                     </div>
@@ -126,16 +157,18 @@
               </div>
               <div class="col-lg-3 py-4 px-0" id="individual">
                 <div class="bg-light shadow overflow-hidden rounded-start">
-                  <div class="text-bg-info p-2 border-bottom border-light-subtle">Personal</div>
-                  <div class="text-bg-info p-3 pb-1">
+                  <div class="text-bg-info p-2 border-bottom border-light-subtle">1-Site</div>
+                  <div class="text-bg-info p-3 pb-1 d-flex flex-column justify-content-center">
                     <p class="lh-1"><span class="currency">€</span><span class="price fs-3">9</span><span
                         class="period">/month</span></p>
                     <div class="fs-5 text-start">
-                      <p class="small text-center">Everything in free plus:</p>
+                      <p class="fs-6 text-center"><em class="fs-6 ms-1 mb-2">Everything in free plus:</em></p>
                       <ul class="small">
-                        <li><strong>30+ Developer tests</strong></li>
-                        <li><strong>Custom builder</strong></li>
-                        <li><strong>Crawler tools</strong></li>
+                        <li><strong>30+ developer tests</strong></li>
+                        <li><strong>Custom test builder</strong></li>
+                        <li><strong>Site-wide dismissals</strong></li>
+                        <li><strong>Readability panel</strong></li>
+                        <li><strong>Refresh crawlers</strong></li>
                         <li class="credit"><strong>Setup assistance</strong></li>
                         <li class="credit"><strong>Supporter credit</strong></li>
                         <li class="period-warning" hidden=""><em>Annual billing only</em></li>
@@ -147,8 +180,8 @@
               </div>
               <div class="col-lg-3 border-info px-0 fs-4 border rounded-3 shadow-lg" style="z-index: 3;" id="team">
                 <div class="text-bg-info p-2 rounded-top">Team</div>
-                <div class="p-2 pb-3 rounded-bottom">
-                  <div class="py-3">
+                <div class="p-3 rounded-bottom">
+                  <div class="py-3 pb-4">
                     <select class="form-select fw-bold" style="width: auto; display: inline-block;" id="price-pick">
                       <option value="5">5</option>
                       <option value="25" selected>25</option>
@@ -162,7 +195,7 @@
                     <p class="lh-1"><span class="currency">€</span><span class="price fs-3">9.99</span><span
                         class="period fs-5">/month</span></p>
                     <div class="fs-5 text-start">
-                      <p class="small text-center full">Everything in personal plus:</p>
+                      <p class="fs-6 text-center"><em class="fs-6 ms-1 mb-2">Everything in personal plus:</em></p>
                       <ul class="small">
                         <li class="full"><strong>Setup assistance</strong></li>
                         <li class="credit"><strong>Annual consultation</strong></li>
@@ -176,12 +209,12 @@
               </div>
               <div class="col-lg-3 py-4 px-0">
                 <div class="shadow overflow-hidden rounded-end" id="enterprise">
-                  <div class="text-bg-info p-2 border-bottom border-light-subtle">Enterprise</div>
-                  <div class="text-bg-info p-3 pb-1">
+                  <div class="text-bg-info p-2 border-bottom border-light-subtle">Unlimited</div>
+                  <div class="text-bg-info p-3 pb-1 d-flex flex-column justify-content-center">
                     <p class="lh-1"><span class="currency">€</span><span class="price fs-3">2700</span><span
                         class="period">/month</span></p>
                     <div class="fs-5 text-start">
-                      <p class="small text-center">Everything in personal plus:</p>
+                      <p class="fs-6 text-center"><em class="fs-6 ms-1 mb-2">Everything in personal plus:</em></p>
                       <ul class="small">
                         <li><strong>Unlimited sites</strong></li>
                         <li><strong>Setup assistance</strong></li>

@@ -355,92 +355,94 @@ label {
 }
 
 @media (max-width: 768px) {
-    .dropdown-toggle {
-        pointer-events: none;
-        font-weight: 100;
+    nav {
+        .dropdown-toggle {
+            pointer-events: none;
+            font-weight: 100;
 
-        &::after {
-            margin-left: -.175em;
-            vertical-align: initial;
-            content: ":";
+            &::after {
+                margin-left: -.175em;
+                vertical-align: initial;
+                content: ":";
+                border: 0;
+            }
+        }
+
+        .navbar-toggler:focus:not(:focus-visible) {
+            box-shadow: none;
+        }
+
+        .navbar-toggler-icon {
+            filter: invert(1) brightness(2);
+        }
+
+        .dropdown-menu {
+            display: block;
+            padding: 0;
             border: 0;
+            border-left: 2px solid var(--bs-navbar-active-color);
+            ;
+            border-radius: 0;
+        }
+
+        .dropdown-item {
+            line-height: 1.25;
+        }
+
+        .show .nav-link {
+            color: inherit;
         }
     }
 
-    .navbar-toggler:focus:not(:focus-visible) {
-        box-shadow: none;
-    }
-
-    .navbar-toggler-icon {
-        filter: invert(1) brightness(2);
-    }
-
-    .dropdown-menu {
-        display: block;
-        padding: 0;
+    .navbar-toggler {
         border: 0;
-        border-left: 2px solid var(--bs-navbar-active-color);
-        ;
-        border-radius: 0;
     }
 
-    .dropdown-item {
-        line-height: 1.25;
-    }
-
-    .show .nav-link {
-        color: inherit;
-    }
-}
-
-.navbar-toggler {
-    border: 0;
-}
-
-.navbar-nav {
-    :focus-visible {
-        box-shadow: inset 0 0 0 2px;
-    }
-
-    .dropdown-item.active,
-    .dropdown-item:active,
-    .dropdown-item:focus {
-        color: var(--bs-body-bg);
-        background-color: rgb(var(--bs-link-color-rgb));
-        margin-left: 0;
-    }
-
-    .dropdown-menu[data-bs-popper] {
-        top: calc(100% - 3px);
-        padding: 0;
-        left: auto;
-        right: 0;
-        border-radius: 0;
-        --bs-dropdown-border-color: rgb(var(--bs-link-color-rgb));
-        min-width: calc(100% + 4px);
-        margin: -2px -2px;
-        border-top: 0;
-        background-color: #fff;
-
-        li {
-            padding-bottom: 0;
-            padding-top: 0;
+    .navbar-nav {
+        :focus-visible {
+            box-shadow: inset 0 0 0 2px;
         }
 
-        a {
-            padding-top: .5rem;
-            padding-bottom: .5rem;
+        .dropdown-item.active,
+        .dropdown-item:active,
+        .dropdown-item:focus {
+            color: var(--bs-body-bg);
+            background-color: rgb(var(--bs-link-color-rgb));
+            margin-left: 0;
+        }
 
-            &:not(.active):hover {
-                background-color: rgb(var(--bs-link-color-rgb));
-                color: var(--bs-body-bg);
+        .dropdown-menu[data-bs-popper] {
+            top: calc(100% - 3px);
+            padding: 0;
+            left: auto;
+            right: 0;
+            border-radius: 0;
+            --bs-dropdown-border-color: rgb(var(--bs-link-color-rgb));
+            min-width: calc(100% + 4px);
+            margin: -2px -2px;
+            border-top: 0;
+            background-color: #fff;
+
+            li {
+                padding-bottom: 0;
+                padding-top: 0;
+            }
+
+            a {
+                padding-top: .5rem;
+                padding-bottom: .5rem;
+
+                &:not(.active):hover {
+                    background-color: rgb(var(--bs-link-color-rgb));
+                    color: var(--bs-body-bg);
+                }
             }
         }
     }
-}
 
-[data-bs-theme="light"] .nav-link.active {
-    color: white;
+    [data-bs-theme="light"] .nav-link.active {
+        color: white;
+    }
 }
 
 /* details accordion */
@@ -765,7 +767,9 @@ footer {
     }
 
     .text-bg-info+.text-bg-info {
-        min-height: 21rem;
+        @media (min-width: 968px) {
+            min-height: 26rem;
+        }
     }
 }
 
