@@ -1,0 +1,150 @@
+{
+  "_doc": "Tracks which English commit each translation was last synced to. Use `git diff <synced_commit> HEAD -- en/<page>/index.html` to detect stale translations. Set to null for pages not yet translated.",
+  "source_lang": "en",
+  "languages": {
+    "da": {
+      "about": "51d6d4311b74f03f1e0aca73a684f224d9746a75",
+      "contacts": "51d6d4311b74f03f1e0aca73a684f224d9746a75",
+      "demo": "51d6d4311b74f03f1e0aca73a684f224d9746a75",
+      "drupal": "51d6d4311b74f03f1e0aca73a684f224d9746a75",
+      "features": "51d6d4311b74f03f1e0aca73a684f224d9746a75",
+      "install": "51d6d4311b74f03f1e0aca73a684f224d9746a75",
+      "license": "51d6d4311b74f03f1e0aca73a684f224d9746a75"
+    },
+    "de": {
+      "about": "51d6d4311b74f03f1e0aca73a684f224d9746a75",
+      "contacts": "51d6d4311b74f03f1e0aca73a684f224d9746a75",
+      "demo": "51d6d4311b74f03f1e0aca73a684f224d9746a75",
+      "drupal": "51d6d4311b74f03f1e0aca73a684f224d9746a75",
+      "features": "51d6d4311b74f03f1e0aca73a684f224d9746a75",
+      "install": "51d6d4311b74f03f1e0aca73a684f224d9746a75",
+      "license": "51d6d4311b74f03f1e0aca73a684f224d9746a75"
+    },
+    "el": {
+      "about": "51d6d4311b74f03f1e0aca73a684f224d9746a75",
+      "contacts": "51d6d4311b74f03f1e0aca73a684f224d9746a75",
+      "demo": "51d6d4311b74f03f1e0aca73a684f224d9746a75",
+      "drupal": "51d6d4311b74f03f1e0aca73a684f224d9746a75",
+      "features": "51d6d4311b74f03f1e0aca73a684f224d9746a75",
+      "install": "51d6d4311b74f03f1e0aca73a684f224d9746a75",
+      "license": "51d6d4311b74f03f1e0aca73a684f224d9746a75"
+    },
+    "es": {
+      "about": "51d6d4311b74f03f1e0aca73a684f224d9746a75",
+      "contacts": "51d6d4311b74f03f1e0aca73a684f224d9746a75",
+      "demo": "51d6d4311b74f03f1e0aca73a684f224d9746a75",
+      "drupal": "51d6d4311b74f03f1e0aca73a684f224d9746a75",
+      "features": "51d6d4311b74f03f1e0aca73a684f224d9746a75",
+      "install": "51d6d4311b74f03f1e0aca73a684f224d9746a75",
+      "license": "51d6d4311b74f03f1e0aca73a684f224d9746a75"
+    },
+    "fr": {
+      "about": "51d6d4311b74f03f1e0aca73a684f224d9746a75",
+      "contacts": "51d6d4311b74f03f1e0aca73a684f224d9746a75",
+      "demo": "51d6d4311b74f03f1e0aca73a684f224d9746a75",
+      "drupal": "51d6d4311b74f03f1e0aca73a684f224d9746a75",
+      "features": "51d6d4311b74f03f1e0aca73a684f224d9746a75",
+      "install": "51d6d4311b74f03f1e0aca73a684f224d9746a75",
+      "license": "51d6d4311b74f03f1e0aca73a684f224d9746a75"
+    },
+    "hu": {
+      "about": "51d6d4311b74f03f1e0aca73a684f224d9746a75",
+      "contacts": "51d6d4311b74f03f1e0aca73a684f224d9746a75",
+      "demo": "51d6d4311b74f03f1e0aca73a684f224d9746a75",
+      "drupal": "51d6d4311b74f03f1e0aca73a684f224d9746a75",
+      "features": "51d6d4311b74f03f1e0aca73a684f224d9746a75",
+      "install": "51d6d4311b74f03f1e0aca73a684f224d9746a75",
+      "license": "51d6d4311b74f03f1e0aca73a684f224d9746a75"
+    },
+    "it": {
+      "about": "51d6d4311b74f03f1e0aca73a684f224d9746a75",
+      "contacts": "51d6d4311b74f03f1e0aca73a684f224d9746a75",
+      "demo": "51d6d4311b74f03f1e0aca73a684f224d9746a75",
+      "drupal": "51d6d4311b74f03f1e0aca73a684f224d9746a75",
+      "features": "51d6d4311b74f03f1e0aca73a684f224d9746a75",
+      "install": "51d6d4311b74f03f1e0aca73a684f224d9746a75",
+      "license": "51d6d4311b74f03f1e0aca73a684f224d9746a75"
+    },
+    "jp": {
+      "about": "51d6d4311b74f03f1e0aca73a684f224d9746a75",
+      "contacts": "51d6d4311b74f03f1e0aca73a684f224d9746a75",
+      "demo": "51d6d4311b74f03f1e0aca73a684f224d9746a75",
+      "drupal": "51d6d4311b74f03f1e0aca73a684f224d9746a75",
+      "features": "51d6d4311b74f03f1e0aca73a684f224d9746a75",
+      "install": "51d6d4311b74f03f1e0aca73a684f224d9746a75",
+      "license": "51d6d4311b74f03f1e0aca73a684f224d9746a75"
+    },
+    "nb": {
+      "about": "51d6d4311b74f03f1e0aca73a684f224d9746a75",
+      "contacts": "51d6d4311b74f03f1e0aca73a684f224d9746a75",
+      "demo": "51d6d4311b74f03f1e0aca73a684f224d9746a75",
+      "drupal": "51d6d4311b74f03f1e0aca73a684f224d9746a75",
+      "features": "51d6d4311b74f03f1e0aca73a684f224d9746a75",
+      "install": "51d6d4311b74f03f1e0aca73a684f224d9746a75",
+      "license": "51d6d4311b74f03f1e0aca73a684f224d9746a75"
+    },
+    "nl": {
+      "about": "51d6d4311b74f03f1e0aca73a684f224d9746a75",
+      "contacts": "51d6d4311b74f03f1e0aca73a684f224d9746a75",
+      "demo": "51d6d4311b74f03f1e0aca73a684f224d9746a75",
+      "drupal": "51d6d4311b74f03f1e0aca73a684f224d9746a75",
+      "features": "51d6d4311b74f03f1e0aca73a684f224d9746a75",
+      "install": "51d6d4311b74f03f1e0aca73a684f224d9746a75",
+      "license": "51d6d4311b74f03f1e0aca73a684f224d9746a75"
+    },
+    "pl": {
+      "about": "51d6d4311b74f03f1e0aca73a684f224d9746a75",
+      "contacts": "51d6d4311b74f03f1e0aca73a684f224d9746a75",
+      "demo": "51d6d4311b74f03f1e0aca73a684f224d9746a75",
+      "drupal": "51d6d4311b74f03f1e0aca73a684f224d9746a75",
+      "features": "51d6d4311b74f03f1e0aca73a684f224d9746a75",
+      "install": "51d6d4311b74f03f1e0aca73a684f224d9746a75",
+      "license": "51d6d4311b74f03f1e0aca73a684f224d9746a75"
+    },
+    "pt-br": {
+      "about": "51d6d4311b74f03f1e0aca73a684f224d9746a75",
+      "contacts": "51d6d4311b74f03f1e0aca73a684f224d9746a75",
+      "demo": "51d6d4311b74f03f1e0aca73a684f224d9746a75",
+      "drupal": "51d6d4311b74f03f1e0aca73a684f224d9746a75",
+      "features": "51d6d4311b74f03f1e0aca73a684f224d9746a75",
+      "install": "51d6d4311b74f03f1e0aca73a684f224d9746a75",
+      "license": "51d6d4311b74f03f1e0aca73a684f224d9746a75"
+    },
+    "pt-pt": {
+      "about": "51d6d4311b74f03f1e0aca73a684f224d9746a75",
+      "contacts": "51d6d4311b74f03f1e0aca73a684f224d9746a75",
+      "demo": "51d6d4311b74f03f1e0aca73a684f224d9746a75",
+      "drupal": "51d6d4311b74f03f1e0aca73a684f224d9746a75",
+      "features": "51d6d4311b74f03f1e0aca73a684f224d9746a75",
+      "install": "51d6d4311b74f03f1e0aca73a684f224d9746a75",
+      "license": "51d6d4311b74f03f1e0aca73a684f224d9746a75"
+    },
+    "sv": {
+      "about": "51d6d4311b74f03f1e0aca73a684f224d9746a75",
+      "contacts": "51d6d4311b74f03f1e0aca73a684f224d9746a75",
+      "demo": "51d6d4311b74f03f1e0aca73a684f224d9746a75",
+      "drupal": "51d6d4311b74f03f1e0aca73a684f224d9746a75",
+      "features": "51d6d4311b74f03f1e0aca73a684f224d9746a75",
+      "install": "51d6d4311b74f03f1e0aca73a684f224d9746a75",
+      "license": "51d6d4311b74f03f1e0aca73a684f224d9746a75"
+    },
+    "uk": {
+      "about": "51d6d4311b74f03f1e0aca73a684f224d9746a75",
+      "contacts": "51d6d4311b74f03f1e0aca73a684f224d9746a75",
+      "demo": "51d6d4311b74f03f1e0aca73a684f224d9746a75",
+      "drupal": "51d6d4311b74f03f1e0aca73a684f224d9746a75",
+      "features": "51d6d4311b74f03f1e0aca73a684f224d9746a75",
+      "install": "51d6d4311b74f03f1e0aca73a684f224d9746a75",
+      "license": "51d6d4311b74f03f1e0aca73a684f224d9746a75"
+    },
+    "zh": {
+      "about": "51d6d4311b74f03f1e0aca73a684f224d9746a75",
+      "contacts": "51d6d4311b74f03f1e0aca73a684f224d9746a75",
+      "demo": "51d6d4311b74f03f1e0aca73a684f224d9746a75",
+      "drupal": "51d6d4311b74f03f1e0aca73a684f224d9746a75",
+      "features": "51d6d4311b74f03f1e0aca73a684f224d9746a75",
+      "install": "51d6d4311b74f03f1e0aca73a684f224d9746a75",
+      "license": "51d6d4311b74f03f1e0aca73a684f224d9746a75"
+    }
+  }
+}

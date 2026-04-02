@@ -1,0 +1,441 @@
+<!doctype html>
+<html lang="nb" data-bs-theme="light">
+  <head>
+<link rel="icon" type="image/png" href="/assets/favicons/favicon-512x512.png" sizes="512x512" />
+    <link rel="icon" type="image/png" href="/assets/favicons/favicon-192x192.png" sizes="192x192" />
+    <link rel="icon" type="image/png" href="/assets/favicons/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicons/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <meta charset="utf-8" />
+    <title>Drupal CSA Docs — Editoria11y</title>
+    <link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/assets/theme.css" rel="stylesheet" />
+    <link href="/assets/prism/prism.css" rel="stylesheet" />
+    <meta name="theme-color" content="#712cf9" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <header>
+    <nav class="navbar navbar-expand-md">
+      <div class="container col-sm-12 mx-auto">
+        <a href="/nb/" class="d-flex align-items-center  navbar-brand">
+          <svg class="logo-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="-.75 -3.5 10.1699 19.1777"><path fill="currentColor" d="M3.7031,10.5527c-.3633-.6562-.6426-1.1387-.8379-1.4473l-.3105-.4863-.2344-.3574c-.5117-.7969-1.0449-1.4551-1.5996-1.9746.3164-.2617.6113-.3926.8848-.3926.3359,0,.6348.123.8965.3691s.5918.7148.9902,1.4062c.4531-1.4727,1.0293-2.8691,1.7285-4.1895.3867-.7188.7314-1.2021,1.0342-1.4502s.7041-.3721,1.2041-.3721c.2656,0,.5938.041.9844.123-1.0039.8086-1.8066,1.7695-2.4082,2.8828s-1.3789,3.0762-2.332,5.8887Z"/></svg> Editoria<span style="margin-left: -1px;">11</span>y
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Slå av/på navigasjon">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Editora11y</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Lukk"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 nav-pills">
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div id="lang-picker"></div>
+  </header>
+    <main class="container col-lg-12 mx-auto py-5">
+      <div class="row docs">
+        <div class="col-12 col-md-5 col-lg-4 mb-5">
+          <div id="on-this-page" class="list-group ms-2 ms-lg-5 position-sticky top-0 pt-3">
+          </div>
+        </div>
+        <div class="col-12 col-md-7 col-lg-8 pt-3">
+          <div data-bs-spy="scroll" data-bs-target="#on-this-page" data-bs-smooth-scroll="true">
+            <h1>Drupal-modul</h1>
+            <section id="features">
+              <h2 class="pt-3">Funksjoner</h2>
+
+              <figure class="figure my-4 rounded shadow border">
+                <img loading="lazy" src="/assets/images/3x-editing.png" class="figure-img img-fluid" height="1088" width="2237" alt="Drupal-redigerer med innebygde tips"/>
+                <figcaption class="figure-caption p-3 pt-2 fs-6">Problemer oppdages både ved innlasting av frontend og mens du skriver i CKEditor og Gutenberg.</figcaption>
+              </figure>
+
+              <figure class="figure my-4 rounded shadow border" style="max-width: 600px;">
+                <img loading="lazy" src="/assets/images/3x-generic-tip.png" class="figure-img img-fluid" height="798" width="1278" alt="Tips som viser at en lenke bare heter klikk her."/>
+                <figcaption class="figure-caption p-3 pt-2 ps-5 fs-6">Verktøytips beskriver problemet, med knapper for å hoppe til side- eller layoutredigereren, ignorere varselet (for den aktive brukeren) eller merke det som OK (for alle brukere). Avhengig av kontekst og tillatelser kan noen varsler også vise en «Lignende varsler»-meny, med alternativer for å merke flere varsler på samme side som OK, eller merke samme element på alle sider som OK.</figcaption>
+              </figure>
+
+              <figure class="figure my-4 rounded shadow mb-5 border">
+                <img loading="lazy" class="figure-img img-fluid" src="/assets/images/3x-dashboard.png" height="765" width="1600" alt="Rapporteringspanel som viser nylige problemer og sider med flest problemer." />
+                <figcaption class="figure-caption p-3 pt-2 fs-6">Et nettstedsglobalt rapporteringspanel gir filtrerbare og eksporterbare rapporter over varsler og avvisninger.</figcaption>
+              </figure>
+
+              <p>I tillegg:</p>
+              <ul>
+                <li>Startoppsett som automatisk ignorerer Drupal-, CKeditor-, Gutenberg-, Link Purpose- og External Link-elementer, reagerer på endringer ved redigering i modale beholdere, og automatisk plasserer verktøylinjen slik at den ikke overlapper Klaro- og Same Page Preview-elementer.</li>
+                <li>Rollebasert konfigurasjon for hvilke brukere som ser kontrolleren, hvilke brukere som kan avvise varsler, og hvilke brukere som kan se nettstedsglobale rapporter.</li>
+                <li>En intern (lokal) nettstedskraver for å oppdatere panelet etter større temaendringer. <em>(kun CSA)</em></li>
+                <li>Delt konfigurasjon for forfatter/utvikler med separate tester (~30/~80) og problemlister. <em>(kun CSA)</em></li>
+              </ul>
+
+
+
+            </section>
+            <h2>Installasjon og viktige konfigurasjonstrinn</h2>
+            <p><a href="https://www.drupal.org/project/editoria11y/">Samlepakken</a> på Drupal.org inneholder flere moduler:</p>
+            <ul>
+              <li>
+                Editoria11y: kjernen for innholdskontroll og panel.
+              </li>
+              <li>
+                Editoria11y CSA: utviklertester og vedlikeholdsverktøy for panelet.
+              </li>
+              <li>
+                Editoria11y Export: CSV-rapporteringsverktøy.
+              </li>
+            </ul>
+            <p>Installer som enhver annen modul, og gjør deretter disse viktige trinnene:</p>
+            <ol>
+              <li><strong>Sjekk tillatelser.</strong> Betrodde forfattere bør ha «Merk som OK», «Merk som ignorert» og «Se panelet».</li>
+              <li><strong>Sjekk viktige sider for repeterende eller uhjelpsomme varsler.</strong> Merk dem enten som OK i verktøytipset, eller juster konfigurasjonen til å ignorere elementer etter selektor.</li>
+              <li>Se etter tips som er vanskelige å se – utenfor skjermen, avkuttet, bak andre elementer eller på skjulte elementer. Bruk tipsene i «Fiks tipplassering» nedenfor for å løse dette.</li>
+              <li>Hvis nettstedet allerede har innhold og du har et CSA-abonnement, besøk panelfanen «recheck» og <strong>kravle nettstedet</strong> for å forhåndsinnlaste nettstedsrapportene. Dette er valgfritt, men eldre sider vil ikke vises i rapportene før de er kravlet eller besøkt av en innlogget bruker.</li>
+            </ol>
+            <p>Se en <a href="https://youtu.be/uYvNYPg38nU?si=dqADyWpTtOhniHTP&t=696">videoinnføring i konfigurasjonsalternativene</a> (v2.4).</p>
+
+            <h2 id="check-roots">Skjul uhjelpsomme varsler</h2>
+            <p>
+              <strong>Gode konfigurasjoner undertrykker uhjelpsomme varsler, slik at innholdsforfattere kan fokusere på problemer de bør fikse</strong>.</p>
+            <p>Selv om du kan slå av tester helt, er det vanligvis bedre å skjule varsler på bestemte elementer eller sider.</p>
+            <hr>
+            <p>
+              Under hver testkjøring samler Editoria11y inn ett sett med elementer fra innstillingen «Sjekk innhold i disse beholderne», og filtrerer det deretter flere ganger. Slik ser en testkjøring ut:
+            </p>
+            <ol>
+              <li>
+                Avbryt sjekking hvis konfigurasjonen forhindrer sjekking på denne siden eller for denne brukeren.
+              </li>
+              <li>
+                <strong>Samle</strong> elementer i angitte sideregioner, f.eks.:<br><code>body > *:not('.ed11y-element')</code><br>
+                <em>For Editoria11y CSA-brukere er dette regionene på fanen <strong>Utviklertester</strong>.</em>
+              </li>
+              <li>
+                <strong>Fjern</strong> elementer som samsvarer med ignoreringsselektorer, f.eks.:<br><code>.widgets, .utility-menu</code><br>
+                <em>For Editoria11y CSA-brukere er dette selektorene på fanen <strong>Utviklertester</strong>.</em>
+              </li>
+              <li>
+                Kjør tester og synkroniser resultater til panelet.
+              </li>
+              <li>
+                Hvis delt konfigurasjon er aktiv og brukeren er en innholdsredaktør, filtrer utviklerresultatene:
+                <ul>
+                  <li><strong>Fjern</strong> resultater fra tester satt til «Kun utvikler».</li>
+                  <li><strong>Fjern</strong> resultater på elementer utenfor angitte <strong><em>innholds</em></strong>regioner, f.eks.:<br><code>main, footer</code></li>
+                  <li><strong>Fjern</strong> resultater på elementer som samsvarer med <strong><em>innholds</em></strong>ignoreringsselektorer.</li>
+                </ul>
+                Merk at det ikke er en andre «samle»-fase. Utviklerens sideregioner må inkludere innholdsregionene.
+              </li>
+              <li>Åpne panelet og tegn varsler hvis konfigurasjonen samsvarer med en innstilling for automatisk åpning.</li>
+            </ol>
+
+            <h3 id="dismiss">Avvis varsler</h3>
+            <p>Tester kan konfigureres i biblioteket som feil eller advarsler («manuelle sjekker»). Advarsler kan avvises. Det finnes to typer avvisninger tilgjengelig fra bunnteksten i hvert verktøytips:</p>
+            <div class="my-2" style="background: url(/assets/images/3x-generic-tip.png) 100% 98%; max-width: 600px; padding-top: 6%; background-size: 108%;"></div>
+            <ul>
+              <li>«Ignorer» lagres som en brukerpreferanse: varselet er nå skjult for gjeldende bruker, men kun for gjeldende bruker.</li>
+              <li>«Merk som OK» skjuler varselet for alle brukere.</li>
+            </ul>
+            <p>Om en bruker kan avvise et varsel styres på rollenivå i Drupals brukertillatelser. <strong>De fleste forfattere bør ha lov til å avvise varsler</strong>. Det er ingen hensikt med å tildele noen en manuell sjekk hvis de ikke kan merke elementet som kontrollert.</p>
+
+            <h3 id="roots">Ignorer elementer</h3>
+            <p>Disse to konfigurasjonsinnstillingene er de viktigste!</p>
+            <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
+              <label for="edit-content-root">Sjekk innhold i disse beholderne</label>
+              <div><textarea id="edit-content-root" name="content_root" rows="1" cols="30" disabled></textarea>
+              </div>
+              <div class="mt-3">
+                <label for="edit-ignore-elements">Hopp over disse elementene</label>
+                <div>
+                  <textarea id="edit-ignore-elements" disabled name="ignore_elements" rows="1" cols="30" class=""></textarea>
+                </div>
+              </div>
+            </div>
+            <p>
+              Sett den første til å inkludere alle deler av siden som innholdsforfattere kan redigere. F.eks., hvis de kan redigere <code>main</code>-innholdsområdet, <code>.sidebar</code> og <code>.footer-column-two</code>, angi disse selektorene som innholdskontrollområde.
+            </p>
+            <p>
+              Bruk den andre til å «slå ut» delseksjoner. F.eks., hvis <code>main</code> inneholder ulike widgeter og innebygde elementer som kun utviklere kan endre, list dem opp: <code>.widget-1, .social-embed</code>;
+            </p>
+            <p>Hvis du bruker delt konfigurasjon, vil du se et lignende par innstillinger på fanen Utviklertester:</p>
+            <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
+              <div>
+                <fieldset>
+                <legend>
+                  Utviklerkontrollområde
+                </legend>
+                <div class="fieldset__wrapper fieldset__wrapper--group">
+
+                  <div id="edit-dev-check-root">
+                    <div>
+                    <input aria-describedby="edit-dev-check-root--description" type="radio" id="edit-dev-check-root-automatic" name="dev_check_root" value="automatic" checked="checked">
+                    <label for="edit-dev-check-root-automatic" class="form-item__label option">Alle elementer</label>
+                  </div>
+                    <div class="d-flex">
+                      <input aria-describedby="edit-dev-check-root--description" type="radio" id="edit-dev-check-root-match" name="dev_check_root" value="match" class="align-self-baseline mt-1 me-1">
+                      <label for="edit-dev-check-root-match" class="form-item__label option">Kun beholderne oppført i fanen Innholdsinnstilling</label>
+                    </div>
+                    <div class="">
+                      <input aria-describedby="edit-dev-check-root--description" type="radio" id="edit-dev-check-root-specify" name="dev_check_root" value="specify" class="form-radio form-boolean form-boolean--type-radio">
+                      <label for="edit-dev-check-root-specify" class="">De spesifikke beholderne oppført nedenfor</label>
+                    </div>
+                  </div>
+
+                </div>
+              </fieldset>
+
+                <div class="">
+                  <label for="edit-always-ignore" class="mt-3">Ignorer for både utviklere og innholdsredaktører</label>
+                  <div class="form-textarea-wrapper">
+                    <textarea  id="edit-always-ignore" name="always_ignore" rows="1" cols="20" placeholder=""></textarea>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+            <p>Det viktigste å vite om utviklerkontrollområdene er at de <strong>ikke er uavhengige</strong> av innholdskontrollområdene. I en delt konfigurasjon sjekkes utviklerområdene, og deretter <strong>filtreres</strong> resultatene for å samsvare med innholdsområdene. Alle områder som er ekskludert for utviklere, vil også ekskluderes for innholdsredaktører. Ikke ekskluder redigerbare innholdsområder!</p>
+
+            <p>Noen tester tillater mer presis konfigurasjon, for å kun skjule bestemte varsler på berørte elementer. Se etter dem under:</p>
+            <ul>
+              <li>Innholdstester: Lenker å sjekke</li>
+              <li>Innholdstester: Innebygde elementer å sjekke</li>
+              <li>Innholdstester: Oppdage dynamisk og shadow-innhold</li>
+              <li>Utviklertester: Kontrast</li>
+            </ul>
+
+            <h3 id="pages">Skjul for bestemte sider eller brukere</h3>
+            <p>
+              Den enkleste måten å gjøre dette på er ved å sende CSS-klasser eller ID-er til disse alternativene:
+            </p>
+            <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
+              <label for="edit-no-load" class="form-item__label">Ikke sjekk sider med disse elementene</label>
+              <div class="form-textarea-wrapper">
+                <textarea data-drupal-selector="edit-no-load" aria-describedby="edit-no-load--description" id="edit-no-load" name="no_load" rows="1" cols="20" class="form-textarea resize-vertical form-element form-element--type-textarea form-element--api-textarea"></textarea>
+              </div>
+
+              <label for="edit-ignore-all-if-absent" class="form-item__label">Skjul alle varsler på sider der disse elementene ikke er til stede</label>
+              <div class="form-textarea-wrapper">
+                <textarea data-drupal-selector="edit-ignore-all-if-absent" aria-describedby="edit-ignore-all-if-absent--description" id="edit-ignore-all-if-absent" name="ignore_all_if_absent" rows="1" cols="20" class="form-textarea resize-vertical form-element form-element--type-textarea form-element--api-textarea"></textarea>
+              </div>
+
+            </div>
+            <p>
+              Den første vil forhindre at sjekker kjøres, og verktøylinjen vil ikke vises.
+            </p>
+            <p>
+              Den andre starter kontrolleren minimert og merker automatisk (for gjeldende bruker) alle problemer som «Ignorert», selv om de er feil. Dette gjør at testene kan kjøre og oppdatere panelet uten å forstyrre brukeren.
+            </p>
+            <p>
+              Hvis du vil bruke disse til å styre hvilke brukere som ser kontrolleren, kan det hende du må justere temaet ditt til å sende ut en klasse, f.eks. <code>.user-247</code>
+            </p>
+
+            <h2 id="dashboard">Administrer nettstedsglobale resultater</h2>
+            <section id="refresh">
+              <h3 class="pt-3">Kravling og oppdatering av resultater</h3>
+              <p>Editoria11y er et <strong>sanntids overvåkingsverktøy, ikke en nettstedskraver</strong>. Nettstedsglobale rapporter oppdateres når forfattere ser på sider, så regelmessig kravling er vanligvis ikke nødvendig. CSA-modulen <em>inkluderer</em> en kravler, men den bør kun trenges i disse tre situasjonene:</p>
+              <ol>
+                <li>
+                  Når Editoria11y installeres for første gang på et eksisterende nettsted med mange sider. Sider må besøkes før de vises på panelet, så en rask innledende kravling sparer tid.
+                </li>
+                <li>
+                  Store oppdateringer av temaer eller moduler kan fikse (eller forårsake) problemer på mange sider som ikke vil vises før de besøkes eller kravles.
+                </li>
+                <li>
+                  Massehandlinger i admingrensesnittet som å slette sider eller omdirigeringer har en tendens til å etterlate resultater fra sider som ikke lenger finnes eller har blitt flyttet. I slike tilfeller hjelper det å bruke vedlikeholdshandlingene i «Oppdater»-fanen for å oppdatere side-URL-er og oppdage og fjerne slettede sider.
+                </li>
+              </ol>
+              <p>Ingen data forlater nettstedet ditt under en kravling. CSA-kravleren er ikke et skyverktøy; den bruker nettleseren din til å laste og sjekke sidene på ditt eget nettsted. Ulempen med denne tilnærmingen er at <strong>nettlesere pauser bakgrunnsfaner</strong>. Du må holde datamaskinen på og våken under en kravling. Planlegg å åpne et nytt vindu for kravleren og la det være forgrunnen for det vinduet mens det arbeider. Du kan fortsette å arbeide i et annet vindu. Kravleren vil oppdatere estimatet etter hver gruppe av sider.</p>
+            </section>
+            <section id="reports">
+              <h3>Vise rapporter</h3>
+              <div class="my-4 border shadow" style="background: url(/assets/images/3x-dashboard.png) 86% 0%; padding-top: 28%; background-size: 106%;"></div>
+              <ul>
+                <li>
+                  <strong>Nylige</strong> gjør det mulig å utforske individuelle varsler. Dette lar deg for eksempel filtrere for å finne alle forekomster av samme varseltype, se hvilke varsler som dukker opp hyppig i nylig innhold, eller hvilke forfattere som fortsatt har en vane med å gjøre samme feil.
+                </li>
+                <li>
+                  <strong>Sider</strong> viser varselantall per side, gruppert etter side. Dette lar deg finne sider med flest problemer og filtrere etter sideattributter som innholdstype og publiseringsstatus.
+                </li>
+                <li>
+                  <strong>Varsler</strong> viser problemer etter type.
+                </li>
+                <li>
+                  <strong>Avvisninger</strong> gjør det mulig å overvåke om forfattere avviser korrekt, og har «tilbakestill»-knapper for å gjenopprette avviste varsler.
+                </li>
+                <li>
+                  <strong>Eksporter</strong> inneholder versjoner av rapportene Sider, Varsler og Avvisninger som kan filtreres for å forberede CSV-nedlastinger. <em>Levert av undermodulen CSV Export</em>
+                </li>
+                <li>
+                  <strong>Oppdater</strong> inneholder vedlikeholdsverktøy for panelet for å fjerne varsler fra slettede sider, fjerne varsler fra parameteriserte pseudosider som /search?query=example, oppdatere lagrede sidetitler og URL-er, og kjøre en manuell kravling. <em>Levert av undermodulen CSA</em>
+                </li>
+              </ul>
+            </section>
+
+            <h2 id="positioning">Fiks skjulte eller utenfor-skjermen-tips</h2>
+
+            <p>Modulen gir felt for to av bibliotekets konfigurasjonsalternativer for å endre hvordan tips plasseres:</p>
+
+              <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
+                <label for="edit-element-hides-overflow" class="form-item__label">Elementer med skjult overflyt</label>
+                  <textarea data-drupal-selector="edit-element-hides-overflow" aria-describedby="edit-element-hides-overflow--description" id="edit-element-hides-overflow" name="element_hides_overflow" rows="1" cols="60" class="form-textarea resize-vertical form-element form-element--type-textarea form-element--api-textarea"></textarea>
+                <label for="edit-hidden-handlers" class="form-item__label">Tema-JS vil håndtere avsløring av skjulte verktøytips inne i disse beholderne</label>
+                  <textarea data-drupal-selector="edit-hidden-handlers" aria-describedby="edit-hidden-handlers--description" id="edit-hidden-handlers" name="hidden_handlers" rows="1" cols="60" class="form-textarea resize-vertical form-element form-element--type-textarea form-element--api-textarea"></textarea>
+              </div>
+            <p>Noen temaer har kolonner eller widgeter som skjuler horisontal eller vertikal overflyt. Biblioteket oppdager automatisk når en veksler vil falle utenfor den synlige delen av <strong>siden.</strong> Å fortelle biblioteket at visse beholdere skjuler overflyt betyr at det også vil forsøke å plassere tips for elementer i disse beholderne innenfor grensene deres.</p>
+            <p>Noen temaer har widgeter som veksler synligheten av innhold, som trekkspill, faner og lysbildefremvisninger. Tips inne i disse elementene vil også bli skjult. Å gi en liste over selektorer for disse widgetene betyr at Editoria11y vil pause kort når en bruker prøver å hoppe til disse tipsene ved hjelp av en neste- eller forrige-knapp. Drupal-temaer og -moduler kan deretter følge instruksjonene fra bibliotekets seksjon om <a href="/nb/install/#hidden-content">håndtering av tips på skjult innhold</a> for å avsløre det skjulte innholdet.</p>
+
+            <h2 id="runtime">Skriv din egen konfigurasjon</h2>
+            <p>I PHP: Drupal-modulen gir en <code>hook_editoria11y_alter_config</code> for å endre innholdet i <code>drupalSettings.editoria11y</code> i en modul eller et tema. For eksempel:</p>
+            <pre class="language-php"><code><!--<?php
+/**
+ * @file
+ * MY_MODULE module file.
+ */
+
+use Drupal\Core\Cache\CacheableMetadata;
+
+/**
+ * Implements hook_editoria11y_alter_config().
+ *
+ * Attaches Editoria11y library and config based on context.
+ */
+function MY_MODULE_editoria11y_alter_config(array &$attach, CacheableMetadata $cacheableMetadata): void {
+  $config = Drupal::config('editoria11y.settings');
+
+  // Module settings being changed need to bust the cache.
+  $cacheableMetadata->addCacheableDependency($config);
+
+  // Get and modify any of the values being passed to drupalSettings.editoria11y.
+  if (!empty($attach['allow_ok'])) {
+    $attach['allow_ok'] = 'okAll';
+  }
+}--></code></pre>
+            <p>Å endre <code>drupalSettings</code> hjelper bare hvis modul-JS-en allerede er satt opp til å sende den verdien til biblioteket. For å legge til ytterligere parametere må du endre JS-<code>options</code>-objektet direkte. Modulen ser etter én global JS-variabel kalt <code>editoria11yOptionsOverride</code>. Hvis denne er satt, vil den sende <code>options</code>-objektet til en <code>editoria11yOptions</code>-funksjon du har oppgitt i modulen eller temaet ditt. Du kan nå angi hvilken som helst av <a href="https://editorsally.ddev.site/en/install/#params">bibliotekets parametere</a>.</p>
+            <pre class="language-javascript"><code><!--var editoria11yOptionsOverride = true;
+var editoria11yOptions = function(options) {
+  // You now have access to the processed options object that will be passed to the library.
+
+  // E.g., to add a selector to the ignore list:
+  if (options['ignoreElements'] === false) {
+    // Provide the selector as the only value.
+    options['ignoreElements'] = `.example`;
+  } else {
+    // Append additional selectors with comma separator.
+    options['ignoreElements'] = `${options['ignoreElements']}, .example`
+  }
+
+  // Return your processed options.
+  return options;
+}
+--></code></pre>
+            <section id="custom-tests">
+            <h2>Skriv dine egne tester</h2>
+            <p>Først, i modulkonfigurasjonen, legg til 1 i alternativene for «Egendefinerte tester» slik at den vet at den skal se etter testene.</p>
+            <p>Opprett deretter et Drupal JS-bibliotek med testene dine i temaet eller modulen din, ved hjelp av <a href="/nb/install/#custom-tests">bibliotekveiledningen for å skrive egendefinerte tester</a>.</p>
+            <p>Her er et fungerende eksempel fra Princeton, om en egendefinert test for å varsle om Safe Links. Merk at den tilganger Editoria11y-klassen gjennom <code>Drupal.Ed11y.</code></p>
+            <pre class="language-javascript"><code><!--const psEd11yCustomTests = function() {
+
+  // 1.
+  // Get elements to test, via Drupal.Ed11y.getElements.
+  // The 'root' parameter tells it to respect config for check areas and ignores.
+  const safeLinks = Drupal.Ed11y.getElements('a[href*="safelinks.protection.outlook.com/?"]', 'root');
+
+  // Add the test name to the lang object.
+  Drupal.ed11yLang.lang.testNames.outlookSafeLink = 'URL is Safe Link encoded';
+
+  // 2.
+  // Create the tip content.
+  const decodeSafelink = function(url) {
+    const params = new URL(url).searchParams;
+    let decoded = params.get('url');
+    const p = document.createElement('p');
+    if (!!decoded) {
+      p.innerHTML = `<p><span class="badge">To fix</span>Update this link with the correct URL, which is probably:<br>
+    <em style='word-wrap: break-word;font-size: 90%;line-height: 1.2;display: block;'></em></p>`
+      p.querySelector('em').textContent = Drupal.Ed11y.sanitizeHTML(decoded);
+    }
+    return p;
+  };
+  safeLinks?.forEach((el) => {
+    const content = document.createElement('div');
+    content.innerHTML = `<div class="title">Please fix this Outlook "Safe Link"</div>
+            <div class="why">
+                <p>The URL for this link is an Outlook "Safe Link" that was copied from an email.
+                It includes the original recipient's email address,
+                and will break if Microsoft shuts down the service.</p>
+                <p>The pasted URL is:<br>
+                <em style='word-break: break-all;font-size: 90%;line-height: 1.2;
+                display: block;'></em></p>
+            </div>
+            `;
+    content.querySelector('em').textContent = Drupal.Ed11y.sanitizeHTML(el.href);
+    content.querySelector('.why').insertAdjacentElement('beforebegin', decodeSafelink(el.href));
+
+    // 3.
+    // Push the tip to the library results object.
+    Drupal.Ed11y.State.results.push({
+      element: el,
+      test: 'outlookSafeLink',
+      type: 'error',
+      content: content,
+      position: 'beforebegin',
+      inline: false,
+      dismiss: false,
+    });
+  });
+
+  // 4.
+  // Tell Editoria11y you are done adding custom results.
+  const allDone = new CustomEvent('ed11yResume');
+  document.dispatchEvent(allDone);
+};--></code></pre>
+
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="container col-lg-12 mx-auto pt-3 my-5 text-body-secondary border-top text-center text-md-start">
+      <div class="container">
+        <div class="row">
+          <div class="col col-3 col-md-2">
+            <a href="https://github.com/itmaybejj/editoria11y"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-git" viewBox="0 0 16 16">
+              <path d="M15.698 7.287 8.712.302a1.03 1.03 0 0 0-1.457 0l-1.45 1.45 1.84 1.84a1.223 1.223 0 0 1 1.55 1.56l1.773 1.774a1.224 1.224 0 0 1 1.267 2.025 1.226 1.226 0 0 1-2.002-1.334L8.58 5.963v4.353a1.226 1.226 0 1 1-1.008-.036V5.887a1.226 1.226 0 0 1-.666-1.608L5.093 2.465l-4.79 4.79a1.03 1.03 0 0 0 0 1.457l6.986 6.986a1.03 1.03 0 0 0 1.457 0l6.953-6.953a1.03 1.03 0 0 0 0-1.457"/>
+            </svg> <strong>Bibliotek</strong></a>
+          </div>
+          <div class="col col-3 col-md-2">
+            <a href="https://github.com/itmaybejj/editoria11y/discussions"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chat-right-heart-fill" viewBox="0 0 16 16">
+              <path d="M16 2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h9.586a1 1 0 0 1 .707.293l2.853 2.853a.5.5 0 0 0 .854-.353zM8 3.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132"/>
+            </svg> <strong>Forum</strong></a>
+          </div>
+          <div class="col col-3 col-md-2">
+            <a href="https://github.com/itmaybejj/editoria11y/issues"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-patch-plus-fill" viewBox="0 0 16 16">
+              <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01zM8.5 6v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 1 0"/>
+            </svg> <strong>Problemer</strong></a>
+          </div>
+          <div class="col col-3 col-md-2">
+            <a href="/nb/contacts"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-person-lines-fill" height="24" width="24" viewBox="0 0 16 18">
+              <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z"></path>
+            </svg> <strong>Kontakt</strong></a>
+          </div>
+          <div class="col col-12 col-md-4 text-center text-md-end">
+            &copy; Editoria11y 2026
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script
+      src="/assets/bootstrap/js/bootstrap.bundle.min.js"
+      class="astro-vvvwv3sm"
+    ></script>
+    <script src="/lang/i18n.js"></script>
+    <script src="/assets/theme.js"></script>
+    <script src="/assets/prism/prism.js"></script>
+  </body>
+</html>

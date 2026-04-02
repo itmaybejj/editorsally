@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(perl -CSD -i -pe ':*)",
+      "Bash(python3 -c \":*)",
+      "Bash(grep -v ':0$')",
+      "Bash(node scripts/scaffold-translation.js el)",
+      "Bash(node scripts/scaffold-translation.js fr)",
+      "Bash(git diff:*)",
+      "Bash(grep -v '^[+-]$')",
+      "Bash(grep -v '^[+-]\\\\s*$')"
+    ]
+  }
+}

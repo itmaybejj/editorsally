@@ -1,0 +1,442 @@
+<!doctype html>
+<html lang="pt-pt" data-bs-theme="light">
+  <head>
+<link rel="icon" type="image/png" href="/assets/favicons/favicon-512x512.png" sizes="512x512" />
+    <link rel="icon" type="image/png" href="/assets/favicons/favicon-192x192.png" sizes="192x192" />
+    <link rel="icon" type="image/png" href="/assets/favicons/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicons/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <meta charset="utf-8" />
+    <title>Drupal CSA Docs — Editoria11y</title>
+    <link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/assets/theme.css" rel="stylesheet" />
+    <link href="/assets/prism/prism.css" rel="stylesheet" />
+    <meta name="theme-color" content="#712cf9" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <header>
+    <nav class="navbar navbar-expand-md">
+      <div class="container col-sm-12 mx-auto">
+        <a href="/pt-pt/" class="d-flex align-items-center  navbar-brand">
+          <svg class="logo-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="-.75 -3.5 10.1699 19.1777"><path fill="currentColor" d="M3.7031,10.5527c-.3633-.6562-.6426-1.1387-.8379-1.4473l-.3105-.4863-.2344-.3574c-.5117-.7969-1.0449-1.4551-1.5996-1.9746.3164-.2617.6113-.3926.8848-.3926.3359,0,.6348.123.8965.3691s.5918.7148.9902,1.4062c.4531-1.4727,1.0293-2.8691,1.7285-4.1895.3867-.7188.7314-1.2021,1.0342-1.4502s.7041-.3721,1.2041-.3721c.2656,0,.5938.041.9844.123-1.0039.8086-1.8066,1.7695-2.4082,2.8828s-1.3789,3.0762-2.332,5.8887Z"/></svg> Editoria<span style="margin-left: -1px;">11</span>y
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Alternar navegação">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Editora11y</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Fechar"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 nav-pills">
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div id="lang-picker"></div>
+  </header>
+    <main class="container col-lg-12 mx-auto py-5">
+      <div class="row docs">
+        <div class="col-12 col-md-5 col-lg-4 mb-5">
+          <div id="on-this-page" class="list-group ms-2 ms-lg-5 position-sticky top-0 pt-3">
+          </div>
+        </div>
+        <div class="col-12 col-md-7 col-lg-8 pt-3">
+          <div data-bs-spy="scroll" data-bs-target="#on-this-page" data-bs-smooth-scroll="true">
+            <h1>Módulo Drupal</h1>
+            <section id="features">
+              <h2 class="pt-3">Funcionalidades</h2>
+
+              <figure class="figure my-4 rounded shadow border">
+                <img loading="lazy" src="/assets/images/3x-editing.png" class="figure-img img-fluid" height="1088" width="2237" alt="Editor Drupal com sugestões em linha"/>
+                <figcaption class="figure-caption p-3 pt-2 fs-6">Os problemas são detectados tanto no carregamento do frontend como à medida que se escreve no CKEditor e no Gutenberg.</figcaption>
+              </figure>
+
+              <figure class="figure my-4 rounded shadow border" style="max-width: 600px;">
+                <img loading="lazy" src="/assets/images/3x-generic-tip.png" class="figure-img img-fluid" height="798" width="1278" alt="Sugestão a indicar que uma ligação tem apenas o nome &quot;clique aqui&quot;."/>
+                <figcaption class="figure-caption p-3 pt-2 ps-5 fs-6">As dicas de ferramenta descrevem o problema e incluem botões para saltar para o editor de página ou de esquema, ignorar o alerta (para o utilizador activo) ou marcá-lo como OK (para todos os utilizadores). Consoante o contexto e as permissões, alguns alertas podem também mostrar um menu de "Alertas semelhantes", com opções para marcar múltiplos alertas na mesma página como OK, ou marcar o mesmo elemento em todas as páginas como OK.</figcaption>
+              </figure>
+
+              <figure class="figure my-4 rounded shadow mb-5 border">
+                <img loading="lazy" class="figure-img img-fluid" src="/assets/images/3x-dashboard.png" height="765" width="1600" alt="Painel de relatórios a mostrar problemas recentes e páginas com mais problemas." />
+                <figcaption class="figure-caption p-3 pt-2 fs-6">Um painel de relatórios para todo o site disponibiliza relatórios filtráveis e exportáveis de alertas e dispensas.</figcaption>
+              </figure>
+
+              <p>Inclui também:</p>
+              <ul>
+                <li>Configuração inicial que ignora automaticamente elementos do Drupal, CKEditor, Gutenberg, Finalidade de Ligação e Ligação Externa, reage a alterações ao editar em contentores modais e posiciona automaticamente a barra de ferramentas para evitar sobreposição com elementos do Klaro e da Pré-visualização na Mesma Página.</li>
+                <li>Configuração baseada em funções para definir que utilizadores verão o verificador, quais podem dispensar alertas e quais podem consultar relatórios de todo o site.</li>
+                <li>Um rastreador local (dentro do site) para actualizar o painel após alterações de temas significativas. <em>(apenas CSA)</em></li>
+                <li>Configuração com divisão autor/programador, com testes separados (~30/~80) e listas de problemas. <em>(apenas CSA)</em></li>
+              </ul>
+
+
+
+            </section>
+            <h2>Instalação e passos essenciais de configuração</h2>
+            <p>O <a href="https://www.drupal.org/project/editoria11y/">instalador integrado</a> em Drupal.org inclui vários módulos:</p>
+            <ul>
+              <li>
+                Editoria11y: o verificador de conteúdo principal e o painel de controlo.
+              </li>
+              <li>
+                Editoria11y CSA: testes de programador e ferramentas de manutenção do painel.
+              </li>
+              <li>
+                Editoria11y Export: ferramentas de relatórios em CSV.
+              </li>
+            </ul>
+            <p>Instale como qualquer outro módulo e, em seguida, efectue estes passos essenciais:</p>
+            <ol>
+              <li><strong>Verifique as permissões.</strong> Os autores de confiança devem ter "Marcar como OK," "Marcar como ignorado" e "Ver o painel."</li>
+              <li><strong>Verifique as páginas principais em busca de alertas repetitivos ou inúteis.</strong> Marque-os como OK na dica de ferramenta ou ajuste a configuração para ignorar elementos por selector.</li>
+              <li>Procure sugestões difíceis de visualizar — fora do ecrã, truncadas, atrás de outros elementos ou em elementos ocultos. Utilize as dicas em "Corrigir posicionamento de sugestões" abaixo para resolver.</li>
+              <li>Se o site já tiver conteúdo e tiver uma subscrição CSA, aceda ao separador "reverificação" do painel e <strong>rastreie o site</strong> para pré-carregar os relatórios. Este passo é opcional, mas as páginas mais antigas não aparecerão nos relatórios até serem rastreadas ou visitadas por um utilizador autenticado.</li>
+            </ol>
+            <p>Veja uma <a href="https://youtu.be/uYvNYPg38nU?si=dqADyWpTtOhniHTP&t=696">introdução em vídeo às opções de configuração</a> (v2.4).</p>
+
+            <h2 id="check-roots">Ocultar alertas inúteis</h2>
+            <p>
+              <strong>Boas configurações suprimem alertas inúteis, para que os autores de conteúdo possam concentrar-se nos problemas que devem corrigir</strong>.</p>
+            <p>Embora seja possível desactivar testes por completo, geralmente é preferível ocultar alertas em elementos ou páginas específicos.</p>
+            <hr>
+            <p>
+              Em cada execução de testes, o Editoria11y reúne um único conjunto de elementos a partir da definição "Verificar conteúdo nestes contentores" e filtra-o várias vezes. Eis o aspecto de uma execução de testes:
+            </p>
+            <ol>
+              <li>
+                Cancelar a verificação se a configuração impedir a verificação nesta página ou para este utilizador.
+              </li>
+              <li>
+                <strong>Recolher</strong> elementos nas regiões de página especificadas, por exemplo:<br><code>body > *:not('.ed11y-element')</code><br>
+                <em>Para utilizadores do Editoria11y CSA, estas são as regiões no separador <strong>Testes de programador</strong>.</em>
+              </li>
+              <li>
+                <strong>Remover</strong> elementos que correspondam aos selectores de ignorar, por exemplo:<br><code>.widgets, .utility-menu</code><br>
+                <em>Para utilizadores do Editoria11y CSA, estes são os selectores no separador <strong>Testes de programador</strong>.</em>
+              </li>
+              <li>
+                Executar testes e sincronizar resultados com o painel.
+              </li>
+              <li>
+                Se a configuração dividida estiver activa e o utilizador for um editor de conteúdo, filtrar os resultados de programador:
+                <ul>
+                  <li><strong>Remover</strong> resultados de testes definidos como "Apenas para programadores."</li>
+                  <li><strong>Remover</strong> resultados em elementos fora das regiões de <strong><em>conteúdo</em></strong> especificadas, por exemplo:<br><code>main, footer</code></li>
+                  <li><strong>Remover</strong> resultados em elementos que correspondam aos selectores de ignorar de <strong><em>conteúdo</em></strong>.</li>
+                </ul>
+                Note que não existe uma segunda fase de "recolha". As regiões de página do programador devem incluir as regiões de conteúdo.
+              </li>
+              <li>Abrir o painel e apresentar alertas se a configuração corresponder a uma definição de abertura automática.</li>
+            </ol>
+
+            <h3 id="dismiss">Dispensar alertas</h3>
+            <p>Os testes podem ser configurados na biblioteca como erros ou avisos ("verificações manuais"). Os avisos podem ser dispensados. Existem dois tipos de dispensa disponíveis no rodapé de cada dica de ferramenta:</p>
+            <div class="my-2" style="background: url(/assets/images/3x-generic-tip.png) 100% 98%; max-width: 600px; padding-top: 6%; background-size: 108%;"></div>
+            <ul>
+              <li>"Ignorar" fica guardado como preferência do utilizador: o alerta fica oculto para o utilizador actual, mas apenas para esse utilizador.</li>
+              <li>"Marcar como OK" oculta o alerta para todos os utilizadores.</li>
+            </ul>
+            <p>A capacidade de um utilizador dispensar um alerta é controlada ao nível da função nas permissões de utilizador do Drupal. <strong>A maioria dos autores deve poder dispensar alertas</strong>. Não faz sentido atribuir uma verificação manual a alguém que não pode marcar o item como verificado.</p>
+
+            <h3 id="roots">Ignorar elementos</h3>
+            <p>Estas duas definições de configuração são as mais importantes!</p>
+            <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
+              <label for="edit-content-root">Verificar conteúdo nestes contentores</label>
+              <div><textarea id="edit-content-root" name="content_root" rows="1" cols="30" disabled></textarea>
+              </div>
+              <div class="mt-3">
+                <label for="edit-ignore-elements">Ignorar estes elementos</label>
+                <div>
+                  <textarea id="edit-ignore-elements" disabled name="ignore_elements" rows="1" cols="30" class=""></textarea>
+                </div>
+              </div>
+            </div>
+            <p>
+              Defina o primeiro para incluir as partes da página que os autores de conteúdo podem editar. Por exemplo, se puderem editar a área de conteúdo <code>main</code>, <code>.sidebar</code> e <code>.footer-column-two</code>, defina esses selectores como a sua área de verificação de conteúdo.
+            </p>
+            <p>
+              Utilize o segundo para "excluir" subsecções. Por exemplo, se <code>main</code> contiver vários widgets e conteúdos incorporados que apenas os programadores podem modificar, liste-os: <code>.widget-1, .social-embed</code>;
+            </p>
+            <p>Se estiver a utilizar a configuração dividida, verá um par semelhante de definições no separador Testes de Programador:</p>
+            <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
+              <div>
+                <fieldset>
+                <legend>
+                  Área de verificação de programador
+                </legend>
+                <div class="fieldset__wrapper fieldset__wrapper--group">
+
+                  <div id="edit-dev-check-root">
+                    <div>
+                    <input aria-describedby="edit-dev-check-root--description" type="radio" id="edit-dev-check-root-automatic" name="dev_check_root" value="automatic" checked="checked">
+                    <label for="edit-dev-check-root-automatic" class="form-item__label option">Todos os elementos</label>
+                  </div>
+                    <div class="d-flex">
+                      <input aria-describedby="edit-dev-check-root--description" type="radio" id="edit-dev-check-root-match" name="dev_check_root" value="match" class="align-self-baseline mt-1 me-1">
+                      <label for="edit-dev-check-root-match" class="form-item__label option">Apenas os contentores listados no separador Definições de Conteúdo</label>
+                    </div>
+                    <div class="">
+                      <input aria-describedby="edit-dev-check-root--description" type="radio" id="edit-dev-check-root-specify" name="dev_check_root" value="specify" class="form-radio form-boolean form-boolean--type-radio">
+                      <label for="edit-dev-check-root-specify" class="">Os contentores específicos listados abaixo</label>
+                    </div>
+                  </div>
+
+                </div>
+              </fieldset>
+
+                <div class="">
+                  <label for="edit-always-ignore" class="mt-3">Ignorar para programadores e editores de conteúdo</label>
+                  <div class="form-textarea-wrapper">
+                    <textarea  id="edit-always-ignore" name="always_ignore" rows="1" cols="20" placeholder=""></textarea>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+            <p>O aspecto mais importante a saber sobre as áreas de verificação de programador é que <strong>não são independentes</strong> das áreas de verificação de conteúdo. Numa configuração dividida, as áreas de programador são verificadas e os resultados são depois <strong>filtrados</strong> para corresponder às áreas de conteúdo. Quaisquer áreas excluídas para programadores também serão excluídas para editores de conteúdo. Não exclua áreas de conteúdo editáveis!</p>
+
+            <p>Alguns testes permitem uma configuração mais precisa, para ocultar apenas determinados alertas nos elementos afectados. Procure-os em:</p>
+            <ul>
+              <li>Testes de conteúdo: Ligações a verificar</li>
+              <li>Testes de conteúdo: Conteúdos incorporados a verificar</li>
+              <li>Testes de conteúdo: Detectar conteúdo dinâmico e shadow content</li>
+              <li>Testes de programador: Contraste</li>
+            </ul>
+
+            <h3 id="pages">Ocultar para páginas ou utilizadores específicos</h3>
+            <p>
+              A forma mais simples de o fazer é passar classes CSS ou IDs a estas opções:
+            </p>
+            <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
+              <label for="edit-no-load" class="form-item__label">Não verificar em páginas com estes elementos</label>
+              <div class="form-textarea-wrapper">
+                <textarea data-drupal-selector="edit-no-load" aria-describedby="edit-no-load--description" id="edit-no-load" name="no_load" rows="1" cols="20" class="form-textarea resize-vertical form-element form-element--type-textarea form-element--api-textarea"></textarea>
+              </div>
+
+              <label for="edit-ignore-all-if-absent" class="form-item__label">Ocultar todos os alertas em páginas onde estes elementos não estão presentes</label>
+              <div class="form-textarea-wrapper">
+                <textarea data-drupal-selector="edit-ignore-all-if-absent" aria-describedby="edit-ignore-all-if-absent--description" id="edit-ignore-all-if-absent" name="ignore_all_if_absent" rows="1" cols="20" class="form-textarea resize-vertical form-element form-element--type-textarea form-element--api-textarea"></textarea>
+              </div>
+
+            </div>
+            <p>
+              A primeira opção impede a execução das verificações e a barra de ferramentas não será apresentada.
+            </p>
+            <p>
+              A segunda opção inicia o verificador minimizado e marca automaticamente (para o utilizador actual) todos os problemas como "Ignorado", mesmo que sejam erros. Isto permite que os testes sejam executados e actualizem o painel sem incomodar o utilizador.
+            </p>
+            <p>
+              Para utilizar estas opções no controlo dos utilizadores que vêem o verificador, poderá ter de ajustar o seu tema para que emita uma classe, por exemplo <code>.user-247</code>
+            </p>
+
+            <h2 id="dashboard">Gerir resultados de todo o site</h2>
+            <section id="refresh">
+              <h3 class="pt-3">Rastreamento e actualização de resultados</h3>
+              <p>O Editoria11y é uma <strong>ferramenta de monitorização em tempo real, não um rastreador</strong>. Os seus relatórios de todo o site actualizam-se quando os autores visitam páginas, pelo que o rastreamento regular não é geralmente necessário. O módulo CSA <em>inclui</em> um rastreador, mas este só deverá ser necessário nestas três situações:</p>
+              <ol>
+                <li>
+                  Ao instalar o Editoria11y pela primeira vez num site existente com muitas páginas. As páginas têm de ser visitadas antes de aparecerem no painel, pelo que um rastreamento inicial rápido poupa tempo.
+                </li>
+                <li>
+                  Actualizações importantes de temas ou módulos podem corrigir (ou provocar) problemas em muitas páginas que não aparecerão até serem visitadas ou rastreadas.
+                </li>
+                <li>
+                  Acções em massa na interface de administração, como eliminar páginas ou redireccionamentos, tendem a deixar resultados de páginas que já não existem ou foram movidas. Nestes casos, é útil utilizar as acções de manutenção do separador "Actualizar" para actualizar os URLs das páginas e detectar e remover páginas eliminadas.
+                </li>
+              </ol>
+              <p>Nenhum dado sai do seu site durante um rastreamento. O rastreador CSA não é uma ferramenta na nuvem; utiliza o seu browser para carregar e verificar as páginas do seu próprio site. A desvantagem desta abordagem é que <strong>os browsers suspendem os separadores em segundo plano</strong>. Terá de manter o computador ligado e activo durante um rastreamento. Planeie abrir uma nova janela para o rastreador e deixá-la como separador em primeiro plano dessa janela enquanto funciona. Pode continuar a trabalhar noutra janela. O rastreador actualizará a sua estimativa após cada lote de páginas.</p>
+            </section>
+            <section id="reports">
+              <h3>Consultar relatórios</h3>
+              <div class="my-4 border shadow" style="background: url(/assets/images/3x-dashboard.png) 86% 0%; padding-top: 28%; background-size: 106%;"></div>
+              <ul>
+                <li>
+                  <strong>Recentes</strong> permite explorar alertas individualmente. Isto permite, por exemplo, filtrar para encontrar todas as instâncias do mesmo tipo de alerta, ver quais os alertas que surgem com frequência em conteúdo recente ou quais os autores que ainda têm o hábito de cometer o mesmo erro.
+                </li>
+                <li>
+                  <strong>Páginas</strong> mostra a contagem de alertas por página, agrupada por página. Permite encontrar as páginas com mais problemas e filtrar por atributos como tipo de conteúdo e estado de publicação.
+                </li>
+                <li>
+                  <strong>Alertas</strong> mostra os problemas por tipo.
+                </li>
+                <li>
+                  <strong>Dispensas</strong> permite monitorizar se os autores estão a dispensar correctamente e tem botões de "repor" para restaurar alertas dispensados.
+                </li>
+                <li>
+                  <strong>Exportar</strong> contém versões dos relatórios de Páginas, Alertas e Dispensas que podem ser filtradas para preparar transferências em CSV. <em>Fornecido pelo submódulo de Exportação CSV</em>
+                </li>
+                <li>
+                  <strong>Actualizar</strong> contém ferramentas de manutenção do painel para remover alertas de páginas eliminadas, remover alertas de pseudo-páginas parametrizadas como /search?query=exemplo, actualizar títulos e URLs de páginas armazenados e executar um rastreamento manual. <em>Fornecido pelo submódulo CSA</em>
+                </li>
+              </ul>
+            </section>
+
+            <h2 id="positioning">Corrigir sugestões ocultas ou fora do ecrã</h2>
+
+            <p>O módulo disponibiliza campos para duas das opções de configuração da biblioteca, de modo a alterar o posicionamento das sugestões:</p>
+
+              <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
+                <label for="edit-element-hides-overflow" class="form-item__label">Elementos com overflow oculto</label>
+                  <textarea data-drupal-selector="edit-element-hides-overflow" aria-describedby="edit-element-hides-overflow--description" id="edit-element-hides-overflow" name="element_hides_overflow" rows="1" cols="60" class="form-textarea resize-vertical form-element form-element--type-textarea form-element--api-textarea"></textarea>
+                <label for="edit-hidden-handlers" class="form-item__label">O JS do tema tratará de revelar as dicas de ferramenta ocultas dentro destes contentores</label>
+                  <textarea data-drupal-selector="edit-hidden-handlers" aria-describedby="edit-hidden-handlers--description" id="edit-hidden-handlers" name="hidden_handlers" rows="1" cols="60" class="form-textarea resize-vertical form-element form-element--type-textarea form-element--api-textarea"></textarea>
+              </div>
+            <p>Alguns temas têm colunas ou widgets que ocultam o overflow horizontal ou vertical. A biblioteca detecta automaticamente quando um botão de alternância ficaria fora da parte visível da <strong>página.</strong> Ao informar a biblioteca de que determinados contentores ocultam o overflow, esta tentará também posicionar as sugestões para elementos nesses contentores dentro das suas margens.</p>
+            <p>Alguns temas têm widgets que alternam a visibilidade do conteúdo, tais como acordeões, separadores e apresentações de diapositivos. As sugestões dentro destes elementos também ficarão ocultas. Ao fornecer uma lista de selectores para estes widgets, o Editoria11y fará uma breve pausa quando um utilizador tentar saltar para essas sugestões utilizando um botão de avançar ou recuar. Os temas e módulos Drupal podem então seguir as instruções da secção da biblioteca sobre <a href="/pt-pt/install/#hidden-content">como lidar com sugestões em conteúdo oculto</a> para revelar o conteúdo oculto.</p>
+
+            <h2 id="runtime">Escrever a sua própria configuração</h2>
+            <p>Em PHP: o módulo Drupal disponibiliza um <code>hook_editoria11y_alter_config</code> para alterar o conteúdo de <code>drupalSettings.editoria11y</code> num módulo ou tema. Por exemplo:</p>
+            <pre class="language-php"><code><!--<?php
+/**
+ * @file
+ * MY_MODULE module file.
+ */
+
+use Drupal\Core\Cache\CacheableMetadata;
+
+/**
+ * Implements hook_editoria11y_alter_config().
+ *
+ * Attaches Editoria11y library and config based on context.
+ */
+function MY_MODULE_editoria11y_alter_config(array &$attach, CacheableMetadata $cacheableMetadata): void {
+  $config = Drupal::config('editoria11y.settings');
+
+  // Module settings being changed need to bust the cache.
+  $cacheableMetadata->addCacheableDependency($config);
+
+  // Get and modify any of the values being passed to drupalSettings.editoria11y.
+  if (!empty($attach['allow_ok'])) {
+    $attach['allow_ok'] = 'okAll';
+  }
+}--></code></pre>
+            <p>Modificar <code>drupalSettings</code> só é útil se o JS do módulo já estiver configurado para passar esse valor à biblioteca. Para adicionar parâmetros adicionais, é necessário modificar o objecto JS <code>options</code> directamente. O módulo verifica a existência de uma variável JS global chamada <code>editoria11yOptionsOverride</code>. Se estiver definida, passará o objecto <code>options</code> a uma função <code>editoria11yOptions</code> que tenha fornecido no seu módulo ou tema. Pode agora definir qualquer um dos <a href="https://editorsally.ddev.site/en/install/#params">parâmetros da biblioteca</a>.</p>
+            <pre class="language-javascript"><code><!--var editoria11yOptionsOverride = true;
+var editoria11yOptions = function(options) {
+  // You now have access to the processed options object that will be passed to the library.
+
+  // E.g., to add a selector to the ignore list:
+  if (options['ignoreElements'] === false) {
+    // Provide the selector as the only value.
+    options['ignoreElements'] = `.example`;
+  } else {
+    // Append additional selectors with comma separator.
+    options['ignoreElements'] = `${options['ignoreElements']}, .example`
+  }
+
+  // Return your processed options.
+  return options;
+}
+--></code></pre>
+            <section id="custom-tests">
+            <h2>Escrever os seus próprios testes</h2>
+            <p>Primeiro, na configuração do módulo, adicione 1 às opções de "Testes personalizados" para que este saiba que
+              deve aguardar pelos testes.</p>
+            <p>Em seguida, crie uma biblioteca JS do Drupal com os seus testes no seu tema ou módulo, utilizando o <a href="/pt-pt/install/#custom-tests">guia da biblioteca para escrever testes personalizados</a>.</p>
+            <p>Eis um exemplo funcional de Princeton, de um teste personalizado para alertar sobre Safe Links. Note que acede à classe Editoria11y através de <code>Drupal.Ed11y.</code></p>
+            <pre class="language-javascript"><code><!--const psEd11yCustomTests = function() {
+
+  // 1.
+  // Get elements to test, via Drupal.Ed11y.getElements.
+  // The 'root' parameter tells it to respect config for check areas and ignores.
+  const safeLinks = Drupal.Ed11y.getElements('a[href*="safelinks.protection.outlook.com/?"]', 'root');
+
+  // Add the test name to the lang object.
+  Drupal.ed11yLang.lang.testNames.outlookSafeLink = 'URL is Safe Link encoded';
+
+  // 2.
+  // Create the tip content.
+  const decodeSafelink = function(url) {
+    const params = new URL(url).searchParams;
+    let decoded = params.get('url');
+    const p = document.createElement('p');
+    if (!!decoded) {
+      p.innerHTML = `<p><span class="badge">To fix</span>Update this link with the correct URL, which is probably:<br>
+    <em style='word-wrap: break-word;font-size: 90%;line-height: 1.2;display: block;'></em></p>`
+      p.querySelector('em').textContent = Drupal.Ed11y.sanitizeHTML(decoded);
+    }
+    return p;
+  };
+  safeLinks?.forEach((el) => {
+    const content = document.createElement('div');
+    content.innerHTML = `<div class="title">Please fix this Outlook "Safe Link"</div>
+            <div class="why">
+                <p>The URL for this link is an Outlook "Safe Link" that was copied from an email.
+                It includes the original recipient's email address,
+                and will break if Microsoft shuts down the service.</p>
+                <p>The pasted URL is:<br>
+                <em style='word-break: break-all;font-size: 90%;line-height: 1.2;
+                display: block;'></em></p>
+            </div>
+            `;
+    content.querySelector('em').textContent = Drupal.Ed11y.sanitizeHTML(el.href);
+    content.querySelector('.why').insertAdjacentElement('beforebegin', decodeSafelink(el.href));
+
+    // 3.
+    // Push the tip to the library results object.
+    Drupal.Ed11y.State.results.push({
+      element: el,
+      test: 'outlookSafeLink',
+      type: 'error',
+      content: content,
+      position: 'beforebegin',
+      inline: false,
+      dismiss: false,
+    });
+  });
+
+  // 4.
+  // Tell Editoria11y you are done adding custom results.
+  const allDone = new CustomEvent('ed11yResume');
+  document.dispatchEvent(allDone);
+};--></code></pre>
+
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="container col-lg-12 mx-auto pt-3 my-5 text-body-secondary border-top text-center text-md-start">
+      <div class="container">
+        <div class="row">
+          <div class="col col-3 col-md-2">
+            <a href="https://github.com/itmaybejj/editoria11y"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-git" viewBox="0 0 16 16">
+              <path d="M15.698 7.287 8.712.302a1.03 1.03 0 0 0-1.457 0l-1.45 1.45 1.84 1.84a1.223 1.223 0 0 1 1.55 1.56l1.773 1.774a1.224 1.224 0 0 1 1.267 2.025 1.226 1.226 0 0 1-2.002-1.334L8.58 5.963v4.353a1.226 1.226 0 1 1-1.008-.036V5.887a1.226 1.226 0 0 1-.666-1.608L5.093 2.465l-4.79 4.79a1.03 1.03 0 0 0 0 1.457l6.986 6.986a1.03 1.03 0 0 0 1.457 0l6.953-6.953a1.03 1.03 0 0 0 0-1.457"/>
+            </svg> <strong>Biblioteca</strong></a>
+          </div>
+          <div class="col col-3 col-md-2">
+            <a href="https://github.com/itmaybejj/editoria11y/discussions"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chat-right-heart-fill" viewBox="0 0 16 16">
+              <path d="M16 2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h9.586a1 1 0 0 1 .707.293l2.853 2.853a.5.5 0 0 0 .854-.353zM8 3.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132"/>
+            </svg> <strong>Fórum</strong></a>
+          </div>
+          <div class="col col-3 col-md-2">
+            <a href="https://github.com/itmaybejj/editoria11y/issues"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-patch-plus-fill" viewBox="0 0 16 16">
+              <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01zM8.5 6v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 1 0"/>
+            </svg> <strong>Problemas</strong></a>
+          </div>
+          <div class="col col-3 col-md-2">
+            <a href="/pt-pt/contacts"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-person-lines-fill" height="24" width="24" viewBox="0 0 16 18">
+              <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z"></path>
+            </svg> <strong>Contacto</strong></a>
+          </div>
+          <div class="col col-12 col-md-4 text-center text-md-end">
+            &copy; Editoria11y 2026
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script
+      src="/assets/bootstrap/js/bootstrap.bundle.min.js"
+      class="astro-vvvwv3sm"
+    ></script>
+    <script src="/lang/i18n.js"></script>
+    <script src="/assets/theme.js"></script>
+    <script src="/assets/prism/prism.js"></script>
+  </body>
+</html>

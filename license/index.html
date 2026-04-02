@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="refresh" content="0;url=/en/license/">
+  <title>Redirecting…</title>
+  <link rel="canonical" href="/en/license/">
+</head>
+<body>
+  <p>Redirecting to <a href="/en/license/">English version</a>…</p>
+  <script src="/lang/i18n.js"></script>
+  <script>
+    const i18n = (typeof defined_i18n !== 'undefined') ? defined_i18n : null;
+    if (i18n) {
+      const match = (navigator.languages || []).find(l => i18n.supportedLanguages.includes(l));
+      if (match) window.location.replace(i18n.buildPath(match, 'license'));
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="refresh" content="0;url=/en/features/">
+  <title>Redirecting…</title>
+  <link rel="canonical" href="/en/features/">
+</head>
+<body>
+  <p>Redirecting to <a href="/en/features/">English version</a>…</p>
+  <script src="/lang/i18n.js"></script>
+  <script>
+    const i18n = (typeof defined_i18n !== 'undefined') ? defined_i18n : null;
+    if (i18n) {
+      const match = (navigator.languages || []).find(l => i18n.supportedLanguages.includes(l));
+      if (match) window.location.replace(i18n.buildPath(match, 'features'));
+    }
+  </script>
+</body>
+</html>

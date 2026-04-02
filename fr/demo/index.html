@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="fr" data-bs-theme="light">
+  <head>
+<link rel="icon" type="image/png" href="/assets/favicons/favicon-512x512.png" sizes="512x512" />
+    <link rel="icon" type="image/png" href="/assets/favicons/favicon-192x192.png" sizes="192x192" />
+    <link rel="icon" type="image/png" href="/assets/favicons/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicons/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <meta charset="utf-8" />
+    <title>Démo — Editoria11y</title>
+    <link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/assets/theme.css" rel="stylesheet" />
+    <meta name="theme-color" content="#712cf9" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-md">
+        <div class="container col-sm-12 mx-auto">
+          <a href="/fr/" class="d-flex align-items-center  navbar-brand">
+            <svg class="logo-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="-.75 -3.5 10.1699 19.1777"><path fill="currentColor" d="M3.7031,10.5527c-.3633-.6562-.6426-1.1387-.8379-1.4473l-.3105-.4863-.2344-.3574c-.5117-.7969-1.0449-1.4551-1.5996-1.9746.3164-.2617.6113-.3926.8848-.3926.3359,0,.6348.123.8965.3691s.5918.7148.9902,1.4062c.4531-1.4727,1.0293-2.8691,1.7285-4.1895.3867-.7188.7314-1.2021,1.0342-1.4502s.7041-.3721,1.2041-.3721c.2656,0,.5938.041.9844.123-1.0039.8086-1.8066,1.7695-2.4082,2.8828s-1.3789,3.0762-2.332,5.8887Z"/></svg> Editoria<span style="margin-left: -1px;">11</span>y
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Basculer la navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Editora11y</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Fermer"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 nav-pills">
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    <div id="lang-picker"></div>
+    </header>
+  <main class=”container col-lg-12 mx-auto py-5”>
+    <div class=”row docs”>
+      <div class=”col-12 col-md-5 col-lg-4 mb-5”>
+        <div id=”on-this-page” class=”list-group ms-2 ms-lg-5 position-sticky top-0 pt-3”>
+        </div>
+      </div>
+      <div class=”col-12 col-md-7 col-lg-8 pt-3” data-bs-spy=”scroll” data-bs-target=”#on-this-page” data-bs-smooth-scroll=”true” tabindex=”0”>
+
+
+
+        <h2 class=”pt-4” id=”demo”>Démo</h2>
+          <p class=”fs-5”>Regardez une <a href=”https://youtu.be/uYvNYPg38nU?si=6YANYrJpVzNAJYDl&t=260”>vidéo de présentation de l'historique et des fonctionnalités du vérificateur</a>,
+            ou essayez de modifier le contenu de démonstration ci-dessous, d'ouvrir et de fermer les alertes,
+            et d'utiliser la barre d'outils <span style=”text-wrap: nowrap;”>(<img src=”/assets/images/3x-toolbar” class=”inline-block” style=”width: 5rem; height: auto;” alt=”Capture d'écran de la barre d'outils Editoria11y, affichant 4 erreurs.” width=”97” height=”50” loading=”lazy”>)</span> pour afficher le plan des titres. Cette démo inclut les tests de base et la suite CSA.</p>
+          <p class=”fs-5 mb-5 pb-5”>Cette démo utilise un éditeur TinyMCE. Editoria11y est compatible avec la plupart des éditeurs de texte et propose des intégrations clés en main pour CKEditor et Gutenberg dans WordPress et Drupal.</p>
+            <div id=”ed11y-demo” class=”p-5” contenteditable=””>
+            <section id=”headings”>
+
+              <h3 class=”pt-1”>Titres</h3>
+
+              <p>Ce titre a sauté un niveau :</p>
+              <div class=”positive”><h6 id=”this-h6-should-have-been-an-h3”>Oups</h6></div>
+
+              <p>Ce titre ne contient aucun texte :</p>
+              <div class=”positive”><h4 class=”empty-example”> </h4>
+              </div>
+
+              <p>Cette courte citation pourrait être un titre :</p>
+              <div class=”positive”><blockquote>Je suis un faux titre</blockquote></div>
+
+              <p>Ce paragraphe entièrement en gras pourrait être un titre :</p>
+              <p class=”positive”><strong>Je suis un faux titre</strong></p>
+
+              <p>Ce titre est vraiment trop long :</p>
+              <div class=”positive”><h4>Les titres et sous-titres créent une table des matières navigable pour les technologies d'assistance. Les numéros indiquent des niveaux d'imbrication. Des titres très longs signifient probablement que l'auteur en dit trop dans le titre.</h4></div>
+
+            </section>
+
+
+            <section id=”text-alternatives”>
+              <h3 data-section=”text-alternatives”>Alternatives textuelles pour les images</h3>
+
+              <p>Ce titre est composé d'une image de texte sans attribut alt :</p>
+              <div class=”positive”>
+                <h4><img loading=”lazy” alt=”” src=”/assets/images/px20240813sm.jpg” ></h4>
+              </div>
+
+              <p>Image sans aucun attribut alt :</p>
+              <p class=”positive”><img loading=”lazy” src=”/assets/images/px20240813sm.jpg”></p>
+
+              <p>Image avec un attribut alt invalide, par ex. <code class=”language-plaintext highlighter-rouge”>alt=”'”</code></p>
+
+              <p class=”positive”><img loading=”lazy” alt=”'” src=”/assets/images/px20240813sm.jpg”></p>
+
+              <p id=”image-with-a-filename-as-an-alt”>Image avec un nom de fichier comme alt</p>
+
+              <p class=”positive”><img loading=”lazy” alt=”filename.jpg” src=”/assets/images/px20240813sm.jpg”></p>
+
+              <p id=”image-with-redundant-text-in-its-alt”>Image avec du texte redondant dans son alt, comme « image de : »</p>
+
+              <p class=”positive”><img loading=”lazy” alt=”Image of a dog.” src=”/assets/images/px20240813sm.jpg”></p>
+
+              <p id=”linked-image-with-redundant-text-in-its-alt”>Image liée avec du texte redondant dans son alt, comme « image de : »</p>
+
+              <p class=”positive”><a href=”./editable.htm”><img loading=”lazy” alt=”Image of a dog.” src=”/assets/images/px20240813sm.jpg”></a></p>
+
+              <p id=”image-with-placeholder-alt”>Image avec un alt provisoire :</p>
+              <p class=”positive”><img loading=”lazy” alt=”TBD” src=”/assets/images/px20240813sm.jpg”></p>
+
+              <p id=”linked-image-with-placeholder-alt”>Image <strong>liée</strong> avec un alt provisoire :</p>
+              <p class=”positive”><a href=”./editable.htm”><img loading=”lazy” alt=”TBD” src=”/assets/images/px20240813sm.jpg”></a></p>
+
+              <p id=”image-with-machine-alt”>Image avec un alt de code machine :</p>
+              <p class=”positive”><img loading=”lazy” alt=”$700VIDEOSABOUTTURTLESALL2SECONDSLONG” src=”/assets/images/px20240813sm.jpg”></p>
+
+              <p id=”linked-image-with-machine-alt”>Image liée avec un alt de code machine :</p>
+              <p class=”positive”><a href=”./editable.htm”><img loading=”lazy” alt=”$700VIDEOSABOUTTURTLESALL2SECONDSLONG” src=”/assets/images/px20240813sm.jpg”></a></p>
+
+              <p id=”image-with-very-long-alt-text”>Image avec un texte alt très long :</p>
+
+              <p class=”positive”><img loading=”lazy” alt=”Regardez ce petit chien. Ce petit chien est tellement heureux. Ce petit chien est allé se promener et la promenade l'a mené à un lac où il y avait toutes sortes d'odeurs fascinantes. Quelle journée incroyable pour ce petit chien.” src=”/assets/images/px20240813sm.jpg”></p>
+
+              <p id=”images-in-links-where-the-alt-text-may-be-describing-the-image-instead-of-the-link”>Images dans des liens où le texte alt décrit peut-être l'image au lieu du lien</p>
+
+              <p class=”positive”><a  href=”https://www.youtube.com/watch?v=DLzxrzFCyOs”>Ce lien contient du texte et une image.<img loading=”lazy” alt=”Une jolie boîte grise” src=”/assets/images/px20240813sm.jpg”></a></p>
+
+              <p id=”images-in-links-decorative”>Toute image liée (test désactivé par défaut)</p>
+              <p class=”positive”><a href=”https://www.youtube.com/watch?v=DLzxrzFCyOs”><img loading=”lazy” alt=”Bonjour” src=”/assets/images/px20240813sm.jpg”></a></p>
+
+              <p>Image dans une figure marquée comme décorative :</p>
+              <figure class=”positive”>
+                <img loading=”lazy” alt=”” src=”/assets/images/px20240813sm.jpg”>
+                <figcaption>La figcaption est présente.</figcaption>
+              </figure>
+
+              <p>Image dans une figure avec un alt identique à la figcaption :</p>
+              <figure class=”positive”>
+                <img loading=”lazy” alt=”La figcaption est identique à l'alt” src=”/assets/images/px20240813sm.jpg”>
+                <figcaption>La figcaption est identique à l'alt</figcaption>
+              </figure>
+              <p>Image dans un carrousel sans alt :</p>
+              <div class=”positive”>
+                <img loading=”lazy” alt=”” class=”carousel” src=”/assets/images/px20240813sm.jpg”>
+              </div>
+            </section>
+            <section id=”contrast”>
+              <h3 data-section=”contrast”>Contraste</h3>
+              <p>Combinaison de couleurs illisible :</p>
+              <div class=”positive”><p style=”background: #ccc; color: #ddd;”>Super lisible.</p></div>
+              <p>Couleur nécessitant une vérification manuelle :</p>
+              <div class=”positive”><p style=”background: linear-gradient(45deg,#ccc 25%,#0000 25% 75%,#ccc 75%,#ccc),linear-gradient(45deg,#ccc 25%,#0000 25% 75%,#ccc 75%,#ccc)”>Et incalculable.</p></div>
+              <div class=”positive”><label>Champ avec un contraste insuffisant
+                <input class=”form-text” type=”text” style=”color: #777;”></label></div>
+
+              <style>
+                #unsupported-placeholder::placeholder {
+                  color: color(rec2020 0.9 0.4 0.2);
+                }
+              </style>
+
+              <label for=”unsupported-placeholder”>La couleur du placeholder ne peut pas être calculée</label>
+              <div class=”positive” style=”background: transparent;”><input type=”text” id=”unsupported-placeholder” placeholder=”Rec2020 color space”></div>
+
+
+              <p>Graphique SVG avec un contraste insuffisant</p>
+              <div class=”positive”><svg style=”width: 16px; height: 16px;” xmlns=”http://www.w3.org/2000/svg” viewBox=”0 0 512 512”><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path fill=”#999” d=”M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376C296.3 401.1 253.9 416 208 416 93.1 416 0 322.9 0 208S93.1 0 208 0 416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z”/></svg></div>
+
+              <p>Graphique SVG dont le contraste nécessite une vérification manuelle</p>
+              <div class=”positive” style=”background: linear-gradient(45deg,#ccc 45%,#0000 45% 75%,#ccc 75%,#ccc),linear-gradient(145deg,#ccc 45%,#0000 45% 75%,#ccc 75%,#ccc)”><svg style=”width: 16px; height: 16px;” xmlns=”http://www.w3.org/2000/svg” viewBox=”0 0 512 512”><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path fill=”color(rec2020 0.9 0.4 0.2)” d=”M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376C296.3 401.1 253.9 416 208 416 93.1 416 0 322.9 0 208S93.1 0 208 0 416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z”/></svg></div>
+
+
+            </section>
+            <section id=”embed-media”>
+              <h3 data-section=”embed-media”>Contenus intégrés et médias</h3>
+
+              <p>Vidéo signalée comme nécessitant une vérification manuelle du sous-titrage :</p>
+              <div class=”positive” style=”width: 560px; aspect-ratio: 560 / 315; max-width: 100%; cursor: not-allowed;”>
+                <iframe width=”560” height=”315” inert=”” src=”https://www.youtube-nocookie.com/embed/QGsevnbItdU?si=W_b2i2o_n5v1ArvA” style=”width: 560px; aspect-ratio: 560 / 315; max-width: 100%; cursor: not-allowed;” title=”YouTube : vidéo Comment c'est fait. La lecture est désactivée.” sandbox=”allow-scripts allow-same-origin” allow=”accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share” referrerpolicy=”origin” allowfullscreen></iframe>
+                <div><small><em>Lecture désactivée pour éviter les cookies.</em></small></div>
+              </div>
+
+              <p>L'audio nécessite une transcription :</p>
+              <div class=”positive”>
+                <div style=”border: 1px solid #444; background: #ccc; width: 320px; height: 60px;”><audio style=”height: 60px;”></audio>
+                </div>
+              </div>
+
+              <p>Iframe sans titre nécessitant également une vérification manuelle :</p>
+              <div class=”positive”>
+                <iframe data-needs-src=””></iframe>
+              </div>
+
+              <p>Iframe non focalisable :</p>
+              <div class=”positive”>
+                <iframe title=”example” sandbox=”” tabindex=”-1” data-needs-src=””></iframe>
+              </div>
+
+              <p>Composants interactifs imbriqués</p>
+              <div class=”positive”>
+                <details><summary>Accordéon</summary>
+                  <details><summary>Accordéon</summary>Surprise !</details>
+                </details>
+              </div>
+            </section>
+            <section id=”meaningful-links”>
+              <h3 data-section=”meaningful-links”>Liens significatifs</h3>
+
+              <p id=”links-with-no-text-at-all”>Liens sans aucun texte</p>
+              <p class=”positive”><a href=”https://www.youtube.com/watch?v=DLzxrzFCyOs”
+                                     style=”display: inline-block; width: 3rem; border-bottom: 1px solid;”></a> Liens vides</p>
+
+              <p id=”links-titled-with-a-url”>Liens libellés uniquement avec une URL :</p>
+              <p class=”positive”><a  href=”https://www.youtube.com/watch?v=DLzxrzFCyOs”>https://www.youtube.com/watch?v=DLzxrzFCyOs</a></p>
+
+              <p id=”links-titled-with-a-symbol”>Liens libellés uniquement avec des symboles :</p>
+              <p class=”positive”><a href=”https://www.youtube.com/watch?v=DLzxrzFCyOs”>↣</a></p>
+
+              <p>Liens portant le même nom menant à des destinations différentes</p>
+              <p class=”positive”><a href=”https://www.youtube.com/watch?v=fjOeJssZX_Q”>Tortues</a> <a href=”https://www.youtube.com/watch?v=cWppAbqm9I8”>Tortues</a></p>
+
+              <p id=”links-titled-with-doi”>Liens libellés uniquement avec un numéro DOI :</p>
+              <p class=”positive”><a href=”https://doi.org/10.1145/3493612.3520468”>doi.org/10.1145/3493612.3520468</a></p>
+
+              <p id=”links-titled-with-click”>Liens avec des libellés non descriptifs :</p>
+              <p class=”positive”><a  href=”https://www.youtube.com/watch?v=DLzxrzFCyOs” title=”https://www.youtube.com/watch?v=DLzxrzFCyOs”>Cliquez ici</a></p>
+
+              <p id=”links-titled-with-empty”>Icônes liées sans alternatives textuelles :</p>
+              <p class=”positive”><a href=”https://www.youtube.com/watch?v=DLzxrzFCyOs”><svg style=”width: 16px; height: 16px;” xmlns=”http://www.w3.org/2000/svg” viewBox=”0 0 512 512”><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d=”M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376C296.3 401.1 253.9 416 208 416 93.1 416 0 322.9 0 208S93.1 0 208 0 416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z”/></svg></a></p>
+
+              <p id=”links-that-open-in-a-new-window-without-an-external-link-icon-or-text-warning”>Liens qui s'ouvrent dans une nouvelle fenêtre sans icône de lien externe ni avertissement textuel</p>
+
+              <p class=”positive”><a href=”https://www.youtube.com/watch?v=DLzxrzFCyOs” target=”_blank”>Alerte pour le test d'ouverture dans une nouvelle fenêtre.</a></p>
+
+              <p id=”links-to-PDF”>Liens vers des PDF</p>
+              <p class=”positive”><a href=”https://www.youtube.com/watch?v=dQw4w9WgXcQ#.pdf” class=””>Amusez-vous bien.</a></p>
+
+              <p id=”links-to-doc”>Liens vers d'autres documents</p>
+              <p class=”positive”><a href=”https://www.youtube.com/watch?v=dQw4w9WgXcQ#.doc” class=””>Un faux lien vers un document.</a></p>
+
+              <p id=”links-redundant”>Liens avec des attributs title redondants</p>
+              <p class=”positive”><a href=”https://www.youtube.com/watch?v=dQw4w9WgXcQ” title=”Survolez-moi”>Survolez-moi</a></p>
+
+              <p>Liens avec des attributs qui les retirent de l'index de tabulation :</p>
+              <p class=”positive”><a href=”./editable.htm” aria-hidden=”true”>Liens aria-hidden sans tabindex négatif.</a></p>
+
+              <p>Liens avec des attributs aria-labelledby pointant vers des éléments sans texte :</p>
+              <p class=”positive”><a href=”./editable.htm” id=”oops” aria-labelledby=”oops”></a></p>
+
+              <p>Liens avec des mots génériques dans leur aria label :</p>
+              <p class=”positive”><a href=”www.google.com/” aria-label=”has aria label”>en savoir plus</a></p>
+
+              <p>Image liée sans texte alt :</p>
+              <p class=”positive”><a href=”./editable.htm”><img loading=”lazy” alt=”” src=”/assets/images/px20240813sm.jpg” class=””></a></p>
+
+              <p>Image liée avec un texte alt imprononçable :</p>
+              <p class=”positive”><a href=”./editable.htm”><img loading=”lazy” alt=”'” src=”/assets/images/px20240813sm.jpg” class=””></a></p>
+
+              <p>Image liée sans attribut alt :</p>
+              <p class=”positive”><a href=”./editable.htm”><img loading=”lazy” src=”/assets/images/px20240813sm.jpg” class=””></a></p>
+
+              <p>Image liée sans attribut alt dans un lien avec du texte :</p>
+              <p class=”positive”><a href=”./editable.htm”>Rechercher <img loading=”lazy” src=”/assets/images/px20240813sm.jpg” class=””></a></p>
+
+              <p>Image liée avec uniquement un nom de fichier comme texte alt :</p>
+              <p class=”positive”><a href=”./editable.htm”><img loading=”lazy” alt=”http://jpg.gif” src=”/assets/images/px20240813sm.jpg”>
+              </a></p>
+
+              <p>Image liée avec un texte alt suspicieusement long :</p>
+              <p class=”positive”><a href=”./editable.htm”><img loading=”lazy” alt=”Regardez ce petit chien. Ce petit chien est tellement heureux. Ce petit chien est allé se promener et la promenade l'a mené à un lac où il y avait toutes sortes d'odeurs fascinantes. Quelle journée incroyable pour ce petit chien.” src=”/assets/images/px20240813sm.jpg”>
+              </a></p>
+
+              <p>Liens internes brisés</p>
+              <p class=”positive”>
+                <a href=”#oh-no”>Cet identifiant n'existe pas.</a>
+              </p>
+
+              <p>Liens vers un serveur de développement</p>
+              <p class=”positive”>
+                <a href=”https://tugboatqa.com”>Oups</a>
+              </p>
+
+              <p>Ancres dupliquées</p>
+              <p class=”positive”><a id=”dupe” href=”#dupe”>Ancre 1</a> <a id=”dupe” href=”#dupe”>Ancre 2</a></p>
+            </section>
+            <section>
+              <h3 id=”table-tests”>Tableaux</h3>
+
+              <p id=”tables-without-valid-headers”>Tableaux sans en-têtes valides</p>
+
+              <table class=”positive”><tbody><tr><td>Un tableau sans en-tête TH est invalide</td><td class=”positive”><h4 >Les titres de plan ne comptent pas</h4></td><td class=”negative”><p><strong>Désactiver le test de titre de contenu à l'intérieur des tableaux</strong></p></td></tr></tbody></table>
+
+              <table><thead>
+              <tr>
+                <th class=”positive”></th>
+                <th class=”negative”>En-têtes vides</th>
+              </tr>
+              </thead>
+                <tbody>
+                <tr class=”negative”>
+                  <th>J'ai trouvé</th>
+                  <td>700 vidéos de tortues</td>
+                </tr>
+                <tr class=”negative”>
+                  <th>Chacune</th>
+                  <td>2 secondes de long</td>
+                </tr>
+                </tbody>
+              </table>
+            </section>
+            <section id=”legibility”>
+              <h3 data-section=”legibility”>Lisibilité</h3>
+
+              <div class=”positive”><p>PLUSIEURS MOTS EN MAJUSCULES À LA SUITE DÉCLENCHERONT UN AVERTISSEMENT DE VÉRIFICATION MANUELLE.</p></div>
+
+              <p class=”positive”><u>Texte souligné</u></p>
+
+              <p class=”positive”><em>Un peu d'italique, c'est bien, mais de grands blocs de texte en emphase ne sont pas très lisibles. Un peu est acceptable bien sûr, mais il y a des limites, et un paragraphe entier, c'est beaucoup trop. Ceci, par exemple, est un paragraphe entier. C'est plutôt difficile à lire, n'est-ce pas ? Mais ce test ne se déclenche pas avant cette longueur, donc vous ne devriez pas voir de faux positifs dans votre contenu, sauf si vous écrivez régulièrement des paragraphes aussi longs.</em></p>
+
+              <p class=”positive” style=”text-align: justify;”>Texte justifié</p>
+
+              <p class=”positive”>Exposant ou indice excessif ; <sub>l'indice devrait être utilisé pour de petites références et notes de bas de page, pas pour des phrases ou des paragraphes entiers.</sub></p>
+
+              <p class=”positive”><span style=”font-size: 10px;”>Polices minuscules</span></p>
+
+              <div class=”positive”>
+                <p>* Fausses listes utilisant des caractères courants,</p><p>* des lettres, des chiffres et des émojis.</p>
+              </div>
+
+              <div class=”positive”><li>Balise UL manquante</li></div>
+            </section>
+
+            <section id=”form-elements”>
+              <h3 data-section=”form-elements”>Formulaires</h3>
+
+              <p>Bouton sans libellé</p>
+              <div class=”positive”>
+                <button class=”btn btn-primary p-3 pt-4”></button>
+              </div>
+
+              <p>Champs avec un libellé invisible, demandant s'il y a aussi un libellé visible.</p>
+              <div class=”positive”>
+                <input type=”text” title=”Email”>
+              </div>
+
+              <p>Champs avec uniquement un placeholder comme libellé, demandant s'il y a aussi un libellé visible.</p>
+              <div class=”positive”>
+                <input type=”text” placeholder=”Email”>
+              </div>
+
+              <div class=”positive”>
+                <p>Bouton avec un libellé accessible différent de son libellé visible.</p>
+                <button class=”btn btn-primary” aria-label=”bye”>Hi</button>
+              </div>
+
+              <div class=”positive”>
+                <p>Bouton avec un attribut aria-labelledby invalide.</p>
+                <button class=”btn btn-primary” aria-labelledby=”bye”>Hi</button>
+              </div>
+
+              <div class=”positive”>
+                <p>Bouton avec un libellé redondant.</p>
+                <button class=”btn btn-primary”>Appuyez sur ce bouton</button>
+              </div>
+
+              <div class=”positive”>
+                <p>Bouton de réinitialisation.</p>
+                <input class=”btn btn-danger” type=”reset”>
+              </div>
+
+              <p class=”positive”><a href=”./editable.htm” tabindex=”2”>Désordre dans l'index de tabulation</a></p>
+            </section>
+
+
+
+
+
+
+          </div>
+          <div class=”mt-5 pt-5 text-center”><a class=”btn btn-primary btn-lg” href=”/fr/about/”>À propos</a> <a class=”btn btn-primary btn-lg” href=”/fr/features/”>Fonctionnalités</a> <a class=”btn btn-dark btn-lg” aria-current=”page” href=”/fr/demo/”>Démo</a> <a class=”btn btn-primary btn-lg” href=”/fr/license/”>Tarifs et contributions</a></div>
+
+      </div>
+    </div>
+
+    </main>
+    <footer class="container col-lg-12 mx-auto pt-3 my-5 text-body-secondary border-top text-center text-md-start">
+      <div class="container">
+        <div class="row">
+          <div class="col col-3 col-md-2">
+            <a href="https://github.com/itmaybejj/editoria11y"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-git" viewBox="0 0 16 16">
+              <path d="M15.698 7.287 8.712.302a1.03 1.03 0 0 0-1.457 0l-1.45 1.45 1.84 1.84a1.223 1.223 0 0 1 1.55 1.56l1.773 1.774a1.224 1.224 0 0 1 1.267 2.025 1.226 1.226 0 0 1-2.002-1.334L8.58 5.963v4.353a1.226 1.226 0 1 1-1.008-.036V5.887a1.226 1.226 0 0 1-.666-1.608L5.093 2.465l-4.79 4.79a1.03 1.03 0 0 0 0 1.457l6.986 6.986a1.03 1.03 0 0 0 1.457 0l6.953-6.953a1.03 1.03 0 0 0 0-1.457"/>
+            </svg> <strong>Bibliothèque</strong></a>
+          </div>
+          <div class="col col-3 col-md-2">
+            <a href="https://github.com/itmaybejj/editoria11y/discussions"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chat-right-heart-fill" viewBox="0 0 16 16">
+              <path d="M16 2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h9.586a1 1 0 0 1 .707.293l2.853 2.853a.5.5 0 0 0 .854-.353zM8 3.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132"/>
+            </svg> <strong>Forum</strong></a>
+          </div>
+          <div class="col col-3 col-md-2">
+            <a href="https://github.com/itmaybejj/editoria11y/issues"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-patch-plus-fill" viewBox="0 0 16 16">
+              <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01zM8.5 6v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 1 0"/>
+            </svg> <strong>Problèmes</strong></a>
+          </div>
+          <div class="col col-3 col-md-2">
+            <a href="/fr/contacts"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-person-lines-fill" height="24" width="24" viewBox="0 0 16 18">
+              <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z"></path>
+            </svg> <strong>Contact</strong></a>
+          </div>
+          <div class="col col-12 col-md-4 text-center text-md-end">
+            &copy; Editoria11y 2026
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/lang/i18n.js"></script>
+    <script src="/assets/theme.js"></script>
+    <script
+      src="/assets/bootstrap/js/bootstrap.bundle.min.js"
+      class="astro-vvvwv3sm"
+    ></script>
+
+    <script src="../../assets/tinymce/tinymce.min.js"></script>
+    <script>
+      tinymce.init({
+        selector: '#ed11y-demo',
+        license_key: 'gpl',
+        plugins: 'image lists table',
+        toolbar: 'blocks bold italic underline strikethrough blockquote  image numlist indent outdent bullist table tabledelete',
+        inline: true,
+            toolbar_persist: true,
+      });
+    </script>
+    <link rel="stylesheet" media="all" href="/assets/ed11y/css/editoria11y.min.css">
+    <script src="/assets/demo.js" type="module"></script>
+  </body>
+</html>

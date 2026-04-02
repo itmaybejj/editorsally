@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="de" data-bs-theme="light">
+  <head>
+<link rel="icon" type="image/png" href="/assets/favicons/favicon-512x512.png" sizes="512x512" />
+    <link rel="icon" type="image/png" href="/assets/favicons/favicon-192x192.png" sizes="192x192" />
+    <link rel="icon" type="image/png" href="/assets/favicons/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicons/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <meta charset="utf-8" />
+    <title>Editoria11y</title>
+    <link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/assets/theme.css" rel="stylesheet" />
+    <meta name="theme-color" content="#712cf9" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <header>
+    <nav class="navbar navbar-expand-md">
+      <div class="container col-sm-12 mx-auto">
+        <a href="/de/" class="d-flex align-items-center  navbar-brand">
+          <svg class="logo-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="-.75 -3.5 10.1699 19.1777"><path fill="currentColor" d="M3.7031,10.5527c-.3633-.6562-.6426-1.1387-.8379-1.4473l-.3105-.4863-.2344-.3574c-.5117-.7969-1.0449-1.4551-1.5996-1.9746.3164-.2617.6113-.3926.8848-.3926.3359,0,.6348.123.8965.3691s.5918.7148.9902,1.4062c.4531-1.4727,1.0293-2.8691,1.7285-4.1895.3867-.7188.7314-1.2021,1.0342-1.4502s.7041-.3721,1.2041-.3721c.2656,0,.5938.041.9844.123-1.0039.8086-1.8066,1.7695-2.4082,2.8828s-1.3789,3.0762-2.332,5.8887Z"/></svg> Editoria<span style="margin-left: -1px;">11</span>y
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Navigation umschalten">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Editora11y</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Schließen"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 nav-pills">
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div id="lang-picker"></div>
+  </header>
+    <main class="container col-lg-12 mx-auto py-5">
+      <div class="row docs">
+        <div class="col-12 col-md-5 col-lg-4 mb-5">
+          <div id="on-this-page" class="list-group ms-2 ms-lg-5 position-sticky top-0 pt-3">
+          </div>
+        </div>
+        <div class="col-12 col-md-7 col-lg-8 pt-3" data-bs-spy="scroll" data-bs-target="#on-this-page" data-bs-smooth-scroll="true" tabindex="0">
+          <section id="features">
+            <h1 class="text-body-emphasis pt-2 pb-5">Funktionen</h1>
+            <p class="fs-6">Die Kerntests von Editoria11y erkennen mehr als 50 häufige Barrierefreiheitsprobleme bei Inhalten: Entscheidungen, die die Lesbarkeit beeinträchtigen, Fehler, die Screenreader weniger effektiv machen, und Probleme, die die SEO verschlechtern.</p>
+            <p class="fs-6">Add-ons bieten ~40 weitere Tests für Entwickler und Designer, benutzerdefinierte Tests und verschiedene seitenweite Qualitätssicherungswerkzeuge.</p>
+            <p class="fs-6">Die Inhaltsprüfungen konzentrieren sich auf Probleme, die <strong>nach</strong> der Übergabe der Website an Content-Autoren auftreten. Websites müssen vor dem Launch mit manuellen Prüfwerkzeugen, Tastaturen und Screenreadern getestet werden — aber selbst die barrierefreieste Website neigt dazu, sich mit der Zeit zu verschlechtern, wenn Bearbeitungen neue Probleme einbringen.</p>
+            <p class="fs-6">Was Editoria11y unter den Barrierefreiheitswerkzeugen auszeichnet, ist dass seine Tests live im Browser ausgeführt werden, während Autoren ihre Inhalte bearbeiten und in der Vorschau ansehen. <strong>Autoren reagieren eher auf unmittelbares, direktes Feedback</strong>, bemerken Warnungen und nehmen Korrekturen vor, als dass sie daran denken, ein Dashboard zu besuchen oder eine manuelle Prüfung durchzuführen.</p>
+          </section>
+          <section id="authoring">
+            <h2>Die Autorenerfahrung</h2>
+            <div class="clearfix">
+              <img src="/assets/images/3x-toolbar" class="image-fluid float-start me-3" alt="Screenshot der Editoria11y-Symbolleiste mit 4 Fehlern." width="97" height="50" loading="lazy">
+              <p>Autoren sehen die Editoria11y-Symbolleiste beim Bearbeiten von Inhalten. Wenn Probleme erkannt werden, wird sie gelb oder rot und zeigt eine Problemanzahl an. Ein Klick auf die Anzahl scrollt zum ersten Hinweis und öffnet seinen Tooltip.</p>
+            </div>
+            <div class="row">
+             <img loading="lazy" src="/assets/images/3x-generic-tip.png" class="img-fluid col-6 col-lg-8" height="798" width="1278" alt="Hinweis zeigt an, dass ein Link nur mit „Hier klicken" beschriftet ist.">
+              <p class="col-6 col-lg-4 align-content-center">Hinweise erscheinen inline mit einer einfachsprachigen Fehlerbeschreibung, Korrekturvorschlägen und einer Erklärung, warum das Problem wichtig ist.</p>
+            </div>
+            <div class="row">
+              <img loading="lazy" class="img-fluid col-6 col-lg-8" src="/assets/images/3x-tools.jpg" height="473" width="405" alt="Überschriftenstruktur-Visualisierer überlagert eine Seite">
+              <p class="col-6 col-lg-4 align-content-center">Die Symbolleiste enthält zusätzliche Werkzeuge für manuelle Prüfungen, darunter Visualisierer für Überschriftenstruktur und Alternativtexte sowie eine Lesbarkeitsauswertung.</p>
+            </div>
+          </section>
+          <section id="admins">
+            <h2>Steuerungsmöglichkeiten für Administratoren</h2>
+            <p>Jeder sichtbare Aspekt des Prüfers kann angepasst werden. Parameter und Ereignisse ermöglichen das Entfernen von Tests, das Umschreiben von Hinweisen, das Einfügen benutzerdefinierter Tests und das Festlegen benutzerdefinierter Themes.</p>
+            <p>Plugins für Drupal und WordPress fügen weitere Funktionen hinzu, wie z. B. synchronisierte Abweisungen, seitenweite Dashboards und CSV-Berichtsexporte.</p>
+            <figure class="figure my-4 rounded shadow mb-5 border">
+                <img loading="lazy" class="figure-img img-fluid" src="/assets/images/3x-dashboard.png" height="765" width="1600" alt="Berichtsdashboard mit aktuellen Problemen und Seiten mit den meisten Problemen.">
+                <figcaption class="figure-caption p-3 pt-2">Das Drupal-Dashboard mit filterbaren Listen zu Problemen, betroffenen Seiten und Abweisungen.</figcaption>
+              </figure>
+          </section>
+          <section id="tests">
+            <h2 data-section="tests">Tests</h2>
+            <p class="fs-6">Die Tests von Editoria11y zielen darauf ab, das Web-Erlebnis für alle Nutzer zu verbessern — gemessen an menschlichen Maßstäben, nicht nur an technischen Standards. Während wichtige Tests dazu beitragen sollen, die Web Content Accessibility Guidelines (<a href="https://www.w3.org/WAI/WCAG22/quickref/">WCAG 2.2 AA</a>) zu erfüllen, werden andere von der Arbeit der <a href="https://www.w3.org/TR/coga-usable/">Cognitive and Learning Disabilities Accessibility Task Force</a> sowie allgemeinen Best Practices für Benutzerfreundlichkeit und Design beeinflusst.</p>
+            <p class="fs-6 pb-3">Einzelne Tests können von Website-Administratoren deaktiviert werden.</p>
+            <div class="row listgrid">
+              <div class="col-12 col-xl-4">
+                <h3 class="fs-5 nomenu pt-0">Bild-Alternativtexte</h3>
+                <ul>
+                  <li>Bild ohne Alt-Attribut</li>
+                  <li>Alternativtext ist ein Dateiname</li>
+                  <li>Alternativtext ist ein Platzhalter („TBD")</li>
+                  <li>Alternativtext enthält unaussprechbare Symbole</li>
+                  <li>Alternativtext enthält redundante Wörter („Bild von&hellip;")</li>
+                  <li>Alternativtext ist zu lang</li>
+                  <li>Dekoratives Bild könnte einen Wert haben</li>
+                  <li>Karussellbild als dekorativ markiert</li>
+                  <li>Bild mit Bildunterschrift hat keinen Alternativtext</li>
+                  <li>Alternativtext wiederholt die Bildunterschrift</li>
+                </ul>
+                <h3 class="fs-5 nomenu pt-0">Verlinkte Bilder</h3>
+                <ul>
+                  <li>Verlinktes Bild hat keinen Alternativtext</li>
+                  <li>Alternativtext des verlinkten Bildes ist eine URL oder ein Dateiname</li>
+                  <li>Alternativtext des verlinkten Bildes ist ein Platzhalter</li>
+                  <li>Alternativtext des verlinkten Bildes enthält unaussprechbare Symbole</li>
+                  <li>Alternativtext beschreibt das Bild, nicht den Link</li>
+                  <li>Alternativtext enthält redundante Wörter</li>
+                  <li>Alternativtext ist zu lang</li>
+                  <li>Bild in einem Link mit Text hat kein Alt-Attribut</li>
+                </ul>
+                <h3 class="fs-5 nomenu pt-0">Eingebettete Medien</h3>
+                <ul>
+                  <li>Video benötigt Untertitel</li>
+                  <li>Audio benötigt ein Transkript</li>
+                  <li>Datenvisualisierung benötigt eine barrierefreie Alternative</li>
+                  <li>Frame ohne Titel</li>
+                  <li>Frame von der Tastaturnavigation ausgeschlossen</li>
+                  <li>Frame-Inhalt benötigt manuelle Barrierefreiheitsprüfung</li>
+                  <li>Verlinktes Dokument möglicherweise nicht screenreader-zugänglich</li>
+                  <li>PDF ohne barrierefreie Alternative</li>
+                  <li>Verschachtelte interaktive Layout-Komponenten</li>
+                </ul>
+              </div>
+              <div class="col-12 col-xl-4">
+                <h3 class="fs-5 nomenu pt-0">Aussagekräftige Links</h3>
+                <ul>
+                  <li>Leerer Link</li>
+                  <li>Linktext ist eine URL</li>
+                  <li>Linktext ist nur eine DOI-Nummer</li>
+                  <li>Linktext lautet „Hier klicken"</li>
+                  <li>Linktext besteht nur aus generischen Wörtern („mehr lesen")</li>
+                  <li>Verschiedene Links haben denselben Text</li>
+                  <li>Verlinktes Symbol oder Bild ohne Textalternative</li>
+                  <li>Link öffnet neuen Tab ohne Warnung</li>
+                  <li>Link verweist auf eine Datei ohne Warnung</li>
+                  <li>Linktext besteht nur aus Symbolen oder Emojis</li>
+                  <li>Aussagekräftiger Linktext vor sehenden Nutzern verborgen</li>
+                  <li>Redundanter Link-Tooltip</li>
+                  <li>Fehlerhafter Ankerlink auf der Seite</li>
+                  <li>Doppeltes ID-Attribut</li>
+                  <li>Link verweist möglicherweise auf eine Entwicklungsumgebung</li>
+                </ul>
+                <h3 class="fs-5 nomenu pt-0">Überschriften</h3>
+                <ul>
+                  <li>Seite hat keine Überschrift 1</li>
+                  <li>Erste Überschrift ist eine Unterüberschrift</li>
+                  <li>Überschrift überspringt eine Ebene</li>
+                  <li>Überschrift ist leer</li>
+                  <li>Als Überschrift verwendetes Bild benötigt Alternativtext</li>
+                  <li>Überschrift ist sehr lang</li>
+                  <li>Fetter Absatz könnte eine Überschrift sein</li>
+                  <li>Kurzes Blockzitat könnte eine Überschrift sein</li>
+                </ul>
+                <h3 class="fs-5 nomenu pt-0">Lesbarkeit des Textes</h3>
+                <ul>
+                  <li>Übermäßig viel Großbuchstabentext</li>
+                  <li>Großer Block aus fettem oder kursivem Text</li>
+                  <li>Text ist zu klein</li>
+                  <li>Nicht verlinkter Text ist unterstrichen</li>
+                  <li>Text ist im Blocksatz ausgerichtet</li>
+                  <li>Hoch- oder Tiefstellung als Formatierung missbraucht</li>
+                  <li>Fake-Liste mit Zeichen oder Symbolen</li>
+                  <li>Listenelement außerhalb einer Liste</li>
+                </ul>
+
+              </div>
+              <div class="col-12 col-xl-4">
+                <h3 class="fs-5 nomenu pt-0">Farbkontrast</h3>
+                <ul>
+                  <li>Text hat unzureichenden Kontrast</li>
+                  <li>Textkontrast erfordert manuelle Prüfung</li>
+                  <li>Symbol oder Grafik hat unzureichenden Kontrast</li>
+                  <li>Kontrast von Symbol oder Grafik erfordert manuelle Prüfung</li>
+                  <li>Eingabetext hat unzureichenden Kontrast</li>
+                  <li>Platzhaltertext hat unzureichenden Kontrast</li>
+                </ul>
+                <h3 class="fs-5 nomenu pt-0">Tabellen</h3>
+                <ul>
+                  <li>Tabelle ohne Kopfzeile oder -spalte</li>
+                  <li>Tabellenkopfzelle ist leer</li>
+                  <li>Inhaltsüberschrift innerhalb einer Tabelle verwendet</li>
+                </ul>
+                <h3 class="fs-5 nomenu pt-0">Formulare &amp; interaktive Elemente</h3>
+                <ul>
+                  <li>Schaltfläche hat kein zugängliches Label</li>
+                  <li>Schaltfläche hat ein ungültiges ARIA-Label</li>
+                  <li>Schaltflächenbezeichnung enthält das Wort „Schaltfläche"</li>
+                  <li>Sichtbares Label stimmt nicht mit zugänglichem Namen überein</li>
+                  <li>Eingabefeld hat kein zugeordnetes Label</li>
+                  <li>Eingabefeld verwendet nur ein unsichtbares Label</li>
+                  <li>Eingabefeld verwendet nur einen Platzhalter als Label</li>
+                  <li>Reset-Schaltfläche kann versehentlichen Datenverlust verursachen</li>
+                  <li>Element vor Screenreadern verborgen, aber noch per Tastatur erreichbar</li>
+                  <li>Positiver Tabindex stört Lese- und Tab-Reihenfolge</li>
+                </ul>
+                <h3 class="fs-5 nomenu pt-0">Seiten-Metadaten</h3>
+                <ul>
+                  <li>Seitentitel fehlt</li>
+                  <li>Seitensprache nicht angegeben</li>
+                  <li>Viewport verhindert Textskalierung</li>
+                  <li>Seite wird automatisch aktualisiert</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <section class="row mb-5 pb-5" id="csa">
+            <h2 class="pt-3" data-section="csa">CSA-Funktionen</h2>
+
+            <p class="fs-5">
+              Editoria11y fördert Barrierefreiheit auf einzigartige Weise. Seine Werkzeuge sind sehr effektiv dabei, nicht-technischen Autoren zu helfen, Inhalte zu erstellen, die von Webnutzern mit Behinderungen gleichermaßen genutzt werden können. Wir betrachten dies als ein öffentliches Gut, daher <strong>wird Editoria11y immer kostenlos nutzbar sein</strong>.
+            </p>
+            <p class="fs-5">
+              Editoria11y ist jedoch nicht kostenlos zu entwickeln oder zu unterstützen.
+            </p>
+            <p class="fs-5">
+              Das CSA schließt diese Lücke: Projektmitglieder finanzieren die Entwicklung der Editoria11y-Bibliothek, seiner CMS-Plugins und der CSA-Suite: eine schnell wachsende Sammlung von Open-Source-Qualitätssicherungswerkzeugen, die ähnliche Funktionen wie kommerzielle Produkte zu einem deutlich günstigeren Preis bieten.
+
+              Die CSA-Suite für Drupal ist derzeit kostenlos in der Beta und wird für WordPress im 3. Quartal 2026 verfügbar sein.
+            </p>
+            <figure class="figure my-4 shadow border rounded p-0 m-2 col-sm-12 col-xl-11">
+              <img alt="Seiten-Crawl wird durchgeführt" src="../../assets/images/3x-crawl.png" height="786" width="1986" class="img-fluid rounded-top figure-img"/>
+                  <figcaption class="figure-caption p-2 pt-2">CSA-Crawler aktualisiert ein Dashboard.</figcaption>
+                </figure>
+
+        </section>
+        <section id="csa-tools" class="pb-5 mt-5 row g-5">
+
+          <div class="mt-2">
+            <h3 class="pt-3" data-section="csa-tools">Tests &amp; Werkzeuge</h3>
+            <ul class="fs-5">
+              <li>
+                Entwickler-, Lesbarkeits- und Kontrasttests.
+              </li>
+              <li>
+                Rollenbasierte getrennte Konfiguration für Entwickler und Content-Ersteller.
+              </li>
+              <li>
+                Benutzerdefinierte Test-Builder.
+              </li>
+              <li>
+                Seitenweite Abweisungen per Klick
+              </li>
+              <li>
+                Dashboard-Verwaltungswerkzeuge und Crawler
+              </li>
+            </ul>
+            <img alt="Farbauswahl in Test-Tooltip" src="../../assets/images/3x-colors.png" height="1022" width="1288" class="img-fluid col-sm-12 col-xl-9 mt-0 p-0"/>
+          </div>
+
+        </section>
+        <section id="benefits" class="pb-5 mt-5 row g-5">
+
+
+        <div class="">
+          <h3 class="pt-0" data-section="benefits">Community-Vorteile</h3>
+            <ul class="fs-5">
+              <li>Prioritätssupport.</li>
+              <li>Gewichteter Einfluss auf die Projekt-Roadmap.</li>
+              <li>Automatischer Zugang zu neuen Funktionen auf der Roadmap.</li>
+              <li>Direkte Einrichtungshilfe (je nach Stufe).</li>
+              <li><a href="https://form.jotform.com/260627656020150">Öffentliche Unterstützernennungen</a> (je nach Stufe/auf Anfrage; Bedingungen gelten).</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="nomenu">Contribute-what-you-can-Lizenzierung</h3>
+            <p class="fs-5">Nach der Beta wird die CSA-Suite über ein Contribute-what-you-can-Modell verfügbar gemacht. Editoria11y Core — sowohl die Bibliothek als auch die Plugins — bleibt kostenlos.</p>
+            <p class=""><a class="btn btn-primary" href="/de/license/">Lizenzoptionen und Alternativen ansehen</a></p>
+
+          </div>
+
+          </section>
+
+
+
+
+
+        <h2 id="projects" data-section="false">CSA-geförderte Projekte</h2>
+        <section id="active-projects">
+          <h3 class="pt-4" data-section="active-projects">Aktiv</h3>
+          <div class="accord">
+            <details>
+              <summary>
+                Q2 2026: Editoria11y-CSA-Community starten
+              </summary>
+              <div>
+                <p>Verbleibende Arbeiten:</p>
+                <ul class="fs-6"><li>
+                  Eine Finanzorganisation zur Verarbeitung von Abonnements und Förderungen einrichten.
+                </li>
+                  <li>
+                    Ein Lizenzsystem aufsetzen.
+                  </li></ul>
+              </div>
+            </details>
+            <details>
+              <summary>
+                Q2 2026: Benutzerdefinierter Regel-Builder
+              </summary>
+              <div>
+                <ol class="fs-6">
+                  <li>Für Drupal fertiggestellt.</li>
+                  <li>Aufgabe: Builder auf WordPress portieren.</li>
+                </ol>
+              </div>
+            </details>
+            <details>
+              <summary>
+                Q3 2026: Bibliothek 3.x auf WordPress portieren
+              </summary>
+              <div>
+                <ol class="fs-6">
+                  <li>CSA-Untermodul mit Community-unterstützten Funktionen erstellen
+                    <ul>
+                      <li>Dashboard-Verwaltungswerkzeuge erstellen, um veraltete Ergebnisse zu entfernen und bestehende Inhalte neu zu crawlen.</li>
+                      <li>Erlauben, bestimmte Tests seitenübergreifend als OK zu markieren, nicht nur auf einer Seite.</li>
+                      <li>Getrennte Konfiguration mit separaten Einstellungen und Tests für Entwickler und Content-Editoren ermöglichen.</li>
+                    </ul>
+                  </li>
+                </ol>
+              </div>
+            </details>
+          </div>
+        </section>
+        <section id="finished">
+          <h3 data-section="finished" class="pt-5">Kürzlich abgeschlossen</h3>
+          <div class="accord">
+            <details>
+              <summary>
+                Q1 2026: Bibliothek 3.x Neuentwicklung
+              </summary>
+              <div>
+                <ul class="fs-6">
+                  <li>
+                    Zusammenführung der Editoria11y- und Sa11y-Regelwerke. Seit dem Fork hat Sa11y ~50 weitere Tests geschrieben und ESM-Tooling eingeführt, während Editoria11y Performance-Verbesserungen umgesetzt und Parameter für Echtzeit-Prüfung hinzugefügt hat. Sa11y 4.2.2 und Editoria11y 3.0.0 starten unsere gemeinsame Zukunft.
+                  </li>
+                  <li>
+                    Unterstützung für „getrennte Konfiguration" hinzugefügt, um separate Regelwerke für Entwickler und Content-Ersteller zu ermöglichen.
+                  </li>
+                  <li>Maschinenübersetzungen für Chinesisch, Dänisch, Niederländisch, Deutsch, Griechisch, Ungarisch, Italienisch, Japanisch, Norwegisches Bokmål, Polnisch, Portugiesisch (Brasilien), Portugiesisch (Portugal), Spanisch, Schwedisch und Ukrainisch als Vorlagen für menschliche Überarbeitung hinzugefügt.</li>
+                  <li><em class="fs-6 lh-1"><strong>Aktueller Status</strong>: Programmierarbeiten sind abgeschlossen; Release-Tag wird nach Aktualisierung der Dokumentation und Demos vergeben.</em></li>
+                </ul>
+              </div>
+            </details>
+            <details>
+              <summary>
+                Q1 2026: Drupal-Modul 3.x Neuentwicklung
+              </summary>
+              <div>
+                <ol class="fs-6">
+                  <li>Dashboard mit robusteren Berichts- und Filterwerkzeugen erweitert.</li>
+                  <li>Maschinenübersetzungen für Chinesisch, Dänisch, Niederländisch, Deutsch, Griechisch, Ungarisch, Italienisch, Japanisch, Norwegisches Bokmål, Polnisch, Portugiesisch (Brasilien), Portugiesisch (Portugal), Spanisch, Schwedisch und Ukrainisch als Vorlagen für menschliche Überarbeitung hinzugefügt.</li>
+                  <li>CSV-Exportfunktionen anpassbar gemacht</li>
+                  <li>CSA-Untermodul mit Community-unterstützten Funktionen erstellt
+                    <ul>
+                      <li>Dashboard-Verwaltungswerkzeuge erstellt, um veraltete Ergebnisse zu entfernen und bestehende Inhalte neu zu crawlen.</li>
+                      <li>Ermöglicht, bestimmte Tests seitenübergreifend als OK zu markieren, nicht nur auf einer Seite.</li>
+                      <li>Getrennte Konfiguration mit separaten Einstellungen und Tests für Entwickler und Content-Editoren ermöglicht.</li>
+                    </ul>
+                  </li>
+                </ol>
+              </div>
+            </details>
+          </div>
+        </section>
+        <section id="project-ideas">
+          <h3 data-section="project-ideas" class="pt-5">In Diskussion</h3>
+          <p>Diskutieren und abstimmen Sie über diese Ideen in den <a href="https://github.com/itmaybejj/editoria11y/discussions">Editoria11y-Bibliotheksforen</a>.</p>
+          <p>Ideen sind mit Schätzungen zu Schwierigkeit und Priorität basierend auf Community-Diskussionen versehen.</p>
+          <ul class="mt-1 p-5 pt-0">
+            <li>Multi-Site-Überwachungs-Dashboard</li>
+            <li>Erkennung defekter Links</li>
+            <li>PDF-Scanning</li>
+            <li>Tab für Tooltip-Code-Herkunft</li>
+            <li>Tooltip-Seitenberichtsexport</li>
+            <li>Markierte Wörter</li>
+            <li>CLI-Entwicklerwerkzeuge</li>
+            <li>Bookmarklets/Browser-Plugins</li>
+            <li>ACT-Regelvalidierung</li>
+            <li>Name/Rolle/Wert-Validierung erweitern</li>
+          </ul>
+        </section>
+        
+        <div class="mt-5 pt-5 text-center"><a class="btn btn-primary btn-lg" href="/de/">Über uns</a> <a class="btn btn-dark btn-lg" aria-current="page" href="/de/features/">Funktionen</a> <a class="btn btn-primary btn-lg" href="/de/demo/">Demo</a> <a class="btn btn-primary btn-lg" href="/de/license/">Preise &amp; Beiträge</a></div>
+        </div>
+        
+
+      </div>
+    </main>
+    <footer class="container col-lg-12 mx-auto pt-3 my-5 text-body-secondary border-top text-center text-md-start">
+      <div class="container">
+        <div class="row">
+          <div class="col col-3 col-md-2">
+            <a href="https://github.com/itmaybejj/editoria11y"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-git" viewBox="0 0 16 16">
+              <path d="M15.698 7.287 8.712.302a1.03 1.03 0 0 0-1.457 0l-1.45 1.45 1.84 1.84a1.223 1.223 0 0 1 1.55 1.56l1.773 1.774a1.224 1.224 0 0 1 1.267 2.025 1.226 1.226 0 0 1-2.002-1.334L8.58 5.963v4.353a1.226 1.226 0 1 1-1.008-.036V5.887a1.226 1.226 0 0 1-.666-1.608L5.093 2.465l-4.79 4.79a1.03 1.03 0 0 0 0 1.457l6.986 6.986a1.03 1.03 0 0 0 1.457 0l6.953-6.953a1.03 1.03 0 0 0 0-1.457"/>
+            </svg> <strong>Bibliothek</strong></a>
+          </div>
+          <div class="col col-3 col-md-2">
+            <a href="https://github.com/itmaybejj/editoria11y/discussions"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chat-right-heart-fill" viewBox="0 0 16 16">
+              <path d="M16 2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h9.586a1 1 0 0 1 .707.293l2.853 2.853a.5.5 0 0 0 .854-.353zM8 3.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132"/>
+            </svg> <strong>Forum</strong></a>
+          </div>
+          <div class="col col-3 col-md-2">
+            <a href="https://github.com/itmaybejj/editoria11y/issues"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-patch-plus-fill" viewBox="0 0 16 16">
+              <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01zM8.5 6v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 1 0"/>
+            </svg> <strong>Issues</strong></a>
+          </div>
+          <div class="col col-3 col-md-2">
+            <a href="/de/contacts"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-person-lines-fill" height="24" width="24" viewBox="0 0 16 18">
+              <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z"></path>
+            </svg> <strong>Kontakt</strong></a>
+          </div>
+          <div class="col col-12 col-md-4 text-center text-md-end">
+            &copy; Editoria11y 2026
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script
+      src="/assets/bootstrap/js/bootstrap.bundle.min.js"
+      class="astro-vvvwv3sm"
+    ></script>
+    <script src="/lang/i18n.js"></script>
+    <script src="/assets/theme.js"></script>
+  </body>
+</html>

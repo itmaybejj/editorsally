@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="fr" data-bs-theme="light">
+  <head>
+<link rel="icon" type="image/png" href="/assets/favicons/favicon-512x512.png" sizes="512x512" />
+    <link rel="icon" type="image/png" href="/assets/favicons/favicon-192x192.png" sizes="192x192" />
+    <link rel="icon" type="image/png" href="/assets/favicons/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicons/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <meta charset="utf-8" />
+    <title>Installation — Editoria11y</title>
+    <link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/assets/prism/prism.css" rel="stylesheet" />
+    <link href="/assets/theme.css" rel="stylesheet" />
+    <meta name="theme-color" content="#712cf9" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <header>
+    <nav class="navbar navbar-expand-md">
+      <div class="container col-sm-12 mx-auto">
+        <a href="/fr/" class="d-flex align-items-center  navbar-brand">
+          <svg class="logo-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="-.75 -3.5 10.1699 19.1777"><path fill="currentColor" d="M3.7031,10.5527c-.3633-.6562-.6426-1.1387-.8379-1.4473l-.3105-.4863-.2344-.3574c-.5117-.7969-1.0449-1.4551-1.5996-1.9746.3164-.2617.6113-.3926.8848-.3926.3359,0,.6348.123.8965.3691s.5918.7148.9902,1.4062c.4531-1.4727,1.0293-2.8691,1.7285-4.1895.3867-.7188.7314-1.2021,1.0342-1.4502s.7041-.3721,1.2041-.3721c.2656,0,.5938.041.9844.123-1.0039.8086-1.8066,1.7695-2.4082,2.8828s-1.3789,3.0762-2.332,5.8887Z"/></svg> Editoria<span style="margin-left: -1px;">11</span>y
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Basculer la navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Editora11y</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Fermer"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 nav-pills">
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div id="lang-picker"></div>
+  </header>
+    <main class="container col-lg-12 mx-auto py-5">
+        <div class="row docs">
+            <div class="col-12 col-md-5 col-lg-4 mb-5">
+              <div id="on-this-page" class="list-group ms-2 ms-lg-5 position-sticky top-0 pt-3">
+              </div>
+            </div>
+            <div class="col-12 col-md-7 col-lg-8 pt-3" data-bs-spy="scroll" data-bs-target="#on-this-page" data-bs-smooth-scroll="true">
+                <h1>Installation et configuration</h1>
+
+                <section id=”modules”>
+                    <h2 class=”pt-3 pb-2”>Versions preconfigur&eacute;es</h2>
+                    <ul class=”list-unstyled ps-0”>
+                        <li><a href=”https://www.drupal.org/project/editoria11y” class=”arrow”><strong>Installateur Drupal</strong></a></li>
+                        <li><a href=”https://wordpress.org/plugins/editoria11y-accessibility-checker/” class=”arrow”><strong>Installateur WordPress</strong></a></li>
+                        <li><a href=”https://codeberg.org/sebastiangreger/kirby-a11yprompter” class=”arrow”><strong>Installateur Kirby</strong></a> <em>(contrib)</em></li>
+                        <li><a href=”https://plugins.craftcms.com/editoria11y” class=”arrow”><strong>Installateur CraftCMS</strong></a> <em>(contrib)</em></li>
+                    </ul>
+                </section>
+                <section id=”diy”>
+                    <h2>
+                        Installation personnalis&eacute;e
+                    </h2>
+                    <p>Pour cr&eacute;er votre propre impl&eacute;mentation, <a href=”https://github.com/itmaybejj/editoria11y” data-type=”URL” data-id=”https://github.com/itmaybejj/editoria11y” class=”liinternal”>t&eacute;l&eacute;chargez une copie locale</a> (ou r&eacute;f&eacute;rencez une <a href=”https://cdn.jsdelivr.net/gh/itmaybejj/editoria11y@2/dist/editoria11y.min.js” class=”liinternal”>version CDN</a>) d'un pack de langue, du fichier JS minifi&eacute; et du fichier CSS minifi&eacute;, puis cr&eacute;ez une nouvelle instance “Ed11y”.</p>
+                    <p>Pour les <strong>imports de modules ESM/JS</strong> : </p>
+                    <pre class="language-markup"><code><!--// Load CSS
+<link href="/dist/css/editoria11y.min.css?v=3.0" rel="stylesheet">
+// Load JS and language pack
+<script type="module">
+  import Ed11y from "/dist/js/ed11y.esm.min.js?v=3.0";
+  import ed11yLang from "/dist/js/lang/en.js";
+  // Instantiate with language and CSS
+  const ed11y = new Ed11y.Ed11y({
+    lang: 'en',
+    cssUrls: ["/dist/css/editoria11y.min.css"]
+  });
+</script>
+--></code></pre>
+                    <p>Utilisez les fichiers JavaScript .umd pour les navigateurs et syst&egrave;mes anciens :</p>
+                    <pre class="language-markup"><code><!--
+// Call CSS, JS and a Language Pack
+<link href="/dist/editoria11y.min.css" rel="stylesheet">
+<script src="/dist/js/ed11y.umd.js"></script>;
+<script src="/dist/js/lang/en.umd.js"></script>
+// Create a new Ed11y instance
+<script>
+  const ed11y = new Ed11y.Ed11y({
+    lang: 'en',
+    cssUrls: ["/dist/css/editoria11y.min.css"]
+  });
+</script>
+                --></code></pre>
+                </section>
+
+                <section id="params">
+                    <h2>Param&egrave;tres</h2>
+                    <p>Une impl&eacute;mentation compl&egrave;te ne sera appel&eacute;e que pour les &eacute;diteurs connect&eacute;s (vous ne voulez pas que vos visiteurs voient votre v&eacute;rificateur !), et peut remplacer n’importe lequel des <a href="https://github.com/itmaybejj/editoria11y/blob/3.0.x/src/js/utils/ed11y-default-options.js" class="liinternal"><strong>param&egrave;tres par d&eacute;faut</strong></a>.</p>
+                    <p>Notez que des valeurs par d&eacute;faut sont fournies pour tous les param&egrave;tres ; n’incluez que ceux que vous souhaitez remplacer.</p>
+                    <p>Une impl&eacute;mentation tr&egrave;s personnalis&eacute;e pourrait ressembler &agrave; ceci :</p>
+                    <pre class="language-javascript"><code><!--const ed11y = new Ed11y.Ed11y({
+  // Define content regions
+  checkRoot: 'main, .footer-content-zone',
+  // Add custom CSS files
+  cssUrls: [
+    '/css/editoria11y.min.css',
+    '/css/custom.css'
+  ],
+  // Define Web components to include in checks
+  shadowComponents: 'accordion, lightbox',
+  // We want the box to open automatically for errors:
+  alertMode: 'assertive',
+  // Our external link icon has visually hidden text
+  // to delete before checking if the link has text:
+  linkIgnoreStrings: ['(opens in new window)'],
+  // Content editors cannot edit these elements:
+  ignoreElements: 'nav *, #social-block',
+  // Prevent this user from hiding alerts.
+  allowHide: false,
+  allowOK: true,
+  // Don't scan while the editor toolbar is open:
+  preventCheckingIfPresent: ".editor-toolbar",
+  // Turn off warnings that an element might be visually hidden:
+  checkVisible: false,
+  // Dispatch a JS event before highlighting this,
+  // so our JS can modify it first:
+  hiddenHandlers: ".accordion-panel",
+  // Dispatch a JS event when the library is ready
+  // for custom tests, then wait for 3 ed11yResume
+  // events from our 3 tests to continue.
+  customTests: 3,
+  checks: {
+    // Turn off the HEADING_FIRST test
+    HEADING_FIRST: false,
+    // Allow dismissing the HEADING_SKIPPED_LEVEL test
+    HEADING_SKIPPED_LEVEL: {
+       type: 'warning',
+    }
+  }
+
+}); --></code></pre>
+                    <p>Les int&eacute;grations cl&eacute;s en main d&eacute;finissent souvent ces variables &agrave; la vol&eacute;e &ndash; par exemple, en chargeant les pages en mode “assertive” lorsqu'elles ont &eacute;t&eacute; r&eacute;cemment modifi&eacute;es, puis en repassant en mode “polite” apr&egrave;s quelques minutes.</p>
+                </section>
+
+                <section id="theme">
+                    <h2>Personnalisation du th&egrave;me</h2>
+
+                    <p>Plusieurs param&egrave;tres permettent de s&eacute;lectionner un th&egrave;me, de remplacer les couleurs et d'injecter du CSS.</p>
+
+                    <p>N'incluez que les param&egrave;tres que vous devez remplacer pour faciliter les mises &agrave; jour futures.</p>
+                    <pre class="language-javascript"><code><!--// Add custom CSS file
+cssUrls: ['/css/editoria11y.min.css', '/css/custom.css'],
+theme : 'darkTheme', // Select base theme
+darkTheme: {         // Override base colors
+    bg: '#0a2051',
+    bgHighlight: '#7b1919',
+    text: '#f4f7ff',
+    primary: '#4930a0',
+    primaryText: '#f4f7ff',
+    secondary: '#20160c',
+    warning: '#fad859',
+    alert: '#b80519',
+    button: '#dde8ff',
+    focusRing: 'cyan',
+    activeTab: '#0a2051',
+    tipHeader: '#4930a0',
+},
+// Override fonts
+baseFontSize: 14, // px
+baseFontFamily: '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif', --></code></pre>
+                </section>
+
+                <section id=”js-events”>
+                    <h2 class=”wp-block-heading has-text-align-left has-secondary-background-color has-background has-large-font-size”>&Eacute;v&eacute;nements JavaScript utiles</h2>
+
+                    <p>Les d&eacute;veloppeurs de th&egrave;mes peuvent intercepter ces &eacute;v&eacute;nements pour r&eacute;agir et modifier la page selon les besoins.</p>
+
+                    <p>Dans l'ordre typique d'apparition&hellip;</p>
+
+                    <ul class=”wp-block-list”>
+                        <li><strong><code>ed11yRunCustomTests</code></strong> : d&eacute;clench&eacute; lorsque l'objet Results est pr&ecirc;t &agrave; recevoir des r&eacute;sultats personnalis&eacute;s. Notez que le param&egrave;tre customTests doit &ecirc;tre d&eacute;fini sur le nombre de fonctions de tests personnalis&eacute;s que vous allez ex&eacute;cuter (&hellip;probablement un seul&hellip;) pour que cet &eacute;v&eacute;nement soit d&eacute;clench&eacute;. D&eacute;tails dans la section suivante.</li>
+
+                        <li><strong><code>ed11yResults</code></strong> : d&eacute;clench&eacute; lorsque toutes les v&eacute;rifications sont termin&eacute;es. Les int&eacute;grations API peuvent alors r&eacute;cup&eacute;rer les donn&eacute;es de l'objet Ed11y.results.</li>
+
+                        <li><strong><code>ed11yPanelOpened</code></strong> : d&eacute;clench&eacute; si le panneau s'ouvre, automatiquement ou manuellement.</li>
+
+                        <li><strong><code>ed11yShowHidden</code></strong> : fournit un num&eacute;ro <code>data-ed11y-result</code> et un bool&eacute;en <code>viaJump</code>. D&eacute;clench&eacute; uniquement si le param&egrave;tre “ed11yShowHidden” est d&eacute;fini <em><strong>et</strong></em> qu'un parent de l'&eacute;l&eacute;ment correspond &agrave; un s&eacute;lecteur. Utilis&eacute; pour r&eacute;v&eacute;ler les alertes dans des conteneurs non encore ouverts, par exemple les accord&eacute;ons, onglets et carrousels. Exemples d'utilisation dans la section suivante.</li>
+
+                        <li><strong><code>ed11yPop</code></strong> : fournit l'identifiant <code>data-ed11y-result</code>, ainsi que des r&eacute;f&eacute;rences aux objets <code>result</code> et <code>tip</code>. D&eacute;clench&eacute; lorsqu'une infobulle appara&icirc;t, ce qui vous permet de modifier les infobulles en temps r&eacute;el.</li>
+
+                        <li><strong><code>ed11yShut</code></strong> : fournit l'identifiant <code>data-ed11y-result</code>. D&eacute;clench&eacute; lorsqu'une infobulle se ferme.</li>
+
+                        <li><strong><code>ed11yDismissalUpdate</code></strong> : fournit des informations &eacute;tendues lorsqu'un utilisateur masque ou r&eacute;tablit une alerte. Utilis&eacute; pour les int&eacute;grations API. L'objet &eacute;v&eacute;nement contient :
+                            <ul>
+                                <li><code>dismissPage</code></li>
+
+                                <li><code>dismissTest</code></li>
+
+                                <li><code>dismissKey</code></li>
+
+                                <li><code>dismissAction</code></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <p>Des exemples sont disponibles dans les sections suivantes.</p>
+                </section>
+
+                <section id=”modify-tips”>
+                    <h2 class=”wp-block-heading has-secondary-background-color has-background has-large-font-size”>Modifier les infobulles</h2>
+
+                    <p>Si vous souhaitez simplement modifier le texte d'une infobulle, les &eacute;l&eacute;ments de l'objet global ed11yLang.en (avant l'appel de la biblioth&egrave;que) ou Ed11y.M (apr&egrave;s l'appel de la biblioth&egrave;que) peuvent &ecirc;tre directement remplac&eacute;s. Par exemple, dans le module Drupal o&ugrave; nous avons cr&eacute;&eacute; un alias du pack de langue vers Drupal.ed11yLang :</p>
+
+                    <p><code>Drupal.ed11yLang.lang.testNames.title = “Please write shorter headings.”</code></p>
+
+                    <p>Cela est vrai pour toutes les <a href=”https://github.com/itmaybejj/editoria11y/blob/3.0.x/src/lang/baseAll.js” data-type=”link” data-id=”https://github.com/itmaybejj/editoria11y/blob/2.3.x/js/ed11y-localization.js” class=”liinternal”>cl&eacute;s par d&eacute;faut du fichier de localisation</a> ou la traduction active sp&eacute;cifique &agrave; la langue.</p>
+
+                    <p>Le module Drupal ajoute &eacute;galement des liens d'&eacute;dition personnalis&eacute;s aux infobulles, &agrave; l'aide du param&egrave;tre <code>editLinks</code>. Notez “Page editor” et “Layout editor” :</p>
+
+                    <figure class=”wp-block-image size-full”><img loading=”lazy” data-recalc-dims=”1” fetchpriority=”high” decoding=”async” width=”580” height=”300” src=”https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?resize=580%2C300&amp;ssl=1” alt=”Infobulle avec les liens &laquo; Page editor &raquo; et &laquo; Layout editor &raquo; ins&eacute;r&eacute;s.” class=”wp-image-523” srcset=”https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?w=1290&amp;ssl=1 1290w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?resize=600%2C311&amp;ssl=1 600w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?resize=768%2C398&amp;ssl=1 768w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?resize=1200%2C621&amp;ssl=1 1200w” sizes=”(max-width: 580px) 100vw, 580px”></figure>
+
+                    <p>Une version simplifi&eacute;e du code qui d&eacute;finit ce param&egrave;tre :</p>
+                    <pre class="language-javascript"><code><!--const editLinks = document.createElement('div');
+const editLink = document.createElement('a');
+      editLink.href="/node/1/edit";
+      editLink.textContent = "Edit page";
+editLinks.appendChild(editLink);
+const ed11y = new Ed11y({
+               editLinks: editLinks,
+              }); --></code></pre>
+                    <p>Le module Drupal utilise ensuite l'&eacute;v&eacute;nement <strong><code>ed11yPop</code></strong> pour afficher et masquer dynamiquement le lien d'&eacute;dition en fonction du contexte lorsque les infobulles sont affich&eacute;es.</p>
+
+                    <p>Cet &eacute;v&eacute;nement fournit des r&eacute;f&eacute;rences aux objets <code>result</code> et <code>tip</code> :</p>
+                    <pre class="language-javascript"><code><!--// Listen for event
+document.addEventListener('ed11yPop', e => {
+  if (e.detail.result.element.closest(
+    drupalSettings.editoria11y.hide_edit_links)
+  ) {
+      e.detail.tip.shadowRoot.querySelector(
+        '.ed11y-custom-edit-links'
+        )?.setAttribute('hidden', '');
+     }
+}); --></code></pre>
+                </section>
+
+                <section id=”custom-tests”>
+                    <h2>Tests personnalis&eacute;s</h2>
+
+                    <p>Si le param&egrave;tre <strong><em>customTests</em></strong> est un <strong><em>nombre</em></strong>, Editoria11y d&eacute;clenchera un &eacute;v&eacute;nement “ed11yRunCustomTests” pendant la v&eacute;rification, puis se mettra en pause pendant 500 ms maximum en attendant ce nombre d'&eacute;v&eacute;nements “<code>ed11yResume</code>”.</p>
+
+                    <p>Cela peut &ecirc;tre exploit&eacute; pour appeler autant de scripts contenant des tests personnalis&eacute;s que vous le souhaitez, qui peuvent ajouter leurs r&eacute;sultats dans le tableau de r&eacute;sultats avant que les infobulles ne soient affich&eacute;es.</p>
+
+                    <p>Par exemple, si vous souhaitiez cr&eacute;er cette infobulle pour signaler des liens coll&eacute;s depuis des e-mails avec des URL obscurcies :</p>
+
+                    <figure class=”wp-block-image size-full”><img loading=”lazy” data-recalc-dims=”1” decoding=”async” width=”580” height=”462” src=”https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2023/12/Screenshot-2023-12-06-at-5.13.38-PM.png?resize=580%2C462&amp;ssl=1” alt=”Infobulle affichant &laquo; URL is Safe Link Encoded &raquo;” class=”wp-image-323” srcset=”https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2023/12/Screenshot-2023-12-06-at-5.13.38-PM.png?w=1056&amp;ssl=1 1056w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2023/12/Screenshot-2023-12-06-at-5.13.38-PM.png?resize=600%2C478&amp;ssl=1 600w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2023/12/Screenshot-2023-12-06-at-5.13.38-PM.png?resize=768%2C612&amp;ssl=1 768w” sizes=”(max-width: 580px) 100vw, 580px”></figure>
+
+                    <p>Vous devriez :</p>
+
+                    <ol class=”wp-block-list”>
+                        <li>Ajouter un &eacute;couteur pour l'&eacute;v&eacute;nement <code>ed11yRunCustomTests</code></li>
+
+                        <li>Trouver les &eacute;l&eacute;ments correspondants</li>
+
+                        <li>D&eacute;finir le message de l'infobulle</li>
+
+                        <li>D&eacute;clencher l'&eacute;v&eacute;nement “resume” pour qu'Editoria11y affiche l'infobulle :</li>
+                    </ol>
+
+                    <pre class="language-javascript"><code><!--document.addEventListener('ed11yRunCustomTests', function() {
+  // 1. Write your custom test. This can be anything you want.
+  //
+  // This example searches the active root using the .getElements() function,
+  // which is aware of the checkRoots and ignoreElements parameters.
+  const safeLinks = Drupal.Ed11y.getElements('a[href*="safelinks.protection.outlook.com/?"]', 'root');
+
+  // This is just a utility function for this particular test...
+  const decodeSafelink = function(url) {
+      const params = new URL(url).searchParams;
+      let decoded = params.get('url');
+      if (!!decoded) {
+            decoded = Ed11y.sanitizeForHTML(decoded);
+            return `<p>The actual URL may be:<br><em style='word-wrap: break-word;'>${decoded}</em></p>`
+      }
+      return '';
+  }
+
+  // 2. Add the test name to the active language pack.
+  // Add a title:
+  Drupal.ed11yLang.lang.testNames.outlookSafeLink = 'URL is Safe Link encoded';
+
+  // 3. Push each item you want flagged to Ed11y.results.
+  //
+  // You must provide:
+  //   element:      The element itself
+  //   test:         A key for your test, matching step 2.
+  //   type:         warning or error
+  //   content:      The tip HTML.
+  //   position:     "beforebegin" for interactive elements,
+  //                 "afterbegin" for paragraphs and table cells.
+  //   dismiss:      false for errors,
+  //                 a unique string for manual checks.
+  safeLinks?.forEach((el) => {
+   Drupal.Ed11y.State.results.push({
+     element: el,
+     test:    'outlookSafeLink',
+     type:    'error',
+     content: `<div class="title">Please fix the URL in this link</div>
+               ${decodeSafelink(el.href)}
+               <div class="why">
+                <p>The URL for this link is an Outlook "Safe Link" that was copied from an email.
+                It includes the original recipient's email address,
+                and will break if Microsoft shuts down the service.</p>
+                <p>The pasted URL is:<br>
+                <em style='word-break: break-all;font-size: 90%;line-height: 1.2;
+                display: block;'>${Drupal.Ed11y.sanitizeHTML(el.href)}</em></p>
+               </div>
+            `,
+     position: 'beforebegin',
+     dismiss:  false,
+   });
+  });
+  // 4. When you are done with all your custom tests, dispatch an "ed11yResume" event:
+  let allDone = new CustomEvent('ed11yResume');
+  document.dispatchEvent(allDone);
+}) --></code></pre>
+                </section>
+
+                <section id="hidden-content">
+                    <h2>G&eacute;rer les alertes sur du contenu masqu&eacute; ou &agrave; taille limit&eacute;e</h2>
+
+
+                    <p>De nombreux composants interactifs (onglets, carrousels, accord&eacute;ons) masquent du contenu. Le panneau d’information d’Editoria11y inclut des boutons pr&eacute;c&eacute;dent/suivant pour acc&eacute;der directement aux probl&egrave;mes. Si Editoria11y estime que l’infobulle du probl&egrave;me est actuellement invisible, il avertira l’utilisateur que quelque chose ne va pas, puis mettra en surbrillance le premier anc&ecirc;tre visible &ndash; par exemple, le div autour d’un accord&eacute;on.</p>
+
+                    <p>Id&eacute;alement, votre th&egrave;me rendra ces &eacute;l&eacute;ments visibles avant que la v&eacute;rification de visibilit&eacute; d’Editoria11y ne s’ex&eacute;cute, afin que tout fonctionne comme par magie pour vos utilisateurs &mdash; les carrousels avancent automatiquement et les accord&eacute;ons s’ouvrent automatiquement pour afficher le probl&egrave;me.</p>
+
+                    <p>Pour ce faire lorsque le panneau s’ouvre pour la premi&egrave;re fois (par exemple, d&eacute;plier <strong><em>tous</em></strong> les panneaux d’accord&eacute;on contenant des probl&egrave;mes), ajoutez un &eacute;couteur d’&eacute;v&eacute;nement JavaScript pour <code>ed11yPanelOpened</code>, puis effectuez un querySelectorAll pour les &eacute;l&eacute;ments <code>ed11y-element-result</code> concern&eacute;s, et d&eacute;clenchez la fonction que votre th&egrave;me utilise pour r&eacute;v&eacute;ler cette partie de la page.</p>
+
+                    <p>Voici un exemple bas&eacute; sur jQuery. Lorsque le panneau s’ouvre, il d&eacute;sactive un menu fixe (pour que les &eacute;l&eacute;ments ne soient pas recouverts), puis recherche tous les &eacute;l&eacute;ments <code>ed11y-element-result</code> &agrave; l’int&eacute;rieur d’&eacute;l&eacute;ments d’accord&eacute;on ferm&eacute;s et simule un clic sur leur bouton de bascule :</p>
+                    <pre class="language-javascript"><code><!--document.addEventListener("ed11yPanelOpened", function () {
+  $('body').addClass('no-stick');
+  $('ed11y-element-result').each(function () {
+    if ($(this).parents('.ps-accordion-content[style*="display"]').length > 0) {
+    $(this).parents('.ps-accordion-content').prev().find('.ps-accordion-item-button').click();
+    }
+}) --></code></pre>
+
+                    <p>Pour r&eacute;v&eacute;ler du contenu uniquement lors du passage &agrave; une infobulle <strong><em>sp&eacute;cifique</em></strong> via le bouton “suivant” du panneau (par exemple, dans un onglet ferm&eacute; ou la diapositive suivante du carrousel), vous devrez d&eacute;finir &agrave; la fois <code>hiddenHandlers</code> avec les s&eacute;lecteurs CSS concern&eacute;s et <code>checkVisible</code> &agrave; TRUE dans vos param&egrave;tres. Ajoutez ensuite un &eacute;couteur pour l’&eacute;v&eacute;nement <code>ed11yShowHidden</code>. Celui-ci est d&eacute;clench&eacute; si Editoria11y d&eacute;tecte qu’une infobulle se trouve dans un conteneur correspondant &agrave; l’un des s&eacute;lecteurs <code>hiddenHandlers</code> fournis dans la liste d’options. Cet &eacute;v&eacute;nement JavaScript inclura l’identifiant de l’infobulle qu’il est sur le point d’ouvrir. Editoria11y marquera ensuite une br&egrave;ve pause apr&egrave;s avoir d&eacute;clench&eacute; cet &eacute;v&eacute;nement, pour laisser &agrave; votre JavaScript le temps de rendre l’&eacute;l&eacute;ment visible.</p>
+
+                    <p>Voici un exemple issu d’une impl&eacute;mentation de Penn State. Il recherche l’&eacute;l&eacute;ment correspondant &agrave; l’identifiant fourni, puis trouve le conteneur parent du composant interactif et d&eacute;clenche son &eacute;v&eacute;nement pour activer sa bascule :</p>
+                    <pre class="language-javascript"><code><!--context.addEventListener('ed11yShowHidden', e => {
+  if (!e.detail.viaJump) {
+       return;
+  }
+  context.getElementById(e.detail.id)
+    .closest('[data-interactive-component]')
+    .dispatchEvent(new CustomEvent('component:activate'));
+}); --></code></pre>
+                    <p>Derni&egrave;re remarque : certains th&egrave;mes ne sont tout simplement pas compatibles avec la v&eacute;rification de visibilit&eacute; &mdash; par exemple, le conteneur <code>&lt;main&gt;</code> a une hauteur de 0px. Ces sites doivent d&eacute;sactiver toute v&eacute;rification de visibilit&eacute; en d&eacute;finissant <code>checkVisible</code> &agrave; false.</p>
+
+                </section>
+
+          </div><!-- End content column -->
+
+      </div>
+    </main>
+    <footer class="container col-lg-12 mx-auto pt-3 my-5 text-body-secondary border-top text-center text-md-start">
+      <div class="container">
+        <div class="row">
+          <div class="col col-3 col-md-2">
+            <a href="https://github.com/itmaybejj/editoria11y"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-git" viewBox="0 0 16 16">
+              <path d="M15.698 7.287 8.712.302a1.03 1.03 0 0 0-1.457 0l-1.45 1.45 1.84 1.84a1.223 1.223 0 0 1 1.55 1.56l1.773 1.774a1.224 1.224 0 0 1 1.267 2.025 1.226 1.226 0 0 1-2.002-1.334L8.58 5.963v4.353a1.226 1.226 0 1 1-1.008-.036V5.887a1.226 1.226 0 0 1-.666-1.608L5.093 2.465l-4.79 4.79a1.03 1.03 0 0 0 0 1.457l6.986 6.986a1.03 1.03 0 0 0 1.457 0l6.953-6.953a1.03 1.03 0 0 0 0-1.457"/>
+            </svg> <strong>Bibliothèque</strong></a>
+          </div>
+          <div class="col col-3 col-md-2">
+            <a href="https://github.com/itmaybejj/editoria11y/discussions"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chat-right-heart-fill" viewBox="0 0 16 16">
+              <path d="M16 2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h9.586a1 1 0 0 1 .707.293l2.853 2.853a.5.5 0 0 0 .854-.353zM8 3.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132"/>
+            </svg> <strong>Forum</strong></a>
+          </div>
+          <div class="col col-3 col-md-2">
+            <a href="https://github.com/itmaybejj/editoria11y/issues"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-patch-plus-fill" viewBox="0 0 16 16">
+              <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01zM8.5 6v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 1 0"/>
+            </svg> <strong>Problèmes</strong></a>
+          </div>
+          <div class="col col-3 col-md-2">
+            <a href="/fr/contacts"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-person-lines-fill" height="24" width="24" viewBox="0 0 16 18">
+              <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z"></path>
+            </svg> <strong>Contact</strong></a>
+          </div>
+          <div class="col col-12 col-md-4 text-center text-md-end">
+            &copy; Editoria11y 2026
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script
+      src="/assets/bootstrap/js/bootstrap.bundle.min.js"
+      class="astro-vvvwv3sm"
+    ></script>
+    <script src="/lang/i18n.js"></script>
+    <script src="/assets/theme.js"></script>
+    <script src="/assets/prism/prism.js"></script>
+  </body>
+</html>

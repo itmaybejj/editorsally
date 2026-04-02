@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="da" data-bs-theme="light">
+  <head>
+<link rel="icon" type="image/png" href="/assets/favicons/favicon-512x512.png" sizes="512x512" />
+    <link rel="icon" type="image/png" href="/assets/favicons/favicon-192x192.png" sizes="192x192" />
+    <link rel="icon" type="image/png" href="/assets/favicons/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicons/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <meta charset="utf-8" />
+    <title>Install — Editoria11y</title>
+    <link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/assets/prism/prism.css" rel="stylesheet" />
+    <link href="/assets/theme.css" rel="stylesheet" />
+    <meta name="theme-color" content="#712cf9" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <header>
+    <nav class="navbar navbar-expand-md">
+      <div class="container col-sm-12 mx-auto">
+        <a href="/da/" class="d-flex align-items-center  navbar-brand">
+          <svg class="logo-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="-.75 -3.5 10.1699 19.1777"><path fill="currentColor" d="M3.7031,10.5527c-.3633-.6562-.6426-1.1387-.8379-1.4473l-.3105-.4863-.2344-.3574c-.5117-.7969-1.0449-1.4551-1.5996-1.9746.3164-.2617.6113-.3926.8848-.3926.3359,0,.6348.123.8965.3691s.5918.7148.9902,1.4062c.4531-1.4727,1.0293-2.8691,1.7285-4.1895.3867-.7188.7314-1.2021,1.0342-1.4502s.7041-.3721,1.2041-.3721c.2656,0,.5938.041.9844.123-1.0039.8086-1.8066,1.7695-2.4082,2.8828s-1.3789,3.0762-2.332,5.8887Z"/></svg> Editoria<span style="margin-left: -1px;">11</span>y
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Skift navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Editora11y</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Luk"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 nav-pills">
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div id="lang-picker"></div>
+  </header>
+    <main class="container col-lg-12 mx-auto py-5">
+        <div class="row docs">
+            <div class="col-12 col-md-5 col-lg-4 mb-5">
+              <div id="on-this-page" class="list-group ms-2 ms-lg-5 position-sticky top-0 pt-3">
+              </div>
+            </div>
+            <div class="col-12 col-md-7 col-lg-8 pt-3" data-bs-spy="scroll" data-bs-target="#on-this-page" data-bs-smooth-scroll="true">
+                <h1>Installation &amp; konfiguration</h1>
+
+                <section id="modules">
+                    <h2 class="pt-3 pb-2">Forkonfigurerede versioner</h2>
+                    <ul class="list-unstyled ps-0">
+                        <li><a href="https://www.drupal.org/project/editoria11y" class="arrow"><strong>Drupal-installer</strong></a></li>
+                        <li><a href="https://wordpress.org/plugins/editoria11y-accessibility-checker/" class="arrow"><strong>WordPress-installer</strong></a></li>
+                        <li><a href="https://codeberg.org/sebastiangreger/kirby-a11yprompter" class="arrow"><strong>Kirby-installer</strong></a> <em>(contrib)</em></li>
+                        <li><a href="https://plugins.craftcms.com/editoria11y" class="arrow"><strong>CraftCMS-installer</strong></a> <em>(contrib)</em></li>
+                    </ul>
+                </section>
+                <section id="diy">
+                    <h2>
+                        Brugerdefineret installation
+                    </h2>
+                    <p>For at bygge din egen implementering skal du <a href="https://github.com/itmaybejj/editoria11y" data-type="URL" data-id="https://github.com/itmaybejj/editoria11y" class="liinternal">downloade en lokal kopi</a> (eller referere til en <a href="https://cdn.jsdelivr.net/gh/itmaybejj/editoria11y@2/dist/editoria11y.min.js" class="liinternal">CDN-version</a>) af en sprogpakke, JS min-filen og CSS min-filen, og derefter oprette en ny "Ed11y"-instans.</p>
+                    <p>For <strong>ESM/JS-modulimport</strong>: </p>
+                    <pre class="language-markup"><code><!--// Load CSS
+<link href="/dist/css/editoria11y.min.css?v=3.0" rel="stylesheet">
+// Load JS and language pack
+<script type="module">
+  import Ed11y from "/dist/js/ed11y.esm.min.js?v=3.0";
+  import ed11yLang from "/dist/js/lang/en.js";
+  // Instantiate with language and CSS
+  const ed11y = new Ed11y.Ed11y({
+    lang: 'en',
+    cssUrls: ["/dist/css/editoria11y.min.css"]
+  });
+</script>
+--></code></pre>
+                    <p>Brug .umd JavaScript-filerne til ældre browsere og systemer:</p>
+                    <pre class="language-markup"><code><!--
+// Call CSS, JS and a Language Pack
+<link href="/dist/editoria11y.min.css" rel="stylesheet">
+<script src="/dist/js/ed11y.umd.js"></script>;
+<script src="/dist/js/lang/en.umd.js"></script>
+// Create a new Ed11y instance
+<script>
+  const ed11y = new Ed11y.Ed11y({
+    lang: 'en',
+    cssUrls: ["/dist/css/editoria11y.min.css"]
+  });
+</script>
+                --></code></pre>
+                </section>
+
+                <section id="params">
+                    <h2>Parametre</h2>
+                    <p>En komplet implementering vil kun blive kaldt for indloggede redaktører (du vil ikke have, at dine besøgende ser din tjekker!), og kan tilsidesætte alle <a href="https://github.com/itmaybejj/editoria11y/blob/3.0.x/src/js/utils/ed11y-default-options.js" class="liinternal"><strong>standardparametrene</strong></a>.</p>
+                    <p>Bemærk, at der er angivet standardværdier for alle parametre; medtag kun dem, du vil tilsidesætte.</p>
+                    <p>En stærkt tilpasset implementering kunne se saadan ud:</p>
+                    <pre class="language-javascript"><code><!--const ed11y = new Ed11y.Ed11y({
+  // Define content regions
+  checkRoot: 'main, .footer-content-zone',
+  // Add custom CSS files
+  cssUrls: [
+    '/css/editoria11y.min.css',
+    '/css/custom.css'
+  ],
+  // Define Web components to include in checks
+  shadowComponents: 'accordion, lightbox',
+  // We want the box to open automatically for errors:
+  alertMode: 'assertive',
+  // Our external link icon has visually hidden text
+  // to delete before checking if the link has text:
+  linkIgnoreStrings: ['(opens in new window)'],
+  // Content editors cannot edit these elements:
+  ignoreElements: 'nav *, #social-block',
+  // Prevent this user from hiding alerts.
+  allowHide: false,
+  allowOK: true,
+  // Don't scan while the editor toolbar is open:
+  preventCheckingIfPresent: ".editor-toolbar",
+  // Turn off warnings that an element might be visually hidden:
+  checkVisible: false,
+  // Dispatch a JS event before highlighting this,
+  // so our JS can modify it first:
+  hiddenHandlers: ".accordion-panel",
+  // Dispatch a JS event when the library is ready
+  // for custom tests, then wait for 3 ed11yResume
+  // events from our 3 tests to continue.
+  customTests: 3,
+  checks: {
+    // Turn off the HEADING_FIRST test
+    HEADING_FIRST: false,
+    // Allow dismissing the HEADING_SKIPPED_LEVEL test
+    HEADING_SKIPPED_LEVEL: {
+       type: 'warning',
+    }
+  }
+
+}); --></code></pre>
+                    <p>Nøglefærdige integrationer sætter ofte disse variable dynamisk -- f.eks. indlæser sider i "assertive"-tilstand, når de for nylig er blevet redigeret, og skifter tilbage til "polite" efter nogle minutter.</p>
+                </section>
+
+                <section id="theme">
+                    <h2>Temaer</h2>
+
+                    <p>Flere parametre gør det muligt at vælge et tema, tilsidesætte farver og injicere CSS.</p>
+
+                    <p>Medtag kun de parametre, du skal tilsidesætte, for at gøre fremtidige opdateringer nemmere.</p>
+                    <pre class="language-javascript"><code><!--// Add custom CSS file
+cssUrls: ['/css/editoria11y.min.css', '/css/custom.css'],
+theme : 'darkTheme', // Select base theme
+darkTheme: {         // Override base colors
+    bg: '#0a2051',
+    bgHighlight: '#7b1919',
+    text: '#f4f7ff',
+    primary: '#4930a0',
+    primaryText: '#f4f7ff',
+    secondary: '#20160c',
+    warning: '#fad859',
+    alert: '#b80519',
+    button: '#dde8ff',
+    focusRing: 'cyan',
+    activeTab: '#0a2051',
+    tipHeader: '#4930a0',
+},
+// Override fonts
+baseFontSize: 14, // px
+baseFontFamily: '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif', --></code></pre>
+                </section>
+
+                <section id="js-events">
+                    <h2 class="wp-block-heading has-text-align-left has-secondary-background-color has-background has-large-font-size">Nyttige JS-hændelser</h2>
+
+                    <p>Temaudviklere kan lytte på disse hændelser for at reagere og ændre siden efter behov.</p>
+
+                    <p>I typisk rækkefølge...</p>
+
+                    <ul class="wp-block-list">
+                        <li><strong><code>ed11yRunCustomTests</code></strong>: udsendes, når Results-objektet er klar til at modtage brugerdefinerede resultater. Bemærk, at parameteren customTests skal være sat til antallet af brugerdefinerede testfunktioner, du vil køre (...sandsynligvis en...), for at denne hændelse udsendes. Detaljer i næste afsnit.</li>
+
+                        <li><strong><code>ed11yResults</code></strong>: udsendes, når alle tjek er færdige. API-integrationer kan nu hente data fra Ed11y.results-objektet.</li>
+
+                        <li><strong><code>ed11yPanelOpened</code></strong>: udsendes, hvis panelet åbnes, automatisk eller manuelt.</li>
+
+                        <li><strong><code>ed11yShowHidden</code></strong>: giver et <code>data-ed11y-result</code>-nummer og en <code>viaJump</code>-boolean. Udsendes kun, hvis parameteren "ed11yShowHidden" er sat, <em><strong>og</strong></em> et overordnet element matcher en selektor. Bruges til at vise advarsler i endnu ikke åbne containere, f.eks. harmonikaelementer, faner og karruseller. Brugseksempler i næste afsnit.</li>
+
+                        <li><strong><code>ed11yPop</code></strong>: giver <code>data-ed11y-result</code>-ID samt referencer til <code>result</code>- og <code>tip</code>-objekterne. Udsendes, når et tooltip vises, så du kan ændre tipsene under kørsel.</li>
+
+                        <li><strong><code>ed11yShut</code></strong>: giver <code>data-ed11y-result</code>-ID. Udsendes, når et tooltip lukkes.</li>
+
+                        <li><strong><code>ed11yDismissalUpdate</code></strong>: giver udvidede oplysninger, når en bruger afviser eller gendanner en advarsel. Bruges til API-integrationer. Hændelsesobjektet indeholder:
+                            <ul>
+                                <li><code>dismissPage</code></li>
+
+                                <li><code>dismissTest</code></li>
+
+                                <li><code>dismissKey</code></li>
+
+                                <li><code>dismissAction</code></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <p>Eksempler kan findes i de følgende afsnit.</p>
+                </section>
+
+                <section id="modify-tips">
+                    <h2 class="wp-block-heading has-secondary-background-color has-background has-large-font-size">Tilpasning af tips</h2>
+
+                    <p>Hvis du kun vil ændre teksten i et tip, kan elementer i det globale ed11yLang.en-objekt (før biblioteket kaldes) eller Ed11y.M (efter biblioteket er kaldt) tilsidesættes direkte. F.eks. i Drupal-modulet, hvor vi har oprettet et alias for sprogpakken til Drupal.ed11yLang:</p>
+
+                    <p><code>Drupal.ed11yLang.lang.testNames.title = "Please write shorter headings."</code></p>
+
+                    <p>Dette gælder for alle <a href="https://github.com/itmaybejj/editoria11y/blob/3.0.x/src/lang/baseAll.js" data-type="link" data-id="https://github.com/itmaybejj/editoria11y/blob/2.3.x/js/ed11y-localization.js" class="liinternal">standardnøgler i lokaliseringsfilen</a> eller den aktive sprogspecifikke oversættelse.</p>
+
+                    <p>Drupal-modulet tilføjer også brugerdefinerede redigeringslinks til tipsene ved hjælp af parameteren <code>editLinks</code>. Bemærk "Page editor" og "Layout editor:"</p>
+
+                    <figure class="wp-block-image size-full"><img loading="lazy" data-recalc-dims="1" fetchpriority="high" decoding="async" width="580" height="300" src="https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?resize=580%2C300&amp;ssl=1" alt="Tooltip med indsatte links til &quot;Page editor&quot; og &quot;Layout editor&quot;." class="wp-image-523" srcset="https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?w=1290&amp;ssl=1 1290w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?resize=600%2C311&amp;ssl=1 600w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?resize=768%2C398&amp;ssl=1 768w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?resize=1200%2C621&amp;ssl=1 1200w" sizes="(max-width: 580px) 100vw, 580px"></figure>
+
+                    <p>En forenklet version af koden, der sætter denne parameter:</p>
+                    <pre class="language-javascript"><code><!--const editLinks = document.createElement('div');
+const editLink = document.createElement('a');
+      editLink.href="/node/1/edit";
+      editLink.textContent = "Edit page";
+editLinks.appendChild(editLink);
+const ed11y = new Ed11y({
+               editLinks: editLinks,
+              }); --></code></pre>
+                    <p>Drupal-modulet bruger derefter <strong><code>ed11yPop</code></strong>-hændelse til dynamisk at vise og skjule redigeringslinket baseret på kontekst, når tips vises.</p>
+
+                    <p>Denne hændelse giver referencer til <code>result</code>- og <code>tip</code>-objekterne:</p>
+                    <pre class="language-javascript"><code><!--// Listen for event
+document.addEventListener('ed11yPop', e => {
+  if (e.detail.result.element.closest(
+    drupalSettings.editoria11y.hide_edit_links)
+  ) {
+      e.detail.tip.shadowRoot.querySelector(
+        '.ed11y-custom-edit-links'
+        )?.setAttribute('hidden', '');
+     }
+}); --></code></pre>
+                </section>
+
+                <section id="custom-tests">
+                    <h2>Brugerdefinerede tests</h2>
+
+                    <p>Hvis parameteren <strong><em>customTests</em></strong> er et <strong><em>tal</em></strong>, vil Editoria11y udsende en "ed11yRunCustomTests"-hændelse under tjekket og derefter vente i op til 500 ms, mens den lytter efter det angivne antal "<code>ed11yResume</code>"-hændelser.</p>
+
+                    <p>Dette kan bruges til at kalde så mange scripts med brugerdefinerede tests, som du ønsker, og de kan tilføje deres resultater til resultatarrayet, før tipsene tegnes.</p>
+
+                    <p>Hvis du f.eks. ville oprette dette tip for at markere links, der er indsat fra e-mails med slørede URL'er:</p>
+
+                    <figure class="wp-block-image size-full"><img loading="lazy" data-recalc-dims="1" decoding="async" width="580" height="462" src="https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2023/12/Screenshot-2023-12-06-at-5.13.38-PM.png?resize=580%2C462&amp;ssl=1" alt="Tip med teksten &quot;URL is Safe Link Encoded&quot;" class="wp-image-323" srcset="https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2023/12/Screenshot-2023-12-06-at-5.13.38-PM.png?w=1056&amp;ssl=1 1056w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2023/12/Screenshot-2023-12-06-at-5.13.38-PM.png?resize=600%2C478&amp;ssl=1 600w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2023/12/Screenshot-2023-12-06-at-5.13.38-PM.png?resize=768%2C612&amp;ssl=1 768w" sizes="(max-width: 580px) 100vw, 580px"></figure>
+
+                    <p>Du skal:</p>
+
+                    <ol class="wp-block-list">
+                        <li>Tilføje en lytter til <code>ed11yRunCustomTests</code>-hændelse</li>
+
+                        <li>Finde matchende elementer</li>
+
+                        <li>Definere tip-beskeden</li>
+
+                        <li>Udsende "resume"-hændelse for at lade Editoria11y tegne tippet:</li>
+                    </ol>
+
+                    <pre class="language-javascript"><code><!--document.addEventListener('ed11yRunCustomTests', function() {
+  // 1. Write your custom test. This can be anything you want.
+  //
+  // This example searches the active root using the .getElements() function,
+  // which is aware of the checkRoots and ignoreElements parameters.
+  const safeLinks = Drupal.Ed11y.getElements('a[href*="safelinks.protection.outlook.com/?"]', 'root');
+
+  // This is just a utility function for this particular test...
+  const decodeSafelink = function(url) {
+      const params = new URL(url).searchParams;
+      let decoded = params.get('url');
+      if (!!decoded) {
+            decoded = Ed11y.sanitizeForHTML(decoded);
+            return `<p>The actual URL may be:<br><em style='word-wrap: break-word;'>${decoded}</em></p>`
+      }
+      return '';
+  }
+
+  // 2. Add the test name to the active language pack.
+  // Add a title:
+  Drupal.ed11yLang.lang.testNames.outlookSafeLink = 'URL is Safe Link encoded';
+
+  // 3. Push each item you want flagged to Ed11y.results.
+  //
+  // You must provide:
+  //   element:      The element itself
+  //   test:         A key for your test, matching step 2.
+  //   type:         warning or error
+  //   content:      The tip HTML.
+  //   position:     "beforebegin" for interactive elements,
+  //                 "afterbegin" for paragraphs and table cells.
+  //   dismiss:      false for errors,
+  //                 a unique string for manual checks.
+  safeLinks?.forEach((el) => {
+   Drupal.Ed11y.State.results.push({
+     element: el,
+     test:    'outlookSafeLink',
+     type:    'error',
+     content: `<div class="title">Please fix the URL in this link</div>
+               ${decodeSafelink(el.href)}
+               <div class="why">
+                <p>The URL for this link is an Outlook "Safe Link" that was copied from an email.
+                It includes the original recipient's email address,
+                and will break if Microsoft shuts down the service.</p>
+                <p>The pasted URL is:<br>
+                <em style='word-break: break-all;font-size: 90%;line-height: 1.2;
+                display: block;'>${Drupal.Ed11y.sanitizeHTML(el.href)}</em></p>
+               </div>
+            `,
+     position: 'beforebegin',
+     dismiss:  false,
+   });
+  });
+  // 4. When you are done with all your custom tests, dispatch an "ed11yResume" event:
+  let allDone = new CustomEvent('ed11yResume');
+  document.dispatchEvent(allDone);
+}) --></code></pre>
+                </section>
+
+                <section id="hidden-content">
+                    <h2>Håndtering af advarsler på skjult eller størrelsesbegrænset indhold</h2>
+
+
+                    <p>Mange interaktive komponenter (faner, slidere, harmonikaelementer) skjuler indhold. Editoria11y-infopanelet indeholder forrige/næste-knapper til at springe direkte til problemer. Hvis Editoria11y mener, at problemets tooltip i øjeblikket er usynligt, vil det advare brugeren om, at noget er galt, og derefter fremhæve det første synlige overordnede element -- f.eks. div'en omkring et harmonikaelement.</p>
+
+                    <p>Ideelt set vil dit tema gøre disse elementer synlige, før Editoria11ys synlighedstjek kører, så alt bare virker som magi for dine brugere -- karruseller spoler automatisk frem, og harmonikaelementer åbner sig automatisk for at vise problemet.</p>
+
+                    <p>For at gøre dette, når panelet første åbnes (f.eks. at folde <strong><em>alle</em></strong> harmonikpaneler med problemer ud), skal du tilføje en JS-hændelseslytter til <code>ed11yPanelOpened</code>, derefter køre en querySelectorAll for relevante <code>ed11y-element-result</code>-elementer og derefter udløse den funktion, dit tema bruger til at afsløre den del af siden.</p>
+
+                    <p>Her er et jQuery-baseret eksempel. Når panelet åbnes, deaktiverer det en sticky menu (så elementer ikke dækkes), og søger derefter efter <code>ed11y-element-result</code>-elementer inde i lukkede harmonikaelementer og simulerer et klik på deres skifteknap:</p>
+                    <pre class="language-javascript"><code><!--document.addEventListener("ed11yPanelOpened", function () {
+  $('body').addClass('no-stick');
+  $('ed11y-element-result').each(function () {
+    if ($(this).parents('.ps-accordion-content[style*="display"]').length > 0) {
+    $(this).parents('.ps-accordion-content').prev().find('.ps-accordion-item-button').click();
+    }
+}) --></code></pre>
+
+                    <p>For kun at afsløre indhold, når man springer til et <strong><em>specifikt</em></strong> tip via panelets "næste"-knap (f.eks. i en lukket fane eller næste karruselslide), skal du sætte både <code>hiddenHandlers</code> til relevante CSS-selektorer og <code>checkVisible</code> til TRUE i dine parametre. Tilføj derefter en hændelseslytter til <code>ed11yShowHidden</code>-hændelse. Denne udsendes, hvis Editoria11y genkender, at et tip er inde i en container med en af de angivne <code>hiddenHandlers</code>-selektorer i indstillingslisten. Denne JS-hændelse vil indeholde ID'et på det tip, der er ved at blive åbnet. Editoria11y vil derefter holde en kort pause efter udsendelsen af hændelse for at give din JavaScript tid til at gøre elementet synligt.</p>
+
+                    <p>Her er et eksempel fra en Penn State-implementering. Det finder elementet, der matcher det angivne ID, finder derefter dets overordnede interaktive komponentcontainer og udloser dens hændelse for at aktivere dens skiftefunktion:</p>
+                    <pre class="language-javascript"><code><!--context.addEventListener('ed11yShowHidden', e => {
+  if (!e.detail.viaJump) {
+       return;
+  }
+  context.getElementById(e.detail.id)
+    .closest('[data-interactive-component]')
+    .dispatchEvent(new CustomEvent('component:activate'));
+}); --></code></pre>
+                    <p>Sidste bemærkning: nogle temaer er simpelthen ikke kompatible med synlighedstjek -- f.eks. har <code>&lt;main&gt;</code>-containeren en højde på 0px. Sådanne sider bør deaktivere al synlighedskontrol ved at sætte <code>checkVisible</code> til false.</p>
+
+                </section>
+
+          </div><!-- End content column -->
+
+      </div>
+    </main>
+    <footer class="container col-lg-12 mx-auto pt-3 my-5 text-body-secondary border-top text-center text-md-start">
+      <div class="container">
+        <div class="row">
+          <div class="col col-3 col-md-2">
+            <a href="https://github.com/itmaybejj/editoria11y"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-git" viewBox="0 0 16 16">
+              <path d="M15.698 7.287 8.712.302a1.03 1.03 0 0 0-1.457 0l-1.45 1.45 1.84 1.84a1.223 1.223 0 0 1 1.55 1.56l1.773 1.774a1.224 1.224 0 0 1 1.267 2.025 1.226 1.226 0 0 1-2.002-1.334L8.58 5.963v4.353a1.226 1.226 0 1 1-1.008-.036V5.887a1.226 1.226 0 0 1-.666-1.608L5.093 2.465l-4.79 4.79a1.03 1.03 0 0 0 0 1.457l6.986 6.986a1.03 1.03 0 0 0 1.457 0l6.953-6.953a1.03 1.03 0 0 0 0-1.457"/>
+            </svg> <strong>Bibliotek</strong></a>
+          </div>
+          <div class="col col-3 col-md-2">
+            <a href="https://github.com/itmaybejj/editoria11y/discussions"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chat-right-heart-fill" viewBox="0 0 16 16">
+              <path d="M16 2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h9.586a1 1 0 0 1 .707.293l2.853 2.853a.5.5 0 0 0 .854-.353zM8 3.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132"/>
+            </svg> <strong>Forum</strong></a>
+          </div>
+          <div class="col col-3 col-md-2">
+            <a href="https://github.com/itmaybejj/editoria11y/issues"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-patch-plus-fill" viewBox="0 0 16 16">
+              <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01zM8.5 6v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 1 0"/>
+            </svg> <strong>Problemer</strong></a>
+          </div>
+          <div class="col col-3 col-md-2">
+            <a href="/da/contacts"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-person-lines-fill" height="24" width="24" viewBox="0 0 16 18">
+              <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z"></path>
+            </svg> <strong>Kontakt</strong></a>
+          </div>
+          <div class="col col-12 col-md-4 text-center text-md-end">
+            &copy; Editoria11y 2026
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script
+      src="/assets/bootstrap/js/bootstrap.bundle.min.js"
+      class="astro-vvvwv3sm"
+    ></script>
+    <script src="/lang/i18n.js"></script>
+    <script src="/assets/theme.js"></script>
+    <script src="/assets/prism/prism.js"></script>
+  </body>
+</html>

@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="zh" data-bs-theme="light">
+
+<head>
+  <link rel="icon" type="image/png" href="/assets/favicons/favicon-512x512.png" sizes="512x512" />
+  <link rel="icon" type="image/png" href="/assets/favicons/favicon-192x192.png" sizes="192x192" />
+  <link rel="icon" type="image/png" href="/assets/favicons/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/assets/favicons/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <meta charset="utf-8" />
+  <title>定价与贡献 — Editoria11y</title>
+  <link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="/assets/theme.css" rel="stylesheet" />
+  <meta name="theme-color" content="#712cf9" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-md">
+      <div class="container col-sm-12 mx-auto">
+        <a href="/zh/" class="d-flex align-items-center  navbar-brand">
+          <svg class="logo-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+            viewBox="-.75 -3.5 10.1699 19.1777">
+            <path fill="currentColor"
+              d="M3.7031,10.5527c-.3633-.6562-.6426-1.1387-.8379-1.4473l-.3105-.4863-.2344-.3574c-.5117-.7969-1.0449-1.4551-1.5996-1.9746.3164-.2617.6113-.3926.8848-.3926.3359,0,.6348.123.8965.3691s.5918.7148.9902,1.4062c.4531-1.4727,1.0293-2.8691,1.7285-4.1895.3867-.7188.7314-1.2021,1.0342-1.4502s.7041-.3721,1.2041-.3721c.2656,0,.5938.041.9844.123-1.0039.8086-1.8066,1.7695-2.4082,2.8828s-1.3789,3.0762-2.332,5.8887Z" />
+          </svg> Editoria<span style="margin-left: -1px;">11</span>y
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar" aria-label="切换导航">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Editora11y</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="关闭"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 nav-pills">
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div id="lang-picker"></div>
+  </header>
+  <main class="container col-lg-12 mx-auto py-5">
+    <div class="row">
+      <div class="col-12">
+        <section id="join">
+          <div class="row justify-content-center">
+            <div class="col-lg-10">
+              <h1 class="text-body-emphasis pt-2 pb-2" data-section="membership">定价与贡献</h1>
+              <p class="fs-5">
+                Editoria11y 以独特的方式推动无障碍建设。其工具在帮助非技术类作者准备可供残障网络用户平等享用的内容方面极为有效。我们认为这是一项公共事业，因此 Editoria11y 将始终免费使用。
+              </p>
+              <p class="fs-5">
+                然而，Editoria11y 的开发和支持并非免费。
+              </p>
+              <p class="fs-5">
+                "社区支持附加组件"（CSA）项目弥补了这一缺口：项目成员资助 Editoria11y 库、其 CMS 插件和 CSA 套件的开发——这是一套快速增长的质量保证工具集，提供与商业产品类似的功能，开源且可自行托管。</p>
+              <p>Drupal 版 CSA 套件目前处于免费测试阶段，WordPress 版将于 2026 年第三季度推出。
+              </p>
+              <h2 class="nomenu pt-3">通过贡献获得 CSA 会员资格</h2>
+              <p>由于 CSA 提供的是自托管开源工具，运营成本极低。每站点每月约 €9 即可支付开发者薪酬并为用户提供支持。同类商业工具的收费为每站点每月 €15（基础检查器）到 €1000+（无限页面仪表板）不等。</p>
+            </div>
+
+          </div>
+
+          <div class="container text-center fs-5 p-3 pt-0 rounded-3" id="price-grid">
+            <div class="row">
+              <div class="col-lg-3"></div>
+              <div class="row col-lg-9 py-4 pt-0 align-items-start text-start">
+                <div class="col-md-4 mb-3">
+                  <label for="support-level">贡献</label>
+                  <select id="support-level" class="form-select ">
+                    <option value="100">150%</option>
+                    <option value="80">120%</option>
+                    <option value="60" selected>预估需求的 100%</option>
+                    <option value="50">75%</option>
+                    <option value="44">66%</option>
+                    <option value="33">50%</option>
+                    <option value="22">33%</option>
+                    <option value="17">25%</option>
+                  </select>
+                </div>
+                <div class="col-md-4 mb-3">
+                  <label for="currency">货币</label>
+                  <select class="form-select" id="currency">
+                    <option value="EUR">€ EUR</option>
+                    <option value="USD">$ USD</option>
+                    <option value="GBP">£ GBP</option>
+                  </select>
+                </div>
+
+                <div class="col-md-4 mb-3">
+                  <div class="row pb-3 form-check form-switch ps-0">
+                    <div><label class="" for="annual-pricing">
+                        按年计费
+                      </label></div>
+                    <input class="form-check-input ms-3 fs-3 border-2" type="checkbox" value="" id="annual-pricing"
+                      switch>
+
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div class="row">
+              <div class="col-lg-3 py-4 px-0" id="free">
+                <div class="bg-light me-3 border border-secondary-subtle shadow overflow-hidden rounded">
+                  <div class="p-2 border-bottom border-secondary-subtle">免费版</div>
+                  <div class="p-3 pb-1">
+                    <div class="fs-6 text-start">
+                      <p class="small"><a
+                          href="https://wordpress.org/support/topic/shockingly-full-featured/">"<em>功能出奇地</em>完备"</a></p>
+                      <ul class="small ms-3">
+                        <li><a href="https://www.drupal.org/project/editoria11y/">Drupal</a> & <a
+                            href="https://wordpress.org/plugins/editoria11y-accessibility-checker/">WordPress</a></li>
+                        <li class="fw-semibold">50+ 项内容检测</li>
+                        <li class="fw-semibold">输入时即时检测</li>
+                        <li class="fw-semibold">同步忽略项</li>
+                        <li class="fw-semibold">站点报告</li>
+                        <li class="fw-semibold">报告导出</li>
+                        <li class="fw-semibold">无限页面</li>
+                        <li class="fw-semibold">论坛支持</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 py-4 px-0" id="individual">
+                <div class="bg-light shadow overflow-hidden rounded-start">
+                  <div class="text-bg-info p-2 border-bottom border-light-subtle">个人版</div>
+                  <div class="text-bg-info p-3 pb-1 d-flex flex-column justify-content-center">
+                    <p class="lh-1"><span class="currency">€</span><span class="price fs-3">9</span><span
+                        class="period">/月</span></p>
+                    <div class="fs-5 text-start">
+                      <p class="fs-6 text-center"><em class="fs-6 ms-1 mb-2">免费版全部功能，另加：</em></p>
+                      <ul class="small">
+                        <li><strong>30+ 项开发者检测</strong></li>
+                        <li><strong>自定义测试构建器</strong></li>
+                        <li><strong>全站忽略项</strong></li>
+                        <li><strong>可读性面板</strong></li>
+                        <li><strong>刷新爬虫</strong></li>
+                        <li class="credit"><strong>安装协助</strong></li>
+                        <li class="credit"><strong>支持者积分</strong></li>
+                      </ul>
+                    </div>
+                    <p class=""><a class="btn btn-dark" title="Individual">订阅</a></p>
+                    <p class="period-warning fs-6" hidden><em>仅限按年计费</em></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 border-info px-0 fs-4 border rounded-3 shadow-lg" style="z-index: 3;" id="team">
+                <div class="text-bg-info p-2 rounded-top">团队版</div>
+                <div class="p-3 rounded-bottom">
+                  <div class="py-3 pb-4">
+                    <select class="form-select fw-bold" style="width: auto; display: inline-block;" id="price-pick">
+                      <option value="5">5</option>
+                      <option value="25" selected>25</option>
+                      <option value="50">50</option>
+                      <option value="200">200</option>
+                      <option value="500">500</option>
+                      <option value="1000">1000</option>
+                    </select> <label for="price-pick" class="fs-6">个站点</label>
+                  </div>
+                  <div id="price-result">
+                    <p class="lh-1"><span class="currency">€</span><span class="price fs-3">9.99</span><span
+                        class="period fs-5">/月</span></p>
+                    <div class="fs-5 text-start">
+                      <p class="fs-6 text-center"><em class="fs-6 ms-1 mb-2">个人版全部功能，另加：</em></p>
+                      <ul class="small">
+                        <li class="full"><strong>安装协助</strong></li>
+                        <li class="credit"><strong>邮件支持</strong></li>
+                        <li class="credit"><strong>年度咨询</strong></li>
+                        <li class="credit"><strong>支持者积分</strong></li>
+                      </ul>
+                    </div>
+                    <p class=""><a class="btn btn-dark" title="Team">订阅</a></p>
+                    <p class="period-warning fs-6" hidden><em>仅限按年计费</em></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 py-4 px-0">
+                <div class="shadow overflow-hidden rounded-end" id="enterprise">
+                  <div class="text-bg-info p-2 border-bottom border-light-subtle">Unlimited</div>
+                  <div class="text-bg-info p-3 pb-1 d-flex flex-column justify-content-center">
+                    <p class="lh-1"><span class="currency">€</span><span class="price fs-3">2700</span><span
+                        class="period">/月</span></p>
+                    <div class="fs-5 text-start">
+                      <p class="fs-6 text-center"><em class="fs-6 ms-1 mb-2">个人版全部功能，另加：</em></p>
+                      <ul class="small">
+                        <li><strong>无限站点</strong></li>
+                        <li><strong>安装协助</strong></li>
+                        <li><strong>年度咨询</strong></li>
+                        <li class="full"><strong>邮件支持</strong></li>
+                        <li><strong>支持者积分</strong></li>
+                      </ul>
+                    </div>
+                    <p class=""><a class="btn btn-dark" title="Enterprise">订阅</a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-3"></div>
+              <div class="col-lg-9 px-0 pt-4">
+                <p class="small"><em>所示价格已四舍五入至整数。销售税/增值税在结账时另行计算。</em>
+                </p>
+
+              </div>
+
+            </div>
+          </div>
+
+          <div class="row justify-content-center pt-5">
+            <div class="col-lg-10">
+              <h2>通过合作获得 CSA 会员资格</h2>
+              <p class="fs-6">许可证密钥可直接购买，但支持项目的方式还有很多：</p>
+              <ul class="list-unstyled ps-0">
+                <li class="arrow">
+                  <span>经批准的时间与努力贡献可换取订阅积分。</span>
+                </li>
+                <li class="arrow">
+                  <span>直接赞助的工作及合作伙伴关系可换取订阅积分。</span>
+                </li>
+                <li class="arrow">
+                  <span>经预先批准的、对提升相关开源项目无障碍性有重大贡献的时间与努力，可换取订阅积分。</span>
+                </li>
+              </ul>
+              <p class="mb-1"><a class="btn btn-bd-primary" href="https://form.jotform.com/260628163281153">申请订阅积分</a></p>
+              <p class="small">
+                <em>请在开始工作前与项目维护者讨论功能贡献事宜。</em>
+              </p>
+            </div>
+          </div>
+        </section>
+        <section id="existing" class="row mt-5 pt-5">
+          <div class="col-lg-10 mx-auto">
+            <h2 data-section="existing">现有会员资源</h2>
+            <div class="accord col-lg-8">
+              <details class="rounded bd-info">
+                <summary>许可证续费贡献等级</summary>
+                <p class="text-start small pt-3 pb-2">订阅默认按相同贡献等级续费。</p>
+                <p>如您选择在续费时更改贡献等级，请注意所有等级均可使用相同的插件功能，但并非所有等级均可享受相同的会员权益。请参阅页面顶部的对比表。</p>
+                <table id="renewal-codes" class="table mb-0 table-secondary text-center">
+                  <thead>
+                    <tr>
+                      <th>贡献等级</th>
+                      <th>年度续费代码</th>
+                      <th>月度续费代码</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>150%</td>
+                      <td>--</td>
+                      <td>--</td>
+                    </tr>
+                    <tr>
+                      <td>120%</td>
+                      <td>120pxa</td>
+                      <td>120pxm</td>
+                    </tr>
+                    <tr>
+                      <td>全额（100%）</td>
+                      <td>100pxa</td>
+                      <td>100pxm</td>
+                    </tr>
+                    <tr>
+                      <td>75%</td>
+                      <td>75pxa</td>
+                      <td>75pxm</td>
+                    </tr>
+                    <tr>
+                      <td>66%</td>
+                      <td>66pxa</td>
+                      <td>66pxm</td>
+                    </tr>
+                    <tr>
+                      <td>50%</td>
+                      <td>50pxa</td>
+                      <td>50pxm</td>
+                    </tr>
+                    <tr>
+                      <td>33%</td>
+                      <td>33pxa</td>
+                      <td>33pxm</td>
+                    </tr>
+                    <tr>
+                      <td>25%</td>
+                      <td>25pxa</td>
+                      <td>25pxm</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </details>
+            </div>
+            <ul class="fs-5 mt-3">
+              <li><a href="/zh/contacts">联系</a>以提交支持请求</li>
+              <li>
+                <a href="https://customers.freemius.com/login">订阅管理门户</a>
+              </li>
+            </ul>
+
+
+
+          </div>
+
+        </section>
+        <div class="mt-5 pt-5 text-center"><a class="btn btn-primary btn-lg" href="/zh/">关于</a> <a
+            class="btn btn-primary btn-lg" href="/zh/features/">功能</a> <a class="btn btn-primary btn-lg"
+            href="/zh/demo/">演示</a> <a class="btn btn-dark btn-lg" aria-current="page" href="/zh/license/">定价与贡献</a></div>
+
+
+
+
+      </div>
+    </div>
+  </main>
+  <footer class="container col-lg-12 mx-auto pt-3 my-5 text-body-secondary border-top text-center text-md-start">
+    <div class="container">
+      <div class="row">
+        <div class="col col-3 col-md-2">
+          <a href="https://github.com/itmaybejj/editoria11y"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+              height="20" fill="currentColor" class="bi bi-git" viewBox="0 0 16 16">
+              <path
+                d="M15.698 7.287 8.712.302a1.03 1.03 0 0 0-1.457 0l-1.45 1.45 1.84 1.84a1.223 1.223 0 0 1 1.55 1.56l1.773 1.774a1.224 1.224 0 0 1 1.267 2.025 1.226 1.226 0 0 1-2.002-1.334L8.58 5.963v4.353a1.226 1.226 0 1 1-1.008-.036V5.887a1.226 1.226 0 0 1-.666-1.608L5.093 2.465l-4.79 4.79a1.03 1.03 0 0 0 0 1.457l6.986 6.986a1.03 1.03 0 0 0 1.457 0l6.953-6.953a1.03 1.03 0 0 0 0-1.457" />
+            </svg> <strong>库</strong></a>
+        </div>
+        <div class="col col-3 col-md-2">
+          <a href="https://github.com/itmaybejj/editoria11y/discussions"><svg xmlns="http://www.w3.org/2000/svg"
+              width="20" height="20" fill="currentColor" class="bi bi-chat-right-heart-fill" viewBox="0 0 16 16">
+              <path
+                d="M16 2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h9.586a1 1 0 0 1 .707.293l2.853 2.853a.5.5 0 0 0 .854-.353zM8 3.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132" />
+            </svg> <strong>论坛</strong></a>
+        </div>
+        <div class="col col-3 col-md-2">
+          <a href="https://github.com/itmaybejj/editoria11y/issues"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+              height="20" fill="currentColor" class="bi bi-patch-plus-fill" viewBox="0 0 16 16">
+              <path
+                d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01zM8.5 6v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 1 0" />
+            </svg> <strong>问题</strong></a>
+        </div>
+        <div class="col col-3 col-md-2">
+          <a href="/zh/contacts"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+              class="bi bi-person-lines-fill" height="24" width="24" viewBox="0 0 16 18">
+              <path
+                d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z">
+              </path>
+            </svg> <strong>联系</strong></a>
+        </div>
+        <div class="col col-12 col-md-4 text-center text-md-end">
+          &copy; Editoria11y 2026
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/lang/i18n.js"></script>
+  <script src="/assets/theme.js"></script>
+  <script src="/assets/bootstrap/js/bootstrap.bundle.min.js" class="astro-vvvwv3sm"></script>
+</body>
+
+</html>
