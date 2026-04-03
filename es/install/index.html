@@ -61,7 +61,7 @@
                     <h2>
                         Instalación personalizada
                     </h2>
-                    <p>Para crear tu propia implementación, <a href="https://github.com/itmaybejj/editoria11y" data-type="URL" data-id="https://github.com/itmaybejj/editoria11y" class="liinternal">descarga una copia local</a> (o referencia una <a href="https://cdn.jsdelivr.net/gh/itmaybejj/editoria11y@2/dist/editoria11y.min.js" class="liinternal">versión CDN</a>) de un paquete de idioma, el archivo JS minificado y el archivo CSS minificado, y luego crea una nueva instancia de "Ed11y".</p>
+                    <p>Para crear tu propia implementación, <a href="https://github.com/itmaybejj/editoria11y" data-type="URL" data-id="https://github.com/itmaybejj/editoria11y" class="liinternal">descarga una copia local</a> (o haz referencia a una <a href="https://cdn.jsdelivr.net/gh/itmaybejj/editoria11y@2/dist/editoria11y.min.js" class="liinternal">versión CDN</a>) de un paquete de idioma, el archivo JS minificado y el archivo CSS minificado, y luego crea una nueva instancia de "Ed11y".</p>
                     <p>Para <strong>importaciones ESM/módulo JS</strong>: </p>
                     <pre class="language-markup"><code><!--// Load CSS
 <link href="/dist/css/editoria11y.min.css?v=3.0" rel="stylesheet">
@@ -94,7 +94,7 @@
 
                 <section id="params">
                     <h2>Parámetros</h2>
-                    <p>Una implementación completa solo se llamará para los editores con sesión iniciada (¡no querrás que los visitantes de tu sitio vean el verificador!), y puede sobreescribir cualquiera de <a href="https://github.com/itmaybejj/editoria11y/blob/3.0.x/src/js/utils/ed11y-default-options.js" class="liinternal"><strong>los parámetros predeterminados</strong></a>.</p>
+                    <p>Una implementación completa solo se ejecutará para editores con sesión iniciada (¡no querrás que los visitantes de tu sitio vean el verificador!), y puede sobreescribir cualquiera de <a href="https://github.com/itmaybejj/editoria11y/blob/3.0.x/src/js/utils/ed11y-default-options.js" class="liinternal"><strong>los parámetros predeterminados</strong></a>.</p>
                     <p>Ten en cuenta que se proporcionan valores predeterminados para todos los parámetros; solo incluye los que quieras sobreescribir.</p>
                     <p>Una implementación muy personalizada podría verse así:</p>
                     <pre class="language-javascript"><code><!--const ed11y = new Ed11y.Ed11y({
@@ -172,22 +172,22 @@ baseFontFamily: '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica N
                 <section id="js-events">
                     <h2 class="wp-block-heading has-text-align-left has-secondary-background-color has-background has-large-font-size">Eventos JS útiles</h2>
 
-                    <p>Los tematizadores pueden engancharse a estos eventos para reaccionar y modificar la página según sea necesario.</p>
+                    <p>Los desarrolladores de temas pueden engancharse a estos eventos para reaccionar y modificar la página según sea necesario.</p>
 
                     <p>En orden típico de aparición…</p>
 
                     <ul class="wp-block-list">
-                        <li><strong><code>ed11yRunCustomTests</code></strong>: se despacha cuando el objeto Results está listo para que se inyecten resultados personalizados. Ten en cuenta que el parámetro customTests debe establecerse en el número de funciones de prueba personalizadas que ejecutarás (…probablemente uno…) para que este evento se despache. Detalles en la sección siguiente.</li>
+                        <li><strong><code>ed11yRunCustomTests</code></strong>: se emite cuando el objeto Results está listo para que se inyecten resultados personalizados. Ten en cuenta que el parámetro customTests debe establecerse en el número de funciones de prueba personalizadas que ejecutarás (…probablemente uno…) para que este evento se emita. Detalles en la sección siguiente.</li>
 
-                        <li><strong><code>ed11yResults</code></strong>: se despacha cuando todas las verificaciones han finalizado. Las integraciones de API pueden ahora extraer datos del objeto Ed11y.results.</li>
+                        <li><strong><code>ed11yResults</code></strong>: se emite cuando todas las verificaciones han finalizado. Las integraciones de API pueden ahora extraer datos del objeto Ed11y.results.</li>
 
-                        <li><strong><code>ed11yPanelOpened</code></strong>: se despacha si el panel se abre, automática o manualmente.</li>
+                        <li><strong><code>ed11yPanelOpened</code></strong>: se emite si el panel se abre, automática o manualmente.</li>
 
-                        <li><strong><code>ed11yShowHidden</code></strong>: proporciona un número <code>data-ed11y-result</code> y un booleano <code>viaJump</code>. Solo se despacha si el parámetro "ed11yShowHidden" está configurado <em><strong>y</strong></em> el padre del elemento coincide con un selector. Se usa para revelar alertas en contenedores aún no abiertos, p. ej., acordeones, pestañas y carruseles. Ejemplos de uso en la sección siguiente.</li>
+                        <li><strong><code>ed11yShowHidden</code></strong>: proporciona un número <code>data-ed11y-result</code> y un booleano <code>viaJump</code>. Solo se emite si el parámetro "ed11yShowHidden" está configurado <em><strong>y</strong></em> el padre del elemento coincide con un selector. Se usa para revelar alertas en contenedores aún no abiertos, p. ej., acordeones, pestañas y carruseles. Ejemplos de uso en la sección siguiente.</li>
 
-                        <li><strong><code>ed11yPop</code></strong>: proporciona el ID de <code>data-ed11y-result</code>, así como referencias a los objetos <code>result</code> y <code>tip</code>. Se despacha cuando aparece una información emergente, lo que te permite modificar los consejos en tiempo de ejecución.</li>
+                        <li><strong><code>ed11yPop</code></strong>: proporciona el ID de <code>data-ed11y-result</code>, así como referencias a los objetos <code>result</code> y <code>tip</code>. Se emite cuando aparece una información emergente, lo que te permite modificar los consejos en tiempo de ejecución.</li>
 
-                        <li><strong><code>ed11yShut</code></strong>: proporciona el ID de <code>data-ed11y-result</code>. Se despacha cuando se cierra una información emergente.</li>
+                        <li><strong><code>ed11yShut</code></strong>: proporciona el ID de <code>data-ed11y-result</code>. Se emite cuando se cierra una información emergente.</li>
 
                         <li><strong><code>ed11yDismissalUpdate</code></strong>: proporciona información extendida cuando un usuario descarta o restaura una alerta. Se usa para integraciones de API. El objeto de evento contiene:
                             <ul>
@@ -244,7 +244,7 @@ document.addEventListener('ed11yPop', e => {
                 <section id="custom-tests">
                     <h2>Pruebas personalizadas</h2>
 
-                    <p>Si el parámetro <strong><em>customTests</em></strong> es un <strong><em>número</em></strong>, Editoria11y despachará un evento "ed11yRunCustomTests" durante la verificación y luego hará una pausa de hasta 500ms escuchando ese número de eventos "<code>ed11yResume</code>".</p>
+                    <p>Si el parámetro <strong><em>customTests</em></strong> es un <strong><em>número</em></strong>, Editoria11y emitirá un evento "ed11yRunCustomTests" durante la verificación y luego hará una pausa de hasta 500ms escuchando ese número de eventos "<code>ed11yResume</code>".</p>
 
                     <p>Esto puede aprovecharse para llamar a tantos scripts con pruebas personalizadas como desees, que pueden enviar sus resultados al array de resultados antes de que se dibujen los consejos.</p>
 
@@ -261,7 +261,7 @@ document.addEventListener('ed11yPop', e => {
 
                         <li>Definir el mensaje del consejo</li>
 
-                        <li>Despachar el evento "resume" para que Editoria11y dibuje el consejo:</li>
+                        <li>Emitir el evento "resume" para que Editoria11y dibuje el consejo:</li>
                     </ol>
 
                     <pre class="language-javascript"><code><!--document.addEventListener('ed11yRunCustomTests', function() {
@@ -327,7 +327,7 @@ document.addEventListener('ed11yPop', e => {
                     <h2>Gestionar alertas en contenido oculto o con restricciones de tamaño</h2>
 
 
-                    <p>Muchos componentes interactivos (pestañas, deslizadores, acordeones) ocultan contenido. El panel de información de Editoria11y incluye botones siguiente/anterior para saltar directamente a los problemas. Si Editoria11y cree que la información emergente del problema está actualmente invisible, avisará al usuario que algo va mal y luego resaltará el primer ancestro visible; por ejemplo, el div alrededor de un acordeón.</p>
+                    <p>Muchos componentes interactivos (pestañas, deslizadores, acordeones) ocultan contenido. El panel de información de Editoria11y incluye botones siguiente/anterior para saltar directamente a los problemas. Si Editoria11y cree que la información emergente del problema está actualmente invisible, avisará al usuario de que algo va mal y luego resaltará el primer ancestro visible; por ejemplo, el div alrededor de un acordeón.</p>
 
                     <p>Lo ideal es que tu tema haga visibles esos elementos antes de que se ejecute la verificación de visibilidad de Editoria11y, para que todo funcione como por arte de magia para tus usuarios: los carruseles avanzan automáticamente y los acordeones se abren para mostrar el problema.</p>
 
@@ -342,7 +342,7 @@ document.addEventListener('ed11yPop', e => {
     }
 }) --></code></pre>
 
-                    <p>Para revelar contenido solo al saltar a un <strong><em>consejo específico</em></strong> mediante el botón "siguiente" del panel (p. ej., en una pestaña cerrada o la siguiente diapositiva del carrusel), necesitarás establecer tanto <code>hiddenHandlers</code> con los selectores CSS relevantes como <code>checkVisible</code> en TRUE en tus parámetros. Luego añade un listener de eventos para el evento <code>ed11yShowHidden</code>. Este se lanza si Editoria11y reconoce que un consejo está dentro de un contenedor con uno de los selectores <code>hiddenHandlers</code> proporcionados en la lista de opciones. Este evento JS incluirá el ID del consejo que está a punto de abrir. Editoria11y hará entonces una breve pausa después de despachar este evento para dar tiempo a tu JS de hacer visible el elemento.</p>
+                    <p>Para revelar contenido solo al saltar a un <strong><em>consejo específico</em></strong> mediante el botón "siguiente" del panel (p. ej., en una pestaña cerrada o la siguiente diapositiva del carrusel), necesitarás establecer tanto <code>hiddenHandlers</code> con los selectores CSS relevantes como <code>checkVisible</code> en TRUE en tus parámetros. Luego añade un listener de eventos para el evento <code>ed11yShowHidden</code>. Este se lanza si Editoria11y reconoce que un consejo está dentro de un contenedor con uno de los selectores <code>hiddenHandlers</code> proporcionados en la lista de opciones. Este evento JS incluirá el ID del consejo que está a punto de abrir. Editoria11y hará entonces una breve pausa después de emitir este evento para dar tiempo a tu JS de hacer visible el elemento.</p>
 
                     <p>Aquí hay un ejemplo de una implementación de Penn State. Busca el elemento que coincide con el ID proporcionado, luego encuentra su contenedor de componente interactivo padre y activa su evento para activar su conmutador:</p>
                     <pre class="language-javascript"><code><!--context.addEventListener('ed11yShowHidden', e => {
@@ -353,7 +353,7 @@ document.addEventListener('ed11yPop', e => {
     .closest('[data-interactive-component]')
     .dispatchEvent(new CustomEvent('component:activate'));
 }); --></code></pre>
-                    <p>Última nota: algunos temas simplemente no son compatibles con la verificación de visibilidad; por ejemplo, el contenedor <code>&lt;main&gt;</code> tiene una altura de 0px. En esos sitios se debe deshabilitar toda verificación de visibilidad estableciendo <code>checkVisible</code> en false.</p>
+                    <p>Última nota: algunos temas simplemente no son compatibles con la verificación de visibilidad; por ejemplo, el contenedor <code>&lt;main&gt;</code> tiene una altura de 0px. En esos sitios se debe deshabilitar toda la verificación de visibilidad estableciendo <code>checkVisible</code> en false.</p>
 
                 </section>
 

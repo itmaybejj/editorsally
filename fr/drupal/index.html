@@ -63,14 +63,14 @@
 
               <figure class="figure my-4 rounded shadow mb-5 border">
                 <img loading="lazy" class="figure-img img-fluid" src="/assets/images/3x-dashboard.png" height="765" width="1600" alt="Tableau de bord de rapports affichant les problèmes récents et les pages ayant le plus de problèmes." />
-                <figcaption class="figure-caption p-3 pt-2 fs-6">Un tableau de bord à l'échelle du site fournit des rapports filtrables et exportables sur les alertes et les rejets.</figcaption>
+                <figcaption class="figure-caption p-3 pt-2 fs-6">Un tableau de bord global fournit des rapports filtrables et exportables sur les alertes et les rejets.</figcaption>
               </figure>
 
               <p>Ainsi que :</p>
               <ul>
                 <li>Une configuration de départ qui ignore automatiquement les éléments Drupal, CKEditor, Gutenberg, Link Purpose et External Link, réagit aux modifications lors de l'édition dans des conteneurs modaux, et positionne automatiquement la barre d'outils pour éviter le chevauchement avec les éléments Klaro et Same Page Preview.</li>
                 <li>Une configuration basée sur les rôles pour déterminer quels utilisateurs verront le vérificateur, quels utilisateurs peuvent rejeter les alertes, et quels utilisateurs peuvent consulter les rapports à l'échelle du site.</li>
-                <li>Un robot d'exploration local pour actualiser le tableau de bord après des modifications majeures de thème. <em>(CSA uniquement)</em></li>
+                <li>Un robot d'exploration local pour actualiser le tableau de bord après des modifications majeures du thème. <em>(CSA uniquement)</em></li>
                 <li>Une configuration séparée auteur/développeur avec des tests distincts (~30/~80) et des listes de problèmes séparées. <em>(CSA uniquement)</em></li>
               </ul>
 
@@ -78,7 +78,7 @@
 
             </section>
             <h2>Installation et étapes clés de configuration</h2>
-            <p>Le <a href="https://www.drupal.org/project/editoria11y/">programme d'installation</a> sur Drupal.org comprend plusieurs modules :</p>
+            <p>Le <a href="https://www.drupal.org/project/editoria11y/">paquet d'installation</a> disponible sur Drupal.org comprend plusieurs modules :</p>
             <ul>
               <li>
                 Editoria11y : le vérificateur de contenu principal et le tableau de bord.
@@ -95,7 +95,7 @@
               <li><strong>Vérifiez les permissions.</strong> Les auteurs de confiance devraient avoir les permissions « Marquer OK », « Marquer comme ignoré » et « Voir le tableau de bord ».</li>
               <li><strong>Vérifiez les pages clés pour les alertes répétitives ou inutiles.</strong> Marquez-les comme OK dans l'infobulle, ou ajustez la configuration pour ignorer les éléments par sélecteur.</li>
               <li>Recherchez les infobulles difficiles à voir — hors écran, tronquées, derrière d'autres éléments, ou sur des éléments masqués. Utilisez les conseils de la section « Corriger le positionnement des infobulles » ci-dessous.</li>
-              <li>Si le site a déjà du contenu et que vous avez un abonnement CSA, visitez l'onglet « Actualiser » du tableau de bord, et <strong>explorez le site</strong> pour pré-charger les rapports. C'est facultatif, mais les pages plus anciennes n'apparaîtront pas dans les rapports tant qu'elles n'auront pas été explorées ou visitées par un utilisateur connecté.</li>
+              <li>Si le site a déjà du contenu et que vous avez un abonnement CSA, visitez l'onglet « Actualiser » du tableau de bord et <strong>lancez une exploration du site</strong> pour pré-charger les rapports. C'est facultatif, mais les pages anciennes n'apparaîtront pas dans les rapports tant qu'elles n'auront pas été explorées ou visitées par un utilisateur connecté.</li>
             </ol>
             <p>Regardez une <a href="https://youtu.be/uYvNYPg38nU?si=dqADyWpTtOhniHTP&t=696">vidéo de présentation des options de configuration</a> (v2.4).</p>
 
@@ -105,7 +105,7 @@
             <p>Bien que vous puissiez désactiver complètement des tests, il est généralement préférable de masquer les alertes sur des éléments ou des pages spécifiques.</p>
             <hr>
             <p>
-              Lors de chaque exécution de test, Editoria11y rassemble un ensemble unique d'éléments à partir du paramètre « Vérifier le contenu dans ces conteneurs », puis les filtre plusieurs fois. Voici à quoi ressemble une exécution de test :
+              Lors de chaque exécution de test, Editoria11y rassemble un ensemble d'éléments à partir du paramètre « Vérifier le contenu dans ces conteneurs », puis les filtre plusieurs fois. Voici à quoi ressemble une exécution de test :
             </p>
             <ol>
               <li>
@@ -141,7 +141,7 @@
               <li>« Ignorer » est enregistré comme préférence utilisateur : l'alerte est désormais masquée pour l'utilisateur actuel, mais uniquement pour lui.</li>
               <li>« Marquer OK » masque l'alerte pour tous les utilisateurs.</li>
             </ul>
-            <p>La possibilité pour un utilisateur de rejeter une alerte est contrôlée au niveau du rôle dans les permissions utilisateur de Drupal. <strong>La plupart des auteurs devraient pouvoir rejeter les alertes</strong>. Il est inutile d'assigner une vérification manuelle à quelqu'un s'il ne peut pas marquer l'élément comme ayant été vérifié.</p>
+            <p>La possibilité pour un utilisateur de rejeter une alerte est contrôlée au niveau du rôle dans les permissions utilisateur de Drupal. <strong>La plupart des auteurs devraient pouvoir rejeter les alertes</strong>. Il est inutile de confier une vérification manuelle à quelqu'un qui ne peut pas marquer l'élément comme vérifié.</p>
 
             <h3 id="roots">Ignorer des éléments</h3>
             <p>Ces deux paramètres de configuration sont les plus importants !</p>

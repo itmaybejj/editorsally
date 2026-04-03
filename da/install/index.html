@@ -8,7 +8,7 @@
     <link rel="shortcut icon" href="/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <meta charset="utf-8" />
-    <title>Install — Editoria11y</title>
+    <title>Installation — Editoria11y</title>
     <link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
     <link href="/assets/prism/prism.css" rel="stylesheet" />
     <link href="/assets/theme.css" rel="stylesheet" />
@@ -96,7 +96,7 @@
                     <h2>Parametre</h2>
                     <p>En komplet implementering vil kun blive kaldt for indloggede redaktører (du vil ikke have, at dine besøgende ser din tjekker!), og kan tilsidesætte alle <a href="https://github.com/itmaybejj/editoria11y/blob/3.0.x/src/js/utils/ed11y-default-options.js" class="liinternal"><strong>standardparametrene</strong></a>.</p>
                     <p>Bemærk, at der er angivet standardværdier for alle parametre; medtag kun dem, du vil tilsidesætte.</p>
-                    <p>En stærkt tilpasset implementering kunne se saadan ud:</p>
+                    <p>En stærkt tilpasset implementering kunne se s&aring;dan ud:</p>
                     <pre class="language-javascript"><code><!--const ed11y = new Ed11y.Ed11y({
   // Define content regions
   checkRoot: 'main, .footer-content-zone',
@@ -248,7 +248,7 @@ document.addEventListener('ed11yPop', e => {
 
                     <p>Dette kan bruges til at kalde så mange scripts med brugerdefinerede tests, som du ønsker, og de kan tilføje deres resultater til resultatarrayet, før tipsene tegnes.</p>
 
-                    <p>Hvis du f.eks. ville oprette dette tip for at markere links, der er indsat fra e-mails med slørede URL'er:</p>
+                    <p>Hvis du f.eks. ville oprette dette tip for at markere links, der er indsat fra e-mails med maskerede URL'er:</p>
 
                     <figure class="wp-block-image size-full"><img loading="lazy" data-recalc-dims="1" decoding="async" width="580" height="462" src="https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2023/12/Screenshot-2023-12-06-at-5.13.38-PM.png?resize=580%2C462&amp;ssl=1" alt="Tip med teksten &quot;URL is Safe Link Encoded&quot;" class="wp-image-323" srcset="https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2023/12/Screenshot-2023-12-06-at-5.13.38-PM.png?w=1056&amp;ssl=1 1056w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2023/12/Screenshot-2023-12-06-at-5.13.38-PM.png?resize=600%2C478&amp;ssl=1 600w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2023/12/Screenshot-2023-12-06-at-5.13.38-PM.png?resize=768%2C612&amp;ssl=1 768w" sizes="(max-width: 580px) 100vw, 580px"></figure>
 
@@ -331,7 +331,7 @@ document.addEventListener('ed11yPop', e => {
 
                     <p>Ideelt set vil dit tema gøre disse elementer synlige, før Editoria11ys synlighedstjek kører, så alt bare virker som magi for dine brugere -- karruseller spoler automatisk frem, og harmonikaelementer åbner sig automatisk for at vise problemet.</p>
 
-                    <p>For at gøre dette, når panelet første åbnes (f.eks. at folde <strong><em>alle</em></strong> harmonikpaneler med problemer ud), skal du tilføje en JS-hændelseslytter til <code>ed11yPanelOpened</code>, derefter køre en querySelectorAll for relevante <code>ed11y-element-result</code>-elementer og derefter udløse den funktion, dit tema bruger til at afsløre den del af siden.</p>
+                    <p>For at gøre dette, når panelet først åbnes (f.eks. at folde <strong><em>alle</em></strong> harmonikapaneler med problemer ud), skal du tilføje en JS-hændelseslytter til <code>ed11yPanelOpened</code>, derefter køre en querySelectorAll for relevante <code>ed11y-element-result</code>-elementer og derefter udløse den funktion, dit tema bruger til at afsløre den del af siden.</p>
 
                     <p>Her er et jQuery-baseret eksempel. Når panelet åbnes, deaktiverer det en sticky menu (så elementer ikke dækkes), og søger derefter efter <code>ed11y-element-result</code>-elementer inde i lukkede harmonikaelementer og simulerer et klik på deres skifteknap:</p>
                     <pre class="language-javascript"><code><!--document.addEventListener("ed11yPanelOpened", function () {
@@ -344,7 +344,7 @@ document.addEventListener('ed11yPop', e => {
 
                     <p>For kun at afsløre indhold, når man springer til et <strong><em>specifikt</em></strong> tip via panelets "næste"-knap (f.eks. i en lukket fane eller næste karruselslide), skal du sætte både <code>hiddenHandlers</code> til relevante CSS-selektorer og <code>checkVisible</code> til TRUE i dine parametre. Tilføj derefter en hændelseslytter til <code>ed11yShowHidden</code>-hændelse. Denne udsendes, hvis Editoria11y genkender, at et tip er inde i en container med en af de angivne <code>hiddenHandlers</code>-selektorer i indstillingslisten. Denne JS-hændelse vil indeholde ID'et på det tip, der er ved at blive åbnet. Editoria11y vil derefter holde en kort pause efter udsendelsen af hændelse for at give din JavaScript tid til at gøre elementet synligt.</p>
 
-                    <p>Her er et eksempel fra en Penn State-implementering. Det finder elementet, der matcher det angivne ID, finder derefter dets overordnede interaktive komponentcontainer og udloser dens hændelse for at aktivere dens skiftefunktion:</p>
+                    <p>Her er et eksempel fra en Penn State-implementering. Det finder elementet, der matcher det angivne ID, finder derefter dets overordnede interaktive komponentcontainer og udl&oslash;ser dens hændelse for at aktivere dens skiftefunktion:</p>
                     <pre class="language-javascript"><code><!--context.addEventListener('ed11yShowHidden', e => {
   if (!e.detail.viaJump) {
        return;

@@ -306,11 +306,11 @@
       document.querySelector('#price-result .btn').href = '#';
       document.querySelector('#enterprise .btn').href = '#';
       document.querySelector('#individual .btn').className = 'btn btn-secondary';
-      document.querySelector('#individual .btn').title = 'Coming soon';
+      document.querySelector('#individual .btn').textContent += ' (Coming soon)';
       document.querySelector('#price-result .btn').className = 'btn btn-secondary';
-      document.querySelector('#price-result .btn').title = 'Coming soon';
+      document.querySelector('#price-result .btn').textContent += ' (Coming soon)';
       document.querySelector('#enterprise .btn').className = 'btn btn-secondary';
-      document.querySelector('#enterprise .btn').title = 'Coming soon';
+      document.querySelector('#enterprise .btn').textContent += ' (Coming soon)';
 
 
     }

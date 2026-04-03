@@ -57,20 +57,20 @@
               </figure>
 
               <figure class="figure my-4 rounded shadow border" style="max-width: 600px;">
-                <img loading="lazy" src="/assets/images/3x-generic-tip.png" class="figure-img img-fluid" height="798" width="1278" alt="Hinweis zeigt an, dass ein Link nur mit „Hier klicken" benannt ist."/>
-                <figcaption class="figure-caption p-3 pt-2 ps-5 fs-6">Tooltips beschreiben das Problem mit Schaltflächen, um in den Seiten- oder Layout-Editor zu wechseln, diesen Hinweis zu ignorieren (für den aktiven Benutzer) oder als OK zu markieren (für alle Benutzer). Je nach Kontext und Berechtigungen können einige Hinweise auch ein Menü „Ähnliche Hinweise" anzeigen, mit Optionen, mehrere Hinweise auf derselben Seite als OK zu markieren, oder dasselbe Element auf allen Seiten als OK zu markieren.</figcaption>
+                <img loading="lazy" src="/assets/images/3x-generic-tip.png" class="figure-img img-fluid" height="798" width="1278" alt="Hinweis zeigt an, dass ein Link nur „Hier klicken" als Linktext hat."/>
+                <figcaption class="figure-caption p-3 pt-2 ps-5 fs-6">Tooltips beschreiben das Problem und bieten Schaltflächen, um in den Seiten- oder Layout-Editor zu wechseln, diesen Hinweis zu ignorieren (für den aktiven Benutzer) oder als OK zu markieren (für alle Benutzer). Je nach Kontext und Berechtigungen können einige Hinweise auch ein Menü „Ähnliche Hinweise" anzeigen, mit Optionen, mehrere Hinweise auf derselben Seite als OK zu markieren oder dasselbe Element auf allen Seiten als OK zu markieren.</figcaption>
               </figure>
 
               <figure class="figure my-4 rounded shadow mb-5 border">
                 <img loading="lazy" class="figure-img img-fluid" src="/assets/images/3x-dashboard.png" height="765" width="1600" alt="Berichtsdashboard mit aktuellen Problemen und Seiten mit den meisten Problemen." />
-                <figcaption class="figure-caption p-3 pt-2 fs-6">Ein seitenweites Berichts-Dashboard bietet filterbare und exportierbare Berichte über Hinweise und Abweisungen.</figcaption>
+                <figcaption class="figure-caption p-3 pt-2 fs-6">Ein websiteweites Berichts-Dashboard bietet filterbare und exportierbare Berichte zu Hinweisen und Ausblendungen.</figcaption>
               </figure>
 
               <p>Sowie:</p>
               <ul>
-                <li>Starterkonfiguration, die automatisch Drupal-, CKEditor-, Gutenberg-, Linkzweck- und Externe-Link-Elemente ignoriert, auf Änderungen beim Bearbeiten in modalen Containern reagiert und die Symbolleiste automatisch so positioniert, dass sie sich nicht mit Klaro- und Same-Page-Preview-Elementen überschneidet.</li>
-                <li>Rollenbasierte Konfiguration dafür, welche Benutzer den Prüfer sehen, welche Benutzer Hinweise abweisen können und welche Benutzer seitenweite Berichte einsehen können.</li>
-                <li>Ein interner (lokaler) Crawler zum Aktualisieren des Dashboards nach größeren Theme-Änderungen. <em>(Nur CSA)</em></li>
+                <li>Starterkonfiguration, die automatisch Elemente von Drupal, CKEditor, Gutenberg, Link Purpose und External Link ignoriert, auf Änderungen beim Bearbeiten in modalen Containern reagiert und die Symbolleiste automatisch so positioniert, dass sie sich nicht mit Klaro- und Same-Page-Preview-Elementen überschneidet.</li>
+                <li>Rollenbasierte Konfiguration dafür, welche Benutzer den Prüfer sehen, welche Benutzer Hinweise ausblenden können und welche Benutzer websiteweite Berichte einsehen können.</li>
+                <li>Ein websiteinterner (lokaler) Crawler zum Aktualisieren des Dashboards nach umfangreichen Theme-Änderungen. <em>(Nur CSA)</em></li>
                 <li>Getrennte Autoren-/Entwicklerkonfiguration mit separaten Tests (~30/~80) und Problemlisten. <em>(Nur CSA)</em></li>
               </ul>
 
@@ -78,10 +78,10 @@
 
             </section>
             <h2>Installation und wichtige Einrichtungsschritte</h2>
-            <p>Das <a href="https://www.drupal.org/project/editoria11y/">gebündelte Installationspaket</a> auf Drupal.org enthält mehrere Module:</p>
+            <p>Der <a href="https://www.drupal.org/project/editoria11y/">gebündelte Installer</a> auf Drupal.org enthält mehrere Module:</p>
             <ul>
               <li>
-                Editoria11y: der Kerninhaltsprüfer und das Dashboard.
+                Editoria11y: der zentrale Inhaltsprüfer und das Dashboard.
               </li>
               <li>
                 Editoria11y CSA: Entwicklertests und Dashboard-Verwaltungswerkzeuge.
@@ -90,22 +90,22 @@
                 Editoria11y Export: CSV-Berichtswerkzeuge.
               </li>
             </ul>
-            <p>Installieren Sie wie jedes andere Modul und nehmen Sie dann diese wichtigen Schritte vor:</p>
+            <p>Installieren Sie es wie jedes andere Modul und führen Sie dann diese wichtigen Schritte durch:</p>
             <ol>
               <li><strong>Berechtigungen prüfen.</strong> Vertrauenswürdige Autoren sollten „Als OK markieren", „Als ignoriert markieren" und „Dashboard anzeigen" haben.</li>
-              <li><strong>Wichtige Seiten auf wiederholte oder unnötige Hinweise prüfen.</strong> Entweder im Tooltip als OK markieren oder die Konfiguration anpassen, um Elemente per Selektor zu ignorieren.</li>
+              <li><strong>Wichtige Seiten auf wiederkehrende oder wenig hilfreiche Hinweise prüfen.</strong> Entweder im Tooltip als OK markieren oder die Konfiguration anpassen, um Elemente per Selektor zu ignorieren.</li>
               <li>Nach schwer sichtbaren Hinweisen suchen – außerhalb des Bildschirms, abgeschnitten, hinter anderen Elementen oder auf verborgenen Elementen. Verwenden Sie die Tipps unter „Hinweispositionierung korrigieren" weiter unten.</li>
               <li>Wenn die Website bereits Inhalte hat und Sie ein CSA-Abonnement haben, besuchen Sie den Dashboard-Tab „Neu prüfen" und <strong>crawlen Sie die Website</strong>, um die Seitenberichte vorzuladen. Dies ist optional, aber ältere Seiten erscheinen erst in Berichten, wenn sie gecrawlt oder von einem angemeldeten Benutzer besucht wurden.</li>
             </ol>
-            <p>Sehen Sie sich eine <a href="https://youtu.be/uYvNYPg38nU?si=dqADyWpTtOhniHTP&t=696">Videoeinführung in die Konfigurationsoptionen</a> an (v2.4).</p>
+            <p>Hier finden Sie eine <a href="https://youtu.be/uYvNYPg38nU?si=dqADyWpTtOhniHTP&t=696">Videoeinführung zu den Konfigurationsoptionen</a> (v2.4).</p>
 
-            <h2 id="check-roots">Unnötige Hinweise ausblenden</h2>
+            <h2 id="check-roots">Wenig hilfreiche Hinweise ausblenden</h2>
             <p>
-              <strong>Gute Konfigurationen unterdrücken unnötige Hinweise, sodass sich Content-Autoren auf die Probleme konzentrieren können, die sie beheben sollten</strong>.</p>
-            <p>Obwohl Sie Tests ganz ausschalten können, ist es in der Regel besser, Hinweise für bestimmte Elemente oder Seiten auszublenden.</p>
+              <strong>Gute Konfigurationen unterdrücken wenig hilfreiche Hinweise, sodass sich Autoren auf die Probleme konzentrieren können, die sie tatsächlich beheben sollten</strong>.</p>
+            <p>Sie können Tests zwar ganz ausschalten, aber in der Regel ist es besser, Hinweise für bestimmte Elemente oder Seiten auszublenden.</p>
             <hr>
             <p>
-              Bei jedem Testdurchlauf sammelt Editoria11y eine einzige Menge von Elementen aus der Einstellung „Inhalt in diesen Containern prüfen" und filtert diese dann mehrfach. So sieht ein Testdurchlauf aus:
+              Bei jedem Testdurchlauf erfasst Editoria11y eine Menge von Elementen anhand der Einstellung „Inhalt in diesen Containern prüfen" und filtert diese dann mehrfach. So sieht ein Testdurchlauf aus:
             </p>
             <ol>
               <li>
@@ -134,14 +134,14 @@
               <li>Panel öffnen und Hinweise zeichnen, wenn die Konfiguration einer Auto-Öffnen-Einstellung entspricht.</li>
             </ol>
 
-            <h3 id="dismiss">Hinweise abweisen</h3>
-            <p>Tests können in der Bibliothek als Fehler oder Warnungen („manuelle Prüfungen") konfiguriert werden. Warnungen können abgewiesen werden. Am Fuß jedes Tooltips stehen zwei Arten von Abweisungen zur Verfügung:</p>
+            <h3 id="dismiss">Hinweise ausblenden</h3>
+            <p>Tests können in der Bibliothek als Fehler oder Warnungen („manuelle Prüfungen") konfiguriert werden. Warnungen können ausgeblendet werden. Am Fuß jedes Tooltips stehen zwei Arten von Ausblendungen zur Verfügung:</p>
             <div class="my-2" style="background: url(/assets/images/3x-generic-tip.png) 100% 98%; max-width: 600px; padding-top: 6%; background-size: 108%;"></div>
             <ul>
               <li>„Ignorieren" wird als Benutzerpräferenz gespeichert: Der Hinweis ist jetzt für den aktuellen Benutzer ausgeblendet, aber nur für diesen Benutzer.</li>
               <li>„Als OK markieren" blendet den Hinweis für alle Benutzer aus.</li>
             </ul>
-            <p>Ob ein Benutzer einen Hinweis abweisen kann, wird auf Rollenebene in den Drupal-Benutzerberechtigungen gesteuert. <strong>Die meisten Autoren sollten Hinweise abweisen dürfen</strong>. Es hat keinen Sinn, jemandem eine manuelle Prüfung zuzuweisen, wenn er das Element nicht als geprüft markieren kann.</p>
+            <p>Ob ein Benutzer einen Hinweis ausblenden kann, wird auf Rollenebene in den Drupal-Benutzerberechtigungen gesteuert. <strong>Die meisten Autoren sollten Hinweise ausblenden dürfen</strong>. Es hat keinen Sinn, jemandem eine manuelle Prüfung zuzuweisen, wenn er das Element nicht als geprüft markieren kann.</p>
 
             <h3 id="roots">Elemente ignorieren</h3>
             <p>Diese beiden Konfigurationseinstellungen sind die wichtigsten!</p>
@@ -160,7 +160,7 @@
               Setzen Sie das erste auf alle Teile des Seiteninhalts, den Content-Autoren bearbeiten können. Wenn sie z. B. den <code>main</code>-Inhaltsbereich, <code>.sidebar</code> und <code>.footer-column-two</code> bearbeiten können, setzen Sie diese Selektoren als Ihren Inhaltsprüfbereich.
             </p>
             <p>
-              Verwenden Sie das zweite, um Teilbereiche „auszublenden". Wenn <code>main</code> z. B. verschiedene Widgets und Einbettungen enthält, die nur Entwickler ändern können, listen Sie diese auf: <code>.widget-1, .social-embed</code>.
+              Verwenden Sie das zweite, um Teilbereiche „auszuschließen". Wenn <code>main</code> z. B. verschiedene Widgets und Einbettungen enthält, die nur Entwickler ändern können, listen Sie diese auf: <code>.widget-1, .social-embed</code>.
             </p>
             <p>Wenn Sie die getrennte Konfiguration verwenden, sehen Sie ein ähnliches Einstellungspaar auf dem Tab „Entwicklertests":</p>
             <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
@@ -199,9 +199,9 @@
               </div>
 
             </div>
-            <p>Das Wichtigste bei den Entwicklerprüfbereichen ist, dass sie <strong>nicht unabhängig</strong> von den Inhaltsprüfbereichen sind. In einer getrennten Konfiguration werden die Entwicklerbereiche geprüft und diese Ergebnisse dann <strong>gefiltert</strong>, um den Inhaltsbereichen zu entsprechen. Alle Bereiche, die für Entwickler ausgeschlossen sind, werden auch für Content-Editoren ausgeschlossen. Editierbare Inhaltsbereiche nicht ausschließen!</p>
+            <p>Das Wichtigste bei den Entwicklerprüfbereichen ist, dass sie <strong>nicht unabhängig</strong> von den Inhaltsprüfbereichen sind. In einer getrennten Konfiguration werden die Entwicklerbereiche geprüft und diese Ergebnisse dann <strong>gefiltert</strong>, um den Inhaltsbereichen zu entsprechen. Alle Bereiche, die für Entwickler ausgeschlossen sind, werden auch für Content-Editoren ausgeschlossen. Schließen Sie editierbare Inhaltsbereiche nicht aus!</p>
 
-            <p>Einige Tests erlauben eine präzisere Konfiguration, um nur bestimmte Hinweise für betroffene Elemente auszublenden. Suchen Sie unter:</p>
+            <p>Einige Tests erlauben eine präzisere Konfiguration, um nur bestimmte Hinweise bei betroffenen Elementen auszublenden. Zu finden unter:</p>
             <ul>
               <li>Inhaltsprüfungen: Zu prüfende Links</li>
               <li>Inhaltsprüfungen: Zu prüfende Einbettungen</li>
@@ -235,13 +235,13 @@
               Wenn Sie damit steuern möchten, welche Benutzer den Prüfer sehen, müssen Sie möglicherweise Ihr Theme anpassen, um eine Klasse auszugeben, z. B. <code>.user-247</code>
             </p>
 
-            <h2 id="dashboard">Seitenweite Ergebnisse verwalten</h2>
+            <h2 id="dashboard">Websiteweite Ergebnisse verwalten</h2>
             <section id="refresh">
               <h3 class="pt-3">Crawling und Ergebnisse aktualisieren</h3>
-              <p>Editoria11y ist ein <strong>Echtzeit-Überwachungswerkzeug, kein Crawler</strong>. Seine seitenweiten Berichte werden aktualisiert, wenn Autoren Seiten aufrufen, sodass regelmäßiges Crawling in der Regel nicht erforderlich ist. Das CSA-Modul <em>enthält</em> einen Crawler, der aber nur in diesen drei Situationen benötigt werden sollte:</p>
+              <p>Editoria11y ist ein <strong>Echtzeit-Überwachungswerkzeug, kein Crawler</strong>. Seine websiteweiten Berichte werden aktualisiert, wenn Autoren Seiten aufrufen, sodass regelmäßiges Crawling in der Regel nicht erforderlich ist. Das CSA-Modul <em>enthält</em> einen Crawler, der aber nur in diesen drei Situationen benötigt werden sollte:</p>
               <ol>
                 <li>
-                  Bei der erstmaligen Installation von Editoria11y auf einer bestehenden Website mit vielen Seiten. Seiten müssen besucht worden sein, bevor sie im Dashboard erscheinen, sodass ein schneller erster Crawl Zeit spart.
+                  Bei der erstmaligen Installation von Editoria11y auf einer bestehenden Website mit vielen Seiten. Seiten müssen erst besucht werden, bevor sie im Dashboard erscheinen, sodass ein schneller erster Crawl Zeit spart.
                 </li>
                 <li>
                   Größere Aktualisierungen von Themes oder Modulen können Probleme auf vielen Seiten beheben (oder verursachen), die erst nach dem Besuch oder Crawling sichtbar werden.
@@ -250,7 +250,7 @@
                   Massenaktionen in der Admin-Oberfläche wie das Löschen von Seiten oder Weiterleitungen hinterlassen oft Ergebnisse von Seiten, die nicht mehr existieren oder verschoben wurden. In diesen Fällen hilft es, die Wartungsaktionen des „Aktualisieren"-Tabs zu nutzen, um Seiten-URLs zu aktualisieren sowie gelöschte Seiten zu erkennen und zu entfernen.
                 </li>
               </ol>
-              <p>Während eines Crawls verlassen keine Daten Ihre Website. Der CSA-Crawler ist kein Cloud-Werkzeug; er verwendet Ihren Browser, um die Seiten Ihrer eigenen Website zu laden und zu prüfen. Der Nachteil dieses Ansatzes ist, dass <strong>Browser Hintergrundtabs pausieren</strong>. Sie müssen Ihren Computer während eines Crawls eingeschaltet und aktiv halten. Öffnen Sie ein neues Fenster für den Crawler und lassen Sie ihn als Vordergrund-Tab für dieses Fenster laufen. Sie können in einem anderen Fenster weiterarbeiten. Der Crawler aktualisiert seine Schätzung nach jedem Seiten-Batch.</p>
+              <p>Während eines Crawls verlassen keine Daten Ihre Website. Der CSA-Crawler ist kein Cloud-Werkzeug; er verwendet Ihren Browser, um die Seiten Ihrer eigenen Website zu laden und zu prüfen. Der Nachteil dieses Ansatzes ist, dass <strong>Browser Hintergrundtabs pausieren</strong>. Sie müssen Ihren Computer während eines Crawls eingeschaltet und wach halten. Öffnen Sie ein neues Fenster für den Crawler und lassen Sie es als Vordergrund-Tab in diesem Fenster geöffnet. Sie können in einem anderen Fenster weiterarbeiten. Der Crawler aktualisiert seine Schätzung nach jedem Seiten-Batch.</p>
             </section>
             <section id="reports">
               <h3>Berichte anzeigen</h3>
@@ -266,10 +266,10 @@
                   <strong>Hinweise</strong> zeigt Probleme nach Typ.
                 </li>
                 <li>
-                  <strong>Abweisungen</strong> ermöglicht die Überwachung, ob Autoren korrekt abweisen, und verfügt über „Zurücksetzen"-Schaltflächen zum Wiederherstellen abgewiesener Hinweise.
+                  <strong>Ausblendungen</strong> ermöglicht die Überwachung, ob Autoren korrekt ausblenden, und bietet „Zurücksetzen"-Schaltflächen zum Wiederherstellen ausgeblendeter Hinweise.
                 </li>
                 <li>
-                  <strong>Export</strong> enthält Versionen der Seiten-, Hinweis- und Abweisungsberichte, die gefiltert werden können, um CSV-Downloads vorzubereiten. <em>Bereitgestellt vom CSV-Export-Untermodul</em>
+                  <strong>Export</strong> enthält Versionen der Seiten-, Hinweis- und Ausblendungsberichte, die gefiltert werden können, um CSV-Downloads vorzubereiten. <em>Bereitgestellt vom CSV-Export-Untermodul</em>
                 </li>
                 <li>
                   <strong>Aktualisieren</strong> enthält Dashboard-Verwaltungswerkzeuge zum Entfernen von Hinweisen von gelöschten Seiten, Entfernen von Hinweisen von parametrisierten Pseudo-Seiten wie /search?query=beispiel, Aktualisieren gespeicherter Seitentitel und URLs sowie Ausführen eines manuellen Crawls. <em>Bereitgestellt vom CSA-Untermodul</em>
@@ -288,7 +288,7 @@
                   <textarea data-drupal-selector="edit-hidden-handlers" aria-describedby="edit-hidden-handlers--description" id="edit-hidden-handlers" name="hidden_handlers" rows="1" cols="60" class="form-textarea resize-vertical form-element form-element--type-textarea form-element--api-textarea"></textarea>
               </div>
             <p>Manche Themes haben Spalten oder Widgets, die horizontalen oder vertikalen Overflow ausblenden. Die Bibliothek erkennt automatisch, wenn ein Toggle außerhalb des sichtbaren Teils der <strong>Seite</strong> fallen würde. Wenn Sie der Bibliothek mitteilen, dass bestimmte Container Overflow ausblenden, versucht sie auch, Hinweise für Elemente in diesen Containern innerhalb ihrer Grenzen zu positionieren.</p>
-            <p>Manche Themes haben Widgets, die die Sichtbarkeit von Inhalten umschalten, wie Akkordeons, Tabs und Diashows. Hinweise innerhalb dieser Elemente werden ebenfalls ausgeblendet. Wenn Sie eine Liste von Selektoren für diese Widgets bereitstellen, pausiert Editoria11y kurz, wenn ein Benutzer versucht, mit einer Vor- oder Zurück-Schaltfläche zu diesen Hinweisen zu springen. Drupal-Themes und -Module können dann den Anweisungen aus dem Bibliotheksabschnitt zu <a href="/de/install/#hidden-content">verborgenen Inhalten</a> folgen, um die verborgenen Inhalte anzuzeigen.</p>
+            <p>Manche Themes haben Widgets, die die Sichtbarkeit von Inhalten umschalten, wie Akkordeons, Tabs und Diashows. Hinweise in diesen Elementen werden ebenfalls verborgen. Wenn Sie eine Liste von Selektoren für diese Widgets bereitstellen, pausiert Editoria11y kurz, wenn ein Benutzer versucht, mit einer Vor- oder Zurück-Schaltfläche zu diesen Hinweisen zu springen. Drupal-Themes und -Module können dann den Anweisungen aus dem Bibliotheksabschnitt zum <a href="/de/install/#hidden-content">Umgang mit verborgenen Inhalten</a> folgen, um die verborgenen Inhalte sichtbar zu machen.</p>
 
             <h2 id="runtime">Eigene Konfiguration schreiben</h2>
             <p>In PHP: Das Drupal-Modul stellt einen <code>hook_editoria11y_alter_config</code> bereit, um den Inhalt von <code>drupalSettings.editoria11y</code> in einem Modul oder Theme zu ändern. Zum Beispiel:</p>
@@ -316,7 +316,7 @@ function MY_MODULE_editoria11y_alter_config(array &$attach, CacheableMetadata $c
     $attach['allow_ok'] = 'okAll';
   }
 }--></code></pre>
-            <p>Das Ändern von <code>drupalSettings</code> hilft nur, wenn das Modul-JS bereits so eingerichtet ist, dass es diesen Wert an die Bibliothek weitergibt. Um zusätzliche Parameter hinzuzufügen, müssen Sie das JS-<code>options</code>-Objekt direkt ändern. Das Modul prüft auf eine globale JS-Variable namens <code>editoria11yOptionsOverride</code>. Wenn diese gesetzt ist, übergibt es das <code>options</code>-Objekt an eine von Ihnen in Ihrem Modul oder Theme bereitgestellte <code>editoria11yOptions</code>-Funktion. Sie können nun alle <a href="https://editorsally.ddev.site/en/install/#params">Bibliotheksparameter</a> setzen.</p>
+            <p>Das Ändern von <code>drupalSettings</code> hilft nur, wenn das Modul-JS bereits so eingerichtet ist, dass es diesen Wert an die Bibliothek weitergibt. Um zusätzliche Parameter hinzuzufügen, müssen Sie das JS-<code>options</code>-Objekt direkt ändern. Das Modul prüft auf eine globale JS-Variable namens <code>editoria11yOptionsOverride</code>. Wenn diese gesetzt ist, übergibt es das <code>options</code>-Objekt an eine von Ihnen in Ihrem Modul oder Theme bereitgestellte <code>editoria11yOptions</code>-Funktion. Sie können nun alle <a href="/de/install/#params">Bibliotheksparameter</a> setzen.</p>
             <pre class="language-javascript"><code><!--var editoria11yOptionsOverride = true;
 var editoria11yOptions = function(options) {
   // You now have access to the processed options object that will be passed to the library.
@@ -336,7 +336,7 @@ var editoria11yOptions = function(options) {
 --></code></pre>
             <section id="custom-tests">
             <h2>Eigene Tests schreiben</h2>
-            <p>Erhöhen Sie zunächst in der Modulkonfiguration die Option „Benutzerdefinierte Tests" um 1, damit das Modul weiß, dass es auf die Tests warten soll.</p>
+            <p>Setzen Sie zunächst in der Modulkonfiguration die Option „Benutzerdefinierte Tests" auf 1, damit das Modul auf die Tests wartet.</p>
             <p>Erstellen Sie dann eine Drupal-JS-Bibliothek mit Ihren Tests in Ihrem Theme oder Modul, anhand des <a href="/de/install/#custom-tests">Bibliotheksleitfadens zum Schreiben benutzerdefinierter Tests</a>.</p>
             <p>Hier ist ein funktionierendes Beispiel aus Princeton für einen benutzerdefinierten Test, der Safe Links markiert. Beachten Sie, dass er über <code>Drupal.Ed11y.</code> auf die Editoria11y-Klasse zugreift.</p>
             <pre class="language-javascript"><code><!--const psEd11yCustomTests = function() {

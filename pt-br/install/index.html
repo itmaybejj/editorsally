@@ -138,15 +138,15 @@
   }
 
 }); --></code></pre>
-                    <p>Integrações prontas para uso frequentemente definem essas variáveis dinamicamente — por exemplo, carregando páginas no modo “assertive” quando foram editadas recentemente, e voltando para o modo “polite” após alguns minutos.</p>
+                    <p>Integrações prontas para uso costumam definir essas variáveis dinamicamente — por exemplo, carregando páginas no modo “assertive” quando foram editadas recentemente e voltando para o modo “polite” após alguns minutos.</p>
                 </section>
 
                 <section id="theme">
                     <h2>Tematização</h2>
 
-                    <p>Vários parâmetros permitem selecionar um tema, substituir cores e injetar CSS.</p>
+                    <p>Diversos parâmetros permitem selecionar um tema, substituir cores e injetar CSS.</p>
 
-                    <p>Inclua apenas os parâmetros que você precisa substituir para facilitar atualizações futuras.</p>
+                    <p>Inclua apenas os parâmetros que deseja substituir para facilitar atualizações futuras.</p>
                     <pre class="language-javascript"><code><!--// Add custom CSS file
 cssUrls: ['/css/editoria11y.min.css', '/css/custom.css'],
 theme : 'darkTheme', // Select base theme
@@ -172,9 +172,9 @@ baseFontFamily: '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica N
                 <section id="js-events">
                     <h2 class="wp-block-heading has-text-align-left has-secondary-background-color has-background has-large-font-size">Eventos JS úteis</h2>
 
-                    <p>Desenvolvedores de temas podem capturar esses eventos para reagir e modificar a página conforme necessário.</p>
+                    <p>Desenvolvedores de temas podem escutar esses eventos para reagir e modificar a página conforme necessário.</p>
 
-                    <p>Na ordem típica de ocorrência…</p>
+                    <p>Na ordem típica em que ocorrem...</p>
 
                     <ul class="wp-block-list">
                         <li><strong><code>ed11yRunCustomTests</code></strong>: disparado quando o objeto Results está pronto para receber resultados personalizados. Observe que o parâmetro customTests deve ser definido com o número de funções de teste personalizadas que você executará (…provavelmente uma…) para que este evento seja disparado. Detalhes na seção seguinte.</li>
@@ -246,7 +246,7 @@ document.addEventListener('ed11yPop', e => {
 
                     <p>Se o parâmetro <strong><em>customTests</em></strong> for um <strong><em>número</em></strong>, o Editoria11y irá disparar um evento “ed11yRunCustomTests” durante a verificação e, em seguida, pausar por até 500ms aguardando esse número de eventos “<code>ed11yResume</code>”.</p>
 
-                    <p>Isso pode ser aproveitado para chamar quantos scripts com testes personalizados você desejar, que podem inserir seus resultados no array de resultados antes que as dicas sejam renderizadas.</p>
+                    <p>Isso pode ser utilizado para chamar quantos scripts com testes personalizados você quiser, que podem inserir seus resultados no array de resultados antes que as dicas sejam renderizadas.</p>
 
                     <p>Por exemplo, se você quisesse criar esta dica para sinalizar links colados de e-mails com URLs ofuscadas:</p>
 
@@ -261,7 +261,7 @@ document.addEventListener('ed11yPop', e => {
 
                         <li>Definir a mensagem da dica</li>
 
-                        <li>Disparar o evento “resume” para que o Editoria11y renderize a dica:</li>
+                        <li>Disparar o evento “resume” para o Editoria11y renderizar a dica:</li>
                     </ol>
 
                     <pre class="language-javascript"><code><!--document.addEventListener('ed11yRunCustomTests', function() {
@@ -327,13 +327,13 @@ document.addEventListener('ed11yPop', e => {
                     <h2>Lidando com alertas em conteúdo oculto ou com restrição de tamanho</h2>
 
 
-                    <p>Muitos componentes interativos (abas, sliders, acordeões) ocultam conteúdo. O painel de informações do Editoria11y inclui botões de próximo/anterior para ir diretamente aos problemas. Se o Editoria11y entender que a dica de ferramenta do problema está invisível no momento, ele alertará o usuário sobre o problema e destacará o primeiro ancestral visível — por exemplo, a div ao redor de um acordeão.</p>
+                    <p>Muitos componentes interativos (abas, sliders, acordeões) ocultam conteúdo. O painel de informações do Editoria11y inclui botões de próximo/anterior para ir diretamente aos problemas. Se o Editoria11y detectar que a dica de ferramenta do problema está invisível no momento, ele alertará o usuário sobre o problema e destacará o primeiro ancestral visível — por exemplo, a div ao redor de um acordeão.</p>
 
-                    <p>O ideal é que o seu tema torne esses elementos visíveis antes que a verificação de visibilidade do Editoria11y seja executada, de modo que tudo funcione como mágica para seus usuários — carrosséis avançam automaticamente e acordeões se abrem sozinhos para exibir o problema.</p>
+                    <p>O ideal é que o seu tema torne esses elementos visíveis antes que a verificação de visibilidade do Editoria11y seja executada, para que tudo funcione como mágica para seus usuários — carrosséis avançam automaticamente e acordeões se abrem sozinhos para exibir o problema.</p>
 
                     <p>Para fazer isso quando o painel é aberto pela primeira vez (por exemplo, desdobrando <strong><em>todos</em></strong> os painéis de acordeão com problemas), adicione um listener de evento JS para <code>ed11yPanelOpened</code>, faça um querySelectorAll para os elementos <code>ed11y-element-result</code> relevantes e acione a função que o seu tema usa para revelar essa parte da página.</p>
 
-                    <p>Aqui está um exemplo baseado em jQuery. Quando o painel abre, ele desativa um menu fixo (para que os elementos não fiquem cobertos), depois procura por quaisquer elementos <code>ed11y-element-result</code> dentro de itens de acordeão fechados e simula um clique no botão de alternância:</p>
+                    <p>Aqui está um exemplo baseado em jQuery. Quando o painel abre, ele desativa um menu fixo (para que os elementos não fiquem encobertos) e depois procura por quaisquer elementos <code>ed11y-element-result</code> dentro de itens de acordeão fechados e simula um clique no botão de alternância:</p>
                     <pre class="language-javascript"><code><!--document.addEventListener("ed11yPanelOpened", function () {
   $('body').addClass('no-stick');
   $('ed11y-element-result').each(function () {
@@ -353,7 +353,7 @@ document.addEventListener('ed11yPop', e => {
     .closest('[data-interactive-component]')
     .dispatchEvent(new CustomEvent('component:activate'));
 }); --></code></pre>
-                    <p>Última observação: alguns temas simplesmente não são compatíveis com a verificação de visibilidade — por exemplo, o contêiner <code>&lt;main&gt;</code> tem altura de 0px. Esses sites devem desativar toda a verificação de visibilidade definindo <code>checkVisible</code> como false.</p>
+                    <p>Observação final: alguns temas simplesmente não são compatíveis com a verificação de visibilidade — por exemplo, o contêiner <code>&lt;main&gt;</code> tem altura de 0px. Esses sites devem desativar toda a verificação de visibilidade definindo <code>checkVisible</code> como false.</p>
 
                 </section>
 

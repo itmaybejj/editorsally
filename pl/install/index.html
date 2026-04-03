@@ -94,8 +94,8 @@
 
                 <section id="params">
                     <h2>Parametry</h2>
-                    <p>Kompletna implementacja będzie wywoływana tylko dla zalogowanych redaktorów (odwiedzający stronę nie powinni widzieć narzędzia sprawdzającego!) i może nadpisywać dowolne z <a href="https://github.com/itmaybejj/editoria11y/blob/3.0.x/src/js/utils/ed11y-default-options.js" class="liinternal"><strong>domyślnych parametrów</strong></a>.</p>
-                    <p>Należy pamiętać, że wartości domyślne są dostępne dla wszystkich parametrów; należy uwzględniać tylko te, które chcemy nadpisać.</p>
+                    <p>Kompletna implementacja będzie wywoływana tylko dla zalogowanych redaktorów (odwiedzający nie powinni widzieć narzędzia sprawdzającego!) i może nadpisywać dowolne z <a href="https://github.com/itmaybejj/editoria11y/blob/3.0.x/src/js/utils/ed11y-default-options.js" class="liinternal"><strong>domyślnych parametrów</strong></a>.</p>
+                    <p>Pamiętaj, że wartości domyślne są dostępne dla wszystkich parametrów; uwzględniaj tylko te, które chcesz nadpisać.</p>
                     <p>Mocno dostosowana implementacja może wyglądać następująco:</p>
                     <pre class="language-javascript"><code><!--const ed11y = new Ed11y.Ed11y({
   // Define content regions
@@ -172,9 +172,9 @@ baseFontFamily: '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica N
                 <section id="js-events">
                     <h2 class="wp-block-heading has-text-align-left has-secondary-background-color has-background has-large-font-size">Przydatne zdarzenia JS</h2>
 
-                    <p>Twórcy motywów mogą podpiąć się pod te zdarzenia, aby reagować na nie i modyfikować stronę wedle potrzeb.</p>
+                    <p>Twórcy motywów mogą podpiąć się pod te zdarzenia, aby reagować na nie i modyfikować stronę w razie potrzeby.</p>
 
-                    <p>W typowej kolejności pojawiania się…</p>
+                    <p>W typowej kolejności występowania:</p>
 
                     <ul class="wp-block-list">
                         <li><strong><code>ed11yRunCustomTests</code></strong>: wywoływane, gdy obiekt Results jest gotowy na wstrzyknięcie niestandardowych wyników. Należy pamiętać, że parametr customTests musi być ustawiony na liczbę niestandardowych funkcji testowych, które będą uruchamiane (…prawdopodobnie jedna…), aby to zdarzenie zostało wywołane. Szczegóły w następnej sekcji.</li>
@@ -246,7 +246,7 @@ document.addEventListener('ed11yPop', e => {
 
                     <p>Jeśli parametr <strong><em>customTests</em></strong> jest <strong><em>liczbą</em></strong>, Editoria11y wywoła zdarzenie „ed11yRunCustomTests” podczas sprawdzania, a następnie wstrzyma się na maksymalnie 500 ms, nasłuchując takiej liczby zdarzeń „<code>ed11yResume</code>”.</p>
 
-                    <p>Można to wykorzystać do wywołania dowolnej liczby skryptów zawierających niestandardowe testy, które mogą przesyłać swoje wyniki do tablicy wyników zanim zostaną narysowane podpowiedzi.</p>
+                    <p>Można to wykorzystać do wywołania dowolnej liczby skryptów zawierających niestandardowe testy, które mogą przesyłać swoje wyniki do tablicy wyników, zanim podpowiedzi zostaną wyświetlone.</p>
 
                     <p>Na przykład, jeśli chcesz utworzyć taką podpowiedź, aby oznaczyć linki wklejone z e-maili z zaciemnionymi adresami URL:</p>
 
@@ -327,9 +327,9 @@ document.addEventListener('ed11yPop', e => {
                     <h2>Obsługa alertów na ukrytej lub ograniczonej rozmiarowo treści</h2>
 
 
-                    <p>Wiele interaktywnych komponentów (karty, suwaki, akordeony) ukrywa treść. Panel informacyjny Editoria11y zawiera przyciski następny/poprzedni, umożliwiające przejście bezpośrednio do problemów. Jeśli Editoria11y uzna, że podpowiedź dotycząca problemu jest aktualnie niewidoczna, powiadomi użytkownika o nieprawidłowości, a następnie podświetli pierwszego widocznego przodka – np. div wokół akordeonu.</p>
+                    <p>Wiele interaktywnych komponentów (karty, suwaki, akordeony) ukrywa treść. Panel informacyjny Editoria11y zawiera przyciski następny/poprzedni, umożliwiające przejście bezpośrednio do problemów. Jeśli Editoria11y uzna, że podpowiedź dotycząca problemu jest aktualnie niewidoczna, powiadomi użytkownika o problemie, a następnie podświetli pierwszego widocznego przodka – np. div wokół akordeonu.</p>
 
-                    <p>W idealnym przypadku motyw sprawi, że te elementy będą widoczne zanim zostanie uruchomione sprawdzenie widoczności Editoria11y, dzięki czemu wszystko działa jak magia dla użytkowników — karuzele automatycznie przechodzą dalej, a akordeony automatycznie otwierają się, aby wyświetlić problem.</p>
+                    <p>W idealnym przypadku motyw sprawi, że te elementy staną się widoczne, zanim zostanie uruchomione sprawdzenie widoczności Editoria11y, dzięki czemu wszystko działa automatycznie — karuzele automatycznie przechodzą dalej, a akordeony automatycznie otwierają się, aby wyświetlić problem.</p>
 
                     <p>Aby to zrobić przy pierwszym otwarciu panelu (np. rozwijając <strong><em>wszystkie</em></strong> panele akordeonu z problemami), dodaj nasłuchiwanie zdarzenia JS <code>ed11yPanelOpened</code>, następnie wykonaj querySelectorAll dla odpowiednich elementów <code>ed11y-element-result</code>, a potem wywołaj funkcję motywu używaną do ujawnienia tej części strony.</p>
 

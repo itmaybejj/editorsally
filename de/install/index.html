@@ -61,7 +61,7 @@
                     <h2>
                         Benutzerdefinierte Installation
                     </h2>
-                    <p>Um Ihre eigene Implementierung zu erstellen, <a href="https://github.com/itmaybejj/editoria11y" data-type="URL" data-id="https://github.com/itmaybejj/editoria11y" class="liinternal">laden Sie eine lokale Kopie herunter</a> (oder verweisen Sie auf eine <a href="https://cdn.jsdelivr.net/gh/itmaybejj/editoria11y@2/dist/editoria11y.min.js" class="liinternal">CDN-Version</a>) eines Sprachpakets, der minimierten JS-Datei und der CSS-Datei, und erstellen Sie dann eine neue „Ed11y”-Instanz.</p>
+                    <p>Um Ihre eigene Implementierung zu erstellen, <a href="https://github.com/itmaybejj/editoria11y" data-type="URL" data-id="https://github.com/itmaybejj/editoria11y" class="liinternal">laden Sie eine lokale Kopie herunter</a> (oder verweisen Sie auf eine <a href="https://cdn.jsdelivr.net/gh/itmaybejj/editoria11y@2/dist/editoria11y.min.js" class="liinternal">CDN-Version</a>) eines Sprachpakets, der minimierten JS-Datei und der CSS-Datei herunter und erstellen Sie dann eine neue „Ed11y”-Instanz.</p>
                     <p>Für <strong>ESM/JS-Modulimporte</strong>: </p>
                     <pre class="language-markup"><code><!--// Load CSS
 <link href="/dist/css/editoria11y.min.css?v=3.0" rel="stylesheet">
@@ -94,7 +94,7 @@
 
                 <section id="params">
                     <h2>Parameter</h2>
-                    <p>Eine vollständige Implementierung wird nur für angemeldete Editoren aufgerufen (Ihre Website-Besucher sollen den Prüfer ja nicht sehen!) und kann alle <a href="https://github.com/itmaybejj/editoria11y/blob/3.0.x/src/js/utils/ed11y-default-options.js" class="liinternal"><strong>Standardparameter</strong></a> überschreiben.</p>
+                    <p>Eine vollständige Implementierung wird nur für angemeldete Redakteure aufgerufen (Ihre Website-Besucher sollen den Prüfer ja nicht sehen!) und kann alle <a href="https://github.com/itmaybejj/editoria11y/blob/3.0.x/src/js/utils/ed11y-default-options.js" class="liinternal"><strong>Standardparameter</strong></a> überschreiben.</p>
                     <p>Beachten Sie, dass für alle Parameter Standardwerte vorhanden sind; geben Sie nur an, was Sie überschreiben möchten.</p>
                     <p>Eine stark angepasste Implementierung könnte so aussehen:</p>
                     <pre class="language-javascript"><code><!--const ed11y = new Ed11y.Ed11y({
@@ -138,13 +138,13 @@
   }
 
 }); --></code></pre>
-                    <p>Schlüsselfertige Integrationen setzen diese Variablen oft dynamisch — z. B. Seiten im „assertive”-Modus laden, wenn sie kürzlich bearbeitet wurden, und nach einigen Minuten wieder in den „polite”-Modus wechseln.</p>
+                    <p>Schlüsselfertige Integrationen setzen diese Variablen oft dynamisch -- z. B. werden Seiten im „assertive”-Modus geladen, wenn sie kürzlich bearbeitet wurden, und wechseln nach einigen Minuten wieder in den „polite”-Modus.</p>
                 </section>
 
                 <section id="theme">
                     <h2>Theming</h2>
 
-                    <p>Mehrere Parameter ermöglichen die Auswahl eines Themes, das Überschreiben von Farben und das Einbetten von CSS.</p>
+                    <p>Mehrere Parameter ermöglichen die Auswahl eines Themes, das Überschreiben von Farben und das Einbinden von CSS.</p>
 
                     <p>Geben Sie nur die Parameter an, die Sie überschreiben müssen, um zukünftige Updates zu erleichtern.</p>
                     <pre class="language-javascript"><code><!--// Add custom CSS file
@@ -174,22 +174,22 @@ baseFontFamily: '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica N
 
                     <p>Theme-Entwickler können diese Ereignisse nutzen, um auf Änderungen zu reagieren und die Seite bei Bedarf anzupassen.</p>
 
-                    <p>In typischer Reihenfolge des Auftretens…</p>
+                    <p>In typischer Reihenfolge ihres Auftretens:</p>
 
                     <ul class="wp-block-list">
-                        <li><strong><code>ed11yRunCustomTests</code></strong>: wird ausgelöst, wenn das Results-Objekt bereit ist, benutzerdefinierte Ergebnisse zu empfangen. Beachten Sie, dass der customTests-Parameter auf die Anzahl der auszuführenden benutzerdefinierten Testfunktionen gesetzt sein muss (…wahrscheinlich eine…), damit dieses Ereignis ausgelöst wird. Details im folgenden Abschnitt.</li>
+                        <li><strong><code>ed11yRunCustomTests</code></strong>: wird ausgelöst, wenn das Results-Objekt bereit ist, benutzerdefinierte Ergebnisse zu empfangen. Beachten Sie, dass der customTests-Parameter auf die Anzahl der auszuführenden benutzerdefinierten Testfunktionen gesetzt sein muss (vermutlich eine), damit dieses Ereignis ausgelöst wird. Details im folgenden Abschnitt.</li>
 
                         <li><strong><code>ed11yResults</code></strong>: wird ausgelöst, wenn alle Prüfungen abgeschlossen sind. API-Integrationen können nun Daten aus dem Ed11y.results-Objekt abrufen.</li>
 
                         <li><strong><code>ed11yPanelOpened</code></strong>: wird ausgelöst, wenn das Panel automatisch oder manuell geöffnet wird.</li>
 
-                        <li><strong><code>ed11yShowHidden</code></strong>: liefert eine <code>data-ed11y-result</code>-Nummer und einen <code>viaJump</code>-Boolean. Wird nur ausgelöst, wenn der Parameter „ed11yShowHidden” gesetzt ist <em><strong>und</strong></em> ein übergeordnetes Element des Elements mit einem Selektor übereinstimmt. Dient zur Anzeige von Hinweisen in noch nicht geöffneten Containern, z. B. Akkordeons, Tabs und Karussells. Verwendungsbeispiele im nächsten Abschnitt.</li>
+                        <li><strong><code>ed11yShowHidden</code></strong>: liefert eine <code>data-ed11y-result</code>-Nummer und einen <code>viaJump</code>-Boolean. Wird nur ausgelöst, wenn der Parameter „hiddenHandlers” gesetzt ist <em><strong>und</strong></em> ein übergeordnetes Element des Elements mit einem Selektor übereinstimmt. Dient zur Anzeige von Hinweisen in noch nicht geöffneten Containern, z. B. Akkordeons, Tabs und Karussells. Verwendungsbeispiele im nächsten Abschnitt.</li>
 
                         <li><strong><code>ed11yPop</code></strong>: liefert die <code>data-ed11y-result</code>-ID sowie Referenzen auf die <code>result</code>- und <code>tip</code>-Objekte. Wird ausgelöst, wenn ein Tooltip erscheint, sodass Sie die Hinweise zur Laufzeit ändern können.</li>
 
                         <li><strong><code>ed11yShut</code></strong>: liefert die <code>data-ed11y-result</code>-ID. Wird ausgelöst, wenn ein Tooltip geschlossen wird.</li>
 
-                        <li><strong><code>ed11yDismissalUpdate</code></strong>: liefert erweiterte Informationen, wenn ein Benutzer einen Hinweis abweist oder wiederherstellt. Wird für API-Integrationen verwendet. Das Ereignisobjekt enthält:
+                        <li><strong><code>ed11yDismissalUpdate</code></strong>: liefert erweiterte Informationen, wenn ein Benutzer einen Hinweis ausblendet oder wiederherstellt. Wird für API-Integrationen verwendet. Das Ereignisobjekt enthält:
                             <ul>
                                 <li><code>dismissPage</code></li>
 
@@ -201,23 +201,23 @@ baseFontFamily: '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica N
                             </ul>
                         </li>
                     </ul>
-                    <p>Beispiele finden sich in den folgenden Abschnitten.</p>
+                    <p>Beispiele finden Sie in den folgenden Abschnitten.</p>
                 </section>
 
                 <section id="modify-tips">
                     <h2 class="wp-block-heading has-secondary-background-color has-background has-large-font-size">Hinweise anpassen</h2>
 
-                    <p>Wenn Sie lediglich den Text eines Hinweises ändern möchten, können Einträge im globalen ed11yLang.en-Objekt (vor dem Aufruf der Bibliothek) oder Ed11y.M (nach dem Aufruf) direkt überschrieben werden. Z. B. im Drupal-Modul, wo wir das Sprachpaket als Drupal.ed11yLang aliasiert haben:</p>
+                    <p>Wenn Sie lediglich den Text eines Hinweises ändern möchten, können Einträge im globalen ed11yLang.en-Objekt (vor dem Aufruf der Bibliothek) oder in Ed11y.M (nach dem Aufruf) direkt überschrieben werden. Z. B. im Drupal-Modul, wo das Sprachpaket als Drupal.ed11yLang referenziert wird:</p>
 
                     <p><code>Drupal.ed11yLang.lang.testNames.title = “Please write shorter headings.”</code></p>
 
-                    <p>Dies gilt für alle <a href="https://github.com/itmaybejj/editoria11y/blob/3.0.x/src/lang/baseAll.js" data-type="link" data-id="https://github.com/itmaybejj/editoria11y/blob/2.3.x/js/ed11y-localization.js" class="liinternal">Standardschlüssel in der Lokalisierungsdatei</a> oder der aktiven sprachspezifischen Übersetzung.</p>
+                    <p>Dies gilt für alle <a href="https://github.com/itmaybejj/editoria11y/blob/3.0.x/src/lang/baseAll.js" data-type="link" data-id="https://github.com/itmaybejj/editoria11y/blob/2.3.x/js/ed11y-localization.js" class="liinternal">Standard-Schlüssel in der Lokalisierungsdatei</a> sowie für die aktive sprachspezifische Übersetzung.</p>
 
-                    <p>Das Drupal-Modul fügt den Hinweisen auch benutzerdefinierte Bearbeitungslinks hinzu, mithilfe des <code>editLinks</code>-Parameters. Beachten Sie „Seiteneditor” und „Layout-Editor:”</p>
+                    <p>Das Drupal-Modul fügt den Hinweisen auch benutzerdefinierte Bearbeitungslinks hinzu, mithilfe des <code>editLinks</code>-Parameters. Beachten Sie „Page editor” und „Layout editor”:</p>
 
-                    <figure class="wp-block-image size-full"><img loading="lazy" data-recalc-dims="1" fetchpriority="high" decoding="async" width="580" height="300" src="https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?resize=580%2C300&amp;ssl=1" alt="Tooltip mit eingefügten Links „Seiteneditor" und „Layout-Editor"." class="wp-image-523" srcset="https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?w=1290&amp;ssl=1 1290w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?resize=600%2C311&amp;ssl=1 600w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?resize=768%2C398&amp;ssl=1 768w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?resize=1200%2C621&amp;ssl=1 1200w" sizes="(max-width: 580px) 100vw, 580px"></figure>
+                    <figure class="wp-block-image size-full"><img loading="lazy" data-recalc-dims="1" fetchpriority="high" decoding="async" width="580" height="300" src="https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?resize=580%2C300&amp;ssl=1" alt="Tooltip mit eingefügten Links „Page editor" und „Layout editor"." class="wp-image-523" srcset="https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?w=1290&amp;ssl=1 1290w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?resize=600%2C311&amp;ssl=1 600w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?resize=768%2C398&amp;ssl=1 768w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?resize=1200%2C621&amp;ssl=1 1200w" sizes="(max-width: 580px) 100vw, 580px"></figure>
 
-                    <p>Eine vereinfachte Version des Codes, der diesen Parameter setzt:</p>
+                    <p>Eine vereinfachte Version des Codes, der diesen Parameter verwendet:</p>
                     <pre class="language-javascript"><code><!--const editLinks = document.createElement('div');
 const editLink = document.createElement('a');
       editLink.href="/node/1/edit";
@@ -226,7 +226,7 @@ editLinks.appendChild(editLink);
 const ed11y = new Ed11y({
                editLinks: editLinks,
               }); --></code></pre>
-                    <p>Das Drupal-Modul verwendet dann das <strong><code>ed11yPop</code></strong>-Ereignis, um den Bearbeitungslink kontextabhängig dynamisch ein- und auszublenden, wenn Hinweise angezeigt werden.</p>
+                    <p>Das Drupal-Modul nutzt dann das <strong><code>ed11yPop</code></strong>-Ereignis, um den Bearbeitungslink je nach Kontext dynamisch ein- und auszublenden, wenn Hinweise angezeigt werden.</p>
 
                     <p>Dieses Ereignis stellt Referenzen auf die <code>result</code>- und <code>tip</code>-Objekte bereit:</p>
                     <pre class="language-javascript"><code><!--// Listen for event
@@ -246,9 +246,9 @@ document.addEventListener('ed11yPop', e => {
 
                     <p>Wenn der <strong><em>customTests</em></strong>-Parameter eine <strong><em>Zahl</em></strong> ist, löst Editoria11y beim Prüfen ein „ed11yRunCustomTests”-Ereignis aus und wartet dann bis zu 500 ms auf diese Anzahl von „<code>ed11yResume</code>”-Ereignissen.</p>
 
-                    <p>Dies kann genutzt werden, um beliebig viele Skripte mit benutzerdefinierten Tests aufzurufen, die ihre Ergebnisse in das Ergebnis-Array einfügen können, bevor die Hinweise gezeichnet werden.</p>
+                    <p>Dies kann genutzt werden, um beliebig viele Skripte mit benutzerdefinierten Tests aufzurufen, die ihre Ergebnisse in das Ergebnis-Array einfügen, bevor die Hinweise dargestellt werden.</p>
 
-                    <p>Zum Beispiel, wenn Sie diesen Hinweis erstellen möchten, um Links zu markieren, die aus E-Mails mit verschleierten URLs eingefügt wurden:</p>
+                    <p>Wenn Sie beispielsweise diesen Hinweis erstellen möchten, um Links zu markieren, die aus E-Mails mit verschleierten URLs eingefügt wurden:</p>
 
                     <figure class="wp-block-image size-full"><img loading="lazy" data-recalc-dims="1" decoding="async" width="580" height="462" src="https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2023/12/Screenshot-2023-12-06-at-5.13.38-PM.png?resize=580%2C462&amp;ssl=1" alt="Tip reading &quot;URL is Safe Link Encoded&quot;" class="wp-image-323" srcset="https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2023/12/Screenshot-2023-12-06-at-5.13.38-PM.png?w=1056&amp;ssl=1 1056w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2023/12/Screenshot-2023-12-06-at-5.13.38-PM.png?resize=600%2C478&amp;ssl=1 600w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2023/12/Screenshot-2023-12-06-at-5.13.38-PM.png?resize=768%2C612&amp;ssl=1 768w" sizes="(max-width: 580px) 100vw, 580px"></figure>
 
@@ -261,7 +261,7 @@ document.addEventListener('ed11yPop', e => {
 
                         <li>Die Hinweismeldung definieren</li>
 
-                        <li>Das „resume”-Ereignis auslösen, damit Editoria11y den Hinweis zeichnet:</li>
+                        <li>Das „resume”-Ereignis auslösen, damit Editoria11y den Hinweis darstellt:</li>
                     </ol>
 
                     <pre class="language-javascript"><code><!--document.addEventListener('ed11yRunCustomTests', function() {
@@ -327,13 +327,13 @@ document.addEventListener('ed11yPop', e => {
                     <h2>Umgang mit Hinweisen auf verborgenen oder größenbeschränkten Inhalten</h2>
 
 
-                    <p>Viele interaktive Komponenten (Tabs, Schieberegler, Akkordeons) verbergen Inhalte. Das Editoria11y-Infopanel enthält Vor/Zurück-Schaltflächen, um direkt zu Problemen zu springen. Wenn Editoria11y annimmt, dass der Tooltip eines Problems aktuell unsichtbar ist, informiert es den Benutzer und hebt dann den ersten sichtbaren Vorfahren hervor – z. B. das Div um ein Akkordeon.</p>
+                    <p>Viele interaktive Komponenten (Tabs, Schieberegler, Akkordeons) verbergen Inhalte. Das Editoria11y-Infopanel enthält Vor-/Zurück-Schaltflächen, um direkt zu Problemen zu springen. Wenn Editoria11y vermutet, dass der Tooltip eines Problems aktuell unsichtbar ist, informiert es den Benutzer und hebt dann das erste sichtbare Elternelement hervor -- z. B. das Div um ein Akkordeon.</p>
 
-                    <p>Idealerweise macht Ihr Theme diese Elemente sichtbar, bevor die Sichtbarkeitsprüfung von Editoria11y läuft, sodass alles wie von Zauberhand für Ihre Benutzer funktioniert — Karussells scrollen automatisch weiter und Akkordeons öffnen sich automatisch, um das Problem anzuzeigen.</p>
+                    <p>Idealerweise macht Ihr Theme diese Elemente sichtbar, bevor die Sichtbarkeitsprüfung von Editoria11y läuft, sodass alles wie von selbst funktioniert -- Karussells scrollen automatisch weiter und Akkordeons klappen sich automatisch auf, um das Problem anzuzeigen.</p>
 
-                    <p>Um dies zu tun, wenn das Panel zuerst geöffnet wird (z. B. <strong><em>alle</em></strong> Akkordeon-Panels mit Problemen aufzuklappen), fügen Sie einen JS-Ereignislistener für <code>ed11yPanelOpened</code> hinzu, führen Sie dann ein querySelectorAll für relevante <code>ed11y-element-result</code>-Elemente durch und lösen Sie dann die Funktion aus, die Ihr Theme verwendet, um diesen Teil der Seite anzuzeigen.</p>
+                    <p>Um dies beim ersten Öffnen des Panels zu tun (z. B. <strong><em>alle</em></strong> Akkordeon-Panels mit Problemen aufzuklappen), fügen Sie einen JS-Ereignislistener für <code>ed11yPanelOpened</code> hinzu, führen Sie dann ein querySelectorAll für relevante <code>ed11y-element-result</code>-Elemente durch und rufen Sie die Funktion auf, die Ihr Theme verwendet, um diesen Teil der Seite anzuzeigen.</p>
 
-                    <p>Hier ein jQuery-basiertes Beispiel. Wenn das Panel geöffnet wird, deaktiviert es ein fixiertes Menü (damit Elemente nicht verdeckt werden), sucht dann nach <code>ed11y-element-result</code>-Elementen innerhalb geschlossener Akkordeon-Elemente und simuliert einen Klick auf ihre Umschaltschaltfläche:</p>
+                    <p>Hier ein jQuery-basiertes Beispiel. Wenn das Panel geöffnet wird, deaktiviert es ein fixiertes Menü (damit Elemente nicht verdeckt werden), sucht dann nach <code>ed11y-element-result</code>-Elementen innerhalb geschlossener Akkordeon-Elemente und simuliert einen Klick auf deren Toggle-Schaltfläche:</p>
                     <pre class="language-javascript"><code><!--document.addEventListener("ed11yPanelOpened", function () {
   $('body').addClass('no-stick');
   $('ed11y-element-result').each(function () {
@@ -342,9 +342,9 @@ document.addEventListener('ed11yPop', e => {
     }
 }) --></code></pre>
 
-                    <p>Um Inhalte nur dann anzuzeigen, wenn über die „Weiter”-Schaltfläche des Panels zu einem <strong><em>bestimmten</em></strong> Hinweis gesprungen wird (z. B. in einem geschlossenen Tab oder zur nächsten Karussellfolie), müssen Sie sowohl <code>hiddenHandlers</code> auf relevante CSS-Selektoren als auch <code>checkVisible</code> auf TRUE in Ihren Parametern setzen. Fügen Sie dann einen Ereignislistener für das <code>ed11yShowHidden</code>-Ereignis hinzu. Dieses wird ausgelöst, wenn Editoria11y erkennt, dass ein Hinweis sich in einem Container mit einem der in der Optionsliste aufgeführten <code>hiddenHandlers</code>-Selektoren befindet. Dieses JS-Ereignis enthält die ID des Hinweises, der geöffnet werden soll. Editoria11y pausiert dann kurz nach dem Auslösen dieses Ereignisses, um Ihrem JS Zeit zu geben, das Element sichtbar zu machen.</p>
+                    <p>Um Inhalte nur dann anzuzeigen, wenn über die „Weiter”-Schaltfläche des Panels zu einem <strong><em>bestimmten</em></strong> Hinweis gesprungen wird (z. B. in einem geschlossenen Tab oder zur nächsten Karussellfolie), müssen Sie in Ihren Parametern sowohl <code>hiddenHandlers</code> auf relevante CSS-Selektoren als auch <code>checkVisible</code> auf TRUE setzen. Fügen Sie dann einen Ereignislistener für das <code>ed11yShowHidden</code>-Ereignis hinzu. Dieses wird ausgelöst, wenn Editoria11y erkennt, dass sich ein Hinweis in einem Container mit einem der aufgelisteten <code>hiddenHandlers</code>-Selektoren befindet. Das JS-Ereignis enthält die ID des Hinweises, der geöffnet werden soll. Editoria11y pausiert dann kurz nach dem Auslösen dieses Ereignisses, um Ihrem JS Zeit zu geben, das Element sichtbar zu machen.</p>
 
-                    <p>Hier ein Beispiel aus einer Penn-State-Implementierung. Es sucht das Element, das mit der angegebenen ID übereinstimmt, findet dann seinen übergeordneten interaktiven Komponenten-Container und löst sein Ereignis aus, um seinen Toggle zu aktivieren:</p>
+                    <p>Hier ein Beispiel aus einer Penn-State-Implementierung. Es sucht das Element mit der angegebenen ID, findet dann den übergeordneten Container der interaktiven Komponente und löst dessen Ereignis aus, um den Toggle zu aktivieren:</p>
                     <pre class="language-javascript"><code><!--context.addEventListener('ed11yShowHidden', e => {
   if (!e.detail.viaJump) {
        return;
@@ -353,7 +353,7 @@ document.addEventListener('ed11yPop', e => {
     .closest('[data-interactive-component]')
     .dispatchEvent(new CustomEvent('component:activate'));
 }); --></code></pre>
-                    <p>Abschließend: Manche Themes sind schlicht nicht kompatibel mit der Sichtbarkeitsprüfung — z. B. hat der <code>&lt;main&gt;</code>-Container eine Höhe von 0px. Solche Websites sollten alle Sichtbarkeitsprüfungen deaktivieren, indem sie <code>checkVisible</code> auf false setzen.</p>
+                    <p>Abschließend: Manche Themes sind schlicht nicht mit der Sichtbarkeitsprüfung kompatibel -- z. B. wenn der <code>&lt;main&gt;</code>-Container eine Höhe von 0px hat. Solche Websites sollten alle Sichtbarkeitsprüfungen deaktivieren, indem sie <code>checkVisible</code> auf false setzen.</p>
 
                 </section>
 

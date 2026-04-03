@@ -95,7 +95,7 @@
                 <section id="params">
                     <h2>参数</h2>
                     <p>完整实现仅会为已登录的编辑者调用（您不希望网站访客看到检查器！），并可覆盖<a href="https://github.com/itmaybejj/editoria11y/blob/3.0.x/src/js/utils/ed11y-default-options.js" class="liinternal"><strong>任何默认参数</strong></a>。</p>
-                    <p>请注意，所有参数均已提供默认值；只需包含您希望覆盖的内容。</p>
+                    <p>请注意，所有参数均已设有默认值；只需包含您希望覆盖的部分即可。</p>
                     <p>高度自定义的实现可能如下所示：</p>
                     <pre class="language-javascript"><code><!--const ed11y = new Ed11y.Ed11y({
   // Define content regions
@@ -138,7 +138,7 @@
   }
 
 }); --></code></pre>
-                    <p>一键式集成通常会动态设置这些变量——例如，在页面近期被编辑时以”assertive”模式加载，几分钟后切换回”polite”模式。</p>
+                    <p>一键式集成通常会动态设置这些变量——例如，在页面近期被编辑时以 assertive 模式加载，几分钟后切换回 polite 模式。</p>
                 </section>
 
                 <section id="theme">
@@ -207,7 +207,7 @@ baseFontFamily: '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica N
                 <section id="modify-tips">
                     <h2 class="wp-block-heading has-secondary-background-color has-background has-large-font-size">修改提示内容</h2>
 
-                    <p>如果您只想修改提示的文本内容，可以直接覆盖 ed11yLang.en 全局对象（调用库之前）或 Ed11y.M 对象（调用库之后）中的对应条目。例如，在 Drupal 模块中，我们将语言包别名为 Drupal.ed11yLang：</p>
+                    <p>如果您只想修改提示的文本内容，可以直接覆盖 ed11yLang.en 全局对象（调用库之前）或 Ed11y.M 对象（调用库之后）中的对应条目。例如，在 Drupal 模块中，语言包被别名为 Drupal.ed11yLang：</p>
 
                     <p><code>Drupal.ed11yLang.lang.testNames.title = “Please write shorter headings.”</code></p>
 
@@ -329,7 +329,7 @@ document.addEventListener('ed11yPop', e => {
 
                     <p>许多交互式组件（标签页、滑块、手风琴）会隐藏内容。Editoria11y 信息面板包含上一条/下一条按钮，可直接跳转至问题所在位置。如果 Editoria11y 判断问题的工具提示当前不可见，它会提示用户存在问题，并高亮显示第一个可见的祖先元素——例如手风琴外层的 div。</p>
 
-                    <p>理想情况下，您的主题会在 Editoria11y 的可见性检查运行之前使这些元素可见，让一切对用户来说都如魔法般顺畅——轮播图自动前进，手风琴自动展开以显示问题。</p>
+                    <p>理想情况下，您的主题会在 Editoria11y 的可见性检查运行之前使这些元素可见，让一切对用户来说都浑然天成——轮播图自动前进，手风琴自动展开以显示问题。</p>
 
                     <p>要在面板首次打开时执行此操作（例如展开<strong><em>所有</em></strong>存在问题的手风琴面板），可为 <code>ed11yPanelOpened</code> 添加 JS 事件监听器，然后对相关 <code>ed11y-element-result</code> 元素执行 querySelectorAll，再触发主题用于显示该页面部分内容的函数。</p>
 
@@ -342,7 +342,7 @@ document.addEventListener('ed11yPop', e => {
     }
 }) --></code></pre>
 
-                    <p>若要仅在通过面板”下一条”按钮跳转到<strong><em>特定</em></strong>提示时（例如在已关闭的标签页或下一张轮播幻灯片中）才显示内容，您需要在参数中将 <code>hiddenHandlers</code> 设置为相关 CSS 选择器，并将 <code>checkVisible</code> 设置为 TRUE。然后为 <code>ed11yShowHidden</code> 事件添加事件监听器。当 Editoria11y 识别到提示位于包含选项列表中所列 <code>hiddenHandlers</code> 选择器的容器内时，此事件会被触发。该 JS 事件将包含即将打开的提示的 ID。Editoria11y 随后会在触发此事件后短暂暂停，以便您的 JS 有时间使元素可见。</p>
+                    <p>若要仅在通过面板”下一条”按钮跳转到<strong><em>特定</em></strong>提示时（例如在已关闭的标签页或下一张轮播幻灯片中）才显示内容，需要在参数中将 <code>hiddenHandlers</code> 设置为相关 CSS 选择器，并将 <code>checkVisible</code> 设置为 TRUE，然后为 <code>ed11yShowHidden</code> 事件添加监听器。当 Editoria11y 识别到提示位于包含 <code>hiddenHandlers</code> 选择器的容器内时，此事件会被触发。该 JS 事件将包含即将打开的提示的 ID。Editoria11y 随后会在触发此事件后短暂暂停，以便您的 JS 有时间使元素可见。</p>
 
                     <p>以下是来自宾夕法尼亚州立大学实现的示例。它查找与所提供 ID 匹配的元素，找到其父级交互组件容器，并触发其事件以激活切换：</p>
                     <pre class="language-javascript"><code><!--context.addEventListener('ed11yShowHidden', e => {
@@ -353,7 +353,7 @@ document.addEventListener('ed11yPop', e => {
     .closest(‘[data-interactive-component]’)
     .dispatchEvent(new CustomEvent(‘component:activate’));
 }); --></code></pre>
-                    <p>最后说明：部分主题与可见性检查不兼容——例如 <code>&lt;main&gt;</code> 容器的高度为 0px。此类网站应通过将 <code>checkVisible</code> 设为 false 来禁用所有可见性检查。</p>
+                    <p>最后说明：部分主题与可见性检查不兼容，例如 <code>&lt;main&gt;</code> 容器高度为 0px 的情况。此类网站应通过将 <code>checkVisible</code> 设为 false 来禁用所有可见性检查。</p>
 
                 </section>
 

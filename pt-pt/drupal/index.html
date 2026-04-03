@@ -53,24 +53,24 @@
 
               <figure class="figure my-4 rounded shadow border">
                 <img loading="lazy" src="/assets/images/3x-editing.png" class="figure-img img-fluid" height="1088" width="2237" alt="Editor Drupal com sugestões em linha"/>
-                <figcaption class="figure-caption p-3 pt-2 fs-6">Os problemas são detectados tanto no carregamento do frontend como à medida que se escreve no CKEditor e no Gutenberg.</figcaption>
+                <figcaption class="figure-caption p-3 pt-2 fs-6">Os problemas são detetados tanto no carregamento do frontend como à medida que se escreve no CKEditor e no Gutenberg.</figcaption>
               </figure>
 
               <figure class="figure my-4 rounded shadow border" style="max-width: 600px;">
                 <img loading="lazy" src="/assets/images/3x-generic-tip.png" class="figure-img img-fluid" height="798" width="1278" alt="Sugestão a indicar que uma ligação tem apenas o nome &quot;clique aqui&quot;."/>
-                <figcaption class="figure-caption p-3 pt-2 ps-5 fs-6">As dicas de ferramenta descrevem o problema e incluem botões para saltar para o editor de página ou de esquema, ignorar o alerta (para o utilizador activo) ou marcá-lo como OK (para todos os utilizadores). Consoante o contexto e as permissões, alguns alertas podem também mostrar um menu de "Alertas semelhantes", com opções para marcar múltiplos alertas na mesma página como OK, ou marcar o mesmo elemento em todas as páginas como OK.</figcaption>
+                <figcaption class="figure-caption p-3 pt-2 ps-5 fs-6">As dicas de ferramenta descrevem o problema e incluem botões para saltar para o editor de página ou de disposição, ignorar o alerta (para o utilizador ativo) ou marcá-lo como OK (para todos os utilizadores). Consoante o contexto e as permissões, alguns alertas podem também mostrar um menu de "Alertas semelhantes", com opções para marcar múltiplos alertas na mesma página como OK, ou marcar o mesmo elemento em todas as páginas como OK.</figcaption>
               </figure>
 
               <figure class="figure my-4 rounded shadow mb-5 border">
                 <img loading="lazy" class="figure-img img-fluid" src="/assets/images/3x-dashboard.png" height="765" width="1600" alt="Painel de relatórios a mostrar problemas recentes e páginas com mais problemas." />
-                <figcaption class="figure-caption p-3 pt-2 fs-6">Um painel de relatórios para todo o site disponibiliza relatórios filtráveis e exportáveis de alertas e dispensas.</figcaption>
+                <figcaption class="figure-caption p-3 pt-2 fs-6">Um painel de relatórios para todo o sítio disponibiliza relatórios filtráveis e exportáveis de alertas e dispensas.</figcaption>
               </figure>
 
               <p>Inclui também:</p>
               <ul>
                 <li>Configuração inicial que ignora automaticamente elementos do Drupal, CKEditor, Gutenberg, Finalidade de Ligação e Ligação Externa, reage a alterações ao editar em contentores modais e posiciona automaticamente a barra de ferramentas para evitar sobreposição com elementos do Klaro e da Pré-visualização na Mesma Página.</li>
-                <li>Configuração baseada em funções para definir que utilizadores verão o verificador, quais podem dispensar alertas e quais podem consultar relatórios de todo o site.</li>
-                <li>Um rastreador local (dentro do site) para actualizar o painel após alterações de temas significativas. <em>(apenas CSA)</em></li>
+                <li>Configuração baseada em funções para definir que utilizadores verão o verificador, quais podem dispensar alertas e quais podem consultar relatórios de todo o sítio.</li>
+                <li>Um rastreador local (dentro do sítio) para atualizar o painel após alterações significativas de temas. <em>(apenas CSA)</em></li>
                 <li>Configuração com divisão autor/programador, com testes separados (~30/~80) e listas de problemas. <em>(apenas CSA)</em></li>
               </ul>
 
@@ -90,22 +90,22 @@
                 Editoria11y Export: ferramentas de relatórios em CSV.
               </li>
             </ul>
-            <p>Instale como qualquer outro módulo e, em seguida, efectue estes passos essenciais:</p>
+            <p>Instale como qualquer outro módulo e, em seguida, efetue estes passos essenciais:</p>
             <ol>
               <li><strong>Verifique as permissões.</strong> Os autores de confiança devem ter "Marcar como OK," "Marcar como ignorado" e "Ver o painel."</li>
-              <li><strong>Verifique as páginas principais em busca de alertas repetitivos ou inúteis.</strong> Marque-os como OK na dica de ferramenta ou ajuste a configuração para ignorar elementos por selector.</li>
+              <li><strong>Verifique as páginas principais em busca de alertas repetitivos ou inúteis.</strong> Marque-os como OK na dica de ferramenta ou ajuste a configuração para ignorar elementos por seletor.</li>
               <li>Procure sugestões difíceis de visualizar — fora do ecrã, truncadas, atrás de outros elementos ou em elementos ocultos. Utilize as dicas em "Corrigir posicionamento de sugestões" abaixo para resolver.</li>
-              <li>Se o site já tiver conteúdo e tiver uma subscrição CSA, aceda ao separador "reverificação" do painel e <strong>rastreie o site</strong> para pré-carregar os relatórios. Este passo é opcional, mas as páginas mais antigas não aparecerão nos relatórios até serem rastreadas ou visitadas por um utilizador autenticado.</li>
+              <li>Se o sítio já tiver conteúdo e tiver uma subscrição CSA, aceda ao separador "reverificação" do painel e <strong>rastreie o sítio</strong> para pré-carregar os relatórios. Este passo é opcional, mas as páginas mais antigas não aparecerão nos relatórios até serem rastreadas ou visitadas por um utilizador autenticado.</li>
             </ol>
             <p>Veja uma <a href="https://youtu.be/uYvNYPg38nU?si=dqADyWpTtOhniHTP&t=696">introdução em vídeo às opções de configuração</a> (v2.4).</p>
 
             <h2 id="check-roots">Ocultar alertas inúteis</h2>
             <p>
               <strong>Boas configurações suprimem alertas inúteis, para que os autores de conteúdo possam concentrar-se nos problemas que devem corrigir</strong>.</p>
-            <p>Embora seja possível desactivar testes por completo, geralmente é preferível ocultar alertas em elementos ou páginas específicos.</p>
+            <p>Embora seja possível desativar testes por completo, geralmente é preferível ocultar alertas em elementos ou páginas específicos.</p>
             <hr>
             <p>
-              Em cada execução de testes, o Editoria11y reúne um único conjunto de elementos a partir da definição "Verificar conteúdo nestes contentores" e filtra-o várias vezes. Eis o aspecto de uma execução de testes:
+              Em cada execução de testes, o Editoria11y reúne um único conjunto de elementos a partir da definição "Verificar conteúdo nestes contentores" e filtra-o várias vezes. Eis o aspeto de uma execução de testes:
             </p>
             <ol>
               <li>
@@ -116,18 +116,18 @@
                 <em>Para utilizadores do Editoria11y CSA, estas são as regiões no separador <strong>Testes de programador</strong>.</em>
               </li>
               <li>
-                <strong>Remover</strong> elementos que correspondam aos selectores de ignorar, por exemplo:<br><code>.widgets, .utility-menu</code><br>
-                <em>Para utilizadores do Editoria11y CSA, estes são os selectores no separador <strong>Testes de programador</strong>.</em>
+                <strong>Remover</strong> elementos que correspondam aos seletores de ignorar, por exemplo:<br><code>.widgets, .utility-menu</code><br>
+                <em>Para utilizadores do Editoria11y CSA, estes são os seletores no separador <strong>Testes de programador</strong>.</em>
               </li>
               <li>
                 Executar testes e sincronizar resultados com o painel.
               </li>
               <li>
-                Se a configuração dividida estiver activa e o utilizador for um editor de conteúdo, filtrar os resultados de programador:
+                Se a configuração dividida estiver ativa e o utilizador for um editor de conteúdo, filtrar os resultados de programador:
                 <ul>
                   <li><strong>Remover</strong> resultados de testes definidos como "Apenas para programadores."</li>
                   <li><strong>Remover</strong> resultados em elementos fora das regiões de <strong><em>conteúdo</em></strong> especificadas, por exemplo:<br><code>main, footer</code></li>
-                  <li><strong>Remover</strong> resultados em elementos que correspondam aos selectores de ignorar de <strong><em>conteúdo</em></strong>.</li>
+                  <li><strong>Remover</strong> resultados em elementos que correspondam aos seletores de ignorar de <strong><em>conteúdo</em></strong>.</li>
                 </ul>
                 Note que não existe uma segunda fase de "recolha". As regiões de página do programador devem incluir as regiões de conteúdo.
               </li>
@@ -138,7 +138,7 @@
             <p>Os testes podem ser configurados na biblioteca como erros ou avisos ("verificações manuais"). Os avisos podem ser dispensados. Existem dois tipos de dispensa disponíveis no rodapé de cada dica de ferramenta:</p>
             <div class="my-2" style="background: url(/assets/images/3x-generic-tip.png) 100% 98%; max-width: 600px; padding-top: 6%; background-size: 108%;"></div>
             <ul>
-              <li>"Ignorar" fica guardado como preferência do utilizador: o alerta fica oculto para o utilizador actual, mas apenas para esse utilizador.</li>
+              <li>"Ignorar" fica guardado como preferência do utilizador: o alerta fica oculto para o utilizador atual, mas apenas para esse utilizador.</li>
               <li>"Marcar como OK" oculta o alerta para todos os utilizadores.</li>
             </ul>
             <p>A capacidade de um utilizador dispensar um alerta é controlada ao nível da função nas permissões de utilizador do Drupal. <strong>A maioria dos autores deve poder dispensar alertas</strong>. Não faz sentido atribuir uma verificação manual a alguém que não pode marcar o item como verificado.</p>
@@ -157,7 +157,7 @@
               </div>
             </div>
             <p>
-              Defina o primeiro para incluir as partes da página que os autores de conteúdo podem editar. Por exemplo, se puderem editar a área de conteúdo <code>main</code>, <code>.sidebar</code> e <code>.footer-column-two</code>, defina esses selectores como a sua área de verificação de conteúdo.
+              Defina o primeiro para incluir as partes da página que os autores de conteúdo podem editar. Por exemplo, se puderem editar a área de conteúdo <code>main</code>, <code>.sidebar</code> e <code>.footer-column-two</code>, defina esses seletores como a sua área de verificação de conteúdo.
             </p>
             <p>
               Utilize o segundo para "excluir" subsecções. Por exemplo, se <code>main</code> contiver vários widgets e conteúdos incorporados que apenas os programadores podem modificar, liste-os: <code>.widget-1, .social-embed</code>;
@@ -199,13 +199,13 @@
               </div>
 
             </div>
-            <p>O aspecto mais importante a saber sobre as áreas de verificação de programador é que <strong>não são independentes</strong> das áreas de verificação de conteúdo. Numa configuração dividida, as áreas de programador são verificadas e os resultados são depois <strong>filtrados</strong> para corresponder às áreas de conteúdo. Quaisquer áreas excluídas para programadores também serão excluídas para editores de conteúdo. Não exclua áreas de conteúdo editáveis!</p>
+            <p>O aspeto mais importante a saber sobre as áreas de verificação de programador é que <strong>não são independentes</strong> das áreas de verificação de conteúdo. Numa configuração dividida, as áreas de programador são verificadas e os resultados são depois <strong>filtrados</strong> para corresponder às áreas de conteúdo. Quaisquer áreas excluídas para programadores também serão excluídas para editores de conteúdo. Não exclua áreas de conteúdo editáveis!</p>
 
-            <p>Alguns testes permitem uma configuração mais precisa, para ocultar apenas determinados alertas nos elementos afectados. Procure-os em:</p>
+            <p>Alguns testes permitem uma configuração mais precisa, para ocultar apenas determinados alertas nos elementos afetados. Procure-os em:</p>
             <ul>
               <li>Testes de conteúdo: Ligações a verificar</li>
               <li>Testes de conteúdo: Conteúdos incorporados a verificar</li>
-              <li>Testes de conteúdo: Detectar conteúdo dinâmico e shadow content</li>
+              <li>Testes de conteúdo: Detetar conteúdo dinâmico e shadow content</li>
               <li>Testes de programador: Contraste</li>
             </ul>
 
@@ -229,28 +229,28 @@
               A primeira opção impede a execução das verificações e a barra de ferramentas não será apresentada.
             </p>
             <p>
-              A segunda opção inicia o verificador minimizado e marca automaticamente (para o utilizador actual) todos os problemas como "Ignorado", mesmo que sejam erros. Isto permite que os testes sejam executados e actualizem o painel sem incomodar o utilizador.
+              A segunda opção inicia o verificador minimizado e marca automaticamente (para o utilizador atual) todos os problemas como "Ignorado", mesmo que sejam erros. Isto permite que os testes sejam executados e atualizem o painel sem incomodar o utilizador.
             </p>
             <p>
               Para utilizar estas opções no controlo dos utilizadores que vêem o verificador, poderá ter de ajustar o seu tema para que emita uma classe, por exemplo <code>.user-247</code>
             </p>
 
-            <h2 id="dashboard">Gerir resultados de todo o site</h2>
+            <h2 id="dashboard">Gerir resultados de todo o sítio</h2>
             <section id="refresh">
-              <h3 class="pt-3">Rastreamento e actualização de resultados</h3>
-              <p>O Editoria11y é uma <strong>ferramenta de monitorização em tempo real, não um rastreador</strong>. Os seus relatórios de todo o site actualizam-se quando os autores visitam páginas, pelo que o rastreamento regular não é geralmente necessário. O módulo CSA <em>inclui</em> um rastreador, mas este só deverá ser necessário nestas três situações:</p>
+              <h3 class="pt-3">Rastreamento e atualização de resultados</h3>
+              <p>O Editoria11y é uma <strong>ferramenta de monitorização em tempo real, não um rastreador</strong>. Os seus relatórios de todo o sítio atualizam-se quando os autores visitam páginas, pelo que o rastreamento regular não é geralmente necessário. O módulo CSA <em>inclui</em> um rastreador, mas este só deverá ser necessário nestas três situações:</p>
               <ol>
                 <li>
-                  Ao instalar o Editoria11y pela primeira vez num site existente com muitas páginas. As páginas têm de ser visitadas antes de aparecerem no painel, pelo que um rastreamento inicial rápido poupa tempo.
+                  Ao instalar o Editoria11y pela primeira vez num sítio existente com muitas páginas. As páginas têm de ser visitadas antes de aparecerem no painel, pelo que um rastreamento inicial rápido poupa tempo.
                 </li>
                 <li>
-                  Actualizações importantes de temas ou módulos podem corrigir (ou provocar) problemas em muitas páginas que não aparecerão até serem visitadas ou rastreadas.
+                  Atualizações importantes de temas ou módulos podem corrigir (ou provocar) problemas em muitas páginas que não aparecerão até serem visitadas ou rastreadas.
                 </li>
                 <li>
-                  Acções em massa na interface de administração, como eliminar páginas ou redireccionamentos, tendem a deixar resultados de páginas que já não existem ou foram movidas. Nestes casos, é útil utilizar as acções de manutenção do separador "Actualizar" para actualizar os URLs das páginas e detectar e remover páginas eliminadas.
+                  Ações em massa na interface de administração, como eliminar páginas ou redirecionamentos, tendem a deixar resultados de páginas que já não existem ou foram movidas. Nestes casos, é útil utilizar as ações de manutenção do separador "Atualizar" para atualizar os URLs das páginas e detetar e remover páginas eliminadas.
                 </li>
               </ol>
-              <p>Nenhum dado sai do seu site durante um rastreamento. O rastreador CSA não é uma ferramenta na nuvem; utiliza o seu browser para carregar e verificar as páginas do seu próprio site. A desvantagem desta abordagem é que <strong>os browsers suspendem os separadores em segundo plano</strong>. Terá de manter o computador ligado e activo durante um rastreamento. Planeie abrir uma nova janela para o rastreador e deixá-la como separador em primeiro plano dessa janela enquanto funciona. Pode continuar a trabalhar noutra janela. O rastreador actualizará a sua estimativa após cada lote de páginas.</p>
+              <p>Nenhum dado sai do seu sítio durante um rastreamento. O rastreador CSA não é uma ferramenta na nuvem; utiliza o seu navegador para carregar e verificar as páginas do seu próprio sítio. A desvantagem desta abordagem é que <strong>os navegadores suspendem os separadores em segundo plano</strong>. Terá de manter o computador ligado e ativo durante um rastreamento. Planeie abrir uma nova janela para o rastreador e deixá-la como separador em primeiro plano dessa janela enquanto funciona. Pode continuar a trabalhar noutra janela. O rastreador atualizará a sua estimativa após cada lote de páginas.</p>
             </section>
             <section id="reports">
               <h3>Consultar relatórios</h3>
@@ -266,13 +266,13 @@
                   <strong>Alertas</strong> mostra os problemas por tipo.
                 </li>
                 <li>
-                  <strong>Dispensas</strong> permite monitorizar se os autores estão a dispensar correctamente e tem botões de "repor" para restaurar alertas dispensados.
+                  <strong>Dispensas</strong> permite monitorizar se os autores estão a dispensar corretamente e tem botões de "repor" para restaurar alertas dispensados.
                 </li>
                 <li>
                   <strong>Exportar</strong> contém versões dos relatórios de Páginas, Alertas e Dispensas que podem ser filtradas para preparar transferências em CSV. <em>Fornecido pelo submódulo de Exportação CSV</em>
                 </li>
                 <li>
-                  <strong>Actualizar</strong> contém ferramentas de manutenção do painel para remover alertas de páginas eliminadas, remover alertas de pseudo-páginas parametrizadas como /search?query=exemplo, actualizar títulos e URLs de páginas armazenados e executar um rastreamento manual. <em>Fornecido pelo submódulo CSA</em>
+                  <strong>Atualizar</strong> contém ferramentas de manutenção do painel para remover alertas de páginas eliminadas, remover alertas de pseudo-páginas parametrizadas como /search?query=exemplo, atualizar títulos e URLs de páginas armazenados e executar um rastreamento manual. <em>Fornecido pelo submódulo CSA</em>
                 </li>
               </ul>
             </section>
@@ -287,8 +287,8 @@
                 <label for="edit-hidden-handlers" class="form-item__label">O JS do tema tratará de revelar as dicas de ferramenta ocultas dentro destes contentores</label>
                   <textarea data-drupal-selector="edit-hidden-handlers" aria-describedby="edit-hidden-handlers--description" id="edit-hidden-handlers" name="hidden_handlers" rows="1" cols="60" class="form-textarea resize-vertical form-element form-element--type-textarea form-element--api-textarea"></textarea>
               </div>
-            <p>Alguns temas têm colunas ou widgets que ocultam o overflow horizontal ou vertical. A biblioteca detecta automaticamente quando um botão de alternância ficaria fora da parte visível da <strong>página.</strong> Ao informar a biblioteca de que determinados contentores ocultam o overflow, esta tentará também posicionar as sugestões para elementos nesses contentores dentro das suas margens.</p>
-            <p>Alguns temas têm widgets que alternam a visibilidade do conteúdo, tais como acordeões, separadores e apresentações de diapositivos. As sugestões dentro destes elementos também ficarão ocultas. Ao fornecer uma lista de selectores para estes widgets, o Editoria11y fará uma breve pausa quando um utilizador tentar saltar para essas sugestões utilizando um botão de avançar ou recuar. Os temas e módulos Drupal podem então seguir as instruções da secção da biblioteca sobre <a href="/pt-pt/install/#hidden-content">como lidar com sugestões em conteúdo oculto</a> para revelar o conteúdo oculto.</p>
+            <p>Alguns temas têm colunas ou widgets que ocultam o overflow horizontal ou vertical. A biblioteca deteta automaticamente quando um botão de alternância ficaria fora da parte visível da <strong>página.</strong> Ao informar a biblioteca de que determinados contentores ocultam o overflow, esta tentará também posicionar as sugestões para elementos nesses contentores dentro das suas margens.</p>
+            <p>Alguns temas têm widgets que alternam a visibilidade do conteúdo, tais como acordeões, separadores e apresentações de diapositivos. As sugestões dentro destes elementos também ficarão ocultas. Ao fornecer uma lista de seletores para estes widgets, o Editoria11y fará uma breve pausa quando um utilizador tentar saltar para essas sugestões utilizando um botão de avançar ou recuar. Os temas e módulos Drupal podem então seguir as instruções da secção da biblioteca sobre <a href="/pt-pt/install/#hidden-content">como lidar com sugestões em conteúdo oculto</a> para revelar o conteúdo oculto.</p>
 
             <h2 id="runtime">Escrever a sua própria configuração</h2>
             <p>Em PHP: o módulo Drupal disponibiliza um <code>hook_editoria11y_alter_config</code> para alterar o conteúdo de <code>drupalSettings.editoria11y</code> num módulo ou tema. Por exemplo:</p>
@@ -316,7 +316,7 @@ function MY_MODULE_editoria11y_alter_config(array &$attach, CacheableMetadata $c
     $attach['allow_ok'] = 'okAll';
   }
 }--></code></pre>
-            <p>Modificar <code>drupalSettings</code> só é útil se o JS do módulo já estiver configurado para passar esse valor à biblioteca. Para adicionar parâmetros adicionais, é necessário modificar o objecto JS <code>options</code> directamente. O módulo verifica a existência de uma variável JS global chamada <code>editoria11yOptionsOverride</code>. Se estiver definida, passará o objecto <code>options</code> a uma função <code>editoria11yOptions</code> que tenha fornecido no seu módulo ou tema. Pode agora definir qualquer um dos <a href="https://editorsally.ddev.site/en/install/#params">parâmetros da biblioteca</a>.</p>
+            <p>Modificar <code>drupalSettings</code> só é útil se o JS do módulo já estiver configurado para passar esse valor à biblioteca. Para adicionar parâmetros adicionais, é necessário modificar o objeto JS <code>options</code> diretamente. O módulo verifica a existência de uma variável JS global chamada <code>editoria11yOptionsOverride</code>. Se estiver definida, passará o objeto <code>options</code> a uma função <code>editoria11yOptions</code> que tenha fornecido no seu módulo ou tema. Pode agora definir qualquer um dos <a href="https://editorsally.ddev.site/en/install/#params">parâmetros da biblioteca</a>.</p>
             <pre class="language-javascript"><code><!--var editoria11yOptionsOverride = true;
 var editoria11yOptions = function(options) {
   // You now have access to the processed options object that will be passed to the library.

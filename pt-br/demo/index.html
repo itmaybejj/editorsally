@@ -52,7 +52,7 @@
           <p class="fs-5">Assista a uma <a href="https://youtu.be/uYvNYPg38nU?si=6YANYrJpVzNAJYDl&t=260">introdução em vídeo ao histórico e às funcionalidades do verificador</a>,
             ou experimente editar o conteúdo de demonstração abaixo, abrindo e dispensando alertas,
             e usando a barra de ferramentas <span style="text-wrap: nowrap;">(<img src="/assets/images/3x-toolbar" class="inline-block" style="width: 5rem; height: auto;" alt="Captura de tela da barra de ferramentas do Editoria11y, exibindo 4 erros." width="97" height="50" loading="lazy">)</span> para visualizar o esboço de cabeçalhos. Esta demonstração inclui tanto os testes principais quanto o conjunto CSA.</p>
-          <p class="fs-5 mb-5 pb-5">Esta demonstração usa um editor TinyMCE. O Editoria11y é compatível com a maioria dos editores de texto e possui implementações prontas para CKEditor e Gutenberg no WordPress e no Drupal.</p>
+          <p class="fs-5 mb-5 pb-5">Esta demonstração usa um editor TinyMCE. O Editoria11y é compatível com a maioria dos editores de texto e tem implementações prontas para CKEditor e Gutenberg no WordPress e no Drupal.</p>
             <div id="ed11y-demo" class="p-5" contenteditable="">
             <section id="headings">
 
@@ -85,10 +85,10 @@
                 <h4><img loading="lazy" alt="" src="/assets/images/px20240813sm.jpg" ></h4>
               </div>
 
-              <p>Imagem sem atributo alt algum:</p>
+              <p>Imagem sem nenhum atributo alt:</p>
               <p class="positive"><img loading="lazy" src="/assets/images/px20240813sm.jpg"></p>
 
-              <p>Imagem com atributo alt inválido, por exemplo, <code class="language-plaintext highlighter-rouge">alt=”'”</code></p>
+              <p>Imagem com atributo alt inválido, ex.: <code class=”language-plaintext highlighter-rouge”>alt=”'”</code></p>
 
               <p class="positive"><img loading="lazy" alt="'" src="/assets/images/px20240813sm.jpg"></p>
 
@@ -124,7 +124,7 @@
 
               <p class="positive"><a  href="https://www.youtube.com/watch?v=DLzxrzFCyOs">This link has text and an image.<img loading="lazy" alt="A lovely gray box" src="/assets/images/px20240813sm.jpg"></a></p>
 
-              <p id="images-in-links-decorative">Qualquer imagem com link (teste desativado por padrão)</p>
+              <p id="images-in-links-decorative">Qualquer imagem com link (teste desabilitado por padrão)</p>
               <p class="positive"><a href="https://www.youtube.com/watch?v=DLzxrzFCyOs"><img loading="lazy" alt="Hello there" src="/assets/images/px20240813sm.jpg"></a></p>
 
               <p>Imagem em figura marcada como decorativa:</p>
@@ -190,7 +190,7 @@
                 <iframe data-needs-src=""></iframe>
               </div>
 
-              <p>Iframe sem foco:</p>
+              <p>Iframe sem possibilidade de foco:</p>
               <div class="positive">
                 <iframe title="example" sandbox="" tabindex="-1" data-needs-src=""></iframe>
               </div>
@@ -215,16 +215,16 @@
               <p id="links-titled-with-a-symbol">Links identificados apenas por símbolos:</p>
               <p class="positive"><a href="https://www.youtube.com/watch?v=DLzxrzFCyOs">↣</a></p>
 
-              <p>Links com o mesmo nome levam a destinos diferentes</p>
+              <p>Links com o mesmo texto levam a destinos diferentes</p>
               <p class="positive"><a href="https://www.youtube.com/watch?v=fjOeJssZX_Q">Turtles</a> <a href="https://www.youtube.com/watch?v=cWppAbqm9I8">Turtles</a></p>
 
               <p id="links-titled-with-doi">Links identificados apenas por um número DOI:</p>
               <p class="positive"><a href="https://doi.org/10.1145/3493612.3520468">doi.org/10.1145/3493612.3520468</a></p>
 
-              <p id="links-titled-with-click">Links com rótulos sem sentido:</p>
+              <p id="links-titled-with-click">Links com textos genéricos:</p>
               <p class="positive"><a  href="https://www.youtube.com/watch?v=DLzxrzFCyOs" title="https://www.youtube.com/watch?v=DLzxrzFCyOs">Click here</a></p>
 
-              <p id="links-titled-with-empty">Ícones com link sem alternativas de texto:</p>
+              <p id="links-titled-with-empty">Ícones com link sem alternativa em texto:</p>
               <p class="positive"><a href="https://www.youtube.com/watch?v=DLzxrzFCyOs"><svg style="width: 16px; height: 16px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376C296.3 401.1 253.9 416 208 416 93.1 416 0 322.9 0 208S93.1 0 208 0 416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg></a></p>
 
               <p id="links-that-open-in-a-new-window-without-an-external-link-icon-or-text-warning">Links que abrem em nova janela sem ícone de link externo ou aviso em texto</p>
@@ -240,7 +240,7 @@
               <p id="links-redundant">Links com atributos title redundantes</p>
               <p class="positive"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" title="Hover me">Hover me</a></p>
 
-              <p>Links com atributos que os removem do índice de tabulação:</p>
+              <p>Links com atributos que os removem da ordem de tabulação:</p>
               <p class="positive"><a href="./editable.htm" aria-hidden="true">Aria-hidden links without a negative tabindex.</a></p>
 
               <p>Links com atributos aria-labelledby apontando para elementos sem texto:</p>
@@ -274,12 +274,12 @@
                 <a href="#oh-no">There's no such ID.</a>
               </p>
 
-              <p>Links para servidor de desenvolvimento</p>
+              <p>Links para ambiente de desenvolvimento</p>
               <p class="positive">
                 <a href="https://tugboatqa.com">Oops</a>
               </p>
 
-              <p>Âncoras duplicadas</p>
+              <p>IDs duplicados</p>
               <p class="positive"><a id="dupe" href="#dupe">Anchor 1</a> <a id="dupe" href="#dupe">Anchor 2</a></p>
             </section>
             <section>

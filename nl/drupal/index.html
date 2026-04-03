@@ -81,10 +81,10 @@
             <p>Het <a href="https://www.drupal.org/project/editoria11y/">gebundelde installatiepakket</a> op Drupal.org bevat meerdere modules:</p>
             <ul>
               <li>
-                Editoria11y: de kern inhoudscontrole en het dashboard.
+                Editoria11y: de kerninhoudscontrole en het dashboard.
               </li>
               <li>
-                Editoria11y CSA: ontwikkelaarstests en dashboardonderhoudsmiddelen.
+                Editoria11y CSA: ontwikkelaarstests en dashboardonderhoudstools.
               </li>
               <li>
                 Editoria11y Export: CSV-rapportagetools.
@@ -93,16 +93,16 @@
             <p>Installeer zoals elke andere module en voer vervolgens deze belangrijkste stappen uit:</p>
             <ol>
               <li><strong>Controleer rechten.</strong> Vertrouwde auteurs moeten "Mark OK," "Mark as Ignored" en "View the dashboard" hebben.</li>
-              <li><strong>Controleer belangrijke pagina's op herhalende of onnuttige meldingen.</strong> Markeer ze als OK in de tooltip, of pas de configuratie aan om elementen via selector te negeren.</li>
-              <li>Zoek naar tips die moeilijk te zien zijn – buiten het scherm, afgeknopt, achter andere elementen, of op verborgen elementen. Gebruik de tips in "Verborgen of buiten beeld geplaatste tips oplossen" hieronder om dit te corrigeren.</li>
+              <li><strong>Controleer belangrijke pagina's op herhalende of nutteloze meldingen.</strong> Markeer ze als OK in de tooltip, of pas de configuratie aan om elementen via selector te negeren.</li>
+              <li>Zoek naar tips die moeilijk te zien zijn – buiten het scherm, afgekapt, achter andere elementen, of op verborgen elementen. Gebruik de tips in "Verborgen of buiten beeld geplaatste tips oplossen" hieronder om dit te verhelpen.</li>
               <li>Als de site al inhoud heeft en u een CSA-abonnement heeft, bezoek dan het tabblad "recheck" van het dashboard en <strong>crawl de site</strong> om de siterapporten voor te laden. Dit is optioneel, maar oudere pagina's verschijnen niet in rapporten totdat ze zijn gecrawld of bezocht door een ingelogde gebruiker.</li>
             </ol>
             <p>Bekijk een <a href="https://youtu.be/uYvNYPg38nU?si=dqADyWpTtOhniHTP&t=696">video-introductie van de configuratieopties</a> (v2.4).</p>
 
-            <h2 id="check-roots">Onnuttige meldingen verbergen</h2>
+            <h2 id="check-roots">Nutteloze meldingen verbergen</h2>
             <p>
-              <strong>Goede configuraties onderdrukken onnuttige meldingen, zodat inhoudsauteurs zich kunnen richten op problemen die ze moeten oplossen</strong>.</p>
-            <p>Hoewel u tests volledig kunt uitschakelen, is het meestal beter om meldingen op specifieke elementen of pagina's te verbergen.</p>
+              <strong>Goede configuraties onderdrukken nutteloze meldingen, zodat inhoudsauteurs zich kunnen richten op problemen die ze daadwerkelijk moeten oplossen</strong>.</p>
+            <p>Hoewel u tests volledig kunt uitschakelen, is het doorgaans beter om meldingen op specifieke elementen of pagina's te verbergen.</p>
             <hr>
             <p>
               Bij elke testrun verzamelt Editoria11y één set elementen uit de instelling "Controleer inhoud in deze containers" en filtert die vervolgens meerdere keren. Dit is hoe een testrun eruit ziet:
@@ -141,7 +141,7 @@
               <li>"Ignore" wordt opgeslagen als gebruikersvoorkeur: de melding is nu verborgen voor de huidige gebruiker, maar alleen voor de huidige gebruiker.</li>
               <li>"Mark OK" verbergt de melding voor alle gebruikers.</li>
             </ul>
-            <p>Of een gebruiker een melding kan afwijzen wordt bepaald op rolniveau in de gebruikersrechten van Drupal. <strong>De meeste auteurs moeten meldingen kunnen afwijzen</strong>. Het heeft geen zin iemand een handmatige controle toe te wijzen als ze het item niet als gecontroleerd kunnen markeren.</p>
+            <p>Of een gebruiker een melding kan afwijzen, wordt bepaald op rolniveau in de gebruikersrechten van Drupal. <strong>De meeste auteurs moeten meldingen kunnen afwijzen</strong>. Het heeft geen zin iemand een handmatige controle toe te wijzen als diegene het item niet als gecontroleerd kan markeren.</p>
 
             <h3 id="roots">Elementen negeren</h3>
             <p>Deze twee configuratie-instellingen zijn het belangrijkst!</p>
@@ -199,7 +199,7 @@
               </div>
 
             </div>
-            <p>Het belangrijkste om te weten over de ontwikkelaarcontrolegebieden is dat ze <strong>niet onafhankelijk</strong> zijn van de inhoudscontrolegebieden. In een gesplitste configuratie worden de ontwikkelaarsgebieden gecontroleerd, en die resultaten worden vervolgens <strong>gefilterd</strong> om overeen te komen met de inhoudsgebieden. Gebieden die zijn uitgesloten voor ontwikkelaars worden ook uitgesloten voor inhoudsredacteuren. Sluit bewerkbare inhoudsgebieden niet uit!</p>
+            <p>Het belangrijkste om te weten over de ontwikkelaarscontrolegebieden is dat ze <strong>niet onafhankelijk</strong> zijn van de inhoudscontrolegebieden. In een gesplitste configuratie worden de ontwikkelaarsgebieden gecontroleerd, en die resultaten worden vervolgens <strong>gefilterd</strong> om overeen te komen met de inhoudsgebieden. Gebieden die zijn uitgesloten voor ontwikkelaars worden ook uitgesloten voor inhoudsredacteuren. Sluit bewerkbare inhoudsgebieden niet uit!</p>
 
             <p>Sommige tests maken nauwkeurigere configuratie mogelijk, om alleen bepaalde meldingen op betreffende elementen te verbergen. Zoek ze op onder:</p>
             <ul>
@@ -229,7 +229,7 @@
               De eerste voorkomt dat controles worden uitgevoerd, en de werkbalk wordt niet weergegeven.
             </p>
             <p>
-              De tweede start de checker geminimaliseerd en markeert automatisch (voor de huidige gebruiker) alle problemen als "Ignored," zelfs als het fouten zijn. Dit maakt het mogelijk dat tests worden uitgevoerd en het dashboard wordt bijgewerkt zonder de gebruiker te storen.
+              De tweede start de checker geminimaliseerd en markeert automatisch (voor de huidige gebruiker) alle problemen als "Ignored", zelfs als het fouten zijn. Hierdoor kunnen tests worden uitgevoerd en het dashboard worden bijgewerkt zonder de gebruiker te storen.
             </p>
             <p>
               Als u deze wilt gebruiken om te bepalen welke gebruikers de checker zien, moet u mogelijk uw thema aanpassen om een klasse uit te voeren, bijv. <code>.user-247</code>
@@ -247,10 +247,10 @@
                   Grote updates van thema's of modules kunnen problemen op veel pagina's oplossen (of veroorzaken) die pas verschijnen nadat ze zijn bezocht of gecrawld.
                 </li>
                 <li>
-                  Bulkacties in de beheerinterface, zoals het verwijderen van pagina's of omleidingen, laten doorgaans resultaten achter van pagina's die niet meer bestaan of zijn verplaatst. In deze gevallen helpt het om de onderhoudsmiddelen van het tabblad "Refresh" te gebruiken om pagina-URL's te vernieuwen en verwijderde pagina's te detecteren en te verwijderen.
+                  Bulkacties in de beheerinterface, zoals het verwijderen van pagina's of omleidingen, laten doorgaans resultaten achter van pagina's die niet meer bestaan of zijn verplaatst. In deze gevallen helpt het om de onderhoudstools van het tabblad "Refresh" te gebruiken om pagina-URL's te vernieuwen en verwijderde pagina's te detecteren en te verwijderen.
                 </li>
               </ol>
-              <p>Er verlaten geen gegevens uw site tijdens een crawl. De CSA-crawler is geen cloudtool; hij gebruikt uw browser om de pagina's op uw eigen site te laden en te controleren. Het nadeel van deze aanpak is dat <strong>browsers achtergrondtabbladen pauzeren</strong>. U moet uw computer ingeschakeld en wakker houden tijdens een crawl. Plan om een nieuw venster te openen voor de crawler en laat het het voorgrondtabblad van dat venster zijn terwijl het werkt. U kunt in een ander venster blijven werken. De crawler werkt zijn schatting bij na elke batch pagina's.</p>
+              <p>Er verlaten geen gegevens uw site tijdens een crawl. De CSA-crawler is geen cloudtool; hij gebruikt uw browser om de pagina's op uw eigen site te laden en te controleren. Het nadeel van deze aanpak is dat <strong>browsers achtergrondtabbladen pauzeren</strong>. U moet uw computer ingeschakeld en actief houden tijdens een crawl. Plan om een nieuw venster te openen voor de crawler en houd dat als het actieve tabblad in de voorgrond terwijl het werkt. U kunt ondertussen in een ander venster blijven werken. De crawler werkt zijn schatting bij na elke batch pagina's.</p>
             </section>
             <section id="reports">
               <h3>Rapporten bekijken</h3>
@@ -266,13 +266,13 @@
                   <strong>Meldingen</strong> toont problemen per type.
                 </li>
                 <li>
-                  <strong>Afwijzingen</strong> maakt het mogelijk om te bewaken of auteurs correct afwijzen, en bevat "reset"-knoppen om afgewezen meldingen te herstellen.
+                  <strong>Afwijzingen</strong> maakt het mogelijk om te bewaken of auteurs correct afwijzen, en bevat "reset"-knoppen om afgewezen meldingen ongedaan te maken.
                 </li>
                 <li>
                   <strong>Export</strong> bevat versies van de rapporten Pagina's, Meldingen en Afwijzingen die kunnen worden gefilterd om CSV-downloads voor te bereiden. <em>Geleverd door de CSV Export-submodule</em>
                 </li>
                 <li>
-                  <strong>Refresh</strong> bevat dashboardonderhoudsmiddelen om meldingen van verwijderde pagina's te verwijderen, meldingen van geparametriseerde pseudo-pagina's zoals /search?query=example te verwijderen, opgeslagen paginatitels en -URL's bij te werken, en een handmatige crawl uit te voeren. <em>Geleverd door de CSA-submodule</em>
+                  <strong>Refresh</strong> bevat dashboardonderhoudstools om meldingen van verwijderde pagina's te verwijderen, meldingen van geparametriseerde pseudo-pagina's zoals /search?query=example te verwijderen, opgeslagen paginatitels en -URL's bij te werken, en een handmatige crawl uit te voeren. <em>Geleverd door de CSA-submodule</em>
                 </li>
               </ul>
             </section>
@@ -288,7 +288,7 @@
                   <textarea data-drupal-selector="edit-hidden-handlers" aria-describedby="edit-hidden-handlers--description" id="edit-hidden-handlers" name="hidden_handlers" rows="1" cols="60" class="form-textarea resize-vertical form-element form-element--type-textarea form-element--api-textarea"></textarea>
               </div>
             <p>Sommige thema's hebben kolommen of widgets die horizontale of verticale overloop verbergen. De bibliotheek detecteert automatisch wanneer een schakelaar buiten het zichtbare deel van de <strong>pagina</strong> zou vallen. Door de bibliotheek te vertellen dat bepaalde containers overloop verbergen, probeert ze ook tips voor elementen in die containers binnen hun grenzen te plaatsen.</p>
-            <p>Sommige thema's hebben widgets die de zichtbaarheid van inhoud in- en uitschakelen, zoals accordeons, tabbladen en diashows. Tips in deze elementen worden ook verborgen. Door een lijst van selectors voor deze widgets op te geven, pauzeert Editoria11y kort wanneer een gebruiker naar die tips probeert te springen via een volgende of vorige knop. Drupal-thema's en modules kunnen vervolgens de instructies volgen uit het bibliotheekgedeelte over <a href="/nl/install/#hidden-content">omgaan met tips op verborgen inhoud</a> om de verborgen inhoud te onthullen.</p>
+            <p>Sommige thema's hebben widgets die de zichtbaarheid van inhoud omschakelen, zoals accordeons, tabbladen en diashows. Tips in deze elementen worden dan ook verborgen. Door een lijst van selectors voor deze widgets op te geven, pauzeert Editoria11y even wanneer een gebruiker via een volgende- of vorige-knop naar die tips probeert te springen. Drupal-thema's en modules kunnen vervolgens de instructies volgen uit het bibliotheekgedeelte over <a href="/nl/install/#hidden-content">omgaan met tips op verborgen inhoud</a> om de verborgen inhoud zichtbaar te maken.</p>
 
             <h2 id="runtime">Uw eigen configuratie schrijven</h2>
             <p>In PHP: de Drupal-module biedt een <code>hook_editoria11y_alter_config</code> om de inhoud van <code>drupalSettings.editoria11y</code> te wijzigen in een module of thema. Bijvoorbeeld:</p>
@@ -338,7 +338,7 @@ var editoria11yOptions = function(options) {
             <h2>Uw eigen tests schrijven</h2>
             <p>Voeg eerst in de moduleconfiguratie 1 toe aan de opties "Aangepaste tests" zodat de module weet dat hij op de tests moet letten.</p>
             <p>Maak vervolgens een Drupal JS-bibliotheek met uw tests in uw thema of module, met behulp van de <a href="/nl/install/#custom-tests">bibliotheekgids voor het schrijven van aangepaste tests</a>.</p>
-            <p>Hier is een werkend voorbeeld van Princeton, van een aangepaste test om te waarschuwen voor Safe Links. Let op dat het toegang heeft tot de klasse Editoria11y via <code>Drupal.Ed11y.</code></p>
+            <p>Hier is een werkend voorbeeld van Princeton: een aangepaste test die waarschuwt voor Safe Links. Merk op dat het de klasse Editoria11y benadert via <code>Drupal.Ed11y.</code></p>
             <pre class="language-javascript"><code><!--const psEd11yCustomTests = function() {
 
   // 1.

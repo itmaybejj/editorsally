@@ -68,9 +68,9 @@
 
               <p>Además:</p>
               <ul>
-                <li>Configuración inicial que ignora automáticamente los elementos de Drupal, CKeditor, Gutenberg, propósito de enlace y enlace externo, reacciona a los cambios al editar en contenedores modales, y posiciona automáticamente la barra de herramientas para evitar solapamientos con elementos de Klaro y Vista previa en la misma página.</li>
+                <li>Configuración inicial que ignora automáticamente los elementos de Drupal, CKEditor, Gutenberg, Link Purpose y External Link, reacciona a los cambios al editar en contenedores modales, y posiciona automáticamente la barra de herramientas para evitar solapamientos con elementos de Klaro y Same Page Preview.</li>
                 <li>Configuración basada en roles para determinar qué usuarios verán el verificador, qué usuarios pueden descartar alertas y qué usuarios pueden ver los informes de todo el sitio.</li>
-                <li>Un rastreador interno del sitio para actualizar el panel después de cambios importantes en el tema. <em>(solo CSA)</em></li>
+                <li>Un rastreador local integrado para actualizar el panel después de cambios importantes en el tema. <em>(solo CSA)</em></li>
                 <li>Configuración dividida entre autor/desarrollador con pruebas separadas (~30/~80) y listas de problemas. <em>(solo CSA)</em></li>
               </ul>
 
@@ -141,7 +141,7 @@
               <li>"Ignorar" se almacena como preferencia de usuario: la alerta ahora está oculta para el usuario actual, pero solo para ese usuario.</li>
               <li>"Marcar como correcto" oculta la alerta para todos los usuarios.</li>
             </ul>
-            <p>Si un usuario puede descartar una alerta está controlado a nivel de rol en los permisos de usuario de Drupal. <strong>La mayoría de los autores deben poder descartar alertas</strong>. No tiene sentido asignar una verificación manual a alguien si no puede marcar el elemento como verificado.</p>
+            <p>La posibilidad de descartar alertas se controla a nivel de rol en los permisos de usuario de Drupal. <strong>La mayoría de los autores deben poder descartar alertas</strong>. No tiene sentido asignar una verificación manual a alguien si no puede marcar el elemento como verificado.</p>
 
             <h3 id="roots">Ignorar elementos</h3>
             <p>¡Estas dos configuraciones son las más importantes!</p>
@@ -205,7 +205,7 @@
             <ul>
               <li>Pruebas de contenido: Enlaces a verificar</li>
               <li>Pruebas de contenido: Incrustaciones a verificar</li>
-              <li>Pruebas de contenido: Detección de contenido dinámico y en la sombra</li>
+              <li>Pruebas de contenido: Detección de contenido dinámico y shadow</li>
               <li>Pruebas de desarrollador: Contraste</li>
             </ul>
 
@@ -287,7 +287,7 @@
                 <label for="edit-hidden-handlers" class="form-item__label">El JS del tema se encargará de revelar los consejos ocultos dentro de estos contenedores</label>
                   <textarea data-drupal-selector="edit-hidden-handlers" aria-describedby="edit-hidden-handlers--description" id="edit-hidden-handlers" name="hidden_handlers" rows="1" cols="60" class="form-textarea resize-vertical form-element form-element--type-textarea form-element--api-textarea"></textarea>
               </div>
-            <p>Algunos temas tienen columnas o widgets que ocultan el desbordamiento horizontal o vertical. La biblioteca detecta automáticamente cuando un conmutador caería fuera de la parte visible de la <strong>página</strong>. Indicar a la biblioteca que ciertos contenedores ocultan el desbordamiento significa que también intentará posicionar los consejos para los elementos de esos contenedores dentro de sus bordes.</p>
+            <p>Algunos temas tienen columnas o widgets que ocultan el desbordamiento horizontal o vertical. La biblioteca detecta automáticamente cuando un indicador de alerta caería fuera de la parte visible de la <strong>página</strong>. Indicar a la biblioteca que ciertos contenedores ocultan el desbordamiento significa que también intentará posicionar los consejos para los elementos de esos contenedores dentro de sus bordes.</p>
             <p>Algunos temas tienen widgets que activan la visibilidad del contenido, como acordeones, pestañas y presentaciones de diapositivas. Los consejos dentro de estos elementos también estarán ocultos. Proporcionar una lista de selectores para estos widgets significa que Editoria11y hará una breve pausa cuando un usuario intente ir a esos consejos usando el botón siguiente o anterior. Los temas y módulos de Drupal pueden entonces seguir las instrucciones de la sección de la biblioteca sobre <a href="/es/install/#hidden-content">cómo tratar los consejos en contenido oculto</a> para revelar el contenido oculto.</p>
 
             <h2 id="runtime">Escribe tu propia configuración</h2>

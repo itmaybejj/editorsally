@@ -141,7 +141,7 @@
               <li>"忽略"作为用户偏好保存：该提示现在仅对当前用户隐藏，不影响其他用户。</li>
               <li>"标记为无误"将对所有用户隐藏该提示。</li>
             </ul>
-            <p>用户是否能忽略提示，由 Drupal 用户权限中的角色级别控制。<strong>大多数作者应被允许忽略提示</strong>。如果用户无法将某项标记为已检查，那么为其分配手动检查任务便毫无意义。</p>
+            <p>用户是否能忽略提示，由 Drupal 用户权限中的角色级别控制。<strong>大多数作者应被授予忽略提示的权限</strong>。如果用户无法将某项标记为已检查，那么为其分配人工检查任务便毫无意义。</p>
 
             <h3 id="roots">忽略元素</h3>
             <p>以下两项配置设置最为重要！</p>
@@ -250,7 +250,7 @@
                   在管理界面批量删除页面或重定向等操作往往会留下已不存在或已移动页面的残留结果。此时，使用"刷新"标签页中的维护功能来刷新页面 URL、检测并清除已删除页面会很有帮助。
                 </li>
               </ol>
-              <p>爬取过程中不会有任何数据离开您的站点。CSA 爬虫并非云端工具；它使用您的浏览器加载并检查您自己站点上的页面。这种方式的不足之处在于<strong>浏览器会暂停后台标签页</strong>。爬取期间需要保持电脑开启且不进入休眠。建议为爬虫单独开一个窗口，并在爬取过程中将其保持为该窗口的前台标签页。您可以在另一个窗口中继续工作。爬虫将在每批页面处理完成后更新进度估算。</p>
+              <p>爬取过程中不会有任何数据离开您的站点。CSA 爬虫并非云端工具，它使用您的浏览器加载并检查您自己站点上的页面。这种方式的不足之处在于<strong>浏览器会暂停后台标签页</strong>。爬取期间需要保持电脑开启且不进入休眠。建议为爬虫单独开一个窗口，并在爬取过程中将其保持为该窗口的前台标签页。您可以在另一个窗口中继续工作。爬虫将在每批页面处理完成后更新进度估算。</p>
             </section>
             <section id="reports">
               <h3>查看报告</h3>
@@ -316,7 +316,7 @@ function MY_MODULE_editoria11y_alter_config(array &$attach, CacheableMetadata $c
     $attach['allow_ok'] = 'okAll';
   }
 }--></code></pre>
-            <p>修改 <code>drupalSettings</code> 仅在模块 JavaScript 已配置好将该值传递给库的情况下才有效。若要添加额外参数，需要直接修改 JavaScript 的 <code>options</code> 对象。该模块会检测一个名为 <code>editoria11yOptionsOverride</code> 的全局 JavaScript 变量。若该变量已设置，模块将把 <code>options</code> 对象传递给您在模块或主题中提供的 <code>editoria11yOptions</code> 函数。届时即可设置任意<a href="https://editorsally.ddev.site/en/install/#params">库参数</a>。</p>
+            <p>修改 <code>drupalSettings</code> 仅在模块 JavaScript 已配置好将该值传递给库的情况下才有效。若要添加额外参数，需要直接修改 JavaScript 的 <code>options</code> 对象。该模块会检测一个名为 <code>editoria11yOptionsOverride</code> 的全局 JavaScript 变量。若该变量已设置，模块将把 <code>options</code> 对象传递给您在模块或主题中提供的 <code>editoria11yOptions</code> 函数，届时即可设置任意<a href="https://editorsally.ddev.site/en/install/#params">库参数</a>。</p>
             <pre class="language-javascript"><code><!--var editoria11yOptionsOverride = true;
 var editoria11yOptions = function(options) {
   // You now have access to the processed options object that will be passed to the library.

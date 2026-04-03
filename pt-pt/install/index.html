@@ -94,7 +94,7 @@
 
                 <section id="params">
                     <h2>Parâmetros</h2>
-                    <p>Uma implementação completa só deve ser ativada para editores com sessão iniciada (não vai querer que os visitantes do seu sítio vejam o verificador!), e pode substituir qualquer um dos <a href="https://github.com/itmaybejj/editoria11y/blob/3.0.x/src/js/utils/ed11y-default-options.js" class="liinternal"><strong>parâmetros predefinidos</strong></a>.</p>
+                    <p>Uma implementação completa só deve ser carregada para editores com sessão iniciada (não vai querer que os visitantes do seu sítio vejam o verificador!), e pode substituir qualquer um dos <a href="https://github.com/itmaybejj/editoria11y/blob/3.0.x/src/js/utils/ed11y-default-options.js" class="liinternal"><strong>parâmetros predefinidos</strong></a>.</p>
                     <p>Note que todos os parâmetros têm valores predefinidos; inclua apenas os que pretende alterar.</p>
                     <p>Uma implementação muito personalizada poderá ter este aspeto:</p>
                     <pre class="language-javascript"><code><!--const ed11y = new Ed11y.Ed11y({
@@ -183,7 +183,7 @@ baseFontFamily: '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica N
 
                         <li><strong><code>ed11yPanelOpened</code></strong>: emitido se o painel abrir, automaticamente ou manualmente.</li>
 
-                        <li><strong><code>ed11yShowHidden</code></strong>: fornece um número <code>data-ed11y-result</code> e um booleano <code>viaJump</code>. Apenas emitido se o parâmetro “ed11yShowHidden” estiver definido <em><strong>e</strong></em> um elemento ancestral corresponder a um seletor. Utilizado para revelar alertas em contêineres ainda fechados, como acordeões, separadores e carrosséis. Exemplos de utilização na secção seguinte.</li>
+                        <li><strong><code>ed11yShowHidden</code></strong>: fornece um número <code>data-ed11y-result</code> e um booleano <code>viaJump</code>. Apenas emitido se o parâmetro “ed11yShowHidden” estiver definido <em><strong>e</strong></em> um elemento ancestral corresponder a um seletor. Utilizado para revelar alertas em contentores ainda fechados, como acordeões, separadores e carrosséis. Exemplos de utilização na secção seguinte.</li>
 
                         <li><strong><code>ed11yPop</code></strong>: fornece o ID de <code>data-ed11y-result</code>, bem como referências aos objetos <code>result</code> e <code>tip</code>. Emitido quando uma dica de contexto aparece, permitindo modificar as dicas em tempo de execução.</li>
 
@@ -246,7 +246,7 @@ document.addEventListener('ed11yPop', e => {
 
                     <p>Se o parâmetro <strong><em>customTests</em></strong> for um <strong><em>número</em></strong>, o Editoria11y emitirá um evento “ed11yRunCustomTests” durante a verificação, e aguardará até 500ms enquanto escuta esse número de eventos “<code>ed11yResume</code>”.</p>
 
-                    <p>Isto pode ser aproveitado para chamar tantos scripts com testes personalizados quantos desejar, que podem inserir os seus resultados na matriz de resultados antes de as dicas serem desenhadas.</p>
+                    <p>Isto pode ser aproveitado para chamar tantos scripts de testes personalizados quantos desejar, que podem inserir os seus resultados na matriz de resultados antes de as dicas serem desenhadas.</p>
 
                     <p>Por exemplo, se quisesse criar esta dica para assinalar hiperligações coladas de mensagens de correio eletrónico com URLs ofuscados:</p>
 
@@ -342,9 +342,9 @@ document.addEventListener('ed11yPop', e => {
     }
 }) --></code></pre>
 
-                    <p>Para revelar conteúdo apenas ao saltar para uma dica <strong><em>específica</em></strong> através do botão “seguinte” do painel (por exemplo, num separador fechado ou no próximo diapositivo de carrossel), precisará de definir tanto <code>hiddenHandlers</code> com os seletores CSS relevantes como <code>checkVisible</code> como TRUE nos seus parâmetros. Adicione depois um listener de eventos para o evento <code>ed11yShowHidden</code>. Este é emitido se o Editoria11y reconhecer que uma dica está dentro de um contêiner com um dos seletores <code>hiddenHandlers</code> listados nas opções. Este evento JS incluirá o ID da dica que está prestes a abrir. O Editoria11y fará uma breve pausa após emitir este evento, para dar tempo ao seu JavaScript de tornar o elemento visível.</p>
+                    <p>Para revelar conteúdo apenas ao saltar para uma dica <strong><em>específica</em></strong> através do botão “seguinte” do painel (por exemplo, num separador fechado ou no próximo diapositivo de carrossel), precisará de definir tanto <code>hiddenHandlers</code> com os seletores CSS relevantes como <code>checkVisible</code> como TRUE nos seus parâmetros. Adicione depois um listener para o evento <code>ed11yShowHidden</code>. Este é emitido quando o Editoria11y reconhece que uma dica está dentro de um contentor com um dos seletores <code>hiddenHandlers</code> listados nas opções. Este evento JS incluirá o ID da dica que está prestes a abrir. O Editoria11y fará uma breve pausa após emitir este evento, para dar tempo ao seu JavaScript de tornar o elemento visível.</p>
 
-                    <p>Eis um exemplo de uma implementação da Penn State. Procura o elemento correspondente ao ID fornecido, encontra o seu contêiner de componente interativo ancestral e aciona o respetivo evento para ativar o seu alternador:</p>
+                    <p>Eis um exemplo de uma implementação da Penn State. Procura o elemento correspondente ao ID fornecido, encontra o seu contentor de componente interativo ancestral e aciona o respetivo evento para ativar o seu alternador:</p>
                     <pre class="language-javascript"><code><!--context.addEventListener('ed11yShowHidden', e => {
   if (!e.detail.viaJump) {
        return;
@@ -353,7 +353,7 @@ document.addEventListener('ed11yPop', e => {
     .closest('[data-interactive-component]')
     .dispatchEvent(new CustomEvent('component:activate'));
 }); --></code></pre>
-                    <p>Nota final: alguns temas simplesmente não são compatíveis com a verificação de visibilidade — por exemplo, o contêiner <code>&lt;main&gt;</code> tem uma altura de 0px. Esses sítios devem desativar toda a verificação de visibilidade definindo <code>checkVisible</code> como false.</p>
+                    <p>Nota final: alguns temas simplesmente não são compatíveis com a verificação de visibilidade — por exemplo, o contentor <code>&lt;main&gt;</code> tem uma altura de 0px. Esses sítios devem desativar toda a verificação de visibilidade definindo <code>checkVisible</code> como false.</p>
 
                 </section>
 

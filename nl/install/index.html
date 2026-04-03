@@ -61,7 +61,7 @@
                     <h2>
                         Aangepaste installatie
                     </h2>
-                    <p>Om een eigen implementatie te bouwen, <a href="https://github.com/itmaybejj/editoria11y" data-type="URL" data-id="https://github.com/itmaybejj/editoria11y" class="liinternal">download een lokale kopie</a> (of verwijs naar een <a href="https://cdn.jsdelivr.net/gh/itmaybejj/editoria11y@2/dist/editoria11y.min.js" class="liinternal">CDN-versie</a>) van een taalpakket, het JS min-bestand en het CSS min-bestand, en maak vervolgens een nieuwe “Ed11y”-instantie aan.</p>
+                    <p>Om een eigen implementatie te bouwen, <a href=”https://github.com/itmaybejj/editoria11y” data-type=”URL” data-id=”https://github.com/itmaybejj/editoria11y” class=”liinternal”>download een lokale kopie</a> (of verwijs naar een <a href=”https://cdn.jsdelivr.net/gh/itmaybejj/editoria11y@2/dist/editoria11y.min.js” class=”liinternal”>CDN-versie</a>) van een taalpakket, het geminificeerde JS-bestand en het geminificeerde CSS-bestand, en maak vervolgens een nieuwe “Ed11y”-instantie aan.</p>
                     <p>Voor <strong>ESM/JS module-imports</strong>: </p>
                     <pre class="language-markup"><code><!--// Load CSS
 <link href="/dist/css/editoria11y.min.css?v=3.0" rel="stylesheet">
@@ -94,8 +94,8 @@
 
                 <section id="params">
                     <h2>Parameters</h2>
-                    <p>Een volledige implementatie wordt alleen aangeroepen voor ingelogde redacteuren (u wilt niet dat uw sitebezoekers uw checker zien!), en kan elk van <a href="https://github.com/itmaybejj/editoria11y/blob/3.0.x/src/js/utils/ed11y-default-options.js" class="liinternal"><strong>de standaardparameters</strong></a> overschrijven.</p>
-                    <p>Standaardwaarden zijn voor alle parameters opgegeven; voeg alleen zaken toe die u wilt overschrijven.</p>
+                    <p>Een volledige implementatie wordt alleen geladen voor ingelogde redacteuren (u wilt niet dat uw sitebezoekers uw checker zien!), en kan elk van <a href="https://github.com/itmaybejj/editoria11y/blob/3.0.x/src/js/utils/ed11y-default-options.js" class="liinternal"><strong>de standaardparameters</strong></a> overschrijven.</p>
+                    <p>Standaardwaarden zijn voor alle parameters opgegeven; voeg alleen toe wat u wilt overschrijven.</p>
                     <p>Een sterk aangepaste implementatie kan er als volgt uitzien:</p>
                     <pre class="language-javascript"><code><!--const ed11y = new Ed11y.Ed11y({
   // Define content regions
@@ -138,7 +138,7 @@
   }
 
 }); --></code></pre>
-                    <p>Kant-en-klare integraties stellen deze variabelen vaak dynamisch in – bijvoorbeeld door pagina’s in de “assertive”-modus te laden wanneer ze onlangs zijn bewerkt, en na enkele minuten terug te schakelen naar “polite”.</p>
+                    <p>Kant-en-klare integraties stellen deze variabelen vaak dynamisch in — bijvoorbeeld door pagina’s in de “assertive”-modus te laden wanneer ze onlangs zijn bewerkt, en na enkele minuten terug te schakelen naar “polite”.</p>
                 </section>
 
                 <section id="theme">
@@ -172,7 +172,7 @@ baseFontFamily: '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica N
                 <section id="js-events">
                     <h2 class="wp-block-heading has-text-align-left has-secondary-background-color has-background has-large-font-size">Nuttige JS-gebeurtenissen</h2>
 
-                    <p>Thema-ontwikkelaars kunnen deze gebeurtenissen koppelen om de pagina naar behoefte te reageren en aan te passen.</p>
+                    <p>Thema-ontwikkelaars kunnen naar deze gebeurtenissen luisteren om de pagina naar behoefte te laten reageren en aan te passen.</p>
 
                     <p>In de gebruikelijke volgorde van verschijnen…</p>
 
@@ -207,13 +207,13 @@ baseFontFamily: '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica N
                 <section id="modify-tips">
                     <h2 class="wp-block-heading has-secondary-background-color has-background has-large-font-size">Tips aanpassen</h2>
 
-                    <p>Als u alleen de tekst van een tip wilt aanpassen, kunnen items in het globale object ed11yLang.en (vóór het aanroepen van de bibliotheek) of Ed11y.M (na het aanroepen van de bibliotheek) direct worden overschreven. Bijvoorbeeld in de Drupal-module waar we het taalpakket hebben gekoppeld aan Drupal.ed11yLang:</p>
+                    <p>Als u alleen de tekst van een tip wilt aanpassen, kunnen items in het globale object ed11yLang.en (vóór het laden van de bibliotheek) of Ed11y.M (na het laden van de bibliotheek) direct worden overschreven. Bijvoorbeeld in de Drupal-module, waar het taalpakket is gekoppeld aan Drupal.ed11yLang:</p>
 
                     <p><code>Drupal.ed11yLang.lang.testNames.title = “Please write shorter headings.”</code></p>
 
                     <p>Dit geldt voor elk van de <a href="https://github.com/itmaybejj/editoria11y/blob/3.0.x/src/lang/baseAll.js" data-type="link" data-id="https://github.com/itmaybejj/editoria11y/blob/2.3.x/js/ed11y-localization.js" class="liinternal">standaardsleutels in het lokalisatiebestand</a> of de actieve taalspecifieke vertaling.</p>
 
-                    <p>De Drupal-module voegt ook aangepaste bewerkingslinks toe aan de tips, via de parameter <code>editLinks</code>. Let op “Page editor” en “Layout editor:”</p>
+                    <p>De Drupal-module voegt ook aangepaste bewerkingslinks toe aan de tips via de parameter <code>editLinks</code>. Let op “Page editor” en “Layout editor:”</p>
 
                     <figure class="wp-block-image size-full"><img loading="lazy" data-recalc-dims="1" fetchpriority="high" decoding="async" width="580" height="300" src="https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?resize=580%2C300&amp;ssl=1" alt="Tooltip met ingevoegde koppelingen &quot;Page editor&quot; en &quot;Layout editor&quot;." class="wp-image-523" srcset="https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?w=1290&amp;ssl=1 1290w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?resize=600%2C311&amp;ssl=1 600w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?resize=768%2C398&amp;ssl=1 768w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?resize=1200%2C621&amp;ssl=1 1200w" sizes="(max-width: 580px) 100vw, 580px"></figure>
 
@@ -244,9 +244,9 @@ document.addEventListener('ed11yPop', e => {
                 <section id="custom-tests">
                     <h2>Aangepaste tests</h2>
 
-                    <p>Als de parameter <strong><em>customTests</em></strong> een <strong><em>getal</em></strong> is, zal Editoria11y een “ed11yRunCustomTests”-gebeurtenis verzenden tijdens de controle, en vervolgens maximaal 500 ms pauzeren terwijl het luistert naar dat aantal “<code>ed11yResume</code>”-gebeurtenissen.</p>
+                    <p>Als de parameter <strong><em>customTests</em></strong> een <strong><em>getal</em></strong> is, verzendt Editoria11y een “ed11yRunCustomTests”-gebeurtenis tijdens de controle, en pauzeert vervolgens maximaal 500 ms terwijl het luistert naar dat aantal “<code>ed11yResume</code>”-gebeurtenissen.</p>
 
-                    <p>Dit kan worden benut om zoveel scripts met aangepaste tests aan te roepen als gewenst, die hun resultaten in de resultatenarray kunnen invoegen voordat de tips worden getekend.</p>
+                    <p>Zo kunnen meerdere scripts met aangepaste tests worden aangeroepen; elk script kan zijn resultaten in de resultatenarray invoegen voordat de tips worden getekend.</p>
 
                     <p>Als u bijvoorbeeld deze tip wilt aanmaken om links te markeren die uit e-mails zijn geplakt met versleutelde URL’s:</p>
 
@@ -329,7 +329,7 @@ document.addEventListener('ed11yPop', e => {
 
                     <p>Veel interactieve componenten (tabbladen, sliders, accordeons) verbergen inhoud. Het Editoria11y-infopaneel bevat knoppen voor vorige/volgende om direct naar problemen te springen. Als Editoria11y denkt dat de tooltip van een probleem momenteel onzichtbaar is, waarschuwt het de gebruiker dat er iets mis is en markeert het de eerste zichtbare bovenliggende container – bijvoorbeeld de div rondom een accordeon.</p>
 
-                    <p>Idealiter zorgt uw thema ervoor dat die elementen zichtbaar zijn voordat de zichtbaarheidscontrole van Editoria11y wordt uitgevoerd, zodat alles als vanzelf werkt voor uw gebruikers — carrousels gaan automatisch verder en accordeons openen automatisch om het probleem weer te geven.</p>
+                    <p>Idealiter zorgt uw thema ervoor dat die elementen zichtbaar zijn voordat de zichtbaarheidscontrole van Editoria11y wordt uitgevoerd, zodat alles vanzelf werkt voor uw gebruikers — carrousels gaan automatisch verder en accordeons openen automatisch om het probleem te tonen.</p>
 
                     <p>Om dit te doen wanneer het paneel voor het eerst wordt geopend (bijvoorbeeld door <strong><em>alle</em></strong> accordeonpanelen met problemen uit te vouwen), voegt u een JS-gebeurtenisluisteraar toe voor <code>ed11yPanelOpened</code>, doet u vervolgens een querySelectorAll voor relevante <code>ed11y-element-result</code>-elementen en roept u daarna de functie aan die uw thema gebruikt om dat deel van de pagina zichtbaar te maken.</p>
 
@@ -342,7 +342,7 @@ document.addEventListener('ed11yPop', e => {
     }
 }) --></code></pre>
 
-                    <p>Om inhoud alleen zichtbaar te maken bij het springen naar een <strong><em>specifieke</em></strong> tip via de knop “volgende” in het paneel (bijvoorbeeld in een gesloten tabblad of de volgende carrouseldia), moet u zowel <code>hiddenHandlers</code> instellen op relevante CSS-selectors als <code>checkVisible</code> op TRUE in uw parameters. Voeg vervolgens een gebeurtenisluisteraar toe voor de <code>ed11yShowHidden</code>-gebeurtenis. Deze wordt verzonden als Editoria11y herkent dat een tip zich bevindt in een container met een van de opgegeven <code>hiddenHandlers</code>-selectors in de optielijst. Dit JS-evenement bevat het ID van de tip die op het punt staat te worden geopend. Editoria11y pauzeert vervolgens kort na het verzenden van deze gebeurtenis, om uw JS de tijd te geven het element zichtbaar te maken.</p>
+                    <p>Om inhoud alleen zichtbaar te maken bij het springen naar een <strong><em>specifieke</em></strong> tip via de knop “volgende” in het paneel (bijvoorbeeld in een gesloten tabblad of de volgende carrouseldia), stelt u zowel <code>hiddenHandlers</code> in op relevante CSS-selectors als <code>checkVisible</code> op TRUE in uw parameters. Voeg vervolgens een gebeurtenisluisteraar toe voor de <code>ed11yShowHidden</code>-gebeurtenis. Deze wordt verzonden wanneer Editoria11y herkent dat een tip zich bevindt in een container die overeenkomt met een van de opgegeven <code>hiddenHandlers</code>-selectors. Dit JS-event bevat het ID van de tip die op het punt staat te worden geopend. Editoria11y pauzeert vervolgens even na het verzenden van deze gebeurtenis, zodat uw JS de tijd krijgt het element zichtbaar te maken.</p>
 
                     <p>Hier is een voorbeeld van een Penn State-implementatie. Het zoekt het element op dat overeenkomt met het opgegeven ID, vindt vervolgens de bovenliggende container van het interactieve component en activeert zijn gebeurtenis om de schakelaar te activeren:</p>
                     <pre class="language-javascript"><code><!--context.addEventListener('ed11yShowHidden', e => {
@@ -353,7 +353,7 @@ document.addEventListener('ed11yPop', e => {
     .closest(‘[data-interactive-component]’)
     .dispatchEvent(new CustomEvent(‘component:activate’));
 }); --></code></pre>
-                    <p>Tot slot: sommige thema’s zijn simpelweg niet compatibel met zichtbaarheidscontrole — bijvoorbeeld wanneer de <code>&lt;main&gt;</code>-container een hoogte van 0px heeft. Dergelijke sites moeten alle zichtbaarheidscontrole uitschakelen door <code>checkVisible</code> in te stellen op false.</p>
+                    <p>Tot slot: sommige thema’s zijn simpelweg niet compatibel met zichtbaarheidscontrole — bijvoorbeeld wanneer de <code>&lt;main&gt;</code>-container een hoogte van 0px heeft. Zulke sites moeten alle zichtbaarheidscontrole uitschakelen door <code>checkVisible</code> in te stellen op false.</p>
 
                 </section>
 

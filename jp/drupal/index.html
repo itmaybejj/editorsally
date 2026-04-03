@@ -78,31 +78,31 @@
 
             </section>
             <h2>インストールと主要なセットアップ手順</h2>
-            <p>Drupal.orgの<a href="https://www.drupal.org/project/editoria11y/">バンドルインストーラー</a>には複数のモジュールが含まれています：</p>
+            <p>Drupal.org の<a href="https://www.drupal.org/project/editoria11y/">バンドルインストーラー</a>には複数のモジュールが含まれています：</p>
             <ul>
               <li>
-                Editoria11y: コアコンテンツチェッカーとダッシュボード。
+                Editoria11y：コアコンテンツチェッカーとダッシュボード。
               </li>
               <li>
-                Editoria11y CSA: 開発者テストとダッシュボードのメンテナンスツール。
+                Editoria11y CSA：開発者テストとダッシュボードのメンテナンスツール。
               </li>
               <li>
-                Editoria11y Export: CSVレポートツール。
+                Editoria11y Export：CSV レポートツール。
               </li>
             </ul>
             <p>他のモジュールと同様にインストールし、以下の主要な手順を実行してください：</p>
             <ol>
-              <li><strong>権限を確認する。</strong> 信頼できる作成者には「OK にする」、「無視としてマーク」、「ダッシュボードを表示する」が必要です。</li>
-              <li><strong>繰り返し表示される、または役に立たないアラートがないか主要ページを確認する。</strong> ツールチップでOKとしてマークするか、設定でセレクターによる要素の無視を調整してください。</li>
-              <li>見つけにくいヒント（画面外、切り詰め、他の要素の後ろ、非表示要素など）を探す。以下の「ヒントの配置を修正する」のヒントを使って修正してください。</li>
-              <li>サイトにすでにコンテンツがあり、CSAサブスクリプションを持っている場合は、ダッシュボードの「再確認」タブを訪問し、<strong>サイトをクロール</strong>してサイトレポートを事前に読み込んでください。これは任意ですが、古いページはクロールされるかログインユーザーが訪問するまでレポートに表示されません。</li>
+              <li><strong>権限を確認する。</strong> 信頼できる作成者には「OK にする」、「無視としてマーク」、「ダッシュボードを表示する」の権限が必要です。</li>
+              <li><strong>繰り返し表示される、または役に立たないアラートがないか主要ページを確認する。</strong> ツールチップで OK としてマークするか、設定でセレクターによる要素の除外を調整してください。</li>
+              <li>見つけにくいヒント（画面外・切り詰め・他の要素の後ろ・非表示要素など）を確認する。以下の「非表示または画面外のヒントを修正する」のセクションを参考に対処してください。</li>
+              <li>サイトにすでにコンテンツがあり、CSA サブスクリプションをお持ちの場合は、ダッシュボードの「再確認」タブを開き、<strong>サイトをクロール</strong>してサイトレポートを事前に読み込んでください。任意ですが、古いページはクロールされるかログイン済みユーザーが訪問するまでレポートに表示されません。</li>
             </ol>
             <p><a href="https://youtu.be/uYvNYPg38nU?si=dqADyWpTtOhniHTP&t=696">設定オプションの動画紹介</a>（v2.4）をご覧ください。</p>
 
             <h2 id="check-roots">役に立たないアラートを非表示にする</h2>
             <p>
-              <strong>適切な設定は役に立たないアラートを抑制し、コンテンツ作成者が修正すべき問題に集中できるようにします</strong>。</p>
-            <p>テストを完全にオフにすることもできますが、通常は特定の要素やページのアラートを非表示にする方が良いでしょう。</p>
+              <strong>適切な設定により不要なアラートを抑制し、コンテンツ作成者が本当に修正すべき問題に集中できるようになります</strong>。</p>
+            <p>テストを完全にオフにすることもできますが、通常は特定の要素やページのアラートのみを非表示にする方が適切です。</p>
             <hr>
             <p>
               各テスト実行中、Editoria11yは「これらのコンテナ内のコンテンツを確認する」設定から要素の単一セットを収集し、それを何度かフィルタリングします。テスト実行の流れは次のとおりです：
@@ -141,7 +141,7 @@
               <li>「無視」はユーザー設定として保存されます：アラートは現在のユーザーには非表示になりますが、そのユーザーのみです。</li>
               <li>「OK にする」はすべてのユーザーに対してアラートを非表示にします。</li>
             </ul>
-            <p>ユーザーがアラートを非表示にできるかどうかは、Drupalのユーザー権限のロールレベルで制御されます。<strong>ほとんどの作成者はアラートを非表示にできるべきです</strong>。アイテムを確認済みとしてマークできない場合、手動チェックを割り当てる意味がありません。</p>
+            <p>ユーザーがアラートを非表示にできるかどうかは、Drupal のユーザー権限のロールレベルで制御されます。<strong>ほとんどの作成者はアラートを非表示にできるべきです</strong>。アイテムを確認済みとしてマークできない場合、手動チェックを割り当てる意味がありません。</p>
 
             <h3 id="roots">要素を無視する</h3>
             <p>これら2つの設定が最も重要です！</p>
@@ -238,7 +238,7 @@
             <h2 id="dashboard">サイト全体の結果を管理する</h2>
             <section id="refresh">
               <h3 class="pt-3">クロールと結果の更新</h3>
-              <p>Editoria11yは<strong>リアルタイムの監視ツールであり、クローラーではありません</strong>。サイト全体のレポートは作成者がページを表示したときに更新されるため、定期的なクロールは通常必要ありません。CSAモジュールにはクローラーが含まれていますが、以下の3つの状況でのみ必要となります：</p>
+              <p>Editoria11y は<strong>リアルタイムの監視ツールであり、クローラーではありません</strong>。サイト全体のレポートは作成者がページを閲覧した際に更新されるため、定期的なクロールは通常不要です。CSA モジュールにはクローラーが含まれていますが、以下の 3 つの状況でのみ必要となります：</p>
               <ol>
                 <li>
                   多くのページを持つ既存サイトにEditoria11yを最初にインストールするとき。ページはダッシュボードに表示される前に訪問される必要があるため、最初にクイッククロールを実行すると時間を節約できます。
@@ -250,48 +250,48 @@
                   ページの削除やリダイレクトなどの管理インターフェースでの一括操作は、存在しなくなったページや移動したページの結果を残しがちです。このような場合、「更新」タブのメンテナンスアクションを使用してページURLを更新し、削除されたページを検出して除外することが役立ちます。
                 </li>
               </ol>
-              <p>クロール中にサイトからデータが外部に送信されることはありません。CSAクローラーはクラウドツールではなく、ブラウザを使用してサイト上のページを読み込んでチェックします。このアプローチのデメリットは、<strong>ブラウザがバックグラウンドタブを一時停止する</strong>ことです。クロール中はコンピューターの電源を入れたまま起動した状態にしておく必要があります。クローラー用に新しいウィンドウを開き、作業中はそのウィンドウのフォアグラウンドタブとして残しておくことを計画してください。別のウィンドウで作業を続けることができます。クローラーはページのバッチごとに見積もりを更新します。</p>
+              <p>クロール中にサイトからデータが外部に送信されることはありません。CSA クローラーはクラウドツールではなく、ブラウザを使用してサイト上のページを読み込んでチェックします。このアプローチの注意点は、<strong>ブラウザがバックグラウンドタブを一時停止する</strong>ことです。クロール中はコンピューターの電源を入れたままにしておく必要があります。クローラー用に新しいウィンドウを開き、作業中はそのウィンドウをフォアグラウンドタブとして維持してください。別のウィンドウで他の作業を続けることは可能です。クローラーはページのバッチごとに進捗の見積もりを更新します。</p>
             </section>
             <section id="reports">
               <h3>レポートの表示</h3>
               <div class="my-4 border shadow" style="background: url(/assets/images/3x-dashboard.png) 86% 0%; padding-top: 28%; background-size: 106%;"></div>
               <ul>
                 <li>
-                  <strong>最近</strong>では個別のアラートを探索できます。同じアラートタイプのすべてのインスタンスを見つけるフィルタリング、最近のコンテンツで頻繁に表示されているアラートの確認、同じミスをする習慣がある作成者の特定などができます。
+                  <strong>最近</strong>では個別のアラートを探索できます。同じアラートタイプのすべての件数を絞り込んで確認したり、最近のコンテンツで頻出しているアラートを確認したり、同じミスを繰り返している作成者を特定したりできます。
                 </li>
                 <li>
-                  <strong>ページ</strong>ではページごとのアラート数をページ別にグループ化して表示します。最も問題が多いページを見つけたり、コンテンツタイプや公開ステータスなどのページ属性でフィルタリングしたりできます。
+                  <strong>ページ</strong>ではアラート数をページ別にまとめて表示します。問題の多いページを見つけたり、コンテンツタイプや公開ステータスなどのページ属性で絞り込んだりできます。
                 </li>
                 <li>
-                  <strong>アラート</strong>では問題をタイプ別に表示します。
+                  <strong>アラート</strong>では問題をタイプ別に一覧表示します。
                 </li>
                 <li>
-                  <strong>非表示設定</strong>では作成者が正しく非表示にしているかどうかを監視でき、非表示にしたアラートを元に戻す「リセット」ボタンがあります。
+                  <strong>非表示設定</strong>では作成者が適切に非表示にしているかどうかを確認でき、非表示にしたアラートを元に戻す「リセット」ボタンもあります。
                 </li>
                 <li>
-                  <strong>エクスポート</strong>には、CSVダウンロードを準備するためにフィルタリングできる、ページ、アラート、非表示設定レポートのバージョンが含まれています。<em>CSVエクスポートサブモジュールが提供</em>
+                  <strong>エクスポート</strong>には、CSV ダウンロード用にフィルタリングできるページ・アラート・非表示設定の各レポートが含まれています。<em>CSV エクスポートサブモジュールが提供</em>
                 </li>
                 <li>
-                  <strong>更新</strong>には、削除されたページからアラートを除外したり、/search?query=exampleのようなパラメーター付き疑似ページからアラートを除外したり、保存されたページタイトルとURLを更新したり、手動クロールを実行したりするダッシュボードのメンテナンスツールが含まれています。<em>CSAサブモジュールが提供</em>
+                  <strong>更新</strong>には、削除されたページのアラートを除外したり、<code>/search?query=example</code> のようなパラメーター付き疑似ページのアラートを除外したり、保存済みのページタイトルと URL を更新したり、手動クロールを実行したりするダッシュボードのメンテナンスツールが含まれています。<em>CSA サブモジュールが提供</em>
                 </li>
               </ul>
             </section>
 
             <h2 id="positioning">非表示または画面外のヒントを修正する</h2>
 
-            <p>モジュールはヒントの配置方法を変更するためのライブラリの設定オプション2つのフィールドを提供します：</p>
+            <p>モジュールはヒントの配置方法を変更するための設定フィールドを 2 つ提供します：</p>
 
               <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
                 <label for="edit-element-hides-overflow" class="form-item__label">オーバーフローが非表示の要素</label>
                   <textarea data-drupal-selector="edit-element-hides-overflow" aria-describedby="edit-element-hides-overflow--description" id="edit-element-hides-overflow" name="element_hides_overflow" rows="1" cols="60" class="form-textarea resize-vertical form-element form-element--type-textarea form-element--api-textarea"></textarea>
-                <label for="edit-hidden-handlers" class="form-item__label">テーマのJSがこれらのコンテナ内の非表示のツールチップを表示する処理を行う</label>
+                <label for="edit-hidden-handlers" class="form-item__label">テーマの JS がこれらのコンテナ内の非表示ツールチップを表示する処理を行う</label>
                   <textarea data-drupal-selector="edit-hidden-handlers" aria-describedby="edit-hidden-handlers--description" id="edit-hidden-handlers" name="hidden_handlers" rows="1" cols="60" class="form-textarea resize-vertical form-element form-element--type-textarea form-element--api-textarea"></textarea>
               </div>
-            <p>一部のテーマには、水平または垂直のオーバーフローを非表示にする列やウィジェットがあります。ライブラリはトグルが<strong>ページ</strong>の表示部分の外に落ちる場合を自動的に検出します。特定のコンテナがオーバーフローを非表示にすることをライブラリに伝えると、そのコンテナ内の要素のヒントもコンテナの境界内に配置しようとします。</p>
-            <p>一部のテーマには、アコーディオン、タブ、スライドショーなどのコンテンツの可視性を切り替えるウィジェットがあります。これらの要素内のヒントも非表示になります。これらのウィジェットのセレクターリストを提供すると、ユーザーが次へ・前へボタンを使ってヒントにジャンプしようとしたときにEditoria11yが一時的に停止します。Drupalのテーマとモジュールは、ライブラリセクションの<a href="/jp/install/#hidden-content">非表示コンテンツのヒントへの対応</a>に関する説明に従って非表示コンテンツを表示できます。</p>
+            <p>一部のテーマには、水平または垂直のオーバーフローを非表示にする列やウィジェットがあります。ライブラリはトグルが<strong>ページ</strong>の表示領域外に出てしまう場合を自動的に検出します。特定のコンテナがオーバーフローを非表示にすることをライブラリに伝えると、そのコンテナ内の要素のヒントもコンテナの境界内に収まるよう配置しようとします。</p>
+            <p>一部のテーマには、アコーディオン・タブ・スライドショーなどコンテンツの表示を切り替えるウィジェットがあります。これらの要素内のヒントも非表示になることがあります。これらのウィジェットのセレクターリストを指定すると、ユーザーが次へ・前へボタンでヒントにジャンプしようとした際に Editoria11y が一時的に処理を停止します。Drupal のテーマとモジュールは、ライブラリセクションの<a href="/jp/install/#hidden-content">非表示コンテンツのヒントへの対応</a>に関する説明に従って非表示コンテンツを表示できます。</p>
 
             <h2 id="runtime">独自の設定を記述する</h2>
-            <p>PHPでは：Drupalモジュールはモジュールまたはテーマで<code>drupalSettings.editoria11y</code>の内容を変更するための<code>hook_editoria11y_alter_config</code>を提供します。例：</p>
+            <p>PHP の場合：Drupal モジュールはモジュールまたはテーマで <code>drupalSettings.editoria11y</code> の内容を変更するための <code>hook_editoria11y_alter_config</code> を提供します。例：</p>
             <pre class="language-php"><code><!--<?php
 /**
  * @file
@@ -316,7 +316,7 @@ function MY_MODULE_editoria11y_alter_config(array &$attach, CacheableMetadata $c
     $attach['allow_ok'] = 'okAll';
   }
 }--></code></pre>
-            <p><code>drupalSettings</code>の変更は、モジュールのJSがその値をライブラリに渡すように設定されている場合にのみ有効です。追加のパラメーターを加えるには、JSの<code>options</code>オブジェクトを直接変更する必要があります。モジュールは<code>editoria11yOptionsOverride</code>というグローバルJS変数を1つチェックします。これが設定されている場合、モジュールまたはテーマで提供した<code>editoria11yOptions</code>関数に<code>options</code>オブジェクトを渡します。これで<a href="https://editorsally.ddev.site/en/install/#params">ライブラリのパラメーター</a>をすべて設定できます。</p>
+            <p><code>drupalSettings</code> の変更は、モジュールの JS がその値をライブラリに渡すよう設定されている場合にのみ有効です。追加のパラメーターを設定するには、JS の <code>options</code> オブジェクトを直接変更する必要があります。モジュールは <code>editoria11yOptionsOverride</code> というグローバル JS 変数を 1 つチェックします。これが設定されている場合、モジュールまたはテーマで提供した <code>editoria11yOptions</code> 関数に <code>options</code> オブジェクトを渡します。これで<a href="https://editorsally.ddev.site/en/install/#params">ライブラリのパラメーター</a>をすべて設定できます。</p>
             <pre class="language-javascript"><code><!--var editoria11yOptionsOverride = true;
 var editoria11yOptions = function(options) {
   // You now have access to the processed options object that will be passed to the library.
@@ -336,9 +336,9 @@ var editoria11yOptions = function(options) {
 --></code></pre>
             <section id="custom-tests">
             <h2>独自のテストを記述する</h2>
-            <p>まず、モジュールの設定で「カスタムテスト」オプションに1を追加し、テストを監視するよう設定します。</p>
-            <p>次に、<a href="/jp/install/#custom-tests">カスタムテストの記述に関するライブラリガイド</a>を使用して、テーマまたはモジュールにテストを含むDrupal JSライブラリを作成します。</p>
-            <p>以下はPrincetonによるSafe Linksに関するアラートを出すカスタムテストの実際の動作例です。<code>Drupal.Ed11y.</code>を通じてEditoria11yクラスにアクセスしていることに注意してください。</p>
+            <p>まず、モジュールの設定で「カスタムテスト」オプションに 1 を追加し、テストを監視するよう設定します。</p>
+            <p>次に、<a href="/jp/install/#custom-tests">カスタムテストの記述に関するライブラリガイド</a>を参照して、テーマまたはモジュールにテストを含む Drupal JS ライブラリを作成します。</p>
+            <p>以下は Princeton による Safe Links に関するアラートを出すカスタムテストの実際の動作例です。<code>Drupal.Ed11y.</code> を通じて Editoria11y クラスにアクセスしていることに注意してください。</p>
             <pre class="language-javascript"><code><!--const psEd11yCustomTests = function() {
 
   // 1.

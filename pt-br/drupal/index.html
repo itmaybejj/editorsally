@@ -71,7 +71,7 @@
                 <li>Configuração inicial que ignora automaticamente elementos do Drupal, CKEditor, Gutenberg, Link Purpose e External Link, reage a alterações durante a edição em contêineres modais e posiciona automaticamente a barra de ferramentas para evitar sobreposição com elementos do Klaro e do Same Page Preview.</li>
                 <li>Configuração baseada em função para definir quais usuários verão o verificador, quais poderão dispensar alertas e quais poderão visualizar relatórios de todo o site.</li>
                 <li>Um rastreador local (in-site) para atualizar o painel após grandes mudanças de tema. <em>(Apenas CSA)</em></li>
-                <li>Configuração dividida entre autor/desenvolvedor com testes (~30/~80) e listas de problemas separados. <em>(Apenas CSA)</em></li>
+                <li>Configuração dividida entre autor/desenvolvedor com testes (~30/~80) e listas de problemas separadas. <em>(Apenas CSA)</em></li>
               </ul>
 
 
@@ -138,7 +138,7 @@
             <p>Os testes podem ser configurados na biblioteca como erros ou avisos ("verificações manuais"). Os avisos podem ser dispensados. Há dois tipos de dispensa disponíveis no rodapé de cada dica:</p>
             <div class="my-2" style="background: url(/assets/images/3x-generic-tip.png) 100% 98%; max-width: 600px; padding-top: 6%; background-size: 108%;"></div>
             <ul>
-              <li>"Ignore" é armazenado como preferência do usuário: o alerta fica oculto para o usuário atual, e apenas para ele.</li>
+              <li>"Ignore" é armazenado como preferência do usuário: o alerta fica oculto apenas para o usuário atual.</li>
               <li>"Mark OK" oculta o alerta para todos os usuários.</li>
             </ul>
             <p>A capacidade de um usuário dispensar um alerta é controlada no nível da função nas permissões de usuário do Drupal. <strong>A maioria dos autores deve ter permissão para dispensar alertas</strong>. Não faz sentido atribuir uma verificação manual a alguém que não pode marcar o item como verificado.</p>
@@ -205,7 +205,7 @@
             <ul>
               <li>Testes de conteúdo: Links a verificar</li>
               <li>Testes de conteúdo: Incorporações a verificar</li>
-              <li>Testes de conteúdo: Detectar conteúdo dinâmico e shadow content</li>
+              <li>Testes de conteúdo: Detecção de conteúdo dinâmico e shadow content</li>
               <li>Testes de desenvolvedor: Contraste</li>
             </ul>
 
@@ -284,10 +284,10 @@
               <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
                 <label for="edit-element-hides-overflow" class="form-item__label">Elementos com overflow oculto</label>
                   <textarea data-drupal-selector="edit-element-hides-overflow" aria-describedby="edit-element-hides-overflow--description" id="edit-element-hides-overflow" name="element_hides_overflow" rows="1" cols="60" class="form-textarea resize-vertical form-element form-element--type-textarea form-element--api-textarea"></textarea>
-                <label for="edit-hidden-handlers" class="form-item__label">O JS do tema tratará de revelar tooltips ocultas dentro destes contêineres</label>
+                <label for="edit-hidden-handlers" class="form-item__label">O JS do tema tratará de revelar tooltips ocultos dentro destes contêineres</label>
                   <textarea data-drupal-selector="edit-hidden-handlers" aria-describedby="edit-hidden-handlers--description" id="edit-hidden-handlers" name="hidden_handlers" rows="1" cols="60" class="form-textarea resize-vertical form-element form-element--type-textarea form-element--api-textarea"></textarea>
               </div>
-            <p>Alguns temas têm colunas ou widgets que ocultam o overflow horizontal ou vertical. A biblioteca detecta automaticamente quando um botão ficaria fora da parte visível da <strong>página.</strong> Informar à biblioteca que determinados contêineres ocultam o overflow faz com que ela também tente posicionar as dicas para elementos nesses contêineres dentro de suas bordas.</p>
+            <p>Alguns temas têm colunas ou widgets que ocultam o overflow horizontal ou vertical. A biblioteca detecta automaticamente quando um indicador ficaria fora da parte visível da <strong>página.</strong> Informar à biblioteca que determinados contêineres ocultam o overflow faz com que ela também tente posicionar as dicas para elementos nesses contêineres dentro de suas bordas.</p>
             <p>Alguns temas têm widgets que alternam a visibilidade do conteúdo, como acordeões, abas e apresentações de slides. As dicas dentro desses elementos também ficam ocultas. Fornecer uma lista de seletores para esses widgets faz com que o Editoria11y pause brevemente quando um usuário tenta saltar para essas dicas usando um botão de próximo ou anterior. Os temas e módulos do Drupal podem então seguir as instruções da seção da biblioteca sobre <a href="/pt-br/install/#hidden-content">como lidar com dicas em conteúdo oculto</a> para revelar o conteúdo oculto.</p>
 
             <h2 id="runtime">Escreva sua própria configuração</h2>
@@ -338,7 +338,7 @@ var editoria11yOptions = function(options) {
             <h2>Escreva seus próprios testes</h2>
             <p>Primeiro, na configuração do módulo, adicione 1 às opções de "Testes personalizados" para que o módulo saiba que deve monitorar os testes.</p>
             <p>Em seguida, crie uma biblioteca JS do Drupal com seus testes no seu tema ou módulo, usando o <a href="/pt-br/install/#custom-tests">guia da biblioteca para criação de testes personalizados</a>.</p>
-            <p>Veja um exemplo funcional de Princeton de um teste personalizado para alertar sobre Safe Links. Observe que ele acessa a classe Editoria11y por meio de <code>Drupal.Ed11y.</code></p>
+            <p>Veja um exemplo funcional de Princeton, de um teste personalizado para alertar sobre Safe Links. Observe que ele acessa a classe Editoria11y por meio de <code>Drupal.Ed11y.</code></p>
             <pre class="language-javascript"><code><!--const psEd11yCustomTests = function() {
 
   // 1.

@@ -49,7 +49,7 @@
             <h1 class="text-body-emphasis pt-2 pb-5">Funkcje</h1>
             <p class="fs-6">Główne testy Editoria11y wykrywają ponad 50 typowych problemów z dostępnością treści: decyzje, które utrudniają czytelność, błędy zmniejszające skuteczność czytników ekranu oraz uchybienia obniżające SEO.</p>
             <p class="fs-6">Dodatki zapewniają ok. 40 dodatkowych testów dla programistów i projektantów, testy niestandardowe oraz różne narzędzia do zapewniania jakości w całej witrynie.</p>
-            <p class="fs-6">Testy treści koncentrują się na problemach pojawiających się <strong>po</strong> przekazaniu witryn autorom treści. Witryny należy testować ręcznymi narzędziami audytorskimi, klawiaturą i czytnikami ekranu przed uruchomieniem, jednak nawet najbardziej dostępna witryna w dniu inauguracji ma tendencję do pogarszania się wraz z wprowadzaniem nowych problemów podczas edycji.</p>
+            <p class="fs-6">Testy treści koncentrują się na problemach pojawiających się <strong>po</strong> przekazaniu witryn autorom treści. Witryny należy testować ręcznymi narzędziami audytorskimi, klawiaturą i czytnikami ekranu przed uruchomieniem, jednak nawet najbardziej dostępna witryna pierwszego dnia ma tendencję do pogarszania się wraz z wprowadzaniem nowych problemów podczas edycji.</p>
             <p class="fs-6">To, co wyróżnia Editoria11y spośród narzędzi do sprawdzania dostępności, to fakt, że testy działają na żywo, w przeglądarce, podczas gdy autorzy edytują i podglądają swoją pracę. <strong>Autorzy częściej reagują na natychmiastowe, śródtekstowe informacje zwrotne</strong>, zauważają alerty i wprowadzają poprawki, niż pamiętają o odwiedzeniu panelu administracyjnego czy przeprowadzeniu ręcznego sprawdzenia.</p>
           </section>
           <section id="authoring">
@@ -70,7 +70,7 @@
           <section id="admins">
             <h2>Kontrolki administratora witryny</h2>
             <p>Każdy widoczny aspekt narzędzia sprawdzającego można dostosować. Parametry i zdarzenia umożliwiają usuwanie testów, przepisywanie podpowiedzi, wstawianie niestandardowych testów i ustawianie niestandardowych motywów.</p>
-            <p>Wtyczki dla Drupal i WordPress dodają dodatkowe funkcje, takie jak zsynchronizowane odrzucenia, ogólnowitynowe panele administracyjne i eksport raportów CSV.</p>
+            <p>Wtyczki dla Drupal i WordPress dodają dodatkowe funkcje, takie jak zsynchronizowane odrzucenia, ogólnowitrynowe panele administracyjne i eksport raportów CSV.</p>
             <figure class="figure my-4 rounded shadow mb-5 border">
                 <img loading="lazy" class="figure-img img-fluid" src="/assets/images/3x-dashboard.png" height="765" width="1600" alt="Panel raportowania przedstawiający ostatnie problemy i strony z największą liczbą problemów.">
                 <figcaption class="figure-caption p-3 pt-2">Panel Drupal zawierający filtrowane listy problemów, stron z problemami oraz odrzuceń.</figcaption>
@@ -78,7 +78,7 @@
           </section>
           <section id="tests">
             <h2 data-section="tests">Testy</h2>
-            <p class="fs-6">Testy Editoria11y skupiają się na poprawie korzystania z sieci przez wszystkich użytkowników, mierzonej przez ludzi, a nie tylko zgodności z normami technicznymi. Podczas gdy kluczowe testy mają na celu pomoc w spełnieniu Wytycznych dla dostępności treści internetowych (<a href="https://www.w3.org/WAI/WCAG22/quickref/">WCAG 2.2 AA</a>), inne są inspirowane pracami <a href="https://www.w3.org/TR/coga-usable/">Grupy roboczej ds. dostępności dla osób z zaburzeniami poznawczymi i trudnościami w uczeniu się</a>, a także ogólnymi najlepszymi praktykami w zakresie użyteczności i projektowania.</p>
+            <p class="fs-6">Testy Editoria11y skupiają się na poprawie doświadczeń z korzystania z sieci przez wszystkich użytkowników, ocenianych przez ludzi, a nie tylko na zgodności z normami technicznymi. Podczas gdy kluczowe testy mają na celu pomoc w spełnieniu Wytycznych dla dostępności treści internetowych (<a href="https://www.w3.org/WAI/WCAG22/quickref/">WCAG 2.2 AA</a>), inne są inspirowane pracami <a href="https://www.w3.org/TR/coga-usable/">Grupy roboczej ds. dostępności dla osób z zaburzeniami poznawczymi i trudnościami w uczeniu się</a>, a także ogólnymi najlepszymi praktykami w zakresie użyteczności i projektowania.</p>
             <p class="fs-6 pb-3">Poszczególne testy mogą być wyłączane przez administratorów witryny.</p>
             <div class="row listgrid">
               <div class="col-12 col-xl-4">
@@ -95,7 +95,7 @@
                   <li>Obraz z podpisem nie ma tekstu alternatywnego</li>
                   <li>Tekst alternatywny jest duplikatem podpisu</li>
                 </ul>
-                <h3 class="fs-5 nomenu pt-0">Połączone obrazy</h3>
+                <h3 class="fs-5 nomenu pt-0">Obrazy w linkach</h3>
                 <ul>
                   <li>Obraz będący linkiem nie ma tekstu alternatywnego</li>
                   <li>Tekst alternatywny obrazu-linku jest adresem URL lub nazwą pliku</li>
@@ -114,7 +114,7 @@
                   <li>Ramce brakuje tytułu</li>
                   <li>Ramka jest wyłączona z nawigacji klawiaturowej</li>
                   <li>Treść ramki wymaga ręcznego sprawdzenia dostępności</li>
-                  <li>Połączony dokument może nie być dostępny dla czytników ekranu</li>
+                  <li>Dokument wskazany linkiem może nie być dostępny dla czytników ekranu</li>
                   <li>PDF nie ma dostępnej alternatywy</li>
                   <li>Zagnieżdżone interaktywne komponenty układu</li>
                 </ul>
@@ -128,12 +128,12 @@
                   <li>Tekst linku brzmi „kliknij tutaj"</li>
                   <li>Tekst linku to tylko ogólne słowa („czytaj więcej")</li>
                   <li>Różne linki mają ten sam tekst</li>
-                  <li>Połączona ikona lub obraz nie mają alternatywy tekstowej</li>
+                  <li>Ikona lub obraz w linku nie mają alternatywy tekstowej</li>
                   <li>Link otwiera nową kartę bez ostrzeżenia</li>
                   <li>Link wskazuje na plik bez ostrzeżenia</li>
                   <li>Tekst linku to tylko symbole lub emoji</li>
                   <li>Znaczący tekst linku ukryty przed widzącymi użytkownikami</li>
-                  <li>Nadmiarowy podpowiedź linku</li>
+                  <li>Nadmiarowa podpowiedź linku</li>
                   <li>Uszkodzony link kotwicy na stronie</li>
                   <li>Zduplikowany atrybut ID</li>
                   <li>Link może wskazywać na środowisko programistyczne</li>
@@ -239,7 +239,7 @@
                 Odrzucenia w całej witrynie jednym kliknięciem.
               </li>
               <li>
-                Narzędzia do konserwacji panelu i przeszukiwarki.
+                Narzędzia do konserwacji panelu i crawlery.
               </li>
             </ul>
             <img alt="Selektor kolorów w podpowiedzi testu" src="../../assets/images/3x-colors.png" height="1022" width="1288" class="img-fluid col-sm-12 col-xl-9 mt-0 p-0"/>

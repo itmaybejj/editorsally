@@ -51,8 +51,8 @@
         <h2 class="pt-4" id="demo">デモ</h2>
           <p class="fs-5"><a href="https://youtu.be/uYvNYPg38nU?si=6YANYrJpVzNAJYDl&t=260">チェッカーの経緯と機能を紹介する動画</a>をご覧いただくか、
             以下のデモコンテンツを編集したり、アラートを開いたり閉じたり、
-            ツールバー <span style="text-wrap: nowrap;">(<img src="/assets/images/3x-toolbar" class="inline-block" style="width: 5rem; height: auto;" alt="Editoria11yツールバーのスクリーンショット。エラーが4件表示されています。" width="97" height="50" loading="lazy">)</span> を使って見出しのアウトラインを確認してみてください。このデモにはコアテストとCSAスイートの両方が含まれています。</p>
-          <p class="fs-5 mb-5 pb-5">このデモはTinyMCEエディターを使用しています。Editoria11yはほとんどのテキストエディターと互換性があり、WordPressおよびDrupalではCKEditorとGutenbergへのターンキー実装も用意されています。</p>
+            ツールバー <span style="text-wrap: nowrap;">(<img src="/assets/images/3x-toolbar" class="inline-block" style="width: 5rem; height: auto;" alt="Editoria11yツールバーのスクリーンショット。エラーが4件表示されています。" width="97" height="50" loading="lazy">)</span> を使って見出しのアウトラインを確認してみてください。このデモにはコアテストと CSA スイートの両方が含まれています。</p>
+          <p class="fs-5 mb-5 pb-5">このデモは TinyMCE エディターを使用しています。Editoria11y はほとんどのテキストエディターと互換性があり、WordPress および Drupal では CKEditor と Gutenberg へのターンキー実装も用意されています。</p>
             <div id="ed11y-demo" class="p-5" contenteditable="">
             <section id="headings">
 
@@ -66,10 +66,10 @@
               </div>
 
               <p>この短いブロック引用は見出しかもしれません：</p>
-              <div class="positive"><blockquote>私は偽の見出しです</blockquote></div>
+              <div class="positive"><blockquote>これは偽の見出しです</blockquote></div>
 
               <p>この全太字の段落は見出しかもしれません：</p>
-              <p class="positive"><strong>私は偽の見出しです</strong></p>
+              <p class="positive"><strong>これは偽の見出しです</strong></p>
 
               <p>この見出しは非常に長いです：</p>
               <div class="positive"><h4>見出しとサブ見出しは、支援技術のためにナビゲート可能な目次を作成します。数字はネスト関係のインデントを示します。非常に長い見出しは、著者が見出しに多くのことを詰め込みすぎていることを意味する可能性があります。</h4></div>
@@ -146,7 +146,7 @@
             <section id="contrast">
               <h3 data-section="contrast">コントラスト</h3>
               <p>判読不能な色の組み合わせ：</p>
-              <div class="positive"><p style="background: #ccc; color: #ddd;">非常に読みやすい。</p></div>
+              <div class="positive"><p style="background: #ccc; color: #ddd;">とても読みやすいですね。</p></div>
               <p>色の手動チェックが必要：</p>
               <div class="positive"><p style="background: linear-gradient(45deg,#ccc 25%,#0000 25% 75%,#ccc 75%,#ccc),linear-gradient(45deg,#ccc 25%,#0000 25% 75%,#ccc 75%,#ccc)">計算不可能です。</p></div>
               <div class="positive"><label>コントラストが低い入力フィールド
@@ -241,7 +241,7 @@
               <p class="positive"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" title="ホバーしてください">ホバーしてください</a></p>
 
               <p>タブインデックスから除外する属性を持つリンク：</p>
-              <p class="positive"><a href="./editable.htm" aria-hidden="true">負のtabindexのないaria-hiddenリンク。</a></p>
+              <p class="positive"><a href="./editable.htm" aria-hidden="true">tabindex に負の値が設定されていない aria-hidden リンク。</a></p>
 
               <p>テキストのない要素へのaria-labelledby属性を持つリンク：</p>
               <p class="positive"><a href="./editable.htm" id="oops" aria-labelledby="oops"></a></p>
@@ -314,11 +314,11 @@
 
               <p class="positive"><u>下線付きテキスト</u></p>
 
-              <p class="positive"><em>少しの斜体は問題ありませんが、大きなブロックの強調テキストは非常に読みにくいです。もちろん少量は許容されますが、限界があり、段落全体は多すぎます。これは例えば、段落全体です。読みにくいですよね？しかし、このテストはこの長さになるまで作動しないため、このような大きな段落を定期的に書かない限り、コンテンツに誤検知が出ることはないはずです。</em></p>
+              <p class="positive"><em>少しのイタリックは問題ありませんが、長い強調テキストのブロックは非常に読みにくくなります。もちろん少量は許容されますが、限界があり、段落全体にわたるのは多すぎます。これはその一例で、段落全体がイタリック体です。読みにくいと感じませんか？ただし、このテストはこれほど長くなるまで作動しないため、このような長い段落を頻繁に書かない限り、コンテンツで誤検知が出ることはないはずです。</em></p>
 
               <p class="positive" style="text-align: justify;">両端揃えのテキスト</p>
 
-              <p class="positive">過度な上付き文字または下付き文字；<sub>下付き文字は文や段落全体ではなく、小さな参照や脚注に使用する必要があります。</sub></p>
+              <p class="positive">過度な上付き文字または下付き文字；<sub>下付き文字は文章や段落全体ではなく、注釈や脚注などの小さな参照に使用するものです。</sub></p>
 
               <p class="positive"><span style="font-size: 10px;">極小フォント</span></p>
 
@@ -367,7 +367,7 @@
                 <input class="btn btn-danger" type="reset">
               </div>
 
-              <p class="positive"><a href="./editable.htm" tabindex="2">タブインデックスの乱用</a></p>
+              <p class="positive"><a href="./editable.htm" tabindex="2">タブ順序の乱れ</a></p>
             </section>
 
 

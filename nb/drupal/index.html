@@ -93,15 +93,15 @@
             <p>Installer som enhver annen modul, og gjør deretter disse viktige trinnene:</p>
             <ol>
               <li><strong>Sjekk tillatelser.</strong> Betrodde forfattere bør ha «Merk som OK», «Merk som ignorert» og «Se panelet».</li>
-              <li><strong>Sjekk viktige sider for repeterende eller uhjelpsomme varsler.</strong> Merk dem enten som OK i verktøytipset, eller juster konfigurasjonen til å ignorere elementer etter selektor.</li>
+              <li><strong>Sjekk viktige sider for gjentakende eller unyttige varsler.</strong> Merk dem enten som OK i verktøytipset, eller juster konfigurasjonen til å ignorere elementer etter selektor.</li>
               <li>Se etter tips som er vanskelige å se – utenfor skjermen, avkuttet, bak andre elementer eller på skjulte elementer. Bruk tipsene i «Fiks tipplassering» nedenfor for å løse dette.</li>
-              <li>Hvis nettstedet allerede har innhold og du har et CSA-abonnement, besøk panelfanen «recheck» og <strong>kravle nettstedet</strong> for å forhåndsinnlaste nettstedsrapportene. Dette er valgfritt, men eldre sider vil ikke vises i rapportene før de er kravlet eller besøkt av en innlogget bruker.</li>
+              <li>Hvis nettstedet allerede har innhold og du har et CSA-abonnement, besøk panelfanen «recheck» og <strong>gjennomsøk nettstedet</strong> for å forhåndsinnlaste nettstedsrapportene. Dette er valgfritt, men eldre sider vil ikke vises i rapportene før de er gjennomsøkt eller besøkt av en innlogget bruker.</li>
             </ol>
             <p>Se en <a href="https://youtu.be/uYvNYPg38nU?si=dqADyWpTtOhniHTP&t=696">videoinnføring i konfigurasjonsalternativene</a> (v2.4).</p>
 
-            <h2 id="check-roots">Skjul uhjelpsomme varsler</h2>
+            <h2 id="check-roots">Skjul unyttige varsler</h2>
             <p>
-              <strong>Gode konfigurasjoner undertrykker uhjelpsomme varsler, slik at innholdsforfattere kan fokusere på problemer de bør fikse</strong>.</p>
+              <strong>Gode konfigurasjoner undertrykker unyttige varsler, slik at innholdsforfattere kan fokusere på problemer de bør fikse</strong>.</p>
             <p>Selv om du kan slå av tester helt, er det vanligvis bedre å skjule varsler på bestemte elementer eller sider.</p>
             <hr>
             <p>
@@ -237,20 +237,20 @@
 
             <h2 id="dashboard">Administrer nettstedsglobale resultater</h2>
             <section id="refresh">
-              <h3 class="pt-3">Kravling og oppdatering av resultater</h3>
-              <p>Editoria11y er et <strong>sanntids overvåkingsverktøy, ikke en nettstedskraver</strong>. Nettstedsglobale rapporter oppdateres når forfattere ser på sider, så regelmessig kravling er vanligvis ikke nødvendig. CSA-modulen <em>inkluderer</em> en kravler, men den bør kun trenges i disse tre situasjonene:</p>
+              <h3 class="pt-3">Gjennomsøking og oppdatering av resultater</h3>
+              <p>Editoria11y er et <strong>sanntids overvåkingsverktøy, ikke en nettstedsgjennomsøker</strong>. Nettstedsglobale rapporter oppdateres når forfattere ser på sider, så regelmessig gjennomsøking er vanligvis ikke nødvendig. CSA-modulen <em>inkluderer</em> en gjennomsøker, men den bør kun trenges i disse tre situasjonene:</p>
               <ol>
                 <li>
-                  Når Editoria11y installeres for første gang på et eksisterende nettsted med mange sider. Sider må besøkes før de vises på panelet, så en rask innledende kravling sparer tid.
+                  Når Editoria11y installeres for første gang på et eksisterende nettsted med mange sider. Sider må besøkes før de vises på panelet, så en rask innledende gjennomsøking sparer tid.
                 </li>
                 <li>
-                  Store oppdateringer av temaer eller moduler kan fikse (eller forårsake) problemer på mange sider som ikke vil vises før de besøkes eller kravles.
+                  Store oppdateringer av temaer eller moduler kan fikse (eller forårsake) problemer på mange sider som ikke vil vises før de besøkes eller gjennomsøkes.
                 </li>
                 <li>
                   Massehandlinger i admingrensesnittet som å slette sider eller omdirigeringer har en tendens til å etterlate resultater fra sider som ikke lenger finnes eller har blitt flyttet. I slike tilfeller hjelper det å bruke vedlikeholdshandlingene i «Oppdater»-fanen for å oppdatere side-URL-er og oppdage og fjerne slettede sider.
                 </li>
               </ol>
-              <p>Ingen data forlater nettstedet ditt under en kravling. CSA-kravleren er ikke et skyverktøy; den bruker nettleseren din til å laste og sjekke sidene på ditt eget nettsted. Ulempen med denne tilnærmingen er at <strong>nettlesere pauser bakgrunnsfaner</strong>. Du må holde datamaskinen på og våken under en kravling. Planlegg å åpne et nytt vindu for kravleren og la det være forgrunnen for det vinduet mens det arbeider. Du kan fortsette å arbeide i et annet vindu. Kravleren vil oppdatere estimatet etter hver gruppe av sider.</p>
+              <p>Ingen data forlater nettstedet ditt under en gjennomsøking. CSA-gjennomsøkeren er ikke et skyverktøy; den bruker nettleseren din til å laste og sjekke sidene på ditt eget nettsted. Ulempen med denne tilnærmingen er at <strong>nettlesere pauser bakgrunnsfaner</strong>. Du må holde datamaskinen på og våken under en gjennomsøking. Planlegg å åpne et nytt vindu for gjennomsøkeren og la det være forgrunnen for det vinduet mens det arbeider. Du kan fortsette å arbeide i et annet vindu. Gjennomsøkeren vil oppdatere estimatet etter hver gruppe av sider.</p>
             </section>
             <section id="reports">
               <h3>Vise rapporter</h3>
@@ -272,12 +272,12 @@
                   <strong>Eksporter</strong> inneholder versjoner av rapportene Sider, Varsler og Avvisninger som kan filtreres for å forberede CSV-nedlastinger. <em>Levert av undermodulen CSV Export</em>
                 </li>
                 <li>
-                  <strong>Oppdater</strong> inneholder vedlikeholdsverktøy for panelet for å fjerne varsler fra slettede sider, fjerne varsler fra parameteriserte pseudosider som /search?query=example, oppdatere lagrede sidetitler og URL-er, og kjøre en manuell kravling. <em>Levert av undermodulen CSA</em>
+                  <strong>Oppdater</strong> inneholder vedlikeholdsverktøy for panelet for å fjerne varsler fra slettede sider, fjerne varsler fra parameteriserte pseudosider som /search?query=example, oppdatere lagrede sidetitler og URL-er, og kjøre en manuell gjennomsøking. <em>Levert av undermodulen CSA</em>
                 </li>
               </ul>
             </section>
 
-            <h2 id="positioning">Fiks skjulte eller utenfor-skjermen-tips</h2>
+            <h2 id="positioning">Fiks skjulte eller utenfor skjermen-tips</h2>
 
             <p>Modulen gir felt for to av bibliotekets konfigurasjonsalternativer for å endre hvordan tips plasseres:</p>
 
