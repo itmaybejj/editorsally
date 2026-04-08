@@ -149,6 +149,13 @@
     });
   }
 
+  /* Pricing page **********************/
+
+  /* We'll need a cachebust when we change this */
+  document.querySelector('#individual .btn').textContent += ' (Coming soon)';
+  document.querySelector('#price-result .btn').textContent += ' (Coming soon)';
+  document.querySelector('#enterprise .btn').textContent += ' (Coming soon)';
+
   const pricePicker = document.getElementById('price-pick');
   const pricing = {
     monthly: {
@@ -305,13 +312,9 @@
       document.querySelector('#individual .btn').href = '#';
       document.querySelector('#price-result .btn').href = '#';
       document.querySelector('#enterprise .btn').href = '#';
-      document.querySelector('#individual .btn').className = 'btn btn-secondary';
-      document.querySelector('#individual .btn').textContent += ' (Coming soon)';
-      document.querySelector('#price-result .btn').className = 'btn btn-secondary';
-      document.querySelector('#price-result .btn').textContent += ' (Coming soon)';
-      document.querySelector('#enterprise .btn').className = 'btn btn-secondary';
-      document.querySelector('#enterprise .btn').textContent += ' (Coming soon)';
-
+      document.querySelector('#individual .btn').className = 'btn btn-secondary decorated';
+      document.querySelector('#price-result .btn').className = 'btn btn-secondary decorated';
+      document.querySelector('#enterprise .btn').className = 'btn btn-secondary decorated';
 
     }
 
