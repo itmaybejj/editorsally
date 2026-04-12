@@ -702,29 +702,7 @@ label {
     width: 100%;
 }
 
-footer {
-    /*margin-bottom: -9vw;
-    z-index: 1;
-    position: relative;*/
-    margin-bottom: 3rem;
 
-    a {
-        text-decoration: none;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-        @media (min-width: 768px) {
-            display: block;
-            text-wrap: nowrap;
-        }
-    }
-
-    .col {
-        margin-top: 2rem;
-    }
-
-}
 
 #price-grid {
     margin: 2rem 0;
@@ -795,4 +773,51 @@ footer {
 
 .tox.tox-tinymce-inline {
     z-index: 9999;
+}
+
+.footer-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    a {
+        margin: .5rem;
+    }
+}
+
+
+footer {
+    margin-bottom: 3rem;
+
+    a {
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @media (min-width: 768px) {
+            display: block;
+            text-wrap: nowrap;
+        }
+    }
+
+    .footer {
+        border-top: 1px solid #ccc;
+        margin-top: 2rem;
+    }
+
+    .footer,
+    .subfooter {
+
+        a,
+        &>span {
+            margin-top: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            display: flex;
+            justify-content: space-around;
+        }
+    }
+
 }
