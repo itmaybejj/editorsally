@@ -61,9 +61,13 @@ const defined_i18n = (() => {
   };
 
   /**
-   * Canonical English path slugs, in navigation order.
+   * Canonical English path slugs, in navigation order, followed by
+   * policy pages which live only in the footer.
    */
-  const canonicalPaths = ['about', 'features', 'demo', 'contacts', 'install', 'drupal', 'license'];
+  const canonicalPaths = [
+    'about', 'features', 'demo', 'contacts', 'install', 'drupal', 'license',
+    'privacy-policy', 'cookie-policy', 'terms-of-use', 'legal-notice',
+  ];
 
   /**
    * Path mappings: English slug -> translated slug per language.
@@ -99,6 +103,10 @@ const defined_i18n = (() => {
         install: 'Install & Configure',
         drupal: 'Drupal Module',
         license: 'Pricing & Contributions',
+        'privacy-policy': 'Privacy Policy',
+        'cookie-policy': 'Cookie Policy',
+        'terms-of-use': 'Terms of Use',
+        'legal-notice': 'Legal Notice',
       },
       footer: {
         library: 'Library',
@@ -122,6 +130,10 @@ const defined_i18n = (() => {
         install: 'Instalar y configurar',
         drupal: 'Módulo Drupal',
         license: 'Precios y contribuciones',
+        'privacy-policy': 'Política de privacidad',
+        'cookie-policy': 'Política de cookies',
+        'terms-of-use': 'Condiciones de uso',
+        'legal-notice': 'Aviso legal',
       },
       footer: {
         library: 'Biblioteca',
@@ -145,6 +157,10 @@ const defined_i18n = (() => {
         install: 'Installation & Konfiguration',
         drupal: 'Drupal-Modul',
         license: 'Preise & Beiträge',
+        'privacy-policy': 'Datenschutzerklärung',
+        'cookie-policy': 'Cookie-Richtlinie',
+        'terms-of-use': 'Nutzungsbedingungen',
+        'legal-notice': 'Impressum',
       },
       footer: {
         library: 'Bibliothek',
@@ -168,6 +184,10 @@ const defined_i18n = (() => {
         install: 'Installer og konfigurer',
         drupal: 'Drupal-modul',
         license: 'Priser og bidrag',
+        'privacy-policy': 'Privatlivspolitik',
+        'cookie-policy': 'Cookiepolitik',
+        'terms-of-use': 'Vilkår for brug',
+        'legal-notice': 'Juridisk meddelelse',
       },
       footer: {
         library: 'Bibliotek',
@@ -191,6 +211,10 @@ const defined_i18n = (() => {
         install: 'Εγκατάσταση και ρύθμιση',
         drupal: 'Άρθρωμα Drupal',
         license: 'Τιμολόγηση και εισφορές',
+        'privacy-policy': 'Πολιτική απορρήτου',
+        'cookie-policy': 'Πολιτική cookies',
+        'terms-of-use': 'Όροι χρήσης',
+        'legal-notice': 'Νομική σημείωση',
       },
       footer: {
         library: 'Βιβλιοθήκη',
@@ -214,6 +238,10 @@ const defined_i18n = (() => {
         install: 'Installation et configuration',
         drupal: 'Module Drupal',
         license: 'Tarifs et contributions',
+        'privacy-policy': 'Politique de confidentialité',
+        'cookie-policy': 'Politique relative aux cookies',
+        'terms-of-use': "Conditions d'utilisation",
+        'legal-notice': 'Mentions légales',
       },
       footer: {
         library: 'Bibliothèque',
@@ -237,6 +265,10 @@ const defined_i18n = (() => {
         install: 'Telepítés és beállítás',
         drupal: 'Drupal-modul',
         license: 'Árak és hozzájárulások',
+        'privacy-policy': 'Adatvédelmi szabályzat',
+        'cookie-policy': 'Cookie-szabályzat',
+        'terms-of-use': 'Felhasználási feltételek',
+        'legal-notice': 'Jogi nyilatkozat',
       },
       footer: {
         library: 'Könyvtár',
@@ -260,6 +292,10 @@ const defined_i18n = (() => {
         install: 'Installazione e configurazione',
         drupal: 'Modulo Drupal',
         license: 'Prezzi e contributi',
+        'privacy-policy': 'Informativa sulla privacy',
+        'cookie-policy': 'Politica sui cookie',
+        'terms-of-use': "Condizioni d'uso",
+        'legal-notice': 'Note legali',
       },
       footer: {
         library: 'Libreria',
@@ -283,6 +319,10 @@ const defined_i18n = (() => {
         install: 'インストールと設定',
         drupal: 'Drupalモジュール',
         license: '料金と貢献',
+        'privacy-policy': 'プライバシーポリシー',
+        'cookie-policy': 'クッキーポリシー',
+        'terms-of-use': '利用規約',
+        'legal-notice': '法的通知',
       },
       footer: {
         library: 'ライブラリ',
@@ -306,6 +346,10 @@ const defined_i18n = (() => {
         install: 'Installer og konfigurer',
         drupal: 'Drupal-modul',
         license: 'Priser og bidrag',
+        'privacy-policy': 'Personvernerklæring',
+        'cookie-policy': 'Informasjonskapsler',
+        'terms-of-use': 'Bruksvilkår',
+        'legal-notice': 'Juridisk merknad',
       },
       footer: {
         library: 'Bibliotek',
@@ -329,6 +373,10 @@ const defined_i18n = (() => {
         install: 'Installeren en configureren',
         drupal: 'Drupal-module',
         license: 'Prijzen en bijdragen',
+        'privacy-policy': 'Privacybeleid',
+        'cookie-policy': 'Cookiebeleid',
+        'terms-of-use': 'Gebruiksvoorwaarden',
+        'legal-notice': 'Juridische kennisgeving',
       },
       footer: {
         library: 'Bibliotheek',
@@ -352,6 +400,10 @@ const defined_i18n = (() => {
         install: 'Instalacja i konfiguracja',
         drupal: 'Moduł Drupal',
         license: 'Cennik i wkłady',
+        'privacy-policy': 'Polityka prywatności',
+        'cookie-policy': 'Polityka cookies',
+        'terms-of-use': 'Warunki użytkowania',
+        'legal-notice': 'Informacje prawne',
       },
       footer: {
         library: 'Biblioteka',
@@ -375,6 +427,10 @@ const defined_i18n = (() => {
         install: 'Instalar e configurar',
         drupal: 'Módulo Drupal',
         license: 'Preços e contribuições',
+        'privacy-policy': 'Política de Privacidade',
+        'cookie-policy': 'Política de Cookies',
+        'terms-of-use': 'Termos de Uso',
+        'legal-notice': 'Aviso Legal',
       },
       footer: {
         library: 'Biblioteca',
@@ -398,6 +454,10 @@ const defined_i18n = (() => {
         install: 'Instalar e configurar',
         drupal: 'Módulo Drupal',
         license: 'Preços e contribuições',
+        'privacy-policy': 'Política de Privacidade',
+        'cookie-policy': 'Política de Cookies',
+        'terms-of-use': 'Termos de Utilização',
+        'legal-notice': 'Aviso Legal',
       },
       footer: {
         library: 'Biblioteca',
@@ -421,6 +481,10 @@ const defined_i18n = (() => {
         install: 'Installera och konfigurera',
         drupal: 'Drupal-modul',
         license: 'Priser och bidrag',
+        'privacy-policy': 'Integritetspolicy',
+        'cookie-policy': 'Cookiepolicy',
+        'terms-of-use': 'Användarvillkor',
+        'legal-notice': 'Juridiskt meddelande',
       },
       footer: {
         library: 'Bibliotek',
@@ -444,6 +508,10 @@ const defined_i18n = (() => {
         install: 'Встановлення та налаштування',
         drupal: 'Модуль Drupal',
         license: 'Ціни та внески',
+        'privacy-policy': 'Політика конфіденційності',
+        'cookie-policy': 'Політика щодо файлів cookie',
+        'terms-of-use': 'Умови використання',
+        'legal-notice': 'Юридичне повідомлення',
       },
       footer: {
         library: 'Бібліотека',
@@ -467,6 +535,10 @@ const defined_i18n = (() => {
         install: '安装与配置',
         drupal: 'Drupal模块',
         license: '定价与贡献',
+        'privacy-policy': '隐私政策',
+        'cookie-policy': 'Cookie 政策',
+        'terms-of-use': '使用条款',
+        'legal-notice': '法律声明',
       },
       footer: {
         library: '库',
