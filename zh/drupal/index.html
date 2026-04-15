@@ -1,28 +1,35 @@
 <!doctype html>
 <html lang="zh" data-bs-theme="light">
-  <head>
-<link rel="icon" type="image/png" href="/assets/favicons/favicon-512x512.png" sizes="512x512" />
-    <link rel="icon" type="image/png" href="/assets/favicons/favicon-192x192.png" sizes="192x192" />
-    <link rel="icon" type="image/png" href="/assets/favicons/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="/assets/favicons/favicon.svg" />
-    <link rel="shortcut icon" href="/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <meta charset="utf-8" />
-    <title>Drupal CSA Docs — Editoria11y</title>
-    <link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="/assets/theme.css" rel="stylesheet" />
-    <link href="/assets/prism/prism.css" rel="stylesheet" />
-    <meta name="theme-color" content="#712cf9" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-  </head>
-  <body>
-    <header>
+
+<head>
+  <link rel="icon" type="image/png" href="/assets/favicons/favicon-512x512.png" sizes="512x512" />
+  <link rel="icon" type="image/png" href="/assets/favicons/favicon-192x192.png" sizes="192x192" />
+  <link rel="icon" type="image/png" href="/assets/favicons/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/assets/favicons/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <meta charset="utf-8" />
+  <title>Drupal CSA Docs — Editoria11y</title>
+  <link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="/assets/theme.css" rel="stylesheet" />
+  <link href="/assets/prism/prism.css" rel="stylesheet" />
+  <meta name="theme-color" content="#712cf9" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <header>
     <nav class="navbar navbar-expand-md">
       <div class="container col-sm-12 mx-auto">
         <a href="/zh/" class="d-flex align-items-center  navbar-brand">
-          <svg class="logo-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="-.75 -3.5 10.1699 19.1777"><path fill="currentColor" d="M3.7031,10.5527c-.3633-.6562-.6426-1.1387-.8379-1.4473l-.3105-.4863-.2344-.3574c-.5117-.7969-1.0449-1.4551-1.5996-1.9746.3164-.2617.6113-.3926.8848-.3926.3359,0,.6348.123.8965.3691s.5918.7148.9902,1.4062c.4531-1.4727,1.0293-2.8691,1.7285-4.1895.3867-.7188.7314-1.2021,1.0342-1.4502s.7041-.3721,1.2041-.3721c.2656,0,.5938.041.9844.123-1.0039.8086-1.8066,1.7695-2.4082,2.8828s-1.3789,3.0762-2.332,5.8887Z"/></svg> Editoria<span style="margin-left: -1px;">11</span>y
+          <svg class="logo-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+            viewBox="-.75 -3.5 10.1699 19.1777">
+            <path fill="currentColor"
+              d="M3.7031,10.5527c-.3633-.6562-.6426-1.1387-.8379-1.4473l-.3105-.4863-.2344-.3574c-.5117-.7969-1.0449-1.4551-1.5996-1.9746.3164-.2617.6113-.3926.8848-.3926.3359,0,.6348.123.8965.3691s.5918.7148.9902,1.4062c.4531-1.4727,1.0293-2.8691,1.7285-4.1895.3867-.7188.7314-1.2021,1.0342-1.4502s.7041-.3721,1.2041-.3721c.2656,0,.5938.041.9844.123-1.0039.8086-1.8066,1.7695-2.4082,2.8828s-1.3789,3.0762-2.332,5.8887Z" />
+          </svg> Editoria<span style="margin-left: -1px;">11</span>y
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="切换导航">
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar" aria-label="切换导航">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
@@ -39,133 +46,146 @@
     </nav>
     <div id="lang-picker"></div>
   </header>
-    <main class="container col-lg-12 mx-auto py-5">
-      <div class="row docs">
-        <div class="col-12 col-md-5 col-lg-4 mb-5">
-          <div id="on-this-page" class="list-group ms-2 ms-lg-5 position-sticky top-0 pt-3">
-          </div>
+  <main class="container col-lg-12 mx-auto py-5">
+    <div class="row docs">
+      <div class="col-12 col-md-5 col-lg-4 mb-5">
+        <div id="on-this-page" class="list-group ms-2 ms-lg-5 position-sticky top-0 pt-3">
         </div>
-        <div class="col-12 col-md-7 col-lg-8 pt-3">
-          <div data-bs-spy="scroll" data-bs-target="#on-this-page" data-bs-smooth-scroll="true">
-            <h1>Drupal 模块</h1>
-            <section id="features">
-              <h2 class="pt-3">功能特性</h2>
+      </div>
+      <div class="col-12 col-md-7 col-lg-8 pt-3">
+        <div data-bs-spy="scroll" data-bs-target="#on-this-page" data-bs-smooth-scroll="true">
+          <h1>Drupal 模块</h1>
+          <section id="features">
+            <h2 class="pt-3">功能特性</h2>
 
-              <figure class="figure my-4 rounded shadow border">
-                <img loading="lazy" src="/assets/images/3x-editing.png" class="figure-img img-fluid" height="1088" width="2237" alt="Drupal 编辑器显示内联提示"/>
-                <figcaption class="figure-caption p-3 pt-2 fs-6">问题会在前端页面加载时以及在 CKEditor 和 Gutenberg 中输入内容时实时检测。</figcaption>
-              </figure>
+            <figure class="figure my-4 rounded shadow border">
+              <img loading="lazy" src="/assets/images/3x-editing.png" class="figure-img img-fluid" height="1088"
+                width="2237" alt="Drupal 编辑器显示内联提示" />
+              <figcaption class="figure-caption p-3 pt-2 fs-6">问题会在前端页面加载时以及在 CKEditor 和 Gutenberg 中输入内容时实时检测。
+              </figcaption>
+            </figure>
 
-              <figure class="figure my-4 rounded shadow border" style="max-width: 600px;">
-                <img loading="lazy" src="/assets/images/3x-generic-tip.png" class="figure-img img-fluid" height="798" width="1278" alt="提示指出某链接仅被命名为"点击此处"。"/>
-                <figcaption class="figure-caption p-3 pt-2 ps-5 fs-6">工具提示会描述问题，并提供按钮以跳转至页面或布局编辑器、忽略当前提示（仅对当前用户有效）或将其标记为无误（对所有用户有效）。根据上下文和权限，部分提示还可能显示"相似提示"菜单，支持将同一页面上的多个提示批量标记为无误，或将所有页面上的相同元素标记为无误。</figcaption>
-              </figure>
+            <figure class="figure my-4 rounded shadow border" style="max-width: 600px;">
+              <img loading="lazy" src="/assets/images/3x-generic-tip.png" class="figure-img img-fluid" height="798"
+                width="1278" alt="提示指出某链接仅被命名为" 点击此处"。" />
+              <figcaption class="figure-caption p-3 pt-2 ps-5 fs-6">
+                工具提示会描述问题，并提供按钮以跳转至页面或布局编辑器、忽略当前提示（仅对当前用户有效）或将其标记为无误（对所有用户有效）。根据上下文和权限，部分提示还可能显示"相似提示"菜单，支持将同一页面上的多个提示批量标记为无误，或将所有页面上的相同元素标记为无误。
+              </figcaption>
+            </figure>
 
-              <figure class="figure my-4 rounded shadow mb-5 border">
-                <img loading="lazy" class="figure-img img-fluid" src="/assets/images/3x-dashboard.png" height="765" width="1600" alt="报告仪表板，显示最近的问题及问题最多的页面。" />
-                <figcaption class="figure-caption p-3 pt-2 fs-6">全站报告仪表板提供可筛选、可导出的提示与忽略记录报告。</figcaption>
-              </figure>
+            <figure class="figure my-4 rounded shadow mb-5 border">
+              <img loading="lazy" class="figure-img img-fluid" src="/assets/images/3x-dashboard.png" height="765"
+                width="1600" alt="报告仪表板，显示最近的问题及问题最多的页面。" />
+              <figcaption class="figure-caption p-3 pt-2 fs-6">全站报告仪表板提供可筛选、可导出的提示与忽略记录报告。</figcaption>
+            </figure>
 
-              <p>此外还包括：</p>
+            <p>此外还包括：</p>
+            <ul>
+              <li>开箱即用的初始配置，自动忽略 Drupal、CKEditor、Gutenberg、链接目的与外部链接等元素，在模态容器中编辑时响应内容变化，并自动调整工具栏位置以避免与 Klaro 和同页预览元素重叠。
+              </li>
+              <li>基于角色的配置，控制哪些用户可以看到检查器、哪些用户可以忽略提示，以及哪些用户可以查看全站报告。</li>
+              <li>站内（本地）爬虫，用于在主题发生重大变更后刷新仪表板。<em>（仅限 CSA）</em></li>
+              <li>作者/开发者分离配置，含独立的测试集（约 30 条/约 90 条）和问题列表。<em>（仅限 CSA）</em></li>
+            </ul>
+
+
+
+          </section>
+          <h2>安装与关键配置步骤</h2>
+          <p>Drupal.org 上的<a href="https://www.drupal.org/project/editoria11y/">捆绑安装包</a>包含以下几个模块：</p>
+          <ul>
+            <li>
+              Editoria11y：核心内容检查器与仪表板。
+            </li>
+            <li>
+              Editoria11y CSA：开发者测试与仪表板维护工具。
+            </li>
+            <li>
+              Editoria11y Export：CSV 报告工具。
+            </li>
+          </ul>
+          <p>像安装其他模块一样完成安装，然后执行以下关键步骤：</p>
+          <ol>
+            <li><strong>检查权限。</strong>受信任的作者应拥有"标记为无误"、"标记为已忽略"和"查看仪表板"权限。</li>
+            <li><strong>检查关键页面，排查重复或无用的提示。</strong>可在工具提示中将其标记为无误，或通过调整配置按选择器忽略相关元素。</li>
+            <li>寻找难以看到的提示——例如超出屏幕、被截断、位于其他元素之后或处于隐藏元素中的提示。请参考下方"修复提示定位"中的建议进行修复。</li>
+            <li>如果站点已有内容，且您拥有 CSA
+              订阅，请访问仪表板的"重新检查"标签页，<strong>爬取整个站点</strong>以预先加载站点报告。此步骤为可选，但较旧的页面在被爬取或被已登录用户访问之前不会显示在报告中。</li>
+          </ol>
+          <p>观看<a href="https://youtu.be/uYvNYPg38nU?si=dqADyWpTtOhniHTP&t=696">配置选项视频介绍</a>（v2.4）。</p>
+
+          <h2 id="check-roots">隐藏无用提示</h2>
+          <p>
+            <strong>良好的配置能屏蔽无用提示，让内容作者专注于真正需要修复的问题</strong>。
+          </p>
+          <p>虽然可以完全关闭某些测试，但通常更好的做法是针对特定元素或页面隐藏提示。</p>
+          <hr>
+          <p>
+            每次测试运行时，Editoria11y 会从"检查这些容器中的内容"设置中获取一组元素，并对其进行多次过滤。测试运行的流程如下：
+          </p>
+          <ol>
+            <li>
+              若配置阻止在当前页面或对当前用户进行检查，则取消检查。
+            </li>
+            <li>
+              <strong>收集</strong>指定页面区域中的元素，例如：<br><code>body > *:not('.ed11y-element')</code><br>
+              <em>对于 Editoria11y CSA 用户，这些区域显示在<strong>开发者测试</strong>标签页中。</em>
+            </li>
+            <li>
+              <strong>排除</strong>匹配忽略选择器的元素，例如：<br><code>.widgets, .utility-menu</code><br>
+              <em>对于 Editoria11y CSA 用户，这些选择器显示在<strong>开发者测试</strong>标签页中。</em>
+            </li>
+            <li>
+              运行测试并将结果同步至仪表板。
+            </li>
+            <li>
+              若已启用分离配置且当前用户是内容编辑，则过滤开发者结果：
               <ul>
-                <li>开箱即用的初始配置，自动忽略 Drupal、CKEditor、Gutenberg、链接目的与外部链接等元素，在模态容器中编辑时响应内容变化，并自动调整工具栏位置以避免与 Klaro 和同页预览元素重叠。</li>
-                <li>基于角色的配置，控制哪些用户可以看到检查器、哪些用户可以忽略提示，以及哪些用户可以查看全站报告。</li>
-                <li>站内（本地）爬虫，用于在主题发生重大变更后刷新仪表板。<em>（仅限 CSA）</em></li>
-                <li>作者/开发者分离配置，含独立的测试集（约 30 条/约 80 条）和问题列表。<em>（仅限 CSA）</em></li>
+                <li><strong>排除</strong>设置为"仅开发者"的测试结果。</li>
+                <li><strong>排除</strong>指定<strong><em>内容</em></strong>区域之外的元素结果，例如：<br><code>main, footer</code></li>
+                <li><strong>排除</strong>匹配<strong><em>内容</em></strong>忽略选择器的元素结果。</li>
               </ul>
+              请注意，不存在第二个"收集"阶段。开发者页面区域必须包含内容区域。
+            </li>
+            <li>若配置匹配自动展开设置，则打开面板并显示提示。</li>
+          </ol>
 
+          <h3 id="dismiss">忽略提示</h3>
+          <p>测试可在库中配置为错误或警告（"手动检查"）。警告可被忽略。每个工具提示底部提供两种忽略方式：</p>
+          <div class="my-2"
+            style="background: url(/assets/images/3x-generic-tip.png) 100% 98%; max-width: 600px; padding-top: 6%; background-size: 108%;">
+          </div>
+          <ul>
+            <li>"忽略"作为用户偏好保存：该提示现在仅对当前用户隐藏，不影响其他用户。</li>
+            <li>"标记为无误"将对所有用户隐藏该提示。</li>
+          </ul>
+          <p>用户是否能忽略提示，由 Drupal 用户权限中的角色级别控制。<strong>大多数作者应被授予忽略提示的权限</strong>。如果用户无法将某项标记为已检查，那么为其分配人工检查任务便毫无意义。</p>
 
-
-            </section>
-            <h2>安装与关键配置步骤</h2>
-            <p>Drupal.org 上的<a href="https://www.drupal.org/project/editoria11y/">捆绑安装包</a>包含以下几个模块：</p>
-            <ul>
-              <li>
-                Editoria11y：核心内容检查器与仪表板。
-              </li>
-              <li>
-                Editoria11y CSA：开发者测试与仪表板维护工具。
-              </li>
-              <li>
-                Editoria11y Export：CSV 报告工具。
-              </li>
-            </ul>
-            <p>像安装其他模块一样完成安装，然后执行以下关键步骤：</p>
-            <ol>
-              <li><strong>检查权限。</strong>受信任的作者应拥有"标记为无误"、"标记为已忽略"和"查看仪表板"权限。</li>
-              <li><strong>检查关键页面，排查重复或无用的提示。</strong>可在工具提示中将其标记为无误，或通过调整配置按选择器忽略相关元素。</li>
-              <li>寻找难以看到的提示——例如超出屏幕、被截断、位于其他元素之后或处于隐藏元素中的提示。请参考下方"修复提示定位"中的建议进行修复。</li>
-              <li>如果站点已有内容，且您拥有 CSA 订阅，请访问仪表板的"重新检查"标签页，<strong>爬取整个站点</strong>以预先加载站点报告。此步骤为可选，但较旧的页面在被爬取或被已登录用户访问之前不会显示在报告中。</li>
-            </ol>
-            <p>观看<a href="https://youtu.be/uYvNYPg38nU?si=dqADyWpTtOhniHTP&t=696">配置选项视频介绍</a>（v2.4）。</p>
-
-            <h2 id="check-roots">隐藏无用提示</h2>
-            <p>
-              <strong>良好的配置能屏蔽无用提示，让内容作者专注于真正需要修复的问题</strong>。</p>
-            <p>虽然可以完全关闭某些测试，但通常更好的做法是针对特定元素或页面隐藏提示。</p>
-            <hr>
-            <p>
-              每次测试运行时，Editoria11y 会从"检查这些容器中的内容"设置中获取一组元素，并对其进行多次过滤。测试运行的流程如下：
-            </p>
-            <ol>
-              <li>
-                若配置阻止在当前页面或对当前用户进行检查，则取消检查。
-              </li>
-              <li>
-                <strong>收集</strong>指定页面区域中的元素，例如：<br><code>body > *:not('.ed11y-element')</code><br>
-                <em>对于 Editoria11y CSA 用户，这些区域显示在<strong>开发者测试</strong>标签页中。</em>
-              </li>
-              <li>
-                <strong>排除</strong>匹配忽略选择器的元素，例如：<br><code>.widgets, .utility-menu</code><br>
-                <em>对于 Editoria11y CSA 用户，这些选择器显示在<strong>开发者测试</strong>标签页中。</em>
-              </li>
-              <li>
-                运行测试并将结果同步至仪表板。
-              </li>
-              <li>
-                若已启用分离配置且当前用户是内容编辑，则过滤开发者结果：
-                <ul>
-                  <li><strong>排除</strong>设置为"仅开发者"的测试结果。</li>
-                  <li><strong>排除</strong>指定<strong><em>内容</em></strong>区域之外的元素结果，例如：<br><code>main, footer</code></li>
-                  <li><strong>排除</strong>匹配<strong><em>内容</em></strong>忽略选择器的元素结果。</li>
-                </ul>
-                请注意，不存在第二个"收集"阶段。开发者页面区域必须包含内容区域。
-              </li>
-              <li>若配置匹配自动展开设置，则打开面板并显示提示。</li>
-            </ol>
-
-            <h3 id="dismiss">忽略提示</h3>
-            <p>测试可在库中配置为错误或警告（"手动检查"）。警告可被忽略。每个工具提示底部提供两种忽略方式：</p>
-            <div class="my-2" style="background: url(/assets/images/3x-generic-tip.png) 100% 98%; max-width: 600px; padding-top: 6%; background-size: 108%;"></div>
-            <ul>
-              <li>"忽略"作为用户偏好保存：该提示现在仅对当前用户隐藏，不影响其他用户。</li>
-              <li>"标记为无误"将对所有用户隐藏该提示。</li>
-            </ul>
-            <p>用户是否能忽略提示，由 Drupal 用户权限中的角色级别控制。<strong>大多数作者应被授予忽略提示的权限</strong>。如果用户无法将某项标记为已检查，那么为其分配人工检查任务便毫无意义。</p>
-
-            <h3 id="roots">忽略元素</h3>
-            <p>以下两项配置设置最为重要！</p>
-            <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
-              <label for="edit-content-root">检查这些容器中的内容</label>
-              <div><textarea id="edit-content-root" name="content_root" rows="1" cols="30" disabled></textarea>
-              </div>
-              <div class="mt-3">
-                <label for="edit-ignore-elements">跳过这些元素</label>
-                <div>
-                  <textarea id="edit-ignore-elements" disabled name="ignore_elements" rows="1" cols="30" class=""></textarea>
-                </div>
+          <h3 id="roots">忽略元素</h3>
+          <p>以下两项配置设置最为重要！</p>
+          <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
+            <label for="edit-content-root">检查这些容器中的内容</label>
+            <div><textarea id="edit-content-root" name="content_root" rows="1" cols="30" disabled></textarea>
+            </div>
+            <div class="mt-3">
+              <label for="edit-ignore-elements">跳过这些元素</label>
+              <div>
+                <textarea id="edit-ignore-elements" disabled name="ignore_elements" rows="1" cols="30"
+                  class=""></textarea>
               </div>
             </div>
-            <p>
-              第一项应包含内容作者可编辑的所有页面区域。例如，若作者可编辑 <code>main</code> 内容区、<code>.sidebar</code> 和 <code>.footer-column-two</code>，则将这些选择器设置为内容检查区域。
-            </p>
-            <p>
-              第二项用于"屏蔽"子区域。例如，若 <code>main</code> 包含仅开发者可修改的各种小部件和嵌入内容，则在此列出：<code>.widget-1, .social-embed</code>。
-            </p>
-            <p>如果您使用分离配置，则会在"开发者测试"标签页看到一对类似的设置：</p>
-            <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
-              <div>
-                <fieldset>
+          </div>
+          <p>
+            第一项应包含内容作者可编辑的所有页面区域。例如，若作者可编辑 <code>main</code> 内容区、<code>.sidebar</code> 和
+            <code>.footer-column-two</code>，则将这些选择器设置为内容检查区域。
+          </p>
+          <p>
+            第二项用于"屏蔽"子区域。例如，若 <code>main</code> 包含仅开发者可修改的各种小部件和嵌入内容，则在此列出：<code>.widget-1, .social-embed</code>。
+          </p>
+          <p>如果您使用分离配置，则会在"开发者测试"标签页看到一对类似的设置：</p>
+          <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
+            <div>
+              <fieldset>
                 <legend>
                   开发者检查区域
                 </legend>
@@ -173,15 +193,20 @@
 
                   <div id="edit-dev-check-root">
                     <div>
-                    <input aria-describedby="edit-dev-check-root--description" type="radio" id="edit-dev-check-root-automatic" name="dev_check_root" value="automatic" checked="checked">
-                    <label for="edit-dev-check-root-automatic" class="form-item__label option">所有元素</label>
-                  </div>
+                      <input aria-describedby="edit-dev-check-root--description" type="radio"
+                        id="edit-dev-check-root-automatic" name="dev_check_root" value="automatic" checked="checked">
+                      <label for="edit-dev-check-root-automatic" class="form-item__label option">所有元素</label>
+                    </div>
                     <div class="d-flex">
-                      <input aria-describedby="edit-dev-check-root--description" type="radio" id="edit-dev-check-root-match" name="dev_check_root" value="match" class="align-self-baseline mt-1 me-1">
+                      <input aria-describedby="edit-dev-check-root--description" type="radio"
+                        id="edit-dev-check-root-match" name="dev_check_root" value="match"
+                        class="align-self-baseline mt-1 me-1">
                       <label for="edit-dev-check-root-match" class="form-item__label option">仅"内容设置"标签页中列出的容器</label>
                     </div>
                     <div class="">
-                      <input aria-describedby="edit-dev-check-root--description" type="radio" id="edit-dev-check-root-specify" name="dev_check_root" value="specify" class="form-radio form-boolean form-boolean--type-radio">
+                      <input aria-describedby="edit-dev-check-root--description" type="radio"
+                        id="edit-dev-check-root-specify" name="dev_check_root" value="specify"
+                        class="form-radio form-boolean form-boolean--type-radio">
                       <label for="edit-dev-check-root-specify" class="">下方指定的特定容器</label>
                     </div>
                   </div>
@@ -189,110 +214,132 @@
                 </div>
               </fieldset>
 
-                <div class="">
-                  <label for="edit-always-ignore" class="mt-3">对开发者和内容编辑均忽略</label>
-                  <div class="form-textarea-wrapper">
-                    <textarea  id="edit-always-ignore" name="always_ignore" rows="1" cols="20" placeholder=""></textarea>
-                  </div>
+              <div class="">
+                <label for="edit-always-ignore" class="mt-3">对开发者和内容编辑均忽略</label>
+                <div class="form-textarea-wrapper">
+                  <textarea id="edit-always-ignore" name="always_ignore" rows="1" cols="20" placeholder=""></textarea>
                 </div>
-
               </div>
 
             </div>
-            <p>关于开发者检查区域，有一点至关重要：它们与内容检查区域<strong>并非相互独立</strong>。在分离配置中，开发者区域会被检查，随后其结果会被<strong>过滤</strong>以匹配内容区域。对开发者排除的区域同样会对内容编辑排除。请勿排除可编辑的内容区域！</p>
 
-            <p>部分测试支持更精细的配置，可仅对受影响的元素隐藏特定提示。相关选项位于：</p>
+          </div>
+          <p>
+            关于开发者检查区域，有一点至关重要：它们与内容检查区域<strong>并非相互独立</strong>。在分离配置中，开发者区域会被检查，随后其结果会被<strong>过滤</strong>以匹配内容区域。对开发者排除的区域同样会对内容编辑排除。请勿排除可编辑的内容区域！
+          </p>
+
+          <p>部分测试支持更精细的配置，可仅对受影响的元素隐藏特定提示。相关选项位于：</p>
+          <ul>
+            <li>内容测试：要检查的链接</li>
+            <li>内容测试：要检查的嵌入内容</li>
+            <li>内容测试：检测动态内容与 Shadow DOM 内容</li>
+            <li>开发者测试：对比度</li>
+          </ul>
+
+          <h3 id="pages">针对特定页面或用户隐藏</h3>
+          <p>
+            最简便的方法是将 CSS 类或 ID 传递给以下选项：
+          </p>
+          <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
+            <label for="edit-no-load" class="form-item__label">不在含有这些元素的页面上执行检查</label>
+            <div class="form-textarea-wrapper">
+              <textarea data-drupal-selector="edit-no-load" aria-describedby="edit-no-load--description"
+                id="edit-no-load" name="no_load" rows="1" cols="20"
+                class="form-textarea resize-vertical form-element form-element--type-textarea form-element--api-textarea"></textarea>
+            </div>
+
+            <label for="edit-ignore-all-if-absent" class="form-item__label">在不含这些元素的页面上隐藏所有提示</label>
+            <div class="form-textarea-wrapper">
+              <textarea data-drupal-selector="edit-ignore-all-if-absent"
+                aria-describedby="edit-ignore-all-if-absent--description" id="edit-ignore-all-if-absent"
+                name="ignore_all_if_absent" rows="1" cols="20"
+                class="form-textarea resize-vertical form-element form-element--type-textarea form-element--api-textarea"></textarea>
+            </div>
+
+          </div>
+          <p>
+            第一项将阻止检查运行，工具栏也不会显示。
+          </p>
+          <p>
+            第二项将以最小化状态启动检查器，并自动将所有问题（包括错误）对当前用户标记为"已忽略"。这样测试仍可运行并更新仪表板，而不会打扰用户。
+          </p>
+          <p>
+            若要通过这些设置控制哪些用户可以看到检查器，您可能需要调整主题以输出特定的 CSS 类，例如 <code>.user-247</code>。
+          </p>
+
+          <h2 id="dashboard">管理全站结果</h2>
+          <section id="refresh">
+            <h3 class="pt-3">爬取与更新结果</h3>
+            <p>Editoria11y 是一个<strong>实时监控工具，而非爬虫</strong>。其全站报告在作者浏览页面时更新，因此通常无需定期爬取。CSA
+              模块<em>确实</em>包含一个爬虫，但仅在以下三种情况下才需要使用：</p>
+            <ol>
+              <li>
+                在现有多页面站点上首次安装 Editoria11y 时。页面需要被访问后才会出现在仪表板中，因此进行一次初始爬取可节省时间。
+              </li>
+              <li>
+                主题或模块的重大更新可能会修复（或引入）许多页面上的问题，这些变化在页面被访问或爬取之前不会反映出来。
+              </li>
+              <li>
+                在管理界面批量删除页面或重定向等操作往往会留下已不存在或已移动页面的残留结果。此时，使用"刷新"标签页中的维护功能来刷新页面 URL、检测并清除已删除页面会很有帮助。
+              </li>
+            </ol>
+            <p>爬取过程中不会有任何数据离开您的站点。CSA
+              爬虫并非云端工具，它使用您的浏览器加载并检查您自己站点上的页面。这种方式的不足之处在于<strong>浏览器会暂停后台标签页</strong>。爬取期间需要保持电脑开启且不进入休眠。建议为爬虫单独开一个窗口，并在爬取过程中将其保持为该窗口的前台标签页。您可以在另一个窗口中继续工作。爬虫将在每批页面处理完成后更新进度估算。
+            </p>
+          </section>
+          <section id="reports">
+            <h3>查看报告</h3>
+            <div class="my-4 border shadow"
+              style="background: url(/assets/images/3x-dashboard.png) 86% 0%; padding-top: 28%; background-size: 106%;">
+            </div>
             <ul>
-              <li>内容测试：要检查的链接</li>
-              <li>内容测试：要检查的嵌入内容</li>
-              <li>内容测试：检测动态内容与 Shadow DOM 内容</li>
-              <li>开发者测试：对比度</li>
+              <li>
+                <strong>最近</strong>支持按单条提示浏览，可用于筛选同一类型提示的所有实例、查看近期内容中频繁出现的提示，或了解哪些作者仍在重复同类错误。
+              </li>
+              <li>
+                <strong>页面</strong>按页面显示提示数量，并按页面分组，便于找出问题最多的页面，也可按内容类型和发布状态等页面属性进行筛选。
+              </li>
+              <li>
+                <strong>提示</strong>按类型显示问题。
+              </li>
+              <li>
+                <strong>忽略记录</strong>支持监控作者的忽略操作是否得当，并提供"重置"按钮以恢复已忽略的提示。
+              </li>
+              <li>
+                <strong>导出</strong>包含可筛选的页面、提示与忽略记录报告版本，可准备 CSV 下载。<em>由 CSV Export 子模块提供</em>
+              </li>
+              <li>
+                <strong>刷新</strong>包含仪表板维护工具，可清除已删除页面的提示、清除 /search?query=example 等参数化伪页面的提示、更新已存储的页面标题和
+                URL，以及运行手动爬取。<em>由 CSA 子模块提供</em>
+              </li>
             </ul>
+          </section>
 
-            <h3 id="pages">针对特定页面或用户隐藏</h3>
-            <p>
-              最简便的方法是将 CSS 类或 ID 传递给以下选项：
-            </p>
-            <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
-              <label for="edit-no-load" class="form-item__label">不在含有这些元素的页面上执行检查</label>
-              <div class="form-textarea-wrapper">
-                <textarea data-drupal-selector="edit-no-load" aria-describedby="edit-no-load--description" id="edit-no-load" name="no_load" rows="1" cols="20" class="form-textarea resize-vertical form-element form-element--type-textarea form-element--api-textarea"></textarea>
-              </div>
+          <h2 id="positioning">修复隐藏或超出屏幕的提示</h2>
 
-              <label for="edit-ignore-all-if-absent" class="form-item__label">在不含这些元素的页面上隐藏所有提示</label>
-              <div class="form-textarea-wrapper">
-                <textarea data-drupal-selector="edit-ignore-all-if-absent" aria-describedby="edit-ignore-all-if-absent--description" id="edit-ignore-all-if-absent" name="ignore_all_if_absent" rows="1" cols="20" class="form-textarea resize-vertical form-element form-element--type-textarea form-element--api-textarea"></textarea>
-              </div>
+          <p>该模块为库的两个配置选项提供了字段，用于调整提示的定位方式：</p>
 
-            </div>
-            <p>
-              第一项将阻止检查运行，工具栏也不会显示。
-            </p>
-            <p>
-              第二项将以最小化状态启动检查器，并自动将所有问题（包括错误）对当前用户标记为"已忽略"。这样测试仍可运行并更新仪表板，而不会打扰用户。
-            </p>
-            <p>
-              若要通过这些设置控制哪些用户可以看到检查器，您可能需要调整主题以输出特定的 CSS 类，例如 <code>.user-247</code>。
-            </p>
+          <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
+            <label for="edit-element-hides-overflow" class="form-item__label">隐藏溢出内容的元素</label>
+            <textarea data-drupal-selector="edit-element-hides-overflow"
+              aria-describedby="edit-element-hides-overflow--description" id="edit-element-hides-overflow"
+              name="element_hides_overflow" rows="1" cols="60"
+              class="form-textarea resize-vertical form-element form-element--type-textarea form-element--api-textarea"></textarea>
+            <label for="edit-hidden-handlers" class="form-item__label">主题 JS 将负责在这些容器中显示被隐藏的工具提示</label>
+            <textarea data-drupal-selector="edit-hidden-handlers" aria-describedby="edit-hidden-handlers--description"
+              id="edit-hidden-handlers" name="hidden_handlers" rows="1" cols="60"
+              class="form-textarea resize-vertical form-element form-element--type-textarea form-element--api-textarea"></textarea>
+          </div>
+          <p>
+            部分主题的列或小部件会隐藏水平或垂直方向的溢出内容。库会自动检测切换按钮是否会超出<strong>页面</strong>的可见区域。告知库哪些容器会隐藏溢出内容，库便会尝试将这些容器内元素的提示定位在容器边框范围之内。
+          </p>
+          <p>部分主题包含可切换内容可见性的小部件，如手风琴、标签页和幻灯片。位于这些元素内部的提示也会被隐藏。为这些小部件提供选择器列表后，当用户尝试使用"前一个"或"后一个"按钮跳转到这些提示时，Editoria11y
+            会短暂暂停。Drupal 主题和模块随后可参照库中关于<a href="/zh/install/#hidden-content">处理隐藏内容中的提示</a>的说明来显示隐藏的内容。</p>
 
-            <h2 id="dashboard">管理全站结果</h2>
-            <section id="refresh">
-              <h3 class="pt-3">爬取与更新结果</h3>
-              <p>Editoria11y 是一个<strong>实时监控工具，而非爬虫</strong>。其全站报告在作者浏览页面时更新，因此通常无需定期爬取。CSA 模块<em>确实</em>包含一个爬虫，但仅在以下三种情况下才需要使用：</p>
-              <ol>
-                <li>
-                  在现有多页面站点上首次安装 Editoria11y 时。页面需要被访问后才会出现在仪表板中，因此进行一次初始爬取可节省时间。
-                </li>
-                <li>
-                  主题或模块的重大更新可能会修复（或引入）许多页面上的问题，这些变化在页面被访问或爬取之前不会反映出来。
-                </li>
-                <li>
-                  在管理界面批量删除页面或重定向等操作往往会留下已不存在或已移动页面的残留结果。此时，使用"刷新"标签页中的维护功能来刷新页面 URL、检测并清除已删除页面会很有帮助。
-                </li>
-              </ol>
-              <p>爬取过程中不会有任何数据离开您的站点。CSA 爬虫并非云端工具，它使用您的浏览器加载并检查您自己站点上的页面。这种方式的不足之处在于<strong>浏览器会暂停后台标签页</strong>。爬取期间需要保持电脑开启且不进入休眠。建议为爬虫单独开一个窗口，并在爬取过程中将其保持为该窗口的前台标签页。您可以在另一个窗口中继续工作。爬虫将在每批页面处理完成后更新进度估算。</p>
-            </section>
-            <section id="reports">
-              <h3>查看报告</h3>
-              <div class="my-4 border shadow" style="background: url(/assets/images/3x-dashboard.png) 86% 0%; padding-top: 28%; background-size: 106%;"></div>
-              <ul>
-                <li>
-                  <strong>最近</strong>支持按单条提示浏览，可用于筛选同一类型提示的所有实例、查看近期内容中频繁出现的提示，或了解哪些作者仍在重复同类错误。
-                </li>
-                <li>
-                  <strong>页面</strong>按页面显示提示数量，并按页面分组，便于找出问题最多的页面，也可按内容类型和发布状态等页面属性进行筛选。
-                </li>
-                <li>
-                  <strong>提示</strong>按类型显示问题。
-                </li>
-                <li>
-                  <strong>忽略记录</strong>支持监控作者的忽略操作是否得当，并提供"重置"按钮以恢复已忽略的提示。
-                </li>
-                <li>
-                  <strong>导出</strong>包含可筛选的页面、提示与忽略记录报告版本，可准备 CSV 下载。<em>由 CSV Export 子模块提供</em>
-                </li>
-                <li>
-                  <strong>刷新</strong>包含仪表板维护工具，可清除已删除页面的提示、清除 /search?query=example 等参数化伪页面的提示、更新已存储的页面标题和 URL，以及运行手动爬取。<em>由 CSA 子模块提供</em>
-                </li>
-              </ul>
-            </section>
-
-            <h2 id="positioning">修复隐藏或超出屏幕的提示</h2>
-
-            <p>该模块为库的两个配置选项提供了字段，用于调整提示的定位方式：</p>
-
-              <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
-                <label for="edit-element-hides-overflow" class="form-item__label">隐藏溢出内容的元素</label>
-                  <textarea data-drupal-selector="edit-element-hides-overflow" aria-describedby="edit-element-hides-overflow--description" id="edit-element-hides-overflow" name="element_hides_overflow" rows="1" cols="60" class="form-textarea resize-vertical form-element form-element--type-textarea form-element--api-textarea"></textarea>
-                <label for="edit-hidden-handlers" class="form-item__label">主题 JS 将负责在这些容器中显示被隐藏的工具提示</label>
-                  <textarea data-drupal-selector="edit-hidden-handlers" aria-describedby="edit-hidden-handlers--description" id="edit-hidden-handlers" name="hidden_handlers" rows="1" cols="60" class="form-textarea resize-vertical form-element form-element--type-textarea form-element--api-textarea"></textarea>
-              </div>
-            <p>部分主题的列或小部件会隐藏水平或垂直方向的溢出内容。库会自动检测切换按钮是否会超出<strong>页面</strong>的可见区域。告知库哪些容器会隐藏溢出内容，库便会尝试将这些容器内元素的提示定位在容器边框范围之内。</p>
-            <p>部分主题包含可切换内容可见性的小部件，如手风琴、标签页和幻灯片。位于这些元素内部的提示也会被隐藏。为这些小部件提供选择器列表后，当用户尝试使用"前一个"或"后一个"按钮跳转到这些提示时，Editoria11y 会短暂暂停。Drupal 主题和模块随后可参照库中关于<a href="/zh/install/#hidden-content">处理隐藏内容中的提示</a>的说明来显示隐藏的内容。</p>
-
-            <h2 id="runtime">编写自定义配置</h2>
-            <p>在 PHP 中：Drupal 模块提供了 <code>hook_editoria11y_alter_config</code>，可在模块或主题中修改 <code>drupalSettings.editoria11y</code> 的内容。例如：</p>
-            <pre class="language-php"><code><!--<?php
+          <h2 id="runtime">编写自定义配置</h2>
+          <p>在 PHP 中：Drupal 模块提供了 <code>hook_editoria11y_alter_config</code>，可在模块或主题中修改
+            <code>drupalSettings.editoria11y</code> 的内容。例如：</p>
+          <pre class="language-php"><code><!--<?php
 /**
  * @file
  * MY_MODULE module file.
@@ -316,8 +363,11 @@ function MY_MODULE_editoria11y_alter_config(array &$attach, CacheableMetadata $c
     $attach['allow_ok'] = 'okAll';
   }
 }--></code></pre>
-            <p>修改 <code>drupalSettings</code> 仅在模块 JavaScript 已配置好将该值传递给库的情况下才有效。若要添加额外参数，需要直接修改 JavaScript 的 <code>options</code> 对象。该模块会检测一个名为 <code>editoria11yOptionsOverride</code> 的全局 JavaScript 变量。若该变量已设置，模块将把 <code>options</code> 对象传递给您在模块或主题中提供的 <code>editoria11yOptions</code> 函数，届时即可设置任意<a href="https://editorsally.ddev.site/en/install/#params">库参数</a>。</p>
-            <pre class="language-javascript"><code><!--var editoria11yOptionsOverride = true;
+          <p>修改 <code>drupalSettings</code> 仅在模块 JavaScript 已配置好将该值传递给库的情况下才有效。若要添加额外参数，需要直接修改 JavaScript 的
+            <code>options</code> 对象。该模块会检测一个名为 <code>editoria11yOptionsOverride</code> 的全局 JavaScript 变量。若该变量已设置，模块将把
+            <code>options</code> 对象传递给您在模块或主题中提供的 <code>editoria11yOptions</code> 函数，届时即可设置任意<a
+              href="https://editorsally.ddev.site/en/install/#params">库参数</a>。</p>
+          <pre class="language-javascript"><code><!--var editoria11yOptionsOverride = true;
 var editoria11yOptions = function(options) {
   // You now have access to the processed options object that will be passed to the library.
 
@@ -334,7 +384,7 @@ var editoria11yOptions = function(options) {
   return options;
 }
 --></code></pre>
-            <section id="custom-tests">
+          <section id="custom-tests">
             <h2>编写自定义测试</h2>
             <p>首先，在模块配置中将"自定义测试"选项设为 1，以便模块知道要监听这些测试。</p>
             <p>然后在您的主题或模块中创建一个包含自定义测试的 Drupal JavaScript 库，参考<a href="/zh/install/#custom-tests">编写自定义测试的库指南</a>。</p>
@@ -396,29 +446,39 @@ var editoria11yOptions = function(options) {
   document.dispatchEvent(allDone);
 };--></code></pre>
 
-            </section>
-          </div>
+          </section>
         </div>
       </div>
-    </main>
-    <footer class="container col-lg-12 mx-auto pt-3 text-body-secondary text-center text-md-start">
+    </div>
+  </main>
+  <footer class="container col-lg-12 mx-auto pt-3 text-body-secondary text-center text-md-start">
     <div class="container">
       <div class="footer-nav mt-5 pt-5 text-center"><a class="btn btn-primary btn-lg" href="/zh/">关于</a> <a
           class="btn btn-primary btn-lg" href="/zh/features">功能</a> <a class="btn btn-primary btn-lg"
-          href="/zh/demo">演示</a> <a class="btn btn-primary btn-lg" aria-current="page" href="/zh/license">定价与贡献</a></div>
+          href="/zh/demo">演示</a> <a class="btn btn-primary btn-lg" aria-current="page" href="/zh/license">定价与贡献</a>
+      </div>
       <div class="footer">
-        <a href="https://github.com/itmaybejj/editoria11y"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-git" viewBox="0 0 16 16">
-              <path d="M15.698 7.287 8.712.302a1.03 1.03 0 0 0-1.457 0l-1.45 1.45 1.84 1.84a1.223 1.223 0 0 1 1.55 1.56l1.773 1.774a1.224 1.224 0 0 1 1.267 2.025 1.226 1.226 0 0 1-2.002-1.334L8.58 5.963v4.353a1.226 1.226 0 1 1-1.008-.036V5.887a1.226 1.226 0 0 1-.666-1.608L5.093 2.465l-4.79 4.79a1.03 1.03 0 0 0 0 1.457l6.986 6.986a1.03 1.03 0 0 0 1.457 0l6.953-6.953a1.03 1.03 0 0 0 0-1.457"/>
-            </svg> <strong>库</strong></a>
-        <a href="https://github.com/itmaybejj/editoria11y/discussions"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chat-right-heart-fill" viewBox="0 0 16 16">
-              <path d="M16 2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h9.586a1 1 0 0 1 .707.293l2.853 2.853a.5.5 0 0 0 .854-.353zM8 3.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132"/>
-            </svg> <strong>论坛</strong></a>
-        <a href="https://github.com/itmaybejj/editoria11y/issues"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-patch-plus-fill" viewBox="0 0 16 16">
-              <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01zM8.5 6v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 1 0"/>
-            </svg> <strong>问题</strong></a>
-        <a href="/zh/contacts"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-person-lines-fill" height="24" width="24" viewBox="0 0 16 18">
-              <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z"></path>
-            </svg> <strong>联系</strong></a>
+        <a href="https://github.com/itmaybejj/editoria11y"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+            height="20" fill="currentColor" class="bi bi-git" viewBox="0 0 16 16">
+            <path
+              d="M15.698 7.287 8.712.302a1.03 1.03 0 0 0-1.457 0l-1.45 1.45 1.84 1.84a1.223 1.223 0 0 1 1.55 1.56l1.773 1.774a1.224 1.224 0 0 1 1.267 2.025 1.226 1.226 0 0 1-2.002-1.334L8.58 5.963v4.353a1.226 1.226 0 1 1-1.008-.036V5.887a1.226 1.226 0 0 1-.666-1.608L5.093 2.465l-4.79 4.79a1.03 1.03 0 0 0 0 1.457l6.986 6.986a1.03 1.03 0 0 0 1.457 0l6.953-6.953a1.03 1.03 0 0 0 0-1.457" />
+          </svg> <strong>库</strong></a>
+        <a href="https://github.com/itmaybejj/editoria11y/discussions"><svg xmlns="http://www.w3.org/2000/svg"
+            width="20" height="20" fill="currentColor" class="bi bi-chat-right-heart-fill" viewBox="0 0 16 16">
+            <path
+              d="M16 2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h9.586a1 1 0 0 1 .707.293l2.853 2.853a.5.5 0 0 0 .854-.353zM8 3.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132" />
+          </svg> <strong>论坛</strong></a>
+        <a href="https://github.com/itmaybejj/editoria11y/issues"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+            height="20" fill="currentColor" class="bi bi-patch-plus-fill" viewBox="0 0 16 16">
+            <path
+              d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01zM8.5 6v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 1 0" />
+          </svg> <strong>问题</strong></a>
+        <a href="/zh/contacts"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+            class="bi bi-person-lines-fill" height="24" width="24" viewBox="0 0 16 18">
+            <path
+              d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z">
+            </path>
+          </svg> <strong>联系</strong></a>
       </div>
       <div class="col col-12 subfooter">
         <a href="/zh/privacy-policy">隐私政策</a>
@@ -429,12 +489,10 @@ var editoria11yOptions = function(options) {
       </div>
     </div>
   </footer>
-    <script
-      src="/assets/bootstrap/js/bootstrap.bundle.min.js"
-      class="astro-vvvwv3sm"
-    ></script>
-    <script src="/lang/i18n.js"></script>
-    <script src="/assets/theme.js"></script>
-    <script src="/assets/prism/prism.js"></script>
-  </body>
+  <script src="/assets/bootstrap/js/bootstrap.bundle.min.js" class="astro-vvvwv3sm"></script>
+  <script src="/lang/i18n.js"></script>
+  <script src="/assets/theme.js"></script>
+  <script src="/assets/prism/prism.js"></script>
+</body>
+
 </html>
