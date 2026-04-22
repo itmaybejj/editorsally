@@ -31,7 +31,11 @@ Read `lang/manifest.json`. For the requested language+page:
 - If the entry is `null`: this is a **new translation** — translate the full English page.
 - If the entry is a commit hash: run `git diff <hash> HEAD -- en/<page>/index.html` to see what changed. If empty, the translation is current. If there are changes, this is an **update** — apply only the changed sections to the existing translation.
 
-### 2. Scaffold new pages
+### 2. Proofread the English Source
+- Determine from the git diff which sections of the English source changed (if this is an update).
+- Correct errors, grammar, and clarity in page sections modified in the diff, and fix before translating. If the fixes are not for obvious errors, note this in the chat and pause for user review.
+
+### 3. Scaffold new pages
 
 For **new translations** (manifest entry is `null`), run the scaffold script first:
 
@@ -51,7 +55,7 @@ The script requires a `nav` entry in `lang/i18n.js` for the target language (inc
 
 The script will skip pages that already exist at the destination path.
 
-### 3. Translate the `<main>` content
+### 4. Translate the `<main>` content
 
 After scaffolding, the file has all chrome localized but the `<main>` content is still in English. Translate only the prose content inside `<main>`:
 

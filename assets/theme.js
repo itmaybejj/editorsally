@@ -290,8 +290,8 @@
       }
 
       // team annual-only.
-      if (['5', '10', '25'].includes(pricePicker.value) && supportLevel < 22) {
-        applyPrice(document.getElementById('price-result'), pricing['yearly'][currency]['5'], multiplier, symbol, strings?.perYear || '/year');
+      if (['5', '10'].includes(pricePicker.value) && supportLevel < 22) {
+        applyPrice(document.getElementById('price-result'), pricing['yearly'][currency][pricePicker.value], multiplier, symbol, strings?.perYear || '/year');
         document.querySelector('#team').classList.add('annual-only');
       } else {
         applyPrice(document.getElementById('price-result'), prices[pricePicker.value], multiplier, symbol, periodText);
