@@ -54,48 +54,59 @@
       </div>
       <div class="col-12 col-md-7 col-lg-8 pt-3">
         <div data-bs-spy="scroll" data-bs-target="#on-this-page" data-bs-smooth-scroll="true">
-          <h1>Drupal-modul</h1>
+          <h1>Editoria11y för Drupal</h1>
           <section id="features">
-            <h2 class="pt-3">Funktioner</h2>
+            <h2 class="pt-3">Kärnfunktioner</h2>
 
-            <figure class="figure my-4 rounded shadow border">
-              <img loading="lazy" src="/assets/images/3x-editing.png" class="figure-img img-fluid" height="1088"
-                width="2237" alt="Drupal-redigerare med inbyggda tips" />
-              <figcaption class="figure-caption p-3 pt-2 fs-6">Problem identifieras både vid sidladdning i frontend och
-                medan du skriver i CKEditor och Gutenberg.</figcaption>
+            <p class="fs-6">Drupal-modulen kopplar granskningsbiblioteket till den redaktionella backend-delen
+              och lägger till många serverbaserade verktyg för rapportering, styrning och konfiguration</p>
+
+            <figure class="figure my-4 row">
+              <div class="col-lg-8">
+                <img loading="lazy" src="/assets/images/3x-editing.png" class="rounded border figure-img img-fluid"
+                  height="1088" width="2237" alt="Drupal-redigerare med inbyggda tips" />
+              </div>
+              <figcaption class="figure-caption col-lg-4">Problem identifieras både vid sidladdning i frontend
+                och medan du skriver i CKEditor och Gutenberg.</figcaption>
             </figure>
 
-            <figure class="figure my-4 rounded shadow border" style="max-width: 600px;">
-              <img loading="lazy" src="/assets/images/3x-generic-tip.png" class="figure-img img-fluid" height="798"
-                width="1278" alt="Tips som anger att en länk bara heter klicka här." />
-              <figcaption class="figure-caption p-3 pt-2 ps-5 fs-6">Verktygstips beskriver problemet med knappar för att
-                hoppa till sidan eller layoutredigeraren, för att ignorera aviseringen (för den aktiva användaren) eller
-                markera den som OK (för alla användare). Beroende på sammanhang och behörigheter kan vissa aviseringar
-                även visa en meny för "Liknande aviseringar" med alternativ för att markera flera aviseringar på samma
-                sida som OK, eller markera samma element på alla sidor som OK.</figcaption>
+            <figure class="figure my-4 row">
+              <div class="col-lg-8">
+                <img loading="lazy" src="/assets/images/3x-generic-tip.png" class="rounded border figure-img img-fluid"
+                  height="798" width="1278" alt="Tips som anger att en länk bara heter klicka här." />
+              </div>
+              <figcaption class="figure-caption col-lg-4">Verktygstips får knappar
+                för att hoppa in i redigeraren, ignorera aviseringen (för den aktiva användaren) eller markera den som OK
+                (för alla användare). Upprepade aviseringar erbjuder sid- eller webbplatsövergripande åtgärder.
+              </figcaption>
             </figure>
 
-            <figure class="figure my-4 rounded shadow mb-5 border">
-              <img loading="lazy" class="figure-img img-fluid" src="/assets/images/3x-dashboard.png" height="765"
-                width="1600" alt="Rapporteringspanel som visar senaste problem och sidor med flest problem." />
-              <figcaption class="figure-caption p-3 pt-2 fs-6">En webbplatsövergripande rapporteringspanel
-                tillhandahåller filterbara och exporterbara rapporter över aviseringar och avfärdanden.</figcaption>
+            <figure class="figure my-4 row">
+              <div class="col-lg-8">
+                <img loading="lazy" src="/assets/images/3x-drupal-custom-tests.png"
+                  class="rounded border figure-img img-fluid"
+                  alt="Gränssnitt för anpassad testbyggare som visar fält för tipstitel och innehåll samt elementselektorer och uteslutningar." />
+              </div>
+              <figcaption class="figure-caption col-lg-4">
+                <p class="mb-2">CSA-delmodulen lägger till:</p>
+                <ul class="ps-3">
+                  <li><strong>En anpassad testbyggare</strong></li>
+                  <li>40+ utvecklartester</li>
+                  <li>Kontrastkontroll</li>
+                  <li>Webbplatsgenomsökare</li>
+                  <li>Läsbarhetsanalys</li>
+                  <li>Delade konfigurationer för utvecklare/redigerare</li>
+                </ul>
+              </figcaption>
             </figure>
 
-            <p>Samt även:</p>
-            <ul>
-              <li>Startkonfiguration som automatiskt ignorerar Drupal-, CKEditor-, Gutenberg-, länksyfte- och externa
-                länkelement, reagerar på ändringar vid redigering i modala behållare och automatiskt placerar
-                verktygsfältet för att undvika överlappning med Klaro- och Same Page Preview-element.</li>
-              <li>Rollbaserad konfiguration för vilka användare som ser granskaren, vilka användare som kan avfärda
-                aviseringar och vilka användare som kan se webbplatsövergripande rapporter.</li>
-              <li>En intern (lokal) genomsökare för att uppdatera panelen efter större temaändringar. <em>(Endast
-                  CSA)</em></li>
-              <li>Delad konfiguration för författare/utvecklare med separata tester (~30/~80) och problemlistor.
-                <em>(Endast CSA)</em></li>
-            </ul>
-
-
+            <figure class="figure">
+              <img loading="lazy" class="figure-img img-fluid rounded border" src="/assets/images/3x-dashboard.png"
+                height="765" width="1600"
+                alt="Rapporteringspanel som visar senaste problem och sidor med flest problem." />
+              <figcaption class="figure-caption p-3 pt-2">En webbplatsövergripande panel tillhandahåller filterbara
+                och exporterbara rapporter över aviseringar och avfärdanden.</figcaption>
+            </figure>
 
           </section>
           <h2>Installation och viktiga installationssteg</h2>
@@ -191,13 +202,14 @@
           <p>Dessa två konfigurationsinställningar är de viktigaste!</p>
           <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
             <label for="edit-content-root">Kontrollera innehåll i dessa behållare</label>
-            <div><textarea id="edit-content-root" name="content_root" rows="1" cols="30" disabled></textarea>
+            <div><textarea class="form-control" id="edit-content-root" name="content_root" rows="1" cols="30"
+                disabled></textarea>
             </div>
             <div class="mt-3">
               <label for="edit-ignore-elements">Hoppa över dessa element</label>
               <div>
-                <textarea id="edit-ignore-elements" disabled name="ignore_elements" rows="1" cols="30"
-                  class=""></textarea>
+                <textarea class="form-control" id="edit-ignore-elements" disabled name="ignore_elements" rows="1"
+                  cols="30" class=""></textarea>
               </div>
             </div>
           </div>
@@ -248,7 +260,8 @@
                 <label for="edit-always-ignore" class="mt-3">Ignorera för både utvecklare och
                   innehållsredigerare</label>
                 <div class="form-textarea-wrapper">
-                  <textarea id="edit-always-ignore" name="always_ignore" rows="1" cols="20" placeholder=""></textarea>
+                  <textarea id="edit-always-ignore" class="form-control" name="always_ignore" rows="1" cols="20"
+                    placeholder=""></textarea>
                 </div>
               </div>
 
@@ -277,8 +290,7 @@
             <label for="edit-no-load" class="form-item__label">Kontrollera inte på sidor med dessa element</label>
             <div class="form-textarea-wrapper">
               <textarea data-drupal-selector="edit-no-load" aria-describedby="edit-no-load--description"
-                id="edit-no-load" name="no_load" rows="1" cols="20"
-                class="form-textarea resize-vertical form-element form-element--type-textarea form-element--api-textarea"></textarea>
+                id="edit-no-load" name="no_load" rows="1" cols="20" class="form-control"></textarea>
             </div>
 
             <label for="edit-ignore-all-if-absent" class="form-item__label">Dölj alla aviseringar på sidor där dessa
@@ -286,8 +298,7 @@
             <div class="form-textarea-wrapper">
               <textarea data-drupal-selector="edit-ignore-all-if-absent"
                 aria-describedby="edit-ignore-all-if-absent--description" id="edit-ignore-all-if-absent"
-                name="ignore_all_if_absent" rows="1" cols="20"
-                class="form-textarea resize-vertical form-element form-element--type-textarea form-element--api-textarea"></textarea>
+                name="ignore_all_if_absent" rows="1" cols="20" class="form-control"></textarea>
             </div>
 
           </div>
@@ -379,13 +390,11 @@
             <label for="edit-element-hides-overflow" class="form-item__label">Element med overflow hidden</label>
             <textarea data-drupal-selector="edit-element-hides-overflow"
               aria-describedby="edit-element-hides-overflow--description" id="edit-element-hides-overflow"
-              name="element_hides_overflow" rows="1" cols="60"
-              class="form-textarea resize-vertical form-element form-element--type-textarea form-element--api-textarea"></textarea>
+              name="element_hides_overflow" rows="1" cols="60" class="form-control"></textarea>
             <label for="edit-hidden-handlers" class="form-item__label">Temats JavaScript hanterar avslöjande av dolda
               verktygstips inuti dessa behållare</label>
             <textarea data-drupal-selector="edit-hidden-handlers" aria-describedby="edit-hidden-handlers--description"
-              id="edit-hidden-handlers" name="hidden_handlers" rows="1" cols="60"
-              class="form-textarea resize-vertical form-element form-element--type-textarea form-element--api-textarea"></textarea>
+              id="edit-hidden-handlers" name="hidden_handlers" rows="1" cols="60" class="form-control"></textarea>
           </div>
           <p>Vissa teman har kolumner eller widgets som döljer horisontellt eller vertikalt spill. Biblioteket
             identifierar automatiskt när en knapp hamnar utanför den synliga delen av <strong>sidan.</strong> Att tala
@@ -515,6 +524,14 @@ var editoria11yOptions = function(options) {
 };--></code></pre>
 
           </section>
+          <section id="help">
+            <h2>Få hjälp</h2>
+            <p>Se <a href="./contacts">kontaktsidan</a> för alternativ för gemenskapsstöd. @itmaybejj finns
+              oftast online i Drupal Slack när solen är uppe på västra halvklotet.</p>
+            <p>De flesta <a href="./license/">CSA-bidragsnivåer</a> inkluderar en årlig avstämning, som kan
+              inkludera direkt assistans med installation och konfiguration</p>
+          </section>
+
         </div>
       </div>
     </div>

@@ -54,52 +54,60 @@
       </div>
       <div class="col-12 col-md-7 col-lg-8 pt-3">
         <div data-bs-spy="scroll" data-bs-target="#on-this-page" data-bs-smooth-scroll="true">
-          <h1>Drupal modul</h1>
+          <h1>Editoria11y Drupalhoz</h1>
           <section id="features">
-            <h2 class="pt-3">Funkciók</h2>
+            <h2 class="pt-3">Alapfunkciók</h2>
 
-            <figure class="figure my-4 rounded shadow border">
-              <img loading="lazy" src="/assets/images/3x-editing.png" class="figure-img img-fluid" height="1088"
-                width="2237" alt="Drupal szerkesztő soron belüli tippekkel" />
-              <figcaption class="figure-caption p-3 pt-2 fs-6">A problémák mind a frontend betöltésekor, mind a CKEditor
+            <p class="fs-6">A Drupal modul összekapcsolja az ellenőrző könyvtárat a szerkesztői háttérrendszerrel, és
+              számos szerveroldali eszközt ad hozzá jelentéskészítéshez, irányításhoz és konfigurációhoz.</p>
+
+            <figure class="figure my-4 row">
+              <div class="col-lg-8">
+                <img loading="lazy" src="/assets/images/3x-editing.png" class="rounded border figure-img img-fluid"
+                  height="1088" width="2237" alt="Drupal szerkesztő soron belüli tippekkel" />
+              </div>
+              <figcaption class="figure-caption col-lg-4">A problémák mind a frontend betöltésekor, mind a CKEditor
                 és Gutenberg szerkesztőkben gépelés közben észlelésre kerülnek.</figcaption>
             </figure>
 
-            <figure class="figure my-4 rounded shadow border" style="max-width: 600px;">
-              <img loading="lazy" src="/assets/images/3x-generic-tip.png" class="figure-img img-fluid" height="798"
-                width="1278" alt="A tipp jelzi, hogy a link neve csak „kattintson ide" ." />
-              <figcaption class="figure-caption p-3 pt-2 ps-5 fs-6">Az eszköztippek leírják a problémát, gombokkal az
-                oldal- vagy elrendezés-szerkesztőbe ugráshoz, a figyelmeztetés figyelmen kívül hagyásához (az aktuális
-                felhasználó számára) vagy rendben jelöléséhez (minden felhasználó számára). A kontextustól és
-                jogosultságoktól függően egyes figyelmeztetések „Hasonló figyelmeztetések" menüt is mutathatnak,
-                amelyben több figyelmeztetés jelölhető rendben ugyanazon az oldalon, vagy ugyanaz az elem minden oldalon
-                rendben jelölhető.</figcaption>
+            <figure class="figure my-4 row">
+              <div class="col-lg-8">
+                <img loading="lazy" src="/assets/images/3x-generic-tip.png" class="rounded border figure-img img-fluid"
+                  height="798" width="1278" alt="A tipp jelzi, hogy a link neve csak „kattintson ide"." />
+              </div>
+              <figcaption class="figure-caption col-lg-4">Az eszköztippek gombokat kapnak a szerkesztőbe ugráshoz, a
+                figyelmeztetés figyelmen kívül hagyásához (az aktuális felhasználó számára) vagy rendben jelöléséhez
+                (minden felhasználó számára). Az ismétlődő figyelmeztetések oldalszintű vagy webhelyszintű műveleteket
+                kínálnak.
+              </figcaption>
             </figure>
 
-            <figure class="figure my-4 rounded shadow mb-5 border">
-              <img loading="lazy" class="figure-img img-fluid" src="/assets/images/3x-dashboard.png" height="765"
-                width="1600"
+            <figure class="figure my-4 row">
+              <div class="col-lg-8">
+                <img loading="lazy" src="/assets/images/3x-drupal-custom-tests.png"
+                  class="rounded border figure-img img-fluid"
+                  alt="Egyéni tesztszerkesztő felület a tipp címéhez és tartalmához tartozó mezőkkel, valamint elemszelektorokkal és kizárásokkal." />
+              </div>
+              <figcaption class="figure-caption col-lg-4">
+                <p class="mb-2">A CSA almodul a következőket adja hozzá:</p>
+                <ul class="ps-3">
+                  <li><strong>Egyéni tesztszerkesztő</strong></li>
+                  <li>40+ fejlesztői teszt</li>
+                  <li>Kontrasztellenőrzés</li>
+                  <li>Webhelybejárók</li>
+                  <li>Olvashatósági elemzés</li>
+                  <li>Szétválasztott konfiguráció fejlesztőknek/szerkesztőknek</li>
+                </ul>
+              </figcaption>
+            </figure>
+
+            <figure class="figure">
+              <img loading="lazy" class="figure-img img-fluid rounded border" src="/assets/images/3x-dashboard.png"
+                height="765" width="1600"
                 alt="Jelentési vezérlőpult a legutóbbi problémákkal és a legtöbb problémát tartalmazó oldalakkal." />
-              <figcaption class="figure-caption p-3 pt-2 fs-6">A webhelyszintű jelentési vezérlőpult szűrhető és
+              <figcaption class="figure-caption p-3 pt-2">A webhelyszintű vezérlőpult szűrhető és
                 exportálható jelentéseket biztosít a figyelmeztetésekről és elutasításokról.</figcaption>
             </figure>
-
-            <p>Továbbá:</p>
-            <ul>
-              <li>Alapértelmezett konfiguráció, amely automatikusan figyelmen kívül hagyja a Drupal, CKEditor,
-                Gutenberg, Link Purpose és External Link elemeket, reagál a változásokra modális konténerekben történő
-                szerkesztéskor, és automatikusan pozícionálja az eszköztárat, hogy ne fedje át a Klaro és Same Page
-                Preview elemeket.</li>
-              <li>Szerepkör-alapú konfiguráció annak meghatározásához, hogy mely felhasználók látják az ellenőrzőt, mely
-                felhasználók utasíthatják el a figyelmeztetéseket, és mely felhasználók tekinthetik meg a webhelyszintű
-                jelentéseket.</li>
-              <li>Helyi (in-site) bejáró a vezérlőpult frissítéséhez nagyobb témaváltoztatások után. <em>(Csak CSA)</em>
-              </li>
-              <li>Szerző/fejlesztő szétválasztott konfiguráció külön tesztekkel (~30/~80) és probléma-listákkal.
-                <em>(Csak CSA)</em></li>
-            </ul>
-
-
 
           </section>
           <h2>Telepítés és legfontosabb beállítási lépések</h2>
@@ -203,13 +211,14 @@
           <p>Ez a két konfigurációs beállítás a legfontosabb!</p>
           <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
             <label for="edit-content-root">Tartalom ellenőrzése ezekben a konténerekben</label>
-            <div><textarea id="edit-content-root" name="content_root" rows="1" cols="30" disabled></textarea>
+            <div><textarea class="form-control" id="edit-content-root" name="content_root" rows="1" cols="30"
+                disabled></textarea>
             </div>
             <div class="mt-3">
               <label for="edit-ignore-elements">Ezen elemek átugrása</label>
               <div>
-                <textarea id="edit-ignore-elements" disabled name="ignore_elements" rows="1" cols="30"
-                  class=""></textarea>
+                <textarea class="form-control" id="edit-ignore-elements" disabled name="ignore_elements" rows="1"
+                  cols="30" class=""></textarea>
               </div>
             </div>
           </div>
@@ -260,7 +269,8 @@
                 <label for="edit-always-ignore" class="mt-3">Figyelmen kívül hagyás fejlesztők és tartalomszerkesztők
                   számára egyaránt</label>
                 <div class="form-textarea-wrapper">
-                  <textarea id="edit-always-ignore" name="always_ignore" rows="1" cols="20" placeholder=""></textarea>
+                  <textarea id="edit-always-ignore" class="form-control" name="always_ignore" rows="1" cols="20"
+                    placeholder=""></textarea>
                 </div>
               </div>
 
@@ -291,8 +301,7 @@
               oldalakon</label>
             <div class="form-textarea-wrapper">
               <textarea data-drupal-selector="edit-no-load" aria-describedby="edit-no-load--description"
-                id="edit-no-load" name="no_load" rows="1" cols="20"
-                class="form-textarea resize-vertical form-element form-element--type-textarea form-element--api-textarea"></textarea>
+                id="edit-no-load" name="no_load" rows="1" cols="20" class="form-control"></textarea>
             </div>
 
             <label for="edit-ignore-all-if-absent" class="form-item__label">Minden figyelmeztetés elrejtése olyan
@@ -300,8 +309,7 @@
             <div class="form-textarea-wrapper">
               <textarea data-drupal-selector="edit-ignore-all-if-absent"
                 aria-describedby="edit-ignore-all-if-absent--description" id="edit-ignore-all-if-absent"
-                name="ignore_all_if_absent" rows="1" cols="20"
-                class="form-textarea resize-vertical form-element form-element--type-textarea form-element--api-textarea"></textarea>
+                name="ignore_all_if_absent" rows="1" cols="20" class="form-control"></textarea>
             </div>
 
           </div>
@@ -395,13 +403,11 @@
               elemek</label>
             <textarea data-drupal-selector="edit-element-hides-overflow"
               aria-describedby="edit-element-hides-overflow--description" id="edit-element-hides-overflow"
-              name="element_hides_overflow" rows="1" cols="60"
-              class="form-textarea resize-vertical form-element form-element--type-textarea form-element--api-textarea"></textarea>
+              name="element_hides_overflow" rows="1" cols="60" class="form-control"></textarea>
             <label for="edit-hidden-handlers" class="form-item__label">A téma JavaScript-je kezeli a rejtett
               eszköztippek megjelenítését ezekben a konténerekben</label>
             <textarea data-drupal-selector="edit-hidden-handlers" aria-describedby="edit-hidden-handlers--description"
-              id="edit-hidden-handlers" name="hidden_handlers" rows="1" cols="60"
-              class="form-textarea resize-vertical form-element form-element--type-textarea form-element--api-textarea"></textarea>
+              id="edit-hidden-handlers" name="hidden_handlers" rows="1" cols="60" class="form-control"></textarea>
           </div>
           <p>Egyes témáknak vannak olyan oszlopai vagy widgetjei, amelyek elrejtik a vízszintes vagy függőleges
             túlcsordulást. A könyvtár automatikusan észleli, ha egy kapcsoló az <strong>oldal</strong> látható részén
@@ -530,6 +536,14 @@ var editoria11yOptions = function(options) {
 };--></code></pre>
 
           </section>
+          <section id="help">
+            <h2>Segítségkérés</h2>
+            <p>A közösségi támogatási lehetőségekért nézze meg a <a href="./contacts">kapcsolat</a> oldalt. @itmaybejj
+              általában elérhető a Drupal Slacken, amikor a nap fent van a nyugati féltekén.</p>
+            <p>A legtöbb <a href="./license/">CSA hozzájárulási szint</a> tartalmaz egy éves egyeztetést, amely közvetlen
+              segítséget is magában foglalhat a telepítéshez és konfigurációhoz.</p>
+          </section>
+
         </div>
       </div>
     </div>

@@ -54,41 +54,53 @@
       </div>
       <div class="col-12 col-md-7 col-lg-8 pt-3">
         <div data-bs-spy="scroll" data-bs-target="#on-this-page" data-bs-smooth-scroll="true">
-          <h1>Drupal 模块</h1>
+          <h1>Editoria11y for Drupal</h1>
           <section id="features">
-            <h2 class="pt-3">功能特性</h2>
+            <h2 class="pt-3">核心功能</h2>
 
-            <figure class="figure my-4 rounded shadow border">
-              <img loading="lazy" src="/assets/images/3x-editing.png" class="figure-img img-fluid" height="1088"
-                width="2237" alt="Drupal 编辑器显示内联提示" />
-              <figcaption class="figure-caption p-3 pt-2 fs-6">问题会在前端页面加载时以及在 CKEditor 和 Gutenberg 中输入内容时实时检测。
+            <p class="fs-6">Drupal 模块将检查器库与编辑后台对接，并增加了许多用于报告、治理与配置的服务器端工具。</p>
+
+            <figure class="figure my-4 row">
+              <div class="col-lg-8">
+                <img loading="lazy" src="/assets/images/3x-editing.png" class="rounded border figure-img img-fluid"
+                  height="1088" width="2237" alt="Drupal 编辑器显示内联提示" />
+              </div>
+              <figcaption class="figure-caption col-lg-4">问题会在前端页面加载时以及在 CKEditor 和 Gutenberg 中输入内容时实时检测。</figcaption>
+            </figure>
+
+            <figure class="figure my-4 row">
+              <div class="col-lg-8">
+                <img loading="lazy" src="/assets/images/3x-generic-tip.png" class="rounded border figure-img img-fluid"
+                  height="798" width="1278" alt="提示指出某链接仅被命名为"点击此处"。" />
+              </div>
+              <figcaption class="figure-caption col-lg-4">工具提示新增按钮，可跳转至编辑器、忽略当前提示（仅对当前用户有效）或将其标记为无误（对所有用户有效）。对于重复出现的提示，还提供整页或全站范围的操作选项。
               </figcaption>
             </figure>
 
-            <figure class="figure my-4 rounded shadow border" style="max-width: 600px;">
-              <img loading="lazy" src="/assets/images/3x-generic-tip.png" class="figure-img img-fluid" height="798"
-                width="1278" alt="提示指出某链接仅被命名为" 点击此处"。" />
-              <figcaption class="figure-caption p-3 pt-2 ps-5 fs-6">
-                工具提示会描述问题，并提供按钮以跳转至页面或布局编辑器、忽略当前提示（仅对当前用户有效）或将其标记为无误（对所有用户有效）。根据上下文和权限，部分提示还可能显示"相似提示"菜单，支持将同一页面上的多个提示批量标记为无误，或将所有页面上的相同元素标记为无误。
+            <figure class="figure my-4 row">
+              <div class="col-lg-8">
+                <img loading="lazy" src="/assets/images/3x-drupal-custom-tests.png"
+                  class="rounded border figure-img img-fluid"
+                  alt="自定义测试构建器界面，显示提示标题与内容字段，以及元素选择器与排除项。" />
+              </div>
+              <figcaption class="figure-caption col-lg-4">
+                <p class="mb-2">CSA 子模块新增：</p>
+                <ul class="ps-3">
+                  <li><strong>自定义测试构建器</strong></li>
+                  <li>40 余项开发者测试</li>
+                  <li>对比度检查</li>
+                  <li>站点爬虫</li>
+                  <li>可读性分析</li>
+                  <li>开发者/编辑分离配置</li>
+                </ul>
               </figcaption>
             </figure>
 
-            <figure class="figure my-4 rounded shadow mb-5 border">
-              <img loading="lazy" class="figure-img img-fluid" src="/assets/images/3x-dashboard.png" height="765"
-                width="1600" alt="报告仪表板，显示最近的问题及问题最多的页面。" />
-              <figcaption class="figure-caption p-3 pt-2 fs-6">全站报告仪表板提供可筛选、可导出的提示与忽略记录报告。</figcaption>
+            <figure class="figure">
+              <img loading="lazy" class="figure-img img-fluid rounded border" src="/assets/images/3x-dashboard.png"
+                height="765" width="1600" alt="报告仪表板，显示最近的问题及问题最多的页面。" />
+              <figcaption class="figure-caption p-3 pt-2">全站仪表板提供可筛选、可导出的提示与忽略记录报告。</figcaption>
             </figure>
-
-            <p>此外还包括：</p>
-            <ul>
-              <li>开箱即用的初始配置，自动忽略 Drupal、CKEditor、Gutenberg、链接目的与外部链接等元素，在模态容器中编辑时响应内容变化，并自动调整工具栏位置以避免与 Klaro 和同页预览元素重叠。
-              </li>
-              <li>基于角色的配置，控制哪些用户可以看到检查器、哪些用户可以忽略提示，以及哪些用户可以查看全站报告。</li>
-              <li>站内（本地）爬虫，用于在主题发生重大变更后刷新仪表板。<em>（仅限 CSA）</em></li>
-              <li>作者/开发者分离配置，含独立的测试集（约 30 条/约 90 条）和问题列表。<em>（仅限 CSA）</em></li>
-            </ul>
-
-
 
           </section>
           <h2>安装与关键配置步骤</h2>
@@ -165,13 +177,14 @@
           <p>以下两项配置设置最为重要！</p>
           <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
             <label for="edit-content-root">检查这些容器中的内容</label>
-            <div><textarea id="edit-content-root" name="content_root" rows="1" cols="30" disabled></textarea>
+            <div><textarea class="form-control" id="edit-content-root" name="content_root" rows="1" cols="30"
+                disabled></textarea>
             </div>
             <div class="mt-3">
               <label for="edit-ignore-elements">跳过这些元素</label>
               <div>
-                <textarea id="edit-ignore-elements" disabled name="ignore_elements" rows="1" cols="30"
-                  class=""></textarea>
+                <textarea class="form-control" id="edit-ignore-elements" disabled name="ignore_elements" rows="1"
+                  cols="30" class=""></textarea>
               </div>
             </div>
           </div>
@@ -217,7 +230,8 @@
               <div class="">
                 <label for="edit-always-ignore" class="mt-3">对开发者和内容编辑均忽略</label>
                 <div class="form-textarea-wrapper">
-                  <textarea id="edit-always-ignore" name="always_ignore" rows="1" cols="20" placeholder=""></textarea>
+                  <textarea id="edit-always-ignore" class="form-control" name="always_ignore" rows="1" cols="20"
+                    placeholder=""></textarea>
                 </div>
               </div>
 
@@ -244,16 +258,14 @@
             <label for="edit-no-load" class="form-item__label">不在含有这些元素的页面上执行检查</label>
             <div class="form-textarea-wrapper">
               <textarea data-drupal-selector="edit-no-load" aria-describedby="edit-no-load--description"
-                id="edit-no-load" name="no_load" rows="1" cols="20"
-                class="form-textarea resize-vertical form-element form-element--type-textarea form-element--api-textarea"></textarea>
+                id="edit-no-load" name="no_load" rows="1" cols="20" class="form-control"></textarea>
             </div>
 
             <label for="edit-ignore-all-if-absent" class="form-item__label">在不含这些元素的页面上隐藏所有提示</label>
             <div class="form-textarea-wrapper">
               <textarea data-drupal-selector="edit-ignore-all-if-absent"
                 aria-describedby="edit-ignore-all-if-absent--description" id="edit-ignore-all-if-absent"
-                name="ignore_all_if_absent" rows="1" cols="20"
-                class="form-textarea resize-vertical form-element form-element--type-textarea form-element--api-textarea"></textarea>
+                name="ignore_all_if_absent" rows="1" cols="20" class="form-control"></textarea>
             </div>
 
           </div>
@@ -323,12 +335,10 @@
             <label for="edit-element-hides-overflow" class="form-item__label">隐藏溢出内容的元素</label>
             <textarea data-drupal-selector="edit-element-hides-overflow"
               aria-describedby="edit-element-hides-overflow--description" id="edit-element-hides-overflow"
-              name="element_hides_overflow" rows="1" cols="60"
-              class="form-textarea resize-vertical form-element form-element--type-textarea form-element--api-textarea"></textarea>
+              name="element_hides_overflow" rows="1" cols="60" class="form-control"></textarea>
             <label for="edit-hidden-handlers" class="form-item__label">主题 JS 将负责在这些容器中显示被隐藏的工具提示</label>
             <textarea data-drupal-selector="edit-hidden-handlers" aria-describedby="edit-hidden-handlers--description"
-              id="edit-hidden-handlers" name="hidden_handlers" rows="1" cols="60"
-              class="form-textarea resize-vertical form-element form-element--type-textarea form-element--api-textarea"></textarea>
+              id="edit-hidden-handlers" name="hidden_handlers" rows="1" cols="60" class="form-control"></textarea>
           </div>
           <p>
             部分主题的列或小部件会隐藏水平或垂直方向的溢出内容。库会自动检测切换按钮是否会超出<strong>页面</strong>的可见区域。告知库哪些容器会隐藏溢出内容，库便会尝试将这些容器内元素的提示定位在容器边框范围之内。
@@ -449,6 +459,12 @@ var editoria11yOptions = function(options) {
 };--></code></pre>
 
           </section>
+          <section id="help">
+            <h2>获取帮助</h2>
+            <p>请访问<a href="./contacts">联系</a>页面了解社区支持渠道。@itmaybejj 通常在西半球白天时段活跃于 Drupal Slack。</p>
+            <p>大多数 <a href="./license/">CSA 贡献级别</a>均包含年度例会，可涵盖安装与配置方面的直接协助。</p>
+          </section>
+
         </div>
       </div>
     </div>

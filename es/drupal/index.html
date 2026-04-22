@@ -54,51 +54,60 @@
       </div>
       <div class="col-12 col-md-7 col-lg-8 pt-3">
         <div data-bs-spy="scroll" data-bs-target="#on-this-page" data-bs-smooth-scroll="true">
-          <h1>Módulo Drupal</h1>
+          <h1>Editoria11y para Drupal</h1>
           <section id="features">
-            <h2 class="pt-3">Características</h2>
+            <h2 class="pt-3">Características principales</h2>
 
-            <figure class="figure my-4 rounded shadow border">
-              <img loading="lazy" src="/assets/images/3x-editing.png" class="figure-img img-fluid" height="1088"
-                width="2237" alt="Editor de Drupal con consejos en línea" />
-              <figcaption class="figure-caption p-3 pt-2 fs-6">Los problemas se detectan tanto al cargar la página en el
+            <p class="fs-6">El módulo de Drupal conecta la biblioteca del verificador con el backend editorial, y añade
+              numerosas herramientas del lado del servidor para informes, gobernanza y configuración</p>
+
+            <figure class="figure my-4 row">
+              <div class="col-lg-8">
+                <img loading="lazy" src="/assets/images/3x-editing.png" class="rounded border figure-img img-fluid"
+                  height="1088" width="2237" alt="Editor de Drupal con consejos en línea" />
+              </div>
+              <figcaption class="figure-caption col-lg-4">Los problemas se detectan tanto al cargar la página en el
                 frontend como mientras se escribe en CKEditor y Gutenberg.</figcaption>
             </figure>
 
-            <figure class="figure my-4 rounded shadow border" style="max-width: 600px;">
-              <img loading="lazy" src="/assets/images/3x-generic-tip.png" class="figure-img img-fluid" height="798"
-                width="1278"
-                alt="Información emergente que indica que el texto del enlace solo dice &quot;haz clic aquí&quot;." />
-              <figcaption class="figure-caption p-3 pt-2 ps-5 fs-6">Las informaciones emergentes describen el problema,
-                con botones para ir al editor de página o de diseño, para ignorar esta alerta (para el usuario activo) o
-                marcarla como correcta (para todos los usuarios). Según el contexto y los permisos, algunas alertas
-                también pueden mostrar un menú de "Alertas similares", con opciones para marcar como correctas múltiples
-                alertas en la misma página, o el mismo elemento en todas las páginas.</figcaption>
+            <figure class="figure my-4 row">
+              <div class="col-lg-8">
+                <img loading="lazy" src="/assets/images/3x-generic-tip.png" class="rounded border figure-img img-fluid"
+                  height="798" width="1278"
+                  alt="Información emergente que indica que el texto del enlace solo dice &quot;haz clic aquí&quot;." />
+              </div>
+              <figcaption class="figure-caption col-lg-4">Las informaciones emergentes incorporan botones para ir al
+                editor, ignorar la alerta (para el usuario activo) o marcarla como correcta (para todos los usuarios).
+                Las alertas repetidas ofrecen acciones a nivel de página o de todo el sitio.
+              </figcaption>
             </figure>
 
-            <figure class="figure my-4 rounded shadow mb-5 border">
-              <img loading="lazy" class="figure-img img-fluid" src="/assets/images/3x-dashboard.png" height="765"
-                width="1600"
+            <figure class="figure my-4 row">
+              <div class="col-lg-8">
+                <img loading="lazy" src="/assets/images/3x-drupal-custom-tests.png"
+                  class="rounded border figure-img img-fluid"
+                  alt="Interfaz del generador de pruebas personalizadas con campos para el título y contenido del consejo, así como selectores de elementos y exclusiones." />
+              </div>
+              <figcaption class="figure-caption col-lg-4">
+                <p class="mb-2">El submódulo CSA añade:</p>
+                <ul class="ps-3">
+                  <li><strong>Un generador de pruebas personalizadas</strong></li>
+                  <li>Más de 40 pruebas para desarrolladores</li>
+                  <li>Verificación de contraste</li>
+                  <li>Rastreadores del sitio</li>
+                  <li>Análisis de legibilidad</li>
+                  <li>Configuraciones divididas para desarrolladores/editores</li>
+                </ul>
+              </figcaption>
+            </figure>
+
+            <figure class="figure">
+              <img loading="lazy" class="figure-img img-fluid rounded border" src="/assets/images/3x-dashboard.png"
+                height="765" width="1600"
                 alt="Panel de informes que muestra los problemas recientes y las páginas con más problemas." />
-              <figcaption class="figure-caption p-3 pt-2 fs-6">Un panel de informes de todo el sitio proporciona
-                informes filtrables y exportables de alertas y descartes.</figcaption>
+              <figcaption class="figure-caption p-3 pt-2">Un panel de todo el sitio proporciona informes filtrables y
+                exportables de alertas y descartes.</figcaption>
             </figure>
-
-            <p>Además:</p>
-            <ul>
-              <li>Configuración inicial que ignora automáticamente los elementos de Drupal, CKEditor, Gutenberg, Link
-                Purpose y External Link, reacciona a los cambios al editar en contenedores modales, y posiciona
-                automáticamente la barra de herramientas para evitar solapamientos con elementos de Klaro y Same Page
-                Preview.</li>
-              <li>Configuración basada en roles para determinar qué usuarios verán el verificador, qué usuarios pueden
-                descartar alertas y qué usuarios pueden ver los informes de todo el sitio.</li>
-              <li>Un rastreador local integrado para actualizar el panel después de cambios importantes en el tema.
-                <em>(solo CSA)</em></li>
-              <li>Configuración dividida entre autor/desarrollador con pruebas separadas (~30/~80) y listas de
-                problemas. <em>(solo CSA)</em></li>
-            </ul>
-
-
 
           </section>
           <h2>Instalación y pasos clave de configuración</h2>
@@ -201,13 +210,14 @@
           <p>¡Estas dos configuraciones son las más importantes!</p>
           <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
             <label for="edit-content-root">Verificar contenido en estos contenedores</label>
-            <div><textarea id="edit-content-root" name="content_root" rows="1" cols="30" disabled></textarea>
+            <div><textarea class="form-control" id="edit-content-root" name="content_root" rows="1" cols="30"
+                disabled></textarea>
             </div>
             <div class="mt-3">
               <label for="edit-ignore-elements">Omitir estos elementos</label>
               <div>
-                <textarea id="edit-ignore-elements" disabled name="ignore_elements" rows="1" cols="30"
-                  class=""></textarea>
+                <textarea class="form-control" id="edit-ignore-elements" disabled name="ignore_elements" rows="1"
+                  cols="30" class=""></textarea>
               </div>
             </div>
           </div>
@@ -261,7 +271,8 @@
                 <label for="edit-always-ignore" class="mt-3">Ignorar tanto para desarrolladores como para editores de
                   contenido</label>
                 <div class="form-textarea-wrapper">
-                  <textarea id="edit-always-ignore" name="always_ignore" rows="1" cols="20" placeholder=""></textarea>
+                  <textarea id="edit-always-ignore" class="form-control" name="always_ignore" rows="1" cols="20"
+                    placeholder=""></textarea>
                 </div>
               </div>
 
@@ -291,8 +302,7 @@
             <label for="edit-no-load" class="form-item__label">No verificar en páginas con estos elementos</label>
             <div class="form-textarea-wrapper">
               <textarea data-drupal-selector="edit-no-load" aria-describedby="edit-no-load--description"
-                id="edit-no-load" name="no_load" rows="1" cols="20"
-                class="form-textarea resize-vertical form-element form-element--type-textarea form-element--api-textarea"></textarea>
+                id="edit-no-load" name="no_load" rows="1" cols="20" class="form-control"></textarea>
             </div>
 
             <label for="edit-ignore-all-if-absent" class="form-item__label">Ocultar todas las alertas en páginas donde
@@ -300,8 +310,7 @@
             <div class="form-textarea-wrapper">
               <textarea data-drupal-selector="edit-ignore-all-if-absent"
                 aria-describedby="edit-ignore-all-if-absent--description" id="edit-ignore-all-if-absent"
-                name="ignore_all_if_absent" rows="1" cols="20"
-                class="form-textarea resize-vertical form-element form-element--type-textarea form-element--api-textarea"></textarea>
+                name="ignore_all_if_absent" rows="1" cols="20" class="form-control"></textarea>
             </div>
 
           </div>
@@ -394,13 +403,11 @@
             <label for="edit-element-hides-overflow" class="form-item__label">Elementos con overflow hidden</label>
             <textarea data-drupal-selector="edit-element-hides-overflow"
               aria-describedby="edit-element-hides-overflow--description" id="edit-element-hides-overflow"
-              name="element_hides_overflow" rows="1" cols="60"
-              class="form-textarea resize-vertical form-element form-element--type-textarea form-element--api-textarea"></textarea>
+              name="element_hides_overflow" rows="1" cols="60" class="form-control"></textarea>
             <label for="edit-hidden-handlers" class="form-item__label">El JS del tema se encargará de revelar los
               consejos ocultos dentro de estos contenedores</label>
             <textarea data-drupal-selector="edit-hidden-handlers" aria-describedby="edit-hidden-handlers--description"
-              id="edit-hidden-handlers" name="hidden_handlers" rows="1" cols="60"
-              class="form-textarea resize-vertical form-element form-element--type-textarea form-element--api-textarea"></textarea>
+              id="edit-hidden-handlers" name="hidden_handlers" rows="1" cols="60" class="form-control"></textarea>
           </div>
           <p>Algunos temas tienen columnas o widgets que ocultan el desbordamiento horizontal o vertical. La biblioteca
             detecta automáticamente cuando un indicador de alerta caería fuera de la parte visible de la
@@ -531,6 +538,15 @@ var editoria11yOptions = function(options) {
 };--></code></pre>
 
           </section>
+          <section id="help">
+            <h2>Obtener ayuda</h2>
+            <p>Consulta la página de <a href="./contacts">contacto</a> para ver las opciones de soporte comunitario.
+              @itmaybejj suele estar disponible en el Slack de Drupal siempre que el sol esté arriba en el hemisferio
+              occidental.</p>
+            <p>La mayoría de los <a href="./license/">niveles de contribución CSA</a> incluyen una reunión anual, que
+              puede incluir asistencia directa con la instalación y configuración</p>
+          </section>
+
         </div>
       </div>
     </div>

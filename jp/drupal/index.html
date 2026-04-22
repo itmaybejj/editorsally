@@ -54,42 +54,53 @@
       </div>
       <div class="col-12 col-md-7 col-lg-8 pt-3">
         <div data-bs-spy="scroll" data-bs-target="#on-this-page" data-bs-smooth-scroll="true">
-          <h1>Drupal モジュール</h1>
+          <h1>Drupal 版 Editoria11y</h1>
           <section id="features">
-            <h2 class="pt-3">機能</h2>
+            <h2 class="pt-3">コア機能</h2>
 
-            <figure class="figure my-4 rounded shadow border">
-              <img loading="lazy" src="/assets/images/3x-editing.png" class="figure-img img-fluid" height="1088"
-                width="2237" alt="インラインのヒントが表示されたDrupalエディター" />
-              <figcaption class="figure-caption p-3 pt-2 fs-6">問題はフロントエンドの読み込み時と、CKEditor・Gutenbergでの入力中の両方で検出されます。
+            <p class="fs-6">Drupal モジュールはチェッカーライブラリを編集バックエンドに接続し、レポート、ガバナンス、設定のための多数のサーバーサイドツールを追加します。</p>
+
+            <figure class="figure my-4 row">
+              <div class="col-lg-8">
+                <img loading="lazy" src="/assets/images/3x-editing.png" class="rounded border figure-img img-fluid"
+                  height="1088" width="2237" alt="インラインのヒントが表示されたDrupalエディター" />
+              </div>
+              <figcaption class="figure-caption col-lg-4">問題はフロントエンドの読み込み時と、CKEditor・Gutenberg での入力中の両方で検出されます。</figcaption>
+            </figure>
+
+            <figure class="figure my-4 row">
+              <div class="col-lg-8">
+                <img loading="lazy" src="/assets/images/3x-generic-tip.png" class="rounded border figure-img img-fluid"
+                  height="798" width="1278" alt="リンクの名前が「click here」のみであることを示すヒント。" />
+              </div>
+              <figcaption class="figure-caption col-lg-4">ツールチップにはエディターへジャンプする、アラートを無視する（現在のユーザーのみ）、または OK
+                にする（全ユーザー対象）ためのボタンが追加されます。繰り返し発生するアラートには、ページ全体またはサイト全体に対するアクションも用意されます。</figcaption>
+            </figure>
+
+            <figure class="figure my-4 row">
+              <div class="col-lg-8">
+                <img loading="lazy" src="/assets/images/3x-drupal-custom-tests.png"
+                  class="rounded border figure-img img-fluid"
+                  alt="ヒントのタイトルと内容、要素セレクターと除外対象のフィールドが表示されたカスタムテストビルダーのインターフェース。" />
+              </div>
+              <figcaption class="figure-caption col-lg-4">
+                <p class="mb-2">CSA サブモジュールでは以下が追加されます：</p>
+                <ul class="ps-3">
+                  <li><strong>カスタムテストビルダー</strong></li>
+                  <li>40 以上の開発者向けテスト</li>
+                  <li>コントラストチェック</li>
+                  <li>サイトクローラー</li>
+                  <li>読みやすさの分析</li>
+                  <li>開発者／編集者向けの分割設定</li>
+                </ul>
               </figcaption>
             </figure>
 
-            <figure class="figure my-4 rounded shadow border" style="max-width: 600px;">
-              <img loading="lazy" src="/assets/images/3x-generic-tip.png" class="figure-img img-fluid" height="798"
-                width="1278" alt="リンクの名前が「click here」のみであることを示すヒント。" />
-              <figcaption class="figure-caption p-3 pt-2 ps-5 fs-6">
-                ツールチップは問題の内容を説明し、ページやレイアウトエディターにジャンプするボタン、このアラートを無視する（現在のユーザーのみ）またはOKにする（全ユーザー対象）ボタンを含みます。コンテキストや権限によっては、「類似のアラート」メニューも表示され、同じページの複数のアラートをまとめてOKにしたり、全ページで同じ要素をOKにしたりできます。
-              </figcaption>
+            <figure class="figure">
+              <img loading="lazy" class="figure-img img-fluid rounded border" src="/assets/images/3x-dashboard.png"
+                height="765" width="1600" alt="最近の問題と最も問題が多いページを表示するレポートダッシュボード。" />
+              <figcaption class="figure-caption p-3 pt-2">サイト全体のダッシュボードでは、アラートと非表示設定のフィルタリング可能・エクスポート可能なレポートを提供します。</figcaption>
             </figure>
-
-            <figure class="figure my-4 rounded shadow mb-5 border">
-              <img loading="lazy" class="figure-img img-fluid" src="/assets/images/3x-dashboard.png" height="765"
-                width="1600" alt="最近の問題と最も問題が多いページを表示するレポートダッシュボード。" />
-              <figcaption class="figure-caption p-3 pt-2 fs-6">
-                サイト全体のレポートダッシュボードでは、アラートと非表示設定のフィルタリング可能・エクスポート可能なレポートを提供します。</figcaption>
-            </figure>
-
-            <p>その他にも以下の機能があります：</p>
-            <ul>
-              <li>Drupal、CKeditor、Gutenberg、リンクの目的、外部リンク要素を自動的に無視し、モーダルコンテナ内の編集時の変更に反応し、KlaroやSame Page
-                Previewの要素と重ならないようにツールバーを自動配置するスターター設定。</li>
-              <li>どのユーザーがチェッカーを表示するか、どのユーザーがアラートを非表示にできるか、どのユーザーがサイト全体のレポートを表示できるかを制御するロールベースの設定。</li>
-              <li>大きなテーマ変更後にダッシュボードを更新するためのサイト内（ローカル）クローラー。<em>（CSAのみ）</em></li>
-              <li>個別のテスト（約30件/約80件）と問題リストを持つ作成者/開発者の分割設定。<em>（CSAのみ）</em></li>
-            </ul>
-
-
 
           </section>
           <h2>インストールと主要なセットアップ手順</h2>
@@ -171,13 +182,14 @@
           <p>これら2つの設定が最も重要です！</p>
           <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
             <label for="edit-content-root">これらのコンテナ内のコンテンツを確認する</label>
-            <div><textarea id="edit-content-root" name="content_root" rows="1" cols="30" disabled></textarea>
+            <div><textarea class="form-control" id="edit-content-root" name="content_root" rows="1" cols="30"
+                disabled></textarea>
             </div>
             <div class="mt-3">
               <label for="edit-ignore-elements">これらの要素をスキップする</label>
               <div>
-                <textarea id="edit-ignore-elements" disabled name="ignore_elements" rows="1" cols="30"
-                  class=""></textarea>
+                <textarea class="form-control" id="edit-ignore-elements" disabled name="ignore_elements" rows="1"
+                  cols="30" class=""></textarea>
               </div>
             </div>
           </div>
@@ -223,7 +235,8 @@
               <div class="">
                 <label for="edit-always-ignore" class="mt-3">開発者とコンテンツ編集者の両方で無視する</label>
                 <div class="form-textarea-wrapper">
-                  <textarea id="edit-always-ignore" name="always_ignore" rows="1" cols="20" placeholder=""></textarea>
+                  <textarea id="edit-always-ignore" class="form-control" name="always_ignore" rows="1" cols="20"
+                    placeholder=""></textarea>
                 </div>
               </div>
 
@@ -250,16 +263,14 @@
             <label for="edit-no-load" class="form-item__label">これらの要素があるページではチェックしない</label>
             <div class="form-textarea-wrapper">
               <textarea data-drupal-selector="edit-no-load" aria-describedby="edit-no-load--description"
-                id="edit-no-load" name="no_load" rows="1" cols="20"
-                class="form-textarea resize-vertical form-element form-element--type-textarea form-element--api-textarea"></textarea>
+                id="edit-no-load" name="no_load" rows="1" cols="20" class="form-control"></textarea>
             </div>
 
             <label for="edit-ignore-all-if-absent" class="form-item__label">これらの要素が存在しないページではすべてのアラートを非表示にする</label>
             <div class="form-textarea-wrapper">
               <textarea data-drupal-selector="edit-ignore-all-if-absent"
                 aria-describedby="edit-ignore-all-if-absent--description" id="edit-ignore-all-if-absent"
-                name="ignore_all_if_absent" rows="1" cols="20"
-                class="form-textarea resize-vertical form-element form-element--type-textarea form-element--api-textarea"></textarea>
+                name="ignore_all_if_absent" rows="1" cols="20" class="form-control"></textarea>
             </div>
 
           </div>
@@ -332,12 +343,10 @@
             <label for="edit-element-hides-overflow" class="form-item__label">オーバーフローが非表示の要素</label>
             <textarea data-drupal-selector="edit-element-hides-overflow"
               aria-describedby="edit-element-hides-overflow--description" id="edit-element-hides-overflow"
-              name="element_hides_overflow" rows="1" cols="60"
-              class="form-textarea resize-vertical form-element form-element--type-textarea form-element--api-textarea"></textarea>
+              name="element_hides_overflow" rows="1" cols="60" class="form-control"></textarea>
             <label for="edit-hidden-handlers" class="form-item__label">テーマの JS がこれらのコンテナ内の非表示ツールチップを表示する処理を行う</label>
             <textarea data-drupal-selector="edit-hidden-handlers" aria-describedby="edit-hidden-handlers--description"
-              id="edit-hidden-handlers" name="hidden_handlers" rows="1" cols="60"
-              class="form-textarea resize-vertical form-element form-element--type-textarea form-element--api-textarea"></textarea>
+              id="edit-hidden-handlers" name="hidden_handlers" rows="1" cols="60" class="form-control"></textarea>
           </div>
           <p>
             一部のテーマには、水平または垂直のオーバーフローを非表示にする列やウィジェットがあります。ライブラリはトグルが<strong>ページ</strong>の表示領域外に出てしまう場合を自動的に検出します。特定のコンテナがオーバーフローを非表示にすることをライブラリに伝えると、そのコンテナ内の要素のヒントもコンテナの境界内に収まるよう配置しようとします。
@@ -460,6 +469,13 @@ var editoria11yOptions = function(options) {
 };--></code></pre>
 
           </section>
+          <section id="help">
+            <h2>サポートを受ける</h2>
+            <p>コミュニティサポートのオプションについては<a href="./contacts">お問い合わせ</a>ページをご確認ください。@itmaybejj
+              は、西半球で太陽が昇っている時間帯なら通常 Drupal Slack にオンラインでいます。</p>
+            <p>多くの <a href="./license/">CSA 貢献プラン</a>には年次のチェックインが含まれており、セットアップや設定に関する直接のサポートを受けることもできます。</p>
+          </section>
+
         </div>
       </div>
     </div>

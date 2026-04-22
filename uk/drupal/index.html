@@ -54,49 +54,59 @@
       </div>
       <div class="col-12 col-md-7 col-lg-8 pt-3">
         <div data-bs-spy="scroll" data-bs-target="#on-this-page" data-bs-smooth-scroll="true">
-          <h1>Модуль Drupal</h1>
+          <h1>Editoria11y для Drupal</h1>
           <section id="features">
-            <h2 class="pt-3">Можливості</h2>
+            <h2 class="pt-3">Основні можливості</h2>
 
-            <figure class="figure my-4 rounded shadow border">
-              <img loading="lazy" src="/assets/images/3x-editing.png" class="figure-img img-fluid" height="1088"
-                width="2237" alt="Редактор Drupal із вбудованими підказками" />
-              <figcaption class="figure-caption p-3 pt-2 fs-6">Проблеми виявляються як під час завантаження на
+            <p class="fs-6">Модуль Drupal з'єднує бібліотеку перевірки з редакторським бекендом і додає багато
+              серверних інструментів для звітності, керування та налаштування</p>
+
+            <figure class="figure my-4 row">
+              <div class="col-lg-8">
+                <img loading="lazy" src="/assets/images/3x-editing.png" class="rounded border figure-img img-fluid"
+                  height="1088" width="2237" alt="Редактор Drupal із вбудованими підказками" />
+              </div>
+              <figcaption class="figure-caption col-lg-4">Проблеми виявляються як під час завантаження на
                 фронтенді, так і в процесі введення тексту в CKEditor і Gutenberg.</figcaption>
             </figure>
 
-            <figure class="figure my-4 rounded shadow border" style="max-width: 600px;">
-              <img loading="lazy" src="/assets/images/3x-generic-tip.png" class="figure-img img-fluid" height="798"
-                width="1278" alt="Підказка вказує, що посилання має лише назву «натисніть тут»." />
-              <figcaption class="figure-caption p-3 pt-2 ps-5 fs-6">Спливаючі підказки описують проблему та містять
-                кнопки для переходу до редактора сторінки або макета, щоб проігнорувати це попередження (для поточного
-                користувача) або позначити його як «ОК» (для всіх користувачів). Залежно від контексту та дозволів деякі
-                попередження можуть також показувати меню «Схожі попередження» з можливістю позначити кілька попереджень
-                на одній сторінці як «ОК» або позначити той самий елемент на всіх сторінках як «ОК».</figcaption>
+            <figure class="figure my-4 row">
+              <div class="col-lg-8">
+                <img loading="lazy" src="/assets/images/3x-generic-tip.png" class="rounded border figure-img img-fluid"
+                  height="798" width="1278" alt="Підказка вказує, що посилання має лише назву «натисніть тут»." />
+              </div>
+              <figcaption class="figure-caption col-lg-4">Спливаючі підказки отримують кнопки для переходу до
+                редактора, ігнорування попередження (для поточного користувача) або позначення його як «ОК» (для всіх
+                користувачів). Повторювані попередження пропонують дії для всієї сторінки або всього сайту.
+              </figcaption>
             </figure>
 
-            <figure class="figure my-4 rounded shadow mb-5 border">
-              <img loading="lazy" class="figure-img img-fluid" src="/assets/images/3x-dashboard.png" height="765"
-                width="1600"
+            <figure class="figure my-4 row">
+              <div class="col-lg-8">
+                <img loading="lazy" src="/assets/images/3x-drupal-custom-tests.png"
+                  class="rounded border figure-img img-fluid"
+                  alt="Інтерфейс конструктора власних тестів із полями для заголовка та вмісту підказки, а також селекторів елементів і виключень." />
+              </div>
+              <figcaption class="figure-caption col-lg-4">
+                <p class="mb-2">Підмодуль CSA додає:</p>
+                <ul class="ps-3">
+                  <li><strong>Конструктор власних тестів</strong></li>
+                  <li>40+ тестів для розробників</li>
+                  <li>Перевірку контрастності</li>
+                  <li>Сканери сайту</li>
+                  <li>Аналіз читабельності</li>
+                  <li>Роздільні конфігурації для розробників/редакторів</li>
+                </ul>
+              </figcaption>
+            </figure>
+
+            <figure class="figure">
+              <img loading="lazy" class="figure-img img-fluid rounded border" src="/assets/images/3x-dashboard.png"
+                height="765" width="1600"
                 alt="Панель звітів, що показує останні проблеми та сторінки з найбільшою кількістю проблем." />
-              <figcaption class="figure-caption p-3 pt-2 fs-6">Загальносайтова панель звітів надає фільтровані та
+              <figcaption class="figure-caption p-3 pt-2">Загальносайтова панель надає фільтровані та
                 експортовані звіти про попередження та відхилення.</figcaption>
             </figure>
-
-            <p>А також:</p>
-            <ul>
-              <li>Початкова конфігурація, яка автоматично ігнорує елементи Drupal, CKeditor, Gutenberg, Link Purpose і
-                External Link, реагує на зміни під час редагування в модальних контейнерах і автоматично розміщує панель
-                інструментів, щоб уникнути перекриття з елементами Klaro і Same Page Preview.</li>
-              <li>Конфігурація на основі ролей: хто з користувачів бачитиме перевірку, хто може відхиляти попередження,
-                а хто може переглядати загальносайтові звіти.</li>
-              <li>Вбудований (локальний) сканер для оновлення панелі після значних змін у темі оформлення. <em>(лише
-                  CSA)</em></li>
-              <li>Роздільна конфігурація для авторів і розробників із окремими тестами (~30/~80) та списками проблем.
-                <em>(лише CSA)</em></li>
-            </ul>
-
-
 
           </section>
           <h2>Встановлення та основні кроки налаштування</h2>
@@ -194,13 +204,14 @@
           <p>Ці два параметри конфігурації є найважливішими!</p>
           <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
             <label for="edit-content-root">Перевірити контент у цих контейнерах</label>
-            <div><textarea id="edit-content-root" name="content_root" rows="1" cols="30" disabled></textarea>
+            <div><textarea class="form-control" id="edit-content-root" name="content_root" rows="1" cols="30"
+                disabled></textarea>
             </div>
             <div class="mt-3">
               <label for="edit-ignore-elements">Пропустити ці елементи</label>
               <div>
-                <textarea id="edit-ignore-elements" disabled name="ignore_elements" rows="1" cols="30"
-                  class=""></textarea>
+                <textarea class="form-control" id="edit-ignore-elements" disabled name="ignore_elements" rows="1"
+                  cols="30" class=""></textarea>
               </div>
             </div>
           </div>
@@ -252,7 +263,8 @@
                 <label for="edit-always-ignore" class="mt-3">Ігнорувати як для розробників, так і для редакторів
                   контенту</label>
                 <div class="form-textarea-wrapper">
-                  <textarea id="edit-always-ignore" name="always_ignore" rows="1" cols="20" placeholder=""></textarea>
+                  <textarea id="edit-always-ignore" class="form-control" name="always_ignore" rows="1" cols="20"
+                    placeholder=""></textarea>
                 </div>
               </div>
 
@@ -281,8 +293,7 @@
             <label for="edit-no-load" class="form-item__label">Не перевіряти на сторінках із цими елементами</label>
             <div class="form-textarea-wrapper">
               <textarea data-drupal-selector="edit-no-load" aria-describedby="edit-no-load--description"
-                id="edit-no-load" name="no_load" rows="1" cols="20"
-                class="form-textarea resize-vertical form-element form-element--type-textarea form-element--api-textarea"></textarea>
+                id="edit-no-load" name="no_load" rows="1" cols="20" class="form-control"></textarea>
             </div>
 
             <label for="edit-ignore-all-if-absent" class="form-item__label">Приховати всі попередження на сторінках, де
@@ -290,8 +301,7 @@
             <div class="form-textarea-wrapper">
               <textarea data-drupal-selector="edit-ignore-all-if-absent"
                 aria-describedby="edit-ignore-all-if-absent--description" id="edit-ignore-all-if-absent"
-                name="ignore_all_if_absent" rows="1" cols="20"
-                class="form-textarea resize-vertical form-element form-element--type-textarea form-element--api-textarea"></textarea>
+                name="ignore_all_if_absent" rows="1" cols="20" class="form-control"></textarea>
             </div>
 
           </div>
@@ -382,13 +392,11 @@
               переповненням</label>
             <textarea data-drupal-selector="edit-element-hides-overflow"
               aria-describedby="edit-element-hides-overflow--description" id="edit-element-hides-overflow"
-              name="element_hides_overflow" rows="1" cols="60"
-              class="form-textarea resize-vertical form-element form-element--type-textarea form-element--api-textarea"></textarea>
+              name="element_hides_overflow" rows="1" cols="60" class="form-control"></textarea>
             <label for="edit-hidden-handlers" class="form-item__label">JavaScript теми оброблятиме відображення
               прихованих підказок усередині цих контейнерів</label>
             <textarea data-drupal-selector="edit-hidden-handlers" aria-describedby="edit-hidden-handlers--description"
-              id="edit-hidden-handlers" name="hidden_handlers" rows="1" cols="60"
-              class="form-textarea resize-vertical form-element form-element--type-textarea form-element--api-textarea"></textarea>
+              id="edit-hidden-handlers" name="hidden_handlers" rows="1" cols="60" class="form-control"></textarea>
           </div>
           <p>Деякі теми мають стовпці або віджети, що приховують горизонтальне або вертикальне переповнення. Бібліотека
             автоматично визначає, коли перемикач виходить за видиму частину <strong>сторінки.</strong> Якщо повідомити
@@ -517,6 +525,14 @@ var editoria11yOptions = function(options) {
 };--></code></pre>
 
           </section>
+          <section id="help">
+            <h2>Отримання допомоги</h2>
+            <p>Перегляньте сторінку <a href="./contacts">контактів</a> для варіантів підтримки від спільноти. @itmaybejj
+              зазвичай перебуває в Drupal Slack, коли сонце світить у західній півкулі.</p>
+            <p>Більшість <a href="./license/">рівнів внесків CSA</a> включають щорічну консультацію, яка може охоплювати
+              пряму допомогу зі встановленням і налаштуванням</p>
+          </section>
+
         </div>
       </div>
     </div>

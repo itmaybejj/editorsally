@@ -54,48 +54,59 @@
       </div>
       <div class="col-12 col-md-7 col-lg-8 pt-3">
         <div data-bs-spy="scroll" data-bs-target="#on-this-page" data-bs-smooth-scroll="true">
-          <h1>Drupal-module</h1>
+          <h1>Editoria11y voor Drupal</h1>
           <section id="features">
-            <h2 class="pt-3">Functies</h2>
+            <h2 class="pt-3">Kernfuncties</h2>
 
-            <figure class="figure my-4 rounded shadow border">
-              <img loading="lazy" src="/assets/images/3x-editing.png" class="figure-img img-fluid" height="1088"
-                width="2237" alt="Drupal-editor met inline tips" />
-              <figcaption class="figure-caption p-3 pt-2 fs-6">Problemen worden zowel bij het laden van de frontend als
+            <p class="fs-6">De Drupal-module verbindt de checker-bibliotheek met de redactionele backend
+              en voegt talrijke server-side tools toe voor rapportage, beheer en configuratie</p>
+
+            <figure class="figure my-4 row">
+              <div class="col-lg-8">
+                <img loading="lazy" src="/assets/images/3x-editing.png" class="rounded border figure-img img-fluid"
+                  height="1088" width="2237" alt="Drupal-editor met inline tips" />
+              </div>
+              <figcaption class="figure-caption col-lg-4">Problemen worden zowel bij het laden van de frontend als
                 tijdens het typen in CKEditor en Gutenberg gedetecteerd.</figcaption>
             </figure>
 
-            <figure class="figure my-4 rounded shadow border" style="max-width: 600px;">
-              <img loading="lazy" src="/assets/images/3x-generic-tip.png" class="figure-img img-fluid" height="798"
-                width="1278" alt="Tip geeft aan dat een link alleen de naam 'klik hier' heeft." />
-              <figcaption class="figure-caption p-3 pt-2 ps-5 fs-6">Tooltips beschrijven het probleem, met knoppen om
-                naar de pagina- of lay-outeditor te springen, om deze melding te negeren (voor de actieve gebruiker) of
-                als OK te markeren (voor alle gebruikers). Afhankelijk van de context en rechten kunnen sommige
-                meldingen ook een menu "Vergelijkbare meldingen" tonen, met opties om meerdere meldingen op dezelfde
-                pagina als OK te markeren, of hetzelfde element op alle pagina's als OK te markeren.</figcaption>
+            <figure class="figure my-4 row">
+              <div class="col-lg-8">
+                <img loading="lazy" src="/assets/images/3x-generic-tip.png" class="rounded border figure-img img-fluid"
+                  height="798" width="1278" alt="Tip geeft aan dat een link alleen de naam 'klik hier' heeft." />
+              </div>
+              <figcaption class="figure-caption col-lg-4">Tooltips krijgen knoppen om naar de editor te springen, de
+                melding te negeren (voor de actieve gebruiker) of als OK te markeren (voor alle gebruikers). Herhaalde
+                meldingen bieden pagina- of sitebrede acties.
+              </figcaption>
             </figure>
 
-            <figure class="figure my-4 rounded shadow mb-5 border">
-              <img loading="lazy" class="figure-img img-fluid" src="/assets/images/3x-dashboard.png" height="765"
-                width="1600" alt="Rapportagedashboard met recente problemen en pagina's met de meeste problemen." />
-              <figcaption class="figure-caption p-3 pt-2 fs-6">Een sitebreed rapportagedashboard biedt filterbare en
+            <figure class="figure my-4 row">
+              <div class="col-lg-8">
+                <img loading="lazy" src="/assets/images/3x-drupal-custom-tests.png"
+                  class="rounded border figure-img img-fluid"
+                  alt="Interface voor het bouwen van aangepaste tests met velden voor de titel en inhoud van de tip, evenals element-selectors en uitsluitingen." />
+              </div>
+              <figcaption class="figure-caption col-lg-4">
+                <p class="mb-2">De CSA-submodule voegt toe:</p>
+                <ul class="ps-3">
+                  <li><strong>Een bouwer voor aangepaste tests</strong></li>
+                  <li>40+ ontwikkelaarstests</li>
+                  <li>Contrastcontrole</li>
+                  <li>Site-crawlers</li>
+                  <li>Leesbaarheidsanalyse</li>
+                  <li>Gesplitste configuraties voor ontwikkelaars/redacteuren</li>
+                </ul>
+              </figcaption>
+            </figure>
+
+            <figure class="figure">
+              <img loading="lazy" class="figure-img img-fluid rounded border" src="/assets/images/3x-dashboard.png"
+                height="765" width="1600"
+                alt="Rapportagedashboard met recente problemen en pagina's met de meeste problemen." />
+              <figcaption class="figure-caption p-3 pt-2">Een sitebreed dashboard biedt filterbare en
                 exporteerbare rapporten van meldingen en afwijzingen.</figcaption>
             </figure>
-
-            <p>Daarnaast ook:</p>
-            <ul>
-              <li>Starterconfiguratie die automatisch Drupal-, CKeditor-, Gutenberg-, Link Purpose- en External
-                Link-elementen negeert, reageert op wijzigingen bij het bewerken in modale containers, en de werkbalk
-                automatisch positioneert om overlapping met Klaro- en Same Page Preview-elementen te vermijden.</li>
-              <li>Op rollen gebaseerde configuratie voor welke gebruikers de checker zien, welke gebruikers meldingen
-                kunnen afwijzen, en welke gebruikers sitebrede rapporten kunnen bekijken.</li>
-              <li>Een interne (lokale) crawler om het dashboard te vernieuwen na grote themawijzigingen. <em>(Alleen
-                  CSA)</em></li>
-              <li>Gesplitste auteur/ontwikkelaar-configuratie met afzonderlijke tests (~30/~80) en probleemlijsten.
-                <em>(Alleen CSA)</em></li>
-            </ul>
-
-
 
           </section>
           <h2>Installatie en belangrijkste stappen</h2>
@@ -197,13 +208,14 @@
           <p>Deze twee configuratie-instellingen zijn het belangrijkst!</p>
           <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
             <label for="edit-content-root">Controleer inhoud in deze containers</label>
-            <div><textarea id="edit-content-root" name="content_root" rows="1" cols="30" disabled></textarea>
+            <div><textarea class="form-control" id="edit-content-root" name="content_root" rows="1" cols="30"
+                disabled></textarea>
             </div>
             <div class="mt-3">
               <label for="edit-ignore-elements">Sla deze elementen over</label>
               <div>
-                <textarea id="edit-ignore-elements" disabled name="ignore_elements" rows="1" cols="30"
-                  class=""></textarea>
+                <textarea class="form-control" id="edit-ignore-elements" disabled name="ignore_elements" rows="1"
+                  cols="30" class=""></textarea>
               </div>
             </div>
           </div>
@@ -256,7 +268,8 @@
                 <label for="edit-always-ignore" class="mt-3">Negeren voor zowel ontwikkelaars als
                   inhoudsredacteuren</label>
                 <div class="form-textarea-wrapper">
-                  <textarea id="edit-always-ignore" name="always_ignore" rows="1" cols="20" placeholder=""></textarea>
+                  <textarea id="edit-always-ignore" class="form-control" name="always_ignore" rows="1" cols="20"
+                    placeholder=""></textarea>
                 </div>
               </div>
 
@@ -286,8 +299,7 @@
             <label for="edit-no-load" class="form-item__label">Niet controleren op pagina's met deze elementen</label>
             <div class="form-textarea-wrapper">
               <textarea data-drupal-selector="edit-no-load" aria-describedby="edit-no-load--description"
-                id="edit-no-load" name="no_load" rows="1" cols="20"
-                class="form-textarea resize-vertical form-element form-element--type-textarea form-element--api-textarea"></textarea>
+                id="edit-no-load" name="no_load" rows="1" cols="20" class="form-control"></textarea>
             </div>
 
             <label for="edit-ignore-all-if-absent" class="form-item__label">Alle meldingen verbergen op pagina's waar
@@ -295,8 +307,7 @@
             <div class="form-textarea-wrapper">
               <textarea data-drupal-selector="edit-ignore-all-if-absent"
                 aria-describedby="edit-ignore-all-if-absent--description" id="edit-ignore-all-if-absent"
-                name="ignore_all_if_absent" rows="1" cols="20"
-                class="form-textarea resize-vertical form-element form-element--type-textarea form-element--api-textarea"></textarea>
+                name="ignore_all_if_absent" rows="1" cols="20" class="form-control"></textarea>
             </div>
 
           </div>
@@ -387,13 +398,11 @@
             <label for="edit-element-hides-overflow" class="form-item__label">Elementen met verborgen overloop</label>
             <textarea data-drupal-selector="edit-element-hides-overflow"
               aria-describedby="edit-element-hides-overflow--description" id="edit-element-hides-overflow"
-              name="element_hides_overflow" rows="1" cols="60"
-              class="form-textarea resize-vertical form-element form-element--type-textarea form-element--api-textarea"></textarea>
+              name="element_hides_overflow" rows="1" cols="60" class="form-control"></textarea>
             <label for="edit-hidden-handlers" class="form-item__label">Thema-JS verwerkt het onthullen van verborgen
               tooltips binnen deze containers</label>
             <textarea data-drupal-selector="edit-hidden-handlers" aria-describedby="edit-hidden-handlers--description"
-              id="edit-hidden-handlers" name="hidden_handlers" rows="1" cols="60"
-              class="form-textarea resize-vertical form-element form-element--type-textarea form-element--api-textarea"></textarea>
+              id="edit-hidden-handlers" name="hidden_handlers" rows="1" cols="60" class="form-control"></textarea>
           </div>
           <p>Sommige thema's hebben kolommen of widgets die horizontale of verticale overloop verbergen. De bibliotheek
             detecteert automatisch wanneer een schakelaar buiten het zichtbare deel van de <strong>pagina</strong> zou
@@ -523,6 +532,14 @@ var editoria11yOptions = function(options) {
 };--></code></pre>
 
           </section>
+          <section id="help">
+            <h2>Hulp krijgen</h2>
+            <p>Bekijk de <a href="./contacts">contactpagina</a> voor opties voor communityondersteuning. @itmaybejj is
+              meestal online in de Drupal Slack wanneer de zon op is op het westelijk halfrond.</p>
+            <p>De meeste <a href="./license/">CSA-bijdrageniveaus</a> omvatten een jaarlijkse check-in, waarbij directe
+              hulp bij installatie en configuratie mogelijk is</p>
+          </section>
+
         </div>
       </div>
     </div>
