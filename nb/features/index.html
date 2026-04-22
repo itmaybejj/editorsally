@@ -1,27 +1,34 @@
 <!doctype html>
 <html lang="nb" data-bs-theme="light">
-  <head>
-<link rel="icon" type="image/png" href="/assets/favicons/favicon-512x512.png" sizes="512x512" />
-    <link rel="icon" type="image/png" href="/assets/favicons/favicon-192x192.png" sizes="192x192" />
-    <link rel="icon" type="image/png" href="/assets/favicons/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="/assets/favicons/favicon.svg" />
-    <link rel="shortcut icon" href="/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <meta charset="utf-8" />
-    <title>Editoria11y</title>
-    <link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="/assets/theme.css" rel="stylesheet" />
-    <meta name="theme-color" content="#712cf9" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-  </head>
-  <body>
-    <header>
+
+<head>
+  <link rel="icon" type="image/png" href="/assets/favicons/favicon-512x512.png" sizes="512x512" />
+  <link rel="icon" type="image/png" href="/assets/favicons/favicon-192x192.png" sizes="192x192" />
+  <link rel="icon" type="image/png" href="/assets/favicons/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/assets/favicons/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <meta charset="utf-8" />
+  <title>Editoria11y</title>
+  <link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="/assets/theme.css" rel="stylesheet" />
+  <meta name="theme-color" content="#712cf9" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <header>
     <nav class="navbar navbar-expand-md">
       <div class="container col-sm-12 mx-auto">
         <a href="/nb/" class="d-flex align-items-center  navbar-brand">
-          <svg class="logo-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="-.75 -3.5 10.1699 19.1777"><path fill="currentColor" d="M3.7031,10.5527c-.3633-.6562-.6426-1.1387-.8379-1.4473l-.3105-.4863-.2344-.3574c-.5117-.7969-1.0449-1.4551-1.5996-1.9746.3164-.2617.6113-.3926.8848-.3926.3359,0,.6348.123.8965.3691s.5918.7148.9902,1.4062c.4531-1.4727,1.0293-2.8691,1.7285-4.1895.3867-.7188.7314-1.2021,1.0342-1.4502s.7041-.3721,1.2041-.3721c.2656,0,.5938.041.9844.123-1.0039.8086-1.8066,1.7695-2.4082,2.8828s-1.3789,3.0762-2.332,5.8887Z"/></svg> Editoria<span style="margin-left: -1px;">11</span>y
+          <svg class="logo-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+            viewBox="-.75 -3.5 10.1699 19.1777">
+            <path fill="currentColor"
+              d="M3.7031,10.5527c-.3633-.6562-.6426-1.1387-.8379-1.4473l-.3105-.4863-.2344-.3574c-.5117-.7969-1.0449-1.4551-1.5996-1.9746.3164-.2617.6113-.3926.8848-.3926.3359,0,.6348.123.8965.3691s.5918.7148.9902,1.4062c.4531-1.4727,1.0293-2.8691,1.7285-4.1895.3867-.7188.7314-1.2021,1.0342-1.4502s.7041-.3721,1.2041-.3721c.2656,0,.5938.041.9844.123-1.0039.8086-1.8066,1.7695-2.4082,2.8828s-1.3789,3.0762-2.332,5.8887Z" />
+          </svg> Editoria<span style="margin-left: -1px;">11</span>y
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Slå av/på navigasjon">
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar" aria-label="Slå av/på navigasjon">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
@@ -38,187 +45,217 @@
     </nav>
     <div id="lang-picker"></div>
   </header>
-    <main class="container col-lg-12 mx-auto py-5">
-      <div class="row docs">
-        <div class="col-12 col-md-5 col-lg-4 mb-5">
-          <div id="on-this-page" class="list-group ms-2 ms-lg-5 position-sticky top-0 pt-3">
-          </div>
+  <main class="container col-lg-12 mx-auto py-5">
+    <div class="row docs">
+      <div class="col-12 col-md-5 col-lg-4 mb-5">
+        <div id="on-this-page" class="list-group ms-2 ms-lg-5 position-sticky top-0 pt-3">
         </div>
-        <div class="col-12 col-md-7 col-lg-8 pt-3" data-bs-spy="scroll" data-bs-target="#on-this-page" data-bs-smooth-scroll="true" tabindex="0">
-          <section id="features">
-            <h1 class="text-body-emphasis pt-2 pb-5">Funksjoner</h1>
-            <p class="fs-6">Editoria11ys kjernetester oppdager mer enn 50 vanlige tilgjengelighetsproblemer i innhold: valg som svekker lesbarheten, feil som gjør skjermlesere mindre effektive, og mangler som reduserer SEO.</p>
-            <p class="fs-6">Tillegg gir ~40 ekstra tester for utviklere og designere, egendefinerte tester og ulike kvalitetssikringsverktøy for hele nettstedet.</p>
-            <p class="fs-6">Innholdstestene fokuserer på problemer som oppstår <strong>etter</strong> at nettstedet er overlevert til innholdsforfattere. Nettsteder må testes med manuelle revisjonsverktøy, tastatur og skjermlesere før lansering, men selv det mest tilgjengelige nettstedet på dag én har en tendens til å forfalle etter hvert som redigeringer bringer inn nye problemer.</p>
-            <p class="fs-6">Det som skiller Editoria11y fra andre tilgjengelighetsverktøy er at testene kjøres direkte i nettleseren mens forfattere redigerer og forhåndsviser arbeidet sitt. <strong>Forfattere reagerer lettere på umiddelbar, innebygd tilbakemelding</strong>, legger merke til varsler og gjør korreksjoner, enn om de måtte huske å besøke et dashbord eller kjøre en manuell sjekk.</p>
-          </section>
-          <section id="authoring">
-            <h2>Forfatterens opplevelse</h2>
-            <div class="clearfix">
-              <img src="/assets/images/3x-toolbar" class="image-fluid float-start me-3" alt="Skjermbilde av Editoria11y-verktøylinjen, som viser 4 feil." width="97" height="50" loading="lazy">
-              <p>Forfattere ser Editoria11y-verktøylinjen mens de redigerer innhold. Når problemer oppdages, blir den gul eller rød og viser et antall problemer. Å klikke på antallet ruller til det første varselet og åpner verktøytipset.</p>
+      </div>
+      <div class="col-12 col-md-7 col-lg-8 pt-3" data-bs-spy="scroll" data-bs-target="#on-this-page"
+        data-bs-smooth-scroll="true" tabindex="0">
+        <section id="features">
+          <h1 class="text-body-emphasis pt-2 pb-5">Funksjoner</h1>
+          <p class="fs-6">Editoria11ys kjernetester oppdager mer enn 50 vanlige tilgjengelighetsproblemer i innhold:
+            valg som svekker lesbarheten, feil som gjør skjermlesere mindre effektive, og mangler som reduserer SEO.</p>
+          <p class="fs-6">Tillegg gir ~40 ekstra tester for utviklere og designere, egendefinerte tester og ulike
+            kvalitetssikringsverktøy for hele nettstedet.</p>
+          <p class="fs-6">Innholdstestene fokuserer på problemer som oppstår <strong>etter</strong> at nettstedet er
+            overlevert til innholdsforfattere. Nettsteder må testes med manuelle revisjonsverktøy, tastatur og
+            skjermlesere før lansering, men selv det mest tilgjengelige nettstedet på dag én har en tendens til å
+            forfalle etter hvert som redigeringer bringer inn nye problemer.</p>
+          <p class="fs-6">Det som skiller Editoria11y fra andre tilgjengelighetsverktøy er at testene kjøres direkte i
+            nettleseren mens forfattere redigerer og forhåndsviser arbeidet sitt. <strong>Forfattere reagerer lettere på
+              umiddelbar, innebygd tilbakemelding</strong>, legger merke til varsler og gjør korreksjoner, enn om de
+            måtte huske å besøke et dashbord eller kjøre en manuell sjekk.</p>
+        </section>
+        <section id="authoring">
+          <h2>Forfatterens opplevelse</h2>
+          <div class="clearfix">
+            <img src="/assets/images/3x-toolbar" class="image-fluid float-start me-3"
+              alt="Skjermbilde av Editoria11y-verktøylinjen, som viser 4 feil." width="97" height="50" loading="lazy">
+            <p>Forfattere ser Editoria11y-verktøylinjen mens de redigerer innhold. Når problemer oppdages, blir den gul
+              eller rød og viser et antall problemer. Å klikke på antallet ruller til det første varselet og åpner
+              verktøytipset.</p>
+          </div>
+          <div class="row">
+            <img loading="lazy" src="/assets/images/3x-generic-tip.png" class="img-fluid col-6 col-lg-8" height="798"
+              width="1278" alt="Tips indikerer at en lenke bare heter klikk her.">
+            <p class="col-6 col-lg-4 align-content-center">Tips vises innebygd med en lettfattelig beskrivelse av
+              feilen, forslag til korrigering og merknader om hvorfor problemet er viktig.</p>
+          </div>
+          <div class="row">
+            <img loading="lazy" class="img-fluid col-6 col-lg-8" src="/assets/images/3x-tools.jpg" height="473"
+              width="405" alt="Overskriftsstruktur-visualisering lagt over siden">
+            <p class="col-6 col-lg-4 align-content-center">Verktøylinjen inneholder tilleggsverktøy for manuelle
+              kontroller, inkludert visualisering av overskriftsstruktur og alt-tekst samt lesbarhetsvurdering.</p>
+          </div>
+        </section>
+        <section id="admins">
+          <h2>Nettstedsadministratorens kontroller</h2>
+          <p>Alle synlige aspekter ved kontrollverktøyet kan tilpasses. Parametere og hendelser gjør det mulig å fjerne
+            tester, omskrive tips, sette inn egendefinerte tester og angi egendefinerte temaer.</p>
+          <p>Tillegg for Drupal og WordPress legger til ekstra funksjoner, som synkroniserte avvisninger, dashbord for
+            hele nettstedet og CSV-rapporteksporter.</p>
+          <figure class="figure my-4 rounded shadow mb-5 border">
+            <img loading="lazy" class="figure-img img-fluid" src="/assets/images/3x-dashboard.png" height="765"
+              width="1600" alt="Rapporteringsdashbord som viser nylige problemer og sider med flest problemer.">
+            <figcaption class="figure-caption p-3 pt-2">Drupal-dashbordet, som inkluderer filtrerbare lister over
+              problemer, sider med problemer og avvisninger.</figcaption>
+          </figure>
+        </section>
+        <section id="tests">
+          <h2 data-section="tests">Tester</h2>
+          <p class="fs-6">Editoria11ys tester fokuserer på å forbedre opplevelsen av nettet for alle brukere, målt av
+            mennesker, ikke bare tekniske standarder. Mens sentrale tester er ment å hjelpe til med å oppnå
+            retningslinjene for tilgjengelighet av nettinnhold (<a href="https://www.w3.org/WAI/WCAG22/quickref/">WCAG
+              2.2 AA</a>), er andre påvirket av arbeidet til <a href="https://www.w3.org/TR/coga-usable/">Cognitive and
+              Learning Disabilities Accessibility Task Force</a>, samt generelle prinsipper for brukervennlighet og
+            design.</p>
+          <p class="fs-6 pb-3">Individuelle tester kan slås av av nettstedsadministratorer.</p>
+          <div class="row listgrid">
+            <div class="col-12 col-xl-4">
+              <h3 class="fs-5 nomenu pt-0">Alt-tekst for bilder</h3>
+              <ul>
+                <li>Bilde mangler alt-attributt</li>
+                <li>Alt-tekst er et filnavn</li>
+                <li>Alt-tekst er en plassholder («TBD»)</li>
+                <li>Alt-tekst er uuttalelige symboler</li>
+                <li>Alt-tekst inneholder overflødige ord («bilde av&hellip;»)</li>
+                <li>Alt-tekst er for lang</li>
+                <li>Dekorativt bilde kan ha verdi</li>
+                <li>Karuselbildet er merket som dekorativt</li>
+                <li>Bilde med bildetekst har ingen alt-tekst</li>
+                <li>Alt-tekst gjentar bildeteksten</li>
+              </ul>
+              <h3 class="fs-5 nomenu pt-0">Lenkede bilder</h3>
+              <ul>
+                <li>Lenket bilde har ingen alt-tekst</li>
+                <li>Alt-tekst for lenket bilde er en URL eller et filnavn</li>
+                <li>Alt-tekst for lenket bilde er en plassholder</li>
+                <li>Alt-tekst for lenket bilde er uuttalelige symboler</li>
+                <li>Alt-tekst for lenket bilde beskriver bildet, ikke lenken</li>
+                <li>Alt-tekst for lenket bilde inneholder overflødige ord</li>
+                <li>Alt-tekst for lenket bilde er for lang</li>
+                <li>Bilde i lenke med tekst har ingen alt-attributt</li>
+              </ul>
+              <h3 class="fs-5 nomenu pt-0">Innebygde medier</h3>
+              <ul>
+                <li>Video trenger teksting</li>
+                <li>Lyd trenger et transskript</li>
+                <li>Datavisualisering trenger et tilgjengelig alternativ</li>
+                <li>Ramme mangler en tittel</li>
+                <li>Ramme er utelukket fra tastaturnavigasjon</li>
+                <li>Rammeinnhold trenger manuell tilgjengelighetskontroll</li>
+                <li>Lenket dokument er kanskje ikke tilgjengelig for skjermlesere</li>
+                <li>PDF mangler et tilgjengelig alternativ</li>
+                <li>Nestede interaktive layoutkomponenter</li>
+              </ul>
             </div>
-            <div class="row">
-             <img loading="lazy" src="/assets/images/3x-generic-tip.png" class="img-fluid col-6 col-lg-8" height="798" width="1278" alt="Tips indikerer at en lenke bare heter klikk her.">
-              <p class="col-6 col-lg-4 align-content-center">Tips vises innebygd med en lettfattelig beskrivelse av feilen, forslag til korrigering og merknader om hvorfor problemet er viktig.</p>
-            </div>
-            <div class="row">
-              <img loading="lazy" class="img-fluid col-6 col-lg-8" src="/assets/images/3x-tools.jpg" height="473" width="405" alt="Overskriftsstruktur-visualisering lagt over siden">
-              <p class="col-6 col-lg-4 align-content-center">Verktøylinjen inneholder tilleggsverktøy for manuelle kontroller, inkludert visualisering av overskriftsstruktur og alt-tekst samt lesbarhetsvurdering.</p>
-            </div>
-          </section>
-          <section id="admins">
-            <h2>Nettstedsadministratorens kontroller</h2>
-            <p>Alle synlige aspekter ved kontrollverktøyet kan tilpasses. Parametere og hendelser gjør det mulig å fjerne tester, omskrive tips, sette inn egendefinerte tester og angi egendefinerte temaer.</p>
-            <p>Tillegg for Drupal og WordPress legger til ekstra funksjoner, som synkroniserte avvisninger, dashbord for hele nettstedet og CSV-rapporteksporter.</p>
-            <figure class="figure my-4 rounded shadow mb-5 border">
-                <img loading="lazy" class="figure-img img-fluid" src="/assets/images/3x-dashboard.png" height="765" width="1600" alt="Rapporteringsdashbord som viser nylige problemer og sider med flest problemer.">
-                <figcaption class="figure-caption p-3 pt-2">Drupal-dashbordet, som inkluderer filtrerbare lister over problemer, sider med problemer og avvisninger.</figcaption>
-              </figure>
-          </section>
-          <section id="tests">
-            <h2 data-section="tests">Tester</h2>
-            <p class="fs-6">Editoria11ys tester fokuserer på å forbedre opplevelsen av nettet for alle brukere, målt av mennesker, ikke bare tekniske standarder. Mens sentrale tester er ment å hjelpe til med å oppnå retningslinjene for tilgjengelighet av nettinnhold (<a href="https://www.w3.org/WAI/WCAG22/quickref/">WCAG 2.2 AA</a>), er andre påvirket av arbeidet til <a href="https://www.w3.org/TR/coga-usable/">Cognitive and Learning Disabilities Accessibility Task Force</a>, samt generelle prinsipper for brukervennlighet og design.</p>
-            <p class="fs-6 pb-3">Individuelle tester kan slås av av nettstedsadministratorer.</p>
-            <div class="row listgrid">
-              <div class="col-12 col-xl-4">
-                <h3 class="fs-5 nomenu pt-0">Alt-tekst for bilder</h3>
-                <ul>
-                  <li>Bilde mangler alt-attributt</li>
-                  <li>Alt-tekst er et filnavn</li>
-                  <li>Alt-tekst er en plassholder («TBD»)</li>
-                  <li>Alt-tekst er uuttalelige symboler</li>
-                  <li>Alt-tekst inneholder overflødige ord («bilde av&hellip;»)</li>
-                  <li>Alt-tekst er for lang</li>
-                  <li>Dekorativt bilde kan ha verdi</li>
-                  <li>Karuselbildet er merket som dekorativt</li>
-                  <li>Bilde med bildetekst har ingen alt-tekst</li>
-                  <li>Alt-tekst gjentar bildeteksten</li>
-                </ul>
-                <h3 class="fs-5 nomenu pt-0">Lenkede bilder</h3>
-                <ul>
-                  <li>Lenket bilde har ingen alt-tekst</li>
-                  <li>Alt-tekst for lenket bilde er en URL eller et filnavn</li>
-                  <li>Alt-tekst for lenket bilde er en plassholder</li>
-                  <li>Alt-tekst for lenket bilde er uuttalelige symboler</li>
-                  <li>Alt-tekst for lenket bilde beskriver bildet, ikke lenken</li>
-                  <li>Alt-tekst for lenket bilde inneholder overflødige ord</li>
-                  <li>Alt-tekst for lenket bilde er for lang</li>
-                  <li>Bilde i lenke med tekst har ingen alt-attributt</li>
-                </ul>
-                <h3 class="fs-5 nomenu pt-0">Innebygde medier</h3>
-                <ul>
-                  <li>Video trenger teksting</li>
-                  <li>Lyd trenger et transskript</li>
-                  <li>Datavisualisering trenger et tilgjengelig alternativ</li>
-                  <li>Ramme mangler en tittel</li>
-                  <li>Ramme er utelukket fra tastaturnavigasjon</li>
-                  <li>Rammeinnhold trenger manuell tilgjengelighetskontroll</li>
-                  <li>Lenket dokument er kanskje ikke tilgjengelig for skjermlesere</li>
-                  <li>PDF mangler et tilgjengelig alternativ</li>
-                  <li>Nestede interaktive layoutkomponenter</li>
-                </ul>
-              </div>
-              <div class="col-12 col-xl-4">
-                <h3 class="fs-5 nomenu pt-0">Meningsfulle lenker</h3>
-                <ul>
-                  <li>Tom lenke</li>
-                  <li>Lenketekst er en URL</li>
-                  <li>Lenketekst er bare et DOI-nummer</li>
-                  <li>Lenketekst sier «klikk her»</li>
-                  <li>Lenketekst er bare generiske ord («les mer»)</li>
-                  <li>Ulike lenker deler samme tekst</li>
-                  <li>Lenket ikon eller bilde har ingen tekstlig alternativ</li>
-                  <li>Lenke åpner en ny fane uten advarsel</li>
-                  <li>Lenke peker til en fil uten advarsel</li>
-                  <li>Lenketekst er bare symboler eller emoji</li>
-                  <li>Meningsfull lenketekst skjult for seende brukere</li>
-                  <li>Overflødig lenketooltip</li>
-                  <li>Ødelagt ankerpunkt-lenke på siden</li>
-                  <li>Duplisert ID-attributt</li>
-                  <li>Lenke kan peke til et utviklingsmiljø</li>
-                </ul>
-                <h3 class="fs-5 nomenu pt-0">Overskrifter</h3>
-                <ul>
-                  <li>Siden mangler en Overskrift 1</li>
-                  <li>Første overskrift er en underoverskrift</li>
-                  <li>Overskrift hopper over et nivå</li>
-                  <li>Overskrift er tom</li>
-                  <li>Bilde brukt som overskrift trenger alt-tekst</li>
-                  <li>Overskrift er svært lang</li>
-                  <li>Fet avsnitt kan være en overskrift</li>
-                  <li>Kort blokkitat kan være en overskrift</li>
-                </ul>
-                <h3 class="fs-5 nomenu pt-0">Tekstlesbarhet</h3>
-                <ul>
-                  <li>Overdreven bruk av store bokstaver</li>
-                  <li>Stor blokk med fet eller kursiv tekst</li>
-                  <li>Tekst er for liten</li>
-                  <li>Tekst uten lenke er understreket</li>
-                  <li>Tekst er blokkjustert</li>
-                  <li>Senket eller hevet skrift misbrukt som formatering</li>
-                  <li>Falsk liste med tegn eller symboler</li>
-                  <li>Listeelement utenfor en liste</li>
-                </ul>
+            <div class="col-12 col-xl-4">
+              <h3 class="fs-5 nomenu pt-0">Meningsfulle lenker</h3>
+              <ul>
+                <li>Tom lenke</li>
+                <li>Lenketekst er en URL</li>
+                <li>Lenketekst er bare et DOI-nummer</li>
+                <li>Lenketekst sier «klikk her»</li>
+                <li>Lenketekst er bare generiske ord («les mer»)</li>
+                <li>Ulike lenker deler samme tekst</li>
+                <li>Lenket ikon eller bilde har ingen tekstlig alternativ</li>
+                <li>Lenke åpner en ny fane uten advarsel</li>
+                <li>Lenke peker til en fil uten advarsel</li>
+                <li>Lenketekst er bare symboler eller emoji</li>
+                <li>Meningsfull lenketekst skjult for seende brukere</li>
+                <li>Overflødig lenketooltip</li>
+                <li>Ødelagt ankerpunkt-lenke på siden</li>
+                <li>Duplisert ID-attributt</li>
+                <li>Lenke kan peke til et utviklingsmiljø</li>
+              </ul>
+              <h3 class="fs-5 nomenu pt-0">Overskrifter</h3>
+              <ul>
+                <li>Siden mangler en Overskrift 1</li>
+                <li>Første overskrift er en underoverskrift</li>
+                <li>Overskrift hopper over et nivå</li>
+                <li>Overskrift er tom</li>
+                <li>Bilde brukt som overskrift trenger alt-tekst</li>
+                <li>Overskrift er svært lang</li>
+                <li>Fet avsnitt kan være en overskrift</li>
+                <li>Kort blokkitat kan være en overskrift</li>
+              </ul>
+              <h3 class="fs-5 nomenu pt-0">Tekstlesbarhet</h3>
+              <ul>
+                <li>Overdreven bruk av store bokstaver</li>
+                <li>Stor blokk med fet eller kursiv tekst</li>
+                <li>Tekst er for liten</li>
+                <li>Tekst uten lenke er understreket</li>
+                <li>Tekst er blokkjustert</li>
+                <li>Senket eller hevet skrift misbrukt som formatering</li>
+                <li>Falsk liste med tegn eller symboler</li>
+                <li>Listeelement utenfor en liste</li>
+              </ul>
 
-              </div>
-              <div class="col-12 col-xl-4">
-                <h3 class="fs-5 nomenu pt-0">Fargekontrast</h3>
-                <ul>
-                  <li>Tekst har utilstrekkelig kontrast</li>
-                  <li>Tekstkontrast krever manuell kontroll</li>
-                  <li>Ikon eller grafikk har utilstrekkelig kontrast</li>
-                  <li>Ikon- eller grafikkkontrast krever manuell kontroll</li>
-                  <li>Inndatatekst har utilstrekkelig kontrast</li>
-                  <li>Plassholdertekst har utilstrekkelig kontrast</li>
-                </ul>
-                <h3 class="fs-5 nomenu pt-0">Tabeller</h3>
-                <ul>
-                  <li>Tabell mangler en topptekstrad eller -kolonne</li>
-                  <li>Tabellens topptekstcelle er tom</li>
-                  <li>Innholdsoverskrift brukt inne i en tabell</li>
-                </ul>
-                <h3 class="fs-5 nomenu pt-0">Skjemaer &amp; interaktive elementer</h3>
-                <ul>
-                  <li>Knapp har ingen tilgjengelig etikett</li>
-                  <li>Knapp har en ugyldig ARIA-etikett</li>
-                  <li>Knappetikett inneholder ordet «knapp»</li>
-                  <li>Synlig etikett samsvarer ikke med tilgjengelig navn</li>
-                  <li>Inndata har ingen tilknyttet etikett</li>
-                  <li>Inndata bruker bare en usynlig etikett</li>
-                  <li>Inndata bruker bare en plassholder som etikett</li>
-                  <li>Tilbakestillingsknapp kan føre til utilsiktet tap av data</li>
-                  <li>Element skjult for skjermlesere, men fortsatt fokuserbart med tastatur</li>
-                  <li>Positiv tabindex bryter lese- og fanerekkefølgen</li>
-                </ul>
-                <h3 class="fs-5 nomenu pt-0">Sidemetadata</h3>
-                <ul>
-                  <li>Sidetittel mangler</li>
-                  <li>Sidespråk ikke angitt</li>
-                  <li>Visningsport forhindrer tekstskalering</li>
-                  <li>Siden oppdateres automatisk</li>
-                </ul>
-              </div>
             </div>
-          </section>
-          <section class="row mb-5 pb-5" id="csa">
-            <h2 class="pt-3" data-section="csa">CSA-funksjoner</h2>
+            <div class="col-12 col-xl-4">
+              <h3 class="fs-5 nomenu pt-0">Fargekontrast</h3>
+              <ul>
+                <li>Tekst har utilstrekkelig kontrast</li>
+                <li>Tekstkontrast krever manuell kontroll</li>
+                <li>Ikon eller grafikk har utilstrekkelig kontrast</li>
+                <li>Ikon- eller grafikkkontrast krever manuell kontroll</li>
+                <li>Inndatatekst har utilstrekkelig kontrast</li>
+                <li>Plassholdertekst har utilstrekkelig kontrast</li>
+              </ul>
+              <h3 class="fs-5 nomenu pt-0">Tabeller</h3>
+              <ul>
+                <li>Tabell mangler en topptekstrad eller -kolonne</li>
+                <li>Tabellens topptekstcelle er tom</li>
+                <li>Innholdsoverskrift brukt inne i en tabell</li>
+              </ul>
+              <h3 class="fs-5 nomenu pt-0">Skjemaer &amp; interaktive elementer</h3>
+              <ul>
+                <li>Knapp har ingen tilgjengelig etikett</li>
+                <li>Knapp har en ugyldig ARIA-etikett</li>
+                <li>Knappetikett inneholder ordet «knapp»</li>
+                <li>Synlig etikett samsvarer ikke med tilgjengelig navn</li>
+                <li>Inndata har ingen tilknyttet etikett</li>
+                <li>Inndata bruker bare en usynlig etikett</li>
+                <li>Inndata bruker bare en plassholder som etikett</li>
+                <li>Tilbakestillingsknapp kan føre til utilsiktet tap av data</li>
+                <li>Element skjult for skjermlesere, men fortsatt fokuserbart med tastatur</li>
+                <li>Positiv tabindex bryter lese- og fanerekkefølgen</li>
+              </ul>
+              <h3 class="fs-5 nomenu pt-0">Sidemetadata</h3>
+              <ul>
+                <li>Sidetittel mangler</li>
+                <li>Sidespråk ikke angitt</li>
+                <li>Visningsport forhindrer tekstskalering</li>
+                <li>Siden oppdateres automatisk</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section class="row mb-5 pb-5" id="csa">
+          <h2 class="pt-3" data-section="csa">CSA-funksjoner</h2>
 
-            <p class="fs-5">
-              Editoria11y fremmer tilgjengelighet på en unik måte. Verktøyene er svært effektive til å hjelpe ikke-tekniske forfattere med å forberede innhold som kan nytes av brukere med nedsatt funksjonsevne. Vi anser dette som et offentlig gode, så <strong>Editoria11y vil alltid være gratis å bruke</strong>.
-            </p>
-            <p class="fs-5">
-              Editoria11y er imidlertid ikke gratis å utvikle eller støtte.
-            </p>
-            <p class="fs-5">
-              CSA fyller dette gapet: prosjektmedlemmer finansierer utviklingen av Editoria11y-biblioteket, dets CMS-tillegg og CSA-pakken: et raskt voksende sett med åpen kildekode-kvalitetssikringsverktøy som gir lignende funksjonalitet som kommersielle produkter, til en mye lavere pris.
+          <p class="fs-5">
+            Editoria11y fremmer tilgjengelighet på en unik måte. Verktøyene er svært effektive til å hjelpe
+            ikke-tekniske forfattere med å forberede innhold som kan nytes av brukere med nedsatt funksjonsevne. Vi
+            anser dette som et offentlig gode, så <strong>Editoria11y vil alltid være gratis å bruke</strong>.
+          </p>
+          <p class="fs-5">
+            Editoria11y er imidlertid ikke gratis å utvikle eller støtte.
+          </p>
+          <p class="fs-5">
+            CSA fyller dette gapet: prosjektmedlemmer finansierer utviklingen av Editoria11y-biblioteket, dets
+            CMS-tillegg og CSA-pakken: et raskt voksende sett med åpen kildekode-kvalitetssikringsverktøy som gir
+            lignende funksjonalitet som kommersielle produkter, til en mye lavere pris.
 
-              CSA-pakken for Drupal er for øyeblikket gratis i beta, og vil komme for WordPress i Q3 2026.
-            </p>
-            <figure class="figure my-4 shadow border rounded p-0 m-2 col-sm-12 col-xl-11">
-              <img alt="Nettstedskanning pågår" src="../../assets/images/3x-crawl.png" height="786" width="1986" class="img-fluid rounded-top figure-img"/>
-                  <figcaption class="figure-caption p-2 pt-2">CSA-skanneren oppdaterer et dashbord.</figcaption>
-                </figure>
+            CSA-pakken for Drupal er for øyeblikket gratis i beta, og vil komme for WordPress i Q3 2026.
+          </p>
+          <figure class="figure my-4 shadow border rounded p-0 m-2 col-sm-12 col-xl-11">
+            <img alt="Nettstedskanning pågår" src="../../assets/images/3x-crawl.png" height="786" width="1986"
+              class="img-fluid rounded-top figure-img" />
+            <figcaption class="figure-caption p-2 pt-2">CSA-skanneren oppdaterer et dashbord.</figcaption>
+          </figure>
 
         </section>
         <section id="csa-tools" class="pb-5 mt-5 row g-5">
@@ -242,32 +279,35 @@
                 Vedlikeholdsverktøy og skannere for dashbord
               </li>
             </ul>
-            <img alt="Fargevelger i testverktøytipset" src="../../assets/images/3x-colors.png" height="1022" width="1288" class="img-fluid col-sm-12 col-xl-9 mt-0 p-0"/>
+            <img alt="Fargevelger i testverktøytipset" src="../../assets/images/3x-colors.png" height="1022"
+              width="1288" class="img-fluid col-sm-12 col-xl-9 mt-0 p-0" />
           </div>
 
         </section>
         <section id="benefits" class="pb-5 mt-5 row g-5">
 
 
-        <div class="">
-          <h3 class="pt-0" data-section="benefits">Fordeler for fellesskapet</h3>
+          <div class="">
+            <h3 class="pt-0" data-section="benefits">Fordeler for fellesskapet</h3>
             <ul class="fs-5">
               <li>Prioritert støtte.</li>
               <li>Vektet innflytelse på prosjektets veikart.</li>
               <li>Automatisk tilgang til nye funksjoner på veikartet.</li>
               <li>Direkte oppsettassistanse (avhengig av nivå).</li>
-              <li><a href="https://form.jotform.com/260627656020150">Offentlig støttekreditt</a> (avhengig av nivå/etter forespørsel; vilkår gjelder).</li>
+              <li><a href="https://form.jotform.com/260627656020150">Offentlig støttekreditt</a> (avhengig av nivå/etter
+                forespørsel; vilkår gjelder).</li>
             </ul>
           </div>
 
           <div>
             <h3 class="nomenu">Bidra-etter-evne-lisensiering</h3>
-            <p class="fs-5">Etter betaperioden vil CSA-pakken gjøres tilgjengelig gjennom en bidra-etter-evne-modell. Editoria11y-kjernen, både biblioteket og tilleggene, vil forbli gratis.</p>
+            <p class="fs-5">Etter betaperioden vil CSA-pakken gjøres tilgjengelig gjennom en bidra-etter-evne-modell.
+              Editoria11y-kjernen, både biblioteket og tilleggene, vil forbli gratis.</p>
             <p class=""><a class="btn btn-primary" href="/nb/license/">Se lisensalternativer og andre muligheter</a></p>
 
           </div>
 
-          </section>
+        </section>
 
 
 
@@ -283,12 +323,14 @@
               </summary>
               <div>
                 <p>Gjenstående arbeid:</p>
-                <ul class="fs-6"><li>
-                  Opprette en juridisk enhet for å behandle abonnementer og sponsorer.
-                </li>
+                <ul class="fs-6">
+                  <li>
+                    Opprette en juridisk enhet for å behandle abonnementer og sponsorer.
+                  </li>
                   <li>
                     Sette opp et lisenssystem.
-                  </li></ul>
+                  </li>
+                </ul>
               </div>
             </details>
             <details>
@@ -310,9 +352,11 @@
                 <ol class="fs-6">
                   <li>Opprette CSA-undermodul med fellesskapsstøttede funksjoner
                     <ul>
-                      <li>Opprette vedlikeholdsverktøy for dashbord for å fjerne utdaterte resultater og skanne eksisterende innhold på nytt.</li>
+                      <li>Opprette vedlikeholdsverktøy for dashbord for å fjerne utdaterte resultater og skanne
+                        eksisterende innhold på nytt.</li>
                       <li>Tillate merking av visse tester som OK for hele nettstedet, ikke bare på én side.</li>
-                      <li>Tillate delt konfigurasjon med separate innstillinger og tester for utviklere og innholdsredigerere.</li>
+                      <li>Tillate delt konfigurasjon med separate innstillinger og tester for utviklere og
+                        innholdsredigerere.</li>
                     </ul>
                   </li>
                 </ol>
@@ -330,13 +374,20 @@
               <div>
                 <ul class="fs-6">
                   <li>
-                    Slå sammen Editoria11y og Sa11y regelsettet. Siden forgreningen har Sa11y skrevet ~50 ekstra tester og tatt i bruk ESM-verktøy, og Editoria11y har implementert ytelsesforbedringer og lagt til parametere for å aktivere sanntidskontroll. Sa11y 4.2.2 og Editoria11y 3.0.0 vil innlede vår felles fremtid.
+                    Slå sammen Editoria11y og Sa11y regelsettet. Siden forgreningen har Sa11y skrevet ~50 ekstra tester
+                    og tatt i bruk ESM-verktøy, og Editoria11y har implementert ytelsesforbedringer og lagt til
+                    parametere for å aktivere sanntidskontroll. Sa11y 4.2.2 og Editoria11y 3.0.0 vil innlede vår felles
+                    fremtid.
                   </li>
                   <li>
-                    Legge til støtte for «delt konfigurasjon» for å tillate separate regelsettet for utviklere og innholdsskapere.
+                    Legge til støtte for «delt konfigurasjon» for å tillate separate regelsettet for utviklere og
+                    innholdsskapere.
                   </li>
-                  <li>Legge til maskinoversettelser for kinesisk, dansk, nederlandsk, tysk, gresk, ungarsk, italiensk, japansk, norsk bokmål, polsk, portugisisk (Brasil), portugisisk (Portugal), spansk, svensk og ukrainsk som maler for menneskelig bearbeidelse.</li>
-                  <li><em class="fs-6 lh-1"><strong>Gjeldende status</strong>: kodingsarbeidet er ferdig; vil merke utgivelsen etter oppdatering av dokumentasjon og demoer.</em></li>
+                  <li>Legge til maskinoversettelser for kinesisk, dansk, nederlandsk, tysk, gresk, ungarsk, italiensk,
+                    japansk, norsk bokmål, polsk, portugisisk (Brasil), portugisisk (Portugal), spansk, svensk og
+                    ukrainsk som maler for menneskelig bearbeidelse.</li>
+                  <li><em class="fs-6 lh-1"><strong>Gjeldende status</strong>: kodingsarbeidet er ferdig; vil merke
+                      utgivelsen etter oppdatering av dokumentasjon og demoer.</em></li>
                 </ul>
               </div>
             </details>
@@ -347,13 +398,17 @@
               <div>
                 <ol class="fs-6">
                   <li>Utvide dashbordet med mer robuste rapporterings- og filtreringsverktøy.</li>
-                  <li>Legge til maskinoversettelser for kinesisk, dansk, nederlandsk, tysk, gresk, ungarsk, italiensk, japansk, norsk bokmål, polsk, portugisisk (Brasil), portugisisk (Portugal), spansk, svensk og ukrainsk som maler for menneskelig bearbeidelse.</li>
+                  <li>Legge til maskinoversettelser for kinesisk, dansk, nederlandsk, tysk, gresk, ungarsk, italiensk,
+                    japansk, norsk bokmål, polsk, portugisisk (Brasil), portugisisk (Portugal), spansk, svensk og
+                    ukrainsk som maler for menneskelig bearbeidelse.</li>
                   <li>Gjøre CSV-eksportfunksjonene tilpassbare</li>
                   <li>Opprette CSA-undermodul med fellesskapsstøttede funksjoner
                     <ul>
-                      <li>Opprette vedlikeholdsverktøy for dashbord for å fjerne utdaterte resultater og skanne eksisterende innhold på nytt.</li>
+                      <li>Opprette vedlikeholdsverktøy for dashbord for å fjerne utdaterte resultater og skanne
+                        eksisterende innhold på nytt.</li>
                       <li>Tillate merking av visse tester som OK for hele nettstedet, ikke bare på én side.</li>
-                      <li>Tillate delt konfigurasjon med separate innstillinger og tester for utviklere og innholdsredigerere.</li>
+                      <li>Tillate delt konfigurasjon med separate innstillinger og tester for utviklere og
+                        innholdsredigerere.</li>
                     </ul>
                   </li>
                 </ol>
@@ -363,7 +418,8 @@
         </section>
         <section id="project-ideas">
           <h3 data-section="project-ideas" class="pt-5">Under diskusjon</h3>
-          <p>Diskuter og stem på disse ideene i <a href="https://github.com/itmaybejj/editoria11y/discussions">Editoria11y-bibliotekets forum</a>.</p>
+          <p>Diskuter og stem på disse ideene i <a
+              href="https://github.com/itmaybejj/editoria11y/discussions">Editoria11y-bibliotekets forum</a>.</p>
           <p>Ideer er merket med estimater for vanskelighetsgrad/prioritet basert på diskusjoner i fellesskapet.</p>
           <ul class="mt-1 p-5 pt-0">
             <li>Dashbord for overvåking av flere nettsteder</li>
@@ -379,43 +435,53 @@
           </ul>
         </section>
 
-        
-        </div>
-
 
       </div>
-    </main>
-    <footer class="container col-lg-12 mx-auto pt-3 text-body-secondary text-center text-md-start">
+
+
+    </div>
+  </main>
+  <footer class="container col-lg-12 mx-auto pt-3 text-body-secondary text-center text-md-start">
     <div class="container">
-      <div class="footer-nav mt-5 pt-5 text-center"><a class="btn btn-primary btn-lg" href="/nb/">Om oss</a> <a class="btn btn-dark btn-lg" aria-current="page" href="/nb/features/">Funksjoner</a> <a class="btn btn-primary btn-lg" href="/nb/demo/">Demo</a> <a class="btn btn-primary btn-lg" href="/nb/license/">Priser og bidrag</a></div>
+      <div class="footer-nav mt-5 pt-5 text-center"><a class="btn btn-primary btn-lg" href="/nb/">Om oss</a> <a
+          class="btn btn-dark btn-lg" aria-current="page" href="/nb/features/">Funksjoner</a> <a
+          class="btn btn-primary btn-lg" href="/nb/demo/">Demo</a> <a class="btn btn-primary btn-lg"
+          href="/nb/license/">Priser og bidrag</a></div>
       <div class="footer">
-        <a href="https://github.com/itmaybejj/editoria11y"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-git" viewBox="0 0 16 16">
-              <path d="M15.698 7.287 8.712.302a1.03 1.03 0 0 0-1.457 0l-1.45 1.45 1.84 1.84a1.223 1.223 0 0 1 1.55 1.56l1.773 1.774a1.224 1.224 0 0 1 1.267 2.025 1.226 1.226 0 0 1-2.002-1.334L8.58 5.963v4.353a1.226 1.226 0 1 1-1.008-.036V5.887a1.226 1.226 0 0 1-.666-1.608L5.093 2.465l-4.79 4.79a1.03 1.03 0 0 0 0 1.457l6.986 6.986a1.03 1.03 0 0 0 1.457 0l6.953-6.953a1.03 1.03 0 0 0 0-1.457"/>
-            </svg> <strong>Bibliotek</strong></a>
-        <a href="https://github.com/itmaybejj/editoria11y/discussions"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chat-right-heart-fill" viewBox="0 0 16 16">
-              <path d="M16 2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h9.586a1 1 0 0 1 .707.293l2.853 2.853a.5.5 0 0 0 .854-.353zM8 3.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132"/>
-            </svg> <strong>Forum</strong></a>
-        <a href="https://github.com/itmaybejj/editoria11y/issues"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-patch-plus-fill" viewBox="0 0 16 16">
-              <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01zM8.5 6v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 1 0"/>
-            </svg> <strong>Problemer</strong></a>
-        <a href="/nb/contacts"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-person-lines-fill" height="24" width="24" viewBox="0 0 16 18">
-              <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z"></path>
-            </svg> <strong>Kontakt</strong></a>
+        <a href="https://github.com/itmaybejj/editoria11y"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+            height="20" fill="currentColor" class="bi bi-git" viewBox="0 0 16 16">
+            <path
+              d="M15.698 7.287 8.712.302a1.03 1.03 0 0 0-1.457 0l-1.45 1.45 1.84 1.84a1.223 1.223 0 0 1 1.55 1.56l1.773 1.774a1.224 1.224 0 0 1 1.267 2.025 1.226 1.226 0 0 1-2.002-1.334L8.58 5.963v4.353a1.226 1.226 0 1 1-1.008-.036V5.887a1.226 1.226 0 0 1-.666-1.608L5.093 2.465l-4.79 4.79a1.03 1.03 0 0 0 0 1.457l6.986 6.986a1.03 1.03 0 0 0 1.457 0l6.953-6.953a1.03 1.03 0 0 0 0-1.457" />
+          </svg> <strong>Bibliotek</strong></a>
+        <a href="https://github.com/itmaybejj/editoria11y/discussions"><svg xmlns="http://www.w3.org/2000/svg"
+            width="20" height="20" fill="currentColor" class="bi bi-chat-right-heart-fill" viewBox="0 0 16 16">
+            <path
+              d="M16 2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h9.586a1 1 0 0 1 .707.293l2.853 2.853a.5.5 0 0 0 .854-.353zM8 3.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132" />
+          </svg> <strong>Forum</strong></a>
+        <a href="https://github.com/itmaybejj/editoria11y/issues"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+            height="20" fill="currentColor" class="bi bi-patch-plus-fill" viewBox="0 0 16 16">
+            <path
+              d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01zM8.5 6v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 1 0" />
+          </svg> <strong>Problemer</strong></a>
+        <a href="/nb/contacts"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+            class="bi bi-person-lines-fill" height="24" width="24" viewBox="0 0 16 18">
+            <path
+              d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z">
+            </path>
+          </svg> <strong>Kontakt</strong></a>
       </div>
       <div class="col col-12 subfooter">
         <a href="/nb/privacy-policy">Personvernerklæring</a>
         <a href="/nb/cookie-policy">Informasjonskapsler</a>
         <a href="/nb/terms-of-use">Bruksvilkår</a>
         <a href="/nb/legal-notice">Juridisk merknad</a>
-        &copy; Editoria11y 2026
+        &copy; 2026 Editoria11y LLC
       </div>
     </div>
   </footer>
-    <script
-      src="/assets/bootstrap/js/bootstrap.bundle.min.js"
-      class="astro-vvvwv3sm"
-    ></script>
-    <script src="/lang/i18n.js"></script>
-    <script src="/assets/theme.js"></script>
-  </body>
+  <script src="/assets/bootstrap/js/bootstrap.bundle.min.js" class="astro-vvvwv3sm"></script>
+  <script src="/lang/i18n.js"></script>
+  <script src="/assets/theme.js"></script>
+</body>
+
 </html>

@@ -1,27 +1,34 @@
 <!doctype html>
 <html lang="zh" data-bs-theme="light">
-  <head>
-<link rel="icon" type="image/png" href="/assets/favicons/favicon-512x512.png" sizes="512x512" />
-    <link rel="icon" type="image/png" href="/assets/favicons/favicon-192x192.png" sizes="192x192" />
-    <link rel="icon" type="image/png" href="/assets/favicons/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="/assets/favicons/favicon.svg" />
-    <link rel="shortcut icon" href="/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <meta charset="utf-8" />
-    <title>Editoria11y</title>
-    <link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="/assets/theme.css" rel="stylesheet" />
-    <meta name="theme-color" content="#712cf9" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-  </head>
-  <body>
-    <header>
+
+<head>
+  <link rel="icon" type="image/png" href="/assets/favicons/favicon-512x512.png" sizes="512x512" />
+  <link rel="icon" type="image/png" href="/assets/favicons/favicon-192x192.png" sizes="192x192" />
+  <link rel="icon" type="image/png" href="/assets/favicons/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/assets/favicons/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <meta charset="utf-8" />
+  <title>Editoria11y</title>
+  <link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="/assets/theme.css" rel="stylesheet" />
+  <meta name="theme-color" content="#712cf9" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <header>
     <nav class="navbar navbar-expand-md">
       <div class="container col-sm-12 mx-auto">
         <a href="/zh/" class="d-flex align-items-center  navbar-brand">
-          <svg class="logo-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="-.75 -3.5 10.1699 19.1777"><path fill="currentColor" d="M3.7031,10.5527c-.3633-.6562-.6426-1.1387-.8379-1.4473l-.3105-.4863-.2344-.3574c-.5117-.7969-1.0449-1.4551-1.5996-1.9746.3164-.2617.6113-.3926.8848-.3926.3359,0,.6348.123.8965.3691s.5918.7148.9902,1.4062c.4531-1.4727,1.0293-2.8691,1.7285-4.1895.3867-.7188.7314-1.2021,1.0342-1.4502s.7041-.3721,1.2041-.3721c.2656,0,.5938.041.9844.123-1.0039.8086-1.8066,1.7695-2.4082,2.8828s-1.3789,3.0762-2.332,5.8887Z"/></svg> Editoria<span style="margin-left: -1px;">11</span>y
+          <svg class="logo-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+            viewBox="-.75 -3.5 10.1699 19.1777">
+            <path fill="currentColor"
+              d="M3.7031,10.5527c-.3633-.6562-.6426-1.1387-.8379-1.4473l-.3105-.4863-.2344-.3574c-.5117-.7969-1.0449-1.4551-1.5996-1.9746.3164-.2617.6113-.3926.8848-.3926.3359,0,.6348.123.8965.3691s.5918.7148.9902,1.4062c.4531-1.4727,1.0293-2.8691,1.7285-4.1895.3867-.7188.7314-1.2021,1.0342-1.4502s.7041-.3721,1.2041-.3721c.2656,0,.5938.041.9844.123-1.0039.8086-1.8066,1.7695-2.4082,2.8828s-1.3789,3.0762-2.332,5.8887Z" />
+          </svg> Editoria<span style="margin-left: -1px;">11</span>y
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="切换导航">
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar" aria-label="切换导航">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
@@ -38,187 +45,200 @@
     </nav>
     <div id="lang-picker"></div>
   </header>
-    <main class="container col-lg-12 mx-auto py-5">
-      <div class="row docs">
-        <div class="col-12 col-md-5 col-lg-4 mb-5">
-          <div id="on-this-page" class="list-group ms-2 ms-lg-5 position-sticky top-0 pt-3">
-          </div>
+  <main class="container col-lg-12 mx-auto py-5">
+    <div class="row docs">
+      <div class="col-12 col-md-5 col-lg-4 mb-5">
+        <div id="on-this-page" class="list-group ms-2 ms-lg-5 position-sticky top-0 pt-3">
         </div>
-        <div class="col-12 col-md-7 col-lg-8 pt-3" data-bs-spy="scroll" data-bs-target="#on-this-page" data-bs-smooth-scroll="true" tabindex="0">
-          <section id="features">
-            <h1 class="text-body-emphasis pt-2 pb-5">功能</h1>
-            <p class="fs-6">Editoria11y 的核心检测项可识别 50 余种常见内容无障碍问题，涵盖影响可读性的设计决策、削弱屏幕阅读器效果的错误，以及降低 SEO 的问题。</p>
-            <p class="fs-6">扩展插件另提供约 40 项针对开发者和设计师的额外检测，包括自定义检测项和各类全站质量保证工具。</p>
-            <p class="fs-6">内容检测聚焦于网站移交给内容作者<strong>之后</strong>出现的问题。网站在上线前需借助手动审计工具、键盘和屏幕阅读器进行测试，但即便是第一天无障碍性最优的网站，随着编辑不断引入新问题，质量也往往会逐渐下滑。</p>
-            <p class="fs-6">Editoria11y 在无障碍工具中脱颖而出的关键在于：其检测在浏览器中实时运行，贯穿作者编辑和预览内容的全过程。<strong>作者更容易对即时的内联反馈作出响应</strong>——注意到提示并加以修正——而不是专门去访问仪表板或手动运行检查。</p>
-          </section>
-          <section id="authoring">
-            <h2>作者使用体验</h2>
-            <div class="clearfix">
-              <img src="/assets/images/3x-toolbar" class="image-fluid float-start me-3" alt="Editoria11y 工具栏截图，显示 4 个错误。" width="97" height="50" loading="lazy">
-              <p>作者在编辑内容时可看到 Editoria11y 工具栏。检测到问题时，工具栏会变为黄色或红色，并显示问题数量。点击数字可跳转到第一个提示并展开其说明气泡。</p>
+      </div>
+      <div class="col-12 col-md-7 col-lg-8 pt-3" data-bs-spy="scroll" data-bs-target="#on-this-page"
+        data-bs-smooth-scroll="true" tabindex="0">
+        <section id="features">
+          <h1 class="text-body-emphasis pt-2 pb-5">功能</h1>
+          <p class="fs-6">Editoria11y 的核心检测项可识别 50 余种常见内容无障碍问题，涵盖影响可读性的设计决策、削弱屏幕阅读器效果的错误，以及降低 SEO 的问题。</p>
+          <p class="fs-6">扩展插件另提供约 40 项针对开发者和设计师的额外检测，包括自定义检测项和各类全站质量保证工具。</p>
+          <p class="fs-6">
+            内容检测聚焦于网站移交给内容作者<strong>之后</strong>出现的问题。网站在上线前需借助手动审计工具、键盘和屏幕阅读器进行测试，但即便是第一天无障碍性最优的网站，随着编辑不断引入新问题，质量也往往会逐渐下滑。
+          </p>
+          <p class="fs-6">Editoria11y
+            在无障碍工具中脱颖而出的关键在于：其检测在浏览器中实时运行，贯穿作者编辑和预览内容的全过程。<strong>作者更容易对即时的内联反馈作出响应</strong>——注意到提示并加以修正——而不是专门去访问仪表板或手动运行检查。
+          </p>
+        </section>
+        <section id="authoring">
+          <h2>作者使用体验</h2>
+          <div class="clearfix">
+            <img src="/assets/images/3x-toolbar" class="image-fluid float-start me-3" alt="Editoria11y 工具栏截图，显示 4 个错误。"
+              width="97" height="50" loading="lazy">
+            <p>作者在编辑内容时可看到 Editoria11y 工具栏。检测到问题时，工具栏会变为黄色或红色，并显示问题数量。点击数字可跳转到第一个提示并展开其说明气泡。</p>
+          </div>
+          <div class="row">
+            <img loading="lazy" src="/assets/images/3x-generic-tip.png" class="img-fluid col-6 col-lg-8" height="798"
+              width="1278" alt="提示说明某链接仅命名为" 点击此处"。">
+            <p class="col-6 col-lg-4 align-content-center">提示以内联方式呈现，包含错误的通俗描述、修正建议，以及该问题的重要性说明。</p>
+          </div>
+          <div class="row">
+            <img loading="lazy" class="img-fluid col-6 col-lg-8" src="/assets/images/3x-tools.jpg" height="473"
+              width="405" alt="页面上叠加显示的标题大纲可视化工具">
+            <p class="col-6 col-lg-4 align-content-center">工具栏还提供用于手动检查的附加工具，包括标题大纲和替代文本可视化工具，以及可读性评分。</p>
+          </div>
+        </section>
+        <section id="admins">
+          <h2>网站管理员控制</h2>
+          <p>检查器的所有可见方面均可自定义。通过参数和事件，可以移除检测项、重写提示、插入自定义检测项并设置自定义主题。</p>
+          <p>Drupal 和 WordPress 插件提供额外功能，例如同步忽略操作、全站仪表板和 CSV 报告导出。</p>
+          <figure class="figure my-4 rounded shadow mb-5 border">
+            <img loading="lazy" class="figure-img img-fluid" src="/assets/images/3x-dashboard.png" height="765"
+              width="1600" alt="报告仪表板，显示近期问题及问题最多的页面。">
+            <figcaption class="figure-caption p-3 pt-2">Drupal 仪表板，包含问题、存在问题的页面及忽略记录的可筛选列表。</figcaption>
+          </figure>
+        </section>
+        <section id="tests">
+          <h2 data-section="tests">检测项</h2>
+          <p class="fs-6">Editoria11y 的检测项致力于从人性化角度而非纯技术标准出发，改善所有用户的网络体验。核心检测项旨在帮助达到网络内容无障碍指南（<a
+              href="https://www.w3.org/WAI/WCAG22/quickref/">WCAG 2.2 AA</a>）的要求，其他检测项则参考了<a
+              href="https://www.w3.org/TR/coga-usable/">认知和学习障碍无障碍工作组</a>的成果，以及通用可用性和设计最佳实践。</p>
+          <p class="fs-6 pb-3">网站管理员可关闭单项检测。</p>
+          <div class="row listgrid">
+            <div class="col-12 col-xl-4">
+              <h3 class="fs-5 nomenu pt-0">图片替代文本</h3>
+              <ul>
+                <li>图片缺少 alt 属性</li>
+                <li>替代文本是文件名</li>
+                <li>替代文本是占位符（"TBD"）</li>
+                <li>替代文本是无法朗读的符号</li>
+                <li>替代文本含冗余词语（"图片显示&hellip;"）</li>
+                <li>替代文本过长</li>
+                <li>装饰性图片可能有实际价值</li>
+                <li>轮播图被标记为装饰性</li>
+                <li>有说明文字的图片缺少替代文本</li>
+                <li>替代文本与说明文字重复</li>
+              </ul>
+              <h3 class="fs-5 nomenu pt-0">链接图片</h3>
+              <ul>
+                <li>链接图片没有替代文本</li>
+                <li>链接图片替代文本是 URL 或文件名</li>
+                <li>链接图片替代文本是占位符</li>
+                <li>链接图片替代文本是无法朗读的符号</li>
+                <li>链接图片替代文本描述的是图片而非链接</li>
+                <li>链接图片替代文本含冗余词语</li>
+                <li>链接图片替代文本过长</li>
+                <li>含文字的链接中的图片缺少 alt 属性</li>
+              </ul>
+              <h3 class="fs-5 nomenu pt-0">嵌入媒体</h3>
+              <ul>
+                <li>视频需要字幕</li>
+                <li>音频需要文字稿</li>
+                <li>数据可视化需要无障碍替代方案</li>
+                <li>框架缺少标题</li>
+                <li>框架被排除在键盘导航之外</li>
+                <li>框架内容需要手动无障碍检查</li>
+                <li>链接文档可能不支持屏幕阅读器访问</li>
+                <li>PDF 缺少无障碍替代方案</li>
+                <li>嵌套的交互式布局组件</li>
+              </ul>
             </div>
-            <div class="row">
-             <img loading="lazy" src="/assets/images/3x-generic-tip.png" class="img-fluid col-6 col-lg-8" height="798" width="1278" alt="提示说明某链接仅命名为"点击此处"。">
-              <p class="col-6 col-lg-4 align-content-center">提示以内联方式呈现，包含错误的通俗描述、修正建议，以及该问题的重要性说明。</p>
-            </div>
-            <div class="row">
-              <img loading="lazy" class="img-fluid col-6 col-lg-8" src="/assets/images/3x-tools.jpg" height="473" width="405" alt="页面上叠加显示的标题大纲可视化工具">
-              <p class="col-6 col-lg-4 align-content-center">工具栏还提供用于手动检查的附加工具，包括标题大纲和替代文本可视化工具，以及可读性评分。</p>
-            </div>
-          </section>
-          <section id="admins">
-            <h2>网站管理员控制</h2>
-            <p>检查器的所有可见方面均可自定义。通过参数和事件，可以移除检测项、重写提示、插入自定义检测项并设置自定义主题。</p>
-            <p>Drupal 和 WordPress 插件提供额外功能，例如同步忽略操作、全站仪表板和 CSV 报告导出。</p>
-            <figure class="figure my-4 rounded shadow mb-5 border">
-                <img loading="lazy" class="figure-img img-fluid" src="/assets/images/3x-dashboard.png" height="765" width="1600" alt="报告仪表板，显示近期问题及问题最多的页面。">
-                <figcaption class="figure-caption p-3 pt-2">Drupal 仪表板，包含问题、存在问题的页面及忽略记录的可筛选列表。</figcaption>
-              </figure>
-          </section>
-          <section id="tests">
-            <h2 data-section="tests">检测项</h2>
-            <p class="fs-6">Editoria11y 的检测项致力于从人性化角度而非纯技术标准出发，改善所有用户的网络体验。核心检测项旨在帮助达到网络内容无障碍指南（<a href="https://www.w3.org/WAI/WCAG22/quickref/">WCAG 2.2 AA</a>）的要求，其他检测项则参考了<a href="https://www.w3.org/TR/coga-usable/">认知和学习障碍无障碍工作组</a>的成果，以及通用可用性和设计最佳实践。</p>
-            <p class="fs-6 pb-3">网站管理员可关闭单项检测。</p>
-            <div class="row listgrid">
-              <div class="col-12 col-xl-4">
-                <h3 class="fs-5 nomenu pt-0">图片替代文本</h3>
-                <ul>
-                  <li>图片缺少 alt 属性</li>
-                  <li>替代文本是文件名</li>
-                  <li>替代文本是占位符（"TBD"）</li>
-                  <li>替代文本是无法朗读的符号</li>
-                  <li>替代文本含冗余词语（"图片显示&hellip;"）</li>
-                  <li>替代文本过长</li>
-                  <li>装饰性图片可能有实际价值</li>
-                  <li>轮播图被标记为装饰性</li>
-                  <li>有说明文字的图片缺少替代文本</li>
-                  <li>替代文本与说明文字重复</li>
-                </ul>
-                <h3 class="fs-5 nomenu pt-0">链接图片</h3>
-                <ul>
-                  <li>链接图片没有替代文本</li>
-                  <li>链接图片替代文本是 URL 或文件名</li>
-                  <li>链接图片替代文本是占位符</li>
-                  <li>链接图片替代文本是无法朗读的符号</li>
-                  <li>链接图片替代文本描述的是图片而非链接</li>
-                  <li>链接图片替代文本含冗余词语</li>
-                  <li>链接图片替代文本过长</li>
-                  <li>含文字的链接中的图片缺少 alt 属性</li>
-                </ul>
-                <h3 class="fs-5 nomenu pt-0">嵌入媒体</h3>
-                <ul>
-                  <li>视频需要字幕</li>
-                  <li>音频需要文字稿</li>
-                  <li>数据可视化需要无障碍替代方案</li>
-                  <li>框架缺少标题</li>
-                  <li>框架被排除在键盘导航之外</li>
-                  <li>框架内容需要手动无障碍检查</li>
-                  <li>链接文档可能不支持屏幕阅读器访问</li>
-                  <li>PDF 缺少无障碍替代方案</li>
-                  <li>嵌套的交互式布局组件</li>
-                </ul>
-              </div>
-              <div class="col-12 col-xl-4">
-                <h3 class="fs-5 nomenu pt-0">有意义的链接</h3>
-                <ul>
-                  <li>空链接</li>
-                  <li>链接文本是 URL</li>
-                  <li>链接文本仅为 DOI 号码</li>
-                  <li>链接文本写的是"点击此处"</li>
-                  <li>链接文本仅为通用词语（"阅读更多"）</li>
-                  <li>不同链接共用相同文本</li>
-                  <li>链接图标或图片没有文字替代</li>
-                  <li>链接在未提示的情况下打开新标签页</li>
-                  <li>链接在未提示的情况下指向文件</li>
-                  <li>链接文本仅为符号或表情符号</li>
-                  <li>对视力正常用户隐藏的有意义链接文本</li>
-                  <li>冗余的链接提示</li>
-                  <li>页内锚点链接失效</li>
-                  <li>重复的 ID 属性</li>
-                  <li>链接可能指向开发环境</li>
-                </ul>
-                <h3 class="fs-5 nomenu pt-0">标题层级</h3>
-                <ul>
-                  <li>页面缺少一级标题</li>
-                  <li>第一个标题是子标题</li>
-                  <li>标题跳过层级</li>
-                  <li>标题为空</li>
-                  <li>用作标题的图片需要替代文本</li>
-                  <li>标题过长</li>
-                  <li>加粗段落可能应为标题</li>
-                  <li>短引用块可能应为标题</li>
-                </ul>
-                <h3 class="fs-5 nomenu pt-0">文本可读性</h3>
-                <ul>
-                  <li>过多大写文本</li>
-                  <li>大段粗体或斜体文本</li>
-                  <li>文本字号过小</li>
-                  <li>非链接文本带下划线</li>
-                  <li>文本两端对齐</li>
-                  <li>下标或上标被误用作格式</li>
-                  <li>用字符或符号模拟列表</li>
-                  <li>列表项位于列表之外</li>
-                </ul>
+            <div class="col-12 col-xl-4">
+              <h3 class="fs-5 nomenu pt-0">有意义的链接</h3>
+              <ul>
+                <li>空链接</li>
+                <li>链接文本是 URL</li>
+                <li>链接文本仅为 DOI 号码</li>
+                <li>链接文本写的是"点击此处"</li>
+                <li>链接文本仅为通用词语（"阅读更多"）</li>
+                <li>不同链接共用相同文本</li>
+                <li>链接图标或图片没有文字替代</li>
+                <li>链接在未提示的情况下打开新标签页</li>
+                <li>链接在未提示的情况下指向文件</li>
+                <li>链接文本仅为符号或表情符号</li>
+                <li>对视力正常用户隐藏的有意义链接文本</li>
+                <li>冗余的链接提示</li>
+                <li>页内锚点链接失效</li>
+                <li>重复的 ID 属性</li>
+                <li>链接可能指向开发环境</li>
+              </ul>
+              <h3 class="fs-5 nomenu pt-0">标题层级</h3>
+              <ul>
+                <li>页面缺少一级标题</li>
+                <li>第一个标题是子标题</li>
+                <li>标题跳过层级</li>
+                <li>标题为空</li>
+                <li>用作标题的图片需要替代文本</li>
+                <li>标题过长</li>
+                <li>加粗段落可能应为标题</li>
+                <li>短引用块可能应为标题</li>
+              </ul>
+              <h3 class="fs-5 nomenu pt-0">文本可读性</h3>
+              <ul>
+                <li>过多大写文本</li>
+                <li>大段粗体或斜体文本</li>
+                <li>文本字号过小</li>
+                <li>非链接文本带下划线</li>
+                <li>文本两端对齐</li>
+                <li>下标或上标被误用作格式</li>
+                <li>用字符或符号模拟列表</li>
+                <li>列表项位于列表之外</li>
+              </ul>
 
-              </div>
-              <div class="col-12 col-xl-4">
-                <h3 class="fs-5 nomenu pt-0">颜色对比度</h3>
-                <ul>
-                  <li>文本对比度不足</li>
-                  <li>文本对比度需要手动检查</li>
-                  <li>图标或图形对比度不足</li>
-                  <li>图标或图形对比度需要手动检查</li>
-                  <li>输入框文本对比度不足</li>
-                  <li>占位符文本对比度不足</li>
-                </ul>
-                <h3 class="fs-5 nomenu pt-0">表格</h3>
-                <ul>
-                  <li>表格缺少标题行或标题列</li>
-                  <li>表格标题单元格为空</li>
-                  <li>在表格内使用了内容标题</li>
-                </ul>
-                <h3 class="fs-5 nomenu pt-0">表单与交互元素</h3>
-                <ul>
-                  <li>按钮没有无障碍标签</li>
-                  <li>按钮具有无效的 ARIA 标签</li>
-                  <li>按钮标签包含"按钮"一词</li>
-                  <li>可见标签与无障碍名称不匹配</li>
-                  <li>输入框没有关联标签</li>
-                  <li>输入框仅使用不可见标签</li>
-                  <li>输入框仅以占位符作为标签</li>
-                  <li>重置按钮可能导致意外数据丢失</li>
-                  <li>元素对屏幕阅读器隐藏但仍可通过键盘聚焦</li>
-                  <li>正数 tabindex 破坏阅读和 Tab 键顺序</li>
-                </ul>
-                <h3 class="fs-5 nomenu pt-0">页面元数据</h3>
-                <ul>
-                  <li>页面标题缺失</li>
-                  <li>未声明页面语言</li>
-                  <li>视口设置阻止文本缩放</li>
-                  <li>页面自动刷新</li>
-                </ul>
-              </div>
             </div>
-          </section>
-          <section class="row mb-5 pb-5" id="csa">
-            <h2 class="pt-3" data-section="csa">CSA 功能</h2>
+            <div class="col-12 col-xl-4">
+              <h3 class="fs-5 nomenu pt-0">颜色对比度</h3>
+              <ul>
+                <li>文本对比度不足</li>
+                <li>文本对比度需要手动检查</li>
+                <li>图标或图形对比度不足</li>
+                <li>图标或图形对比度需要手动检查</li>
+                <li>输入框文本对比度不足</li>
+                <li>占位符文本对比度不足</li>
+              </ul>
+              <h3 class="fs-5 nomenu pt-0">表格</h3>
+              <ul>
+                <li>表格缺少标题行或标题列</li>
+                <li>表格标题单元格为空</li>
+                <li>在表格内使用了内容标题</li>
+              </ul>
+              <h3 class="fs-5 nomenu pt-0">表单与交互元素</h3>
+              <ul>
+                <li>按钮没有无障碍标签</li>
+                <li>按钮具有无效的 ARIA 标签</li>
+                <li>按钮标签包含"按钮"一词</li>
+                <li>可见标签与无障碍名称不匹配</li>
+                <li>输入框没有关联标签</li>
+                <li>输入框仅使用不可见标签</li>
+                <li>输入框仅以占位符作为标签</li>
+                <li>重置按钮可能导致意外数据丢失</li>
+                <li>元素对屏幕阅读器隐藏但仍可通过键盘聚焦</li>
+                <li>正数 tabindex 破坏阅读和 Tab 键顺序</li>
+              </ul>
+              <h3 class="fs-5 nomenu pt-0">页面元数据</h3>
+              <ul>
+                <li>页面标题缺失</li>
+                <li>未声明页面语言</li>
+                <li>视口设置阻止文本缩放</li>
+                <li>页面自动刷新</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section class="row mb-5 pb-5" id="csa">
+          <h2 class="pt-3" data-section="csa">CSA 功能</h2>
 
-            <p class="fs-5">
-              Editoria11y 以独特方式推动无障碍建设。其工具能有效帮助非技术背景的作者准备出残障网络用户同样可以无障碍享用的内容。我们视此为一项公益事业，因此<strong>Editoria11y 将始终免费使用</strong>。
-            </p>
-            <p class="fs-5">
-              然而，Editoria11y 的开发和支持并非免费。
-            </p>
-            <p class="fs-5">
-              CSA 填补了这一空白：项目成员资助 Editoria11y 库、CMS 插件及 CSA 套件的开发——CSA 套件是一套快速成长的开源质量保证工具集，以远低于商业产品的价格提供同等功能。
+          <p class="fs-5">
+            Editoria11y 以独特方式推动无障碍建设。其工具能有效帮助非技术背景的作者准备出残障网络用户同样可以无障碍享用的内容。我们视此为一项公益事业，因此<strong>Editoria11y
+              将始终免费使用</strong>。
+          </p>
+          <p class="fs-5">
+            然而，Editoria11y 的开发和支持并非免费。
+          </p>
+          <p class="fs-5">
+            CSA 填补了这一空白：项目成员资助 Editoria11y 库、CMS 插件及 CSA 套件的开发——CSA 套件是一套快速成长的开源质量保证工具集，以远低于商业产品的价格提供同等功能。
 
-              Drupal 版 CSA 套件目前在测试阶段免费提供，WordPress 版将于 2026 年第三季度推出。
-            </p>
-            <figure class="figure my-4 shadow border rounded p-0 m-2 col-sm-12 col-xl-11">
-              <img alt="站点爬取进行中" src="../../assets/images/3x-crawl.png" height="786" width="1986" class="img-fluid rounded-top figure-img"/>
-                  <figcaption class="figure-caption p-2 pt-2">CSA 爬虫正在刷新仪表板。</figcaption>
-                </figure>
+            Drupal 版 CSA 套件目前在测试阶段免费提供，WordPress 版将于 2026 年第三季度推出。
+          </p>
+          <figure class="figure my-4 shadow border rounded p-0 m-2 col-sm-12 col-xl-11">
+            <img alt="站点爬取进行中" src="../../assets/images/3x-crawl.png" height="786" width="1986"
+              class="img-fluid rounded-top figure-img" />
+            <figcaption class="figure-caption p-2 pt-2">CSA 爬虫正在刷新仪表板。</figcaption>
+          </figure>
 
         </section>
         <section id="csa-tools" class="pb-5 mt-5 row g-5">
@@ -242,15 +262,16 @@
                 仪表板维护工具与爬虫。
               </li>
             </ul>
-            <img alt="检测提示气泡中的颜色选择器" src="../../assets/images/3x-colors.png" height="1022" width="1288" class="img-fluid col-sm-12 col-xl-9 mt-0 p-0"/>
+            <img alt="检测提示气泡中的颜色选择器" src="../../assets/images/3x-colors.png" height="1022" width="1288"
+              class="img-fluid col-sm-12 col-xl-9 mt-0 p-0" />
           </div>
 
         </section>
         <section id="benefits" class="pb-5 mt-5 row g-5">
 
 
-        <div class="">
-          <h3 class="pt-0" data-section="benefits">社区权益</h3>
+          <div class="">
+            <h3 class="pt-0" data-section="benefits">社区权益</h3>
             <ul class="fs-5">
               <li>优先支持。</li>
               <li>对项目路线图有加权影响力。</li>
@@ -267,7 +288,7 @@
 
           </div>
 
-          </section>
+        </section>
 
 
 
@@ -283,12 +304,14 @@
               </summary>
               <div>
                 <p>待完成工作：</p>
-                <ul class="fs-6"><li>
-                  建立财务实体以处理订阅和赞助款项。
-                </li>
+                <ul class="fs-6">
+                  <li>
+                    建立财务实体以处理订阅和赞助款项。
+                  </li>
                   <li>
                     搭建授权系统。
-                  </li></ul>
+                  </li>
+                </ul>
               </div>
             </details>
             <details>
@@ -330,7 +353,8 @@
               <div>
                 <ul class="fs-6">
                   <li>
-                    合并 Editoria11y 和 Sa11y 规则集。自分叉以来，Sa11y 新增了约 50 项检测并引入了 ESM 工具链，Editoria11y 则实施了性能优化并增加了支持实时检测的参数。Sa11y 4.2.2 与 Editoria11y 3.0.0 将开启两者的共同未来。
+                    合并 Editoria11y 和 Sa11y 规则集。自分叉以来，Sa11y 新增了约 50 项检测并引入了 ESM 工具链，Editoria11y
+                    则实施了性能优化并增加了支持实时检测的参数。Sa11y 4.2.2 与 Editoria11y 3.0.0 将开启两者的共同未来。
                   </li>
                   <li>
                     新增"分离配置"支持，允许为开发者和内容创作者提供独立规则集。
@@ -379,43 +403,52 @@
           </ul>
         </section>
 
-        
-        </div>
-
 
       </div>
-    </main>
-    <footer class="container col-lg-12 mx-auto pt-3 text-body-secondary text-center text-md-start">
+
+
+    </div>
+  </main>
+  <footer class="container col-lg-12 mx-auto pt-3 text-body-secondary text-center text-md-start">
     <div class="container">
-      <div class="footer-nav mt-5 pt-5 text-center"><a class="btn btn-primary btn-lg" href="/zh/">关于</a> <a class="btn btn-dark btn-lg" aria-current="page" href="/zh/features/">功能</a> <a class="btn btn-primary btn-lg" href="/zh/demo/">演示</a> <a class="btn btn-primary btn-lg" href="/zh/license/">定价与贡献</a></div>
+      <div class="footer-nav mt-5 pt-5 text-center"><a class="btn btn-primary btn-lg" href="/zh/">关于</a> <a
+          class="btn btn-dark btn-lg" aria-current="page" href="/zh/features/">功能</a> <a class="btn btn-primary btn-lg"
+          href="/zh/demo/">演示</a> <a class="btn btn-primary btn-lg" href="/zh/license/">定价与贡献</a></div>
       <div class="footer">
-        <a href="https://github.com/itmaybejj/editoria11y"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-git" viewBox="0 0 16 16">
-              <path d="M15.698 7.287 8.712.302a1.03 1.03 0 0 0-1.457 0l-1.45 1.45 1.84 1.84a1.223 1.223 0 0 1 1.55 1.56l1.773 1.774a1.224 1.224 0 0 1 1.267 2.025 1.226 1.226 0 0 1-2.002-1.334L8.58 5.963v4.353a1.226 1.226 0 1 1-1.008-.036V5.887a1.226 1.226 0 0 1-.666-1.608L5.093 2.465l-4.79 4.79a1.03 1.03 0 0 0 0 1.457l6.986 6.986a1.03 1.03 0 0 0 1.457 0l6.953-6.953a1.03 1.03 0 0 0 0-1.457"/>
-            </svg> <strong>库</strong></a>
-        <a href="https://github.com/itmaybejj/editoria11y/discussions"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chat-right-heart-fill" viewBox="0 0 16 16">
-              <path d="M16 2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h9.586a1 1 0 0 1 .707.293l2.853 2.853a.5.5 0 0 0 .854-.353zM8 3.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132"/>
-            </svg> <strong>论坛</strong></a>
-        <a href="https://github.com/itmaybejj/editoria11y/issues"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-patch-plus-fill" viewBox="0 0 16 16">
-              <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01zM8.5 6v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 1 0"/>
-            </svg> <strong>问题</strong></a>
-        <a href="/zh/contacts"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-person-lines-fill" height="24" width="24" viewBox="0 0 16 18">
-              <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z"></path>
-            </svg> <strong>联系</strong></a>
+        <a href="https://github.com/itmaybejj/editoria11y"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+            height="20" fill="currentColor" class="bi bi-git" viewBox="0 0 16 16">
+            <path
+              d="M15.698 7.287 8.712.302a1.03 1.03 0 0 0-1.457 0l-1.45 1.45 1.84 1.84a1.223 1.223 0 0 1 1.55 1.56l1.773 1.774a1.224 1.224 0 0 1 1.267 2.025 1.226 1.226 0 0 1-2.002-1.334L8.58 5.963v4.353a1.226 1.226 0 1 1-1.008-.036V5.887a1.226 1.226 0 0 1-.666-1.608L5.093 2.465l-4.79 4.79a1.03 1.03 0 0 0 0 1.457l6.986 6.986a1.03 1.03 0 0 0 1.457 0l6.953-6.953a1.03 1.03 0 0 0 0-1.457" />
+          </svg> <strong>库</strong></a>
+        <a href="https://github.com/itmaybejj/editoria11y/discussions"><svg xmlns="http://www.w3.org/2000/svg"
+            width="20" height="20" fill="currentColor" class="bi bi-chat-right-heart-fill" viewBox="0 0 16 16">
+            <path
+              d="M16 2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h9.586a1 1 0 0 1 .707.293l2.853 2.853a.5.5 0 0 0 .854-.353zM8 3.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132" />
+          </svg> <strong>论坛</strong></a>
+        <a href="https://github.com/itmaybejj/editoria11y/issues"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+            height="20" fill="currentColor" class="bi bi-patch-plus-fill" viewBox="0 0 16 16">
+            <path
+              d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01zM8.5 6v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 1 0" />
+          </svg> <strong>问题</strong></a>
+        <a href="/zh/contacts"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+            class="bi bi-person-lines-fill" height="24" width="24" viewBox="0 0 16 18">
+            <path
+              d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z">
+            </path>
+          </svg> <strong>联系</strong></a>
       </div>
       <div class="col col-12 subfooter">
         <a href="/zh/privacy-policy">隐私政策</a>
         <a href="/zh/cookie-policy">Cookie 政策</a>
         <a href="/zh/terms-of-use">使用条款</a>
         <a href="/zh/legal-notice">法律声明</a>
-        &copy; Editoria11y 2026
+        &copy; 2026 Editoria11y LLC
       </div>
     </div>
   </footer>
-    <script
-      src="/assets/bootstrap/js/bootstrap.bundle.min.js"
-      class="astro-vvvwv3sm"
-    ></script>
-    <script src="/lang/i18n.js"></script>
-    <script src="/assets/theme.js"></script>
-  </body>
+  <script src="/assets/bootstrap/js/bootstrap.bundle.min.js" class="astro-vvvwv3sm"></script>
+  <script src="/lang/i18n.js"></script>
+  <script src="/assets/theme.js"></script>
+</body>
+
 </html>

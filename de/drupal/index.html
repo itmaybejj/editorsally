@@ -1,28 +1,35 @@
 <!doctype html>
 <html lang="de" data-bs-theme="light">
-  <head>
-<link rel="icon" type="image/png" href="/assets/favicons/favicon-512x512.png" sizes="512x512" />
-    <link rel="icon" type="image/png" href="/assets/favicons/favicon-192x192.png" sizes="192x192" />
-    <link rel="icon" type="image/png" href="/assets/favicons/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="/assets/favicons/favicon.svg" />
-    <link rel="shortcut icon" href="/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <meta charset="utf-8" />
-    <title>Drupal CSA Docs — Editoria11y</title>
-    <link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="/assets/theme.css" rel="stylesheet" />
-    <link href="/assets/prism/prism.css" rel="stylesheet" />
-    <meta name="theme-color" content="#712cf9" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-  </head>
-  <body>
-    <header>
+
+<head>
+  <link rel="icon" type="image/png" href="/assets/favicons/favicon-512x512.png" sizes="512x512" />
+  <link rel="icon" type="image/png" href="/assets/favicons/favicon-192x192.png" sizes="192x192" />
+  <link rel="icon" type="image/png" href="/assets/favicons/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/assets/favicons/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <meta charset="utf-8" />
+  <title>Drupal CSA Docs — Editoria11y</title>
+  <link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="/assets/theme.css" rel="stylesheet" />
+  <link href="/assets/prism/prism.css" rel="stylesheet" />
+  <meta name="theme-color" content="#712cf9" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <header>
     <nav class="navbar navbar-expand-md">
       <div class="container col-sm-12 mx-auto">
         <a href="/de/" class="d-flex align-items-center  navbar-brand">
-          <svg class="logo-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="-.75 -3.5 10.1699 19.1777"><path fill="currentColor" d="M3.7031,10.5527c-.3633-.6562-.6426-1.1387-.8379-1.4473l-.3105-.4863-.2344-.3574c-.5117-.7969-1.0449-1.4551-1.5996-1.9746.3164-.2617.6113-.3926.8848-.3926.3359,0,.6348.123.8965.3691s.5918.7148.9902,1.4062c.4531-1.4727,1.0293-2.8691,1.7285-4.1895.3867-.7188.7314-1.2021,1.0342-1.4502s.7041-.3721,1.2041-.3721c.2656,0,.5938.041.9844.123-1.0039.8086-1.8066,1.7695-2.4082,2.8828s-1.3789,3.0762-2.332,5.8887Z"/></svg> Editoria<span style="margin-left: -1px;">11</span>y
+          <svg class="logo-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+            viewBox="-.75 -3.5 10.1699 19.1777">
+            <path fill="currentColor"
+              d="M3.7031,10.5527c-.3633-.6562-.6426-1.1387-.8379-1.4473l-.3105-.4863-.2344-.3574c-.5117-.7969-1.0449-1.4551-1.5996-1.9746.3164-.2617.6113-.3926.8848-.3926.3359,0,.6348.123.8965.3691s.5918.7148.9902,1.4062c.4531-1.4727,1.0293-2.8691,1.7285-4.1895.3867-.7188.7314-1.2021,1.0342-1.4502s.7041-.3721,1.2041-.3721c.2656,0,.5938.041.9844.123-1.0039.8086-1.8066,1.7695-2.4082,2.8828s-1.3789,3.0762-2.332,5.8887Z" />
+          </svg> Editoria<span style="margin-left: -1px;">11</span>y
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Navigation umschalten">
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar" aria-label="Navigation umschalten">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
@@ -39,133 +46,185 @@
     </nav>
     <div id="lang-picker"></div>
   </header>
-    <main class="container col-lg-12 mx-auto py-5">
-      <div class="row docs">
-        <div class="col-12 col-md-5 col-lg-4 mb-5">
-          <div id="on-this-page" class="list-group ms-2 ms-lg-5 position-sticky top-0 pt-3">
-          </div>
+  <main class="container col-lg-12 mx-auto py-5">
+    <div class="row docs">
+      <div class="col-12 col-md-5 col-lg-4 mb-5">
+        <div id="on-this-page" class="list-group ms-2 ms-lg-5 position-sticky top-0 pt-3">
         </div>
-        <div class="col-12 col-md-7 col-lg-8 pt-3">
-          <div data-bs-spy="scroll" data-bs-target="#on-this-page" data-bs-smooth-scroll="true">
-            <h1>Drupal-Modul</h1>
-            <section id="features">
-              <h2 class="pt-3">Funktionen</h2>
+      </div>
+      <div class="col-12 col-md-7 col-lg-8 pt-3">
+        <div data-bs-spy="scroll" data-bs-target="#on-this-page" data-bs-smooth-scroll="true">
+          <h1>Drupal-Modul</h1>
+          <section id="features">
+            <h2 class="pt-3">Funktionen</h2>
 
-              <figure class="figure my-4 rounded shadow border">
-                <img loading="lazy" src="/assets/images/3x-editing.png" class="figure-img img-fluid" height="1088" width="2237" alt="Drupal-Editor mit Inline-Hinweisen"/>
-                <figcaption class="figure-caption p-3 pt-2 fs-6">Probleme werden sowohl beim Laden des Frontends als auch beim Tippen in CKEditor und Gutenberg erkannt.</figcaption>
-              </figure>
+            <figure class="figure my-4 rounded shadow border">
+              <img loading="lazy" src="/assets/images/3x-editing.png" class="figure-img img-fluid" height="1088"
+                width="2237" alt="Drupal-Editor mit Inline-Hinweisen" />
+              <figcaption class="figure-caption p-3 pt-2 fs-6">Probleme werden sowohl beim Laden des Frontends als auch
+                beim Tippen in CKEditor und Gutenberg erkannt.</figcaption>
+            </figure>
 
-              <figure class="figure my-4 rounded shadow border" style="max-width: 600px;">
-                <img loading="lazy" src="/assets/images/3x-generic-tip.png" class="figure-img img-fluid" height="798" width="1278" alt="Hinweis zeigt an, dass ein Link nur „Hier klicken" als Linktext hat."/>
-                <figcaption class="figure-caption p-3 pt-2 ps-5 fs-6">Tooltips beschreiben das Problem und bieten Schaltflächen, um in den Seiten- oder Layout-Editor zu wechseln, diesen Hinweis zu ignorieren (für den aktiven Benutzer) oder als OK zu markieren (für alle Benutzer). Je nach Kontext und Berechtigungen können einige Hinweise auch ein Menü „Ähnliche Hinweise" anzeigen, mit Optionen, mehrere Hinweise auf derselben Seite als OK zu markieren oder dasselbe Element auf allen Seiten als OK zu markieren.</figcaption>
-              </figure>
+            <figure class="figure my-4 rounded shadow border" style="max-width: 600px;">
+              <img loading="lazy" src="/assets/images/3x-generic-tip.png" class="figure-img img-fluid" height="798"
+                width="1278" alt="Hinweis zeigt an, dass ein Link nur „Hier klicken" als Linktext hat." />
+              <figcaption class="figure-caption p-3 pt-2 ps-5 fs-6">Tooltips beschreiben das Problem und bieten
+                Schaltflächen, um in den Seiten- oder Layout-Editor zu wechseln, diesen Hinweis zu ignorieren (für den
+                aktiven Benutzer) oder als OK zu markieren (für alle Benutzer). Je nach Kontext und Berechtigungen
+                können einige Hinweise auch ein Menü „Ähnliche Hinweise" anzeigen, mit Optionen, mehrere Hinweise auf
+                derselben Seite als OK zu markieren oder dasselbe Element auf allen Seiten als OK zu markieren.
+              </figcaption>
+            </figure>
 
-              <figure class="figure my-4 rounded shadow mb-5 border">
-                <img loading="lazy" class="figure-img img-fluid" src="/assets/images/3x-dashboard.png" height="765" width="1600" alt="Berichtsdashboard mit aktuellen Problemen und Seiten mit den meisten Problemen." />
-                <figcaption class="figure-caption p-3 pt-2 fs-6">Ein websiteweites Berichts-Dashboard bietet filterbare und exportierbare Berichte zu Hinweisen und Ausblendungen.</figcaption>
-              </figure>
+            <figure class="figure my-4 rounded shadow mb-5 border">
+              <img loading="lazy" class="figure-img img-fluid" src="/assets/images/3x-dashboard.png" height="765"
+                width="1600" alt="Berichtsdashboard mit aktuellen Problemen und Seiten mit den meisten Problemen." />
+              <figcaption class="figure-caption p-3 pt-2 fs-6">Ein websiteweites Berichts-Dashboard bietet filterbare
+                und exportierbare Berichte zu Hinweisen und Ausblendungen.</figcaption>
+            </figure>
 
-              <p>Sowie:</p>
+            <p>Sowie:</p>
+            <ul>
+              <li>Starterkonfiguration, die automatisch Elemente von Drupal, CKEditor, Gutenberg, Link Purpose und
+                External Link ignoriert, auf Änderungen beim Bearbeiten in modalen Containern reagiert und die
+                Symbolleiste automatisch so positioniert, dass sie sich nicht mit Klaro- und Same-Page-Preview-Elementen
+                überschneidet.</li>
+              <li>Rollenbasierte Konfiguration dafür, welche Benutzer den Prüfer sehen, welche Benutzer Hinweise
+                ausblenden können und welche Benutzer websiteweite Berichte einsehen können.</li>
+              <li>Ein websiteinterner (lokaler) Crawler zum Aktualisieren des Dashboards nach umfangreichen
+                Theme-Änderungen. <em>(Nur CSA)</em></li>
+              <li>Getrennte Autoren-/Entwicklerkonfiguration mit separaten Tests (~30/~80) und Problemlisten. <em>(Nur
+                  CSA)</em></li>
+            </ul>
+
+
+
+          </section>
+          <h2>Installation und wichtige Einrichtungsschritte</h2>
+          <p>Der <a href="https://www.drupal.org/project/editoria11y/">gebündelte Installer</a> auf Drupal.org enthält
+            mehrere Module:</p>
+          <ul>
+            <li>
+              Editoria11y: der zentrale Inhaltsprüfer und das Dashboard.
+            </li>
+            <li>
+              Editoria11y CSA: Entwicklertests und Dashboard-Verwaltungswerkzeuge.
+            </li>
+            <li>
+              Editoria11y Export: CSV-Berichtswerkzeuge.
+            </li>
+          </ul>
+          <p>Installieren Sie es wie jedes andere Modul und führen Sie dann diese wichtigen Schritte durch:</p>
+          <ol>
+            <li><strong>Berechtigungen prüfen.</strong> Vertrauenswürdige Autoren sollten „Als OK markieren", „Als
+              ignoriert markieren" und „Dashboard anzeigen" haben.</li>
+            <li><strong>Wichtige Seiten auf wiederkehrende oder wenig hilfreiche Hinweise prüfen.</strong> Entweder im
+              Tooltip als OK markieren oder die Konfiguration anpassen, um Elemente per Selektor zu ignorieren.</li>
+            <li>Nach schwer sichtbaren Hinweisen suchen – außerhalb des Bildschirms, abgeschnitten, hinter anderen
+              Elementen oder auf verborgenen Elementen. Verwenden Sie die Tipps unter „Hinweispositionierung
+              korrigieren" weiter unten.</li>
+            <li>Wenn die Website bereits Inhalte hat und Sie ein CSA-Abonnement haben, besuchen Sie den Dashboard-Tab
+              „Neu prüfen" und <strong>crawlen Sie die Website</strong>, um die Seitenberichte vorzuladen. Dies ist
+              optional, aber ältere Seiten erscheinen erst in Berichten, wenn sie gecrawlt oder von einem angemeldeten
+              Benutzer besucht wurden.</li>
+          </ol>
+          <p>Hier finden Sie eine <a href="https://youtu.be/uYvNYPg38nU?si=dqADyWpTtOhniHTP&t=696">Videoeinführung zu
+              den Konfigurationsoptionen</a> (v2.4).</p>
+
+          <h2 id="check-roots">Wenig hilfreiche Hinweise ausblenden</h2>
+          <p>
+            <strong>Gute Konfigurationen unterdrücken wenig hilfreiche Hinweise, sodass sich Autoren auf die Probleme
+              konzentrieren können, die sie tatsächlich beheben sollten</strong>.
+          </p>
+          <p>Sie können Tests zwar ganz ausschalten, aber in der Regel ist es besser, Hinweise für bestimmte Elemente
+            oder Seiten auszublenden.</p>
+          <hr>
+          <p>
+            Bei jedem Testdurchlauf erfasst Editoria11y eine Menge von Elementen anhand der Einstellung „Inhalt in
+            diesen Containern prüfen" und filtert diese dann mehrfach. So sieht ein Testdurchlauf aus:
+          </p>
+          <ol>
+            <li>
+              Prüfung abbrechen, wenn die Konfiguration die Prüfung auf dieser Seite oder für diesen Benutzer
+              verhindert.
+            </li>
+            <li>
+              <strong>Sammeln</strong> von Elementen in angegebenen Seitenbereichen, z.
+              B.:<br><code>body > *:not('.ed11y-element')</code><br>
+              <em>Für Editoria11y-CSA-Benutzer sind dies die Bereiche auf dem Tab <strong>Entwicklertests</strong>.</em>
+            </li>
+            <li>
+              <strong>Entfernen</strong> von Elementen, die mit Ignore-Selektoren übereinstimmen, z.
+              B.:<br><code>.widgets, .utility-menu</code><br>
+              <em>Für Editoria11y-CSA-Benutzer sind dies die Selektoren auf dem Tab
+                <strong>Entwicklertests</strong>.</em>
+            </li>
+            <li>
+              Tests ausführen und Ergebnisse mit dem Dashboard synchronisieren.
+            </li>
+            <li>
+              Wenn die getrennte Konfiguration aktiv ist und der Benutzer ein Content-Editor ist, Entwicklerergebnisse
+              filtern:
               <ul>
-                <li>Starterkonfiguration, die automatisch Elemente von Drupal, CKEditor, Gutenberg, Link Purpose und External Link ignoriert, auf Änderungen beim Bearbeiten in modalen Containern reagiert und die Symbolleiste automatisch so positioniert, dass sie sich nicht mit Klaro- und Same-Page-Preview-Elementen überschneidet.</li>
-                <li>Rollenbasierte Konfiguration dafür, welche Benutzer den Prüfer sehen, welche Benutzer Hinweise ausblenden können und welche Benutzer websiteweite Berichte einsehen können.</li>
-                <li>Ein websiteinterner (lokaler) Crawler zum Aktualisieren des Dashboards nach umfangreichen Theme-Änderungen. <em>(Nur CSA)</em></li>
-                <li>Getrennte Autoren-/Entwicklerkonfiguration mit separaten Tests (~30/~80) und Problemlisten. <em>(Nur CSA)</em></li>
+                <li><strong>Entfernen</strong> von Ergebnissen aus Tests, die auf „Nur Entwickler" eingestellt sind.
+                </li>
+                <li><strong>Entfernen</strong> von Ergebnissen für Elemente außerhalb der angegebenen
+                  <strong><em>Inhalts</em></strong>bereiche, z. B.:<br><code>main, footer</code></li>
+                <li><strong>Entfernen</strong> von Ergebnissen für Elemente, die mit den
+                  <strong><em>Inhalts</em></strong>-Ignore-Selektoren übereinstimmen.</li>
               </ul>
+              Beachten Sie, dass es keine zweite „Sammel"-Phase gibt. Die Seitenbereiche für Entwickler müssen die
+              Inhaltsbereiche einschließen.
+            </li>
+            <li>Panel öffnen und Hinweise zeichnen, wenn die Konfiguration einer Auto-Öffnen-Einstellung entspricht.
+            </li>
+          </ol>
 
+          <h3 id="dismiss">Hinweise ausblenden</h3>
+          <p>Tests können in der Bibliothek als Fehler oder Warnungen („manuelle Prüfungen") konfiguriert werden.
+            Warnungen können ausgeblendet werden. Am Fuß jedes Tooltips stehen zwei Arten von Ausblendungen zur
+            Verfügung:</p>
+          <div class="my-2"
+            style="background: url(/assets/images/3x-generic-tip.png) 100% 98%; max-width: 600px; padding-top: 6%; background-size: 108%;">
+          </div>
+          <ul>
+            <li>„Ignorieren" wird als Benutzerpräferenz gespeichert: Der Hinweis ist jetzt für den aktuellen Benutzer
+              ausgeblendet, aber nur für diesen Benutzer.</li>
+            <li>„Als OK markieren" blendet den Hinweis für alle Benutzer aus.</li>
+          </ul>
+          <p>Ob ein Benutzer einen Hinweis ausblenden kann, wird auf Rollenebene in den Drupal-Benutzerberechtigungen
+            gesteuert. <strong>Die meisten Autoren sollten Hinweise ausblenden dürfen</strong>. Es hat keinen Sinn,
+            jemandem eine manuelle Prüfung zuzuweisen, wenn er das Element nicht als geprüft markieren kann.</p>
 
-
-            </section>
-            <h2>Installation und wichtige Einrichtungsschritte</h2>
-            <p>Der <a href="https://www.drupal.org/project/editoria11y/">gebündelte Installer</a> auf Drupal.org enthält mehrere Module:</p>
-            <ul>
-              <li>
-                Editoria11y: der zentrale Inhaltsprüfer und das Dashboard.
-              </li>
-              <li>
-                Editoria11y CSA: Entwicklertests und Dashboard-Verwaltungswerkzeuge.
-              </li>
-              <li>
-                Editoria11y Export: CSV-Berichtswerkzeuge.
-              </li>
-            </ul>
-            <p>Installieren Sie es wie jedes andere Modul und führen Sie dann diese wichtigen Schritte durch:</p>
-            <ol>
-              <li><strong>Berechtigungen prüfen.</strong> Vertrauenswürdige Autoren sollten „Als OK markieren", „Als ignoriert markieren" und „Dashboard anzeigen" haben.</li>
-              <li><strong>Wichtige Seiten auf wiederkehrende oder wenig hilfreiche Hinweise prüfen.</strong> Entweder im Tooltip als OK markieren oder die Konfiguration anpassen, um Elemente per Selektor zu ignorieren.</li>
-              <li>Nach schwer sichtbaren Hinweisen suchen – außerhalb des Bildschirms, abgeschnitten, hinter anderen Elementen oder auf verborgenen Elementen. Verwenden Sie die Tipps unter „Hinweispositionierung korrigieren" weiter unten.</li>
-              <li>Wenn die Website bereits Inhalte hat und Sie ein CSA-Abonnement haben, besuchen Sie den Dashboard-Tab „Neu prüfen" und <strong>crawlen Sie die Website</strong>, um die Seitenberichte vorzuladen. Dies ist optional, aber ältere Seiten erscheinen erst in Berichten, wenn sie gecrawlt oder von einem angemeldeten Benutzer besucht wurden.</li>
-            </ol>
-            <p>Hier finden Sie eine <a href="https://youtu.be/uYvNYPg38nU?si=dqADyWpTtOhniHTP&t=696">Videoeinführung zu den Konfigurationsoptionen</a> (v2.4).</p>
-
-            <h2 id="check-roots">Wenig hilfreiche Hinweise ausblenden</h2>
-            <p>
-              <strong>Gute Konfigurationen unterdrücken wenig hilfreiche Hinweise, sodass sich Autoren auf die Probleme konzentrieren können, die sie tatsächlich beheben sollten</strong>.</p>
-            <p>Sie können Tests zwar ganz ausschalten, aber in der Regel ist es besser, Hinweise für bestimmte Elemente oder Seiten auszublenden.</p>
-            <hr>
-            <p>
-              Bei jedem Testdurchlauf erfasst Editoria11y eine Menge von Elementen anhand der Einstellung „Inhalt in diesen Containern prüfen" und filtert diese dann mehrfach. So sieht ein Testdurchlauf aus:
-            </p>
-            <ol>
-              <li>
-                Prüfung abbrechen, wenn die Konfiguration die Prüfung auf dieser Seite oder für diesen Benutzer verhindert.
-              </li>
-              <li>
-                <strong>Sammeln</strong> von Elementen in angegebenen Seitenbereichen, z. B.:<br><code>body > *:not('.ed11y-element')</code><br>
-                <em>Für Editoria11y-CSA-Benutzer sind dies die Bereiche auf dem Tab <strong>Entwicklertests</strong>.</em>
-              </li>
-              <li>
-                <strong>Entfernen</strong> von Elementen, die mit Ignore-Selektoren übereinstimmen, z. B.:<br><code>.widgets, .utility-menu</code><br>
-                <em>Für Editoria11y-CSA-Benutzer sind dies die Selektoren auf dem Tab <strong>Entwicklertests</strong>.</em>
-              </li>
-              <li>
-                Tests ausführen und Ergebnisse mit dem Dashboard synchronisieren.
-              </li>
-              <li>
-                Wenn die getrennte Konfiguration aktiv ist und der Benutzer ein Content-Editor ist, Entwicklerergebnisse filtern:
-                <ul>
-                  <li><strong>Entfernen</strong> von Ergebnissen aus Tests, die auf „Nur Entwickler" eingestellt sind.</li>
-                  <li><strong>Entfernen</strong> von Ergebnissen für Elemente außerhalb der angegebenen <strong><em>Inhalts</em></strong>bereiche, z. B.:<br><code>main, footer</code></li>
-                  <li><strong>Entfernen</strong> von Ergebnissen für Elemente, die mit den <strong><em>Inhalts</em></strong>-Ignore-Selektoren übereinstimmen.</li>
-                </ul>
-                Beachten Sie, dass es keine zweite „Sammel"-Phase gibt. Die Seitenbereiche für Entwickler müssen die Inhaltsbereiche einschließen.
-              </li>
-              <li>Panel öffnen und Hinweise zeichnen, wenn die Konfiguration einer Auto-Öffnen-Einstellung entspricht.</li>
-            </ol>
-
-            <h3 id="dismiss">Hinweise ausblenden</h3>
-            <p>Tests können in der Bibliothek als Fehler oder Warnungen („manuelle Prüfungen") konfiguriert werden. Warnungen können ausgeblendet werden. Am Fuß jedes Tooltips stehen zwei Arten von Ausblendungen zur Verfügung:</p>
-            <div class="my-2" style="background: url(/assets/images/3x-generic-tip.png) 100% 98%; max-width: 600px; padding-top: 6%; background-size: 108%;"></div>
-            <ul>
-              <li>„Ignorieren" wird als Benutzerpräferenz gespeichert: Der Hinweis ist jetzt für den aktuellen Benutzer ausgeblendet, aber nur für diesen Benutzer.</li>
-              <li>„Als OK markieren" blendet den Hinweis für alle Benutzer aus.</li>
-            </ul>
-            <p>Ob ein Benutzer einen Hinweis ausblenden kann, wird auf Rollenebene in den Drupal-Benutzerberechtigungen gesteuert. <strong>Die meisten Autoren sollten Hinweise ausblenden dürfen</strong>. Es hat keinen Sinn, jemandem eine manuelle Prüfung zuzuweisen, wenn er das Element nicht als geprüft markieren kann.</p>
-
-            <h3 id="roots">Elemente ignorieren</h3>
-            <p>Diese beiden Konfigurationseinstellungen sind die wichtigsten!</p>
-            <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
-              <label for="edit-content-root">Inhalt in diesen Containern prüfen</label>
-              <div><textarea id="edit-content-root" name="content_root" rows="1" cols="30" disabled></textarea>
-              </div>
-              <div class="mt-3">
-                <label for="edit-ignore-elements">Diese Elemente überspringen</label>
-                <div>
-                  <textarea id="edit-ignore-elements" disabled name="ignore_elements" rows="1" cols="30" class=""></textarea>
-                </div>
+          <h3 id="roots">Elemente ignorieren</h3>
+          <p>Diese beiden Konfigurationseinstellungen sind die wichtigsten!</p>
+          <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
+            <label for="edit-content-root">Inhalt in diesen Containern prüfen</label>
+            <div><textarea id="edit-content-root" name="content_root" rows="1" cols="30" disabled></textarea>
+            </div>
+            <div class="mt-3">
+              <label for="edit-ignore-elements">Diese Elemente überspringen</label>
+              <div>
+                <textarea id="edit-ignore-elements" disabled name="ignore_elements" rows="1" cols="30"
+                  class=""></textarea>
               </div>
             </div>
-            <p>
-              Setzen Sie das erste auf alle Teile des Seiteninhalts, den Content-Autoren bearbeiten können. Wenn sie z. B. den <code>main</code>-Inhaltsbereich, <code>.sidebar</code> und <code>.footer-column-two</code> bearbeiten können, setzen Sie diese Selektoren als Ihren Inhaltsprüfbereich.
-            </p>
-            <p>
-              Verwenden Sie das zweite, um Teilbereiche „auszuschließen". Wenn <code>main</code> z. B. verschiedene Widgets und Einbettungen enthält, die nur Entwickler ändern können, listen Sie diese auf: <code>.widget-1, .social-embed</code>.
-            </p>
-            <p>Wenn Sie die getrennte Konfiguration verwenden, sehen Sie ein ähnliches Einstellungspaar auf dem Tab „Entwicklertests":</p>
-            <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
-              <div>
-                <fieldset>
+          </div>
+          <p>
+            Setzen Sie das erste auf alle Teile des Seiteninhalts, den Content-Autoren bearbeiten können. Wenn sie z. B.
+            den <code>main</code>-Inhaltsbereich, <code>.sidebar</code> und <code>.footer-column-two</code> bearbeiten
+            können, setzen Sie diese Selektoren als Ihren Inhaltsprüfbereich.
+          </p>
+          <p>
+            Verwenden Sie das zweite, um Teilbereiche „auszuschließen". Wenn <code>main</code> z. B. verschiedene
+            Widgets und Einbettungen enthält, die nur Entwickler ändern können, listen Sie diese auf:
+            <code>.widget-1, .social-embed</code>.
+          </p>
+          <p>Wenn Sie die getrennte Konfiguration verwenden, sehen Sie ein ähnliches Einstellungspaar auf dem Tab
+            „Entwicklertests":</p>
+          <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
+            <div>
+              <fieldset>
                 <legend>
                   Entwicklerprüfbereich
                 </legend>
@@ -173,126 +232,189 @@
 
                   <div id="edit-dev-check-root">
                     <div>
-                    <input aria-describedby="edit-dev-check-root--description" type="radio" id="edit-dev-check-root-automatic" name="dev_check_root" value="automatic" checked="checked">
-                    <label for="edit-dev-check-root-automatic" class="form-item__label option">Alle Elemente</label>
-                  </div>
+                      <input aria-describedby="edit-dev-check-root--description" type="radio"
+                        id="edit-dev-check-root-automatic" name="dev_check_root" value="automatic" checked="checked">
+                      <label for="edit-dev-check-root-automatic" class="form-item__label option">Alle Elemente</label>
+                    </div>
                     <div class="d-flex">
-                      <input aria-describedby="edit-dev-check-root--description" type="radio" id="edit-dev-check-root-match" name="dev_check_root" value="match" class="align-self-baseline mt-1 me-1">
-                      <label for="edit-dev-check-root-match" class="form-item__label option">Nur die im Tab „Inhaltseinstellung" aufgeführten Container</label>
+                      <input aria-describedby="edit-dev-check-root--description" type="radio"
+                        id="edit-dev-check-root-match" name="dev_check_root" value="match"
+                        class="align-self-baseline mt-1 me-1">
+                      <label for="edit-dev-check-root-match" class="form-item__label option">Nur die im Tab
+                        „Inhaltseinstellung" aufgeführten Container</label>
                     </div>
                     <div class="">
-                      <input aria-describedby="edit-dev-check-root--description" type="radio" id="edit-dev-check-root-specify" name="dev_check_root" value="specify" class="form-radio form-boolean form-boolean--type-radio">
-                      <label for="edit-dev-check-root-specify" class="">Die unten aufgeführten spezifischen Container</label>
+                      <input aria-describedby="edit-dev-check-root--description" type="radio"
+                        id="edit-dev-check-root-specify" name="dev_check_root" value="specify"
+                        class="form-radio form-boolean form-boolean--type-radio">
+                      <label for="edit-dev-check-root-specify" class="">Die unten aufgeführten spezifischen
+                        Container</label>
                     </div>
                   </div>
 
                 </div>
               </fieldset>
 
-                <div class="">
-                  <label for="edit-always-ignore" class="mt-3">Für Entwickler und Content-Editoren ignorieren</label>
-                  <div class="form-textarea-wrapper">
-                    <textarea  id="edit-always-ignore" name="always_ignore" rows="1" cols="20" placeholder=""></textarea>
-                  </div>
+              <div class="">
+                <label for="edit-always-ignore" class="mt-3">Für Entwickler und Content-Editoren ignorieren</label>
+                <div class="form-textarea-wrapper">
+                  <textarea id="edit-always-ignore" name="always_ignore" rows="1" cols="20" placeholder=""></textarea>
                 </div>
-
               </div>
 
             </div>
-            <p>Das Wichtigste bei den Entwicklerprüfbereichen ist, dass sie <strong>nicht unabhängig</strong> von den Inhaltsprüfbereichen sind. In einer getrennten Konfiguration werden die Entwicklerbereiche geprüft und diese Ergebnisse dann <strong>gefiltert</strong>, um den Inhaltsbereichen zu entsprechen. Alle Bereiche, die für Entwickler ausgeschlossen sind, werden auch für Content-Editoren ausgeschlossen. Schließen Sie editierbare Inhaltsbereiche nicht aus!</p>
 
-            <p>Einige Tests erlauben eine präzisere Konfiguration, um nur bestimmte Hinweise bei betroffenen Elementen auszublenden. Zu finden unter:</p>
+          </div>
+          <p>Das Wichtigste bei den Entwicklerprüfbereichen ist, dass sie <strong>nicht unabhängig</strong> von den
+            Inhaltsprüfbereichen sind. In einer getrennten Konfiguration werden die Entwicklerbereiche geprüft und diese
+            Ergebnisse dann <strong>gefiltert</strong>, um den Inhaltsbereichen zu entsprechen. Alle Bereiche, die für
+            Entwickler ausgeschlossen sind, werden auch für Content-Editoren ausgeschlossen. Schließen Sie editierbare
+            Inhaltsbereiche nicht aus!</p>
+
+          <p>Einige Tests erlauben eine präzisere Konfiguration, um nur bestimmte Hinweise bei betroffenen Elementen
+            auszublenden. Zu finden unter:</p>
+          <ul>
+            <li>Inhaltsprüfungen: Zu prüfende Links</li>
+            <li>Inhaltsprüfungen: Zu prüfende Einbettungen</li>
+            <li>Inhaltsprüfungen: Dynamische und Shadow-Inhalte erkennen</li>
+            <li>Entwicklertests: Kontrast</li>
+          </ul>
+
+          <h3 id="pages">Für bestimmte Seiten oder Benutzer ausblenden</h3>
+          <p>
+            Am einfachsten geht dies, indem Sie CSS-Klassen oder IDs an diese Optionen übergeben:
+          </p>
+          <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
+            <label for="edit-no-load" class="form-item__label">Auf Seiten mit diesen Elementen nicht prüfen</label>
+            <div class="form-textarea-wrapper">
+              <textarea data-drupal-selector="edit-no-load" aria-describedby="edit-no-load--description"
+                id="edit-no-load" name="no_load" rows="1" cols="20"
+                class="form-textarea resize-vertical form-element form-element--type-textarea form-element--api-textarea"></textarea>
+            </div>
+
+            <label for="edit-ignore-all-if-absent" class="form-item__label">Alle Hinweise auf Seiten ausblenden, auf
+              denen diese Elemente nicht vorhanden sind</label>
+            <div class="form-textarea-wrapper">
+              <textarea data-drupal-selector="edit-ignore-all-if-absent"
+                aria-describedby="edit-ignore-all-if-absent--description" id="edit-ignore-all-if-absent"
+                name="ignore_all_if_absent" rows="1" cols="20"
+                class="form-textarea resize-vertical form-element form-element--type-textarea form-element--api-textarea"></textarea>
+            </div>
+
+          </div>
+          <p>
+            Die erste Option verhindert, dass Prüfungen ausgeführt werden, und die Symbolleiste wird nicht angezeigt.
+          </p>
+          <p>
+            Die zweite startet den Prüfer minimiert und markiert (für den aktuellen Benutzer) alle Probleme automatisch
+            als „Ignoriert", auch wenn es sich um Fehler handelt. Dies ermöglicht es den Tests, zu laufen und das
+            Dashboard zu aktualisieren, ohne den Benutzer zu stören.
+          </p>
+          <p>
+            Wenn Sie damit steuern möchten, welche Benutzer den Prüfer sehen, müssen Sie möglicherweise Ihr Theme
+            anpassen, um eine Klasse auszugeben, z. B. <code>.user-247</code>
+          </p>
+
+          <h2 id="dashboard">Websiteweite Ergebnisse verwalten</h2>
+          <section id="refresh">
+            <h3 class="pt-3">Crawling und Ergebnisse aktualisieren</h3>
+            <p>Editoria11y ist ein <strong>Echtzeit-Überwachungswerkzeug, kein Crawler</strong>. Seine websiteweiten
+              Berichte werden aktualisiert, wenn Autoren Seiten aufrufen, sodass regelmäßiges Crawling in der Regel
+              nicht erforderlich ist. Das CSA-Modul <em>enthält</em> einen Crawler, der aber nur in diesen drei
+              Situationen benötigt werden sollte:</p>
+            <ol>
+              <li>
+                Bei der erstmaligen Installation von Editoria11y auf einer bestehenden Website mit vielen Seiten. Seiten
+                müssen erst besucht werden, bevor sie im Dashboard erscheinen, sodass ein schneller erster Crawl Zeit
+                spart.
+              </li>
+              <li>
+                Größere Aktualisierungen von Themes oder Modulen können Probleme auf vielen Seiten beheben (oder
+                verursachen), die erst nach dem Besuch oder Crawling sichtbar werden.
+              </li>
+              <li>
+                Massenaktionen in der Admin-Oberfläche wie das Löschen von Seiten oder Weiterleitungen hinterlassen oft
+                Ergebnisse von Seiten, die nicht mehr existieren oder verschoben wurden. In diesen Fällen hilft es, die
+                Wartungsaktionen des „Aktualisieren"-Tabs zu nutzen, um Seiten-URLs zu aktualisieren sowie gelöschte
+                Seiten zu erkennen und zu entfernen.
+              </li>
+            </ol>
+            <p>Während eines Crawls verlassen keine Daten Ihre Website. Der CSA-Crawler ist kein Cloud-Werkzeug; er
+              verwendet Ihren Browser, um die Seiten Ihrer eigenen Website zu laden und zu prüfen. Der Nachteil dieses
+              Ansatzes ist, dass <strong>Browser Hintergrundtabs pausieren</strong>. Sie müssen Ihren Computer während
+              eines Crawls eingeschaltet und wach halten. Öffnen Sie ein neues Fenster für den Crawler und lassen Sie es
+              als Vordergrund-Tab in diesem Fenster geöffnet. Sie können in einem anderen Fenster weiterarbeiten. Der
+              Crawler aktualisiert seine Schätzung nach jedem Seiten-Batch.</p>
+          </section>
+          <section id="reports">
+            <h3>Berichte anzeigen</h3>
+            <div class="my-4 border shadow"
+              style="background: url(/assets/images/3x-dashboard.png) 86% 0%; padding-top: 28%; background-size: 106%;">
+            </div>
             <ul>
-              <li>Inhaltsprüfungen: Zu prüfende Links</li>
-              <li>Inhaltsprüfungen: Zu prüfende Einbettungen</li>
-              <li>Inhaltsprüfungen: Dynamische und Shadow-Inhalte erkennen</li>
-              <li>Entwicklertests: Kontrast</li>
+              <li>
+                <strong>Aktuell</strong> ermöglicht die Erkundung einzelner Hinweise. Damit können Sie z. B. nach allen
+                Vorkommen desselben Hinweistyps filtern, sehen, welche Hinweise in neueren Inhalten häufig auftreten,
+                oder welche Autoren immer noch denselben Fehler machen.
+              </li>
+              <li>
+                <strong>Seiten</strong> zeigt Hinweiszählungen pro Seite, nach Seite gruppiert. Damit können Sie Seiten
+                mit den meisten Problemen finden und nach Seitenattributen wie Inhaltstyp und Veröffentlichungsstatus
+                filtern.
+              </li>
+              <li>
+                <strong>Hinweise</strong> zeigt Probleme nach Typ.
+              </li>
+              <li>
+                <strong>Ausblendungen</strong> ermöglicht die Überwachung, ob Autoren korrekt ausblenden, und bietet
+                „Zurücksetzen"-Schaltflächen zum Wiederherstellen ausgeblendeter Hinweise.
+              </li>
+              <li>
+                <strong>Export</strong> enthält Versionen der Seiten-, Hinweis- und Ausblendungsberichte, die gefiltert
+                werden können, um CSV-Downloads vorzubereiten. <em>Bereitgestellt vom CSV-Export-Untermodul</em>
+              </li>
+              <li>
+                <strong>Aktualisieren</strong> enthält Dashboard-Verwaltungswerkzeuge zum Entfernen von Hinweisen von
+                gelöschten Seiten, Entfernen von Hinweisen von parametrisierten Pseudo-Seiten wie
+                /search?query=beispiel, Aktualisieren gespeicherter Seitentitel und URLs sowie Ausführen eines manuellen
+                Crawls. <em>Bereitgestellt vom CSA-Untermodul</em>
+              </li>
             </ul>
+          </section>
 
-            <h3 id="pages">Für bestimmte Seiten oder Benutzer ausblenden</h3>
-            <p>
-              Am einfachsten geht dies, indem Sie CSS-Klassen oder IDs an diese Optionen übergeben:
-            </p>
-            <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
-              <label for="edit-no-load" class="form-item__label">Auf Seiten mit diesen Elementen nicht prüfen</label>
-              <div class="form-textarea-wrapper">
-                <textarea data-drupal-selector="edit-no-load" aria-describedby="edit-no-load--description" id="edit-no-load" name="no_load" rows="1" cols="20" class="form-textarea resize-vertical form-element form-element--type-textarea form-element--api-textarea"></textarea>
-              </div>
+          <h2 id="positioning">Verborgene oder außerhalb des Bildschirms liegende Hinweise korrigieren</h2>
 
-              <label for="edit-ignore-all-if-absent" class="form-item__label">Alle Hinweise auf Seiten ausblenden, auf denen diese Elemente nicht vorhanden sind</label>
-              <div class="form-textarea-wrapper">
-                <textarea data-drupal-selector="edit-ignore-all-if-absent" aria-describedby="edit-ignore-all-if-absent--description" id="edit-ignore-all-if-absent" name="ignore_all_if_absent" rows="1" cols="20" class="form-textarea resize-vertical form-element form-element--type-textarea form-element--api-textarea"></textarea>
-              </div>
+          <p>Das Modul stellt Felder für zwei Konfigurationsoptionen der Bibliothek bereit, um die Platzierung von
+            Hinweisen zu ändern:</p>
 
-            </div>
-            <p>
-              Die erste Option verhindert, dass Prüfungen ausgeführt werden, und die Symbolleiste wird nicht angezeigt.
-            </p>
-            <p>
-              Die zweite startet den Prüfer minimiert und markiert (für den aktuellen Benutzer) alle Probleme automatisch als „Ignoriert", auch wenn es sich um Fehler handelt. Dies ermöglicht es den Tests, zu laufen und das Dashboard zu aktualisieren, ohne den Benutzer zu stören.
-            </p>
-            <p>
-              Wenn Sie damit steuern möchten, welche Benutzer den Prüfer sehen, müssen Sie möglicherweise Ihr Theme anpassen, um eine Klasse auszugeben, z. B. <code>.user-247</code>
-            </p>
+          <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
+            <label for="edit-element-hides-overflow" class="form-item__label">Elemente mit ausgeblendetem
+              Overflow</label>
+            <textarea data-drupal-selector="edit-element-hides-overflow"
+              aria-describedby="edit-element-hides-overflow--description" id="edit-element-hides-overflow"
+              name="element_hides_overflow" rows="1" cols="60"
+              class="form-textarea resize-vertical form-element form-element--type-textarea form-element--api-textarea"></textarea>
+            <label for="edit-hidden-handlers" class="form-item__label">Theme-JS behandelt das Einblenden verborgener
+              Tooltips in diesen Containern</label>
+            <textarea data-drupal-selector="edit-hidden-handlers" aria-describedby="edit-hidden-handlers--description"
+              id="edit-hidden-handlers" name="hidden_handlers" rows="1" cols="60"
+              class="form-textarea resize-vertical form-element form-element--type-textarea form-element--api-textarea"></textarea>
+          </div>
+          <p>Manche Themes haben Spalten oder Widgets, die horizontalen oder vertikalen Overflow ausblenden. Die
+            Bibliothek erkennt automatisch, wenn ein Toggle außerhalb des sichtbaren Teils der <strong>Seite</strong>
+            fallen würde. Wenn Sie der Bibliothek mitteilen, dass bestimmte Container Overflow ausblenden, versucht sie
+            auch, Hinweise für Elemente in diesen Containern innerhalb ihrer Grenzen zu positionieren.</p>
+          <p>Manche Themes haben Widgets, die die Sichtbarkeit von Inhalten umschalten, wie Akkordeons, Tabs und
+            Diashows. Hinweise in diesen Elementen werden ebenfalls verborgen. Wenn Sie eine Liste von Selektoren für
+            diese Widgets bereitstellen, pausiert Editoria11y kurz, wenn ein Benutzer versucht, mit einer Vor- oder
+            Zurück-Schaltfläche zu diesen Hinweisen zu springen. Drupal-Themes und -Module können dann den Anweisungen
+            aus dem Bibliotheksabschnitt zum <a href="/de/install/#hidden-content">Umgang mit verborgenen Inhalten</a>
+            folgen, um die verborgenen Inhalte sichtbar zu machen.</p>
 
-            <h2 id="dashboard">Websiteweite Ergebnisse verwalten</h2>
-            <section id="refresh">
-              <h3 class="pt-3">Crawling und Ergebnisse aktualisieren</h3>
-              <p>Editoria11y ist ein <strong>Echtzeit-Überwachungswerkzeug, kein Crawler</strong>. Seine websiteweiten Berichte werden aktualisiert, wenn Autoren Seiten aufrufen, sodass regelmäßiges Crawling in der Regel nicht erforderlich ist. Das CSA-Modul <em>enthält</em> einen Crawler, der aber nur in diesen drei Situationen benötigt werden sollte:</p>
-              <ol>
-                <li>
-                  Bei der erstmaligen Installation von Editoria11y auf einer bestehenden Website mit vielen Seiten. Seiten müssen erst besucht werden, bevor sie im Dashboard erscheinen, sodass ein schneller erster Crawl Zeit spart.
-                </li>
-                <li>
-                  Größere Aktualisierungen von Themes oder Modulen können Probleme auf vielen Seiten beheben (oder verursachen), die erst nach dem Besuch oder Crawling sichtbar werden.
-                </li>
-                <li>
-                  Massenaktionen in der Admin-Oberfläche wie das Löschen von Seiten oder Weiterleitungen hinterlassen oft Ergebnisse von Seiten, die nicht mehr existieren oder verschoben wurden. In diesen Fällen hilft es, die Wartungsaktionen des „Aktualisieren"-Tabs zu nutzen, um Seiten-URLs zu aktualisieren sowie gelöschte Seiten zu erkennen und zu entfernen.
-                </li>
-              </ol>
-              <p>Während eines Crawls verlassen keine Daten Ihre Website. Der CSA-Crawler ist kein Cloud-Werkzeug; er verwendet Ihren Browser, um die Seiten Ihrer eigenen Website zu laden und zu prüfen. Der Nachteil dieses Ansatzes ist, dass <strong>Browser Hintergrundtabs pausieren</strong>. Sie müssen Ihren Computer während eines Crawls eingeschaltet und wach halten. Öffnen Sie ein neues Fenster für den Crawler und lassen Sie es als Vordergrund-Tab in diesem Fenster geöffnet. Sie können in einem anderen Fenster weiterarbeiten. Der Crawler aktualisiert seine Schätzung nach jedem Seiten-Batch.</p>
-            </section>
-            <section id="reports">
-              <h3>Berichte anzeigen</h3>
-              <div class="my-4 border shadow" style="background: url(/assets/images/3x-dashboard.png) 86% 0%; padding-top: 28%; background-size: 106%;"></div>
-              <ul>
-                <li>
-                  <strong>Aktuell</strong> ermöglicht die Erkundung einzelner Hinweise. Damit können Sie z. B. nach allen Vorkommen desselben Hinweistyps filtern, sehen, welche Hinweise in neueren Inhalten häufig auftreten, oder welche Autoren immer noch denselben Fehler machen.
-                </li>
-                <li>
-                  <strong>Seiten</strong> zeigt Hinweiszählungen pro Seite, nach Seite gruppiert. Damit können Sie Seiten mit den meisten Problemen finden und nach Seitenattributen wie Inhaltstyp und Veröffentlichungsstatus filtern.
-                </li>
-                <li>
-                  <strong>Hinweise</strong> zeigt Probleme nach Typ.
-                </li>
-                <li>
-                  <strong>Ausblendungen</strong> ermöglicht die Überwachung, ob Autoren korrekt ausblenden, und bietet „Zurücksetzen"-Schaltflächen zum Wiederherstellen ausgeblendeter Hinweise.
-                </li>
-                <li>
-                  <strong>Export</strong> enthält Versionen der Seiten-, Hinweis- und Ausblendungsberichte, die gefiltert werden können, um CSV-Downloads vorzubereiten. <em>Bereitgestellt vom CSV-Export-Untermodul</em>
-                </li>
-                <li>
-                  <strong>Aktualisieren</strong> enthält Dashboard-Verwaltungswerkzeuge zum Entfernen von Hinweisen von gelöschten Seiten, Entfernen von Hinweisen von parametrisierten Pseudo-Seiten wie /search?query=beispiel, Aktualisieren gespeicherter Seitentitel und URLs sowie Ausführen eines manuellen Crawls. <em>Bereitgestellt vom CSA-Untermodul</em>
-                </li>
-              </ul>
-            </section>
-
-            <h2 id="positioning">Verborgene oder außerhalb des Bildschirms liegende Hinweise korrigieren</h2>
-
-            <p>Das Modul stellt Felder für zwei Konfigurationsoptionen der Bibliothek bereit, um die Platzierung von Hinweisen zu ändern:</p>
-
-              <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
-                <label for="edit-element-hides-overflow" class="form-item__label">Elemente mit ausgeblendetem Overflow</label>
-                  <textarea data-drupal-selector="edit-element-hides-overflow" aria-describedby="edit-element-hides-overflow--description" id="edit-element-hides-overflow" name="element_hides_overflow" rows="1" cols="60" class="form-textarea resize-vertical form-element form-element--type-textarea form-element--api-textarea"></textarea>
-                <label for="edit-hidden-handlers" class="form-item__label">Theme-JS behandelt das Einblenden verborgener Tooltips in diesen Containern</label>
-                  <textarea data-drupal-selector="edit-hidden-handlers" aria-describedby="edit-hidden-handlers--description" id="edit-hidden-handlers" name="hidden_handlers" rows="1" cols="60" class="form-textarea resize-vertical form-element form-element--type-textarea form-element--api-textarea"></textarea>
-              </div>
-            <p>Manche Themes haben Spalten oder Widgets, die horizontalen oder vertikalen Overflow ausblenden. Die Bibliothek erkennt automatisch, wenn ein Toggle außerhalb des sichtbaren Teils der <strong>Seite</strong> fallen würde. Wenn Sie der Bibliothek mitteilen, dass bestimmte Container Overflow ausblenden, versucht sie auch, Hinweise für Elemente in diesen Containern innerhalb ihrer Grenzen zu positionieren.</p>
-            <p>Manche Themes haben Widgets, die die Sichtbarkeit von Inhalten umschalten, wie Akkordeons, Tabs und Diashows. Hinweise in diesen Elementen werden ebenfalls verborgen. Wenn Sie eine Liste von Selektoren für diese Widgets bereitstellen, pausiert Editoria11y kurz, wenn ein Benutzer versucht, mit einer Vor- oder Zurück-Schaltfläche zu diesen Hinweisen zu springen. Drupal-Themes und -Module können dann den Anweisungen aus dem Bibliotheksabschnitt zum <a href="/de/install/#hidden-content">Umgang mit verborgenen Inhalten</a> folgen, um die verborgenen Inhalte sichtbar zu machen.</p>
-
-            <h2 id="runtime">Eigene Konfiguration schreiben</h2>
-            <p>In PHP: Das Drupal-Modul stellt einen <code>hook_editoria11y_alter_config</code> bereit, um den Inhalt von <code>drupalSettings.editoria11y</code> in einem Modul oder Theme zu ändern. Zum Beispiel:</p>
-            <pre class="language-php"><code><!--<?php
+          <h2 id="runtime">Eigene Konfiguration schreiben</h2>
+          <p>In PHP: Das Drupal-Modul stellt einen <code>hook_editoria11y_alter_config</code> bereit, um den Inhalt von
+            <code>drupalSettings.editoria11y</code> in einem Modul oder Theme zu ändern. Zum Beispiel:</p>
+          <pre class="language-php"><code><!--<?php
 /**
  * @file
  * MY_MODULE module file.
@@ -316,8 +438,13 @@ function MY_MODULE_editoria11y_alter_config(array &$attach, CacheableMetadata $c
     $attach['allow_ok'] = 'okAll';
   }
 }--></code></pre>
-            <p>Das Ändern von <code>drupalSettings</code> hilft nur, wenn das Modul-JS bereits so eingerichtet ist, dass es diesen Wert an die Bibliothek weitergibt. Um zusätzliche Parameter hinzuzufügen, müssen Sie das JS-<code>options</code>-Objekt direkt ändern. Das Modul prüft auf eine globale JS-Variable namens <code>editoria11yOptionsOverride</code>. Wenn diese gesetzt ist, übergibt es das <code>options</code>-Objekt an eine von Ihnen in Ihrem Modul oder Theme bereitgestellte <code>editoria11yOptions</code>-Funktion. Sie können nun alle <a href="/de/install/#params">Bibliotheksparameter</a> setzen.</p>
-            <pre class="language-javascript"><code><!--var editoria11yOptionsOverride = true;
+          <p>Das Ändern von <code>drupalSettings</code> hilft nur, wenn das Modul-JS bereits so eingerichtet ist, dass
+            es diesen Wert an die Bibliothek weitergibt. Um zusätzliche Parameter hinzuzufügen, müssen Sie das
+            JS-<code>options</code>-Objekt direkt ändern. Das Modul prüft auf eine globale JS-Variable namens
+            <code>editoria11yOptionsOverride</code>. Wenn diese gesetzt ist, übergibt es das <code>options</code>-Objekt
+            an eine von Ihnen in Ihrem Modul oder Theme bereitgestellte <code>editoria11yOptions</code>-Funktion. Sie
+            können nun alle <a href="/de/install/#params">Bibliotheksparameter</a> setzen.</p>
+          <pre class="language-javascript"><code><!--var editoria11yOptionsOverride = true;
 var editoria11yOptions = function(options) {
   // You now have access to the processed options object that will be passed to the library.
 
@@ -334,11 +461,14 @@ var editoria11yOptions = function(options) {
   return options;
 }
 --></code></pre>
-            <section id="custom-tests">
+          <section id="custom-tests">
             <h2>Eigene Tests schreiben</h2>
-            <p>Setzen Sie zunächst in der Modulkonfiguration die Option „Benutzerdefinierte Tests" auf 1, damit das Modul auf die Tests wartet.</p>
-            <p>Erstellen Sie dann eine Drupal-JS-Bibliothek mit Ihren Tests in Ihrem Theme oder Modul, anhand des <a href="/de/install/#custom-tests">Bibliotheksleitfadens zum Schreiben benutzerdefinierter Tests</a>.</p>
-            <p>Hier ist ein funktionierendes Beispiel aus Princeton für einen benutzerdefinierten Test, der Safe Links markiert. Beachten Sie, dass er über <code>Drupal.Ed11y.</code> auf die Editoria11y-Klasse zugreift.</p>
+            <p>Setzen Sie zunächst in der Modulkonfiguration die Option „Benutzerdefinierte Tests" auf 1, damit das
+              Modul auf die Tests wartet.</p>
+            <p>Erstellen Sie dann eine Drupal-JS-Bibliothek mit Ihren Tests in Ihrem Theme oder Modul, anhand des <a
+                href="/de/install/#custom-tests">Bibliotheksleitfadens zum Schreiben benutzerdefinierter Tests</a>.</p>
+            <p>Hier ist ein funktionierendes Beispiel aus Princeton für einen benutzerdefinierten Test, der Safe Links
+              markiert. Beachten Sie, dass er über <code>Drupal.Ed11y.</code> auf die Editoria11y-Klasse zugreift.</p>
             <pre class="language-javascript"><code><!--const psEd11yCustomTests = function() {
 
   // 1.
@@ -396,45 +526,53 @@ var editoria11yOptions = function(options) {
   document.dispatchEvent(allDone);
 };--></code></pre>
 
-            </section>
-          </div>
+          </section>
         </div>
       </div>
-    </main>
-    <footer class="container col-lg-12 mx-auto pt-3 text-body-secondary text-center text-md-start">
+    </div>
+  </main>
+  <footer class="container col-lg-12 mx-auto pt-3 text-body-secondary text-center text-md-start">
     <div class="container">
       <div class="footer-nav mt-5 pt-5 text-center"><a class="btn btn-primary btn-lg" href="/de/">Über uns</a> <a
           class="btn btn-primary btn-lg" href="/de/features">Funktionen</a> <a class="btn btn-primary btn-lg"
-          href="/de/demo">Demo</a> <a class="btn btn-primary btn-lg" aria-current="page" href="/de/license">Preise &amp; Beiträge</a></div>
+          href="/de/demo">Demo</a> <a class="btn btn-primary btn-lg" aria-current="page" href="/de/license">Preise &amp;
+          Beiträge</a></div>
       <div class="footer">
-        <a href="https://github.com/itmaybejj/editoria11y"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-git" viewBox="0 0 16 16">
-              <path d="M15.698 7.287 8.712.302a1.03 1.03 0 0 0-1.457 0l-1.45 1.45 1.84 1.84a1.223 1.223 0 0 1 1.55 1.56l1.773 1.774a1.224 1.224 0 0 1 1.267 2.025 1.226 1.226 0 0 1-2.002-1.334L8.58 5.963v4.353a1.226 1.226 0 1 1-1.008-.036V5.887a1.226 1.226 0 0 1-.666-1.608L5.093 2.465l-4.79 4.79a1.03 1.03 0 0 0 0 1.457l6.986 6.986a1.03 1.03 0 0 0 1.457 0l6.953-6.953a1.03 1.03 0 0 0 0-1.457"/>
-            </svg> <strong>Bibliothek</strong></a>
-        <a href="https://github.com/itmaybejj/editoria11y/discussions"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chat-right-heart-fill" viewBox="0 0 16 16">
-              <path d="M16 2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h9.586a1 1 0 0 1 .707.293l2.853 2.853a.5.5 0 0 0 .854-.353zM8 3.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132"/>
-            </svg> <strong>Forum</strong></a>
-        <a href="https://github.com/itmaybejj/editoria11y/issues"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-patch-plus-fill" viewBox="0 0 16 16">
-              <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01zM8.5 6v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 1 0"/>
-            </svg> <strong>Issues</strong></a>
-        <a href="/de/contacts"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-person-lines-fill" height="24" width="24" viewBox="0 0 16 18">
-              <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z"></path>
-            </svg> <strong>Kontakt</strong></a>
+        <a href="https://github.com/itmaybejj/editoria11y"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+            height="20" fill="currentColor" class="bi bi-git" viewBox="0 0 16 16">
+            <path
+              d="M15.698 7.287 8.712.302a1.03 1.03 0 0 0-1.457 0l-1.45 1.45 1.84 1.84a1.223 1.223 0 0 1 1.55 1.56l1.773 1.774a1.224 1.224 0 0 1 1.267 2.025 1.226 1.226 0 0 1-2.002-1.334L8.58 5.963v4.353a1.226 1.226 0 1 1-1.008-.036V5.887a1.226 1.226 0 0 1-.666-1.608L5.093 2.465l-4.79 4.79a1.03 1.03 0 0 0 0 1.457l6.986 6.986a1.03 1.03 0 0 0 1.457 0l6.953-6.953a1.03 1.03 0 0 0 0-1.457" />
+          </svg> <strong>Bibliothek</strong></a>
+        <a href="https://github.com/itmaybejj/editoria11y/discussions"><svg xmlns="http://www.w3.org/2000/svg"
+            width="20" height="20" fill="currentColor" class="bi bi-chat-right-heart-fill" viewBox="0 0 16 16">
+            <path
+              d="M16 2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h9.586a1 1 0 0 1 .707.293l2.853 2.853a.5.5 0 0 0 .854-.353zM8 3.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132" />
+          </svg> <strong>Forum</strong></a>
+        <a href="https://github.com/itmaybejj/editoria11y/issues"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+            height="20" fill="currentColor" class="bi bi-patch-plus-fill" viewBox="0 0 16 16">
+            <path
+              d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01zM8.5 6v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 1 0" />
+          </svg> <strong>Issues</strong></a>
+        <a href="/de/contacts"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+            class="bi bi-person-lines-fill" height="24" width="24" viewBox="0 0 16 18">
+            <path
+              d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z">
+            </path>
+          </svg> <strong>Kontakt</strong></a>
       </div>
       <div class="col col-12 subfooter">
         <a href="/de/privacy-policy">Datenschutzerklärung</a>
         <a href="/de/cookie-policy">Cookie-Richtlinie</a>
         <a href="/de/terms-of-use">Nutzungsbedingungen</a>
         <a href="/de/legal-notice">Impressum</a>
-        &copy; Editoria11y 2026
+        &copy; 2026 Editoria11y LLC
       </div>
     </div>
   </footer>
-    <script
-      src="/assets/bootstrap/js/bootstrap.bundle.min.js"
-      class="astro-vvvwv3sm"
-    ></script>
-    <script src="/lang/i18n.js"></script>
-    <script src="/assets/theme.js"></script>
-    <script src="/assets/prism/prism.js"></script>
-  </body>
+  <script src="/assets/bootstrap/js/bootstrap.bundle.min.js" class="astro-vvvwv3sm"></script>
+  <script src="/lang/i18n.js"></script>
+  <script src="/assets/theme.js"></script>
+  <script src="/assets/prism/prism.js"></script>
+</body>
+
 </html>

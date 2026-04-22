@@ -1,301 +1,402 @@
 <!doctype html>
 <html lang="de" data-bs-theme="light">
-  <head>
-<link rel="icon" type="image/png" href="/assets/favicons/favicon-512x512.png" sizes="512x512" />
-    <link rel="icon" type="image/png" href="/assets/favicons/favicon-192x192.png" sizes="192x192" />
-    <link rel="icon" type="image/png" href="/assets/favicons/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="/assets/favicons/favicon.svg" />
-    <link rel="shortcut icon" href="/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <meta charset="utf-8" />
-    <title>Add-ons — Editoria11y</title>
-    <link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="/assets/theme.css" rel="stylesheet" />
-    <meta name="theme-color" content="#712cf9" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-  </head>
-  <body>
-    <header>
-      <nav class="navbar navbar-expand-md">
-        <div class="container col-sm-12 mx-auto">
-          <a href="/de/" class="d-flex align-items-center  navbar-brand">
-            <svg class="logo-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="-.75 -3.5 10.1699 19.1777"><path fill="currentColor" d="M3.7031,10.5527c-.3633-.6562-.6426-1.1387-.8379-1.4473l-.3105-.4863-.2344-.3574c-.5117-.7969-1.0449-1.4551-1.5996-1.9746.3164-.2617.6113-.3926.8848-.3926.3359,0,.6348.123.8965.3691s.5918.7148.9902,1.4062c.4531-1.4727,1.0293-2.8691,1.7285-4.1895.3867-.7188.7314-1.2021,1.0342-1.4502s.7041-.3721,1.2041-.3721c.2656,0,.5938.041.9844.123-1.0039.8086-1.8066,1.7695-2.4082,2.8828s-1.3789,3.0762-2.332,5.8887Z"/></svg> Editoria<span style="margin-left: -1px;">11</span>y
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Navigation umschalten">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-            <div class="offcanvas-header">
-              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Editora11y</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Schließen"></button>
-            </div>
-            <div class="offcanvas-body">
-              <ul class="navbar-nav justify-content-end flex-grow-1 nav-pills">
-              </ul>
-            </div>
+
+<head>
+  <link rel="icon" type="image/png" href="/assets/favicons/favicon-512x512.png" sizes="512x512" />
+  <link rel="icon" type="image/png" href="/assets/favicons/favicon-192x192.png" sizes="192x192" />
+  <link rel="icon" type="image/png" href="/assets/favicons/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/assets/favicons/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <meta charset="utf-8" />
+  <title>Add-ons — Editoria11y</title>
+  <link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="/assets/theme.css" rel="stylesheet" />
+  <meta name="theme-color" content="#712cf9" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-md">
+      <div class="container col-sm-12 mx-auto">
+        <a href="/de/" class="d-flex align-items-center  navbar-brand">
+          <svg class="logo-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+            viewBox="-.75 -3.5 10.1699 19.1777">
+            <path fill="currentColor"
+              d="M3.7031,10.5527c-.3633-.6562-.6426-1.1387-.8379-1.4473l-.3105-.4863-.2344-.3574c-.5117-.7969-1.0449-1.4551-1.5996-1.9746.3164-.2617.6113-.3926.8848-.3926.3359,0,.6348.123.8965.3691s.5918.7148.9902,1.4062c.4531-1.4727,1.0293-2.8691,1.7285-4.1895.3867-.7188.7314-1.2021,1.0342-1.4502s.7041-.3721,1.2041-.3721c.2656,0,.5938.041.9844.123-1.0039.8086-1.8066,1.7695-2.4082,2.8828s-1.3789,3.0762-2.332,5.8887Z" />
+          </svg> Editoria<span style="margin-left: -1px;">11</span>y
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar" aria-label="Navigation umschalten">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Editora11y</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Schließen"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 nav-pills">
+            </ul>
           </div>
         </div>
-      </nav>
+      </div>
+    </nav>
     <div id="lang-picker"></div>
-    </header>
+  </header>
   <main class="container col-lg-12 mx-auto py-5">
     <div class="row docs">
       <div class="col-12 col-md-5 col-lg-4 mb-5">
         <div id="on-this-page" class="list-group ms-2 ms-lg-5 position-sticky top-0 pt-3">
         </div>
       </div>
-      <div class="col-12 col-md-7 col-lg-8 pt-3" data-bs-spy="scroll" data-bs-target="#on-this-page" data-bs-smooth-scroll="true" tabindex="0">
-        
-        
+      <div class="col-12 col-md-7 col-lg-8 pt-3" data-bs-spy="scroll" data-bs-target="#on-this-page"
+        data-bs-smooth-scroll="true" tabindex="0">
+
+
 
         <h2 class="pt-4" id="demo">Demo</h2>
-          <p class="fs-5">Sehen Sie sich eine <a href="https://youtu.be/uYvNYPg38nU?si=6YANYrJpVzNAJYDl&t=260">Videoeinführung in die Geschichte und Funktionen des Prüfers</a> an,
-            oder bearbeiten Sie den Demo-Inhalt unten, öffnen und schließen Sie Warnungen,
-            und nutzen Sie die Symbolleiste <span style="text-wrap: nowrap;">(<img src="/assets/images/3x-toolbar" class="inline-block" style="width: 5rem; height: auto;" alt="Screenshot der Editoria11y-Symbolleiste mit 4 Fehlern." width="97" height="50" loading="lazy">)</span> um die Überschriftenstruktur anzuzeigen. Diese Demo umfasst sowohl die Kerntests als auch das CSA-Paket.</p>
-          <p class="fs-5 mb-5 pb-5">Diese Demo verwendet einen TinyMCE-Editor. Editoria11y ist mit den meisten Texteditoren kompatibel und verfügt über fertige Implementierungen für CKEditor und Gutenberg in WordPress und Drupal.</p>
-            <div id="ed11y-demo" class="p-5" contenteditable="">
-            <section id="headings">
+        <p class="fs-5">Sehen Sie sich eine <a
+            href="https://youtu.be/uYvNYPg38nU?si=6YANYrJpVzNAJYDl&t=260">Videoeinführung in die Geschichte und
+            Funktionen des Prüfers</a> an,
+          oder bearbeiten Sie den Demo-Inhalt unten, öffnen und schließen Sie Warnungen,
+          und nutzen Sie die Symbolleiste <span style="text-wrap: nowrap;">(<img src="/assets/images/3x-toolbar"
+              class="inline-block" style="width: 5rem; height: auto;"
+              alt="Screenshot der Editoria11y-Symbolleiste mit 4 Fehlern." width="97" height="50"
+              loading="lazy">)</span> um die Überschriftenstruktur anzuzeigen. Diese Demo umfasst sowohl die Kerntests
+          als auch das CSA-Paket.</p>
+        <p class="fs-5 mb-5 pb-5">Diese Demo verwendet einen TinyMCE-Editor. Editoria11y ist mit den meisten
+          Texteditoren kompatibel und verfügt über fertige Implementierungen für CKEditor und Gutenberg in WordPress und
+          Drupal.</p>
+        <div id="ed11y-demo" class="p-5" contenteditable="">
+          <section id="headings">
 
-              <h3 class="pt-1">Überschriften</h3>
+            <h3 class="pt-1">Überschriften</h3>
 
-              <p>Diese Überschrift hat eine Ebene übersprungen:</p>
-              <div class="positive"><h6 id="this-h6-should-have-been-an-h3">Oops</h6></div>
+            <p>Diese Überschrift hat eine Ebene übersprungen:</p>
+            <div class="positive">
+              <h6 id="this-h6-should-have-been-an-h3">Oops</h6>
+            </div>
 
-              <p>Diese Überschrift enthält überhaupt keinen Text:</p>
-              <div class="positive"><h4 class="empty-example"> </h4>
-              </div>
+            <p>Diese Überschrift enthält überhaupt keinen Text:</p>
+            <div class="positive">
+              <h4 class="empty-example"> </h4>
+            </div>
 
-              <p>Dieses kurze Blockzitat könnte eine Überschrift sein:</p>
-              <div class="positive"><blockquote>Ich bin eine falsche Überschrift</blockquote></div>
+            <p>Dieses kurze Blockzitat könnte eine Überschrift sein:</p>
+            <div class="positive">
+              <blockquote>Ich bin eine falsche Überschrift</blockquote>
+            </div>
 
-              <p>Dieser vollständig fett formatierte Absatz könnte eine Überschrift sein:</p>
-              <p class="positive"><strong>Ich bin eine falsche Überschrift</strong></p>
+            <p>Dieser vollständig fett formatierte Absatz könnte eine Überschrift sein:</p>
+            <p class="positive"><strong>Ich bin eine falsche Überschrift</strong></p>
 
-              <p>Diese Überschrift ist sehr lang:</p>
-              <div class="positive"><h4>Überschriften und Unterüberschriften bilden ein navigierbares Inhaltsverzeichnis für Hilfstechnologien. Die Zahlen geben die Einrückungstiefe in einer Verschachtelungsbeziehung an. Sehr lange Überschriften bedeuten wahrscheinlich, dass der Autor zu viel in der Überschrift sagt.</h4></div>
+            <p>Diese Überschrift ist sehr lang:</p>
+            <div class="positive">
+              <h4>Überschriften und Unterüberschriften bilden ein navigierbares Inhaltsverzeichnis für
+                Hilfstechnologien. Die Zahlen geben die Einrückungstiefe in einer Verschachtelungsbeziehung an. Sehr
+                lange Überschriften bedeuten wahrscheinlich, dass der Autor zu viel in der Überschrift sagt.</h4>
+            </div>
 
-            </section>
+          </section>
 
 
-            <section id="text-alternatives">
-              <h3 data-section="text-alternatives">Textalternativen für Bilder</h3>
+          <section id="text-alternatives">
+            <h3 data-section="text-alternatives">Textalternativen für Bilder</h3>
 
-              <p>Diese Überschrift besteht aus einem Textbild ohne Alternativtext:</p>
-              <div class="positive">
-                <h4><img loading="lazy" alt="" src="/assets/images/px20240813sm.jpg" ></h4>
-              </div>
+            <p>Diese Überschrift besteht aus einem Textbild ohne Alternativtext:</p>
+            <div class="positive">
+              <h4><img loading="lazy" alt="" src="/assets/images/px20240813sm.jpg"></h4>
+            </div>
 
-              <p>Bild ohne alt-Attribut:</p>
-              <p class="positive"><img loading="lazy" src="/assets/images/px20240813sm.jpg"></p>
+            <p>Bild ohne alt-Attribut:</p>
+            <p class="positive"><img loading="lazy" src="/assets/images/px20240813sm.jpg"></p>
 
-              <p>Bild mit einem ungültigen alt-Attribut, z. B. <code class="language-plaintext highlighter-rouge">alt=”'”</code></p>
+            <p>Bild mit einem ungültigen alt-Attribut, z. B. <code
+                class="language-plaintext highlighter-rouge">alt=”'”</code></p>
 
-              <p class="positive"><img loading="lazy" alt="'" src="/assets/images/px20240813sm.jpg"></p>
+            <p class="positive"><img loading="lazy" alt="'" src="/assets/images/px20240813sm.jpg"></p>
 
-              <p id="image-with-a-filename-as-an-alt">Bild mit einem Dateinamen als Alternativtext</p>
+            <p id="image-with-a-filename-as-an-alt">Bild mit einem Dateinamen als Alternativtext</p>
 
-              <p class="positive"><img loading="lazy" alt="filename.jpg" src="/assets/images/px20240813sm.jpg"></p>
+            <p class="positive"><img loading="lazy" alt="filename.jpg" src="/assets/images/px20240813sm.jpg"></p>
 
-              <p id="image-with-redundant-text-in-its-alt">Bild mit redundantem Text im Alternativtext, z. B. „Bild von:”</p>
+            <p id="image-with-redundant-text-in-its-alt">Bild mit redundantem Text im Alternativtext, z. B. „Bild von:”
+            </p>
 
-              <p class="positive"><img loading="lazy" alt="Bild eines Hundes." src="/assets/images/px20240813sm.jpg"></p>
+            <p class="positive"><img loading="lazy" alt="Bild eines Hundes." src="/assets/images/px20240813sm.jpg"></p>
 
-              <p id="linked-image-with-redundant-text-in-its-alt">Verlinktes Bild mit redundantem Text im Alternativtext, z. B. „Bild von:”</p>
+            <p id="linked-image-with-redundant-text-in-its-alt">Verlinktes Bild mit redundantem Text im Alternativtext,
+              z. B. „Bild von:”</p>
 
-              <p class="positive"><a href="./editable.htm"><img loading="lazy" alt="Bild eines Hundes." src="/assets/images/px20240813sm.jpg"></a></p>
+            <p class="positive"><a href="./editable.htm"><img loading="lazy" alt="Bild eines Hundes."
+                  src="/assets/images/px20240813sm.jpg"></a></p>
 
-              <p id="image-with-placeholder-alt">Bild mit Platzhalter-Alternativtext:</p>
-              <p class="positive"><img loading="lazy" alt="TBD" src="/assets/images/px20240813sm.jpg"></p>
+            <p id="image-with-placeholder-alt">Bild mit Platzhalter-Alternativtext:</p>
+            <p class="positive"><img loading="lazy" alt="TBD" src="/assets/images/px20240813sm.jpg"></p>
 
-              <p id="linked-image-with-placeholder-alt"><strong>Verlinktes</strong> Bild mit Platzhalter-Alternativtext:</p>
-              <p class="positive"><a href="./editable.htm"><img loading="lazy" alt="TBD" src="/assets/images/px20240813sm.jpg"></a></p>
+            <p id="linked-image-with-placeholder-alt"><strong>Verlinktes</strong> Bild mit Platzhalter-Alternativtext:
+            </p>
+            <p class="positive"><a href="./editable.htm"><img loading="lazy" alt="TBD"
+                  src="/assets/images/px20240813sm.jpg"></a></p>
 
-              <p id="image-with-machine-alt">Bild mit maschinencodiertem Alternativtext:</p>
-              <p class="positive"><img loading="lazy" alt="$700VIDEOSABOUTTURTLESALL2SECONDSLONG" src="/assets/images/px20240813sm.jpg"></p>
+            <p id="image-with-machine-alt">Bild mit maschinencodiertem Alternativtext:</p>
+            <p class="positive"><img loading="lazy" alt="$700VIDEOSABOUTTURTLESALL2SECONDSLONG"
+                src="/assets/images/px20240813sm.jpg"></p>
 
-              <p id="linked-image-with-machine-alt">Verlinktes Bild mit maschinencodiertem Alternativtext:</p>
-              <p class="positive"><a href="./editable.htm"><img loading="lazy" alt="$700VIDEOSABOUTTURTLESALL2SECONDSLONG" src="/assets/images/px20240813sm.jpg"></a></p>
+            <p id="linked-image-with-machine-alt">Verlinktes Bild mit maschinencodiertem Alternativtext:</p>
+            <p class="positive"><a href="./editable.htm"><img loading="lazy" alt="$700VIDEOSABOUTTURTLESALL2SECONDSLONG"
+                  src="/assets/images/px20240813sm.jpg"></a></p>
 
-              <p id="image-with-very-long-alt-text">Bild mit sehr langem Alternativtext:</p>
+            <p id="image-with-very-long-alt-text">Bild mit sehr langem Alternativtext:</p>
 
-              <p class="positive"><img loading="lazy" alt="Schau dir diesen Hund an. Dieser Hund ist so glücklich. Dieser Hund durfte spazieren gehen, und der Spaziergang führte zu einem See, wo es alle möglichen faszinierenden Gerüche gab. Was für ein toller Tag für diesen Hund." src="/assets/images/px20240813sm.jpg"></p>
+            <p class="positive"><img loading="lazy"
+                alt="Schau dir diesen Hund an. Dieser Hund ist so glücklich. Dieser Hund durfte spazieren gehen, und der Spaziergang führte zu einem See, wo es alle möglichen faszinierenden Gerüche gab. Was für ein toller Tag für diesen Hund."
+                src="/assets/images/px20240813sm.jpg"></p>
 
-              <p id="images-in-links-where-the-alt-text-may-be-describing-the-image-instead-of-the-link">Bilder in Links, bei denen der Alternativtext möglicherweise das Bild statt des Links beschreibt</p>
+            <p id="images-in-links-where-the-alt-text-may-be-describing-the-image-instead-of-the-link">Bilder in Links,
+              bei denen der Alternativtext möglicherweise das Bild statt des Links beschreibt</p>
 
-              <p class="positive"><a  href="https://www.youtube.com/watch?v=DLzxrzFCyOs">Dieser Link enthält Text und ein Bild.<img loading="lazy" alt="Ein schönes graues Rechteck" src="/assets/images/px20240813sm.jpg"></a></p>
+            <p class="positive"><a href="https://www.youtube.com/watch?v=DLzxrzFCyOs">Dieser Link enthält Text und ein
+                Bild.<img loading="lazy" alt="Ein schönes graues Rechteck" src="/assets/images/px20240813sm.jpg"></a>
+            </p>
 
-              <p id="images-in-links-decorative">Jedes verlinkte Bild (Test standardmäßig deaktiviert)</p>
-              <p class="positive"><a href="https://www.youtube.com/watch?v=DLzxrzFCyOs"><img loading="lazy" alt="Hallo zusammen" src="/assets/images/px20240813sm.jpg"></a></p>
+            <p id="images-in-links-decorative">Jedes verlinkte Bild (Test standardmäßig deaktiviert)</p>
+            <p class="positive"><a href="https://www.youtube.com/watch?v=DLzxrzFCyOs"><img loading="lazy"
+                  alt="Hallo zusammen" src="/assets/images/px20240813sm.jpg"></a></p>
 
-              <p>Bild in einer Abbildung als dekorativ markiert:</p>
-              <figure class="positive">
-                <img loading="lazy" alt="" src="/assets/images/px20240813sm.jpg">
-                <figcaption>Bildunterschrift ist vorhanden.</figcaption>
-              </figure>
+            <p>Bild in einer Abbildung als dekorativ markiert:</p>
+            <figure class="positive">
+              <img loading="lazy" alt="" src="/assets/images/px20240813sm.jpg">
+              <figcaption>Bildunterschrift ist vorhanden.</figcaption>
+            </figure>
 
-              <p>Bild in einer Abbildung mit einem Alternativtext, der mit der Bildunterschrift identisch ist:</p>
-              <figure class="positive">
-                <img loading="lazy" alt="Bildunterschrift ist identisch mit Alternativtext" src="/assets/images/px20240813sm.jpg">
-                <figcaption>Bildunterschrift ist identisch mit Alternativtext</figcaption>
-              </figure>
-              <p>Bild in einem Karussell ohne Alternativtext:</p>
-              <div class="positive">
-                <img loading="lazy" alt="" class="carousel" src="/assets/images/px20240813sm.jpg">
-              </div>
-            </section>
-            <section id="contrast">
-              <h3 data-section="contrast">Kontrast</h3>
-              <p>Unleserliche Farbkombination:</p>
-              <div class="positive"><p style="background: #ccc; color: #ddd;">Sehr gut lesbar.</p></div>
-              <p>Farbe erfordert eine manuelle Prüfung:</p>
-              <div class="positive"><p style="background: linear-gradient(45deg,#ccc 25%,#0000 25% 75%,#ccc 75%,#ccc),linear-gradient(45deg,#ccc 25%,#0000 25% 75%,#ccc 75%,#ccc)">Und nicht berechenbar.</p></div>
-              <div class="positive"><label>Eingabefeld mit zu geringem Kontrast
+            <p>Bild in einer Abbildung mit einem Alternativtext, der mit der Bildunterschrift identisch ist:</p>
+            <figure class="positive">
+              <img loading="lazy" alt="Bildunterschrift ist identisch mit Alternativtext"
+                src="/assets/images/px20240813sm.jpg">
+              <figcaption>Bildunterschrift ist identisch mit Alternativtext</figcaption>
+            </figure>
+            <p>Bild in einem Karussell ohne Alternativtext:</p>
+            <div class="positive">
+              <img loading="lazy" alt="" class="carousel" src="/assets/images/px20240813sm.jpg">
+            </div>
+          </section>
+          <section id="contrast">
+            <h3 data-section="contrast">Kontrast</h3>
+            <p>Unleserliche Farbkombination:</p>
+            <div class="positive">
+              <p style="background: #ccc; color: #ddd;">Sehr gut lesbar.</p>
+            </div>
+            <p>Farbe erfordert eine manuelle Prüfung:</p>
+            <div class="positive">
+              <p
+                style="background: linear-gradient(45deg,#ccc 25%,#0000 25% 75%,#ccc 75%,#ccc),linear-gradient(45deg,#ccc 25%,#0000 25% 75%,#ccc 75%,#ccc)">
+                Und nicht berechenbar.</p>
+            </div>
+            <div class="positive"><label>Eingabefeld mit zu geringem Kontrast
                 <input class="form-text" type="text" style="color: #777;"></label></div>
 
-              <style>
-                #unsupported-placeholder::placeholder {
-                  color: color(rec2020 0.9 0.4 0.2);
-                }
-              </style>
+            <style>
+              #unsupported-placeholder::placeholder {
+                color: color(rec2020 0.9 0.4 0.2);
+              }
+            </style>
 
-              <label for="unsupported-placeholder">Farbe des Platzhalters kann nicht berechnet werden</label>
-              <div class="positive" style="background: transparent;"><input type="text" id="unsupported-placeholder" placeholder="Rec2020-Farbraum"></div>
-
-
-              <p>SVG-Grafik mit zu geringem Kontrast</p>
-              <div class="positive"><svg style="width: 16px; height: 16px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path fill="#999" d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376C296.3 401.1 253.9 416 208 416 93.1 416 0 322.9 0 208S93.1 0 208 0 416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg></div>
-
-              <p>SVG-Grafik, bei der der Kontrast manuell geprüft werden muss</p>
-              <div class="positive" style="background: linear-gradient(45deg,#ccc 45%,#0000 45% 75%,#ccc 75%,#ccc),linear-gradient(145deg,#ccc 45%,#0000 45% 75%,#ccc 75%,#ccc)"><svg style="width: 16px; height: 16px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path fill="color(rec2020 0.9 0.4 0.2)" d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376C296.3 401.1 253.9 416 208 416 93.1 416 0 322.9 0 208S93.1 0 208 0 416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg></div>
+            <label for="unsupported-placeholder">Farbe des Platzhalters kann nicht berechnet werden</label>
+            <div class="positive" style="background: transparent;"><input type="text" id="unsupported-placeholder"
+                placeholder="Rec2020-Farbraum"></div>
 
 
-            </section>
-            <section id="embed-media">
-              <h3 data-section="embed-media">Einbettungen &amp; Medien</h3>
+            <p>SVG-Grafik mit zu geringem Kontrast</p>
+            <div class="positive"><svg style="width: 16px; height: 16px;" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                <path fill="#999"
+                  d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376C296.3 401.1 253.9 416 208 416 93.1 416 0 322.9 0 208S93.1 0 208 0 416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
+              </svg></div>
 
-              <p>Video, das zur manuellen Prüfung der Untertitelung markiert wurde:</p>
-              <div class="positive" style="width: 560px; aspect-ratio: 560 / 315; max-width: 100%; cursor: not-allowed;">
-                <iframe width="560" height="315" inert="" src="https://www.youtube-nocookie.com/embed/QGsevnbItdU?si=W_b2i2o_n5v1ArvA" style="width: 560px; aspect-ratio: 560 / 315; max-width: 100%; cursor: not-allowed;" title="YouTube: So wird es gemacht. Wiedergabe ist deaktiviert." sandbox="allow-scripts allow-same-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="origin" allowfullscreen></iframe>
-                <div><small><em>Wiedergabe deaktiviert, um Cookies zu verhindern.</em></small></div>
+            <p>SVG-Grafik, bei der der Kontrast manuell geprüft werden muss</p>
+            <div class="positive"
+              style="background: linear-gradient(45deg,#ccc 45%,#0000 45% 75%,#ccc 75%,#ccc),linear-gradient(145deg,#ccc 45%,#0000 45% 75%,#ccc 75%,#ccc)">
+              <svg style="width: 16px; height: 16px;" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                <path fill="color(rec2020 0.9 0.4 0.2)"
+                  d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376C296.3 401.1 253.9 416 208 416 93.1 416 0 322.9 0 208S93.1 0 208 0 416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
+              </svg></div>
+
+
+          </section>
+          <section id="embed-media">
+            <h3 data-section="embed-media">Einbettungen &amp; Medien</h3>
+
+            <p>Video, das zur manuellen Prüfung der Untertitelung markiert wurde:</p>
+            <div class="positive" style="width: 560px; aspect-ratio: 560 / 315; max-width: 100%; cursor: not-allowed;">
+              <iframe width="560" height="315" inert=""
+                src="https://www.youtube-nocookie.com/embed/QGsevnbItdU?si=W_b2i2o_n5v1ArvA"
+                style="width: 560px; aspect-ratio: 560 / 315; max-width: 100%; cursor: not-allowed;"
+                title="YouTube: So wird es gemacht. Wiedergabe ist deaktiviert."
+                sandbox="allow-scripts allow-same-origin"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="origin" allowfullscreen></iframe>
+              <div><small><em>Wiedergabe deaktiviert, um Cookies zu verhindern.</em></small></div>
+            </div>
+
+            <p>Audio benötigt ein Transkript:</p>
+            <div class="positive">
+              <div style="border: 1px solid #444; background: #ccc; width: 320px; height: 60px;"><audio
+                  style="height: 60px;"></audio>
               </div>
+            </div>
 
-              <p>Audio benötigt ein Transkript:</p>
-              <div class="positive">
-                <div style="border: 1px solid #444; background: #ccc; width: 320px; height: 60px;"><audio style="height: 60px;"></audio>
-                </div>
-              </div>
+            <p>Iframe ohne Titel, der zudem eine manuelle Prüfung erfordert:</p>
+            <div class="positive">
+              <iframe data-needs-src=""></iframe>
+            </div>
 
-              <p>Iframe ohne Titel, der zudem eine manuelle Prüfung erfordert:</p>
-              <div class="positive">
-                <iframe data-needs-src=""></iframe>
-              </div>
+            <p>Nicht fokussierbarer Iframe:</p>
+            <div class="positive">
+              <iframe title="Beispiel" sandbox="" tabindex="-1" data-needs-src=""></iframe>
+            </div>
 
-              <p>Nicht fokussierbarer Iframe:</p>
-              <div class="positive">
-                <iframe title="Beispiel" sandbox="" tabindex="-1" data-needs-src=""></iframe>
-              </div>
-
-              <p>Verschachtelte interaktive Komponenten</p>
-              <div class="positive">
-                <details><summary>Accordion</summary>
-                  <details><summary>Accordion</summary>Surprise!</details>
+            <p>Verschachtelte interaktive Komponenten</p>
+            <div class="positive">
+              <details>
+                <summary>Accordion</summary>
+                <details>
+                  <summary>Accordion</summary>Surprise!
                 </details>
-              </div>
-            </section>
-            <section id="meaningful-links">
-              <h3 data-section="meaningful-links">Aussagekräftige Links</h3>
+              </details>
+            </div>
+          </section>
+          <section id="meaningful-links">
+            <h3 data-section="meaningful-links">Aussagekräftige Links</h3>
 
-              <p id="links-with-no-text-at-all">Links ohne jeglichen Text</p>
-              <p class="positive"><a href="https://www.youtube.com/watch?v=DLzxrzFCyOs"
-                                     style="display: inline-block; width: 3rem; border-bottom: 1px solid;"></a> Leere Links</p>
+            <p id="links-with-no-text-at-all">Links ohne jeglichen Text</p>
+            <p class="positive"><a href="https://www.youtube.com/watch?v=DLzxrzFCyOs"
+                style="display: inline-block; width: 3rem; border-bottom: 1px solid;"></a> Leere Links</p>
 
-              <p id="links-titled-with-a-url">Links, die nur mit einer URL beschriftet sind:</p>
-              <p class="positive"><a  href="https://www.youtube.com/watch?v=DLzxrzFCyOs">https://www.youtube.com/watch?v=DLzxrzFCyOs</a></p>
+            <p id="links-titled-with-a-url">Links, die nur mit einer URL beschriftet sind:</p>
+            <p class="positive"><a
+                href="https://www.youtube.com/watch?v=DLzxrzFCyOs">https://www.youtube.com/watch?v=DLzxrzFCyOs</a></p>
 
-              <p id="links-titled-with-a-symbol">Links, die nur mit Symbolen beschriftet sind:</p>
-              <p class="positive"><a href="https://www.youtube.com/watch?v=DLzxrzFCyOs">↣</a></p>
+            <p id="links-titled-with-a-symbol">Links, die nur mit Symbolen beschriftet sind:</p>
+            <p class="positive"><a href="https://www.youtube.com/watch?v=DLzxrzFCyOs">↣</a></p>
 
-              <p>Links mit gleichen Namen führen zu verschiedenen Zielen</p>
-              <p class="positive"><a href="https://www.youtube.com/watch?v=fjOeJssZX_Q">Schildkröten</a> <a href="https://www.youtube.com/watch?v=cWppAbqm9I8">Schildkröten</a></p>
+            <p>Links mit gleichen Namen führen zu verschiedenen Zielen</p>
+            <p class="positive"><a href="https://www.youtube.com/watch?v=fjOeJssZX_Q">Schildkröten</a> <a
+                href="https://www.youtube.com/watch?v=cWppAbqm9I8">Schildkröten</a></p>
 
-              <p id="links-titled-with-doi">Links, die nur mit einer DOI-Nummer beschriftet sind:</p>
-              <p class="positive"><a href="https://doi.org/10.1145/3493612.3520468">doi.org/10.1145/3493612.3520468</a></p>
+            <p id="links-titled-with-doi">Links, die nur mit einer DOI-Nummer beschriftet sind:</p>
+            <p class="positive"><a href="https://doi.org/10.1145/3493612.3520468">doi.org/10.1145/3493612.3520468</a>
+            </p>
 
-              <p id="links-titled-with-click">Links mit nichtssagenden Beschriftungen:</p>
-              <p class="positive"><a  href="https://www.youtube.com/watch?v=DLzxrzFCyOs" title="https://www.youtube.com/watch?v=DLzxrzFCyOs">Hier klicken</a></p>
+            <p id="links-titled-with-click">Links mit nichtssagenden Beschriftungen:</p>
+            <p class="positive"><a href="https://www.youtube.com/watch?v=DLzxrzFCyOs"
+                title="https://www.youtube.com/watch?v=DLzxrzFCyOs">Hier klicken</a></p>
 
-              <p id="links-titled-with-empty">Verlinkte Symbole ohne Textalternativen:</p>
-              <p class="positive"><a href="https://www.youtube.com/watch?v=DLzxrzFCyOs"><svg style="width: 16px; height: 16px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376C296.3 401.1 253.9 416 208 416 93.1 416 0 322.9 0 208S93.1 0 208 0 416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg></a></p>
+            <p id="links-titled-with-empty">Verlinkte Symbole ohne Textalternativen:</p>
+            <p class="positive"><a href="https://www.youtube.com/watch?v=DLzxrzFCyOs"><svg
+                  style="width: 16px; height: 16px;" xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 512 512"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                  <path
+                    d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376C296.3 401.1 253.9 416 208 416 93.1 416 0 322.9 0 208S93.1 0 208 0 416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
+                </svg></a></p>
 
-              <p id="links-that-open-in-a-new-window-without-an-external-link-icon-or-text-warning">Links, die ein neues Fenster öffnen, ohne ein Symbol für externe Links oder einen Texthinweis</p>
+            <p id="links-that-open-in-a-new-window-without-an-external-link-icon-or-text-warning">Links, die ein neues
+              Fenster öffnen, ohne ein Symbol für externe Links oder einen Texthinweis</p>
 
-              <p class="positive"><a href="https://www.youtube.com/watch?v=DLzxrzFCyOs" target="_blank">Hinweis für den „Öffnet-in”-Test.</a></p>
+            <p class="positive"><a href="https://www.youtube.com/watch?v=DLzxrzFCyOs" target="_blank">Hinweis für den
+                „Öffnet-in”-Test.</a></p>
 
-              <p id="links-to-PDF">Links zu PDFs</p>
-              <p class="positive"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ#.pdf" class="">Viel Spaß.</a></p>
+            <p id="links-to-PDF">Links zu PDFs</p>
+            <p class="positive"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ#.pdf" class="">Viel Spaß.</a></p>
 
-              <p id="links-to-doc">Links zu anderen Dokumenten</p>
-              <p class="positive"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ#.doc" class="">Ein falscher Dokument-Link.</a></p>
+            <p id="links-to-doc">Links zu anderen Dokumenten</p>
+            <p class="positive"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ#.doc" class="">Ein falscher
+                Dokument-Link.</a></p>
 
-              <p id="links-redundant">Links mit redundanten title-Attributen</p>
-              <p class="positive"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" title="Darüberfahren">Darüberfahren</a></p>
+            <p id="links-redundant">Links mit redundanten title-Attributen</p>
+            <p class="positive"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                title="Darüberfahren">Darüberfahren</a></p>
 
-              <p>Links mit Attributen, die sie aus dem Tab-Index entfernen:</p>
-              <p class="positive"><a href="./editable.htm" aria-hidden="true">Aria-hidden-Links ohne negativen Tabindex.</a></p>
+            <p>Links mit Attributen, die sie aus dem Tab-Index entfernen:</p>
+            <p class="positive"><a href="./editable.htm" aria-hidden="true">Aria-hidden-Links ohne negativen
+                Tabindex.</a></p>
 
-              <p>Links mit aria-labelledby-Attributen, die auf Elemente ohne Text verweisen:</p>
-              <p class="positive"><a href="./editable.htm" id="oops" aria-labelledby="oops"></a></p>
+            <p>Links mit aria-labelledby-Attributen, die auf Elemente ohne Text verweisen:</p>
+            <p class="positive"><a href="./editable.htm" id="oops" aria-labelledby="oops"></a></p>
 
-              <p>Links mit generischen Wörtern in ihrem Aria-Label:</p>
-              <p class="positive"><a href="www.google.com/" aria-label="has aria label">mehr erfahren</a></p>
+            <p>Links mit generischen Wörtern in ihrem Aria-Label:</p>
+            <p class="positive"><a href="www.google.com/" aria-label="has aria label">mehr erfahren</a></p>
 
-              <p>Verlinktes Bild ohne Alternativtext:</p>
-              <p class="positive"><a href="./editable.htm"><img loading="lazy" alt="" src="/assets/images/px20240813sm.jpg" class=""></a></p>
+            <p>Verlinktes Bild ohne Alternativtext:</p>
+            <p class="positive"><a href="./editable.htm"><img loading="lazy" alt=""
+                  src="/assets/images/px20240813sm.jpg" class=""></a></p>
 
-              <p>Verlinktes Bild mit unaussprechlichem Alternativtext:</p>
-              <p class="positive"><a href="./editable.htm"><img loading="lazy" alt="'" src="/assets/images/px20240813sm.jpg" class=""></a></p>
+            <p>Verlinktes Bild mit unaussprechlichem Alternativtext:</p>
+            <p class="positive"><a href="./editable.htm"><img loading="lazy" alt="'"
+                  src="/assets/images/px20240813sm.jpg" class=""></a></p>
 
-              <p>Verlinktes Bild ohne alt-Attribut:</p>
-              <p class="positive"><a href="./editable.htm"><img loading="lazy" src="/assets/images/px20240813sm.jpg" class=""></a></p>
+            <p>Verlinktes Bild ohne alt-Attribut:</p>
+            <p class="positive"><a href="./editable.htm"><img loading="lazy" src="/assets/images/px20240813sm.jpg"
+                  class=""></a></p>
 
-              <p>Verlinktes Bild ohne alt-Attribut in einem Link mit Text:</p>
-              <p class="positive"><a href="./editable.htm">Suche <img loading="lazy" src="/assets/images/px20240813sm.jpg" class=""></a></p>
+            <p>Verlinktes Bild ohne alt-Attribut in einem Link mit Text:</p>
+            <p class="positive"><a href="./editable.htm">Suche <img loading="lazy" src="/assets/images/px20240813sm.jpg"
+                  class=""></a></p>
 
-              <p>Verlinktes Bild mit nur einem Dateinamen als Alternativtext:</p>
-              <p class="positive"><a href="./editable.htm"><img loading="lazy" alt="http://jpg.gif" src="/assets/images/px20240813sm.jpg">
+            <p>Verlinktes Bild mit nur einem Dateinamen als Alternativtext:</p>
+            <p class="positive"><a href="./editable.htm"><img loading="lazy" alt="http://jpg.gif"
+                  src="/assets/images/px20240813sm.jpg">
               </a></p>
 
-              <p>Verlinktes Bild mit verdächtig langem Alternativtext:</p>
-              <p class="positive"><a href="./editable.htm"><img loading="lazy" alt="Schau dir diesen Hund an. Dieser Hund ist so glücklich. Dieser Hund durfte spazieren gehen, und der Spaziergang führte zu einem See, wo es alle möglichen faszinierenden Gerüche gab. Was für ein toller Tag für diesen Hund." src="/assets/images/px20240813sm.jpg">
+            <p>Verlinktes Bild mit verdächtig langem Alternativtext:</p>
+            <p class="positive"><a href="./editable.htm"><img loading="lazy"
+                  alt="Schau dir diesen Hund an. Dieser Hund ist so glücklich. Dieser Hund durfte spazieren gehen, und der Spaziergang führte zu einem See, wo es alle möglichen faszinierenden Gerüche gab. Was für ein toller Tag für diesen Hund."
+                  src="/assets/images/px20240813sm.jpg">
               </a></p>
 
-              <p>Fehlerhafte Seitenanker-Links</p>
-              <p class="positive">
-                <a href="#oh-no">Diese ID existiert nicht.</a>
-              </p>
+            <p>Fehlerhafte Seitenanker-Links</p>
+            <p class="positive">
+              <a href="#oh-no">Diese ID existiert nicht.</a>
+            </p>
 
-              <p>Links zum Entwicklungsserver</p>
-              <p class="positive">
-                <a href="https://tugboatqa.com">Oops</a>
-              </p>
+            <p>Links zum Entwicklungsserver</p>
+            <p class="positive">
+              <a href="https://tugboatqa.com">Oops</a>
+            </p>
 
-              <p>Doppelte Anker</p>
-              <p class="positive"><a id="dupe" href="#dupe">Anker 1</a> <a id="dupe" href="#dupe">Anker 2</a></p>
-            </section>
-            <section>
-              <h3 id="table-tests">Tabellen</h3>
+            <p>Doppelte Anker</p>
+            <p class="positive"><a id="dupe" href="#dupe">Anker 1</a> <a id="dupe" href="#dupe">Anker 2</a></p>
+          </section>
+          <section>
+            <h3 id="table-tests">Tabellen</h3>
 
-              <p id="tables-without-valid-headers">Tabellen ohne gültige Kopfzeilen</p>
+            <p id="tables-without-valid-headers">Tabellen ohne gültige Kopfzeilen</p>
 
-              <table class="positive"><tbody><tr><td>Eine Tabelle ohne TH-Kopfzeile ist ungültig</td><td class="positive"><h4 >Gliederungsüberschriften zählen nicht</h4></td><td class="negative"><p><strong>Inhaltsüberschriften-Test in Tabellen sollte deaktiviert sein</strong></p></td></tr></tbody></table>
+            <table class="positive">
+              <tbody>
+                <tr>
+                  <td>Eine Tabelle ohne TH-Kopfzeile ist ungültig</td>
+                  <td class="positive">
+                    <h4>Gliederungsüberschriften zählen nicht</h4>
+                  </td>
+                  <td class="negative">
+                    <p><strong>Inhaltsüberschriften-Test in Tabellen sollte deaktiviert sein</strong></p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
 
-              <table><thead>
-              <tr>
-                <th class="positive"></th>
-                <th class="negative">Leere Kopfzellen</th>
-              </tr>
+            <table>
+              <thead>
+                <tr>
+                  <th class="positive"></th>
+                  <th class="negative">Leere Kopfzellen</th>
+                </tr>
               </thead>
-                <tbody>
+              <tbody>
                 <tr class="negative">
                   <th>Ich habe gefunden</th>
                   <td>700 Videos über Schildkröten</td>
@@ -304,130 +405,152 @@
                   <th>Jedes</th>
                   <td>2 Sekunden lang</td>
                 </tr>
-                </tbody>
-              </table>
-            </section>
-            <section id="legibility">
-              <h3 data-section="legibility">Lesbarkeit</h3>
+              </tbody>
+            </table>
+          </section>
+          <section id="legibility">
+            <h3 data-section="legibility">Lesbarkeit</h3>
 
-              <div class="positive"><p>MEHRERE AUFEINANDERFOLGENDE WÖRTER IN GROSSBUCHSTABEN LÖSEN EINE MANUELLE PRÜFWARNUNG AUS.</p></div>
+            <div class="positive">
+              <p>MEHRERE AUFEINANDERFOLGENDE WÖRTER IN GROSSBUCHSTABEN LÖSEN EINE MANUELLE PRÜFWARNUNG AUS.</p>
+            </div>
 
-              <p class="positive"><u>Unterstrichener Text</u></p>
+            <p class="positive"><u>Unterstrichener Text</u></p>
 
-              <p class="positive"><em>Etwas Kursivschrift ist in Ordnung, aber große Blöcke hervorgehobenen Textes sind nicht sehr gut lesbar. Ein wenig ist natürlich akzeptabel, aber es gibt Grenzen, und ein ganzer Absatz ist viel zu viel. Dies ist zum Beispiel ein ganzer Absatz. Es ist ein wenig schwer zu lesen, nicht wahr? Aber dieser Test wird erst bei dieser Länge ausgelöst, sodass Sie in Ihrem Inhalt keine falsch positiven Ergebnisse sehen sollten, es sei denn, Sie schreiben regelmäßig so lange Absätze.</em></p>
+            <p class="positive"><em>Etwas Kursivschrift ist in Ordnung, aber große Blöcke hervorgehobenen Textes sind
+                nicht sehr gut lesbar. Ein wenig ist natürlich akzeptabel, aber es gibt Grenzen, und ein ganzer Absatz
+                ist viel zu viel. Dies ist zum Beispiel ein ganzer Absatz. Es ist ein wenig schwer zu lesen, nicht wahr?
+                Aber dieser Test wird erst bei dieser Länge ausgelöst, sodass Sie in Ihrem Inhalt keine falsch positiven
+                Ergebnisse sehen sollten, es sei denn, Sie schreiben regelmäßig so lange Absätze.</em></p>
 
-              <p class="positive" style="text-align: justify;">Blocksatz-Text</p>
+            <p class="positive" style="text-align: justify;">Blocksatz-Text</p>
 
-              <p class="positive">Übermäßige Hoch- oder Tiefstellung; <sub>Tiefstellung sollte für kleine Referenzen und Fußnoten verwendet werden, nicht für ganze Sätze oder Absätze.</sub></p>
+            <p class="positive">Übermäßige Hoch- oder Tiefstellung; <sub>Tiefstellung sollte für kleine Referenzen und
+                Fußnoten verwendet werden, nicht für ganze Sätze oder Absätze.</sub></p>
 
-              <p class="positive"><span style="font-size: 10px;">Winzige Schriftarten</span></p>
+            <p class="positive"><span style="font-size: 10px;">Winzige Schriftarten</span></p>
 
-              <div class="positive">
-                <p>* Falsche Listen mit gängigen Zeichen,</p><p>* Buchstaben, Zahlen und Emoji.</p>
-              </div>
+            <div class="positive">
+              <p>* Falsche Listen mit gängigen Zeichen,</p>
+              <p>* Buchstaben, Zahlen und Emoji.</p>
+            </div>
 
-              <div class="positive"><li>Fehlendes UL-Tag</li></div>
-            </section>
+            <div class="positive">
+              <li>Fehlendes UL-Tag</li>
+            </div>
+          </section>
 
-            <section id="form-elements">
-              <h3 data-section="form-elements">Formulare</h3>
+          <section id="form-elements">
+            <h3 data-section="form-elements">Formulare</h3>
 
-              <p>Schaltfläche ohne Beschriftung</p>
-              <div class="positive">
-                <button class="btn btn-primary p-3 pt-4"></button>
-              </div>
+            <p>Schaltfläche ohne Beschriftung</p>
+            <div class="positive">
+              <button class="btn btn-primary p-3 pt-4"></button>
+            </div>
 
-              <p>Eingabefelder mit einer unsichtbaren Beschriftung – Frage, ob auch eine sichtbare Beschriftung vorhanden ist.</p>
-              <div class="positive">
-                <input type="text" title="E-Mail">
-              </div>
+            <p>Eingabefelder mit einer unsichtbaren Beschriftung – Frage, ob auch eine sichtbare Beschriftung vorhanden
+              ist.</p>
+            <div class="positive">
+              <input type="text" title="E-Mail">
+            </div>
 
-              <p>Eingabefelder mit nur einer Platzhalter-Beschriftung – Frage, ob auch eine sichtbare Beschriftung vorhanden ist.</p>
-              <div class="positive">
-                <input type="text" placeholder="E-Mail">
-              </div>
+            <p>Eingabefelder mit nur einer Platzhalter-Beschriftung – Frage, ob auch eine sichtbare Beschriftung
+              vorhanden ist.</p>
+            <div class="positive">
+              <input type="text" placeholder="E-Mail">
+            </div>
 
-              <div class="positive">
-                <p>Schaltfläche mit einer barrierefreien Beschriftung, die von der sichtbaren Beschriftung abweicht.</p>
-                <button class="btn btn-primary" aria-label="Tschüss">Hallo</button>
-              </div>
+            <div class="positive">
+              <p>Schaltfläche mit einer barrierefreien Beschriftung, die von der sichtbaren Beschriftung abweicht.</p>
+              <button class="btn btn-primary" aria-label="Tschüss">Hallo</button>
+            </div>
 
-              <div class="positive">
-                <p>Schaltfläche mit einem ungültigen aria-labelledby-Attribut.</p>
-                <button class="btn btn-primary" aria-labelledby="bye">Hallo</button>
-              </div>
+            <div class="positive">
+              <p>Schaltfläche mit einem ungültigen aria-labelledby-Attribut.</p>
+              <button class="btn btn-primary" aria-labelledby="bye">Hallo</button>
+            </div>
 
-              <div class="positive">
-                <p>Schaltfläche mit redundanter Beschriftung.</p>
-                <button class="btn btn-primary">Diese Schaltfläche drücken</button>
-              </div>
+            <div class="positive">
+              <p>Schaltfläche mit redundanter Beschriftung.</p>
+              <button class="btn btn-primary">Diese Schaltfläche drücken</button>
+            </div>
 
-              <div class="positive">
-                <p>Zurücksetzen-Schaltfläche.</p>
-                <input class="btn btn-danger" type="reset">
-              </div>
+            <div class="positive">
+              <p>Zurücksetzen-Schaltfläche.</p>
+              <input class="btn btn-danger" type="reset">
+            </div>
 
-              <p class="positive"><a href="./editable.htm" tabindex="2">Tab-Reihenfolge durcheinanderbringen</a></p>
-            </section>
-
-
+            <p class="positive"><a href="./editable.htm" tabindex="2">Tab-Reihenfolge durcheinanderbringen</a></p>
+          </section>
 
 
-          
 
-          </div>
-          
+
+
+
+        </div>
+
 
       </div>
     </div>
 
-    </main>
-    <footer class="container col-lg-12 mx-auto pt-3 text-body-secondary text-center text-md-start">
+  </main>
+  <footer class="container col-lg-12 mx-auto pt-3 text-body-secondary text-center text-md-start">
     <div class="container">
-      <div class="footer-nav mt-5 pt-5 text-center"><a class="btn btn-primary btn-lg" href="/de/">Über uns</a> <a class="btn btn-primary btn-lg" href="/de/features/">Funktionen</a> <a class="btn btn-dark btn-lg" aria-current="page" href="/de/demo/">Demo</a> <a class="btn btn-primary btn-lg" href="/de/license/">Preise &amp; Beiträge</a></div>
+      <div class="footer-nav mt-5 pt-5 text-center"><a class="btn btn-primary btn-lg" href="/de/">Über uns</a> <a
+          class="btn btn-primary btn-lg" href="/de/features/">Funktionen</a> <a class="btn btn-dark btn-lg"
+          aria-current="page" href="/de/demo/">Demo</a> <a class="btn btn-primary btn-lg" href="/de/license/">Preise
+          &amp; Beiträge</a></div>
       <div class="footer">
-        <a href="https://github.com/itmaybejj/editoria11y"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-git" viewBox="0 0 16 16">
-              <path d="M15.698 7.287 8.712.302a1.03 1.03 0 0 0-1.457 0l-1.45 1.45 1.84 1.84a1.223 1.223 0 0 1 1.55 1.56l1.773 1.774a1.224 1.224 0 0 1 1.267 2.025 1.226 1.226 0 0 1-2.002-1.334L8.58 5.963v4.353a1.226 1.226 0 1 1-1.008-.036V5.887a1.226 1.226 0 0 1-.666-1.608L5.093 2.465l-4.79 4.79a1.03 1.03 0 0 0 0 1.457l6.986 6.986a1.03 1.03 0 0 0 1.457 0l6.953-6.953a1.03 1.03 0 0 0 0-1.457"/>
-            </svg> <strong>Bibliothek</strong></a>
-        <a href="https://github.com/itmaybejj/editoria11y/discussions"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chat-right-heart-fill" viewBox="0 0 16 16">
-              <path d="M16 2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h9.586a1 1 0 0 1 .707.293l2.853 2.853a.5.5 0 0 0 .854-.353zM8 3.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132"/>
-            </svg> <strong>Forum</strong></a>
-        <a href="https://github.com/itmaybejj/editoria11y/issues"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-patch-plus-fill" viewBox="0 0 16 16">
-              <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01zM8.5 6v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 1 0"/>
-            </svg> <strong>Issues</strong></a>
-        <a href="/de/contacts"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-person-lines-fill" height="24" width="24" viewBox="0 0 16 18">
-              <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z"></path>
-            </svg> <strong>Kontakt</strong></a>
+        <a href="https://github.com/itmaybejj/editoria11y"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+            height="20" fill="currentColor" class="bi bi-git" viewBox="0 0 16 16">
+            <path
+              d="M15.698 7.287 8.712.302a1.03 1.03 0 0 0-1.457 0l-1.45 1.45 1.84 1.84a1.223 1.223 0 0 1 1.55 1.56l1.773 1.774a1.224 1.224 0 0 1 1.267 2.025 1.226 1.226 0 0 1-2.002-1.334L8.58 5.963v4.353a1.226 1.226 0 1 1-1.008-.036V5.887a1.226 1.226 0 0 1-.666-1.608L5.093 2.465l-4.79 4.79a1.03 1.03 0 0 0 0 1.457l6.986 6.986a1.03 1.03 0 0 0 1.457 0l6.953-6.953a1.03 1.03 0 0 0 0-1.457" />
+          </svg> <strong>Bibliothek</strong></a>
+        <a href="https://github.com/itmaybejj/editoria11y/discussions"><svg xmlns="http://www.w3.org/2000/svg"
+            width="20" height="20" fill="currentColor" class="bi bi-chat-right-heart-fill" viewBox="0 0 16 16">
+            <path
+              d="M16 2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h9.586a1 1 0 0 1 .707.293l2.853 2.853a.5.5 0 0 0 .854-.353zM8 3.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132" />
+          </svg> <strong>Forum</strong></a>
+        <a href="https://github.com/itmaybejj/editoria11y/issues"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+            height="20" fill="currentColor" class="bi bi-patch-plus-fill" viewBox="0 0 16 16">
+            <path
+              d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01zM8.5 6v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 1 0" />
+          </svg> <strong>Issues</strong></a>
+        <a href="/de/contacts"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+            class="bi bi-person-lines-fill" height="24" width="24" viewBox="0 0 16 18">
+            <path
+              d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z">
+            </path>
+          </svg> <strong>Kontakt</strong></a>
       </div>
       <div class="col col-12 subfooter">
         <a href="/de/privacy-policy">Datenschutzerklärung</a>
         <a href="/de/cookie-policy">Cookie-Richtlinie</a>
         <a href="/de/terms-of-use">Nutzungsbedingungen</a>
         <a href="/de/legal-notice">Impressum</a>
-        &copy; Editoria11y 2026
+        &copy; 2026 Editoria11y LLC
       </div>
     </div>
   </footer>
 
-    <script src="/lang/i18n.js"></script>
-    <script src="/assets/theme.js"></script>
-    <script
-      src="/assets/bootstrap/js/bootstrap.bundle.min.js"
-      class="astro-vvvwv3sm"
-    ></script>
+  <script src="/lang/i18n.js"></script>
+  <script src="/assets/theme.js"></script>
+  <script src="/assets/bootstrap/js/bootstrap.bundle.min.js" class="astro-vvvwv3sm"></script>
 
-    <script src="../../assets/tinymce/tinymce.min.js"></script>
-    <script>
-      tinymce.init({
-        selector: '#ed11y-demo',
-        license_key: 'gpl',
-        plugins: 'image lists table',
-        toolbar: 'blocks bold italic underline strikethrough blockquote  image numlist indent outdent bullist table tabledelete',
-        inline: true,
-            toolbar_persist: true,
-      });
-    </script>
-    <link rel="stylesheet" media="all" href="/assets/ed11y/css/editoria11y.min.css">
-    <script src="/assets/demo.js" type="module"></script>
-  </body>
+  <script src="../../assets/tinymce/tinymce.min.js"></script>
+  <script>
+    tinymce.init({
+      selector: '#ed11y-demo',
+      license_key: 'gpl',
+      plugins: 'image lists table',
+      toolbar: 'blocks bold italic underline strikethrough blockquote  image numlist indent outdent bullist table tabledelete',
+      inline: true,
+      toolbar_persist: true,
+    });
+  </script>
+  <link rel="stylesheet" media="all" href="/assets/ed11y/css/editoria11y.min.css">
+  <script src="/assets/demo.js" type="module"></script>
+</body>
+
 </html>

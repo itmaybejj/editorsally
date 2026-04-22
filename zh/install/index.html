@@ -1,28 +1,35 @@
 <!doctype html>
 <html lang="zh" data-bs-theme="light">
-  <head>
-<link rel="icon" type="image/png" href="/assets/favicons/favicon-512x512.png" sizes="512x512" />
-    <link rel="icon" type="image/png" href="/assets/favicons/favicon-192x192.png" sizes="192x192" />
-    <link rel="icon" type="image/png" href="/assets/favicons/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="/assets/favicons/favicon.svg" />
-    <link rel="shortcut icon" href="/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <meta charset="utf-8" />
-    <title>安装与配置 — Editoria11y</title>
-    <link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="/assets/prism/prism.css" rel="stylesheet" />
-    <link href="/assets/theme.css" rel="stylesheet" />
-    <meta name="theme-color" content="#712cf9" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-  </head>
-  <body>
-    <header>
+
+<head>
+  <link rel="icon" type="image/png" href="/assets/favicons/favicon-512x512.png" sizes="512x512" />
+  <link rel="icon" type="image/png" href="/assets/favicons/favicon-192x192.png" sizes="192x192" />
+  <link rel="icon" type="image/png" href="/assets/favicons/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/assets/favicons/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <meta charset="utf-8" />
+  <title>安装与配置 — Editoria11y</title>
+  <link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="/assets/prism/prism.css" rel="stylesheet" />
+  <link href="/assets/theme.css" rel="stylesheet" />
+  <meta name="theme-color" content="#712cf9" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <header>
     <nav class="navbar navbar-expand-md">
       <div class="container col-sm-12 mx-auto">
         <a href="/zh/" class="d-flex align-items-center  navbar-brand">
-          <svg class="logo-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="-.75 -3.5 10.1699 19.1777"><path fill="currentColor" d="M3.7031,10.5527c-.3633-.6562-.6426-1.1387-.8379-1.4473l-.3105-.4863-.2344-.3574c-.5117-.7969-1.0449-1.4551-1.5996-1.9746.3164-.2617.6113-.3926.8848-.3926.3359,0,.6348.123.8965.3691s.5918.7148.9902,1.4062c.4531-1.4727,1.0293-2.8691,1.7285-4.1895.3867-.7188.7314-1.2021,1.0342-1.4502s.7041-.3721,1.2041-.3721c.2656,0,.5938.041.9844.123-1.0039.8086-1.8066,1.7695-2.4082,2.8828s-1.3789,3.0762-2.332,5.8887Z"/></svg> Editoria<span style="margin-left: -1px;">11</span>y
+          <svg class="logo-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+            viewBox="-.75 -3.5 10.1699 19.1777">
+            <path fill="currentColor"
+              d="M3.7031,10.5527c-.3633-.6562-.6426-1.1387-.8379-1.4473l-.3105-.4863-.2344-.3574c-.5117-.7969-1.0449-1.4551-1.5996-1.9746.3164-.2617.6113-.3926.8848-.3926.3359,0,.6348.123.8965.3691s.5918.7148.9902,1.4062c.4531-1.4727,1.0293-2.8691,1.7285-4.1895.3867-.7188.7314-1.2021,1.0342-1.4502s.7041-.3721,1.2041-.3721c.2656,0,.5938.041.9844.123-1.0039.8086-1.8066,1.7695-2.4082,2.8828s-1.3789,3.0762-2.332,5.8887Z" />
+          </svg> Editoria<span style="margin-left: -1px;">11</span>y
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="切换导航">
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar" aria-label="切换导航">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
@@ -39,31 +46,38 @@
     </nav>
     <div id="lang-picker"></div>
   </header>
-    <main class="container col-lg-12 mx-auto py-5">
-        <div class="row docs">
-            <div class="col-12 col-md-5 col-lg-4 mb-5">
-              <div id="on-this-page" class="list-group ms-2 ms-lg-5 position-sticky top-0 pt-3">
-              </div>
-            </div>
-            <div class="col-12 col-md-7 col-lg-8 pt-3" data-bs-spy="scroll" data-bs-target="#on-this-page" data-bs-smooth-scroll="true">
-                <h1>安装与配置</h1>
+  <main class="container col-lg-12 mx-auto py-5">
+    <div class="row docs">
+      <div class="col-12 col-md-5 col-lg-4 mb-5">
+        <div id="on-this-page" class="list-group ms-2 ms-lg-5 position-sticky top-0 pt-3">
+        </div>
+      </div>
+      <div class="col-12 col-md-7 col-lg-8 pt-3" data-bs-spy="scroll" data-bs-target="#on-this-page"
+        data-bs-smooth-scroll="true">
+        <h1>安装与配置</h1>
 
-                <section id="modules">
-                    <h2 class="pt-3 pb-2">预配置版本</h2>
-                    <ul class="list-unstyled ps-0">
-                        <li><a href="https://www.drupal.org/project/editoria11y" class="arrow"><strong>Drupal 安装程序</strong></a></li>
-                        <li><a href="https://wordpress.org/plugins/editoria11y-accessibility-checker/" class="arrow"><strong>WordPress 安装程序</strong></a></li>
-                        <li><a href="https://codeberg.org/sebastiangreger/kirby-a11yprompter" class="arrow"><strong>Kirby 安装程序</strong></a> <em>（社区贡献）</em></li>
-                        <li><a href="https://plugins.craftcms.com/editoria11y" class="arrow"><strong>CraftCMS 安装程序</strong></a> <em>（社区贡献）</em></li>
-                    </ul>
-                </section>
-                <section id="diy">
-                    <h2>
-                        自定义安装
-                    </h2>
-                    <p>如需构建自己的实现，请<a href="https://github.com/itmaybejj/editoria11y" data-type="URL" data-id="https://github.com/itmaybejj/editoria11y" class="liinternal">下载本地副本</a>（或引用 <a href="https://cdn.jsdelivr.net/gh/itmaybejj/editoria11y@2/dist/editoria11y.min.js" class="liinternal">CDN 版本</a>），包含语言包、JS 压缩文件和 CSS 压缩文件，然后创建一个新的”Ed11y”实例。</p>
-                    <p>使用 <strong>ESM/JS 模块导入</strong>：</p>
-                    <pre class="language-markup"><code><!--// Load CSS
+        <section id="modules">
+          <h2 class="pt-3 pb-2">预配置版本</h2>
+          <ul class="list-unstyled ps-0">
+            <li><a href="https://www.drupal.org/project/editoria11y" class="arrow"><strong>Drupal 安装程序</strong></a></li>
+            <li><a href="https://wordpress.org/plugins/editoria11y-accessibility-checker/"
+                class="arrow"><strong>WordPress 安装程序</strong></a></li>
+            <li><a href="https://codeberg.org/sebastiangreger/kirby-a11yprompter" class="arrow"><strong>Kirby
+                  安装程序</strong></a> <em>（社区贡献）</em></li>
+            <li><a href="https://plugins.craftcms.com/editoria11y" class="arrow"><strong>CraftCMS 安装程序</strong></a>
+              <em>（社区贡献）</em></li>
+          </ul>
+        </section>
+        <section id="diy">
+          <h2>
+            自定义安装
+          </h2>
+          <p>如需构建自己的实现，请<a href="https://github.com/itmaybejj/editoria11y" data-type="URL"
+              data-id="https://github.com/itmaybejj/editoria11y" class="liinternal">下载本地副本</a>（或引用 <a
+              href="https://cdn.jsdelivr.net/gh/itmaybejj/editoria11y@2/dist/editoria11y.min.js" class="liinternal">CDN
+              版本</a>），包含语言包、JS 压缩文件和 CSS 压缩文件，然后创建一个新的”Ed11y”实例。</p>
+          <p>使用 <strong>ESM/JS 模块导入</strong>：</p>
+          <pre class="language-markup"><code><!--// Load CSS
 <link href="/dist/css/editoria11y.min.css?v=3.0" rel="stylesheet">
 // Load JS and language pack
 <script type="module">
@@ -76,8 +90,8 @@
   });
 </script>
 --></code></pre>
-                    <p>对于旧版浏览器和系统，请使用 .umd JavaScript 文件：</p>
-                    <pre class="language-markup"><code><!--
+          <p>对于旧版浏览器和系统，请使用 .umd JavaScript 文件：</p>
+          <pre class="language-markup"><code><!--
 // Call CSS, JS and a Language Pack
 <link href="/dist/editoria11y.min.css" rel="stylesheet">
 <script src="/dist/js/ed11y.umd.js"></script>;
@@ -90,14 +104,16 @@
   });
 </script>
                 --></code></pre>
-                </section>
+        </section>
 
-                <section id="params">
-                    <h2>参数</h2>
-                    <p>完整实现仅会为已登录的编辑者调用（您不希望网站访客看到检查器！），并可覆盖<a href="https://github.com/itmaybejj/editoria11y/blob/3.0.x/src/js/utils/ed11y-default-options.js" class="liinternal"><strong>任何默认参数</strong></a>。</p>
-                    <p>请注意，所有参数均已设有默认值；只需包含您希望覆盖的部分即可。</p>
-                    <p>高度自定义的实现可能如下所示：</p>
-                    <pre class="language-javascript"><code><!--const ed11y = new Ed11y.Ed11y({
+        <section id="params">
+          <h2>参数</h2>
+          <p>完整实现仅会为已登录的编辑者调用（您不希望网站访客看到检查器！），并可覆盖<a
+              href="https://github.com/itmaybejj/editoria11y/blob/3.0.x/src/js/utils/ed11y-default-options.js"
+              class="liinternal"><strong>任何默认参数</strong></a>。</p>
+          <p>请注意，所有参数均已设有默认值；只需包含您希望覆盖的部分即可。</p>
+          <p>高度自定义的实现可能如下所示：</p>
+          <pre class="language-javascript"><code><!--const ed11y = new Ed11y.Ed11y({
   // Define content regions
   checkRoot: 'main, .footer-content-zone',
   // Add custom CSS files
@@ -138,16 +154,17 @@
   }
 
 }); --></code></pre>
-                    <p>一键式集成通常会动态设置这些变量——例如，在页面近期被编辑时以 assertive 模式加载，几分钟后切换回 polite 模式。</p>
-                </section>
+          <p>一键式集成通常会动态设置这些变量——例如，在页面近期被编辑时以 assertive 模式加载，几分钟后切换回 polite 模式。</p>
+        </section>
 
-                <section id="theme">
-                    <h2>主题定制</h2>
+        <section id="theme">
+          <h2>主题定制</h2>
 
-                    <p>多个参数支持选择主题、覆盖颜色以及注入 CSS。</p>
+          <p>多个参数支持选择主题、覆盖颜色以及注入 CSS。</p>
 
-                    <p>只需包含您需要覆盖的参数，以便日后更新更加便捷。</p>
-                    <pre class="language-javascript"><code><!--// Add custom CSS file
+          <p>只需包含您需要覆盖的参数，以便日后更新更加便捷。</p>
+          <pre
+            class="language-javascript"><code><!--// Add custom CSS file
 cssUrls: ['/css/editoria11y.min.css', '/css/custom.css'],
 theme : 'darkTheme', // Select base theme
 darkTheme: {         // Override base colors
@@ -167,58 +184,73 @@ darkTheme: {         // Override base colors
 // Override fonts
 baseFontSize: 14, // px
 baseFontFamily: '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif', --></code></pre>
-                </section>
+        </section>
 
-                <section id="js-events">
-                    <h2 class="wp-block-heading has-text-align-left has-secondary-background-color has-background has-large-font-size">常用 JS 事件</h2>
+        <section id="js-events">
+          <h2
+            class="wp-block-heading has-text-align-left has-secondary-background-color has-background has-large-font-size">
+            常用 JS 事件</h2>
 
-                    <p>主题开发者可以监听这些事件，以便在需要时对页面作出响应和修改。</p>
+          <p>主题开发者可以监听这些事件，以便在需要时对页面作出响应和修改。</p>
 
-                    <p>按典型出现顺序排列……</p>
+          <p>按典型出现顺序排列……</p>
 
-                    <ul class="wp-block-list">
-                        <li><strong><code>ed11yRunCustomTests</code></strong>：当 Results 对象就绪、可注入自定义结果时触发。请注意，必须将 customTests 参数设置为您将运行的自定义测试函数数量（……通常为一个……），该事件才会触发。详情见后续章节。</li>
+          <ul class="wp-block-list">
+            <li><strong><code>ed11yRunCustomTests</code></strong>：当 Results 对象就绪、可注入自定义结果时触发。请注意，必须将 customTests
+              参数设置为您将运行的自定义测试函数数量（……通常为一个……），该事件才会触发。详情见后续章节。</li>
 
-                        <li><strong><code>ed11yResults</code></strong>：所有检查完成后触发。API 集成现在可以从 Ed11y.results 对象中提取数据。</li>
+            <li><strong><code>ed11yResults</code></strong>：所有检查完成后触发。API 集成现在可以从 Ed11y.results 对象中提取数据。</li>
 
-                        <li><strong><code>ed11yPanelOpened</code></strong>：面板自动或手动打开时触发。</li>
+            <li><strong><code>ed11yPanelOpened</code></strong>：面板自动或手动打开时触发。</li>
 
-                        <li><strong><code>ed11yShowHidden</code></strong>：提供 <code>data-ed11y-result</code> 编号和 <code>viaJump</code> 布尔值。仅在设置了”ed11yShowHidden”参数<em><strong>且</strong></em>元素的某个父级匹配选择器时触发。用于在尚未展开的容器（如手风琴、标签页和轮播图）中显示警告。使用示例见下一章节。</li>
+            <li><strong><code>ed11yShowHidden</code></strong>：提供 <code>data-ed11y-result</code> 编号和 <code>viaJump</code>
+              布尔值。仅在设置了”ed11yShowHidden”参数<em><strong>且</strong></em>元素的某个父级匹配选择器时触发。用于在尚未展开的容器（如手风琴、标签页和轮播图）中显示警告。使用示例见下一章节。
+            </li>
 
-                        <li><strong><code>ed11yPop</code></strong>：提供 <code>data-ed11y-result</code> ID，以及 <code>result</code> 和 <code>tip</code> 对象的引用。在工具提示出现时触发，允许您在运行时修改提示内容。</li>
+            <li><strong><code>ed11yPop</code></strong>：提供 <code>data-ed11y-result</code> ID，以及 <code>result</code> 和
+              <code>tip</code> 对象的引用。在工具提示出现时触发，允许您在运行时修改提示内容。</li>
 
-                        <li><strong><code>ed11yShut</code></strong>：提供 <code>data-ed11y-result</code> ID。在工具提示关闭时触发。</li>
+            <li><strong><code>ed11yShut</code></strong>：提供 <code>data-ed11y-result</code> ID。在工具提示关闭时触发。</li>
 
-                        <li><strong><code>ed11yDismissalUpdate</code></strong>：当用户忽略或恢复警告时提供详细信息。用于 API 集成。事件对象包含：
-                            <ul>
-                                <li><code>dismissPage</code></li>
+            <li><strong><code>ed11yDismissalUpdate</code></strong>：当用户忽略或恢复警告时提供详细信息。用于 API 集成。事件对象包含：
+              <ul>
+                <li><code>dismissPage</code></li>
 
-                                <li><code>dismissTest</code></li>
+                <li><code>dismissTest</code></li>
 
-                                <li><code>dismissKey</code></li>
+                <li><code>dismissKey</code></li>
 
-                                <li><code>dismissAction</code></li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <p>示例代码可在后续章节中找到。</p>
-                </section>
+                <li><code>dismissAction</code></li>
+              </ul>
+            </li>
+          </ul>
+          <p>示例代码可在后续章节中找到。</p>
+        </section>
 
-                <section id="modify-tips">
-                    <h2 class="wp-block-heading has-secondary-background-color has-background has-large-font-size">修改提示内容</h2>
+        <section id="modify-tips">
+          <h2 class="wp-block-heading has-secondary-background-color has-background has-large-font-size">修改提示内容</h2>
 
-                    <p>如果您只想修改提示的文本内容，可以直接覆盖 ed11yLang.en 全局对象（调用库之前）或 Ed11y.M 对象（调用库之后）中的对应条目。例如，在 Drupal 模块中，语言包被别名为 Drupal.ed11yLang：</p>
+          <p>如果您只想修改提示的文本内容，可以直接覆盖 ed11yLang.en 全局对象（调用库之前）或 Ed11y.M 对象（调用库之后）中的对应条目。例如，在 Drupal 模块中，语言包被别名为
+            Drupal.ed11yLang：</p>
 
-                    <p><code>Drupal.ed11yLang.lang.testNames.title = “Please write shorter headings.”</code></p>
+          <p><code>Drupal.ed11yLang.lang.testNames.title = “Please write shorter headings.”</code></p>
 
-                    <p>对于<a href="https://github.com/itmaybejj/editoria11y/blob/3.0.x/src/lang/baseAll.js" data-type="link" data-id="https://github.com/itmaybejj/editoria11y/blob/2.3.x/js/ed11y-localization.js" class="liinternal">本地化文件中的任意默认键</a>或当前使用的特定语言翻译，上述方式同样适用。</p>
+          <p>对于<a href="https://github.com/itmaybejj/editoria11y/blob/3.0.x/src/lang/baseAll.js" data-type="link"
+              data-id="https://github.com/itmaybejj/editoria11y/blob/2.3.x/js/ed11y-localization.js"
+              class="liinternal">本地化文件中的任意默认键</a>或当前使用的特定语言翻译，上述方式同样适用。</p>
 
-                    <p>Drupal 模块还使用 <code>editLinks</code> 参数向提示中添加自定义编辑链接。请注意”页面编辑器”和”布局编辑器”：</p>
+          <p>Drupal 模块还使用 <code>editLinks</code> 参数向提示中添加自定义编辑链接。请注意”页面编辑器”和”布局编辑器”：</p>
 
-                    <figure class="wp-block-image size-full"><img loading="lazy" data-recalc-dims="1" fetchpriority="high" decoding="async" width="580" height="300" src="https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?resize=580%2C300&amp;ssl=1" alt="Tooltip with &quot;Page editor&quot; and &quot;Layout editor&quot; links inserted." class="wp-image-523" srcset="https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?w=1290&amp;ssl=1 1290w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?resize=600%2C311&amp;ssl=1 600w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?resize=768%2C398&amp;ssl=1 768w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?resize=1200%2C621&amp;ssl=1 1200w" sizes="(max-width: 580px) 100vw, 580px"></figure>
+          <figure class="wp-block-image size-full"><img loading="lazy" data-recalc-dims="1" fetchpriority="high"
+              decoding="async" width="580" height="300"
+              src="https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?resize=580%2C300&amp;ssl=1"
+              alt="Tooltip with &quot;Page editor&quot; and &quot;Layout editor&quot; links inserted."
+              class="wp-image-523"
+              srcset="https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?w=1290&amp;ssl=1 1290w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?resize=600%2C311&amp;ssl=1 600w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?resize=768%2C398&amp;ssl=1 768w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?resize=1200%2C621&amp;ssl=1 1200w"
+              sizes="(max-width: 580px) 100vw, 580px"></figure>
 
-                    <p>设置该参数的简化版代码如下：</p>
-                    <pre class="language-javascript"><code><!--const editLinks = document.createElement('div');
+          <p>设置该参数的简化版代码如下：</p>
+          <pre class="language-javascript"><code><!--const editLinks = document.createElement('div');
 const editLink = document.createElement('a');
       editLink.href="/node/1/edit";
       editLink.textContent = "Edit page";
@@ -226,10 +258,10 @@ editLinks.appendChild(editLink);
 const ed11y = new Ed11y({
                editLinks: editLinks,
               }); --></code></pre>
-                    <p>Drupal 模块随后使用 <strong><code>ed11yPop</code></strong> 事件，在显示提示时根据上下文动态显示或隐藏编辑链接。</p>
+          <p>Drupal 模块随后使用 <strong><code>ed11yPop</code></strong> 事件，在显示提示时根据上下文动态显示或隐藏编辑链接。</p>
 
-                    <p>该事件提供了 <code>result</code> 和 <code>tip</code> 对象的引用：</p>
-                    <pre class="language-javascript"><code><!--// Listen for event
+          <p>该事件提供了 <code>result</code> 和 <code>tip</code> 对象的引用：</p>
+          <pre class="language-javascript"><code><!--// Listen for event
 document.addEventListener('ed11yPop', e => {
   if (e.detail.result.element.closest(
     drupalSettings.editoria11y.hide_edit_links)
@@ -239,32 +271,38 @@ document.addEventListener('ed11yPop', e => {
         )?.setAttribute(‘hidden’, ‘’);
      }
 }); --></code></pre>
-                </section>
+        </section>
 
-                <section id="custom-tests">
-                    <h2>自定义测试</h2>
+        <section id="custom-tests">
+          <h2>自定义测试</h2>
 
-                    <p>如果 <strong><em>customTests</em></strong> 参数为一个<strong><em>数字</em></strong>，Editoria11y 将在检查过程中触发”ed11yRunCustomTests”事件，然后暂停最多 500 毫秒，等待相应数量的”<code>ed11yResume</code>”事件。</p>
+          <p>如果 <strong><em>customTests</em></strong> 参数为一个<strong><em>数字</em></strong>，Editoria11y
+            将在检查过程中触发”ed11yRunCustomTests”事件，然后暂停最多 500 毫秒，等待相应数量的”<code>ed11yResume</code>”事件。</p>
 
-                    <p>利用这一机制，您可以调用任意数量包含自定义测试的脚本，这些脚本可以在绘制提示之前将结果推入结果数组。</p>
+          <p>利用这一机制，您可以调用任意数量包含自定义测试的脚本，这些脚本可以在绘制提示之前将结果推入结果数组。</p>
 
-                    <p>例如，如果您想创建以下提示，以标记从电子邮件中粘贴的含有混淆 URL 的链接：</p>
+          <p>例如，如果您想创建以下提示，以标记从电子邮件中粘贴的含有混淆 URL 的链接：</p>
 
-                    <figure class="wp-block-image size-full"><img loading="lazy" data-recalc-dims="1" decoding="async" width="580" height="462" src="https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2023/12/Screenshot-2023-12-06-at-5.13.38-PM.png?resize=580%2C462&amp;ssl=1" alt="Tip reading &quot;URL is Safe Link Encoded&quot;" class="wp-image-323" srcset="https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2023/12/Screenshot-2023-12-06-at-5.13.38-PM.png?w=1056&amp;ssl=1 1056w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2023/12/Screenshot-2023-12-06-at-5.13.38-PM.png?resize=600%2C478&amp;ssl=1 600w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2023/12/Screenshot-2023-12-06-at-5.13.38-PM.png?resize=768%2C612&amp;ssl=1 768w" sizes="(max-width: 580px) 100vw, 580px"></figure>
+          <figure class="wp-block-image size-full"><img loading="lazy" data-recalc-dims="1" decoding="async" width="580"
+              height="462"
+              src="https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2023/12/Screenshot-2023-12-06-at-5.13.38-PM.png?resize=580%2C462&amp;ssl=1"
+              alt="Tip reading &quot;URL is Safe Link Encoded&quot;" class="wp-image-323"
+              srcset="https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2023/12/Screenshot-2023-12-06-at-5.13.38-PM.png?w=1056&amp;ssl=1 1056w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2023/12/Screenshot-2023-12-06-at-5.13.38-PM.png?resize=600%2C478&amp;ssl=1 600w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2023/12/Screenshot-2023-12-06-at-5.13.38-PM.png?resize=768%2C612&amp;ssl=1 768w"
+              sizes="(max-width: 580px) 100vw, 580px"></figure>
 
-                    <p>您需要：</p>
+          <p>您需要：</p>
 
-                    <ol class="wp-block-list">
-                        <li>为 <code>ed11yRunCustomTests</code> 事件添加监听器</li>
+          <ol class="wp-block-list">
+            <li>为 <code>ed11yRunCustomTests</code> 事件添加监听器</li>
 
-                        <li>查找匹配的元素</li>
+            <li>查找匹配的元素</li>
 
-                        <li>定义提示消息</li>
+            <li>定义提示消息</li>
 
-                        <li>触发”resume”事件，让 Editoria11y 绘制提示：</li>
-                    </ol>
+            <li>触发”resume”事件，让 Editoria11y 绘制提示：</li>
+          </ol>
 
-                    <pre class="language-javascript"><code><!--document.addEventListener('ed11yRunCustomTests', function() {
+          <pre class="language-javascript"><code><!--document.addEventListener('ed11yRunCustomTests', function() {
   // 1. Write your custom test. This can be anything you want.
   //
   // This example searches the active root using the .getElements() function,
@@ -321,20 +359,23 @@ document.addEventListener('ed11yPop', e => {
   let allDone = new CustomEvent(‘ed11yResume’);
   document.dispatchEvent(allDone);
 }) --></code></pre>
-                </section>
+        </section>
 
-                <section id="hidden-content">
-                    <h2>处理隐藏或尺寸受限内容中的警告</h2>
+        <section id="hidden-content">
+          <h2>处理隐藏或尺寸受限内容中的警告</h2>
 
 
-                    <p>许多交互式组件（标签页、滑块、手风琴）会隐藏内容。Editoria11y 信息面板包含上一条/下一条按钮，可直接跳转至问题所在位置。如果 Editoria11y 判断问题的工具提示当前不可见，它会提示用户存在问题，并高亮显示第一个可见的祖先元素——例如手风琴外层的 div。</p>
+          <p>许多交互式组件（标签页、滑块、手风琴）会隐藏内容。Editoria11y 信息面板包含上一条/下一条按钮，可直接跳转至问题所在位置。如果 Editoria11y
+            判断问题的工具提示当前不可见，它会提示用户存在问题，并高亮显示第一个可见的祖先元素——例如手风琴外层的 div。</p>
 
-                    <p>理想情况下，您的主题会在 Editoria11y 的可见性检查运行之前使这些元素可见，让一切对用户来说都浑然天成——轮播图自动前进，手风琴自动展开以显示问题。</p>
+          <p>理想情况下，您的主题会在 Editoria11y 的可见性检查运行之前使这些元素可见，让一切对用户来说都浑然天成——轮播图自动前进，手风琴自动展开以显示问题。</p>
 
-                    <p>要在面板首次打开时执行此操作（例如展开<strong><em>所有</em></strong>存在问题的手风琴面板），可为 <code>ed11yPanelOpened</code> 添加 JS 事件监听器，然后对相关 <code>ed11y-element-result</code> 元素执行 querySelectorAll，再触发主题用于显示该页面部分内容的函数。</p>
+          <p>要在面板首次打开时执行此操作（例如展开<strong><em>所有</em></strong>存在问题的手风琴面板），可为 <code>ed11yPanelOpened</code> 添加 JS
+            事件监听器，然后对相关 <code>ed11y-element-result</code> 元素执行 querySelectorAll，再触发主题用于显示该页面部分内容的函数。</p>
 
-                    <p>以下是一个基于 jQuery 的示例。面板打开时，它会禁用固定菜单（避免元素被遮挡），然后查找已关闭手风琴项目内的所有 <code>ed11y-element-result</code> 元素，并模拟点击其切换按钮：</p>
-                    <pre class="language-javascript"><code><!--document.addEventListener("ed11yPanelOpened", function () {
+          <p>以下是一个基于 jQuery 的示例。面板打开时，它会禁用固定菜单（避免元素被遮挡），然后查找已关闭手风琴项目内的所有 <code>ed11y-element-result</code>
+            元素，并模拟点击其切换按钮：</p>
+          <pre class="language-javascript"><code><!--document.addEventListener("ed11yPanelOpened", function () {
   $('body').addClass('no-stick');
   $('ed11y-element-result').each(function () {
     if ($(this).parents('.ps-accordion-content[style*="display"]').length > 0) {
@@ -342,10 +383,13 @@ document.addEventListener('ed11yPop', e => {
     }
 }) --></code></pre>
 
-                    <p>若要仅在通过面板”下一条”按钮跳转到<strong><em>特定</em></strong>提示时（例如在已关闭的标签页或下一张轮播幻灯片中）才显示内容，需要在参数中将 <code>hiddenHandlers</code> 设置为相关 CSS 选择器，并将 <code>checkVisible</code> 设置为 TRUE，然后为 <code>ed11yShowHidden</code> 事件添加监听器。当 Editoria11y 识别到提示位于包含 <code>hiddenHandlers</code> 选择器的容器内时，此事件会被触发。该 JS 事件将包含即将打开的提示的 ID。Editoria11y 随后会在触发此事件后短暂暂停，以便您的 JS 有时间使元素可见。</p>
+          <p>若要仅在通过面板”下一条”按钮跳转到<strong><em>特定</em></strong>提示时（例如在已关闭的标签页或下一张轮播幻灯片中）才显示内容，需要在参数中将
+            <code>hiddenHandlers</code> 设置为相关 CSS 选择器，并将 <code>checkVisible</code> 设置为 TRUE，然后为
+            <code>ed11yShowHidden</code> 事件添加监听器。当 Editoria11y 识别到提示位于包含 <code>hiddenHandlers</code> 选择器的容器内时，此事件会被触发。该
+            JS 事件将包含即将打开的提示的 ID。Editoria11y 随后会在触发此事件后短暂暂停，以便您的 JS 有时间使元素可见。</p>
 
-                    <p>以下是来自宾夕法尼亚州立大学实现的示例。它查找与所提供 ID 匹配的元素，找到其父级交互组件容器，并触发其事件以激活切换：</p>
-                    <pre class="language-javascript"><code><!--context.addEventListener('ed11yShowHidden', e => {
+          <p>以下是来自宾夕法尼亚州立大学实现的示例。它查找与所提供 ID 匹配的元素，找到其父级交互组件容器，并触发其事件以激活切换：</p>
+          <pre class="language-javascript"><code><!--context.addEventListener('ed11yShowHidden', e => {
   if (!e.detail.viaJump) {
        return;
   }
@@ -353,48 +397,57 @@ document.addEventListener('ed11yPop', e => {
     .closest(‘[data-interactive-component]’)
     .dispatchEvent(new CustomEvent(‘component:activate’));
 }); --></code></pre>
-                    <p>最后说明：部分主题与可见性检查不兼容，例如 <code>&lt;main&gt;</code> 容器高度为 0px 的情况。此类网站应通过将 <code>checkVisible</code> 设为 false 来禁用所有可见性检查。</p>
+          <p>最后说明：部分主题与可见性检查不兼容，例如 <code>&lt;main&gt;</code> 容器高度为 0px 的情况。此类网站应通过将 <code>checkVisible</code> 设为 false
+            来禁用所有可见性检查。</p>
 
-                </section>
+        </section>
 
-          </div><!-- 内容列结束 -->
+      </div><!-- 内容列结束 -->
 
-      </div>
-    </main>
-    <footer class="container col-lg-12 mx-auto pt-3 text-body-secondary text-center text-md-start">
+    </div>
+  </main>
+  <footer class="container col-lg-12 mx-auto pt-3 text-body-secondary text-center text-md-start">
     <div class="container">
       <div class="footer-nav mt-5 pt-5 text-center"><a class="btn btn-primary btn-lg" href="/zh/">关于</a> <a
           class="btn btn-primary btn-lg" href="/zh/features">功能</a> <a class="btn btn-primary btn-lg"
-          href="/zh/demo">演示</a> <a class="btn btn-primary btn-lg" aria-current="page" href="/zh/license">定价与贡献</a></div>
+          href="/zh/demo">演示</a> <a class="btn btn-primary btn-lg" aria-current="page" href="/zh/license">定价与贡献</a>
+      </div>
       <div class="footer">
-        <a href="https://github.com/itmaybejj/editoria11y"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-git" viewBox="0 0 16 16">
-              <path d="M15.698 7.287 8.712.302a1.03 1.03 0 0 0-1.457 0l-1.45 1.45 1.84 1.84a1.223 1.223 0 0 1 1.55 1.56l1.773 1.774a1.224 1.224 0 0 1 1.267 2.025 1.226 1.226 0 0 1-2.002-1.334L8.58 5.963v4.353a1.226 1.226 0 1 1-1.008-.036V5.887a1.226 1.226 0 0 1-.666-1.608L5.093 2.465l-4.79 4.79a1.03 1.03 0 0 0 0 1.457l6.986 6.986a1.03 1.03 0 0 0 1.457 0l6.953-6.953a1.03 1.03 0 0 0 0-1.457"/>
-            </svg> <strong>库</strong></a>
-        <a href="https://github.com/itmaybejj/editoria11y/discussions"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chat-right-heart-fill" viewBox="0 0 16 16">
-              <path d="M16 2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h9.586a1 1 0 0 1 .707.293l2.853 2.853a.5.5 0 0 0 .854-.353zM8 3.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132"/>
-            </svg> <strong>论坛</strong></a>
-        <a href="https://github.com/itmaybejj/editoria11y/issues"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-patch-plus-fill" viewBox="0 0 16 16">
-              <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01zM8.5 6v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 1 0"/>
-            </svg> <strong>问题</strong></a>
-        <a href="/zh/contacts"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-person-lines-fill" height="24" width="24" viewBox="0 0 16 18">
-              <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z"></path>
-            </svg> <strong>联系</strong></a>
+        <a href="https://github.com/itmaybejj/editoria11y"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+            height="20" fill="currentColor" class="bi bi-git" viewBox="0 0 16 16">
+            <path
+              d="M15.698 7.287 8.712.302a1.03 1.03 0 0 0-1.457 0l-1.45 1.45 1.84 1.84a1.223 1.223 0 0 1 1.55 1.56l1.773 1.774a1.224 1.224 0 0 1 1.267 2.025 1.226 1.226 0 0 1-2.002-1.334L8.58 5.963v4.353a1.226 1.226 0 1 1-1.008-.036V5.887a1.226 1.226 0 0 1-.666-1.608L5.093 2.465l-4.79 4.79a1.03 1.03 0 0 0 0 1.457l6.986 6.986a1.03 1.03 0 0 0 1.457 0l6.953-6.953a1.03 1.03 0 0 0 0-1.457" />
+          </svg> <strong>库</strong></a>
+        <a href="https://github.com/itmaybejj/editoria11y/discussions"><svg xmlns="http://www.w3.org/2000/svg"
+            width="20" height="20" fill="currentColor" class="bi bi-chat-right-heart-fill" viewBox="0 0 16 16">
+            <path
+              d="M16 2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h9.586a1 1 0 0 1 .707.293l2.853 2.853a.5.5 0 0 0 .854-.353zM8 3.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132" />
+          </svg> <strong>论坛</strong></a>
+        <a href="https://github.com/itmaybejj/editoria11y/issues"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+            height="20" fill="currentColor" class="bi bi-patch-plus-fill" viewBox="0 0 16 16">
+            <path
+              d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01zM8.5 6v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 1 0" />
+          </svg> <strong>问题</strong></a>
+        <a href="/zh/contacts"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+            class="bi bi-person-lines-fill" height="24" width="24" viewBox="0 0 16 18">
+            <path
+              d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z">
+            </path>
+          </svg> <strong>联系</strong></a>
       </div>
       <div class="col col-12 subfooter">
         <a href="/zh/privacy-policy">隐私政策</a>
         <a href="/zh/cookie-policy">Cookie 政策</a>
         <a href="/zh/terms-of-use">使用条款</a>
         <a href="/zh/legal-notice">法律声明</a>
-        &copy; Editoria11y 2026
+        &copy; 2026 Editoria11y LLC
       </div>
     </div>
   </footer>
-    <script
-      src="/assets/bootstrap/js/bootstrap.bundle.min.js"
-      class="astro-vvvwv3sm"
-    ></script>
-    <script src="/lang/i18n.js"></script>
-    <script src="/assets/theme.js"></script>
-    <script src="/assets/prism/prism.js"></script>
-  </body>
+  <script src="/assets/bootstrap/js/bootstrap.bundle.min.js" class="astro-vvvwv3sm"></script>
+  <script src="/lang/i18n.js"></script>
+  <script src="/assets/theme.js"></script>
+  <script src="/assets/prism/prism.js"></script>
+</body>
+
 </html>

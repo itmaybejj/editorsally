@@ -1,301 +1,395 @@
 <!doctype html>
 <html lang="uk" data-bs-theme="light">
-  <head>
-<link rel="icon" type="image/png" href="/assets/favicons/favicon-512x512.png" sizes="512x512" />
-    <link rel="icon" type="image/png" href="/assets/favicons/favicon-192x192.png" sizes="192x192" />
-    <link rel="icon" type="image/png" href="/assets/favicons/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="/assets/favicons/favicon.svg" />
-    <link rel="shortcut icon" href="/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <meta charset="utf-8" />
-    <title>Демо — Editoria11y</title>
-    <link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="/assets/theme.css" rel="stylesheet" />
-    <meta name="theme-color" content="#712cf9" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-  </head>
-  <body>
-    <header>
-      <nav class="navbar navbar-expand-md">
-        <div class="container col-sm-12 mx-auto">
-          <a href="/uk/" class="d-flex align-items-center  navbar-brand">
-            <svg class="logo-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="-.75 -3.5 10.1699 19.1777"><path fill="currentColor" d="M3.7031,10.5527c-.3633-.6562-.6426-1.1387-.8379-1.4473l-.3105-.4863-.2344-.3574c-.5117-.7969-1.0449-1.4551-1.5996-1.9746.3164-.2617.6113-.3926.8848-.3926.3359,0,.6348.123.8965.3691s.5918.7148.9902,1.4062c.4531-1.4727,1.0293-2.8691,1.7285-4.1895.3867-.7188.7314-1.2021,1.0342-1.4502s.7041-.3721,1.2041-.3721c.2656,0,.5938.041.9844.123-1.0039.8086-1.8066,1.7695-2.4082,2.8828s-1.3789,3.0762-2.332,5.8887Z"/></svg> Editoria<span style="margin-left: -1px;">11</span>y
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Перемкнути навігацію">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-            <div class="offcanvas-header">
-              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Editora11y</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Закрити"></button>
-            </div>
-            <div class="offcanvas-body">
-              <ul class="navbar-nav justify-content-end flex-grow-1 nav-pills">
-              </ul>
-            </div>
+
+<head>
+  <link rel="icon" type="image/png" href="/assets/favicons/favicon-512x512.png" sizes="512x512" />
+  <link rel="icon" type="image/png" href="/assets/favicons/favicon-192x192.png" sizes="192x192" />
+  <link rel="icon" type="image/png" href="/assets/favicons/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/assets/favicons/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <meta charset="utf-8" />
+  <title>Демо — Editoria11y</title>
+  <link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="/assets/theme.css" rel="stylesheet" />
+  <meta name="theme-color" content="#712cf9" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-md">
+      <div class="container col-sm-12 mx-auto">
+        <a href="/uk/" class="d-flex align-items-center  navbar-brand">
+          <svg class="logo-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+            viewBox="-.75 -3.5 10.1699 19.1777">
+            <path fill="currentColor"
+              d="M3.7031,10.5527c-.3633-.6562-.6426-1.1387-.8379-1.4473l-.3105-.4863-.2344-.3574c-.5117-.7969-1.0449-1.4551-1.5996-1.9746.3164-.2617.6113-.3926.8848-.3926.3359,0,.6348.123.8965.3691s.5918.7148.9902,1.4062c.4531-1.4727,1.0293-2.8691,1.7285-4.1895.3867-.7188.7314-1.2021,1.0342-1.4502s.7041-.3721,1.2041-.3721c.2656,0,.5938.041.9844.123-1.0039.8086-1.8066,1.7695-2.4082,2.8828s-1.3789,3.0762-2.332,5.8887Z" />
+          </svg> Editoria<span style="margin-left: -1px;">11</span>y
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar" aria-label="Перемкнути навігацію">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Editora11y</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Закрити"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 nav-pills">
+            </ul>
           </div>
         </div>
-      </nav>
+      </div>
+    </nav>
     <div id="lang-picker"></div>
-    </header>
+  </header>
   <main class="container col-lg-12 mx-auto py-5">
     <div class="row docs">
       <div class="col-12 col-md-5 col-lg-4 mb-5">
         <div id="on-this-page" class="list-group ms-2 ms-lg-5 position-sticky top-0 pt-3">
         </div>
       </div>
-      <div class="col-12 col-md-7 col-lg-8 pt-3" data-bs-spy="scroll" data-bs-target="#on-this-page" data-bs-smooth-scroll="true" tabindex="0">
-        
-        
+      <div class="col-12 col-md-7 col-lg-8 pt-3" data-bs-spy="scroll" data-bs-target="#on-this-page"
+        data-bs-smooth-scroll="true" tabindex="0">
+
+
 
         <h2 class="pt-4" id="demo">Демо</h2>
-          <p class="fs-5">Перегляньте <a href="https://youtu.be/uYvNYPg38nU?si=6YANYrJpVzNAJYDl&t=260">відеовступ до історії та функцій перевірника</a>,
-            або спробуйте редагувати демо-вміст нижче, відкривати та закривати сповіщення,
-            і використовувати панель інструментів <span style="text-wrap: nowrap;">(<img src="/assets/images/3x-toolbar" class="inline-block" style="width: 5rem; height: auto;" alt="Знімок панелі інструментів Editoria11y з 4 помилками." width="97" height="50" loading="lazy">)</span> для перегляду структури заголовків. Це демо містить як основні перевірки, так і набір CSA.</p>
-          <p class="fs-5 mb-5 pb-5">У цьому демо використовується редактор TinyMCE. Editoria11y сумісний з більшістю текстових редакторів і має готові реалізації для CKEditor та Gutenberg у WordPress і Drupal.</p>
-            <div id="ed11y-demo" class="p-5" contenteditable="">
-            <section id="headings">
+        <p class="fs-5">Перегляньте <a href="https://youtu.be/uYvNYPg38nU?si=6YANYrJpVzNAJYDl&t=260">відеовступ до
+            історії та функцій перевірника</a>,
+          або спробуйте редагувати демо-вміст нижче, відкривати та закривати сповіщення,
+          і використовувати панель інструментів <span style="text-wrap: nowrap;">(<img src="/assets/images/3x-toolbar"
+              class="inline-block" style="width: 5rem; height: auto;"
+              alt="Знімок панелі інструментів Editoria11y з 4 помилками." width="97" height="50" loading="lazy">)</span>
+          для перегляду структури заголовків. Це демо містить як основні перевірки, так і набір CSA.</p>
+        <p class="fs-5 mb-5 pb-5">У цьому демо використовується редактор TinyMCE. Editoria11y сумісний з більшістю
+          текстових редакторів і має готові реалізації для CKEditor та Gutenberg у WordPress і Drupal.</p>
+        <div id="ed11y-demo" class="p-5" contenteditable="">
+          <section id="headings">
 
-              <h3 class="pt-1">Заголовки</h3>
+            <h3 class="pt-1">Заголовки</h3>
 
-              <p>Цей заголовок пропустив рівень:</p>
-              <div class="positive"><h6 id="this-h6-should-have-been-an-h3">Oops</h6></div>
+            <p>Цей заголовок пропустив рівень:</p>
+            <div class="positive">
+              <h6 id="this-h6-should-have-been-an-h3">Oops</h6>
+            </div>
 
-              <p>Цей заголовок зовсім не містить тексту:</p>
-              <div class="positive"><h4 class="empty-example"> </h4>
-              </div>
+            <p>Цей заголовок зовсім не містить тексту:</p>
+            <div class="positive">
+              <h4 class="empty-example"> </h4>
+            </div>
 
-              <p>Ця коротка цитата може бути заголовком:</p>
-              <div class="positive"><blockquote>I'm a fake heading</blockquote></div>
+            <p>Ця коротка цитата може бути заголовком:</p>
+            <div class="positive">
+              <blockquote>I'm a fake heading</blockquote>
+            </div>
 
-              <p>Цей повністю жирний абзац може бути заголовком:</p>
-              <p class="positive"><strong>I am a fake heading</strong></p>
+            <p>Цей повністю жирний абзац може бути заголовком:</p>
+            <p class="positive"><strong>I am a fake heading</strong></p>
 
-              <p>Цей заголовок надто довгий:</p>
-              <div class="positive"><h4>Заголовки та підзаголовки створюють зміст із навігацією для допоміжних пристроїв. Цифри вказують на відступи в ієрархічних відносинах. Дуже довгі заголовки, мабуть, означають, що автор говорить у заголовку забагато.</h4></div>
+            <p>Цей заголовок надто довгий:</p>
+            <div class="positive">
+              <h4>Заголовки та підзаголовки створюють зміст із навігацією для допоміжних пристроїв. Цифри вказують на
+                відступи в ієрархічних відносинах. Дуже довгі заголовки, мабуть, означають, що автор говорить у
+                заголовку забагато.</h4>
+            </div>
 
-            </section>
+          </section>
 
 
-            <section id="text-alternatives">
-              <h3 data-section="text-alternatives">Текстові альтернативи для зображень</h3>
+          <section id="text-alternatives">
+            <h3 data-section="text-alternatives">Текстові альтернативи для зображень</h3>
 
-              <p>Цей заголовок складається із зображення тексту без атрибута alt:</p>
-              <div class="positive">
-                <h4><img loading="lazy" alt="" src="/assets/images/px20240813sm.jpg" ></h4>
-              </div>
+            <p>Цей заголовок складається із зображення тексту без атрибута alt:</p>
+            <div class="positive">
+              <h4><img loading="lazy" alt="" src="/assets/images/px20240813sm.jpg"></h4>
+            </div>
 
-              <p>Зображення без атрибута alt взагалі:</p>
-              <p class="positive"><img loading="lazy" src="/assets/images/px20240813sm.jpg"></p>
+            <p>Зображення без атрибута alt взагалі:</p>
+            <p class="positive"><img loading="lazy" src="/assets/images/px20240813sm.jpg"></p>
 
-              <p>Зображення з недійсним атрибутом alt, наприклад <code class="language-plaintext highlighter-rouge">alt=”'”</code></p>
+            <p>Зображення з недійсним атрибутом alt, наприклад <code
+                class="language-plaintext highlighter-rouge">alt=”'”</code></p>
 
-              <p class="positive"><img loading="lazy" alt="'" src="/assets/images/px20240813sm.jpg"></p>
+            <p class="positive"><img loading="lazy" alt="'" src="/assets/images/px20240813sm.jpg"></p>
 
-              <p id="image-with-a-filename-as-an-alt">Зображення з назвою файлу як alt</p>
+            <p id="image-with-a-filename-as-an-alt">Зображення з назвою файлу як alt</p>
 
-              <p class="positive"><img loading="lazy" alt="filename.jpg" src="/assets/images/px20240813sm.jpg"></p>
+            <p class="positive"><img loading="lazy" alt="filename.jpg" src="/assets/images/px20240813sm.jpg"></p>
 
-              <p id="image-with-redundant-text-in-its-alt">Зображення з надлишковим текстом в alt, наприклад «зображення:»</p>
+            <p id="image-with-redundant-text-in-its-alt">Зображення з надлишковим текстом в alt, наприклад «зображення:»
+            </p>
 
-              <p class="positive"><img loading="lazy" alt="Image of a dog." src="/assets/images/px20240813sm.jpg"></p>
+            <p class="positive"><img loading="lazy" alt="Image of a dog." src="/assets/images/px20240813sm.jpg"></p>
 
-              <p id="linked-image-with-redundant-text-in-its-alt">Зображення-посилання з надлишковим текстом в alt, наприклад «зображення:»</p>
+            <p id="linked-image-with-redundant-text-in-its-alt">Зображення-посилання з надлишковим текстом в alt,
+              наприклад «зображення:»</p>
 
-              <p class="positive"><a href="./editable.htm"><img loading="lazy" alt="Image of a dog." src="/assets/images/px20240813sm.jpg"></a></p>
+            <p class="positive"><a href="./editable.htm"><img loading="lazy" alt="Image of a dog."
+                  src="/assets/images/px20240813sm.jpg"></a></p>
 
-              <p id="image-with-placeholder-alt">Зображення з тимчасовим alt:</p>
-              <p class="positive"><img loading="lazy" alt="TBD" src="/assets/images/px20240813sm.jpg"></p>
+            <p id="image-with-placeholder-alt">Зображення з тимчасовим alt:</p>
+            <p class="positive"><img loading="lazy" alt="TBD" src="/assets/images/px20240813sm.jpg"></p>
 
-              <p id="linked-image-with-placeholder-alt"><strong>Зображення-посилання</strong> з тимчасовим alt:</p>
-              <p class="positive"><a href="./editable.htm"><img loading="lazy" alt="TBD" src="/assets/images/px20240813sm.jpg"></a></p>
+            <p id="linked-image-with-placeholder-alt"><strong>Зображення-посилання</strong> з тимчасовим alt:</p>
+            <p class="positive"><a href="./editable.htm"><img loading="lazy" alt="TBD"
+                  src="/assets/images/px20240813sm.jpg"></a></p>
 
-              <p id="image-with-machine-alt">Зображення з машинним кодом у alt:</p>
-              <p class="positive"><img loading="lazy" alt="$700VIDEOSABOUTTURTLESALL2SECONDSLONG" src="/assets/images/px20240813sm.jpg"></p>
+            <p id="image-with-machine-alt">Зображення з машинним кодом у alt:</p>
+            <p class="positive"><img loading="lazy" alt="$700VIDEOSABOUTTURTLESALL2SECONDSLONG"
+                src="/assets/images/px20240813sm.jpg"></p>
 
-              <p id="linked-image-with-machine-alt">Зображення-посилання з машинним кодом у alt:</p>
-              <p class="positive"><a href="./editable.htm"><img loading="lazy" alt="$700VIDEOSABOUTTURTLESALL2SECONDSLONG" src="/assets/images/px20240813sm.jpg"></a></p>
+            <p id="linked-image-with-machine-alt">Зображення-посилання з машинним кодом у alt:</p>
+            <p class="positive"><a href="./editable.htm"><img loading="lazy" alt="$700VIDEOSABOUTTURTLESALL2SECONDSLONG"
+                  src="/assets/images/px20240813sm.jpg"></a></p>
 
-              <p id="image-with-very-long-alt-text">Зображення з дуже довгим текстом alt:</p>
+            <p id="image-with-very-long-alt-text">Зображення з дуже довгим текстом alt:</p>
 
-              <p class="positive"><img loading="lazy" alt="Look at this doggy. This doggy is so happy. This doggy got to go on a walk and the walk went to a lake and there were all kinds of fascinating smells. What an amazing day this doggy had." src="/assets/images/px20240813sm.jpg"></p>
+            <p class="positive"><img loading="lazy"
+                alt="Look at this doggy. This doggy is so happy. This doggy got to go on a walk and the walk went to a lake and there were all kinds of fascinating smells. What an amazing day this doggy had."
+                src="/assets/images/px20240813sm.jpg"></p>
 
-              <p id="images-in-links-where-the-alt-text-may-be-describing-the-image-instead-of-the-link">Зображення в посиланнях, де текст alt може описувати зображення, а не посилання</p>
+            <p id="images-in-links-where-the-alt-text-may-be-describing-the-image-instead-of-the-link">Зображення в
+              посиланнях, де текст alt може описувати зображення, а не посилання</p>
 
-              <p class="positive"><a  href="https://www.youtube.com/watch?v=DLzxrzFCyOs">Це посилання містить текст і зображення.<img loading="lazy" alt="A lovely gray box" src="/assets/images/px20240813sm.jpg"></a></p>
+            <p class="positive"><a href="https://www.youtube.com/watch?v=DLzxrzFCyOs">Це посилання містить текст і
+                зображення.<img loading="lazy" alt="A lovely gray box" src="/assets/images/px20240813sm.jpg"></a></p>
 
-              <p id="images-in-links-decorative">Будь-яке зображення-посилання (перевірка вимкнена за замовчуванням)</p>
-              <p class="positive"><a href="https://www.youtube.com/watch?v=DLzxrzFCyOs"><img loading="lazy" alt="Hello there" src="/assets/images/px20240813sm.jpg"></a></p>
+            <p id="images-in-links-decorative">Будь-яке зображення-посилання (перевірка вимкнена за замовчуванням)</p>
+            <p class="positive"><a href="https://www.youtube.com/watch?v=DLzxrzFCyOs"><img loading="lazy"
+                  alt="Hello there" src="/assets/images/px20240813sm.jpg"></a></p>
 
-              <p>Зображення у figure, позначене як декоративне:</p>
-              <figure class="positive">
-                <img loading="lazy" alt="" src="/assets/images/px20240813sm.jpg">
-                <figcaption>Figcaption присутній.</figcaption>
-              </figure>
+            <p>Зображення у figure, позначене як декоративне:</p>
+            <figure class="positive">
+              <img loading="lazy" alt="" src="/assets/images/px20240813sm.jpg">
+              <figcaption>Figcaption присутній.</figcaption>
+            </figure>
 
-              <p>Зображення у figure, де alt збігається з figcaption:</p>
-              <figure class="positive">
-                <img loading="lazy" alt="Figcaption is the same as alt" src="/assets/images/px20240813sm.jpg">
-                <figcaption>Figcaption is the same as alt</figcaption>
-              </figure>
-              <p>Зображення в каруселі без атрибута alt:</p>
-              <div class="positive">
-                <img loading="lazy" alt="" class="carousel" src="/assets/images/px20240813sm.jpg">
-              </div>
-            </section>
-            <section id="contrast">
-              <h3 data-section="contrast">Контрастність</h3>
-              <p>Нечитабельне поєднання кольорів:</p>
-              <div class="positive"><p style="background: #ccc; color: #ddd;">Дуже читабельно.</p></div>
-              <p>Колір потребує перевірки вручну:</p>
-              <div class="positive"><p style="background: linear-gradient(45deg,#ccc 25%,#0000 25% 75%,#ccc 75%,#ccc),linear-gradient(45deg,#ccc 25%,#0000 25% 75%,#ccc 75%,#ccc)">І не піддається обчисленню.</p></div>
-              <div class="positive"><label>Поле введення з низькою контрастністю
+            <p>Зображення у figure, де alt збігається з figcaption:</p>
+            <figure class="positive">
+              <img loading="lazy" alt="Figcaption is the same as alt" src="/assets/images/px20240813sm.jpg">
+              <figcaption>Figcaption is the same as alt</figcaption>
+            </figure>
+            <p>Зображення в каруселі без атрибута alt:</p>
+            <div class="positive">
+              <img loading="lazy" alt="" class="carousel" src="/assets/images/px20240813sm.jpg">
+            </div>
+          </section>
+          <section id="contrast">
+            <h3 data-section="contrast">Контрастність</h3>
+            <p>Нечитабельне поєднання кольорів:</p>
+            <div class="positive">
+              <p style="background: #ccc; color: #ddd;">Дуже читабельно.</p>
+            </div>
+            <p>Колір потребує перевірки вручну:</p>
+            <div class="positive">
+              <p
+                style="background: linear-gradient(45deg,#ccc 25%,#0000 25% 75%,#ccc 75%,#ccc),linear-gradient(45deg,#ccc 25%,#0000 25% 75%,#ccc 75%,#ccc)">
+                І не піддається обчисленню.</p>
+            </div>
+            <div class="positive"><label>Поле введення з низькою контрастністю
                 <input class="form-text" type="text" style="color: #777;"></label></div>
 
-              <style>
-                #unsupported-placeholder::placeholder {
-                  color: color(rec2020 0.9 0.4 0.2);
-                }
-              </style>
+            <style>
+              #unsupported-placeholder::placeholder {
+                color: color(rec2020 0.9 0.4 0.2);
+              }
+            </style>
 
-              <label for="unsupported-placeholder">Колір заповнювача не вдається обчислити</label>
-              <div class="positive" style="background: transparent;"><input type="text" id="unsupported-placeholder" placeholder="Rec2020 color space"></div>
-
-
-              <p>SVG-графіка з недостатньою контрастністю</p>
-              <div class="positive"><svg style="width: 16px; height: 16px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path fill="#999" d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376C296.3 401.1 253.9 416 208 416 93.1 416 0 322.9 0 208S93.1 0 208 0 416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg></div>
-
-              <p>SVG-графіка, контрастність якої потребує перевірки вручну</p>
-              <div class="positive" style="background: linear-gradient(45deg,#ccc 45%,#0000 45% 75%,#ccc 75%,#ccc),linear-gradient(145deg,#ccc 45%,#0000 45% 75%,#ccc 75%,#ccc)"><svg style="width: 16px; height: 16px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path fill="color(rec2020 0.9 0.4 0.2)" d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376C296.3 401.1 253.9 416 208 416 93.1 416 0 322.9 0 208S93.1 0 208 0 416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg></div>
+            <label for="unsupported-placeholder">Колір заповнювача не вдається обчислити</label>
+            <div class="positive" style="background: transparent;"><input type="text" id="unsupported-placeholder"
+                placeholder="Rec2020 color space"></div>
 
 
-            </section>
-            <section id="embed-media">
-              <h3 data-section="embed-media">Вбудовані елементи та медіа</h3>
+            <p>SVG-графіка з недостатньою контрастністю</p>
+            <div class="positive"><svg style="width: 16px; height: 16px;" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                <path fill="#999"
+                  d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376C296.3 401.1 253.9 416 208 416 93.1 416 0 322.9 0 208S93.1 0 208 0 416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
+              </svg></div>
 
-              <p>Відео позначено як таке, що потребує перевірки субтитрів вручну:</p>
-              <div class="positive" style="width: 560px; aspect-ratio: 560 / 315; max-width: 100%; cursor: not-allowed;">
-                <iframe width="560" height="315" inert="" src="https://www.youtube-nocookie.com/embed/QGsevnbItdU?si=W_b2i2o_n5v1ArvA" style="width: 560px; aspect-ratio: 560 / 315; max-width: 100%; cursor: not-allowed;" title="YouTube: How it's done video. Playback is disabled." sandbox="allow-scripts allow-same-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="origin" allowfullscreen></iframe>
-                <div><small><em>Відтворення вимкнено для запобігання файлам cookie.</em></small></div>
+            <p>SVG-графіка, контрастність якої потребує перевірки вручну</p>
+            <div class="positive"
+              style="background: linear-gradient(45deg,#ccc 45%,#0000 45% 75%,#ccc 75%,#ccc),linear-gradient(145deg,#ccc 45%,#0000 45% 75%,#ccc 75%,#ccc)">
+              <svg style="width: 16px; height: 16px;" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                <path fill="color(rec2020 0.9 0.4 0.2)"
+                  d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376C296.3 401.1 253.9 416 208 416 93.1 416 0 322.9 0 208S93.1 0 208 0 416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
+              </svg></div>
+
+
+          </section>
+          <section id="embed-media">
+            <h3 data-section="embed-media">Вбудовані елементи та медіа</h3>
+
+            <p>Відео позначено як таке, що потребує перевірки субтитрів вручну:</p>
+            <div class="positive" style="width: 560px; aspect-ratio: 560 / 315; max-width: 100%; cursor: not-allowed;">
+              <iframe width="560" height="315" inert=""
+                src="https://www.youtube-nocookie.com/embed/QGsevnbItdU?si=W_b2i2o_n5v1ArvA"
+                style="width: 560px; aspect-ratio: 560 / 315; max-width: 100%; cursor: not-allowed;"
+                title="YouTube: How it's done video. Playback is disabled." sandbox="allow-scripts allow-same-origin"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="origin" allowfullscreen></iframe>
+              <div><small><em>Відтворення вимкнено для запобігання файлам cookie.</em></small></div>
+            </div>
+
+            <p>Аудіо потребує транскрипту:</p>
+            <div class="positive">
+              <div style="border: 1px solid #444; background: #ccc; width: 320px; height: 60px;"><audio
+                  style="height: 60px;"></audio>
               </div>
+            </div>
 
-              <p>Аудіо потребує транскрипту:</p>
-              <div class="positive">
-                <div style="border: 1px solid #444; background: #ccc; width: 320px; height: 60px;"><audio style="height: 60px;"></audio>
-                </div>
-              </div>
+            <p>Iframe без заголовка, який також потребує перевірки вручну:</p>
+            <div class="positive">
+              <iframe data-needs-src=""></iframe>
+            </div>
 
-              <p>Iframe без заголовка, який також потребує перевірки вручну:</p>
-              <div class="positive">
-                <iframe data-needs-src=""></iframe>
-              </div>
+            <p>Iframe, недоступний для фокусування:</p>
+            <div class="positive">
+              <iframe title="example" sandbox="" tabindex="-1" data-needs-src=""></iframe>
+            </div>
 
-              <p>Iframe, недоступний для фокусування:</p>
-              <div class="positive">
-                <iframe title="example" sandbox="" tabindex="-1" data-needs-src=""></iframe>
-              </div>
-
-              <p>Вкладені інтерактивні компоненти</p>
-              <div class="positive">
-                <details><summary>Акордеон</summary>
-                  <details><summary>Акордеон</summary>Сюрприз!</details>
+            <p>Вкладені інтерактивні компоненти</p>
+            <div class="positive">
+              <details>
+                <summary>Акордеон</summary>
+                <details>
+                  <summary>Акордеон</summary>Сюрприз!
                 </details>
-              </div>
-            </section>
-            <section id="meaningful-links">
-              <h3 data-section="meaningful-links">Змістовні посилання</h3>
+              </details>
+            </div>
+          </section>
+          <section id="meaningful-links">
+            <h3 data-section="meaningful-links">Змістовні посилання</h3>
 
-              <p id="links-with-no-text-at-all">Посилання без будь-якого тексту</p>
-              <p class="positive"><a href="https://www.youtube.com/watch?v=DLzxrzFCyOs"
-                                     style="display: inline-block; width: 3rem; border-bottom: 1px solid;"></a> Порожні посилання</p>
+            <p id="links-with-no-text-at-all">Посилання без будь-якого тексту</p>
+            <p class="positive"><a href="https://www.youtube.com/watch?v=DLzxrzFCyOs"
+                style="display: inline-block; width: 3rem; border-bottom: 1px solid;"></a> Порожні посилання</p>
 
-              <p id="links-titled-with-a-url">Посилання, підписані лише URL-адресою:</p>
-              <p class="positive"><a  href="https://www.youtube.com/watch?v=DLzxrzFCyOs">https://www.youtube.com/watch?v=DLzxrzFCyOs</a></p>
+            <p id="links-titled-with-a-url">Посилання, підписані лише URL-адресою:</p>
+            <p class="positive"><a
+                href="https://www.youtube.com/watch?v=DLzxrzFCyOs">https://www.youtube.com/watch?v=DLzxrzFCyOs</a></p>
 
-              <p id="links-titled-with-a-symbol">Посилання, підписані лише символами:</p>
-              <p class="positive"><a href="https://www.youtube.com/watch?v=DLzxrzFCyOs">↣</a></p>
+            <p id="links-titled-with-a-symbol">Посилання, підписані лише символами:</p>
+            <p class="positive"><a href="https://www.youtube.com/watch?v=DLzxrzFCyOs">↣</a></p>
 
-              <p>Посилання з однаковими назвами ведуть у різні місця</p>
-              <p class="positive"><a href="https://www.youtube.com/watch?v=fjOeJssZX_Q">Черепахи</a> <a href="https://www.youtube.com/watch?v=cWppAbqm9I8">Черепахи</a></p>
+            <p>Посилання з однаковими назвами ведуть у різні місця</p>
+            <p class="positive"><a href="https://www.youtube.com/watch?v=fjOeJssZX_Q">Черепахи</a> <a
+                href="https://www.youtube.com/watch?v=cWppAbqm9I8">Черепахи</a></p>
 
-              <p id="links-titled-with-doi">Посилання, підписані лише номером DOI:</p>
-              <p class="positive"><a href="https://doi.org/10.1145/3493612.3520468">doi.org/10.1145/3493612.3520468</a></p>
+            <p id="links-titled-with-doi">Посилання, підписані лише номером DOI:</p>
+            <p class="positive"><a href="https://doi.org/10.1145/3493612.3520468">doi.org/10.1145/3493612.3520468</a>
+            </p>
 
-              <p id="links-titled-with-click">Посилання з беззмістовними підписами:</p>
-              <p class="positive"><a  href="https://www.youtube.com/watch?v=DLzxrzFCyOs" title="https://www.youtube.com/watch?v=DLzxrzFCyOs">Натисніть тут</a></p>
+            <p id="links-titled-with-click">Посилання з беззмістовними підписами:</p>
+            <p class="positive"><a href="https://www.youtube.com/watch?v=DLzxrzFCyOs"
+                title="https://www.youtube.com/watch?v=DLzxrzFCyOs">Натисніть тут</a></p>
 
-              <p id="links-titled-with-empty">Іконки-посилання без текстових альтернатив:</p>
-              <p class="positive"><a href="https://www.youtube.com/watch?v=DLzxrzFCyOs"><svg style="width: 16px; height: 16px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376C296.3 401.1 253.9 416 208 416 93.1 416 0 322.9 0 208S93.1 0 208 0 416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg></a></p>
+            <p id="links-titled-with-empty">Іконки-посилання без текстових альтернатив:</p>
+            <p class="positive"><a href="https://www.youtube.com/watch?v=DLzxrzFCyOs"><svg
+                  style="width: 16px; height: 16px;" xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 512 512"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                  <path
+                    d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376C296.3 401.1 253.9 416 208 416 93.1 416 0 322.9 0 208S93.1 0 208 0 416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
+                </svg></a></p>
 
-              <p id="links-that-open-in-a-new-window-without-an-external-link-icon-or-text-warning">Посилання, що відкриваються в новому вікні без значка зовнішнього посилання або текстового попередження</p>
+            <p id="links-that-open-in-a-new-window-without-an-external-link-icon-or-text-warning">Посилання, що
+              відкриваються в новому вікні без значка зовнішнього посилання або текстового попередження</p>
 
-              <p class="positive"><a href="https://www.youtube.com/watch?v=DLzxrzFCyOs" target="_blank">Сповіщення для перевірки відкриття у новому вікні.</a></p>
+            <p class="positive"><a href="https://www.youtube.com/watch?v=DLzxrzFCyOs" target="_blank">Сповіщення для
+                перевірки відкриття у новому вікні.</a></p>
 
-              <p id="links-to-PDF">Посилання на PDF-файли</p>
-              <p class="positive"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ#.pdf" class="">Удачі.</a></p>
+            <p id="links-to-PDF">Посилання на PDF-файли</p>
+            <p class="positive"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ#.pdf" class="">Удачі.</a></p>
 
-              <p id="links-to-doc">Посилання на інші документи</p>
-              <p class="positive"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ#.doc" class="">Фіктивне посилання на doc-файл.</a></p>
+            <p id="links-to-doc">Посилання на інші документи</p>
+            <p class="positive"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ#.doc" class="">Фіктивне посилання
+                на doc-файл.</a></p>
 
-              <p id="links-redundant">Посилання з надлишковими атрибутами title</p>
-              <p class="positive"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" title="Наведіть курсор">Наведіть курсор</a></p>
+            <p id="links-redundant">Посилання з надлишковими атрибутами title</p>
+            <p class="positive"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" title="Наведіть курсор">Наведіть
+                курсор</a></p>
 
-              <p>Посилання з атрибутами, що виключають їх із послідовності табуляції:</p>
-              <p class="positive"><a href="./editable.htm" aria-hidden="true">Посилання з aria-hidden без від'ємного tabindex.</a></p>
+            <p>Посилання з атрибутами, що виключають їх із послідовності табуляції:</p>
+            <p class="positive"><a href="./editable.htm" aria-hidden="true">Посилання з aria-hidden без від'ємного
+                tabindex.</a></p>
 
-              <p>Посилання з aria-labelledby, що вказує на елементи без тексту:</p>
-              <p class="positive"><a href="./editable.htm" id="oops" aria-labelledby="oops"></a></p>
+            <p>Посилання з aria-labelledby, що вказує на елементи без тексту:</p>
+            <p class="positive"><a href="./editable.htm" id="oops" aria-labelledby="oops"></a></p>
 
-              <p>Посилання із загальними словами в aria-мітці:</p>
-              <p class="positive"><a href="www.google.com/" aria-label="has aria label">дізнатися більше</a></p>
+            <p>Посилання із загальними словами в aria-мітці:</p>
+            <p class="positive"><a href="www.google.com/" aria-label="has aria label">дізнатися більше</a></p>
 
-              <p>Зображення-посилання без тексту alt:</p>
-              <p class="positive"><a href="./editable.htm"><img loading="lazy" alt="" src="/assets/images/px20240813sm.jpg" class=""></a></p>
+            <p>Зображення-посилання без тексту alt:</p>
+            <p class="positive"><a href="./editable.htm"><img loading="lazy" alt=""
+                  src="/assets/images/px20240813sm.jpg" class=""></a></p>
 
-              <p>Зображення-посилання з незрозумілим текстом alt:</p>
-              <p class="positive"><a href="./editable.htm"><img loading="lazy" alt="'" src="/assets/images/px20240813sm.jpg" class=""></a></p>
+            <p>Зображення-посилання з незрозумілим текстом alt:</p>
+            <p class="positive"><a href="./editable.htm"><img loading="lazy" alt="'"
+                  src="/assets/images/px20240813sm.jpg" class=""></a></p>
 
-              <p>Зображення-посилання без атрибута alt:</p>
-              <p class="positive"><a href="./editable.htm"><img loading="lazy" src="/assets/images/px20240813sm.jpg" class=""></a></p>
+            <p>Зображення-посилання без атрибута alt:</p>
+            <p class="positive"><a href="./editable.htm"><img loading="lazy" src="/assets/images/px20240813sm.jpg"
+                  class=""></a></p>
 
-              <p>Зображення-посилання без атрибута alt у посиланні з текстом:</p>
-              <p class="positive"><a href="./editable.htm">Пошук <img loading="lazy" src="/assets/images/px20240813sm.jpg" class=""></a></p>
+            <p>Зображення-посилання без атрибута alt у посиланні з текстом:</p>
+            <p class="positive"><a href="./editable.htm">Пошук <img loading="lazy" src="/assets/images/px20240813sm.jpg"
+                  class=""></a></p>
 
-              <p>Зображення-посилання з назвою файлу як текстом alt:</p>
-              <p class="positive"><a href="./editable.htm"><img loading="lazy" alt="http://jpg.gif" src="/assets/images/px20240813sm.jpg">
+            <p>Зображення-посилання з назвою файлу як текстом alt:</p>
+            <p class="positive"><a href="./editable.htm"><img loading="lazy" alt="http://jpg.gif"
+                  src="/assets/images/px20240813sm.jpg">
               </a></p>
 
-              <p>Зображення-посилання з підозріло довгим текстом alt:</p>
-              <p class="positive"><a href="./editable.htm"><img loading="lazy" alt="Look at this doggy. This doggy is so happy. This doggy got to go on a walk and the walk went to a lake and there were all kinds of fascinating smells. What an amazing day this doggy had." src="/assets/images/px20240813sm.jpg">
+            <p>Зображення-посилання з підозріло довгим текстом alt:</p>
+            <p class="positive"><a href="./editable.htm"><img loading="lazy"
+                  alt="Look at this doggy. This doggy is so happy. This doggy got to go on a walk and the walk went to a lake and there were all kinds of fascinating smells. What an amazing day this doggy had."
+                  src="/assets/images/px20240813sm.jpg">
               </a></p>
 
-              <p>Зламані посилання на елементи сторінки</p>
-              <p class="positive">
-                <a href="#oh-no">Такого ID не існує.</a>
-              </p>
+            <p>Зламані посилання на елементи сторінки</p>
+            <p class="positive">
+              <a href="#oh-no">Такого ID не існує.</a>
+            </p>
 
-              <p>Посилання на сервер розробки</p>
-              <p class="positive">
-                <a href="https://tugboatqa.com">Oops</a>
-              </p>
+            <p>Посилання на сервер розробки</p>
+            <p class="positive">
+              <a href="https://tugboatqa.com">Oops</a>
+            </p>
 
-              <p>Дублікати якорів</p>
-              <p class="positive"><a id="dupe" href="#dupe">Якір 1</a> <a id="dupe" href="#dupe">Якір 2</a></p>
-            </section>
-            <section>
-              <h3 id="table-tests">Таблиці</h3>
+            <p>Дублікати якорів</p>
+            <p class="positive"><a id="dupe" href="#dupe">Якір 1</a> <a id="dupe" href="#dupe">Якір 2</a></p>
+          </section>
+          <section>
+            <h3 id="table-tests">Таблиці</h3>
 
-              <p id="tables-without-valid-headers">Таблиці без дійсних заголовків</p>
+            <p id="tables-without-valid-headers">Таблиці без дійсних заголовків</p>
 
-              <table class="positive"><tbody><tr><td>Таблиця без заголовка TH є недійсною</td><td class="positive"><h4 >Заголовки структури не рахуються</h4></td><td class="negative"><p><strong>Перевірку заголовків вмісту всередині таблиць слід вимкнути</strong></p></td></tr></tbody></table>
+            <table class="positive">
+              <tbody>
+                <tr>
+                  <td>Таблиця без заголовка TH є недійсною</td>
+                  <td class="positive">
+                    <h4>Заголовки структури не рахуються</h4>
+                  </td>
+                  <td class="negative">
+                    <p><strong>Перевірку заголовків вмісту всередині таблиць слід вимкнути</strong></p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
 
-              <table><thead>
-              <tr>
-                <th class="positive"></th>
-                <th class="negative">Порожні заголовки</th>
-              </tr>
+            <table>
+              <thead>
+                <tr>
+                  <th class="positive"></th>
+                  <th class="negative">Порожні заголовки</th>
+                </tr>
               </thead>
-                <tbody>
+              <tbody>
                 <tr class="negative">
                   <th>Я знайшов</th>
                   <td>700 відео про черепах</td>
@@ -304,130 +398,150 @@
                   <th>Кожне</th>
                   <td>по 2 секунди</td>
                 </tr>
-                </tbody>
-              </table>
-            </section>
-            <section id="legibility">
-              <h3 data-section="legibility">Читабельність</h3>
+              </tbody>
+            </table>
+          </section>
+          <section id="legibility">
+            <h3 data-section="legibility">Читабельність</h3>
 
-              <div class="positive"><p>КІЛЬКА СЛІВ ПІДРЯД, НАПИСАНИХ CAPS LOCK, СПРИЧИНЯТЬ ПОПЕРЕДЖЕННЯ ПРО НЕОБХІДНІСТЬ ПЕРЕВІРКИ ВРУЧНУ.</p></div>
+            <div class="positive">
+              <p>КІЛЬКА СЛІВ ПІДРЯД, НАПИСАНИХ CAPS LOCK, СПРИЧИНЯТЬ ПОПЕРЕДЖЕННЯ ПРО НЕОБХІДНІСТЬ ПЕРЕВІРКИ ВРУЧНУ.</p>
+            </div>
 
-              <p class="positive"><u>Підкреслений текст</u></p>
+            <p class="positive"><u>Підкреслений текст</u></p>
 
-              <p class="positive"><em>Трохи курсиву — це нормально, але великі блоки виділеного тексту погано читаються. Небагато — цілком прийнятно, але є межі, і цілий абзац — це вже занадто. Ось, наприклад, цілий абзац. Його важкувато читати, чи не так? Але ця перевірка не спрацьовує, поки текст не стане таким довгим, тому хибних спрацьовувань у вашому вмісті не буде, якщо ви регулярно не пишете справді великих абзаців.</em></p>
+            <p class="positive"><em>Трохи курсиву — це нормально, але великі блоки виділеного тексту погано читаються.
+                Небагато — цілком прийнятно, але є межі, і цілий абзац — це вже занадто. Ось, наприклад, цілий абзац.
+                Його важкувато читати, чи не так? Але ця перевірка не спрацьовує, поки текст не стане таким довгим, тому
+                хибних спрацьовувань у вашому вмісті не буде, якщо ви регулярно не пишете справді великих абзаців.</em>
+            </p>
 
-              <p class="positive" style="text-align: justify;">Текст із вирівнюванням по ширині</p>
+            <p class="positive" style="text-align: justify;">Текст із вирівнюванням по ширині</p>
 
-              <p class="positive">Надмірний верхній або нижній індекс; <sub>нижній індекс слід використовувати для невеликих посилань і виносок, а не для цілих речень чи абзаців.</sub></p>
+            <p class="positive">Надмірний верхній або нижній індекс; <sub>нижній індекс слід використовувати для
+                невеликих посилань і виносок, а не для цілих речень чи абзаців.</sub></p>
 
-              <p class="positive"><span style="font-size: 10px;">Дуже дрібний шрифт</span></p>
+            <p class="positive"><span style="font-size: 10px;">Дуже дрібний шрифт</span></p>
 
-              <div class="positive">
-                <p>* Фіктивні списки із загальних символів,</p><p>* літер, цифр та емодзі.</p>
-              </div>
+            <div class="positive">
+              <p>* Фіктивні списки із загальних символів,</p>
+              <p>* літер, цифр та емодзі.</p>
+            </div>
 
-              <div class="positive"><li>Відсутній тег UL</li></div>
-            </section>
+            <div class="positive">
+              <li>Відсутній тег UL</li>
+            </div>
+          </section>
 
-            <section id="form-elements">
-              <h3 data-section="form-elements">Форми</h3>
+          <section id="form-elements">
+            <h3 data-section="form-elements">Форми</h3>
 
-              <p>Кнопка без підпису</p>
-              <div class="positive">
-                <button class="btn btn-primary p-3 pt-4"></button>
-              </div>
+            <p>Кнопка без підпису</p>
+            <div class="positive">
+              <button class="btn btn-primary p-3 pt-4"></button>
+            </div>
 
-              <p>Поля введення з невидимим підписом — перевірка наявності також видимого підпису.</p>
-              <div class="positive">
-                <input type="text" title="Email">
-              </div>
+            <p>Поля введення з невидимим підписом — перевірка наявності також видимого підпису.</p>
+            <div class="positive">
+              <input type="text" title="Email">
+            </div>
 
-              <p>Поля введення лише з підписом-заповнювачем — перевірка наявності також видимого підпису.</p>
-              <div class="positive">
-                <input type="text" placeholder="Email">
-              </div>
+            <p>Поля введення лише з підписом-заповнювачем — перевірка наявності також видимого підпису.</p>
+            <div class="positive">
+              <input type="text" placeholder="Email">
+            </div>
 
-              <div class="positive">
-                <p>Кнопка з доступним підписом, що відрізняється від видимого.</p>
-                <button class="btn btn-primary" aria-label="bye">Hi</button>
-              </div>
+            <div class="positive">
+              <p>Кнопка з доступним підписом, що відрізняється від видимого.</p>
+              <button class="btn btn-primary" aria-label="bye">Hi</button>
+            </div>
 
-              <div class="positive">
-                <p>Кнопка з недійсним атрибутом aria-labelledby.</p>
-                <button class="btn btn-primary" aria-labelledby="bye">Hi</button>
-              </div>
+            <div class="positive">
+              <p>Кнопка з недійсним атрибутом aria-labelledby.</p>
+              <button class="btn btn-primary" aria-labelledby="bye">Hi</button>
+            </div>
 
-              <div class="positive">
-                <p>Кнопка з надлишковим підписом.</p>
-                <button class="btn btn-primary">Натисніть цю кнопку</button>
-              </div>
+            <div class="positive">
+              <p>Кнопка з надлишковим підписом.</p>
+              <button class="btn btn-primary">Натисніть цю кнопку</button>
+            </div>
 
-              <div class="positive">
-                <p>Кнопка скидання.</p>
-                <input class="btn btn-danger" type="reset">
-              </div>
+            <div class="positive">
+              <p>Кнопка скидання.</p>
+              <input class="btn btn-danger" type="reset">
+            </div>
 
-              <p class="positive"><a href="./editable.htm" tabindex="2">Порушення порядку табуляції</a></p>
-            </section>
-
-
+            <p class="positive"><a href="./editable.htm" tabindex="2">Порушення порядку табуляції</a></p>
+          </section>
 
 
-          
 
-          </div>
-          
+
+
+
+        </div>
+
 
       </div>
     </div>
 
-    </main>
-    <footer class="container col-lg-12 mx-auto pt-3 text-body-secondary text-center text-md-start">
+  </main>
+  <footer class="container col-lg-12 mx-auto pt-3 text-body-secondary text-center text-md-start">
     <div class="container">
-      <div class="footer-nav mt-5 pt-5 text-center"><a class="btn btn-primary btn-lg" href="/uk/">Про нас</a> <a class="btn btn-primary btn-lg" href="/uk/features/">Функції</a> <a class="btn btn-dark btn-lg" aria-current="page" href="/uk/demo/">Демо</a> <a class="btn btn-primary btn-lg" href="/uk/license/">Ціни та внески</a></div>
+      <div class="footer-nav mt-5 pt-5 text-center"><a class="btn btn-primary btn-lg" href="/uk/">Про нас</a> <a
+          class="btn btn-primary btn-lg" href="/uk/features/">Функції</a> <a class="btn btn-dark btn-lg"
+          aria-current="page" href="/uk/demo/">Демо</a> <a class="btn btn-primary btn-lg" href="/uk/license/">Ціни та
+          внески</a></div>
       <div class="footer">
-        <a href="https://github.com/itmaybejj/editoria11y"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-git" viewBox="0 0 16 16">
-              <path d="M15.698 7.287 8.712.302a1.03 1.03 0 0 0-1.457 0l-1.45 1.45 1.84 1.84a1.223 1.223 0 0 1 1.55 1.56l1.773 1.774a1.224 1.224 0 0 1 1.267 2.025 1.226 1.226 0 0 1-2.002-1.334L8.58 5.963v4.353a1.226 1.226 0 1 1-1.008-.036V5.887a1.226 1.226 0 0 1-.666-1.608L5.093 2.465l-4.79 4.79a1.03 1.03 0 0 0 0 1.457l6.986 6.986a1.03 1.03 0 0 0 1.457 0l6.953-6.953a1.03 1.03 0 0 0 0-1.457"/>
-            </svg> <strong>Бібліотека</strong></a>
-        <a href="https://github.com/itmaybejj/editoria11y/discussions"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chat-right-heart-fill" viewBox="0 0 16 16">
-              <path d="M16 2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h9.586a1 1 0 0 1 .707.293l2.853 2.853a.5.5 0 0 0 .854-.353zM8 3.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132"/>
-            </svg> <strong>Форум</strong></a>
-        <a href="https://github.com/itmaybejj/editoria11y/issues"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-patch-plus-fill" viewBox="0 0 16 16">
-              <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01zM8.5 6v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 1 0"/>
-            </svg> <strong>Проблеми</strong></a>
-        <a href="/uk/contacts"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-person-lines-fill" height="24" width="24" viewBox="0 0 16 18">
-              <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z"></path>
-            </svg> <strong>Контакти</strong></a>
+        <a href="https://github.com/itmaybejj/editoria11y"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+            height="20" fill="currentColor" class="bi bi-git" viewBox="0 0 16 16">
+            <path
+              d="M15.698 7.287 8.712.302a1.03 1.03 0 0 0-1.457 0l-1.45 1.45 1.84 1.84a1.223 1.223 0 0 1 1.55 1.56l1.773 1.774a1.224 1.224 0 0 1 1.267 2.025 1.226 1.226 0 0 1-2.002-1.334L8.58 5.963v4.353a1.226 1.226 0 1 1-1.008-.036V5.887a1.226 1.226 0 0 1-.666-1.608L5.093 2.465l-4.79 4.79a1.03 1.03 0 0 0 0 1.457l6.986 6.986a1.03 1.03 0 0 0 1.457 0l6.953-6.953a1.03 1.03 0 0 0 0-1.457" />
+          </svg> <strong>Бібліотека</strong></a>
+        <a href="https://github.com/itmaybejj/editoria11y/discussions"><svg xmlns="http://www.w3.org/2000/svg"
+            width="20" height="20" fill="currentColor" class="bi bi-chat-right-heart-fill" viewBox="0 0 16 16">
+            <path
+              d="M16 2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h9.586a1 1 0 0 1 .707.293l2.853 2.853a.5.5 0 0 0 .854-.353zM8 3.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132" />
+          </svg> <strong>Форум</strong></a>
+        <a href="https://github.com/itmaybejj/editoria11y/issues"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+            height="20" fill="currentColor" class="bi bi-patch-plus-fill" viewBox="0 0 16 16">
+            <path
+              d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01zM8.5 6v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 1 0" />
+          </svg> <strong>Проблеми</strong></a>
+        <a href="/uk/contacts"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+            class="bi bi-person-lines-fill" height="24" width="24" viewBox="0 0 16 18">
+            <path
+              d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z">
+            </path>
+          </svg> <strong>Контакти</strong></a>
       </div>
       <div class="col col-12 subfooter">
         <a href="/uk/privacy-policy">Політика конфіденційності</a>
         <a href="/uk/cookie-policy">Політика щодо файлів cookie</a>
         <a href="/uk/terms-of-use">Умови використання</a>
         <a href="/uk/legal-notice">Юридичне повідомлення</a>
-        &copy; Editoria11y 2026
+        &copy; 2026 Editoria11y LLC
       </div>
     </div>
   </footer>
 
-    <script src="/lang/i18n.js"></script>
-    <script src="/assets/theme.js"></script>
-    <script
-      src="/assets/bootstrap/js/bootstrap.bundle.min.js"
-      class="astro-vvvwv3sm"
-    ></script>
+  <script src="/lang/i18n.js"></script>
+  <script src="/assets/theme.js"></script>
+  <script src="/assets/bootstrap/js/bootstrap.bundle.min.js" class="astro-vvvwv3sm"></script>
 
-    <script src="../../assets/tinymce/tinymce.min.js"></script>
-    <script>
-      tinymce.init({
-        selector: '#ed11y-demo',
-        license_key: 'gpl',
-        plugins: 'image lists table',
-        toolbar: 'blocks bold italic underline strikethrough blockquote  image numlist indent outdent bullist table tabledelete',
-        inline: true,
-            toolbar_persist: true,
-      });
-    </script>
-    <link rel="stylesheet" media="all" href="/assets/ed11y/css/editoria11y.min.css">
-    <script src="/assets/demo.js" type="module"></script>
-  </body>
+  <script src="../../assets/tinymce/tinymce.min.js"></script>
+  <script>
+    tinymce.init({
+      selector: '#ed11y-demo',
+      license_key: 'gpl',
+      plugins: 'image lists table',
+      toolbar: 'blocks bold italic underline strikethrough blockquote  image numlist indent outdent bullist table tabledelete',
+      inline: true,
+      toolbar_persist: true,
+    });
+  </script>
+  <link rel="stylesheet" media="all" href="/assets/ed11y/css/editoria11y.min.css">
+  <script src="/assets/demo.js" type="module"></script>
+</body>
+
 </html>

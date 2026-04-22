@@ -103,7 +103,7 @@ function buildSubfooter() {
         <a href="${base}/cookie-policy">${lbl['cookie-policy']}</a>
         <a href="${base}/terms-of-use">${lbl['terms-of-use']}</a>
         <a href="${base}/legal-notice">${lbl['legal-notice']}</a>
-        &copy; Editoria11y 2026
+        &copy; 2026 Editoria11y LLC
       </div>`;
 }
 

@@ -1,27 +1,34 @@
 <!doctype html>
 <html lang="pt-pt" data-bs-theme="light">
-  <head>
-<link rel="icon" type="image/png" href="/assets/favicons/favicon-512x512.png" sizes="512x512" />
-    <link rel="icon" type="image/png" href="/assets/favicons/favicon-192x192.png" sizes="192x192" />
-    <link rel="icon" type="image/png" href="/assets/favicons/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="/assets/favicons/favicon.svg" />
-    <link rel="shortcut icon" href="/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <meta charset="utf-8" />
-    <title>Editoria11y</title>
-    <link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="/assets/theme.css" rel="stylesheet" />
-    <meta name="theme-color" content="#712cf9" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-  </head>
-  <body>
-    <header>
+
+<head>
+  <link rel="icon" type="image/png" href="/assets/favicons/favicon-512x512.png" sizes="512x512" />
+  <link rel="icon" type="image/png" href="/assets/favicons/favicon-192x192.png" sizes="192x192" />
+  <link rel="icon" type="image/png" href="/assets/favicons/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/assets/favicons/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <meta charset="utf-8" />
+  <title>Editoria11y</title>
+  <link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="/assets/theme.css" rel="stylesheet" />
+  <meta name="theme-color" content="#712cf9" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <header>
     <nav class="navbar navbar-expand-md">
       <div class="container col-sm-12 mx-auto">
         <a href="/pt-pt/" class="d-flex align-items-center  navbar-brand">
-          <svg class="logo-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="-.75 -3.5 10.1699 19.1777"><path fill="currentColor" d="M3.7031,10.5527c-.3633-.6562-.6426-1.1387-.8379-1.4473l-.3105-.4863-.2344-.3574c-.5117-.7969-1.0449-1.4551-1.5996-1.9746.3164-.2617.6113-.3926.8848-.3926.3359,0,.6348.123.8965.3691s.5918.7148.9902,1.4062c.4531-1.4727,1.0293-2.8691,1.7285-4.1895.3867-.7188.7314-1.2021,1.0342-1.4502s.7041-.3721,1.2041-.3721c.2656,0,.5938.041.9844.123-1.0039.8086-1.8066,1.7695-2.4082,2.8828s-1.3789,3.0762-2.332,5.8887Z"/></svg> Editoria<span style="margin-left: -1px;">11</span>y
+          <svg class="logo-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+            viewBox="-.75 -3.5 10.1699 19.1777">
+            <path fill="currentColor"
+              d="M3.7031,10.5527c-.3633-.6562-.6426-1.1387-.8379-1.4473l-.3105-.4863-.2344-.3574c-.5117-.7969-1.0449-1.4551-1.5996-1.9746.3164-.2617.6113-.3926.8848-.3926.3359,0,.6348.123.8965.3691s.5918.7148.9902,1.4062c.4531-1.4727,1.0293-2.8691,1.7285-4.1895.3867-.7188.7314-1.2021,1.0342-1.4502s.7041-.3721,1.2041-.3721c.2656,0,.5938.041.9844.123-1.0039.8086-1.8066,1.7695-2.4082,2.8828s-1.3789,3.0762-2.332,5.8887Z" />
+          </svg> Editoria<span style="margin-left: -1px;">11</span>y
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Alternar navegação">
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar" aria-label="Alternar navegação">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
@@ -38,187 +45,224 @@
     </nav>
     <div id="lang-picker"></div>
   </header>
-    <main class="container col-lg-12 mx-auto py-5">
-      <div class="row docs">
-        <div class="col-12 col-md-5 col-lg-4 mb-5">
-          <div id="on-this-page" class="list-group ms-2 ms-lg-5 position-sticky top-0 pt-3">
-          </div>
+  <main class="container col-lg-12 mx-auto py-5">
+    <div class="row docs">
+      <div class="col-12 col-md-5 col-lg-4 mb-5">
+        <div id="on-this-page" class="list-group ms-2 ms-lg-5 position-sticky top-0 pt-3">
         </div>
-        <div class="col-12 col-md-7 col-lg-8 pt-3" data-bs-spy="scroll" data-bs-target="#on-this-page" data-bs-smooth-scroll="true" tabindex="0">
-          <section id="features">
-            <h1 class="text-body-emphasis pt-2 pb-5">Funcionalidades</h1>
-            <p class="fs-6">Os testes principais do Editoria11y detetam mais de 50 problemas comuns de acessibilidade de conteúdo: decisões que prejudicam a legibilidade, erros que tornam os leitores de ecrã menos eficazes e falhas que reduzem o SEO.</p>
-            <p class="fs-6">Os módulos adicionais disponibilizam cerca de 40 testes extra para programadores e designers, testes personalizados e diversas ferramentas de garantia de qualidade para todo o sítio.</p>
-            <p class="fs-6">Os testes de conteúdo concentram-se em problemas que surgem <strong>depois</strong> de os sítios serem entregues aos autores de conteúdo. Os sítios precisam de ser testados com ferramentas de auditoria manual, teclados e leitores de ecrã antes do lançamento, mas mesmo o sítio mais acessível no primeiro dia tende a degradar-se à medida que as edições introduzem novos problemas.</p>
-            <p class="fs-6">O que distingue o Editoria11y das outras ferramentas de acessibilidade é o facto de os seus testes correrem em direto, no navegador, enquanto os autores editam e pré-visualizam o seu trabalho. <strong>Os autores reagem mais facilmente a feedback imediato e incorporado</strong>, reparam nos alertas e fazem as correções necessárias, do que se lembram de visitar um painel de controlo ou executar uma verificação manual.</p>
-          </section>
-          <section id="authoring">
-            <h2>A experiência do autor</h2>
-            <div class="clearfix">
-              <img src="/assets/images/3x-toolbar" class="image-fluid float-start me-3" alt="Captura de ecrã da barra de ferramentas do Editoria11y, mostrando 4 erros." width="97" height="50" loading="lazy">
-              <p>Os autores veem a barra de ferramentas do Editoria11y enquanto editam conteúdo. Quando são detetados problemas, ela fica amarela ou vermelha e apresenta a contagem de ocorrências. Ao clicar na contagem, a página desloca-se até ao primeiro alerta e abre a respetiva dica.</p>
+      </div>
+      <div class="col-12 col-md-7 col-lg-8 pt-3" data-bs-spy="scroll" data-bs-target="#on-this-page"
+        data-bs-smooth-scroll="true" tabindex="0">
+        <section id="features">
+          <h1 class="text-body-emphasis pt-2 pb-5">Funcionalidades</h1>
+          <p class="fs-6">Os testes principais do Editoria11y detetam mais de 50 problemas comuns de acessibilidade de
+            conteúdo: decisões que prejudicam a legibilidade, erros que tornam os leitores de ecrã menos eficazes e
+            falhas que reduzem o SEO.</p>
+          <p class="fs-6">Os módulos adicionais disponibilizam cerca de 40 testes extra para programadores e designers,
+            testes personalizados e diversas ferramentas de garantia de qualidade para todo o sítio.</p>
+          <p class="fs-6">Os testes de conteúdo concentram-se em problemas que surgem <strong>depois</strong> de os
+            sítios serem entregues aos autores de conteúdo. Os sítios precisam de ser testados com ferramentas de
+            auditoria manual, teclados e leitores de ecrã antes do lançamento, mas mesmo o sítio mais acessível no
+            primeiro dia tende a degradar-se à medida que as edições introduzem novos problemas.</p>
+          <p class="fs-6">O que distingue o Editoria11y das outras ferramentas de acessibilidade é o facto de os seus
+            testes correrem em direto, no navegador, enquanto os autores editam e pré-visualizam o seu trabalho.
+            <strong>Os autores reagem mais facilmente a feedback imediato e incorporado</strong>, reparam nos alertas e
+            fazem as correções necessárias, do que se lembram de visitar um painel de controlo ou executar uma
+            verificação manual.</p>
+        </section>
+        <section id="authoring">
+          <h2>A experiência do autor</h2>
+          <div class="clearfix">
+            <img src="/assets/images/3x-toolbar" class="image-fluid float-start me-3"
+              alt="Captura de ecrã da barra de ferramentas do Editoria11y, mostrando 4 erros." width="97" height="50"
+              loading="lazy">
+            <p>Os autores veem a barra de ferramentas do Editoria11y enquanto editam conteúdo. Quando são detetados
+              problemas, ela fica amarela ou vermelha e apresenta a contagem de ocorrências. Ao clicar na contagem, a
+              página desloca-se até ao primeiro alerta e abre a respetiva dica.</p>
+          </div>
+          <div class="row">
+            <img loading="lazy" src="/assets/images/3x-generic-tip.png" class="img-fluid col-6 col-lg-8" height="798"
+              width="1278" alt="Dica a indicar que um link tem apenas o nome «clique aqui».">
+            <p class="col-6 col-lg-4 align-content-center">As dicas aparecem incorporadas no conteúdo, com uma descrição
+              clara do erro em linguagem simples, sugestões de correção e notas sobre a razão pela qual o problema é
+              relevante.</p>
+          </div>
+          <div class="row">
+            <img loading="lazy" class="img-fluid col-6 col-lg-8" src="/assets/images/3x-tools.jpg" height="473"
+              width="405" alt="Visualizador da estrutura de cabeçalhos sobreposto à página">
+            <p class="col-6 col-lg-4 align-content-center">A barra de ferramentas inclui ferramentas adicionais para
+              verificações manuais, como visualizadores da estrutura de cabeçalhos e do texto alternativo, bem como
+              pontuação de legibilidade.</p>
+          </div>
+        </section>
+        <section id="admins">
+          <h2>Controlos para administradores do sítio</h2>
+          <p>Todos os aspetos visíveis do verificador podem ser personalizados. Os parâmetros e os eventos permitem
+            remover testes, reescrever dicas, inserir testes personalizados e definir temas customizados.</p>
+          <p>Os plugins para Drupal e WordPress acrescentam funcionalidades adicionais, como dispensas sincronizadas,
+            painéis de controlo para todo o sítio e exportações de relatórios em CSV.</p>
+          <figure class="figure my-4 rounded shadow mb-5 border">
+            <img loading="lazy" class="figure-img img-fluid" src="/assets/images/3x-dashboard.png" height="765"
+              width="1600" alt="Painel de relatórios a mostrar problemas recentes e páginas com mais ocorrências.">
+            <figcaption class="figure-caption p-3 pt-2">O painel do Drupal, que inclui listas filtráveis de problemas,
+              páginas com problemas e dispensas.</figcaption>
+          </figure>
+        </section>
+        <section id="tests">
+          <h2 data-section="tests">Testes</h2>
+          <p class="fs-6">Os testes do Editoria11y centram-se em melhorar a experiência da Web para todos os
+            utilizadores, medida por seres humanos e não apenas por normas técnicas. Embora os testes principais visem
+            ajudar a cumprir as Diretrizes de Acessibilidade para Conteúdo Web (<a
+              href="https://www.w3.org/WAI/WCAG22/quickref/">WCAG 2.2 AA</a>), outros são influenciados pelo trabalho do
+            <a href="https://www.w3.org/TR/coga-usable/">Grupo de Trabalho de Acessibilidade para Deficiências
+              Cognitivas e de Aprendizagem</a>, bem como pelas melhores práticas gerais de usabilidade e design.</p>
+          <p class="fs-6 pb-3">Os testes individuais podem ser desativados pelos administradores do sítio.</p>
+          <div class="row listgrid">
+            <div class="col-12 col-xl-4">
+              <h3 class="fs-5 nomenu pt-0">Texto alternativo de imagens</h3>
+              <ul>
+                <li>Imagem sem atributo alt</li>
+                <li>O texto alternativo é um nome de ficheiro</li>
+                <li>O texto alternativo é um marcador provisório ("TBD")</li>
+                <li>O texto alternativo contém símbolos impronunciáveis</li>
+                <li>O texto alternativo contém palavras redundantes («imagem de&hellip;»)</li>
+                <li>O texto alternativo é demasiado longo</li>
+                <li>A imagem decorativa poderá ter valor informativo</li>
+                <li>Imagem de carrossel marcada como decorativa</li>
+                <li>Imagem com legenda não tem texto alternativo</li>
+                <li>O texto alternativo duplica a legenda</li>
+              </ul>
+              <h3 class="fs-5 nomenu pt-0">Imagens com ligação</h3>
+              <ul>
+                <li>Imagem com ligação não tem texto alternativo</li>
+                <li>O alt da imagem com ligação é um URL ou nome de ficheiro</li>
+                <li>O alt da imagem com ligação é um marcador provisório</li>
+                <li>O alt da imagem com ligação contém símbolos impronunciáveis</li>
+                <li>O alt da imagem com ligação descreve a imagem, não o destino da ligação</li>
+                <li>O alt da imagem com ligação contém palavras redundantes</li>
+                <li>O alt da imagem com ligação é demasiado longo</li>
+                <li>Imagem numa ligação com texto não tem atributo alt</li>
+              </ul>
+              <h3 class="fs-5 nomenu pt-0">Multimédia incorporado</h3>
+              <ul>
+                <li>O vídeo necessita de legendas</li>
+                <li>O áudio necessita de transcrição</li>
+                <li>A visualização de dados necessita de uma alternativa acessível</li>
+                <li>Frame sem título</li>
+                <li>Frame excluído da navegação por teclado</li>
+                <li>O conteúdo do frame necessita de verificação de acessibilidade manual</li>
+                <li>O documento com ligação pode não ser acessível a leitores de ecrã</li>
+                <li>O PDF não tem alternativa acessível</li>
+                <li>Componentes de disposição interativos aninhados</li>
+              </ul>
             </div>
-            <div class="row">
-             <img loading="lazy" src="/assets/images/3x-generic-tip.png" class="img-fluid col-6 col-lg-8" height="798" width="1278" alt="Dica a indicar que um link tem apenas o nome «clique aqui».">
-              <p class="col-6 col-lg-4 align-content-center">As dicas aparecem incorporadas no conteúdo, com uma descrição clara do erro em linguagem simples, sugestões de correção e notas sobre a razão pela qual o problema é relevante.</p>
-            </div>
-            <div class="row">
-              <img loading="lazy" class="img-fluid col-6 col-lg-8" src="/assets/images/3x-tools.jpg" height="473" width="405" alt="Visualizador da estrutura de cabeçalhos sobreposto à página">
-              <p class="col-6 col-lg-4 align-content-center">A barra de ferramentas inclui ferramentas adicionais para verificações manuais, como visualizadores da estrutura de cabeçalhos e do texto alternativo, bem como pontuação de legibilidade.</p>
-            </div>
-          </section>
-          <section id="admins">
-            <h2>Controlos para administradores do sítio</h2>
-            <p>Todos os aspetos visíveis do verificador podem ser personalizados. Os parâmetros e os eventos permitem remover testes, reescrever dicas, inserir testes personalizados e definir temas customizados.</p>
-            <p>Os plugins para Drupal e WordPress acrescentam funcionalidades adicionais, como dispensas sincronizadas, painéis de controlo para todo o sítio e exportações de relatórios em CSV.</p>
-            <figure class="figure my-4 rounded shadow mb-5 border">
-                <img loading="lazy" class="figure-img img-fluid" src="/assets/images/3x-dashboard.png" height="765" width="1600" alt="Painel de relatórios a mostrar problemas recentes e páginas com mais ocorrências.">
-                <figcaption class="figure-caption p-3 pt-2">O painel do Drupal, que inclui listas filtráveis de problemas, páginas com problemas e dispensas.</figcaption>
-              </figure>
-          </section>
-          <section id="tests">
-            <h2 data-section="tests">Testes</h2>
-            <p class="fs-6">Os testes do Editoria11y centram-se em melhorar a experiência da Web para todos os utilizadores, medida por seres humanos e não apenas por normas técnicas. Embora os testes principais visem ajudar a cumprir as Diretrizes de Acessibilidade para Conteúdo Web (<a href="https://www.w3.org/WAI/WCAG22/quickref/">WCAG 2.2 AA</a>), outros são influenciados pelo trabalho do <a href="https://www.w3.org/TR/coga-usable/">Grupo de Trabalho de Acessibilidade para Deficiências Cognitivas e de Aprendizagem</a>, bem como pelas melhores práticas gerais de usabilidade e design.</p>
-            <p class="fs-6 pb-3">Os testes individuais podem ser desativados pelos administradores do sítio.</p>
-            <div class="row listgrid">
-              <div class="col-12 col-xl-4">
-                <h3 class="fs-5 nomenu pt-0">Texto alternativo de imagens</h3>
-                <ul>
-                  <li>Imagem sem atributo alt</li>
-                  <li>O texto alternativo é um nome de ficheiro</li>
-                  <li>O texto alternativo é um marcador provisório ("TBD")</li>
-                  <li>O texto alternativo contém símbolos impronunciáveis</li>
-                  <li>O texto alternativo contém palavras redundantes («imagem de&hellip;»)</li>
-                  <li>O texto alternativo é demasiado longo</li>
-                  <li>A imagem decorativa poderá ter valor informativo</li>
-                  <li>Imagem de carrossel marcada como decorativa</li>
-                  <li>Imagem com legenda não tem texto alternativo</li>
-                  <li>O texto alternativo duplica a legenda</li>
-                </ul>
-                <h3 class="fs-5 nomenu pt-0">Imagens com ligação</h3>
-                <ul>
-                  <li>Imagem com ligação não tem texto alternativo</li>
-                  <li>O alt da imagem com ligação é um URL ou nome de ficheiro</li>
-                  <li>O alt da imagem com ligação é um marcador provisório</li>
-                  <li>O alt da imagem com ligação contém símbolos impronunciáveis</li>
-                  <li>O alt da imagem com ligação descreve a imagem, não o destino da ligação</li>
-                  <li>O alt da imagem com ligação contém palavras redundantes</li>
-                  <li>O alt da imagem com ligação é demasiado longo</li>
-                  <li>Imagem numa ligação com texto não tem atributo alt</li>
-                </ul>
-                <h3 class="fs-5 nomenu pt-0">Multimédia incorporado</h3>
-                <ul>
-                  <li>O vídeo necessita de legendas</li>
-                  <li>O áudio necessita de transcrição</li>
-                  <li>A visualização de dados necessita de uma alternativa acessível</li>
-                  <li>Frame sem título</li>
-                  <li>Frame excluído da navegação por teclado</li>
-                  <li>O conteúdo do frame necessita de verificação de acessibilidade manual</li>
-                  <li>O documento com ligação pode não ser acessível a leitores de ecrã</li>
-                  <li>O PDF não tem alternativa acessível</li>
-                  <li>Componentes de disposição interativos aninhados</li>
-                </ul>
-              </div>
-              <div class="col-12 col-xl-4">
-                <h3 class="fs-5 nomenu pt-0">Ligações com significado</h3>
-                <ul>
-                  <li>Ligação vazia</li>
-                  <li>O texto da ligação é um URL</li>
-                  <li>O texto da ligação é apenas um número DOI</li>
-                  <li>O texto da ligação diz «clique aqui»</li>
-                  <li>O texto da ligação é apenas palavras genéricas («ler mais»)</li>
-                  <li>Ligações diferentes partilham o mesmo texto</li>
-                  <li>Ícone ou imagem com ligação não tem alternativa textual</li>
-                  <li>A ligação abre um novo separador sem aviso</li>
-                  <li>A ligação aponta para um ficheiro sem aviso</li>
-                  <li>O texto da ligação é apenas símbolos ou emoji</li>
-                  <li>Texto de ligação significativo ocultado aos utilizadores com visão</li>
-                  <li>Dica de ferramenta da ligação redundante</li>
-                  <li>Ligação de âncora interna quebrada</li>
-                  <li>Atributo ID duplicado</li>
-                  <li>A ligação pode apontar para um ambiente de desenvolvimento</li>
-                </ul>
-                <h3 class="fs-5 nomenu pt-0">Cabeçalhos</h3>
-                <ul>
-                  <li>A página não tem Cabeçalho 1</li>
-                  <li>O primeiro cabeçalho é um subcabeçalho</li>
-                  <li>O cabeçalho salta um nível</li>
-                  <li>O cabeçalho está vazio</li>
-                  <li>Imagem utilizada como cabeçalho necessita de texto alternativo</li>
-                  <li>O cabeçalho é demasiado longo</li>
-                  <li>O parágrafo em negrito pode ser um cabeçalho</li>
-                  <li>A citação curta pode ser um cabeçalho</li>
-                </ul>
-                <h3 class="fs-5 nomenu pt-0">Legibilidade do texto</h3>
-                <ul>
-                  <li>Texto em maiúsculas excessivo</li>
-                  <li>Bloco extenso de texto em negrito ou itálico</li>
-                  <li>Texto demasiado pequeno</li>
-                  <li>Texto sublinhado que não é uma ligação</li>
-                  <li>Texto justificado</li>
-                  <li>Índice ou expoente utilizados incorretamente como formatação</li>
-                  <li>Lista simulada com caracteres ou símbolos</li>
-                  <li>Item de lista fora de uma lista</li>
-                </ul>
+            <div class="col-12 col-xl-4">
+              <h3 class="fs-5 nomenu pt-0">Ligações com significado</h3>
+              <ul>
+                <li>Ligação vazia</li>
+                <li>O texto da ligação é um URL</li>
+                <li>O texto da ligação é apenas um número DOI</li>
+                <li>O texto da ligação diz «clique aqui»</li>
+                <li>O texto da ligação é apenas palavras genéricas («ler mais»)</li>
+                <li>Ligações diferentes partilham o mesmo texto</li>
+                <li>Ícone ou imagem com ligação não tem alternativa textual</li>
+                <li>A ligação abre um novo separador sem aviso</li>
+                <li>A ligação aponta para um ficheiro sem aviso</li>
+                <li>O texto da ligação é apenas símbolos ou emoji</li>
+                <li>Texto de ligação significativo ocultado aos utilizadores com visão</li>
+                <li>Dica de ferramenta da ligação redundante</li>
+                <li>Ligação de âncora interna quebrada</li>
+                <li>Atributo ID duplicado</li>
+                <li>A ligação pode apontar para um ambiente de desenvolvimento</li>
+              </ul>
+              <h3 class="fs-5 nomenu pt-0">Cabeçalhos</h3>
+              <ul>
+                <li>A página não tem Cabeçalho 1</li>
+                <li>O primeiro cabeçalho é um subcabeçalho</li>
+                <li>O cabeçalho salta um nível</li>
+                <li>O cabeçalho está vazio</li>
+                <li>Imagem utilizada como cabeçalho necessita de texto alternativo</li>
+                <li>O cabeçalho é demasiado longo</li>
+                <li>O parágrafo em negrito pode ser um cabeçalho</li>
+                <li>A citação curta pode ser um cabeçalho</li>
+              </ul>
+              <h3 class="fs-5 nomenu pt-0">Legibilidade do texto</h3>
+              <ul>
+                <li>Texto em maiúsculas excessivo</li>
+                <li>Bloco extenso de texto em negrito ou itálico</li>
+                <li>Texto demasiado pequeno</li>
+                <li>Texto sublinhado que não é uma ligação</li>
+                <li>Texto justificado</li>
+                <li>Índice ou expoente utilizados incorretamente como formatação</li>
+                <li>Lista simulada com caracteres ou símbolos</li>
+                <li>Item de lista fora de uma lista</li>
+              </ul>
 
-              </div>
-              <div class="col-12 col-xl-4">
-                <h3 class="fs-5 nomenu pt-0">Contraste de cores</h3>
-                <ul>
-                  <li>O texto tem contraste insuficiente</li>
-                  <li>O contraste do texto requer verificação manual</li>
-                  <li>O ícone ou elemento gráfico tem contraste insuficiente</li>
-                  <li>O contraste do ícone ou elemento gráfico requer verificação manual</li>
-                  <li>O texto do campo tem contraste insuficiente</li>
-                  <li>O texto de marcador do campo tem contraste insuficiente</li>
-                </ul>
-                <h3 class="fs-5 nomenu pt-0">Tabelas</h3>
-                <ul>
-                  <li>Tabela sem linha ou coluna de cabeçalho</li>
-                  <li>Célula de cabeçalho de tabela está vazia</li>
-                  <li>Cabeçalho de conteúdo utilizado dentro de uma tabela</li>
-                </ul>
-                <h3 class="fs-5 nomenu pt-0">Formulários e elementos interativos</h3>
-                <ul>
-                  <li>O botão não tem etiqueta acessível</li>
-                  <li>O botão tem uma etiqueta ARIA inválida</li>
-                  <li>A etiqueta do botão inclui a palavra «botão»</li>
-                  <li>A etiqueta visível não corresponde ao nome acessível</li>
-                  <li>O campo não tem etiqueta associada</li>
-                  <li>O campo utiliza apenas uma etiqueta invisível</li>
-                  <li>O campo utiliza apenas um marcador como etiqueta</li>
-                  <li>O botão de reiniciar pode causar perda acidental de dados</li>
-                  <li>Elemento ocultado dos leitores de ecrã mas ainda acessível por teclado</li>
-                  <li>O tabindex positivo quebra a ordem de leitura e de tabulação</li>
-                </ul>
-                <h3 class="fs-5 nomenu pt-0">Metadados da página</h3>
-                <ul>
-                  <li>Título da página em falta</li>
-                  <li>Idioma da página não declarado</li>
-                  <li>O viewport impede o redimensionamento do texto</li>
-                  <li>A página atualiza-se automaticamente</li>
-                </ul>
-              </div>
             </div>
-          </section>
-          <section class="row mb-5 pb-5" id="csa">
-            <h2 class="pt-3" data-section="csa">Funcionalidades CSA</h2>
+            <div class="col-12 col-xl-4">
+              <h3 class="fs-5 nomenu pt-0">Contraste de cores</h3>
+              <ul>
+                <li>O texto tem contraste insuficiente</li>
+                <li>O contraste do texto requer verificação manual</li>
+                <li>O ícone ou elemento gráfico tem contraste insuficiente</li>
+                <li>O contraste do ícone ou elemento gráfico requer verificação manual</li>
+                <li>O texto do campo tem contraste insuficiente</li>
+                <li>O texto de marcador do campo tem contraste insuficiente</li>
+              </ul>
+              <h3 class="fs-5 nomenu pt-0">Tabelas</h3>
+              <ul>
+                <li>Tabela sem linha ou coluna de cabeçalho</li>
+                <li>Célula de cabeçalho de tabela está vazia</li>
+                <li>Cabeçalho de conteúdo utilizado dentro de uma tabela</li>
+              </ul>
+              <h3 class="fs-5 nomenu pt-0">Formulários e elementos interativos</h3>
+              <ul>
+                <li>O botão não tem etiqueta acessível</li>
+                <li>O botão tem uma etiqueta ARIA inválida</li>
+                <li>A etiqueta do botão inclui a palavra «botão»</li>
+                <li>A etiqueta visível não corresponde ao nome acessível</li>
+                <li>O campo não tem etiqueta associada</li>
+                <li>O campo utiliza apenas uma etiqueta invisível</li>
+                <li>O campo utiliza apenas um marcador como etiqueta</li>
+                <li>O botão de reiniciar pode causar perda acidental de dados</li>
+                <li>Elemento ocultado dos leitores de ecrã mas ainda acessível por teclado</li>
+                <li>O tabindex positivo quebra a ordem de leitura e de tabulação</li>
+              </ul>
+              <h3 class="fs-5 nomenu pt-0">Metadados da página</h3>
+              <ul>
+                <li>Título da página em falta</li>
+                <li>Idioma da página não declarado</li>
+                <li>O viewport impede o redimensionamento do texto</li>
+                <li>A página atualiza-se automaticamente</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section class="row mb-5 pb-5" id="csa">
+          <h2 class="pt-3" data-section="csa">Funcionalidades CSA</h2>
 
-            <p class="fs-5">
-              O Editoria11y promove a acessibilidade de forma única. As suas ferramentas são altamente eficazes a ajudar autores sem formação técnica a preparar conteúdo que possa ser usufruído em igualdade de condições por utilizadores da Web com deficiência. Consideramos isto um bem público, pelo que <strong>o Editoria11y será sempre gratuito para utilizar</strong>.
-            </p>
-            <p class="fs-5">
-              No entanto, o Editoria11y não é gratuito de desenvolver nem de manter.
-            </p>
-            <p class="fs-5">
-              A CSA preenche esta lacuna: os membros do projeto financiam o desenvolvimento da biblioteca Editoria11y, dos seus plugins CMS e da suite CSA — um conjunto de ferramentas de código aberto em rápido crescimento que oferece funcionalidades semelhantes às de produtos comerciais, a um custo muito mais acessível.
+          <p class="fs-5">
+            O Editoria11y promove a acessibilidade de forma única. As suas ferramentas são altamente eficazes a ajudar
+            autores sem formação técnica a preparar conteúdo que possa ser usufruído em igualdade de condições por
+            utilizadores da Web com deficiência. Consideramos isto um bem público, pelo que <strong>o Editoria11y será
+              sempre gratuito para utilizar</strong>.
+          </p>
+          <p class="fs-5">
+            No entanto, o Editoria11y não é gratuito de desenvolver nem de manter.
+          </p>
+          <p class="fs-5">
+            A CSA preenche esta lacuna: os membros do projeto financiam o desenvolvimento da biblioteca Editoria11y, dos
+            seus plugins CMS e da suite CSA — um conjunto de ferramentas de código aberto em rápido crescimento que
+            oferece funcionalidades semelhantes às de produtos comerciais, a um custo muito mais acessível.
 
-              A suite CSA para Drupal está atualmente disponível gratuitamente em fase beta, e chegará ao WordPress no 3.º trimestre de 2026.
-            </p>
-            <figure class="figure my-4 shadow border rounded p-0 m-2 col-sm-12 col-xl-11">
-              <img alt="Rastreamento do sítio em curso" src="../../assets/images/3x-crawl.png" height="786" width="1986" class="img-fluid rounded-top figure-img"/>
-                  <figcaption class="figure-caption p-2 pt-2">O rastreador CSA a atualizar um painel de controlo.</figcaption>
-                </figure>
+            A suite CSA para Drupal está atualmente disponível gratuitamente em fase beta, e chegará ao WordPress no 3.º
+            trimestre de 2026.
+          </p>
+          <figure class="figure my-4 shadow border rounded p-0 m-2 col-sm-12 col-xl-11">
+            <img alt="Rastreamento do sítio em curso" src="../../assets/images/3x-crawl.png" height="786" width="1986"
+              class="img-fluid rounded-top figure-img" />
+            <figcaption class="figure-caption p-2 pt-2">O rastreador CSA a atualizar um painel de controlo.</figcaption>
+          </figure>
 
         </section>
         <section id="csa-tools" class="pb-5 mt-5 row g-5">
@@ -242,32 +286,37 @@
                 Ferramentas de manutenção do painel e rastreadores
               </li>
             </ul>
-            <img alt="Seletor de cores na dica de teste" src="../../assets/images/3x-colors.png" height="1022" width="1288" class="img-fluid col-sm-12 col-xl-9 mt-0 p-0"/>
+            <img alt="Seletor de cores na dica de teste" src="../../assets/images/3x-colors.png" height="1022"
+              width="1288" class="img-fluid col-sm-12 col-xl-9 mt-0 p-0" />
           </div>
 
         </section>
         <section id="benefits" class="pb-5 mt-5 row g-5">
 
 
-        <div class="">
-          <h3 class="pt-0" data-section="benefits">Benefícios para a comunidade</h3>
+          <div class="">
+            <h3 class="pt-0" data-section="benefits">Benefícios para a comunidade</h3>
             <ul class="fs-5">
               <li>Suporte prioritário.</li>
               <li>Influência ponderada no roteiro do projeto.</li>
               <li>Acesso automático às novas funcionalidades do roteiro.</li>
               <li>Assistência direta na configuração (consoante o nível).</li>
-              <li><a href="https://form.jotform.com/260627656020150">Crédito público de apoiante</a> (consoante o nível/mediante pedido; aplicam-se condições).</li>
+              <li><a href="https://form.jotform.com/260627656020150">Crédito público de apoiante</a> (consoante o
+                nível/mediante pedido; aplicam-se condições).</li>
             </ul>
           </div>
 
           <div>
             <h3 class="nomenu">Licenciamento contribua-com-o-que-puder</h3>
-            <p class="fs-5">Após a fase Beta, a suite CSA ficará disponível através de um modelo contribua-com-o-que-puder. O núcleo do Editoria11y, tanto a biblioteca como os plugins, continuará a ser gratuito.</p>
-            <p class=""><a class="btn btn-primary" href="/pt-pt/license/">Ver opções de licenciamento e alternativas</a></p>
+            <p class="fs-5">Após a fase Beta, a suite CSA ficará disponível através de um modelo
+              contribua-com-o-que-puder. O núcleo do Editoria11y, tanto a biblioteca como os plugins, continuará a ser
+              gratuito.</p>
+            <p class=""><a class="btn btn-primary" href="/pt-pt/license/">Ver opções de licenciamento e alternativas</a>
+            </p>
 
           </div>
 
-          </section>
+        </section>
 
 
 
@@ -283,12 +332,14 @@
               </summary>
               <div>
                 <p>Trabalho restante:</p>
-                <ul class="fs-6"><li>
-                  Criar uma entidade fiscal para processar subscrições e patrocínios.
-                </li>
+                <ul class="fs-6">
+                  <li>
+                    Criar uma entidade fiscal para processar subscrições e patrocínios.
+                  </li>
                   <li>
                     Configurar um sistema de licenciamento.
-                  </li></ul>
+                  </li>
+                </ul>
               </div>
             </details>
             <details>
@@ -310,9 +361,11 @@
                 <ol class="fs-6">
                   <li>Criar submódulo CSA com funcionalidades suportadas pela comunidade
                     <ul>
-                      <li>Criar ferramentas de manutenção do painel para eliminar resultados desatualizados e re-rastrear conteúdo existente.</li>
+                      <li>Criar ferramentas de manutenção do painel para eliminar resultados desatualizados e
+                        re-rastrear conteúdo existente.</li>
                       <li>Permitir marcar determinados testes como OK em todo o sítio, e não apenas numa página.</li>
-                      <li>Permitir configuração dividida, com definições e testes separados para programadores e editores de conteúdo.</li>
+                      <li>Permitir configuração dividida, com definições e testes separados para programadores e
+                        editores de conteúdo.</li>
                     </ul>
                   </li>
                 </ol>
@@ -330,13 +383,20 @@
               <div>
                 <ul class="fs-6">
                   <li>
-                    Fusão dos conjuntos de regras do Editoria11y e do Sa11y. Desde o fork, o Sa11y escreveu cerca de 50 testes adicionais e adotou ferramentas ESM, e o Editoria11y implementou melhorias de desempenho e adicionou parâmetros para permitir a verificação em tempo real. O Sa11y 4.2.2 e o Editoria11y 3.0.0 darão início ao nosso futuro partilhado.
+                    Fusão dos conjuntos de regras do Editoria11y e do Sa11y. Desde o fork, o Sa11y escreveu cerca de 50
+                    testes adicionais e adotou ferramentas ESM, e o Editoria11y implementou melhorias de desempenho e
+                    adicionou parâmetros para permitir a verificação em tempo real. O Sa11y 4.2.2 e o Editoria11y 3.0.0
+                    darão início ao nosso futuro partilhado.
                   </li>
                   <li>
-                    Adição de suporte para «configuração dividida» para permitir conjuntos de regras separados para programadores e criadores de conteúdo.
+                    Adição de suporte para «configuração dividida» para permitir conjuntos de regras separados para
+                    programadores e criadores de conteúdo.
                   </li>
-                  <li>Adição de traduções automáticas para chinês, dinamarquês, neerlandês, alemão, grego, húngaro, italiano, japonês, norueguês bokmål, polaco, português (Brasil), português (Portugal), espanhol, sueco e ucraniano como modelos para refinamento humano.</li>
-                  <li><em class="fs-6 lh-1"><strong>Estado atual</strong>: o trabalho de programação está concluído; a versão será etiquetada após a atualização da documentação e das demos.</em></li>
+                  <li>Adição de traduções automáticas para chinês, dinamarquês, neerlandês, alemão, grego, húngaro,
+                    italiano, japonês, norueguês bokmål, polaco, português (Brasil), português (Portugal), espanhol,
+                    sueco e ucraniano como modelos para refinamento humano.</li>
+                  <li><em class="fs-6 lh-1"><strong>Estado atual</strong>: o trabalho de programação está concluído; a
+                      versão será etiquetada após a atualização da documentação e das demos.</em></li>
                 </ul>
               </div>
             </details>
@@ -347,13 +407,17 @@
               <div>
                 <ol class="fs-6">
                   <li>Expansão do painel com ferramentas de relatório e filtragem mais robustas.</li>
-                  <li>Adição de traduções automáticas para chinês, dinamarquês, neerlandês, alemão, grego, húngaro, italiano, japonês, norueguês bokmål, polaco, português (Brasil), português (Portugal), espanhol, sueco e ucraniano como modelos para refinamento humano.</li>
+                  <li>Adição de traduções automáticas para chinês, dinamarquês, neerlandês, alemão, grego, húngaro,
+                    italiano, japonês, norueguês bokmål, polaco, português (Brasil), português (Portugal), espanhol,
+                    sueco e ucraniano como modelos para refinamento humano.</li>
                   <li>Tornar as funções de exportação CSV personalizáveis</li>
                   <li>Criar submódulo CSA com funcionalidades suportadas pela comunidade
                     <ul>
-                      <li>Criar ferramentas de manutenção do painel para eliminar resultados desatualizados e re-rastrear conteúdo existente.</li>
+                      <li>Criar ferramentas de manutenção do painel para eliminar resultados desatualizados e
+                        re-rastrear conteúdo existente.</li>
                       <li>Permitir marcar determinados testes como OK em todo o sítio, e não apenas numa página.</li>
-                      <li>Permitir configuração dividida, com definições e testes separados para programadores e editores de conteúdo.</li>
+                      <li>Permitir configuração dividida, com definições e testes separados para programadores e
+                        editores de conteúdo.</li>
                     </ul>
                   </li>
                 </ol>
@@ -363,8 +427,10 @@
         </section>
         <section id="project-ideas">
           <h3 data-section="project-ideas" class="pt-5">Em discussão</h3>
-          <p>Discuta e vote nestas ideias nos <a href="https://github.com/itmaybejj/editoria11y/discussions">fóruns da biblioteca Editoria11y</a>.</p>
-          <p>As ideias estão etiquetadas com estimativas de dificuldade/prioridade com base na atividade atual da comunidade.</p>
+          <p>Discuta e vote nestas ideias nos <a href="https://github.com/itmaybejj/editoria11y/discussions">fóruns da
+              biblioteca Editoria11y</a>.</p>
+          <p>As ideias estão etiquetadas com estimativas de dificuldade/prioridade com base na atividade atual da
+            comunidade.</p>
           <ul class="mt-1 p-5 pt-0">
             <li>Painel de monitorização multi-sítio</li>
             <li>Deteção de ligações quebradas</li>
@@ -379,43 +445,53 @@
           </ul>
         </section>
 
-        
-        </div>
-        
 
       </div>
-    </main>
-    <footer class="container col-lg-12 mx-auto pt-3 text-body-secondary text-center text-md-start">
+
+
+    </div>
+  </main>
+  <footer class="container col-lg-12 mx-auto pt-3 text-body-secondary text-center text-md-start">
     <div class="container">
-      <div class="footer-nav mt-5 pt-5 text-center"><a class="btn btn-primary btn-lg" href="/pt-pt/">Sobre</a> <a class="btn btn-dark btn-lg" aria-current="page" href="/pt-pt/features/">Funcionalidades</a> <a class="btn btn-primary btn-lg" href="/pt-pt/demo/">Demo</a> <a class="btn btn-primary btn-lg" href="/pt-pt/license/">Preços e contribuições</a></div>
+      <div class="footer-nav mt-5 pt-5 text-center"><a class="btn btn-primary btn-lg" href="/pt-pt/">Sobre</a> <a
+          class="btn btn-dark btn-lg" aria-current="page" href="/pt-pt/features/">Funcionalidades</a> <a
+          class="btn btn-primary btn-lg" href="/pt-pt/demo/">Demo</a> <a class="btn btn-primary btn-lg"
+          href="/pt-pt/license/">Preços e contribuições</a></div>
       <div class="footer">
-        <a href="https://github.com/itmaybejj/editoria11y"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-git" viewBox="0 0 16 16">
-              <path d="M15.698 7.287 8.712.302a1.03 1.03 0 0 0-1.457 0l-1.45 1.45 1.84 1.84a1.223 1.223 0 0 1 1.55 1.56l1.773 1.774a1.224 1.224 0 0 1 1.267 2.025 1.226 1.226 0 0 1-2.002-1.334L8.58 5.963v4.353a1.226 1.226 0 1 1-1.008-.036V5.887a1.226 1.226 0 0 1-.666-1.608L5.093 2.465l-4.79 4.79a1.03 1.03 0 0 0 0 1.457l6.986 6.986a1.03 1.03 0 0 0 1.457 0l6.953-6.953a1.03 1.03 0 0 0 0-1.457"/>
-            </svg> <strong>Biblioteca</strong></a>
-        <a href="https://github.com/itmaybejj/editoria11y/discussions"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chat-right-heart-fill" viewBox="0 0 16 16">
-              <path d="M16 2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h9.586a1 1 0 0 1 .707.293l2.853 2.853a.5.5 0 0 0 .854-.353zM8 3.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132"/>
-            </svg> <strong>Fórum</strong></a>
-        <a href="https://github.com/itmaybejj/editoria11y/issues"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-patch-plus-fill" viewBox="0 0 16 16">
-              <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01zM8.5 6v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 1 0"/>
-            </svg> <strong>Problemas</strong></a>
-        <a href="/pt-pt/contacts"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-person-lines-fill" height="24" width="24" viewBox="0 0 16 18">
-              <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z"></path>
-            </svg> <strong>Contacto</strong></a>
+        <a href="https://github.com/itmaybejj/editoria11y"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+            height="20" fill="currentColor" class="bi bi-git" viewBox="0 0 16 16">
+            <path
+              d="M15.698 7.287 8.712.302a1.03 1.03 0 0 0-1.457 0l-1.45 1.45 1.84 1.84a1.223 1.223 0 0 1 1.55 1.56l1.773 1.774a1.224 1.224 0 0 1 1.267 2.025 1.226 1.226 0 0 1-2.002-1.334L8.58 5.963v4.353a1.226 1.226 0 1 1-1.008-.036V5.887a1.226 1.226 0 0 1-.666-1.608L5.093 2.465l-4.79 4.79a1.03 1.03 0 0 0 0 1.457l6.986 6.986a1.03 1.03 0 0 0 1.457 0l6.953-6.953a1.03 1.03 0 0 0 0-1.457" />
+          </svg> <strong>Biblioteca</strong></a>
+        <a href="https://github.com/itmaybejj/editoria11y/discussions"><svg xmlns="http://www.w3.org/2000/svg"
+            width="20" height="20" fill="currentColor" class="bi bi-chat-right-heart-fill" viewBox="0 0 16 16">
+            <path
+              d="M16 2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h9.586a1 1 0 0 1 .707.293l2.853 2.853a.5.5 0 0 0 .854-.353zM8 3.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132" />
+          </svg> <strong>Fórum</strong></a>
+        <a href="https://github.com/itmaybejj/editoria11y/issues"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+            height="20" fill="currentColor" class="bi bi-patch-plus-fill" viewBox="0 0 16 16">
+            <path
+              d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01zM8.5 6v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 1 0" />
+          </svg> <strong>Problemas</strong></a>
+        <a href="/pt-pt/contacts"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+            class="bi bi-person-lines-fill" height="24" width="24" viewBox="0 0 16 18">
+            <path
+              d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z">
+            </path>
+          </svg> <strong>Contacto</strong></a>
       </div>
       <div class="col col-12 subfooter">
         <a href="/pt-pt/privacy-policy">Política de Privacidade</a>
         <a href="/pt-pt/cookie-policy">Política de Cookies</a>
         <a href="/pt-pt/terms-of-use">Termos de Utilização</a>
         <a href="/pt-pt/legal-notice">Aviso Legal</a>
-        &copy; Editoria11y 2026
+        &copy; 2026 Editoria11y LLC
       </div>
     </div>
   </footer>
-    <script
-      src="/assets/bootstrap/js/bootstrap.bundle.min.js"
-      class="astro-vvvwv3sm"
-    ></script>
-    <script src="/lang/i18n.js"></script>
-    <script src="/assets/theme.js"></script>
-  </body>
+  <script src="/assets/bootstrap/js/bootstrap.bundle.min.js" class="astro-vvvwv3sm"></script>
+  <script src="/lang/i18n.js"></script>
+  <script src="/assets/theme.js"></script>
+</body>
+
 </html>
