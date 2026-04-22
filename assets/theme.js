@@ -226,10 +226,11 @@
     const currencySymbols = { EUR: '€', USD: '$', GBP: '£' };
     const couponCodes = { 100: null, 80: '120', 60: '100', 50: '75', 44: '66', 33: '50', 22: '33', 17: '25' };
 
-    function buildCheckoutUrl(licenses) {
+    function buildCheckoutUrl(licenses, forceAnnual = false) {
+      console.log(licenses, forceAnnual);
       // @todo: include language code in URL and re-enable when checkout supports it.
       const currency = currencySelect.value.toLowerCase();
-      const billingCycle = annualCheckbox.checked ? 'annual' : 'monthly';
+      const billingCycle = annualCheckbox.checked || forceAnnual ? 'annual' : 'monthly';
       const couponPrefix = couponCodes[parseInt(supportSelect.value, 10)];
       const licenseUrl = `https://editoria11y.com/${langCode}/license`;
       let url = `https://checkout.freemius.com/bundle/26223/plan/43392/licenses/${licenses}/currency/${currency}/?show_upsells=false&disable_licenses_selector=true&billing_cycle=${billingCycle}&annual_discount=false&cart=false&&bundle_discount=false&multisite_discount=false&cancel_url=${encodeURIComponent(licenseUrl)}`;
@@ -262,6 +263,8 @@
       const period = isAnnual ? 'yearly' : 'monthly';
       const periodText = isAnnual ? (strings?.perYear || '/year') : (strings?.perMonth || '/month');
       const prices = pricing[period][currency];
+      let forceSingleAnnual = false;
+      let forceTeamAnnual = false;
 
       // 75px aka 50% is the lowest value to allow for monthly.
 
@@ -272,6 +275,7 @@
       if (supportLevel < 50) {
         applyPrice(document.getElementById('individual'), pricing['yearly'][currency]['1'], multiplier, symbol, strings?.perYear || '/year');
         document.querySelector('#individual').classList.add('annual-only');
+        forceSingleAnnual = true;
       } else {
         applyPrice(document.getElementById('individual'), prices['1'], multiplier, symbol, periodText);
         document.querySelector('#individual').classList.remove('annual-only');
@@ -293,14 +297,15 @@
       if (['5', '10'].includes(pricePicker.value) && supportLevel < 22) {
         applyPrice(document.getElementById('price-result'), pricing['yearly'][currency][pricePicker.value], multiplier, symbol, strings?.perYear || '/year');
         document.querySelector('#team').classList.add('annual-only');
+        forceTeamAnnual = true;
       } else {
         applyPrice(document.getElementById('price-result'), prices[pricePicker.value], multiplier, symbol, periodText);
         document.querySelector('#team').classList.remove('annual-only');
       }
       applyPrice(document.getElementById('enterprise'), prices['unlimited'], multiplier, symbol, periodText);
 
-      document.querySelector('#individual .btn').href = buildCheckoutUrl(1);
-      document.querySelector('#price-result .btn').href = buildCheckoutUrl(pricePicker.value);
+      document.querySelector('#individual .btn').href = buildCheckoutUrl(1, forceSingleAnnual);
+      document.querySelector('#price-result .btn').href = buildCheckoutUrl(pricePicker.value, forceTeamAnnual);
       document.querySelector('#enterprise .btn').href = buildCheckoutUrl('unlimited');
 
     }
