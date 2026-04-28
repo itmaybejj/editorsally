@@ -218,7 +218,8 @@ baseFontFamily: '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica N
               booleano <code>viaJump</code>. Solo se emite si el parámetro "ed11yShowHidden" está configurado
               <em><strong>y</strong></em> el padre del elemento coincide con un selector. Se usa para revelar alertas en
               contenedores aún no abiertos, p. ej., acordeones, pestañas y carruseles. Ejemplos de uso en la sección
-              siguiente.</li>
+              siguiente.
+            </li>
 
             <li><strong><code>ed11yPop</code></strong>: proporciona el ID de <code>data-ed11y-result</code>, así como
               referencias a los objetos <code>result</code> y <code>tip</code>. Se emite cuando aparece una información
@@ -261,7 +262,8 @@ baseFontFamily: '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica N
             idioma activo.</p>
 
           <p>El módulo Drupal también añade enlaces de edición personalizados a los consejos, usando el parámetro
-            <code>editLinks</code>. Nota "Page editor" y "Layout editor:"</p>
+            <code>editLinks</code>. Nota "Page editor" y "Layout editor:"
+          </p>
 
           <figure class="wp-block-image size-full"><img loading="lazy" data-recalc-dims="1" fetchpriority="high"
               decoding="async" width="580" height="300"
@@ -405,7 +407,8 @@ document.addEventListener('ed11yPop', e => {
             <strong><em>todos</em></strong> los paneles del acordeón con problemas), añade un listener de eventos JS
             para <code>ed11yPanelOpened</code>, luego haz un querySelectorAll de los elementos
             <code>ed11y-element-result</code> relevantes y activa la función que usa tu tema para revelar esa parte de
-            la página. </p>
+            la página.
+          </p>
 
           <p>Aquí hay un ejemplo basado en jQuery. Cuando el panel se abre, deshabilita un menú fijo (para que los
             elementos no queden cubiertos) y luego busca cualquier elemento <code>ed11y-element-result</code> dentro de
@@ -425,7 +428,8 @@ document.addEventListener('ed11yPop', e => {
             <code>ed11yShowHidden</code>. Este se lanza si Editoria11y reconoce que un consejo está dentro de un
             contenedor con uno de los selectores <code>hiddenHandlers</code> proporcionados en la lista de opciones.
             Este evento JS incluirá el ID del consejo que está a punto de abrir. Editoria11y hará entonces una breve
-            pausa después de emitir este evento para dar tiempo a tu JS de hacer visible el elemento.</p>
+            pausa después de emitir este evento para dar tiempo a tu JS de hacer visible el elemento.
+          </p>
 
           <p>Aquí hay un ejemplo de una implementación de Penn State. Busca el elemento que coincide con el ID
             proporcionado, luego encuentra su contenedor de componente interactivo padre y activa su evento para activar
@@ -487,7 +491,7 @@ document.addEventListener('ed11yPop', e => {
     </div>
   </footer>
   <script src="/assets/bootstrap/js/bootstrap.bundle.min.js" class="astro-vvvwv3sm"></script>
-  <script src="/lang/i18n.js"></script>
+  <script src="/assets/lang/i18n.js"></script>
   <script src="/assets/theme.js"></script>
   <script src="/assets/prism/prism.js"></script>
 </body>

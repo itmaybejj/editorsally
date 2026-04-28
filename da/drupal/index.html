@@ -176,9 +176,11 @@
               <ul>
                 <li><strong>Fjern</strong> resultater fra tests sat til &quot;Kun udvikler&quot;.</li>
                 <li><strong>Fjern</strong> resultater p&aring; elementer uden for angivne
-                  <strong><em>indholds</em></strong>omr&aring;der, f.eks.:<br><code>main, footer</code></li>
+                  <strong><em>indholds</em></strong>omr&aring;der, f.eks.:<br><code>main, footer</code>
+                </li>
                 <li><strong>Fjern</strong> resultater p&aring; elementer der matcher
-                  <strong><em>indholds</em></strong>ignorer-selektorer.</li>
+                  <strong><em>indholds</em></strong>ignorer-selektorer.
+                </li>
               </ul>
               Bem&aelig;rk at der ikke er en anden &quot;indsamlings&quot;-fase. Udviklerens sideomr&aring;der skal
               inkludere indholdsomr&aring;derne.
@@ -278,7 +280,8 @@
             af indholdsomr&aring;derne. I en opdelt konfiguration tjekkes udvikleromr&aring;derne, og derefter
             <strong>filtreres</strong> resultaterne til at matche indholdsomr&aring;derne. Omr&aring;der der er
             udelukket for udviklere, vil ogs&aring; v&aelig;re udelukket for indholdsredakt&oslash;rer. Udeluk ikke
-            redigerbare indholdsomr&aring;der!</p>
+            redigerbare indholdsomr&aring;der!
+          </p>
 
           <p>Nogle tests giver mulighed for mere pr&aelig;cis konfiguration, s&aring; kun bestemte advarsler skjules
             p&aring; ber&oslash;rte elementer. Find dem under:</p>
@@ -449,7 +452,8 @@ function MY_MODULE_editoria11y_alter_config(array &$attach, CacheableMetadata $c
             JavaScript-variabel kaldet <code>editoria11yOptionsOverride</code>. Hvis denne er sat, vil det videregive
             <code>options</code>-objektet til en <code>editoria11yOptions</code>-funktion, som du har defineret i dit
             modul eller tema. Du kan nu angive alle <a
-              href="https://editorsally.ddev.site/en/install/#params">bibliotekets parametre</a>.</p>
+              href="https://editorsally.ddev.site/en/install/#params">bibliotekets parametre</a>.
+          </p>
           <pre class="language-javascript"><code><!--var editoria11yOptionsOverride = true;
 var editoria11yOptions = function(options) {
   // You now have access to the processed options object that will be passed to the library.
@@ -584,7 +588,7 @@ var editoria11yOptions = function(options) {
     </div>
   </footer>
   <script src="/assets/bootstrap/js/bootstrap.bundle.min.js" class="astro-vvvwv3sm"></script>
-  <script src="/lang/i18n.js"></script>
+  <script src="/assets/lang/i18n.js"></script>
   <script src="/assets/theme.js"></script>
   <script src="/assets/prism/prism.js"></script>
 </body>

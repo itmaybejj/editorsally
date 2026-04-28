@@ -179,9 +179,11 @@
               <ul>
                 <li><strong>Eliminar</strong> resultados de pruebas configuradas como "Solo para desarrollador".</li>
                 <li><strong>Eliminar</strong> resultados sobre elementos fuera de las regiones de
-                  <strong><em>contenido</em></strong> especificadas, p. ej.:<br><code>main, footer</code></li>
+                  <strong><em>contenido</em></strong> especificadas, p. ej.:<br><code>main, footer</code>
+                </li>
                 <li><strong>Eliminar</strong> resultados sobre elementos que coincidan con los selectores de ignorar de
-                  <strong><em>contenido</em></strong>.</li>
+                  <strong><em>contenido</em></strong>.
+                </li>
               </ul>
               Ten en cuenta que no hay una segunda fase de "recopilación". Las regiones de página del desarrollador
               deben incluir las regiones de contenido.
@@ -204,7 +206,8 @@
           </ul>
           <p>La posibilidad de descartar alertas se controla a nivel de rol en los permisos de usuario de Drupal.
             <strong>La mayoría de los autores deben poder descartar alertas</strong>. No tiene sentido asignar una
-            verificación manual a alguien si no puede marcar el elemento como verificado.</p>
+            verificación manual a alguien si no puede marcar el elemento como verificado.
+          </p>
 
           <h3 id="roots">Ignorar elementos</h3>
           <p>¡Estas dos configuraciones son las más importantes!</p>
@@ -355,7 +358,8 @@
               <strong>los navegadores pausan las pestañas en segundo plano</strong>. Deberás mantener tu computadora
               encendida y activa durante el rastreo. Planea abrir una nueva ventana para el rastreador y dejarla como la
               pestaña en primer plano de esa ventana mientras trabaja. Puedes seguir trabajando en otra ventana. El
-              rastreador actualizará su estimación después de cada lote de páginas.</p>
+              rastreador actualizará su estimación después de cada lote de páginas.
+            </p>
           </section>
           <section id="reports">
             <h3>Ver informes</h3>
@@ -413,7 +417,8 @@
             detecta automáticamente cuando un indicador de alerta caería fuera de la parte visible de la
             <strong>página</strong>. Indicar a la biblioteca que ciertos contenedores ocultan el desbordamiento
             significa que también intentará posicionar los consejos para los elementos de esos contenedores dentro de
-            sus bordes.</p>
+            sus bordes.
+          </p>
           <p>Algunos temas tienen widgets que activan la visibilidad del contenido, como acordeones, pestañas y
             presentaciones de diapositivas. Los consejos dentro de estos elementos también estarán ocultos. Proporcionar
             una lista de selectores para estos widgets significa que Editoria11y hará una breve pausa cuando un usuario
@@ -454,7 +459,8 @@ function MY_MODULE_editoria11y_alter_config(array &$attach, CacheableMetadata $c
             <code>options</code> directamente. El módulo verifica una variable JS global de
             <code>editoria11yOptionsOverride</code>. Si está configurada, pasará el objeto <code>options</code> a una
             función <code>editoria11yOptions</code> que hayas proporcionado en tu módulo o tema. Ahora puedes establecer
-            cualquiera de los <a href="/es/install/#params">parámetros de la biblioteca</a>.</p>
+            cualquiera de los <a href="/es/install/#params">parámetros de la biblioteca</a>.
+          </p>
           <pre class="language-javascript"><code><!--var editoria11yOptionsOverride = true;
 var editoria11yOptions = function(options) {
   // You now have access to the processed options object that will be passed to the library.
@@ -590,7 +596,7 @@ var editoria11yOptions = function(options) {
     </div>
   </footer>
   <script src="/assets/bootstrap/js/bootstrap.bundle.min.js" class="astro-vvvwv3sm"></script>
-  <script src="/lang/i18n.js"></script>
+  <script src="/assets/lang/i18n.js"></script>
   <script src="/assets/theme.js"></script>
   <script src="/assets/prism/prism.js"></script>
 </body>

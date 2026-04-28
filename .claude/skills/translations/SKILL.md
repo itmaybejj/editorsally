@@ -9,7 +9,7 @@ This site is a static HTML marketing site. The canonical English pages live at `
 
 ## The 16 Target Languages
 
-`da`, `de`, `el`, `es`, `fr`, `hu`, `it`, `jp`, `nb`, `nl`, `pl`, `pt-br`, `pt-pt`, `sv`, `uk`, `zh`
+`da`, `de`, `el`, `es`, `fr`, `hu`, `it`, `ja`, `nb`, `nl`, `pl`, `pt-br`, `pt-pt`, `sv`, `uk`, `zh`
 
 ## Pages
 
@@ -27,7 +27,7 @@ Usage: `/translations <langCode> [page]`
 
 ### 1. Check Manifest
 
-Read `lang/manifest.json`. For the requested language+page:
+Read `assets/lang/manifest.json`. For the requested language+page:
 - If the entry is `null`: this is a **new translation** — translate the full English page.
 - If the entry is a commit hash: run `git diff <hash> HEAD -- en/<page>/index.html` to see what changed. If empty, the translation is current. If there are changes, this is an **update** — apply only the changed sections to the existing translation.
 
@@ -51,7 +51,7 @@ This copies the English source and automatically handles:
 - Footer link labels (Library → Biblioteca, etc.)
 - CTA button labels at the bottom of each page
 
-The script requires a `nav` entry in `lang/i18n.js` for the target language (including `footer` strings). If this is the first page for a new language, add the nav entry first (see step 6).
+The script requires a `nav` entry in `assets/lang/i18n.js` for the target language (including `footer` strings). If this is the first page for a new language, add the nav entry first (see step 6).
 
 The script will skip pages that already exist at the destination path.
 
@@ -93,15 +93,30 @@ When updating an existing translation based on a git diff:
 
 ### 5. Update the Manifest
 
-After translating, update `lang/manifest.json`:
+After translating, update `assets/lang/manifest.json`:
 - Set the page entry to the current `HEAD` commit hash (run `git rev-parse HEAD`).
 
 ### 6. Update i18n.js (first page for a new language only)
 
 When creating the first page for a new language:
-1. Add a `nav` entry in `lang/i18n.js` with translated navigation strings, including `label`, `footer`, `gettingStarted`, `wpLabel`, `toggleNav`, and `close`.
+1. Add a `nav` entry in `assets/lang/i18n.js` with translated navigation strings, including `label`, `footer`, `gettingStarted`, `wpLabel`, `toggleNav`, and `close`.
 2. If the language will use translated URL slugs, add a `paths` entry.
 3. Then run the scaffold script — it reads these strings to localize the page chrome.
+
+### 7. Regenerate the Sitemap
+
+If this run **added a new page**, **added a new language**, **moved/renamed a page**, or **deleted a page**, regenerate `sitemap.xml`:
+
+```bash
+node scripts/generate-sitemap.js
+```
+
+The script walks `i18n.canonicalPaths` × `i18n.allLanguages` and writes a `<url>` entry (with `xhtml:link` alternates and `x-default`) for every `<langCode>/<slug>/index.html` that exists on disk. It is safe to run any time; updates that only retranslate existing pages do not require a regeneration.
+
+When adding a page or language, also:
+- Add the new slug to `canonicalPaths` (and any translated `paths` entries) in `assets/lang/i18n.js`.
+- Add the new language to `allLanguages` (and `nav`) in `assets/lang/i18n.js`.
+- Add the new page key to every language entry in `assets/lang/manifest.json`.
 
 ## Translation Quality Guidelines
 
@@ -109,12 +124,12 @@ When creating the first page for a new language:
 - Match the tone: friendly, professional, informative.
 - Keep technical accuracy (accessibility terminology should use the accepted terms in the target language).
 - `pt-pt` and `pt-br` differ significantly — do not copy one for the other.
-- Japanese (`jp`) and Chinese (`zh`) have no plural forms.
+- Japanese (`ja`) and Chinese (`zh`) have no plural forms.
 - Polish (`pl`) and Ukrainian (`uk`) have 3 plural forms.
 
 ## Status Check
 
-When invoked with `--status`, read `lang/manifest.json` and for each language+page:
+When invoked with `--status`, read `assets/lang/manifest.json` and for each language+page:
 - `null` → "Missing"
 - Has a commit hash → run `git diff <hash> HEAD -- en/<page>/index.html`. If diff is empty → "Current". If diff has changes → "Stale (N lines changed)".
 

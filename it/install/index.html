@@ -218,7 +218,8 @@ baseFontFamily: '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica N
               booleano <code>viaJump</code>. Inviato solo se il parametro “ed11yShowHidden” è impostato
               <em><strong>e</strong></em> un elemento padre corrisponde a un selettore. Utilizzato per rivelare avvisi
               in contenitori non ancora aperti, ad es. accordion, schede e caroselli. Esempi di utilizzo nella sezione
-              successiva.</li>
+              successiva.
+            </li>
 
             <li><strong><code>ed11yPop</code></strong>: fornisce l’ID <code>data-ed11y-result</code>, nonché riferimenti
               agli oggetti <code>result</code> e <code>tip</code>. Inviato quando appare un tooltip, permettendo di
@@ -260,7 +261,8 @@ baseFontFamily: '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica N
             lingua attiva.</p>
 
           <p>Il modulo Drupal aggiunge anche link di modifica personalizzati ai suggerimenti, usando il parametro
-            <code>editLinks</code>. Nota “Page editor” e “Layout editor:”</p>
+            <code>editLinks</code>. Nota “Page editor” e “Layout editor:”
+          </p>
 
           <figure class="wp-block-image size-full"><img loading="lazy" data-recalc-dims="1" fetchpriority="high"
               decoding="async" width="580" height="300"
@@ -403,7 +405,8 @@ document.addEventListener('ed11yPop', e => {
             <strong><em>tutti</em></strong> i pannelli accordion con problemi), aggiungi un listener di eventi JS per
             <code>ed11yPanelOpened</code>, poi esegui un querySelectorAll per gli elementi
             <code>ed11y-element-result</code> rilevanti, e infine attiva qualsiasi funzione del tema che riveli quella
-            parte della pagina.</p>
+            parte della pagina.
+          </p>
 
           <p>Ecco un esempio basato su jQuery. Quando il pannello si apre, disabilita un menu fisso (in modo che gli
             elementi non siano coperti), poi cerca eventuali elementi <code>ed11y-element-result</code> all’interno di
@@ -424,7 +427,8 @@ document.addEventListener('ed11yPop', e => {
             all’interno di un contenitore con uno dei selettori <code>hiddenHandlers</code> elencati nelle opzioni.
             Questo evento JS includerà l’ID del suggerimento che sta per aprire. Editoria11y si metterà quindi
             brevemente in pausa dopo l’invio di questo evento, per dare al tuo JS il tempo di rendere visibile
-            l’elemento.</p>
+            l’elemento.
+          </p>
 
           <p>Ecco un esempio da un’implementazione della Penn State. Cerca l’elemento corrispondente all’ID fornito,
             trova il suo contenitore componente interattivo padre e attiva il suo evento per attivarne il toggle:</p>
@@ -485,7 +489,7 @@ document.addEventListener('ed11yPop', e => {
     </div>
   </footer>
   <script src="/assets/bootstrap/js/bootstrap.bundle.min.js" class="astro-vvvwv3sm"></script>
-  <script src="/lang/i18n.js"></script>
+  <script src="/assets/lang/i18n.js"></script>
   <script src="/assets/theme.js"></script>
   <script src="/assets/prism/prism.js"></script>
 </body>

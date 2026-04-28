@@ -133,7 +133,8 @@
               elementer. Bruk tipsene i «Fiks tipplassering» nedenfor for å løse dette.</li>
             <li>Hvis nettstedet allerede har innhold og du har et CSA-abonnement, besøk panelfanen «recheck» og
               <strong>gjennomsøk nettstedet</strong> for å forhåndsinnlaste nettstedsrapportene. Dette er valgfritt, men
-              eldre sider vil ikke vises i rapportene før de er gjennomsøkt eller besøkt av en innlogget bruker.</li>
+              eldre sider vil ikke vises i rapportene før de er gjennomsøkt eller besøkt av en innlogget bruker.
+            </li>
           </ol>
           <p>Se en <a href="https://youtu.be/uYvNYPg38nU?si=dqADyWpTtOhniHTP&t=696">videoinnføring i
               konfigurasjonsalternativene</a> (v2.4).</p>
@@ -172,9 +173,11 @@
               <ul>
                 <li><strong>Fjern</strong> resultater fra tester satt til «Kun utvikler».</li>
                 <li><strong>Fjern</strong> resultater på elementer utenfor angitte
-                  <strong><em>innholds</em></strong>regioner, f.eks.:<br><code>main, footer</code></li>
+                  <strong><em>innholds</em></strong>regioner, f.eks.:<br><code>main, footer</code>
+                </li>
                 <li><strong>Fjern</strong> resultater på elementer som samsvarer med
-                  <strong><em>innholds</em></strong>ignoreringsselektorer.</li>
+                  <strong><em>innholds</em></strong>ignoreringsselektorer.
+                </li>
               </ul>
               Merk at det ikke er en andre «samle»-fase. Utviklerens sideregioner må inkludere innholdsregionene.
             </li>
@@ -269,7 +272,8 @@
           <p>Det viktigste å vite om utviklerkontrollområdene er at de <strong>ikke er uavhengige</strong> av
             innholdskontrollområdene. I en delt konfigurasjon sjekkes utviklerområdene, og deretter
             <strong>filtreres</strong> resultatene for å samsvare med innholdsområdene. Alle områder som er ekskludert
-            for utviklere, vil også ekskluderes for innholdsredaktører. Ikke ekskluder redigerbare innholdsområder!</p>
+            for utviklere, vil også ekskluderes for innholdsredaktører. Ikke ekskluder redigerbare innholdsområder!
+          </p>
 
           <p>Noen tester tillater mer presis konfigurasjon, for å kun skjule bestemte varsler på berørte elementer. Se
             etter dem under:</p>
@@ -404,7 +408,8 @@
 
           <h2 id="runtime">Skriv din egen konfigurasjon</h2>
           <p>I PHP: Drupal-modulen gir en <code>hook_editoria11y_alter_config</code> for å endre innholdet i
-            <code>drupalSettings.editoria11y</code> i en modul eller et tema. For eksempel:</p>
+            <code>drupalSettings.editoria11y</code> i en modul eller et tema. For eksempel:
+          </p>
           <pre class="language-php"><code><!--<?php
 /**
  * @file
@@ -569,7 +574,7 @@ var editoria11yOptions = function(options) {
     </div>
   </footer>
   <script src="/assets/bootstrap/js/bootstrap.bundle.min.js" class="astro-vvvwv3sm"></script>
-  <script src="/lang/i18n.js"></script>
+  <script src="/assets/lang/i18n.js"></script>
   <script src="/assets/theme.js"></script>
   <script src="/assets/prism/prism.js"></script>
 </body>

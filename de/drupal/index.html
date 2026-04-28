@@ -73,7 +73,8 @@
             <figure class="figure my-4 row">
               <div class="col-lg-8">
                 <img loading="lazy" src="/assets/images/3x-generic-tip.png" class="rounded border figure-img img-fluid"
-                  height="798" width="1278" alt="Hinweis zeigt an, dass ein Link nur „Hier klicken" als Linktext hat." />
+                  height="798" width="1278" alt="Hinweis zeigt an, dass ein Link nur „Hier klicken" als Linktext
+                  hat." />
               </div>
               <figcaption class="figure-caption col-lg-4">Tooltips erhalten Schaltflächen,
                 um in den Editor zu wechseln, den Hinweis zu ignorieren (für den aktiven Benutzer) oder als OK zu
@@ -178,9 +179,11 @@
                 <li><strong>Entfernen</strong> von Ergebnissen aus Tests, die auf „Nur Entwickler" eingestellt sind.
                 </li>
                 <li><strong>Entfernen</strong> von Ergebnissen für Elemente außerhalb der angegebenen
-                  <strong><em>Inhalts</em></strong>bereiche, z. B.:<br><code>main, footer</code></li>
+                  <strong><em>Inhalts</em></strong>bereiche, z. B.:<br><code>main, footer</code>
+                </li>
                 <li><strong>Entfernen</strong> von Ergebnissen für Elemente, die mit den
-                  <strong><em>Inhalts</em></strong>-Ignore-Selektoren übereinstimmen.</li>
+                  <strong><em>Inhalts</em></strong>-Ignore-Selektoren übereinstimmen.
+                </li>
               </ul>
               Beachten Sie, dass es keine zweite „Sammel"-Phase gibt. Die Seitenbereiche für Entwickler müssen die
               Inhaltsbereiche einschließen.
@@ -420,7 +423,8 @@
 
           <h2 id="runtime">Eigene Konfiguration schreiben</h2>
           <p>In PHP: Das Drupal-Modul stellt einen <code>hook_editoria11y_alter_config</code> bereit, um den Inhalt von
-            <code>drupalSettings.editoria11y</code> in einem Modul oder Theme zu ändern. Zum Beispiel:</p>
+            <code>drupalSettings.editoria11y</code> in einem Modul oder Theme zu ändern. Zum Beispiel:
+          </p>
           <pre class="language-php"><code><!--<?php
 /**
  * @file
@@ -450,7 +454,8 @@ function MY_MODULE_editoria11y_alter_config(array &$attach, CacheableMetadata $c
             JS-<code>options</code>-Objekt direkt ändern. Das Modul prüft auf eine globale JS-Variable namens
             <code>editoria11yOptionsOverride</code>. Wenn diese gesetzt ist, übergibt es das <code>options</code>-Objekt
             an eine von Ihnen in Ihrem Modul oder Theme bereitgestellte <code>editoria11yOptions</code>-Funktion. Sie
-            können nun alle <a href="/de/install/#params">Bibliotheksparameter</a> setzen.</p>
+            können nun alle <a href="/de/install/#params">Bibliotheksparameter</a> setzen.
+          </p>
           <pre class="language-javascript"><code><!--var editoria11yOptionsOverride = true;
 var editoria11yOptions = function(options) {
   // You now have access to the processed options object that will be passed to the library.
@@ -585,7 +590,7 @@ var editoria11yOptions = function(options) {
     </div>
   </footer>
   <script src="/assets/bootstrap/js/bootstrap.bundle.min.js" class="astro-vvvwv3sm"></script>
-  <script src="/lang/i18n.js"></script>
+  <script src="/assets/lang/i18n.js"></script>
   <script src="/assets/theme.js"></script>
   <script src="/assets/prism/prism.js"></script>
 </body>

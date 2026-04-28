@@ -176,9 +176,11 @@
               <ul>
                 <li><strong>Descartar</strong> resultados de testes definidos como "Apenas para desenvolvedor."</li>
                 <li><strong>Descartar</strong> resultados em elementos fora das regiões de
-                  <strong><em>conteúdo</em></strong> especificadas, p. ex.:<br><code>main, footer</code></li>
+                  <strong><em>conteúdo</em></strong> especificadas, p. ex.:<br><code>main, footer</code>
+                </li>
                 <li><strong>Descartar</strong> resultados em elementos que correspondam aos seletores de ignorar de
-                  <strong><em>conteúdo</em></strong>.</li>
+                  <strong><em>conteúdo</em></strong>.
+                </li>
               </ul>
               Observe que não há uma segunda fase de "coleta". As regiões de página do desenvolvedor devem incluir as
               regiões de conteúdo.
@@ -415,7 +417,8 @@
 
           <h2 id="runtime">Escreva sua própria configuração</h2>
           <p>Em PHP: o módulo Drupal fornece um <code>hook_editoria11y_alter_config</code> para alterar o conteúdo de
-            <code>drupalSettings.editoria11y</code> em um módulo ou tema. Por exemplo:</p>
+            <code>drupalSettings.editoria11y</code> em um módulo ou tema. Por exemplo:
+          </p>
           <pre class="language-php"><code><!--<?php
 /**
  * @file
@@ -446,7 +449,8 @@ function MY_MODULE_editoria11y_alter_config(array &$attach, CacheableMetadata $c
             <code>editoria11yOptionsOverride</code>. Se ela estiver definida, o módulo passará o objeto
             <code>options</code> para uma função <code>editoria11yOptions</code> que você tiver criado no seu módulo ou
             tema. Agora você pode definir qualquer um dos <a
-              href="https://editorsally.ddev.site/en/install/#params">parâmetros da biblioteca</a>.</p>
+              href="https://editorsally.ddev.site/en/install/#params">parâmetros da biblioteca</a>.
+          </p>
           <pre class="language-javascript"><code><!--var editoria11yOptionsOverride = true;
 var editoria11yOptions = function(options) {
   // You now have access to the processed options object that will be passed to the library.
@@ -581,7 +585,7 @@ var editoria11yOptions = function(options) {
     </div>
   </footer>
   <script src="/assets/bootstrap/js/bootstrap.bundle.min.js" class="astro-vvvwv3sm"></script>
-  <script src="/lang/i18n.js"></script>
+  <script src="/assets/lang/i18n.js"></script>
   <script src="/assets/theme.js"></script>
   <script src="/assets/prism/prism.js"></script>
 </body>

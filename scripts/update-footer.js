@@ -8,7 +8,7 @@
  *
  * This script applies that same structural change to already-translated pages,
  * preserving their translated button/footer labels and adding subfooter links
- * with labels pulled from lang/i18n.js.
+ * with labels pulled from assets/lang/i18n.js.
  *
  * Usage:
  *   node scripts/update-footer.js <langCode> [page]
@@ -41,7 +41,7 @@ if (!langCode) {
 
 const trNav = i18n.nav[langCode];
 if (!trNav) {
-  console.error(`No nav strings for "${langCode}" in lang/i18n.js.`);
+  console.error(`No nav strings for "${langCode}" in assets/lang/i18n.js.`);
   process.exit(1);
 }
 

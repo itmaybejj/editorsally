@@ -65,7 +65,8 @@
             <li><a href="https://codeberg.org/sebastiangreger/kirby-a11yprompter" class="arrow"><strong>Kirby
                   安装程序</strong></a> <em>（社区贡献）</em></li>
             <li><a href="https://plugins.craftcms.com/editoria11y" class="arrow"><strong>CraftCMS 安装程序</strong></a>
-              <em>（社区贡献）</em></li>
+              <em>（社区贡献）</em>
+            </li>
           </ul>
         </section>
         <section id="diy">
@@ -208,7 +209,8 @@ baseFontFamily: '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica N
             </li>
 
             <li><strong><code>ed11yPop</code></strong>：提供 <code>data-ed11y-result</code> ID，以及 <code>result</code> 和
-              <code>tip</code> 对象的引用。在工具提示出现时触发，允许您在运行时修改提示内容。</li>
+              <code>tip</code> 对象的引用。在工具提示出现时触发，允许您在运行时修改提示内容。
+            </li>
 
             <li><strong><code>ed11yShut</code></strong>：提供 <code>data-ed11y-result</code> ID。在工具提示关闭时触发。</li>
 
@@ -386,7 +388,8 @@ document.addEventListener('ed11yPop', e => {
           <p>若要仅在通过面板”下一条”按钮跳转到<strong><em>特定</em></strong>提示时（例如在已关闭的标签页或下一张轮播幻灯片中）才显示内容，需要在参数中将
             <code>hiddenHandlers</code> 设置为相关 CSS 选择器，并将 <code>checkVisible</code> 设置为 TRUE，然后为
             <code>ed11yShowHidden</code> 事件添加监听器。当 Editoria11y 识别到提示位于包含 <code>hiddenHandlers</code> 选择器的容器内时，此事件会被触发。该
-            JS 事件将包含即将打开的提示的 ID。Editoria11y 随后会在触发此事件后短暂暂停，以便您的 JS 有时间使元素可见。</p>
+            JS 事件将包含即将打开的提示的 ID。Editoria11y 随后会在触发此事件后短暂暂停，以便您的 JS 有时间使元素可见。
+          </p>
 
           <p>以下是来自宾夕法尼亚州立大学实现的示例。它查找与所提供 ID 匹配的元素，找到其父级交互组件容器，并触发其事件以激活切换：</p>
           <pre class="language-javascript"><code><!--context.addEventListener('ed11yShowHidden', e => {
@@ -445,7 +448,7 @@ document.addEventListener('ed11yPop', e => {
     </div>
   </footer>
   <script src="/assets/bootstrap/js/bootstrap.bundle.min.js" class="astro-vvvwv3sm"></script>
-  <script src="/lang/i18n.js"></script>
+  <script src="/assets/lang/i18n.js"></script>
   <script src="/assets/theme.js"></script>
   <script src="/assets/prism/prism.js"></script>
 </body>

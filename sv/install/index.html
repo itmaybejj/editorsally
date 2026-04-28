@@ -215,7 +215,8 @@ baseFontFamily: '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica N
               och ett <code>viaJump</code>-booleskt värde. Skickas bara ut om parametern “ed11yShowHidden” är inställd
               <em><strong>och</strong></em> en förälder till elementet matchar en selektor. Används för att visa
               varningar i ännu inte öppnade behållare, t.ex. dragspelspaneler, flikar och karuseller. Användningsexempel
-              i nästa avsnitt.</li>
+              i nästa avsnitt.
+            </li>
 
             <li><strong><code>ed11yPop</code></strong>: tillhandahåller <code>data-ed11y-result</code>-ID samt
               referenser till <code>result</code>- och <code>tip</code>-objekten. Skickas ut när ett verktygstips visas,
@@ -256,7 +257,8 @@ baseFontFamily: '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica N
             översättningen.</p>
 
           <p>Drupal-modulen lägger också till anpassade redigeringslänkar i tipsen via parametern
-            <code>editLinks</code>. Notera “Page editor” och “Layout editor:”</p>
+            <code>editLinks</code>. Notera “Page editor” och “Layout editor:”
+          </p>
 
           <figure class="wp-block-image size-full"><img loading="lazy" data-recalc-dims="1" fetchpriority="high"
               decoding="async" width="580" height="300"
@@ -418,7 +420,8 @@ document.addEventListener('ed11yPop', e => {
             Editoria11y känner igen att ett tips finns inuti en behållare med en av de listade
             <code>hiddenHandlers</code>-selektorerna i alternativlistan. Den här JS-händelsen inkluderar ID:t för det
             tips som är på väg att öppnas. Editoria11y pausar sedan kort efter att ha skickat ut den här händelsen för
-            att ge din JS tid att göra elementet synligt.</p>
+            att ge din JS tid att göra elementet synligt.
+          </p>
 
           <p>Här är ett exempel från en Penn State-implementation. Det letar efter elementet som matchar det angivna
             ID:t, hittar sedan dess överordnade interaktiva komponentbehållare och utlöser dess händelse för att
@@ -433,7 +436,8 @@ document.addEventListener('ed11yPop', e => {
 }); --></code></pre>
           <p>En sista notering: vissa teman är helt enkelt inte kompatibla med synlighetskontroll — t.ex. om
             <code>&lt;main&gt;</code>-behållaren har höjden 0px. Sådana webbplatser bör inaktivera all
-            synlighetskontroll genom att sätta <code>checkVisible</code> till false.</p>
+            synlighetskontroll genom att sätta <code>checkVisible</code> till false.
+          </p>
 
         </section>
 
@@ -480,7 +484,7 @@ document.addEventListener('ed11yPop', e => {
     </div>
   </footer>
   <script src="/assets/bootstrap/js/bootstrap.bundle.min.js" class="astro-vvvwv3sm"></script>
-  <script src="/lang/i18n.js"></script>
+  <script src="/assets/lang/i18n.js"></script>
   <script src="/assets/theme.js"></script>
   <script src="/assets/prism/prism.js"></script>
 </body>

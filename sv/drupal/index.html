@@ -76,7 +76,8 @@
                   height="798" width="1278" alt="Tips som anger att en länk bara heter klicka här." />
               </div>
               <figcaption class="figure-caption col-lg-4">Verktygstips får knappar
-                för att hoppa in i redigeraren, ignorera aviseringen (för den aktiva användaren) eller markera den som OK
+                för att hoppa in i redigeraren, ignorera aviseringen (för den aktiva användaren) eller markera den som
+                OK
                 (för alla användare). Upprepade aviseringar erbjuder sid- eller webbplatsövergripande åtgärder.
               </figcaption>
             </figure>
@@ -172,9 +173,11 @@
               <ul>
                 <li><strong>Ta bort</strong> resultat från tester inställda på "Endast utvecklare".</li>
                 <li><strong>Ta bort</strong> resultat på element från utanför angivna
-                  <strong><em>innehålls</em></strong>regioner, t.ex.:<br><code>main, footer</code></li>
+                  <strong><em>innehålls</em></strong>regioner, t.ex.:<br><code>main, footer</code>
+                </li>
                 <li><strong>Ta bort</strong> resultat på element som matchar
-                  <strong><em>innehålls</em></strong>ignoreringsselektorer.</li>
+                  <strong><em>innehålls</em></strong>ignoreringsselektorer.
+                </li>
               </ul>
               Observera att det inte finns någon andra "samlingsphase". Utvecklarens sidregioner måste inkludera
               innehållsregionerna.
@@ -271,7 +274,8 @@
           <p>Det viktigaste att veta om utvecklarkontrollområdena är att de <strong>inte är oberoende</strong> av
             innehållskontrollområdena. I en delad konfiguration kontrolleras utvecklarområdena och sedan
             <strong>filtreras</strong> dessa resultat för att matcha innehållsområdena. Alla områden som utesluts för
-            utvecklare utesluts också för innehållsredigerare. Uteslut inte redigerbara innehållsområden!</p>
+            utvecklare utesluts också för innehållsredigerare. Uteslut inte redigerbara innehållsområden!
+          </p>
 
           <p>Vissa tester tillåter mer exakt konfiguration för att bara dölja vissa aviseringar på berörda element. Leta
             efter dem under:</p>
@@ -440,7 +444,8 @@ function MY_MODULE_editoria11y_alter_config(array &$attach, CacheableMetadata $c
             <code>editoria11yOptionsOverride</code>. Om den är angiven skickar modulen <code>options</code>-objektet
             till en <code>editoria11yOptions</code>-funktion som du har tillhandahållit i din modul eller ditt tema. Du
             kan nu ange vilka som helst av <a href="https://editorsally.ddev.site/en/install/#params">bibliotekets
-              parametrar</a>.</p>
+              parametrar</a>.
+          </p>
           <pre class="language-javascript"><code><!--var editoria11yOptionsOverride = true;
 var editoria11yOptions = function(options) {
   // You now have access to the processed options object that will be passed to the library.
@@ -575,7 +580,7 @@ var editoria11yOptions = function(options) {
     </div>
   </footer>
   <script src="/assets/bootstrap/js/bootstrap.bundle.min.js" class="astro-vvvwv3sm"></script>
-  <script src="/lang/i18n.js"></script>
+  <script src="/assets/lang/i18n.js"></script>
   <script src="/assets/theme.js"></script>
   <script src="/assets/prism/prism.js"></script>
 </body>

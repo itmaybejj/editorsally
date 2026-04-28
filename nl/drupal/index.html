@@ -177,9 +177,11 @@
               <ul>
                 <li><strong>Verwijder</strong> resultaten van tests ingesteld op "Alleen ontwikkelaar."</li>
                 <li><strong>Verwijder</strong> resultaten op elementen buiten opgegeven
-                  <strong><em>inhouds</em></strong>regio's, bijv.:<br><code>main, footer</code></li>
+                  <strong><em>inhouds</em></strong>regio's, bijv.:<br><code>main, footer</code>
+                </li>
                 <li><strong>Verwijder</strong> resultaten op elementen die overeenkomen met
-                  <strong><em>inhouds</em></strong>negeringsselectors.</li>
+                  <strong><em>inhouds</em></strong>negeringsselectors.
+                </li>
               </ul>
               Let op: er is geen tweede "verzamel"-fase. De ontwikkelaarspaginaregio's moeten de inhoudsregio's
               omvatten.
@@ -202,7 +204,8 @@
           </ul>
           <p>Of een gebruiker een melding kan afwijzen, wordt bepaald op rolniveau in de gebruikersrechten van Drupal.
             <strong>De meeste auteurs moeten meldingen kunnen afwijzen</strong>. Het heeft geen zin iemand een
-            handmatige controle toe te wijzen als diegene het item niet als gecontroleerd kan markeren.</p>
+            handmatige controle toe te wijzen als diegene het item niet als gecontroleerd kan markeren.
+          </p>
 
           <h3 id="roots">Elementen negeren</h3>
           <p>Deze twee configuratie-instellingen zijn het belangrijkst!</p>
@@ -351,7 +354,8 @@
               <strong>browsers achtergrondtabbladen pauzeren</strong>. U moet uw computer ingeschakeld en actief houden
               tijdens een crawl. Plan om een nieuw venster te openen voor de crawler en houd dat als het actieve tabblad
               in de voorgrond terwijl het werkt. U kunt ondertussen in een ander venster blijven werken. De crawler
-              werkt zijn schatting bij na elke batch pagina's.</p>
+              werkt zijn schatting bij na elke batch pagina's.
+            </p>
           </section>
           <section id="reports">
             <h3>Rapporten bekijken</h3>
@@ -417,7 +421,8 @@
 
           <h2 id="runtime">Uw eigen configuratie schrijven</h2>
           <p>In PHP: de Drupal-module biedt een <code>hook_editoria11y_alter_config</code> om de inhoud van
-            <code>drupalSettings.editoria11y</code> te wijzigen in een module of thema. Bijvoorbeeld:</p>
+            <code>drupalSettings.editoria11y</code> te wijzigen in een module of thema. Bijvoorbeeld:
+          </p>
           <pre class="language-php"><code><!--<?php
 /**
  * @file
@@ -583,7 +588,7 @@ var editoria11yOptions = function(options) {
     </div>
   </footer>
   <script src="/assets/bootstrap/js/bootstrap.bundle.min.js" class="astro-vvvwv3sm"></script>
-  <script src="/lang/i18n.js"></script>
+  <script src="/assets/lang/i18n.js"></script>
   <script src="/assets/theme.js"></script>
   <script src="/assets/prism/prism.js"></script>
 </body>

@@ -217,7 +217,8 @@ baseFontFamily: '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica N
             <li><strong><code>ed11yShowHidden</code></strong>: fornece um número <code>data-ed11y-result</code> e um
               booleano <code>viaJump</code>. Disparado apenas se o parâmetro “ed11yShowHidden” estiver definido
               <em><strong>e</strong></em> um elemento pai corresponder a um seletor. Usado para revelar alertas em
-              contêineres ainda não abertos, como acordeões, abas e carrosséis. Exemplos de uso na próxima seção.</li>
+              contêineres ainda não abertos, como acordeões, abas e carrosséis. Exemplos de uso na próxima seção.
+            </li>
 
             <li><strong><code>ed11yPop</code></strong>: fornece o ID de <code>data-ed11y-result</code>, bem como
               referências aos objetos <code>result</code> e <code>tip</code>. Disparado quando uma dica de ferramenta
@@ -259,7 +260,8 @@ baseFontFamily: '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica N
           </p>
 
           <p>O módulo Drupal também adiciona links de edição personalizados às dicas, usando o parâmetro
-            <code>editLinks</code>. Observe “Page editor” e “Layout editor:”</p>
+            <code>editLinks</code>. Observe “Page editor” e “Layout editor:”
+          </p>
 
           <figure class="wp-block-image size-full"><img loading="lazy" data-recalc-dims="1" fetchpriority="high"
               decoding="async" width="580" height="300"
@@ -402,7 +404,8 @@ document.addEventListener('ed11yPop', e => {
             <strong><em>todos</em></strong> os painéis de acordeão com problemas), adicione um listener de evento JS
             para <code>ed11yPanelOpened</code>, faça um querySelectorAll para os elementos
             <code>ed11y-element-result</code> relevantes e acione a função que o seu tema usa para revelar essa parte da
-            página.</p>
+            página.
+          </p>
 
           <p>Aqui está um exemplo baseado em jQuery. Quando o painel abre, ele desativa um menu fixo (para que os
             elementos não fiquem encobertos) e depois procura por quaisquer elementos <code>ed11y-element-result</code>
@@ -422,7 +425,8 @@ document.addEventListener('ed11yPop', e => {
             Ele é disparado quando o Editoria11y reconhece que uma dica está dentro de um contêiner com um dos seletores
             <code>hiddenHandlers</code> listados nas opções. Este evento JS incluirá o ID da dica que está prestes a ser
             aberta. O Editoria11y pausará brevemente após disparar esse evento, para dar tempo ao seu JS de tornar o
-            elemento visível.</p>
+            elemento visível.
+          </p>
 
           <p>Aqui está um exemplo de uma implementação da Penn State. Ele procura o elemento correspondente ao ID
             fornecido, encontra seu contêiner de componente interativo pai e aciona seu evento para ativar o alternador:
@@ -484,7 +488,7 @@ document.addEventListener('ed11yPop', e => {
     </div>
   </footer>
   <script src="/assets/bootstrap/js/bootstrap.bundle.min.js" class="astro-vvvwv3sm"></script>
-  <script src="/lang/i18n.js"></script>
+  <script src="/assets/lang/i18n.js"></script>
   <script src="/assets/theme.js"></script>
   <script src="/assets/prism/prism.js"></script>
 </body>

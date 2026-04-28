@@ -25,7 +25,7 @@ const demo = async () => {
     'fr',
     'hu',
     'it',
-    'jp',
+    'ja',
     'nb',
     'nl',
     'pl',
@@ -58,6 +58,7 @@ const demo = async () => {
     developerPlugin: true,
     contrastPlugin: true,
     readabilityPlugin: true,
+    checkRoot: '#ed11y-demo',
     checks: {
       IMAGE_FIGURE_DECORATIVE: true, // csa controlled
       IMAGE_FIGURE_DUPLICATE_ALT: true,

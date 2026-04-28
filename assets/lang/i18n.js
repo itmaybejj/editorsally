@@ -24,7 +24,7 @@ const defined_i18n = (() => {
    */
   const supportedLanguages = [
     'es',
-    // 'da', 'de', 'el', 'fr', 'hu', 'it', 'jp',
+    // 'da', 'de', 'el', 'fr', 'hu', 'it', 'ja',
     // 'nb', 'nl', 'pl', 'pt-br', 'pt-pt', 'sv', 'uk', 'zh',
   ];
 
@@ -33,7 +33,7 @@ const defined_i18n = (() => {
    * Unlike supportedLanguages, this always includes every translation.
    */
   const allLanguages = [
-    'en', 'da', 'de', 'el', 'es', 'fr', 'hu', 'it', 'jp',
+    'en', 'da', 'de', 'el', 'es', 'fr', 'hu', 'it', 'ja',
     'nb', 'nl', 'pl', 'pt-br', 'pt-pt', 'sv', 'uk', 'zh',
   ];
 
@@ -49,7 +49,7 @@ const defined_i18n = (() => {
     fr: 'Français',
     hu: 'Magyar',
     it: 'Italiano',
-    jp: '日本語',
+    ja: '日本語',
     nb: 'Norsk bokmål',
     nl: 'Nederlands',
     pl: 'Polski',
@@ -310,7 +310,7 @@ const defined_i18n = (() => {
       perYear: '/anno',
       perMonth: '/mese',
     },
-    jp: {
+    ja: {
       label: {
         about: '概要',
         features: '機能',

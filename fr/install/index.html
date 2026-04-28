@@ -295,7 +295,8 @@ const ed11y = new Ed11y({
             sont affich&eacute;es.</p>
 
           <p>Cet &eacute;v&eacute;nement fournit des r&eacute;f&eacute;rences aux objets <code>result</code> et
-            <code>tip</code> :</p>
+            <code>tip</code> :
+          </p>
           <pre class="language-javascript"><code><!--// Listen for event
 document.addEventListener('ed11yPop', e => {
   if (e.detail.result.element.closest(
@@ -421,12 +422,14 @@ document.addEventListener('ed11yPop', e => {
             &eacute;couteur d’&eacute;v&eacute;nement JavaScript pour <code>ed11yPanelOpened</code>, puis effectuez un
             querySelectorAll pour les &eacute;l&eacute;ments <code>ed11y-element-result</code> concern&eacute;s, et
             d&eacute;clenchez la fonction que votre th&egrave;me utilise pour r&eacute;v&eacute;ler cette partie de la
-            page.</p>
+            page.
+          </p>
 
           <p>Voici un exemple bas&eacute; sur jQuery. Lorsque le panneau s’ouvre, il d&eacute;sactive un menu fixe (pour
             que les &eacute;l&eacute;ments ne soient pas recouverts), puis recherche tous les &eacute;l&eacute;ments
             <code>ed11y-element-result</code> &agrave; l’int&eacute;rieur d’&eacute;l&eacute;ments d’accord&eacute;on
-            ferm&eacute;s et simule un clic sur leur bouton de bascule :</p>
+            ferm&eacute;s et simule un clic sur leur bouton de bascule :
+          </p>
           <pre class="language-javascript"><code><!--document.addEventListener("ed11yPanelOpened", function () {
   $('body').addClass('no-stick');
   $('ed11y-element-result').each(function () {
@@ -445,7 +448,8 @@ document.addEventListener('ed11yPop', e => {
             <code>hiddenHandlers</code> fournis dans la liste d’options. Cet &eacute;v&eacute;nement JavaScript inclura
             l’identifiant de l’infobulle qu’il est sur le point d’ouvrir. Editoria11y marquera ensuite une br&egrave;ve
             pause apr&egrave;s avoir d&eacute;clench&eacute; cet &eacute;v&eacute;nement, pour laisser &agrave; votre
-            JavaScript le temps de rendre l’&eacute;l&eacute;ment visible.</p>
+            JavaScript le temps de rendre l’&eacute;l&eacute;ment visible.
+          </p>
 
           <p>Voici un exemple issu d’une impl&eacute;mentation de Penn State. Il recherche l’&eacute;l&eacute;ment
             correspondant &agrave; l’identifiant fourni, puis trouve le conteneur parent du composant interactif et
@@ -508,7 +512,7 @@ document.addEventListener('ed11yPop', e => {
     </div>
   </footer>
   <script src="/assets/bootstrap/js/bootstrap.bundle.min.js" class="astro-vvvwv3sm"></script>
-  <script src="/lang/i18n.js"></script>
+  <script src="/assets/lang/i18n.js"></script>
   <script src="/assets/theme.js"></script>
   <script src="/assets/prism/prism.js"></script>
 </body>

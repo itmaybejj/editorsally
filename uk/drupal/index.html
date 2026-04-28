@@ -174,9 +174,11 @@
               <ul>
                 <li><strong>Відкинути</strong> результати з тестів, позначених як «лише для розробника».</li>
                 <li><strong>Відкинути</strong> результати на елементах поза зазначеними регіонами
-                  <strong><em>контенту</em></strong>, наприклад:<br><code>main, footer</code></li>
+                  <strong><em>контенту</em></strong>, наприклад:<br><code>main, footer</code>
+                </li>
                 <li><strong>Відкинути</strong> результати на елементах, що відповідають селекторам ігнорування
-                  <strong><em>контенту</em></strong>.</li>
+                  <strong><em>контенту</em></strong>.
+                </li>
               </ul>
               Зверніть увагу, що другого етапу «збирання» немає. Регіони сторінки розробника повинні включати регіони
               контенту.
@@ -198,7 +200,8 @@
           </ul>
           <p>Можливість відхиляти попередження контролюється на рівні ролі в дозволах користувачів Drupal.
             <strong>Більшості авторів слід дозволяти відхиляти попередження</strong>. Немає сенсу призначати комусь
-            ручну перевірку, якщо вони не можуть позначити елемент як перевірений.</p>
+            ручну перевірку, якщо вони не можуть позначити елемент як перевірений.
+          </p>
 
           <h3 id="roots">Ігнорування елементів</h3>
           <p>Ці два параметри конфігурації є найважливішими!</p>
@@ -274,7 +277,8 @@
           <p>Головне, що слід знати про область перевірки розробника: вона <strong>не є незалежною</strong> від областей
             перевірки контенту. У роздільній конфігурації перевіряються області розробника, а потім ці результати
             <strong>фільтруються</strong> відповідно до областей контенту. Будь-які області, виключені для розробників,
-            також будуть виключені для редакторів контенту. Не виключайте редаговані області контенту!</p>
+            також будуть виключені для редакторів контенту. Не виключайте редаговані області контенту!
+          </p>
 
           <p>Деякі тести допускають більш точне налаштування, щоб приховувати лише певні попередження на відповідних
             елементах. Шукайте їх у розділах:</p>
@@ -411,7 +415,8 @@
 
           <h2 id="runtime">Написання власної конфігурації</h2>
           <p>У PHP: модуль Drupal надає <code>hook_editoria11y_alter_config</code> для зміни вмісту
-            <code>drupalSettings.editoria11y</code> у модулі або темі. Наприклад:</p>
+            <code>drupalSettings.editoria11y</code> у модулі або темі. Наприклад:
+          </p>
           <pre class="language-php"><code><!--<?php
 /**
  * @file
@@ -441,7 +446,8 @@ function MY_MODULE_editoria11y_alter_config(array &$attach, CacheableMetadata $c
             <code>options</code> у JavaScript. Модуль перевіряє одну глобальну JS-змінну
             <code>editoria11yOptionsOverride</code>. Якщо вона встановлена, він передасть об'єкт <code>options</code> до
             функції <code>editoria11yOptions</code>, яку ви надали у своєму модулі або темі. Тепер ви можете встановити
-            будь-який із <a href="https://editorsally.ddev.site/en/install/#params">параметрів бібліотеки</a>.</p>
+            будь-який із <a href="https://editorsally.ddev.site/en/install/#params">параметрів бібліотеки</a>.
+          </p>
           <pre class="language-javascript"><code><!--var editoria11yOptionsOverride = true;
 var editoria11yOptions = function(options) {
   // You now have access to the processed options object that will be passed to the library.
@@ -527,9 +533,11 @@ var editoria11yOptions = function(options) {
           </section>
           <section id="help">
             <h2>Отримання допомоги</h2>
-            <p>Перегляньте сторінку <a href="../contacts">контактів</a> для варіантів підтримки від спільноти. @itmaybejj
+            <p>Перегляньте сторінку <a href="../contacts">контактів</a> для варіантів підтримки від спільноти.
+              @itmaybejj
               зазвичай перебуває в Drupal Slack, коли сонце світить у західній півкулі.</p>
-            <p>Більшість <a href="../license/">рівнів внесків CSA</a> включають щорічну консультацію, яка може охоплювати
+            <p>Більшість <a href="../license/">рівнів внесків CSA</a> включають щорічну консультацію, яка може
+              охоплювати
               пряму допомогу зі встановленням і налаштуванням</p>
           </section>
 
@@ -576,7 +584,7 @@ var editoria11yOptions = function(options) {
     </div>
   </footer>
   <script src="/assets/bootstrap/js/bootstrap.bundle.min.js" class="astro-vvvwv3sm"></script>
-  <script src="/lang/i18n.js"></script>
+  <script src="/assets/lang/i18n.js"></script>
   <script src="/assets/theme.js"></script>
   <script src="/assets/prism/prism.js"></script>
 </body>

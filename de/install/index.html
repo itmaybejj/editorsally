@@ -66,7 +66,8 @@
             <li><a href="https://codeberg.org/sebastiangreger/kirby-a11yprompter"
                 class="arrow"><strong>Kirby-Installer</strong></a> <em>(Beitrag)</em></li>
             <li><a href="https://plugins.craftcms.com/editoria11y" class="arrow"><strong>CraftCMS-Installer</strong></a>
-              <em>(Beitrag)</em></li>
+              <em>(Beitrag)</em>
+            </li>
           </ul>
         </section>
         <section id="diy">
@@ -220,7 +221,8 @@ baseFontFamily: '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica N
               einen <code>viaJump</code>-Boolean. Wird nur ausgelöst, wenn der Parameter „hiddenHandlers” gesetzt ist
               <em><strong>und</strong></em> ein übergeordnetes Element des Elements mit einem Selektor übereinstimmt.
               Dient zur Anzeige von Hinweisen in noch nicht geöffneten Containern, z. B. Akkordeons, Tabs und
-              Karussells. Verwendungsbeispiele im nächsten Abschnitt.</li>
+              Karussells. Verwendungsbeispiele im nächsten Abschnitt.
+            </li>
 
             <li><strong><code>ed11yPop</code></strong>: liefert die <code>data-ed11y-result</code>-ID sowie Referenzen
               auf die <code>result</code>- und <code>tip</code>-Objekte. Wird ausgelöst, wenn ein Tooltip erscheint,
@@ -262,7 +264,8 @@ baseFontFamily: '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica N
             sprachspezifische Übersetzung.</p>
 
           <p>Das Drupal-Modul fügt den Hinweisen auch benutzerdefinierte Bearbeitungslinks hinzu, mithilfe des
-            <code>editLinks</code>-Parameters. Beachten Sie „Page editor” und „Layout editor”:</p>
+            <code>editLinks</code>-Parameters. Beachten Sie „Page editor” und „Layout editor”:
+          </p>
 
           <figure class="wp-block-image size-full"><img loading="lazy" data-recalc-dims="1" fetchpriority="high"
               decoding="async" width="580" height="300"
@@ -423,7 +426,8 @@ document.addEventListener('ed11yPop', e => {
             das <code>ed11yShowHidden</code>-Ereignis hinzu. Dieses wird ausgelöst, wenn Editoria11y erkennt, dass sich
             ein Hinweis in einem Container mit einem der aufgelisteten <code>hiddenHandlers</code>-Selektoren befindet.
             Das JS-Ereignis enthält die ID des Hinweises, der geöffnet werden soll. Editoria11y pausiert dann kurz nach
-            dem Auslösen dieses Ereignisses, um Ihrem JS Zeit zu geben, das Element sichtbar zu machen.</p>
+            dem Auslösen dieses Ereignisses, um Ihrem JS Zeit zu geben, das Element sichtbar zu machen.
+          </p>
 
           <p>Hier ein Beispiel aus einer Penn-State-Implementierung. Es sucht das Element mit der angegebenen ID, findet
             dann den übergeordneten Container der interaktiven Komponente und löst dessen Ereignis aus, um den Toggle zu
@@ -438,7 +442,8 @@ document.addEventListener('ed11yPop', e => {
 }); --></code></pre>
           <p>Abschließend: Manche Themes sind schlicht nicht mit der Sichtbarkeitsprüfung kompatibel -- z. B. wenn der
             <code>&lt;main&gt;</code>-Container eine Höhe von 0px hat. Solche Websites sollten alle
-            Sichtbarkeitsprüfungen deaktivieren, indem sie <code>checkVisible</code> auf false setzen.</p>
+            Sichtbarkeitsprüfungen deaktivieren, indem sie <code>checkVisible</code> auf false setzen.
+          </p>
 
         </section>
 
@@ -485,7 +490,7 @@ document.addEventListener('ed11yPop', e => {
     </div>
   </footer>
   <script src="/assets/bootstrap/js/bootstrap.bundle.min.js" class="astro-vvvwv3sm"></script>
-  <script src="/lang/i18n.js"></script>
+  <script src="/assets/lang/i18n.js"></script>
   <script src="/assets/theme.js"></script>
   <script src="/assets/prism/prism.js"></script>
 </body>

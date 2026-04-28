@@ -218,7 +218,8 @@ baseFontFamily: '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica N
               <code>viaJump</code>-boolean. Wordt alleen verzonden als de parameter “ed11yShowHidden” is ingesteld
               <em><strong>en</strong></em> een bovenliggend element van het element overeenkomt met een selector. Wordt
               gebruikt om meldingen zichtbaar te maken in nog niet geopende containers, zoals accordeons, tabbladen en
-              carrousels. Gebruiksvoorbeelden in de volgende sectie.</li>
+              carrousels. Gebruiksvoorbeelden in de volgende sectie.
+            </li>
 
             <li><strong><code>ed11yPop</code></strong>: levert het <code>data-ed11y-result</code>-ID, evenals
               verwijzingen naar de objecten <code>result</code> en <code>tip</code>. Wordt verzonden wanneer een tooltip
@@ -259,7 +260,8 @@ baseFontFamily: '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica N
           </p>
 
           <p>De Drupal-module voegt ook aangepaste bewerkingslinks toe aan de tips via de parameter
-            <code>editLinks</code>. Let op “Page editor” en “Layout editor:”</p>
+            <code>editLinks</code>. Let op “Page editor” en “Layout editor:”
+          </p>
 
           <figure class="wp-block-image size-full"><img loading="lazy" data-recalc-dims="1" fetchpriority="high"
               decoding="async" width="580" height="300"
@@ -403,12 +405,14 @@ document.addEventListener('ed11yPop', e => {
             <strong><em>alle</em></strong> accordeonpanelen met problemen uit te vouwen), voegt u een
             JS-gebeurtenisluisteraar toe voor <code>ed11yPanelOpened</code>, doet u vervolgens een querySelectorAll voor
             relevante <code>ed11y-element-result</code>-elementen en roept u daarna de functie aan die uw thema gebruikt
-            om dat deel van de pagina zichtbaar te maken.</p>
+            om dat deel van de pagina zichtbaar te maken.
+          </p>
 
           <p>Hier is een op jQuery gebaseerd voorbeeld. Wanneer het paneel wordt geopend, schakelt het een vastgezet
             menu uit (zodat elementen niet worden bedekt) en zoekt het vervolgens naar alle
             <code>ed11y-element-result</code>-elementen in gesloten accordeonitems en simuleert een klik op hun
-            schakelknop:</p>
+            schakelknop:
+          </p>
           <pre class="language-javascript"><code><!--document.addEventListener("ed11yPanelOpened", function () {
   $('body').addClass('no-stick');
   $('ed11y-element-result').each(function () {
@@ -486,7 +490,7 @@ document.addEventListener('ed11yPop', e => {
     </div>
   </footer>
   <script src="/assets/bootstrap/js/bootstrap.bundle.min.js" class="astro-vvvwv3sm"></script>
-  <script src="/lang/i18n.js"></script>
+  <script src="/assets/lang/i18n.js"></script>
   <script src="/assets/theme.js"></script>
   <script src="/assets/prism/prism.js"></script>
 </body>

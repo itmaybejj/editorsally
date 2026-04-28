@@ -216,7 +216,8 @@ baseFontFamily: '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica N
               значення <code>viaJump</code>. Надсилається лише якщо параметр “ed11yShowHidden” встановлено
               <em><strong>і</strong></em> батьківський елемент відповідає вказаному селектору. Використовується для
               показу сповіщень у ще не відкритих контейнерах, наприклад, акордеонах, вкладках і каруселях. Приклади
-              використання — в наступному розділі.</li>
+              використання — в наступному розділі.
+            </li>
 
             <li><strong><code>ed11yPop</code></strong>: надає ідентифікатор <code>data-ed11y-result</code>, а також
               посилання на об’єкти <code>result</code> і <code>tip</code>. Надсилається при появі підказки, дозволяючи
@@ -257,7 +258,8 @@ baseFontFamily: '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica N
               class="liinternal">ключів за замовчуванням у файлі локалізації</a> або активного мовного перекладу.</p>
 
           <p>Модуль Drupal також додає власні посилання для редагування до підказок за допомогою параметра
-            <code>editLinks</code>. Зверніть увагу на “Page editor” і “Layout editor:”</p>
+            <code>editLinks</code>. Зверніть увагу на “Page editor” і “Layout editor:”
+          </p>
 
           <figure class="wp-block-image size-full"><img loading="lazy" data-recalc-dims="1" fetchpriority="high"
               decoding="async" width="580" height="300"
@@ -418,7 +420,8 @@ document.addEventListener('ed11yPop', e => {
             параметрах. Потім додайте слухач події <code>ed11yShowHidden</code>. Ця подія надсилається, якщо Editoria11y
             визначає, що підказка знаходиться всередині контейнера з одним із зазначених селекторів
             <code>hiddenHandlers</code>. Ця JS-подія міститиме ідентифікатор підказки, яку ось-ось буде відкрито. Після
-            надсилання події Editoria11y зробить коротку паузу, щоб ваш JS-код встиг зробити елемент видимим.</p>
+            надсилання події Editoria11y зробить коротку паузу, щоб ваш JS-код встиг зробити елемент видимим.
+          </p>
 
           <p>Ось приклад з реалізації Penn State. Він знаходить елемент за вказаним ідентифікатором, потім шукає
             батьківський контейнер інтерактивного компонента і викликає подію для активації перемикача:</p>
@@ -432,7 +435,8 @@ document.addEventListener('ed11yPop', e => {
 }); --></code></pre>
           <p>Остання примітка: деякі теми просто несумісні з перевіркою видимості — наприклад, контейнер
             <code>&lt;main&gt;</code> має висоту 0px. На таких сайтах слід повністю вимкнути перевірку видимості,
-            встановивши <code>checkVisible</code> у значення false.</p>
+            встановивши <code>checkVisible</code> у значення false.
+          </p>
 
         </section>
 
@@ -479,7 +483,7 @@ document.addEventListener('ed11yPop', e => {
     </div>
   </footer>
   <script src="/assets/bootstrap/js/bootstrap.bundle.min.js" class="astro-vvvwv3sm"></script>
-  <script src="/lang/i18n.js"></script>
+  <script src="/assets/lang/i18n.js"></script>
   <script src="/assets/theme.js"></script>
   <script src="/assets/prism/prism.js"></script>
 </body>

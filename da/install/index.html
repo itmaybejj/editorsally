@@ -66,7 +66,8 @@
             <li><a href="https://codeberg.org/sebastiangreger/kirby-a11yprompter"
                 class="arrow"><strong>Kirby-installer</strong></a> <em>(contrib)</em></li>
             <li><a href="https://plugins.craftcms.com/editoria11y" class="arrow"><strong>CraftCMS-installer</strong></a>
-              <em>(contrib)</em></li>
+              <em>(contrib)</em>
+            </li>
           </ul>
         </section>
         <section id="diy">
@@ -217,11 +218,13 @@ baseFontFamily: '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica N
               <code>viaJump</code>-boolean. Udsendes kun, hvis parameteren "ed11yShowHidden" er sat,
               <em><strong>og</strong></em> et overordnet element matcher en selektor. Bruges til at vise advarsler i
               endnu ikke åbne containere, f.eks. harmonikaelementer, faner og karruseller. Brugseksempler i næste
-              afsnit.</li>
+              afsnit.
+            </li>
 
             <li><strong><code>ed11yPop</code></strong>: giver <code>data-ed11y-result</code>-ID samt referencer til
               <code>result</code>- og <code>tip</code>-objekterne. Udsendes, når et tooltip vises, så du kan ændre
-              tipsene under kørsel.</li>
+              tipsene under kørsel.
+            </li>
 
             <li><strong><code>ed11yShut</code></strong>: giver <code>data-ed11y-result</code>-ID. Udsendes, når et
               tooltip lukkes.</li>
@@ -258,7 +261,8 @@ baseFontFamily: '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica N
           </p>
 
           <p>Drupal-modulet tilføjer også brugerdefinerede redigeringslinks til tipsene ved hjælp af parameteren
-            <code>editLinks</code>. Bemærk "Page editor" og "Layout editor:"</p>
+            <code>editLinks</code>. Bemærk "Page editor" og "Layout editor:"
+          </p>
 
           <figure class="wp-block-image size-full"><img loading="lazy" data-recalc-dims="1" fetchpriority="high"
               decoding="async" width="580" height="300"
@@ -420,7 +424,8 @@ document.addEventListener('ed11yPop', e => {
             hvis Editoria11y genkender, at et tip er inde i en container med en af de angivne
             <code>hiddenHandlers</code>-selektorer i indstillingslisten. Denne JS-hændelse vil indeholde ID'et på det
             tip, der er ved at blive åbnet. Editoria11y vil derefter holde en kort pause efter udsendelsen af hændelse
-            for at give din JavaScript tid til at gøre elementet synligt.</p>
+            for at give din JavaScript tid til at gøre elementet synligt.
+          </p>
 
           <p>Her er et eksempel fra en Penn State-implementering. Det finder elementet, der matcher det angivne ID,
             finder derefter dets overordnede interaktive komponentcontainer og udl&oslash;ser dens hændelse for at
@@ -435,7 +440,8 @@ document.addEventListener('ed11yPop', e => {
 }); --></code></pre>
           <p>Sidste bemærkning: nogle temaer er simpelthen ikke kompatible med synlighedstjek -- f.eks. har
             <code>&lt;main&gt;</code>-containeren en højde på 0px. Sådanne sider bør deaktivere al synlighedskontrol ved
-            at sætte <code>checkVisible</code> til false.</p>
+            at sætte <code>checkVisible</code> til false.
+          </p>
 
         </section>
 
@@ -482,7 +488,7 @@ document.addEventListener('ed11yPop', e => {
     </div>
   </footer>
   <script src="/assets/bootstrap/js/bootstrap.bundle.min.js" class="astro-vvvwv3sm"></script>
-  <script src="/lang/i18n.js"></script>
+  <script src="/assets/lang/i18n.js"></script>
   <script src="/assets/theme.js"></script>
   <script src="/assets/prism/prism.js"></script>
 </body>

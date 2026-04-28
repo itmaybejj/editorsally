@@ -215,11 +215,13 @@ baseFontFamily: '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica N
               <code>viaJump</code>-boolsk verdi. Utsendes kun hvis parameteren «ed11yShowHidden» er satt
               <em><strong>og</strong></em> en forelder til elementet samsvarer med en selektor. Brukes til å vise
               varsler i beholdere som ikke er åpne ennå, f.eks. trekkspill, faner og karuseller. Brukseksempler i neste
-              avsnitt.</li>
+              avsnitt.
+            </li>
 
             <li><strong><code>ed11yPop</code></strong>: gir <code>data-ed11y-result</code>-ID samt referanser til
               <code>result</code>- og <code>tip</code>-objektene. Utsendes når et verktøytips vises, slik at du kan
-              endre tipsene under kjøring.</li>
+              endre tipsene under kjøring.
+            </li>
 
             <li><strong><code>ed11yShut</code></strong>: gir <code>data-ed11y-result</code>-ID. Utsendes når et
               verktøytips lukkes.</li>
@@ -255,7 +257,8 @@ baseFontFamily: '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica N
             oversettelsen.</p>
 
           <p>Drupal-modulen legger også til egendefinerte redigeringslenker i tipsene ved hjelp av parameteren
-            <code>editLinks</code>. Legg merke til «Page editor» og «Layout editor:»</p>
+            <code>editLinks</code>. Legg merke til «Page editor» og «Layout editor:»
+          </p>
 
           <figure class="wp-block-image size-full"><img loading="lazy" data-recalc-dims="1" fetchpriority="high"
               decoding="async" width="580" height="300"
@@ -431,7 +434,8 @@ document.addEventListener('ed11yPop', e => {
 }); --></code></pre>
           <p>Siste merknad: noen temaer er rett og slett ikke kompatible med synlighetskontroll — f.eks. der
             <code>&lt;main&gt;</code>-beholderen har en høyde på 0px. Slike nettsteder bør deaktivere all
-            synlighetskontroll ved å sette <code>checkVisible</code> til false.</p>
+            synlighetskontroll ved å sette <code>checkVisible</code> til false.
+          </p>
 
         </section>
 
@@ -478,7 +482,7 @@ document.addEventListener('ed11yPop', e => {
     </div>
   </footer>
   <script src="/assets/bootstrap/js/bootstrap.bundle.min.js" class="astro-vvvwv3sm"></script>
-  <script src="/lang/i18n.js"></script>
+  <script src="/assets/lang/i18n.js"></script>
   <script src="/assets/theme.js"></script>
   <script src="/assets/prism/prism.js"></script>
 </body>

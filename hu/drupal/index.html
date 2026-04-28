@@ -73,7 +73,7 @@
             <figure class="figure my-4 row">
               <div class="col-lg-8">
                 <img loading="lazy" src="/assets/images/3x-generic-tip.png" class="rounded border figure-img img-fluid"
-                  height="798" width="1278" alt="A tipp jelzi, hogy a link neve csak „kattintson ide"." />
+                  height="798" width="1278" alt="A tipp jelzi, hogy a link neve csak „kattintson ide" ." />
               </div>
               <figcaption class="figure-caption col-lg-4">Az eszköztippek gombokat kapnak a szerkesztőbe ugráshoz, a
                 figyelmeztetés figyelmen kívül hagyásához (az aktuális felhasználó számára) vagy rendben jelöléséhez
@@ -180,7 +180,8 @@
               <ul>
                 <li>A „Csak fejlesztői" jelölésű tesztek eredményeinek <strong>eldobása</strong>.</li>
                 <li>A megadott <strong><em>tartalom</em></strong> régiókon kívüli elemek eredményeinek
-                  <strong>eldobása</strong>, pl.:<br><code>main, footer</code></li>
+                  <strong>eldobása</strong>, pl.:<br><code>main, footer</code>
+                </li>
                 <li>A <strong><em>tartalom</em></strong> figyelmen kívül hagyási szelektorainak megfelelő elemek
                   eredményeinek <strong>eldobása</strong>.</li>
               </ul>
@@ -422,7 +423,8 @@
 
           <h2 id="runtime">Saját konfiguráció írása</h2>
           <p>PHP-ban: a Drupal modul egy <code>hook_editoria11y_alter_config</code> hookot biztosít a
-            <code>drupalSettings.editoria11y</code> tartalmának módosításához egy modulban vagy témában. Például:</p>
+            <code>drupalSettings.editoria11y</code> tartalmának módosításához egy modulban vagy témában. Például:
+          </p>
           <pre class="language-php"><code><!--<?php
 /**
  * @file
@@ -452,7 +454,8 @@ function MY_MODULE_editoria11y_alter_config(array &$attach, CacheableMetadata $c
             <code>options</code> objektumot kell módosítania. A modul egyetlen globális JavaScript változót ellenőriz:
             <code>editoria11yOptionsOverride</code>. Ha ez be van állítva, átadja az <code>options</code> objektumot az
             Ön által a moduljában vagy témájában megadott <code>editoria11yOptions</code> függvénynek. Ezután bármelyik
-            <a href="https://editorsally.ddev.site/en/install/#params">könyvtárparamétert</a> beállíthatja.</p>
+            <a href="https://editorsally.ddev.site/en/install/#params">könyvtárparamétert</a> beállíthatja.
+          </p>
           <pre class="language-javascript"><code><!--var editoria11yOptionsOverride = true;
 var editoria11yOptions = function(options) {
   // You now have access to the processed options object that will be passed to the library.
@@ -540,7 +543,8 @@ var editoria11yOptions = function(options) {
             <h2>Segítségkérés</h2>
             <p>A közösségi támogatási lehetőségekért nézze meg a <a href="../contacts">kapcsolat</a> oldalt. @itmaybejj
               általában elérhető a Drupal Slacken, amikor a nap fent van a nyugati féltekén.</p>
-            <p>A legtöbb <a href="../license/">CSA hozzájárulási szint</a> tartalmaz egy éves egyeztetést, amely közvetlen
+            <p>A legtöbb <a href="../license/">CSA hozzájárulási szint</a> tartalmaz egy éves egyeztetést, amely
+              közvetlen
               segítséget is magában foglalhat a telepítéshez és konfigurációhoz.</p>
           </section>
 
@@ -587,7 +591,7 @@ var editoria11yOptions = function(options) {
     </div>
   </footer>
   <script src="/assets/bootstrap/js/bootstrap.bundle.min.js" class="astro-vvvwv3sm"></script>
-  <script src="/lang/i18n.js"></script>
+  <script src="/assets/lang/i18n.js"></script>
   <script src="/assets/theme.js"></script>
   <script src="/assets/prism/prism.js"></script>
 </body>

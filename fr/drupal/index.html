@@ -73,7 +73,8 @@
             <figure class="figure my-4 row">
               <div class="col-lg-8">
                 <img loading="lazy" src="/assets/images/3x-generic-tip.png" class="rounded border figure-img img-fluid"
-                  height="798" width="1278" alt="Infobulle indiquant qu'un lien est simplement nommé « cliquez ici »." />
+                  height="798" width="1278"
+                  alt="Infobulle indiquant qu'un lien est simplement nommé « cliquez ici »." />
               </div>
               <figcaption class="figure-caption col-lg-4">Les infobulles offrent des boutons pour accéder à l'éditeur,
                 ignorer l'alerte (pour l'utilisateur actif) ou la marquer comme OK (pour tous les utilisateurs). Les
@@ -179,9 +180,11 @@
               <ul>
                 <li><strong>Exclure</strong> les résultats des tests définis comme « Développeur uniquement ».</li>
                 <li><strong>Exclure</strong> les résultats sur les éléments situés en dehors des régions de
-                  <strong><em>contenu</em></strong> spécifiées, par ex. :<br><code>main, footer</code></li>
+                  <strong><em>contenu</em></strong> spécifiées, par ex. :<br><code>main, footer</code>
+                </li>
                 <li><strong>Exclure</strong> les résultats sur les éléments correspondant aux sélecteurs d'exclusion de
-                  <strong><em>contenu</em></strong>.</li>
+                  <strong><em>contenu</em></strong>.
+                </li>
               </ul>
               Notez qu'il n'y a pas de deuxième phase de « rassemblement ». Les régions de page développeur doivent
               inclure les régions de contenu.
@@ -284,7 +287,8 @@
             <strong>pas indépendantes</strong> des zones de vérification de contenu. Dans une configuration séparée, les
             zones développeur sont vérifiées, puis ces résultats sont <strong>filtrés</strong> pour correspondre aux
             zones de contenu. Toute zone exclue pour les développeurs sera également exclue pour les éditeurs de
-            contenu. N'excluez pas les zones de contenu modifiables !</p>
+            contenu. N'excluez pas les zones de contenu modifiables !
+          </p>
 
           <p>Certains tests permettent une configuration plus précise, pour masquer uniquement certaines alertes sur les
             éléments concernés. Cherchez-les sous :</p>
@@ -416,7 +420,8 @@
             bibliothèque détecte automatiquement lorsqu'une infobulle tomberait en dehors de la partie visible de la
             <strong>page.</strong> Indiquer à la bibliothèque que certains conteneurs masquent le débordement signifie
             qu'elle tentera également de positionner les infobulles pour les éléments de ces conteneurs à l'intérieur de
-            leurs bordures.</p>
+            leurs bordures.
+          </p>
           <p>Certains thèmes ont des widgets qui basculent la visibilité du contenu, comme les accordéons, les onglets
             et les diaporamas. Les infobulles à l'intérieur de ces éléments seront également masquées. Fournir une liste
             de sélecteurs pour ces widgets signifie qu'Editoria11y marquera une brève pause lorsqu'un utilisateur
@@ -427,7 +432,8 @@
 
           <h2 id="runtime">Écrire votre propre configuration</h2>
           <p>En PHP : le module Drupal fournit un <code>hook_editoria11y_alter_config</code> pour modifier le contenu de
-            <code>drupalSettings.editoria11y</code> dans un module ou un thème. Par exemple :</p>
+            <code>drupalSettings.editoria11y</code> dans un module ou un thème. Par exemple :
+          </p>
           <pre class="language-php"><code><!--<?php
 /**
  * @file
@@ -458,7 +464,8 @@ function MY_MODULE_editoria11y_alter_config(array &$attach, CacheableMetadata $c
             <code>editoria11yOptionsOverride</code>. Si celle-ci est définie, il transmettra l'objet
             <code>options</code> à une fonction <code>editoria11yOptions</code> que vous avez fournie dans votre module
             ou thème. Vous pouvez alors définir n'importe quel <a
-              href="https://editorsally.ddev.site/en/install/#params">paramètre de la bibliothèque</a>.</p>
+              href="https://editorsally.ddev.site/en/install/#params">paramètre de la bibliothèque</a>.
+          </p>
           <pre class="language-javascript"><code><!--var editoria11yOptionsOverride = true;
 var editoria11yOptions = function(options) {
   // You now have access to the processed options object that will be passed to the library.
@@ -595,7 +602,7 @@ var editoria11yOptions = function(options) {
     </div>
   </footer>
   <script src="/assets/bootstrap/js/bootstrap.bundle.min.js" class="astro-vvvwv3sm"></script>
-  <script src="/lang/i18n.js"></script>
+  <script src="/assets/lang/i18n.js"></script>
   <script src="/assets/theme.js"></script>
   <script src="/assets/prism/prism.js"></script>
 </body>

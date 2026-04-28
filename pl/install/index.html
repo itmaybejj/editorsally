@@ -216,7 +216,8 @@ baseFontFamily: '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica N
             <li><strong><code>ed11yShowHidden</code></strong>: dostarcza liczbę <code>data-ed11y-result</code> i wartość
               logiczną <code>viaJump</code>. Wywoływane tylko wtedy, gdy parametr „ed11yShowHidden” jest ustawiony
               <em><strong>i</strong></em> element nadrzędny pasuje do selektora. Służy do odsłaniania alertów w jeszcze
-              nieotwartych kontenerach, np. akordeonach, kartach i karuzelach. Przykłady użycia w następnej sekcji.</li>
+              nieotwartych kontenerach, np. akordeonach, kartach i karuzelach. Przykłady użycia w następnej sekcji.
+            </li>
 
             <li><strong><code>ed11yPop</code></strong>: dostarcza identyfikator <code>data-ed11y-result</code>, a także
               odwołania do obiektów <code>result</code> i <code>tip</code>. Wywoływane gdy pojawia się podpowiedź,
@@ -257,7 +258,8 @@ baseFontFamily: '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica N
             języka.</p>
 
           <p>Moduł Drupal dodaje również niestandardowe linki do edycji w podpowiedziach, używając parametru
-            <code>editLinks</code>. Zwróć uwagę na „Page editor” i „Layout editor”:</p>
+            <code>editLinks</code>. Zwróć uwagę na „Page editor” i „Layout editor”:
+          </p>
 
           <figure class="wp-block-image size-full"><img loading="lazy" data-recalc-dims="1" fetchpriority="high"
               decoding="async" width="580" height="300"
@@ -418,7 +420,8 @@ document.addEventListener('ed11yPop', e => {
             Jest ono wywoływane, gdy Editoria11y rozpoznaje, że podpowiedź jest wewnątrz kontenera pasującego do jednego
             z selektorów <code>hiddenHandlers</code> podanych na liście opcji. To zdarzenie JS będzie zawierać
             identyfikator podpowiedzi, którą zaraz otworzy. Editoria11y wstrzyma się wtedy na chwilę po wywołaniu tego
-            zdarzenia, aby dać JS-owi czas na uwidocznienie elementu.</p>
+            zdarzenia, aby dać JS-owi czas na uwidocznienie elementu.
+          </p>
 
           <p>Oto przykład z implementacji Penn State. Szuka elementu pasującego do podanego identyfikatora, następnie
             znajduje jego nadrzędny kontener interaktywnego komponentu i wywołuje zdarzenie aktywujące jego przełącznik:
@@ -433,7 +436,8 @@ document.addEventListener('ed11yPop', e => {
 }); --></code></pre>
           <p>Ostatnia uwaga: niektóre motywy są po prostu niekompatybilne ze sprawdzaniem widoczności — np. kontener
             <code>&lt;main&gt;</code> ma wysokość 0px. Takie strony powinny wyłączyć całe sprawdzanie widoczności,
-            ustawiając <code>checkVisible</code> na false.</p>
+            ustawiając <code>checkVisible</code> na false.
+          </p>
 
         </section>
 
@@ -480,7 +484,7 @@ document.addEventListener('ed11yPop', e => {
     </div>
   </footer>
   <script src="/assets/bootstrap/js/bootstrap.bundle.min.js" class="astro-vvvwv3sm"></script>
-  <script src="/lang/i18n.js"></script>
+  <script src="/assets/lang/i18n.js"></script>
   <script src="/assets/theme.js"></script>
   <script src="/assets/prism/prism.js"></script>
 </body>

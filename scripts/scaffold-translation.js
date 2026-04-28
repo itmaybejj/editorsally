@@ -49,7 +49,7 @@ const trNav = i18n.nav[langCode];
 
 if (!trNav) {
   console.error(
-    `No nav strings found for "${langCode}" in lang/i18n.js.\n` +
+    `No nav strings found for "${langCode}" in assets/lang/i18n.js.\n` +
     `Add a nav entry for "${langCode}" before scaffolding.`
   );
   process.exit(1);

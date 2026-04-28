@@ -178,7 +178,8 @@
               <ul>
                 <li><strong>Eliminare</strong> i risultati dei test impostati come "Solo per sviluppatori".</li>
                 <li><strong>Eliminare</strong> i risultati sugli elementi al di fuori delle regioni di
-                  <strong><em>contenuto</em></strong> specificate, ad es.:<br><code>main, footer</code></li>
+                  <strong><em>contenuto</em></strong> specificate, ad es.:<br><code>main, footer</code>
+                </li>
                 <li><strong>Eliminare</strong> i risultati sugli elementi che corrispondono ai selettori da ignorare per
                   il <strong><em>contenuto</em></strong>.</li>
               </ul>
@@ -355,7 +356,8 @@
               <strong>i browser mettono in pausa le schede in background</strong>. Dovrai mantenere il computer acceso e
               attivo durante una scansione. Pianifica di aprire una nuova finestra per il crawler e lasciala come scheda
               in primo piano per quella finestra mentre lavora. Puoi continuare a lavorare in un'altra finestra. Il
-              crawler aggiornerà la sua stima dopo ogni gruppo di pagine.</p>
+              crawler aggiornerà la sua stima dopo ogni gruppo di pagine.
+            </p>
           </section>
           <section id="reports">
             <h3>Visualizzare i report</h3>
@@ -412,7 +414,8 @@
             automaticamente quando un'attivazione cadrebbe al di fuori della parte visibile della
             <strong>pagina.</strong> Indicare alla libreria che determinati contenitori nascondono l'overflow significa
             che tenterà anche di posizionare i suggerimenti per gli elementi in quei contenitori all'interno dei loro
-            bordi.</p>
+            bordi.
+          </p>
           <p>Alcuni temi hanno widget che attivano o disattivano la visibilità dei contenuti, come accordion, schede e
             presentazioni. I suggerimenti all'interno di questi elementi saranno anch'essi nascosti. Fornire un elenco
             di selettori per questi widget significa che Editoria11y si metterà in pausa brevemente quando un utente
@@ -453,7 +456,8 @@ function MY_MODULE_editoria11y_alter_config(array &$attach, CacheableMetadata $c
             <code>options</code>. Il modulo cerca una variabile JS globale <code>editoria11yOptionsOverride</code>. Se
             questa è impostata, passerà l'oggetto <code>options</code> a una funzione <code>editoria11yOptions</code>
             che hai fornito nel tuo modulo o tema. È ora possibile impostare qualsiasi <a
-              href="https://editorsally.ddev.site/en/install/#params">parametro della libreria</a>.</p>
+              href="https://editorsally.ddev.site/en/install/#params">parametro della libreria</a>.
+          </p>
           <pre class="language-javascript"><code><!--var editoria11yOptionsOverride = true;
 var editoria11yOptions = function(options) {
   // You now have access to the processed options object that will be passed to the library.
@@ -588,7 +592,7 @@ var editoria11yOptions = function(options) {
     </div>
   </footer>
   <script src="/assets/bootstrap/js/bootstrap.bundle.min.js" class="astro-vvvwv3sm"></script>
-  <script src="/lang/i18n.js"></script>
+  <script src="/assets/lang/i18n.js"></script>
   <script src="/assets/theme.js"></script>
   <script src="/assets/prism/prism.js"></script>
 </body>

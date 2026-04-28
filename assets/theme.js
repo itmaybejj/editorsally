@@ -1,7 +1,7 @@
 (() => {
   'use strict'
 
-  /* i18n configuration from lang/i18n.js (loaded before theme.js) */
+  /* i18n configuration from assets/lang/i18n.js (loaded before theme.js) */
   const i18n = (typeof defined_i18n !== 'undefined') ? defined_i18n : null;
   const validTranslations = i18n ? i18n.supportedLanguages : [];
   const validPaths = i18n ? i18n.canonicalPaths.concat(['codes']) : ['about', 'features', 'demo', 'contacts', 'install', 'drupal', 'license', 'codes'];
