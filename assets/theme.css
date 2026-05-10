@@ -358,7 +358,6 @@ label {
 
     .navbar .navbar-nav .nav-link.show {
         color: var(--bs-navbar-active-color);
-        box-shadow: -1px -1px var(--bs-navbar-color), 1px -1px var(--bs-navbar-color);
         border-radius: 0;
         background: white;
     }
@@ -367,6 +366,14 @@ label {
         color: var(--bs-body-bg);
         background-color: var(--bs-nav-pills-link-active-bg);
         border-radius: 0;
+    }
+    .navbar-expand-md .navbar-nav .dropdown-menu {
+        min-width: 12.25rem;
+        border-top: 0;
+        left: -2px;
+        border-radius: 0 0 5px 5px;
+        background: white;
+        box-shadow: 1px 4px 4px #0002;
     }
 }
 

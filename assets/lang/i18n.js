@@ -88,8 +88,8 @@ const defined_i18n = (() => {
    * Navigation strings per language.
    * `nav.en` is the canonical source. Each language needs:
    *   - label: object mapping English slugs to translated link text
-   *   - gettingStarted: translated "Getting Started" dropdown label
-   *   - wpLabel: translated "WordPress Plugin" text
+   *   - gettingStarted: translated "Get started" dropdown label
+   *   - wpLabel: translated "WordPress plugin" text
    *   - toggleNav: aria-label for the mobile menu toggle
    *   - close: aria-label for the close button
    */
@@ -100,8 +100,8 @@ const defined_i18n = (() => {
         features: 'Features',
         demo: 'Demo',
         contacts: 'Contacts',
-        install: 'Install & Configure',
-        drupal: 'Drupal Module',
+        install: 'Install & configure',
+        drupal: 'Drupal module',
         license: 'Support the project',
         'privacy-policy': 'Privacy Policy',
         'cookie-policy': 'Cookie Policy',
@@ -114,8 +114,8 @@ const defined_i18n = (() => {
         issues: 'Issues',
         contacts: 'Contacts',
       },
-      gettingStarted: 'Getting Started',
-      wpLabel: 'WordPress Plugin',
+      gettingStarted: 'Get started',
+      wpLabel: 'WordPress plugin',
       toggleNav: 'Toggle navigation',
       close: 'Close',
       perYear: '/year',

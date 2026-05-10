@@ -16,7 +16,7 @@
     return i18n ? i18n.buildPath(langCode, enSlug) : `/${langCode}/${enSlug}`;
   }
   function l(enSlug) {
-    return strings ? strings.label[enSlug] : { about: 'About', features: 'Features', demo: 'Demo', contacts: 'Contacts', install: 'Install &amp; Configure', drupal: 'Drupal Module', license: 'Support the project' }[enSlug];
+    return strings ? strings.label[enSlug] : { about: 'About', features: 'Features', demo: 'Demo', contacts: 'Contacts', install: 'Install &amp; configure', drupal: 'Drupal module', license: 'Support the project' }[enSlug];
   }
 
   const navTemplate = `
@@ -27,13 +27,13 @@
             <li class="nav-item"><a href="${p('demo')}" class="nav-link">${l('demo')}</a></li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                ${strings ? strings.gettingStarted : 'Getting Started'}
+                ${strings ? strings.gettingStarted : 'Get started'}
               </a>
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="${p('install')}">${l('install')}</a></li>
                 <li><a class="dropdown-item" href="${p('license')}">${l('license')}</a></li>
                 <li><a class="dropdown-item" href="${p('drupal')}">${l('drupal')}</a></li>
-                <li><a class="dropdown-item" href="https://wordpress.org/plugins/editoria11y-accessibility-checker/" title="External link">${strings ? strings.wpLabel : 'WordPress Plugin'} ${externalIcon}</a></li>
+                <li><a class="dropdown-item" href="https://wordpress.org/plugins/editoria11y-accessibility-checker/" title="External link">${strings ? strings.wpLabel : 'WordPress plugin'} ${externalIcon}</a></li>
                 <li><a class="dropdown-item" href="${p('contacts')}">${l('contacts')}</a></li>
 
     `;
