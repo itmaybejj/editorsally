@@ -102,7 +102,7 @@ const defined_i18n = (() => {
         contacts: 'Contacts',
         install: 'Install & Configure',
         drupal: 'Drupal Module',
-        license: 'Pricing & Contributions',
+        license: 'Support the project',
         'privacy-policy': 'Privacy Policy',
         'cookie-policy': 'Cookie Policy',
         'terms-of-use': 'Terms of Use',

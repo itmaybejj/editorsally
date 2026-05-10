@@ -16,7 +16,7 @@
     return i18n ? i18n.buildPath(langCode, enSlug) : `/${langCode}/${enSlug}`;
   }
   function l(enSlug) {
-    return strings ? strings.label[enSlug] : { about: 'About', features: 'Features', demo: 'Demo', contacts: 'Contacts', install: 'Install &amp; Configure', drupal: 'Drupal Module', license: 'Pricing &amp; Contributions' }[enSlug];
+    return strings ? strings.label[enSlug] : { about: 'About', features: 'Features', demo: 'Demo', contacts: 'Contacts', install: 'Install &amp; Configure', drupal: 'Drupal Module', license: 'Support the project' }[enSlug];
   }
 
   const navTemplate = `
