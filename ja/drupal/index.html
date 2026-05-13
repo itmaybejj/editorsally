@@ -46,15 +46,15 @@
     <div id="lang-picker"></div>
   </header>
   <main class="container col-lg-12 mx-auto py-5">
-    
+    <div class="row docs">
       <div class="col-12 col-md-5 col-lg-4 mb-5">
         <div id="on-this-page" class="list-group ms-2 ms-lg-5 position-sticky top-0 pt-3">
         </div>
       </div>
       <div class="col-12 col-md-7 col-lg-8 pt-3">
-        </div>
+        <div data-bs-spy="scroll" data-bs-target="#on-this-page" data-bs-smooth-scroll="true">
           <h1>Drupal 版 Editoria11y</h1>
-          
+          <section id="features">
             <h2 class="pt-3">コア機能</h2>
 
             <p class="fs-6">Drupal モジュールはチェッカーライブラリを編集バックエンドに接続し、レポート、ガバナンス、設定のための多数のサーバーサイドツールを追加します。</p>
@@ -75,11 +75,11 @@
                 にする（全ユーザー対象）ためのボタンが追加されます。繰り返し発生するアラートには、ページ全体またはサイト全体に対するアクションも用意されます。</figcaption>
             </figure>
 
-            
+            <figure class="figure my-4 row">
               <div class="col-lg-8">
                 <img loading="lazy" src="/assets/images/3x-drupal-custom-tests.png" class="rounded border figure-img img-fluid" alt="ヒントのタイトルと内容、要素セレクターと除外対象のフィールドが表示されたカスタムテストビルダーのインターフェース。" />
               </div>
-              
+              <figcaption class="figure-caption col-lg-4">
                 <p class="mb-2">CSA サブモジュールでは以下が追加されます：</p>
                 <ul class="ps-3">
                   <li><strong>カスタムテストビルダー</strong></li>
@@ -89,8 +89,8 @@
                   <li>読みやすさの分析</li>
                   <li>開発者／編集者向けの分割設定</li>
                 </ul>
-              
-            
+              </figcaption>
+            </figure>
 
             <figure class="figure">
               <img loading="lazy" class="figure-img img-fluid rounded border" src="/assets/images/3x-dashboard.png" height="765" width="1600" alt="最近の問題と最も問題が多いページを表示するレポートダッシュボード。" />
@@ -98,7 +98,7 @@
               </figcaption>
             </figure>
 
-          
+          </section>
           <h2>インストールと主要なセットアップ手順</h2>
           <p>Drupal.org の<a href="https://www.drupal.org/project/editoria11y/">バンドルインストーラー</a>には複数のモジュールが含まれています：</p>
           <ul>
@@ -156,7 +156,7 @@
                 </li>
                 <li><strong><em>コンテンツ</em></strong>の無視セレクターに一致する要素の結果を<strong>除外</strong>する。</li>
               </ul>
-              2回目の「収集」フェーズはありません。開発者のページ領域にはコンテンツ領域を含める必要があります。
+              <span data-translate>2回目の「収集」フェーズはありません。開発者のページ領域にはコンテンツ領域を含める必要があります。</span>
             </li>
             <li>設定が自動開き設定と一致する場合、パネルを開きアラートを表示する。</li>
           </ol>
@@ -473,11 +473,10 @@ var editoria11yOptions = function(options) {
             <p>多くの <a href="../license/">CSA 貢献プラン</a>には年次のチェックインが含まれており、セットアップや設定に関する直接のサポートを受けることもできます。</p>
           </section>
 
-        
-      
-    
-  
-</main>
+        </div>
+      </div>
+    </div>
+  </main>
   <footer class="container col-lg-12 mx-auto pt-3 text-body-secondary text-center text-md-start">
     <div class="container">
       <div class="footer-nav text-center">

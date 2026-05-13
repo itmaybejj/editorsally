@@ -46,15 +46,15 @@
     <div id="lang-picker"></div>
   </header>
   <main class="container col-lg-12 mx-auto py-5">
-    
+    <div class="row docs">
       <div class="col-12 col-md-5 col-lg-4 mb-5">
         <div id="on-this-page" class="list-group ms-2 ms-lg-5 position-sticky top-0 pt-3">
         </div>
       </div>
       <div class="col-12 col-md-7 col-lg-8 pt-3">
-        </div>
+        <div data-bs-spy="scroll" data-bs-target="#on-this-page" data-bs-smooth-scroll="true">
           <h1>Editoria11y para Drupal</h1>
-          
+          <section id="features">
             <h2 class="pt-3">Funcionalidades principais</h2>
 
             <p class="fs-6">O módulo Drupal conecta a biblioteca do verificador ao backend editorial e adiciona diversas
@@ -78,11 +78,11 @@
               </figcaption>
             </figure>
 
-            
+            <figure class="figure my-4 row">
               <div class="col-lg-8">
                 <img loading="lazy" src="/assets/images/3x-drupal-custom-tests.png" class="rounded border figure-img img-fluid" alt="Interface do construtor de testes personalizados mostrando campos para título e conteúdo da dica, além de seletores de elementos e exclusões." />
               </div>
-              
+              <figcaption class="figure-caption col-lg-4">
                 <p class="mb-2">O submódulo CSA adiciona:</p>
                 <ul class="ps-3">
                   <li><strong>Um construtor de testes personalizados</strong></li>
@@ -92,8 +92,8 @@
                   <li>Análise de legibilidade</li>
                   <li>Configurações separadas para desenvolvedores/editores</li>
                 </ul>
-              
-            
+              </figcaption>
+            </figure>
 
             <figure class="figure">
               <img loading="lazy" class="figure-img img-fluid rounded border" src="/assets/images/3x-dashboard.png" height="765" width="1600" alt="Painel de relatórios mostrando problemas recentes e páginas com mais ocorrências." />
@@ -101,7 +101,7 @@
                 exportáveis de alertas e dispensas.</figcaption>
             </figure>
 
-          
+          </section>
           <h2>Instalação e etapas essenciais de configuração</h2>
           <p>O <a href="https://www.drupal.org/project/editoria11y/">instalador integrado</a> no Drupal.org inclui
             vários módulos:</p>
@@ -175,8 +175,8 @@
                   <strong><em>conteúdo</em></strong>.
                 </li>
               </ul>
-              Observe que não há uma segunda fase de "coleta". As regiões de página do desenvolvedor devem incluir as
-              regiões de conteúdo.
+              <span data-translate>Observe que não há uma segunda fase de "coleta". As regiões de página do desenvolvedor devem incluir as
+              regiões de conteúdo.</span>
             </li>
             <li>Abrir o painel e exibir alertas se a configuração corresponder a uma configuração de abertura
               automática.</li>
@@ -533,11 +533,10 @@ var editoria11yOptions = function(options) {
               incluir assistência direta com instalação e configuração</p>
           </section>
 
-        
-      
-    
-  
-</main>
+        </div>
+      </div>
+    </div>
+  </main>
   <footer class="container col-lg-12 mx-auto pt-3 text-body-secondary text-center text-md-start">
     <div class="container">
       <div class="footer-nav text-center">

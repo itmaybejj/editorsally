@@ -46,15 +46,15 @@
     <div id="lang-picker"></div>
   </header>
   <main class="container col-lg-12 mx-auto py-5">
-    
+    <div class="row docs">
       <div class="col-12 col-md-5 col-lg-4 mb-5">
         <div id="on-this-page" class="list-group ms-2 ms-lg-5 position-sticky top-0 pt-3">
         </div>
       </div>
       <div class="col-12 col-md-7 col-lg-8 pt-3">
-        </div>
+        <div data-bs-spy="scroll" data-bs-target="#on-this-page" data-bs-smooth-scroll="true">
           <h1>Drupal용 Editoria11y</h1>
-          
+          <section id="features">
             <h2 class="pt-3">핵심 기능</h2>
 
             <p class="fs-6">Drupal 모듈은 검사기 라이브러리를 편집 백엔드와 연결하고,
@@ -76,11 +76,11 @@
               </figcaption>
             </figure>
 
-            
+            <figure class="figure my-4 row">
               <div class="col-lg-8">
                 <img loading="lazy" src="/assets/images/3x-drupal-custom-tests.png" class="rounded border figure-img img-fluid" alt="팁 제목 및 콘텐츠, 요소 선택자 및 제외 항목의 필드를 보여주는 사용자 정의 테스트 빌더 인터페이스." />
               </div>
-              
+              <figcaption class="figure-caption col-lg-4">
                 <p class="mb-2">CSA 서브모듈에 추가되는 기능:</p>
                 <ul class="ps-3">
                   <li><strong>사용자 정의 테스트 빌더</strong></li>
@@ -90,8 +90,8 @@
                   <li>가독성 분석</li>
                   <li>개발자/편집자용 분리 구성</li>
                 </ul>
-              
-            
+              </figcaption>
+            </figure>
 
             <figure class="figure">
               <img loading="lazy" class="figure-img img-fluid rounded border" src="/assets/images/3x-dashboard.png" height="765" width="1600" alt="최근 문제와 문제가 가장 많은 페이지를 보여주는 보고 대시보드." />
@@ -99,7 +99,7 @@
                 필터링 가능하고 내보낼 수 있는 보고서를 제공합니다.</figcaption>
             </figure>
 
-          
+          </section>
           <h2>설치 및 주요 설정 단계</h2>
           <p>Drupal.org의 <a href="https://www.drupal.org/project/editoria11y/">번들 설치 프로그램</a>에는
             여러 모듈이 포함되어 있습니다:</p>
@@ -159,8 +159,8 @@
                   예:<br/><code>main, footer</code></li>
                 <li><strong>제외</strong>: <strong><em>콘텐츠</em></strong> 무시 선택자와 일치하는 요소에 대한 결과 제외.</li>
               </ul>
-              Note that there is not a second "gather" phase. The developer page regions must include the content
-              regions.
+              <span data-translate>Note that there is not a second "gather" phase. The developer page regions must include the content
+              regions.</span>
             </li>
             <li>자동 열기 설정과 구성이 일치하면 패널을 열고 알림을 표시합니다.</li>
           </ol>
@@ -459,11 +459,10 @@ var editoria11yOptions = function(options) {
             <p><a href="/ko/license/">CSA 기여 등급</a>의 대부분은 연간 체크인을 포함하며, 설정 및 구성에 대한 직접 지원이 포함될 수 있습니다</p>
           </section>
 
-        
-      
-    
-  
-</main>
+        </div>
+      </div>
+    </div>
+  </main>
   <footer class="container col-lg-12 mx-auto pt-3 text-body-secondary text-center text-md-start">
     <div class="container">
       <div class="footer-nav text-center">

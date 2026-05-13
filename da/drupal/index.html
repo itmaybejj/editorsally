@@ -46,15 +46,15 @@
     <div id="lang-picker"></div>
   </header>
   <main class="container col-lg-12 mx-auto py-5">
-    
+    <div class="row docs">
       <div class="col-12 col-md-5 col-lg-4 mb-5">
         <div id="on-this-page" class="list-group ms-2 ms-lg-5 position-sticky top-0 pt-3">
         </div>
       </div>
       <div class="col-12 col-md-7 col-lg-8 pt-3">
-        </div>
+        <div data-bs-spy="scroll" data-bs-target="#on-this-page" data-bs-smooth-scroll="true">
           <h1>Editoria11y til Drupal</h1>
-          
+          <section id="features">
             <h2 class="pt-3">Kernefunktioner</h2>
 
             <p class="fs-6">Drupal-modulet forbinder tjekkerbiblioteket med den redaktionelle backend og tilf&oslash;jer
@@ -78,11 +78,11 @@
               </figcaption>
             </figure>
 
-            
+            <figure class="figure my-4 row">
               <div class="col-lg-8">
                 <img loading="lazy" src="/assets/images/3x-drupal-custom-tests.png" class="rounded border figure-img img-fluid" alt="Brugerdefineret testbygger-gr&aelig;nseflade med felter til tip-titel og -indhold samt element-selektorer og udelukkelser." />
               </div>
-              
+              <figcaption class="figure-caption col-lg-4">
                 <p class="mb-2">CSA-undermodulet tilf&oslash;jer:</p>
                 <ul class="ps-3">
                   <li><strong>En brugerdefineret testbygger</strong></li>
@@ -92,8 +92,8 @@
                   <li>L&aelig;sbarhedsanalyse</li>
                   <li>Opdelt konfiguration for udviklere/redakt&oslash;rer</li>
                 </ul>
-              
-            
+              </figcaption>
+            </figure>
 
             <figure class="figure">
               <img loading="lazy" class="figure-img img-fluid rounded border" src="/assets/images/3x-dashboard.png" height="765" width="1600" alt="Rapporteringsdashboard der viser seneste problemer og sider med flest problemer." />
@@ -101,7 +101,7 @@
                 eksporterbare rapporter over advarsler og afvisninger.</figcaption>
             </figure>
 
-          
+          </section>
           <h2>Installation og vigtige ops&aelig;tningstrin</h2>
           <p>Det <a href="https://www.drupal.org/project/editoria11y/">medf&oslash;lgende installationsprogram</a>
             p&aring; Drupal.org indeholder flere moduler:</p>
@@ -175,8 +175,8 @@
                   <strong><em>indholds</em></strong>ignorer-selektorer.
                 </li>
               </ul>
-              Bem&aelig;rk at der ikke er en anden &quot;indsamlings&quot;-fase. Udviklerens sideomr&aring;der skal
-              inkludere indholdsomr&aring;derne.
+              <span data-translate>Bem&aelig;rk at der ikke er en anden &quot;indsamlings&quot;-fase. Udviklerens sideomr&aring;der skal
+              inkludere indholdsomr&aring;derne.</span>
             </li>
             <li>&Aring;bn panelet og tegn advarsler, hvis konfigurationen matcher en automatisk
               &aring;bning-indstilling.</li>
@@ -536,11 +536,10 @@ var editoria11yOptions = function(options) {
               omfatte direkte hj&aelig;lp med ops&aelig;tning og konfiguration</p>
           </section>
 
-        
-      
-    
-  
-</main>
+        </div>
+      </div>
+    </div>
+  </main>
   <footer class="container col-lg-12 mx-auto pt-3 text-body-secondary text-center text-md-start">
     <div class="container">
       <div class="footer-nav text-center">

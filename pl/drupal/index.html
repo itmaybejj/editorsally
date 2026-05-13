@@ -46,15 +46,15 @@
     <div id="lang-picker"></div>
   </header>
   <main class="container col-lg-12 mx-auto py-5">
-    
+    <div class="row docs">
       <div class="col-12 col-md-5 col-lg-4 mb-5">
         <div id="on-this-page" class="list-group ms-2 ms-lg-5 position-sticky top-0 pt-3">
         </div>
       </div>
       <div class="col-12 col-md-7 col-lg-8 pt-3">
-        </div>
+        <div data-bs-spy="scroll" data-bs-target="#on-this-page" data-bs-smooth-scroll="true">
           <h1>Editoria11y dla Drupala</h1>
-          
+          <section id="features">
             <h2 class="pt-3">Podstawowe funkcje</h2>
 
             <p class="fs-6">Moduł Drupal łączy bibliotekę narzędzia sprawdzającego z zapleczem redakcyjnym i dodaje
@@ -79,11 +79,11 @@
               </figcaption>
             </figure>
 
-            
+            <figure class="figure my-4 row">
               <div class="col-lg-8">
                 <img loading="lazy" src="/assets/images/3x-drupal-custom-tests.png" class="rounded border figure-img img-fluid" alt="Interfejs kreatora własnych testów z polami na tytuł i treść podpowiedzi, a także selektory elementów i wykluczenia." />
               </div>
-              
+              <figcaption class="figure-caption col-lg-4">
                 <p class="mb-2">Submoduł CSA dodaje:</p>
                 <ul class="ps-3">
                   <li><strong>Kreator własnych testów</strong></li>
@@ -93,8 +93,8 @@
                   <li>Analizę czytelności</li>
                   <li>Rozdzielone konfiguracje dla deweloperów/redaktorów</li>
                 </ul>
-              
-            
+              </figcaption>
+            </figure>
 
             <figure class="figure">
               <img loading="lazy" class="figure-img img-fluid rounded border" src="/assets/images/3x-dashboard.png" height="765" width="1600" alt="Panel raportowania pokazujący ostatnie problemy i strony z największą liczbą problemów." />
@@ -102,7 +102,7 @@
                 raporty powiadomień i odrzuceń.</figcaption>
             </figure>
 
-          
+          </section>
           <h2>Instalacja i kluczowe kroki konfiguracji</h2>
           <p><a href="https://www.drupal.org/project/editoria11y/">Zbiorczy instalator</a> dostępny na Drupal.org
             zawiera kilka modułów:</p>
@@ -177,8 +177,8 @@
                   <strong><em>treści</em></strong>.
                 </li>
               </ul>
-              Zwróć uwagę, że nie ma drugiej fazy „zbierania". Regiony stron deweloperskich muszą zawierać regiony
-              treści.
+              <span data-translate>Zwróć uwagę, że nie ma drugiej fazy „zbierania". Regiony stron deweloperskich muszą zawierać regiony
+              treści.</span>
             </li>
             <li>Otwórz panel i wyświetl powiadomienia, jeśli konfiguracja pasuje do ustawienia automatycznego
               otwierania.</li>
@@ -534,11 +534,10 @@ var editoria11yOptions = function(options) {
               zawierać bezpośrednią pomoc przy instalacji i konfiguracji</p>
           </section>
 
-        
-      
-    
-  
-</main>
+        </div>
+      </div>
+    </div>
+  </main>
   <footer class="container col-lg-12 mx-auto pt-3 text-body-secondary text-center text-md-start">
     <div class="container">
       <div class="footer-nav text-center">

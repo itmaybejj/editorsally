@@ -46,15 +46,15 @@
     <div id="lang-picker"></div>
   </header>
   <main class="container col-lg-12 mx-auto py-5">
-    
+    <div class="row docs">
       <div class="col-12 col-md-5 col-lg-4 mb-5">
         <div id="on-this-page" class="list-group ms-2 ms-lg-5 position-sticky top-0 pt-3">
         </div>
       </div>
       <div class="col-12 col-md-7 col-lg-8 pt-3">
-        </div>
+        <div data-bs-spy="scroll" data-bs-target="#on-this-page" data-bs-smooth-scroll="true">
           <h1>Editoria11y für Drupal</h1>
-          
+          <section id="features">
             <h2 class="pt-3">Kernfunktionen</h2>
 
             <p class="fs-6">Das Drupal-Modul verbindet die Prüfbibliothek mit dem redaktionellen Backend
@@ -78,11 +78,11 @@
               </figcaption>
             </figure>
 
-            
+            <figure class="figure my-4 row">
               <div class="col-lg-8">
                 <img loading="lazy" src="/assets/images/3x-drupal-custom-tests.png" class="rounded border figure-img img-fluid" alt="Oberfläche des benutzerdefinierten Test-Builders mit Feldern für Hinweistitel und -inhalt sowie Elementselektoren und Ausschlüssen." />
               </div>
-              
+              <figcaption class="figure-caption col-lg-4">
                 <p class="mb-2">Das CSA-Untermodul ergänzt:</p>
                 <ul class="ps-3">
                   <li><strong>Einen Builder für eigene Tests</strong></li>
@@ -92,8 +92,8 @@
                   <li>Lesbarkeitsanalyse</li>
                   <li>Getrennte Konfigurationen für Entwickler/Editoren</li>
                 </ul>
-              
-            
+              </figcaption>
+            </figure>
 
             <figure class="figure">
               <img loading="lazy" class="figure-img img-fluid rounded border" src="/assets/images/3x-dashboard.png" height="765" width="1600" alt="Berichtsdashboard mit aktuellen Problemen und Seiten mit den meisten Problemen." />
@@ -101,7 +101,7 @@
                 exportierbare Berichte zu Hinweisen und Ausblendungen.</figcaption>
             </figure>
 
-          
+          </section>
           <h2>Installation und wichtige Einrichtungsschritte</h2>
           <p>Der <a href="https://www.drupal.org/project/editoria11y/">gebündelte Installer</a> auf Drupal.org enthält
             mehrere Module:</p>
@@ -177,8 +177,8 @@
                   <strong><em>Inhalts</em></strong>-Ignore-Selektoren übereinstimmen.
                 </li>
               </ul>
-              Beachten Sie, dass es keine zweite „Sammel"-Phase gibt. Die Seitenbereiche für Entwickler müssen die
-              Inhaltsbereiche einschließen.
+              <span data-translate>Beachten Sie, dass es keine zweite „Sammel"-Phase gibt. Die Seitenbereiche für Entwickler müssen die
+              Inhaltsbereiche einschließen.</span>
             </li>
             <li>Panel öffnen und Hinweise zeichnen, wenn die Konfiguration einer Auto-Öffnen-Einstellung entspricht.
             </li>
@@ -538,11 +538,10 @@ var editoria11yOptions = function(options) {
               auch direkte Unterstützung bei Einrichtung und Konfiguration umfassen kann.</p>
           </section>
 
-        
-      
-    
-  
-</main>
+        </div>
+      </div>
+    </div>
+  </main>
   <footer class="container col-lg-12 mx-auto pt-3 text-body-secondary text-center text-md-start">
     <div class="container">
       <div class="footer-nav text-center">

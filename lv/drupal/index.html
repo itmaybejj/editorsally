@@ -46,15 +46,15 @@
     <div id="lang-picker"></div>
   </header>
   <main class="container col-lg-12 mx-auto py-5">
-    
+    <div class="row docs">
       <div class="col-12 col-md-5 col-lg-4 mb-5">
         <div id="on-this-page" class="list-group ms-2 ms-lg-5 position-sticky top-0 pt-3">
         </div>
       </div>
       <div class="col-12 col-md-7 col-lg-8 pt-3">
-        </div>
+        <div data-bs-spy="scroll" data-bs-target="#on-this-page" data-bs-smooth-scroll="true">
           <h1>Editoria11y Drupal modulim</h1>
-          
+          <section id="features">
             <h2 class="pt-3">Pamata funkcijas</h2>
 
             <p class="fs-6">Drupal modulis savieno pārbaudītāja bibliotēku ar redakcijas aizmuguri
@@ -78,11 +78,11 @@
               </figcaption>
             </figure>
 
-            
+            <figure class="figure my-4 row">
               <div class="col-lg-8">
                 <img loading="lazy" src="/assets/images/3x-drupal-custom-tests.png" class="rounded border figure-img img-fluid" alt="Pielāgotu pārbaužu veidotāja saskarne ar laukiem padoma virsrakstam un saturam, kā arī elementu selektoriem un izņēmumiem." />
               </div>
-              
+              <figcaption class="figure-caption col-lg-4">
                 <p class="mb-2">CSA apakšmodulis pievieno:</p>
                 <ul class="ps-3">
                   <li><strong>Pielāgotu pārbaužu veidotājs</strong></li>
@@ -92,8 +92,8 @@
                   <li>Lasāmības analīze</li>
                   <li>Sadalītā konfigurācija izstrādātājiem/redaktoriem</li>
                 </ul>
-              
-            
+              </figcaption>
+            </figure>
 
             <figure class="figure">
               <img loading="lazy" class="figure-img img-fluid rounded border" src="/assets/images/3x-dashboard.png" height="765" width="1600" alt="Atskaišu informācijas panelis ar jaunākajām problēmām un lapām ar visvairāk problēmām." />
@@ -101,7 +101,7 @@
                 eksportējamas brīdinājumu un noraidījumu atskaites.</figcaption>
             </figure>
 
-          
+          </section>
           <h2>Instalācija un galvenie iestatīšanas soļi</h2>
           <p><a href="https://www.drupal.org/project/editoria11y/">Komplektētais instalētājs</a> Drupal.org vietnē ietver
             vairākus moduļus:</p>
@@ -165,8 +165,8 @@
                 <li><strong>Noņemt</strong> rezultātus par elementiem, kas atbilst <strong><em>satura</em></strong> ignorēšanas
                   selektoriem.</li>
               </ul>
-              Note that there is not a second "gather" phase. The developer page regions must include the content
-              regions.
+              <span data-translate>Note that there is not a second "gather" phase. The developer page regions must include the content
+              regions.</span>
             </li>
             <li>Atvērt paneli un parādīt brīdinājumus, ja konfigurācija atbilst automātiskās atvēršanas iestatījumam.</li>
           </ol>
@@ -477,11 +477,10 @@ var editoria11yOptions = function(options) {
               ar iestatīšanu un konfigurāciju</p>
           </section>
 
-        
-      
-    
-  
-</main>
+        </div>
+      </div>
+    </div>
+  </main>
   <footer class="container col-lg-12 mx-auto pt-3 text-body-secondary text-center text-md-start">
     <div class="container">
       <div class="footer-nav text-center">

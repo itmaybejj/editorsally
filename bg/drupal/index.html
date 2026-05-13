@@ -46,15 +46,15 @@
     <div id="lang-picker"></div>
   </header>
   <main class="container col-lg-12 mx-auto py-5">
-    
+    <div class="row docs">
       <div class="col-12 col-md-5 col-lg-4 mb-5">
         <div id="on-this-page" class="list-group ms-2 ms-lg-5 position-sticky top-0 pt-3">
         </div>
       </div>
       <div class="col-12 col-md-7 col-lg-8 pt-3">
-        </div>
+        <div data-bs-spy="scroll" data-bs-target="#on-this-page" data-bs-smooth-scroll="true">
           <h1>Editoria11y за Drupal</h1>
-          
+          <section id="features">
             <h2 class="pt-3">Основни функции</h2>
 
             <p class="fs-6">Drupal модулът свързва библиотеката на проверката с редакционния бекенд и добавя много сървърни инструменти за отчитане, управление и конфигурация</p>
@@ -74,11 +74,11 @@
               </figcaption>
             </figure>
 
-            
+            <figure class="figure my-4 row">
               <div class="col-lg-8">
                 <img loading="lazy" src="/assets/images/3x-drupal-custom-tests.png" class="rounded border figure-img img-fluid" alt="Интерфейс на конструктора за персонализирани тестове с полета за заглавие и съдържание на подсказка, както и за селектори и изключения на елементи." />
               </div>
-              
+              <figcaption class="figure-caption col-lg-4">
                 <p class="mb-2">Подмодулът CSA добавя:</p>
                 <ul class="ps-3">
                   <li><strong>Конструктор на персонализирани тестове</strong></li>
@@ -88,15 +88,15 @@
                   <li>Анализ на четимостта</li>
                   <li>Разделени конфигурации за разработчици/редактори</li>
                 </ul>
-              
-            
+              </figcaption>
+            </figure>
 
             <figure class="figure">
               <img loading="lazy" class="figure-img img-fluid rounded border" src="/assets/images/3x-dashboard.png" height="765" width="1600" alt="Табло за отчети, показващо последни проблеми и страници с най-много проблеми." />
               <figcaption class="figure-caption p-3 pt-2">Табло за целия сайт с отчети за сигнали и скрити известия, поддържащи филтриране и експорт.</figcaption>
             </figure>
 
-          
+          </section>
           <h2>Инсталиране и основни стъпки за настройка</h2>
           <p><a href="https://www.drupal.org/project/editoria11y/">Пакетният инсталатор</a> в Drupal.org включва няколко модула:</p>
           <ul>
@@ -155,7 +155,7 @@
                   напр.:<br/><code>main, footer</code></li>
                 <li><strong>Изключване</strong> на резултати за елементи, съответстващи на игнорираните селектори за <strong><em>съдържание</em></strong>.</li>
               </ul>
-              Обърнете внимание, че няма втора фаза на „събиране". Областите за разработчици трябва да включват областите за съдържание.
+              <span data-translate>Обърнете внимание, че няма втора фаза на „събиране". Областите за разработчици трябва да включват областите за съдържание.</span>
             </li>
             <li>Отваряне на панела и показване на сигнали, ако конфигурацията съответства на настройка за автоматично отваряне.</li>
           </ol>
@@ -453,11 +453,10 @@ var editoria11yOptions = function(options) {
             <p>Повечето от <a href="/bg/license/">нивата на принос в CSA</a> включват годишна консултация, в т.ч. пряка помощ при инсталиране и конфигурация</p>
           </section>
 
-        
-      
-    
-  
-</main>
+        </div>
+      </div>
+    </div>
+  </main>
   <footer class="container col-lg-12 mx-auto pt-3 text-body-secondary text-center text-md-start">
     <div class="container">
       <div class="footer-nav text-center">

@@ -46,15 +46,15 @@
     <div id="lang-picker"></div>
   </header>
   <main class="container col-lg-12 mx-auto py-5">
-    
+    <div class="row docs">
       <div class="col-12 col-md-5 col-lg-4 mb-5">
         <div id="on-this-page" class="list-group ms-2 ms-lg-5 position-sticky top-0 pt-3">
         </div>
       </div>
       <div class="col-12 col-md-7 col-lg-8 pt-3">
-        </div>
+        <div data-bs-spy="scroll" data-bs-target="#on-this-page" data-bs-smooth-scroll="true">
           <h1>Editoria11y Drupal sistemai</h1>
-          
+          <section id="features">
             <h2 class="pt-3">Pagrindinės funkcijos</h2>
 
             <p class="fs-6">Drupal modulis sujungia tikrintuvo biblioteką su redakcijos sistema
@@ -78,11 +78,11 @@
               </figcaption>
             </figure>
 
-            
+            <figure class="figure my-4 row">
               <div class="col-lg-8">
                 <img loading="lazy" src="/assets/images/3x-drupal-custom-tests.png" class="rounded border figure-img img-fluid" alt="Pasirinktinių testų kūrimo sąsaja su laukais patarimo pavadinimui ir turiniui, taip pat elementų selektoriams ir išimtims." />
               </div>
-              
+              <figcaption class="figure-caption col-lg-4">
                 <p class="mb-2">CSA submodulis prideda:</p>
                 <ul class="ps-3">
                   <li><strong>Pasirinktinių testų kūrėjas</strong></li>
@@ -92,15 +92,15 @@
                   <li>Skaitomumo analizė</li>
                   <li>Padalinta konfigūracija kūrėjams/redaktoriams</li>
                 </ul>
-              
-            
+              </figcaption>
+            </figure>
 
             <figure class="figure">
               <img loading="lazy" class="figure-img img-fluid rounded border" src="/assets/images/3x-dashboard.png" height="765" width="1600" alt="Ataskaitų prietaisų skydelis, rodantis naujausias problemas ir puslapius su daugiausiai problemų." />
               <figcaption class="figure-caption p-3 pt-2">Visos svetainės prietaisų skydelis rodo filtruojamas ir eksportuojamas įspėjimų bei atsisakymų ataskaitas.</figcaption>
             </figure>
 
-          
+          </section>
           <h2>Diegimas ir pagrindiniai sąrankos žingsniai</h2>
           <p><a href="https://www.drupal.org/project/editoria11y/">Komplektinė diegimo programa</a> Drupal.org svetainėje apima kelis modulius:</p>
           <ul>
@@ -160,7 +160,7 @@
                 <li><strong>Pašalinti</strong> rezultatus iš elementų, atitinkančių <strong><em>turinio</em></strong> ignoravimo
                   selektorius.</li>
               </ul>
-              Atkreipkite dėmesį, kad antros „rinkimo" fazės nėra. Kūrėjų puslapio sritys turi apimti turinio sritis.
+              <span data-translate>Atkreipkite dėmesį, kad antros „rinkimo" fazės nėra. Kūrėjų puslapio sritys turi apimti turinio sritis.</span>
             </li>
             <li>Atidaryti skydelį ir piešti įspėjimus, jei konfigūracija atitinka automatinio atidarymo nustatymą.</li>
           </ol>
@@ -462,11 +462,10 @@ var editoria11yOptions = function(options) {
               diegiant ir konfigūruojant</p>
           </section>
 
-        
-      
-    
-  
-</main>
+        </div>
+      </div>
+    </div>
+  </main>
   <footer class="container col-lg-12 mx-auto pt-3 text-body-secondary text-center text-md-start">
     <div class="container">
       <div class="footer-nav text-center">

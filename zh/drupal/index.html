@@ -46,15 +46,15 @@
     <div id="lang-picker"></div>
   </header>
   <main class="container col-lg-12 mx-auto py-5">
-    
+    <div class="row docs">
       <div class="col-12 col-md-5 col-lg-4 mb-5">
         <div id="on-this-page" class="list-group ms-2 ms-lg-5 position-sticky top-0 pt-3">
         </div>
       </div>
       <div class="col-12 col-md-7 col-lg-8 pt-3">
-        </div>
+        <div data-bs-spy="scroll" data-bs-target="#on-this-page" data-bs-smooth-scroll="true">
           <h1>Editoria11y for Drupal</h1>
-          
+          <section id="features">
             <h2 class="pt-3">核心功能</h2>
 
             <p class="fs-6">Drupal 模块将检查器库与编辑后台对接，并增加了许多用于报告、治理与配置的服务器端工具。</p>
@@ -75,11 +75,11 @@
               </figcaption>
             </figure>
 
-            
+            <figure class="figure my-4 row">
               <div class="col-lg-8">
                 <img loading="lazy" src="/assets/images/3x-drupal-custom-tests.png" class="rounded border figure-img img-fluid" alt="自定义测试构建器界面，显示提示标题与内容字段，以及元素选择器与排除项。" />
               </div>
-              
+              <figcaption class="figure-caption col-lg-4">
                 <p class="mb-2">CSA 子模块新增：</p>
                 <ul class="ps-3">
                   <li><strong>自定义测试构建器</strong></li>
@@ -89,15 +89,15 @@
                   <li>可读性分析</li>
                   <li>开发者/编辑分离配置</li>
                 </ul>
-              
-            
+              </figcaption>
+            </figure>
 
             <figure class="figure">
               <img loading="lazy" class="figure-img img-fluid rounded border" src="/assets/images/3x-dashboard.png" height="765" width="1600" alt="报告仪表板，显示最近的问题及问题最多的页面。" />
               <figcaption class="figure-caption p-3 pt-2">全站仪表板提供可筛选、可导出的提示与忽略记录报告。</figcaption>
             </figure>
 
-          
+          </section>
           <h2>安装与关键配置步骤</h2>
           <p>Drupal.org 上的<a href="https://www.drupal.org/project/editoria11y/">捆绑安装包</a>包含以下几个模块：</p>
           <ul>
@@ -152,7 +152,7 @@
                 <li><strong>排除</strong>指定<strong><em>内容</em></strong>区域之外的元素结果，例如：<br/><code>main, footer</code></li>
                 <li><strong>排除</strong>匹配<strong><em>内容</em></strong>忽略选择器的元素结果。</li>
               </ul>
-              请注意，不存在第二个"收集"阶段。开发者页面区域必须包含内容区域。
+              <span data-translate>请注意，不存在第二个"收集"阶段。开发者页面区域必须包含内容区域。</span>
             </li>
             <li>若配置匹配自动展开设置，则打开面板并显示提示。</li>
           </ol>
@@ -459,11 +459,10 @@ var editoria11yOptions = function(options) {
             <p>大多数 <a href="../license/">CSA 贡献级别</a>均包含年度例会，可涵盖安装与配置方面的直接协助。</p>
           </section>
 
-        
-      
-    
-  
-</main>
+        </div>
+      </div>
+    </div>
+  </main>
   <footer class="container col-lg-12 mx-auto pt-3 text-body-secondary text-center text-md-start">
     <div class="container">
       <div class="footer-nav text-center">
