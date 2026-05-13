@@ -1,0 +1,478 @@
+<main class="container col-lg-12 mx-auto py-5">
+    <div class="row docs">
+      <div class="col-12 col-md-5 col-lg-4 mb-5">
+        <div id="on-this-page" class="list-group ms-2 ms-lg-5 position-sticky top-0 pt-3">
+        </div>
+      </div>
+      <div class="col-12 col-md-7 col-lg-8 pt-3">
+        <div data-bs-spy="scroll" data-bs-target="#on-this-page" data-bs-smooth-scroll="true">
+          <h1 data-i18n-id="s-e367">Editoria11y for Drupal</h1>
+          <section id="features">
+            <h2 class="pt-3" data-i18n-id="s-1dcf">Core features</h2>
+
+            <p class="fs-6" data-i18n-id="s-a8c0">The Drupal module connects the checker library to the editorial backend,
+              and adds many server-side tools for reporting, governance and configuration</p>
+
+            <figure class="figure my-4 row">
+              <div class="col-lg-8">
+                <img loading="lazy" src="/assets/images/3x-editing.png" class="rounded border figure-img img-fluid" height="1088" width="2237" alt="Drupal editor with inline tips" data-i18n-id="s-ee36" />
+              </div>
+              <figcaption class="figure-caption col-lg-4" data-i18n-id="s-8e69">Issues are detected both on-load in the frontend
+                and
+                as-you-type in CKEditor and Gutenberg.</figcaption>
+            </figure>
+
+            <figure class="figure my-4 row">
+              <div class="col-lg-8">
+                <img loading="lazy" src="/assets/images/3x-generic-tip.png" class="rounded border figure-img img-fluid" height="798" width="1278" alt="Tip indicated a link is only named click here." data-i18n-id="s-1639" />
+              </div>
+              <figcaption class="figure-caption col-lg-4" data-i18n-id="s-9881">Tooltips gain buttons
+                to jump into editor, ignore the alert (for the active user) or mark it OK (for all
+                users). Repeated alerts offer page-wide or site-wide actions.
+              </figcaption>
+            </figure>
+
+            <figure class="figure my-4 row">
+              <div class="col-lg-8">
+                <img loading="lazy" src="/assets/images/3x-drupal-custom-tests.png" class="rounded border figure-img img-fluid" alt="Custom test builder interface showing fields for tip title and content, as well as element selectors and exclusions." data-i18n-id="s-0830" />
+              </div>
+              <figcaption class="figure-caption col-lg-4">
+                <p class="mb-2" data-i18n-id="s-37bf">The CSA submodule adds:</p>
+                <ul class="ps-3">
+                  <li data-i18n-id="s-caff"><strong>A custom test builder</strong></li>
+                  <li data-i18n-id="s-b145">40+ developer tests</li>
+                  <li data-i18n-id="s-f55d">Contrast checking</li>
+                  <li data-i18n-id="s-b70c">Site crawlers</li>
+                  <li data-i18n-id="s-5377">Readability analysis</li>
+                  <li data-i18n-id="s-6602">Split configurations for developers/editors</li>
+                </ul>
+              </figcaption>
+            </figure>
+
+            <figure class="figure">
+              <img loading="lazy" class="figure-img img-fluid rounded border" src="/assets/images/3x-dashboard.png" height="765" width="1600" alt="Reporting dashboard showing recent issues and pages with the most issues." data-i18n-id="s-2559" />
+              <figcaption class="figure-caption p-3 pt-2" data-i18n-id="s-cdbf">A site-wide dashboard provides filterable and
+                exportable reports of alerts and dismissals.</figcaption>
+            </figure>
+
+          </section>
+          <h2 data-i18n-id="s-8fec">Installation and key setup steps</h2>
+          <p data-i18n-id="s-7627">The <a href="https://www.drupal.org/project/editoria11y/">bundled installer</a> at Drupal.org includes
+            several modules:</p>
+          <ul>
+            <li data-i18n-id="s-b830">
+              Editoria11y: the core content checker and dashboard.
+            </li>
+            <li data-i18n-id="s-b351">
+              Editoria11y CSA: developer tests and dashboard maintenance tools.
+            </li>
+            <li data-i18n-id="s-74fe">
+              Editoria11y Export: CSV reporting tools.
+            </li>
+          </ul>
+          <p data-i18n-id="s-88fd">Install like any other module, and then take these key steps:</p>
+          <ol>
+            <li data-i18n-id="s-7187"><strong>Check permissions.</strong> Trusted authors should have "Mark OK," "Mark as Ignored" and "View
+              the dashboard."</li>
+            <li data-i18n-id="s-1ac1"><strong>Check key pages for repetitive or unhelpful alerts.</strong> Either mark them as OK in the
+              tooltip, or adjust the configuration to ignore elements by selector.</li>
+            <li data-i18n-id="s-e5b2">Look for tips that are hard to see – offscreen, truncated, behind other elements, or on hidden elements.
+              Use the tips in "Fix tip positioning" below to fix.</li>
+            <li data-i18n-id="s-c564">If the site already has content, and you have a CSA subscription, visit the dashboard "recheck" tab, and
+              <strong>crawl the site</strong> to pre-load the site reports. This is optional, but older pages will not
+              appear in reports until they are crawled or visited by a logged in user.
+            </li>
+          </ol>
+          <p data-i18n-id="s-e025">View a <a href="https://youtu.be/uYvNYPg38nU?si=dqADyWpTtOhniHTP&t=696">video introduction to the
+              configuration options</a> (v2.4).</p>
+
+          <h2 id="check-roots" data-i18n-id="s-9202">Hide unhelpful alerts</h2>
+          <p data-i18n-id="s-fa47">
+            <strong>Good configurations suppress unhelpful alerts, so content authors can focus on issues they should
+              fix</strong>.
+          </p>
+          <p data-i18n-id="s-996e">While you can turn off tests altogether, it is usually better to hide alerts on specific elements or pages.
+          </p>
+          <hr/>
+          <p data-i18n-id="s-7918">
+            During each test run, Editoria11y gathers a single set of elements from the "Check content in these
+            containers" setting, and then filters it several times. This is what a test run looks like:
+          </p>
+          <ol>
+            <li data-i18n-id="s-994a">
+              Cancel checking if configuration prevents checking on this page or for this user.
+            </li>
+            <li data-i18n-id="s-10c9">
+              <strong>Gather</strong> elements in specified page regions,
+              e.g.:<br/><code>body > *:not('.ed11y-element')</code><br/>
+              <em>For Editoria11y CSA users, these are the regions on the <strong>Developer tests</strong> tab.</em>
+            </li>
+            <li data-i18n-id="s-7524">
+              <strong>Drop</strong> elements that match ignore selectors,
+              e.g.:<br/><code>.widgets, .utility-menu</code><br/>
+              <em>For Editoria11y CSA users, these are the selectors on the <strong>Developer tests</strong> tab.</em>
+            </li>
+            <li data-i18n-id="s-58d0">
+              Run tests and sync results to the dashboard.
+            </li>
+            <li>
+              <span data-translate data-i18n-id="s-f8c6">If split configuration is active and the user is a content editor, filter developer results:</span>
+              <ul>
+                <li data-i18n-id="s-72c9"><strong>Drop</strong> results from tests set to "Developer only."</li>
+                <li data-i18n-id="s-576e"><strong>Drop</strong> results on elements from outside specified <strong><em>content</em></strong>
+                  regions, e.g.:<br/><code>main, footer</code></li>
+                <li data-i18n-id="s-bb1d"><strong>Drop</strong> results on elements that match <strong><em>content</em></strong> ignore
+                  selectors.</li>
+              </ul>
+              <span data-translate data-i18n-id="s-bc47">Note that there is not a second "gather" phase. The developer page regions must include the content
+              regions.</span>
+            </li>
+            <li data-i18n-id="s-b79c">Open the panel and draw alerts if configuration matches an auto-open setting.</li>
+          </ol>
+
+          <h3 id="dismiss" data-i18n-id="s-be02">Dismiss alerts</h3>
+          <p data-i18n-id="s-2ae3">Tests can be configured in the library as errors or warnings ("manual checks"). Warnings can be dismissed.
+            There are two types of dismissals available from the footer of each tooltip:</p>
+          <div class="my-2"
+            style="background: url(/assets/images/3x-generic-tip.png) 100% 98%; max-width: 600px; padding-top: 6%; background-size: 108%;">
+          </div>
+          <ul>
+            <li data-i18n-id="s-7b65">"Ignore" is stored as a user preference: the alert is now hidden for the current user, but only the
+              current user.</li>
+            <li data-i18n-id="s-654c">"Mark OK" hides the alert for all users.</li>
+          </ul>
+          <p data-i18n-id="s-dc14">Whether a user is able to dismiss an alert is controlled at the role level in Drupal's user permissions.
+            <strong>Most authors should be allowed to dismiss alerts</strong>. There is no point in assigning someone a
+            manual check if they cannot mark the item as having been checked.
+          </p>
+
+          <h3 id="roots" data-i18n-id="s-d932">Ignore elements</h3>
+          <p data-i18n-id="s-9d1e">These two configuration settings are the most important!</p>
+          <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
+            <label for="edit-content-root">Check content in these containers</label>
+            <div><textarea class="form-control" id="edit-content-root" name="content_root" rows="1" cols="30"
+                disabled></textarea>
+            </div>
+            <div class="mt-3">
+              <label for="edit-ignore-elements">Skip over these elements</label>
+              <div>
+                <textarea class="form-control" id="edit-ignore-elements" disabled name="ignore_elements" rows="1"
+                  cols="30" class=""></textarea>
+              </div>
+            </div>
+          </div>
+          <p data-i18n-id="s-6051">
+            Set the first to include any parts of the page content authors can edit. E.g., if they can edit the
+            <code>main</code> content area, <code>.sidebar</code> and <code>.footer-column-two</code>, set those
+            selectors as your content check area.
+          </p>
+          <p data-i18n-id="s-f29c">
+            Use the second to "knock out" subsections. E.g., if <code>main</code> contains various widgets and embeds
+            that only developers can modify, list those: <code>.widget-1, .social-embed</code>;
+          </p>
+          <p data-i18n-id="s-10ef">If you are using the split configuration, you will see a similar pair of settings on the Developer Tests
+            tab:</p>
+          <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
+            <div>
+              <fieldset>
+                <legend>
+                  Developer check area
+                </legend>
+                <div class="fieldset__wrapper fieldset__wrapper--group">
+
+                  <div id="edit-dev-check-root">
+                    <div>
+                      <input aria-describedby="edit-dev-check-root--description" type="radio"
+                        id="edit-dev-check-root-automatic" name="dev_check_root" value="automatic" checked="checked" />
+                      <label for="edit-dev-check-root-automatic" class="form-item__label option">All elements</label>
+                    </div>
+                    <div class="d-flex">
+                      <input aria-describedby="edit-dev-check-root--description" type="radio"
+                        id="edit-dev-check-root-match" name="dev_check_root" value="match"
+                        class="align-self-baseline mt-1 me-1" />
+                      <label for="edit-dev-check-root-match" class="form-item__label option">Only the containers listed
+                        in the Content Setting tab</label>
+                    </div>
+                    <div class="">
+                      <input aria-describedby="edit-dev-check-root--description" type="radio"
+                        id="edit-dev-check-root-specify" name="dev_check_root" value="specify"
+                        class="form-radio form-boolean form-boolean--type-radio" />
+                      <label for="edit-dev-check-root-specify" class="">The specific containers listed below</label>
+                    </div>
+                  </div>
+
+                </div>
+              </fieldset>
+
+              <div class="">
+                <label for="edit-always-ignore" class="mt-3">Ignore for both developers and content editors</label>
+                <div class="form-textarea-wrapper">
+                  <textarea id="edit-always-ignore" class="form-control" name="always_ignore" rows="1" cols="20"
+                    placeholder=""></textarea>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+          <p data-i18n-id="s-8c02">The key thing to know about the developer check areas is that they are <strong>not independent</strong> of
+            the content check areas. In a split configuration, the developer areas are checked, and then those results
+            are <strong>filtered</strong> to match the content areas. Any areas that are excluded for developers will
+            also be excluded for content editors. Do not exclude editable content areas!</p>
+
+          <p data-i18n-id="s-0312">Some tests allow for more precise configuration, to only hide certain alerts on affected elements. Look for
+            them under:</p>
+          <ul>
+            <li data-i18n-id="s-d53d">Content tests: Links to check</li>
+            <li data-i18n-id="s-0d1e">Content tests: Embeds to check</li>
+            <li data-i18n-id="s-10c1">Content tests: Detecting dynamic and shadow content</li>
+            <li data-i18n-id="s-e6e4">Developer tests: Contrast</li>
+          </ul>
+
+          <h3 id="pages" data-i18n-id="s-177c">Hide for specific pages or users</h3>
+          <p data-i18n-id="s-e874">
+            The easiest way to do this is by passing CSS classes or IDs to these options:
+          </p>
+          <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
+            <label for="edit-no-load" class="form-item__label">Do not check on pages with these elements</label>
+            <div class="form-textarea-wrapper">
+              <textarea data-drupal-selector="edit-no-load" aria-describedby="edit-no-load--description"
+                id="edit-no-load" name="no_load" rows="1" cols="20" class="form-control"></textarea>
+            </div>
+
+            <label for="edit-ignore-all-if-absent" class="form-item__label">Hide all alerts on pages where these
+              elements are not present</label>
+            <div class="form-textarea-wrapper">
+              <textarea data-drupal-selector="edit-ignore-all-if-absent"
+                aria-describedby="edit-ignore-all-if-absent--description" id="edit-ignore-all-if-absent"
+                name="ignore_all_if_absent" rows="1" cols="20" class="form-control"></textarea>
+            </div>
+
+          </div>
+          <p data-i18n-id="s-0877">
+            The first will prevent checks from running, and the toolbar will not show.
+          </p>
+          <p data-i18n-id="s-5cbd">
+            The second will start the checker minimized, and auto-mark (for the current user) all issues as "Ignored,"
+            even if they are errors. This allows the tests to run and update the dashboard without bothering the user.
+          </p>
+          <p data-i18n-id="s-1661">
+            If you want to use these to control which users see the checker, you may need to adjust your theme to output
+            a class, e.g. <code>.user-247</code>
+          </p>
+
+          <h2 id="dashboard" data-i18n-id="s-f4d7">Manage site-wide results</h2>
+          <section id="refresh">
+            <h3 class="pt-3" data-i18n-id="s-012a">Crawling and updating results</h3>
+            <p data-i18n-id="s-75a9">Editoria11y is a <strong>real-time monitoring tool, not a crawler</strong>. Its site-wide reports update
+              when authors view pages, so regular crawling is not generally needed. The CSA module <em>does</em> include
+              a crawler, but it should only be needed in these three situations:</p>
+            <ol>
+              <li data-i18n-id="s-dfb1">
+                When first installing Editoria11y on an existing site with many pages. Pages need to be visited before
+                they will appear on the dashboard, so a quick initial crawl saves time.
+              </li>
+              <li data-i18n-id="s-f602">
+                Major updates to themes or modules may fix (or cause) issues on many pages that will not appear until
+                visited or crawled..
+              </li>
+              <li data-i18n-id="s-a530">
+                Bulk actions in the admin interface like deleting pages or redirects tend to leave behind results from
+                pages that no longer exist or have moved. In these cases it helps to use the "Refresh" tab's maintenance
+                actions to refresh page URLs, and detect and drop deleted pages.
+              </li>
+            </ol>
+            <p data-i18n-id="s-8e5a">No data leaves your site during a crawl. The CSA crawler is not a cloud tool; it uses your browser to
+              load and check the pages on your own site. The downside of this approach is that <strong>browsers pause
+                background tabs</strong>. You will need to keep your computer on and awake during a crawl. Plan to open
+              a new window for the crawler and leave it as the foreground tab for that window as it works. You can
+              continue working in another window. The crawler will update its estimate after each batch of pages.</p>
+          </section>
+          <section id="reports">
+            <h3 data-i18n-id="s-a242">Viewing reports</h3>
+            <div class="my-4 border shadow"
+              style="background: url(/assets/images/3x-dashboard.png) 86% 0%; padding-top: 28%; background-size: 106%;">
+            </div>
+            <ul>
+              <li data-i18n-id="s-e328">
+                <strong>Recent</strong> allows for exploring by individual alerts. This allows you to do things like
+                filter to find all instances of the same alert type, or see which alerts are appearing frequently in
+                recent content, or which authors still have a habit of making the same mistake.
+              </li>
+              <li data-i18n-id="s-796f">
+                <strong>Pages</strong> shows alert counts per page, grouped by page. This allows you to find pages with
+                the most issues, and to filter by page attributes like content type and published status.
+              </li>
+              <li data-i18n-id="s-9423">
+                <strong>Alerts</strong> shows issues by type.
+              </li>
+              <li data-i18n-id="s-52ed">
+                <strong>Dismissals</strong> allows for monitoring whether authors are dismissing correctly, and has
+                "reset" buttons to restore dismissed alerts.
+              </li>
+              <li data-i18n-id="s-3379">
+                <strong>Export</strong> contains versions of the Pages, Alerts and Dismissals reports that can be
+                filtered to prepare CSV downloads. <em>Provided by the CSV Export submodule</em>
+              </li>
+              <li data-i18n-id="s-9814">
+                <strong>Refresh</strong> contains dashboard maintenance tools to drop alerts from deleted pages, drop
+                alerts from parameterized pseudo-pages like /search?query=example, update stored page titles and URLs,
+                and run a manual crawl. <em>Provided by the CSA submodule</em>
+              </li>
+            </ul>
+          </section>
+
+          <h2 id="positioning" data-i18n-id="s-c35b">Fix hidden or offscreen tips</h2>
+
+          <p data-i18n-id="s-68ce">The module provides fields for two of the library's configuration options to change how tips are placed:
+          </p>
+
+          <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
+            <label for="edit-element-hides-overflow" class="form-item__label">Elements with overflow hidden</label>
+            <textarea data-drupal-selector="edit-element-hides-overflow"
+              aria-describedby="edit-element-hides-overflow--description" id="edit-element-hides-overflow"
+              name="element_hides_overflow" rows="1" cols="60" class="form-control"></textarea>
+            <label for="edit-hidden-handlers" class="form-item__label">Theme JS will handle revealing hidden tooltips
+              inside these containers</label>
+            <textarea data-drupal-selector="edit-hidden-handlers" aria-describedby="edit-hidden-handlers--description"
+              id="edit-hidden-handlers" name="hidden_handlers" rows="1" cols="60" class="form-control"></textarea>
+          </div>
+          <p data-i18n-id="s-34e4">Some themes have columns or widgets that hide horizontal or vertical overflow. The library automatically
+            detects when a toggle would fall outside the visible part of the <strong>page.</strong> Telling the library
+            that certain containers hide overflow means it will also attempt to position tips for elements in those
+            container inside their borders.</p>
+          <p data-i18n-id="s-7cb7">Some themes have widgets that toggle the visibility of content, such as accordions, tabs and slideshows.
+            Tips inside these elements will also be hidden. Providing a list of selectors for these widgets means
+            Editoria11y will pause briefly when a user tries to jump to those tips using a next or previous button.
+            Drupal themes and modules can then follow the directions from the library section on <a href="/en/install/#hidden-content">dealing with tips on hidden content</a> to reveal the hidden content.
+          </p>
+
+          <h2 id="runtime" data-i18n-id="s-7e38">Write your own config</h2>
+          <p data-i18n-id="s-a5d3">In PHP: the Drupal module provides a <code>hook_editoria11y_alter_config</code> to change the content of
+            <code>drupalSettings.editoria11y</code> in a module or theme. For example:
+          </p>
+          <pre class="language-php"><code><!--<?php
+/**
+ * @file
+ * MY_MODULE module file.
+ */
+
+use Drupal\Core\Cache\CacheableMetadata;
+
+/**
+ * Implements hook_editoria11y_alter_config().
+ *
+ * Attaches Editoria11y library and config based on context.
+ */
+function MY_MODULE_editoria11y_alter_config(array &$attach, CacheableMetadata $cacheableMetadata): void {
+  $config = Drupal::config('editoria11y.settings');
+
+  // Module settings being changed need to bust the cache.
+  $cacheableMetadata->addCacheableDependency($config);
+
+  // Get and modify any of the values being passed to drupalSettings.editoria11y.
+  if (!empty($attach['allow_ok'])) {
+    $attach['allow_ok'] = 'okAll';
+  }
+}--></code></pre>
+          <p data-i18n-id="s-2368">Modifying <code>drupalSettings</code> only helps if the module JS is already set up to pass that value to
+            the library. To add additional parameters, you need to modify the JS <code>options</code> object directly.
+            The module checks for one global JS variable of <code>editoria11yOptionsOverride</code>. If this is set, it
+            will pass the <code>options</code> object to an <code>editoria11yOptions</code> function you have provided
+            in your module or theme. You can now set any of the <a               href="https://editorsally.ddev.site/en/install/#params">library parameters</a>.</p>
+          <pre class="language-javascript"><code><!--var editoria11yOptionsOverride = true;
+var editoria11yOptions = function(options) {
+  // You now have access to the processed options object that will be passed to the library.
+
+  // E.g., to add a selector to the ignore list:
+  if (options['ignoreElements'] === false) {
+    // Provide the selector as the only value.
+    options['ignoreElements'] = `.example`;
+  } else {
+    // Append additional selectors with comma separator.
+    options['ignoreElements'] = `${options['ignoreElements']}, .example`
+  }
+
+  // Return your processed options.
+  return options;
+}
+--></code></pre>
+          <section id="custom-tests">
+            <h2 data-i18n-id="s-e0f0">Write your own tests</h2>
+            <p data-i18n-id="s-6ece">First, in the module config, add 1 to the "Custom tests" options so it knows to
+              watch for the tests.</p>
+            <p data-i18n-id="s-4316">Then create a Drupal JS library with your tests in your theme or module, using the <a href="/en/install/#custom-tests">library guide to writing custom tests</a>.</p>
+            <p data-i18n-id="s-b4ea">Here's a working example from Princeton, of a custom test to alert on Safe Links. Note that it accesses
+              the Editoria11y class through <code>Drupal.Ed11y.</code></p>
+            <pre class="language-javascript"><code><!--const psEd11yCustomTests = function() {
+
+  // 1.
+  // Get elements to test, via Drupal.Ed11y.getElements.
+  // The 'root' parameter tells it to respect config for check areas and ignores.
+  const safeLinks = Drupal.Ed11y.getElements('a[href*="safelinks.protection.outlook.com/?"]', 'root');
+
+  // Add the test name to the lang object.
+  Drupal.ed11yLang.lang.testNames.outlookSafeLink = 'URL is Safe Link encoded';
+
+  // 2.
+  // Create the tip content.
+  const decodeSafelink = function(url) {
+    const params = new URL(url).searchParams;
+    let decoded = params.get('url');
+    const p = document.createElement('p');
+    if (!!decoded) {
+      p.innerHTML = `<p><span class="badge">To fix</span>Update this link with the correct URL, which is probably:<br>
+    <em style='word-wrap: break-word;font-size: 90%;line-height: 1.2;display: block;'></em></p>`
+      p.querySelector('em').textContent = Drupal.Ed11y.sanitizeHTML(decoded);
+    }
+    return p;
+  };
+  safeLinks?.forEach((el) => {
+    const content = document.createElement('div');
+    content.innerHTML = `<div class="title">Please fix this Outlook "Safe Link"</div>
+            <div class="why">
+                <p>The URL for this link is an Outlook "Safe Link" that was copied from an email.
+                It includes the original recipient's email address,
+                and will break if Microsoft shuts down the service.</p>
+                <p>The pasted URL is:<br>
+                <em style='word-break: break-all;font-size: 90%;line-height: 1.2;
+                display: block;'></em></p>
+            </div>
+            `;
+    content.querySelector('em').textContent = Drupal.Ed11y.sanitizeHTML(el.href);
+    content.querySelector('.why').insertAdjacentElement('beforebegin', decodeSafelink(el.href));
+
+    // 3.
+    // Push the tip to the library results object.
+    Drupal.Ed11y.State.results.push({
+      element: el,
+      test: 'outlookSafeLink',
+      type: 'error',
+      content: content,
+      position: 'beforebegin',
+      inline: false,
+      dismiss: false,
+    });
+  });
+
+  // 4.
+  // Tell Editoria11y you are done adding custom results.
+  const allDone = new CustomEvent('ed11yResume');
+  document.dispatchEvent(allDone);
+};--></code></pre>
+
+          </section>
+          <section id="help">
+            <h2 data-i18n-id="s-4690">Getting help</h2>
+            <p data-i18n-id="s-f149">Check the <a href="/en/contacts/">contacts</a> page for community support options. @itmaybejj is usually
+              online in the Drupal Slack when the sun is up in the western hemisphere.</p>
+            <p data-i18n-id="s-4a16">Most of the <a href="/en/license/">CSA contribution levels</a> include an annual checkin, which
+              can include direct
+              assistance
+              with setup and configuration</p>
+          </section>
+
+        </div>
+      </div>
+    </div>
+  </main>

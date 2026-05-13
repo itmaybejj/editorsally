@@ -1,0 +1,411 @@
+<main class="container col-lg-12 mx-auto py-5">
+    <div class="row docs">
+      <div class="col-12 col-md-5 col-lg-4 mb-5">
+        <div id="on-this-page" class="list-group ms-2 ms-lg-5 position-sticky top-0 pt-3">
+        </div>
+      </div>
+      <div class="col-12 col-md-7 col-lg-8 pt-3" data-bs-spy="scroll" data-bs-target="#on-this-page"
+        data-bs-smooth-scroll="true" tabindex="0">
+
+
+
+        <h1 class="pt-4" id="demo" data-i18n-id="s-4496">Demo</h1>
+        <p class="fs-5" data-i18n-id="s-e32c">Vaadake <a href="https://youtu.be/uYvNYPg38nU?si=6YANYrJpVzNAJYDl&t=260">videot kontrollija ajaloost ja funktsioonidest</a>,
+          või proovige allpool olevat demo-sisu muuta, hoiatusi avada ja eiraada,
+          ning kasutage tööriistariba <span style="text-wrap: nowrap;">(<img src="/assets/images/3x-toolbar" class="inline-block" style="width: 5rem; height: auto;" alt="Editoria11y tööriistariba ekraanipilt, millel on 4 viga." width="97" height="50" loading="lazy" data-i18n-id="s-65d5" />)</span> pealkirja struktuuri vaatamiseks. See demo sisaldab nii põhiteste kui ka CSA komplekti.</p>
+        <p class="fs-5 mb-5 pb-5" data-i18n-id="s-7580">See demo kasutab TinyMCE redaktorit. Editoria11y ühildub enamike tekstiredaktorite, ja
+          ning sisaldab valmisintegratsioone CKEditori ja Gutenbergi jaoks WordPressis ja Drupalil.</p>
+        <div id="ed11y-demo" class="p-5" contenteditable="">
+          <section id="headings">
+
+            <h3 class="pt-1" data-i18n-id="s-71f7">Pealkirjad</h3>
+
+            <p data-i18n-id="s-e638">See pealkiri jättis taseme vahele:</p>
+            <div class="positive">
+              <h6 id="this-h6-should-have-been-an-h3" data-i18n-id="s-1775">Oops</h6>
+            </div>
+
+            <p data-i18n-id="s-3c22">Sellel pealkirjal pole üldse teksti:</p>
+            <div class="positive">
+              <h4 class="empty-example" data-i18n-id="s-e89e"> </h4>
+            </div>
+
+            <p data-i18n-id="s-a98b">See lühike tsitaadiplokk võib olla pealkiri:</p>
+            <div class="positive">
+              <blockquote data-i18n-id="s-8223">Olen võltspealkiri</blockquote>
+            </div>
+
+            <p data-i18n-id="s-7243">See täielikult rasvane lõik võib olla pealkiri:</p>
+            <p class="positive" data-i18n-id="s-8ce3"><strong>Olen võltspealkiri</strong></p>
+
+            <p data-i18n-id="s-7a7a">See pealkiri on väga pikk:</p>
+            <div class="positive">
+              <h4 data-i18n-id="s-695c">Pealkirjad ja alapealkirjad loovad navigeeritava sisukorra abivahendite jaoks. Numbrid
+                näitavad pesastumissuhteid. Väga pikad pealkirjad tähendavad tõenäoliselt, et autor ütleb pealkirjas liiga palju.</h4>
+            </div>
+
+          </section>
+
+
+          <section id="text-alternatives">
+            <h3 data-section="text-alternatives" data-i18n-id="s-2a0c">Piltide tekstialternatiiivid</h3>
+
+            <p data-i18n-id="s-ecfd">See pealkiri on loodud tekstipildist ilma alternatiivtekstita:</p>
+            <div class="positive">
+              <h4 data-i18n-id="s-88ba"><img loading="lazy" alt src="/assets/images/px20240813sm.jpg" data-i18n-id="s-e33e" /></h4>
+            </div>
+
+            <p data-i18n-id="s-875a">Pilt üldse ilma alt-atribuudita:</p>
+            <p class="positive" data-i18n-id="s-2b48"><img loading="lazy" src="/assets/images/px20240813sm.jpg" data-i18n-id="s-95a0" /></p>
+
+            <p data-i18n-id="s-5df5">Pilt vigase alt-atribuudiga, nt <code class="language-plaintext highlighter-rouge">alt="'"</code></p>
+
+            <p class="positive" data-i18n-id="s-47b7"><img loading="lazy" alt="'" src="/assets/images/px20240813sm.jpg" data-i18n-id="s-87b9" /></p>
+
+            <p id="image-with-a-filename-as-an-alt" data-i18n-id="s-c893">Pilt failinimega alternatiivtekstina</p>
+
+            <p class="positive" data-i18n-id="s-9d21"><img loading="lazy" alt="filename.jpg" src="/assets/images/px20240813sm.jpg" data-i18n-id="s-685d" /></p>
+
+            <p id="image-with-redundant-text-in-its-alt" data-i18n-id="s-f6e9">Pilt üleliigse tekstiga alternatiivtekstis, nt „pilt:"</p>
+
+            <p class="positive" data-i18n-id="s-7003"><img loading="lazy" alt="Image of a dog." src="/assets/images/px20240813sm.jpg" data-i18n-id="s-2149" /></p>
+
+            <p id="linked-image-with-redundant-text-in-its-alt" data-i18n-id="s-6554">Lingitud pilt üleliigse tekstiga alternatiivtekstis,
+              nt „pilt:"</p>
+
+            <p class="positive" data-i18n-id="s-d93d"><a href="./editable.htm"><img loading="lazy" alt="Image of a dog." src="/assets/images/px20240813sm.jpg" data-i18n-id="s-2642" /></a></p>
+
+            <p id="image-with-placeholder-alt" data-i18n-id="s-40e9">Pilt ajutise alternatiivtekstiga:</p>
+            <p class="positive" data-i18n-id="s-541e"><img loading="lazy" alt="TBD" src="/assets/images/px20240813sm.jpg" data-i18n-id="s-fe01" /></p>
+
+            <p id="linked-image-with-placeholder-alt" data-i18n-id="s-6266"><strong>Lingitud</strong> pilt ajutise alternatiivtekstiga:</p>
+            <p class="positive" data-i18n-id="s-7d43"><a href="./editable.htm"><img loading="lazy" alt="TBD" src="/assets/images/px20240813sm.jpg" data-i18n-id="s-b0f2" /></a></p>
+
+            <p id="image-with-machine-alt" data-i18n-id="s-3ef4">Pilt masinkoodiga alternatiivtekstiga:</p>
+            <p class="positive" data-i18n-id="s-33a5"><img loading="lazy" alt="$700VIDEOSABOUTTURTLESALL2SECONDSLONG" src="/assets/images/px20240813sm.jpg" data-i18n-id="s-ec2e" /></p>
+
+            <p id="linked-image-with-machine-alt" data-i18n-id="s-2818">Lingitud pilt masinkoodiga alternatiivtekstiga:</p>
+            <p class="positive" data-i18n-id="s-d528"><a href="./editable.htm"><img loading="lazy" alt="$700VIDEOSABOUTTURTLESALL2SECONDSLONG" src="/assets/images/px20240813sm.jpg" data-i18n-id="s-e48d" /></a></p>
+
+            <p id="image-with-very-long-alt-text" data-i18n-id="s-eb13">Pilt väga pika alternatiivtekstiga:</p>
+
+            <p class="positive" data-i18n-id="s-f72c"><img loading="lazy" alt="Look at this doggy. This doggy is so happy. This doggy got to go on a walk and the walk went to a lake and there were all kinds of fascinating smells. What an amazing day this doggy had." src="/assets/images/px20240813sm.jpg" data-i18n-id="s-724f" /></p>
+
+            <p id="images-in-links-where-the-alt-text-may-be-describing-the-image-instead-of-the-link" data-i18n-id="s-2731">Pildid linkides,
+              kus alternatiivtekst võib kirjeldada pilti, mitte linki</p>
+
+            <p class="positive" data-i18n-id="s-08a9"><a href="https://www.youtube.com/watch?v=DLzxrzFCyOs">Sellel lingil on tekst ja
+                pilt.<img loading="lazy" alt="A lovely gray box" src="/assets/images/px20240813sm.jpg" data-i18n-id="s-c699" /></a></p>
+
+            <p id="images-in-links-decorative" data-i18n-id="s-25ca">Iga lingitud pilt (test vaikimisi välja lülitatud)</p>
+            <p class="positive" data-i18n-id="s-281c"><a href="https://www.youtube.com/watch?v=DLzxrzFCyOs"><img loading="lazy" alt="Hello there" src="/assets/images/px20240813sm.jpg" data-i18n-id="s-f3c6" /></a></p>
+
+            <p data-i18n-id="s-3cd8">Pilt kujundis märgitud dekoratiivseks:</p>
+            <figure class="positive">
+              <img loading="lazy" alt src="/assets/images/px20240813sm.jpg" data-i18n-id="s-3051" />
+              <figcaption data-i18n-id="s-8ef6">Figcaption on olemas.</figcaption>
+            </figure>
+
+            <p data-i18n-id="s-a78d">Pilt kujundis, mille alternatiivtekst on sama kui figcaption:</p>
+            <figure class="positive">
+              <img loading="lazy" alt="Figcaption on sama kui alt" src="/assets/images/px20240813sm.jpg" data-i18n-id="s-d8b0" />
+              <figcaption data-i18n-id="s-13b7">Figcaption on sama kui alt</figcaption>
+            </figure>
+            <p data-i18n-id="s-296e">Pilt karusellil ilma alternatiivtekstita:</p>
+            <div class="positive">
+              <img loading="lazy" alt class="carousel" src="/assets/images/px20240813sm.jpg" data-i18n-id="s-f79d" />
+            </div>
+          </section>
+          <section id="contrast">
+            <h3 data-section="contrast" data-i18n-id="s-e272">Kontrastsus</h3>
+            <p data-i18n-id="s-09f2">Loetamatu värvikombinatsioon:</p>
+            <div class="positive">
+              <p style="background: #ccc; color: #ddd;" data-i18n-id="s-601e">Väga loetav.</p>
+            </div>
+            <p data-i18n-id="s-aa41">Värv vajab käsitsi kontrollimist:</p>
+            <div class="positive">
+              <p style="background: linear-gradient(45deg,#ccc 25%,#0000 25% 75%,#ccc 75%,#ccc),linear-gradient(45deg,#ccc 25%,#0000 25% 75%,#ccc 75%,#ccc)" data-i18n-id="s-490b">
+                Ja arvutamatu.</p>
+            </div>
+            <div class="positive"><label>Input with low contrast
+                <input class="form-text" type="text" style="color: #777;" /></label></div>
+
+            <style>
+              #unsupported-placeholder::placeholder {
+                color: color(rec2020 0.9 0.4 0.2);
+              }
+            </style>
+
+            <label for="unsupported-placeholder">Color of placeholder cannot be calculated</label>
+            <div class="positive" style="background: transparent;"><input type="text" id="unsupported-placeholder"
+                placeholder="Rec2020 color space" /></div>
+
+
+            <p data-i18n-id="s-0774">SVG graafik ebapiisava kontrastsusega</p>
+            <div class="positive"><svg style="width: 16px; height: 16px;" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                <path fill="#999"
+                  d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376C296.3 401.1 253.9 416 208 416 93.1 416 0 322.9 0 208S93.1 0 208 0 416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" ></path>
+              </svg></div>
+
+            <p data-i18n-id="s-be2b">SVG graafik, kus kontrastsus vajab käsitsi kontrollimist</p>
+            <div class="positive"
+              style="background: linear-gradient(45deg,#ccc 45%,#0000 45% 75%,#ccc 75%,#ccc),linear-gradient(145deg,#ccc 45%,#0000 45% 75%,#ccc 75%,#ccc)">
+              <svg style="width: 16px; height: 16px;" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                <path fill="color(rec2020 0.9 0.4 0.2)"
+                  d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376C296.3 401.1 253.9 416 208 416 93.1 416 0 322.9 0 208S93.1 0 208 0 416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" ></path>
+              </svg>
+            </div>
+
+
+          </section>
+          <section id="embed-media">
+            <h3 data-section="embed-media" data-i18n-id="s-af2b">Manustused & Meedia</h3>
+
+            <p data-i18n-id="s-98f7">Video, mis on märgitud käsitsi kontrollimiseks subtitreerimise osas:</p>
+            <div class="positive" style="width: 560px; aspect-ratio: 560 / 315; max-width: 100%; cursor: not-allowed;">
+              <iframe width="560" height="315" inert=""
+                src="https://www.youtube-nocookie.com/embed/QGsevnbItdU?si=W_b2i2o_n5v1ArvA"
+                style="width: 560px; aspect-ratio: 560 / 315; max-width: 100%; cursor: not-allowed;"
+                title="YouTube: How it's done video. Playback is disabled." sandbox="allow-scripts allow-same-origin"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="origin" allowfullscreen></iframe>
+              <div><small><em>Playback disabled to prevent cookies.</em></small></div>
+            </div>
+
+            <p data-i18n-id="s-e14a">Heli vajab transkripti:</p>
+            <div class="positive">
+              <div style="border: 1px solid #444; background: #ccc; width: 320px; height: 60px;"><audio                   style="height: 60px;"></audio>
+              </div>
+            </div>
+
+            <p data-i18n-id="s-573a">Iframe ilma pealkirjata, mis vajab ka käsitsi kontrollimist:</p>
+            <div class="positive">
+              <iframe data-needs-src=""></iframe>
+            </div>
+
+            <p data-i18n-id="s-fe95">Mittefokuseeritav iframe:</p>
+            <div class="positive">
+              <iframe title="example" sandbox="" tabindex="-1" data-needs-src=""></iframe>
+            </div>
+
+            <p data-i18n-id="s-e27f">Pesastatud interaktiivsed komponendid</p>
+            <div class="positive">
+              <details>
+                <summary data-i18n-id="s-5064">Akordion</summary>
+                <details>
+                  <summary data-i18n-id="s-2b8d">Akordion</summary>Surprise!
+                </details>
+              </details>
+            </div>
+          </section>
+          <section id="meaningful-links">
+            <h3 data-section="meaningful-links" data-i18n-id="s-5965">Tähenduslikud lingid</h3>
+
+            <p id="links-with-no-text-at-all" data-i18n-id="s-59ab">Lingid üldse ilma tekstita</p>
+            <p class="positive" data-i18n-id="s-5287"><a href="https://www.youtube.com/watch?v=DLzxrzFCyOs"
+                style="display: inline-block; width: 3rem; border-bottom: 1px solid;"></a> Tühjad lingid</p>
+
+            <p id="links-titled-with-a-url" data-i18n-id="s-c3d3">Lingid, mille sildiks on ainult URL:</p>
+            <p class="positive" data-i18n-id="s-e764"><a                 href="https://www.youtube.com/watch?v=DLzxrzFCyOs">https://www.youtube.com/watch?v=DLzxrzFCyOs</a></p>
+
+            <p id="links-titled-with-a-symbol" data-i18n-id="s-7be5">Lingid, mille sildiks on ainult sümbolid:</p>
+            <p class="positive" data-i18n-id="s-aa44"><a href="https://www.youtube.com/watch?v=DLzxrzFCyOs">↣</a></p>
+
+            <p data-i18n-id="s-e5a4">Sama nimega lingid viivad erinevatele kohtadele</p>
+            <p class="positive" data-i18n-id="s-cb73"><a href="https://www.youtube.com/watch?v=fjOeJssZX_Q">Kilpkonnad</a> <a                 href="https://www.youtube.com/watch?v=cWppAbqm9I8">Kilpkonnad</a></p>
+
+            <p id="links-titled-with-doi" data-i18n-id="s-cc2d">Lingid, mille sildiks on ainult DOI number:</p>
+            <p class="positive" data-i18n-id="s-fb8e"><a href="https://doi.org/10.1145/3493612.3520468">doi.org/10.1145/3493612.3520468</a>
+            </p>
+
+            <p id="links-titled-with-click" data-i18n-id="s-5f07">Lingid tähendusetu sildiga:</p>
+            <p class="positive" data-i18n-id="s-b240"><a href="https://www.youtube.com/watch?v=DLzxrzFCyOs"
+                title="https://www.youtube.com/watch?v=DLzxrzFCyOs">Klõpsake siia</a></p>
+
+            <p id="links-titled-with-empty" data-i18n-id="s-17f2">Lingitud ikoonid ilma tekstialternatiiivideta:</p>
+            <p class="positive" data-i18n-id="s-1498"><a href="https://www.youtube.com/watch?v=DLzxrzFCyOs"><svg                   style="width: 16px; height: 16px;" xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 512 512"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                  <path                     d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376C296.3 401.1 253.9 416 208 416 93.1 416 0 322.9 0 208S93.1 0 208 0 416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" ></path>
+                </svg></a></p>
+
+            <p id="links-that-open-in-a-new-window-without-an-external-link-icon-or-text-warning" data-i18n-id="s-d12a">Lingid, mis avanevad
+              uues aknas ilma välise lingi ikoni või tekstihoiatuseta</p>
+
+            <p class="positive" data-i18n-id="s-038b"><a href="https://www.youtube.com/watch?v=DLzxrzFCyOs" target="_blank">Hoiatus uues aknas avanemise testi jaoks.</a></p>
+
+            <p id="links-to-PDF" data-i18n-id="s-d87d">Lingid PDF-idele</p>
+            <p class="positive" data-i18n-id="s-7b08"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ#.pdf" class="">Naudi.</a></p>
+
+            <p id="links-to-doc" data-i18n-id="s-bbe9">Lingid teistele dokumentidele</p>
+            <p class="positive" data-i18n-id="s-f1a0"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ#.doc" class="">Võlts doc-link.</a>
+            </p>
+
+            <p id="links-redundant" data-i18n-id="s-9145">Lingid üleliigse title-atribuudiga</p>
+            <p class="positive" data-i18n-id="s-d8f6"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" title="Hõljuta mind">Hõljuta mind</a></p>
+
+            <p data-i18n-id="s-c1a1">Lingid atribuutidega, mis eemaldavad need tabeldusindeksist:</p>
+            <p class="positive" data-i18n-id="s-5811"><a href="./editable.htm" aria-hidden="true">Aria-peidetud lingid ilma negatiivse
+                tabindexita.</a></p>
+
+            <p data-i18n-id="s-f661">Lingid aria-labelledby atribuutidega elementidele, millel pole teksti:</p>
+            <p class="positive" data-i18n-id="s-dfac"><a href="./editable.htm" id="oops" aria-labelledby="oops"></a></p>
+
+            <p data-i18n-id="s-d2dc">Lingid üldiste sõnadega oma aria-sildis:</p>
+            <p class="positive" data-i18n-id="s-e206"><a href="www.google.com/" aria-label="omab aria-silti">loe rohkem</a></p>
+
+            <p data-i18n-id="s-8271">Lingitud pilt ilma alternatiivtekstita:</p>
+            <p class="positive" data-i18n-id="s-5df8"><a href="./editable.htm"><img loading="lazy" alt src="/assets/images/px20240813sm.jpg" class data-i18n-id="s-5b80" /></a></p>
+
+            <p data-i18n-id="s-4f11">Lingitud pilt hääldamatu alternatiivtekstiga:</p>
+            <p class="positive" data-i18n-id="s-5fe3"><a href="./editable.htm"><img loading="lazy" alt="'" src="/assets/images/px20240813sm.jpg" class data-i18n-id="s-4ba2" /></a></p>
+
+            <p data-i18n-id="s-0fd8">Lingitud pilt ilma alt-tekstiatribuudita:</p>
+            <p class="positive" data-i18n-id="s-c130"><a href="./editable.htm"><img loading="lazy" src="/assets/images/px20240813sm.jpg" class data-i18n-id="s-d8bc" /></a></p>
+
+            <p data-i18n-id="s-91cb">Lingitud pilt ilma alt-tekstiatribuudita lingis, milles on tekst:</p>
+            <p class="positive" data-i18n-id="s-4db6"><a href="./editable.htm">Otsi <img loading="lazy" src="/assets/images/px20240813sm.jpg" class data-i18n-id="s-0709" /></a></p>
+
+            <p data-i18n-id="s-78cc">Lingitud pilt ainult failinimega alternatiivtekstina:</p>
+            <p class="positive" data-i18n-id="s-b669"><a href="./editable.htm"><img loading="lazy" alt="http://jpg.gif" src="/assets/images/px20240813sm.jpg" data-i18n-id="s-9712" />
+              </a></p>
+
+            <p data-i18n-id="s-f1f2">Lingitud pilt kahtlaselt pika alternatiivtekstiga:</p>
+            <p class="positive" data-i18n-id="s-3c58"><a href="./editable.htm"><img loading="lazy" alt="Look at this doggy. This doggy is so happy. This doggy got to go on a walk and the walk went to a lake and there were all kinds of fascinating smells. What an amazing day this doggy had." src="/assets/images/px20240813sm.jpg" data-i18n-id="s-2557" />
+              </a></p>
+
+            <p data-i18n-id="s-7af4">Katkised lehe sisemised lingid</p>
+            <p class="positive" data-i18n-id="s-fe67">
+              <a href="#oh-no">Sellist ID-d pole olemas.</a>
+            </p>
+
+            <p data-i18n-id="s-f5ef">Lingid arendusserverisse</p>
+            <p class="positive" data-i18n-id="s-7568">
+              <a href="https://tugboatqa.com">Oops</a>
+            </p>
+
+            <p data-i18n-id="s-1f03">Duplikaatankrud</p>
+            <p class="positive" data-i18n-id="s-e967"><a id="dupe" href="#dupe">Ankur 1</a> <a id="dupe" href="#dupe">Ankur 2</a></p>
+          </section>
+          <section>
+            <h3 id="table-tests" data-i18n-id="s-d5ad">Tabelid</h3>
+
+            <p id="tables-without-valid-headers" data-i18n-id="s-bf63">Tabelid ilma kehtivate päisteta</p>
+
+            <table class="positive">
+              <tbody>
+                <tr>
+                  <td data-i18n-id="s-9ea0">Tabel ilma TH päiseta on kehtetu</td>
+                  <td class="positive">
+                    <h4 data-i18n-id="s-51f8">Struktuuri pealkirjad ei lähe arvesse</h4>
+                  </td>
+                  <td class="negative">
+                    <p data-i18n-id="s-9700"><strong>Lülita välja peaks olema sisu päiste test tabelite sees</strong></p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <table>
+              <thead>
+                <tr>
+                  <th class="positive" data-i18n-id="s-3760"></th>
+                  <th class="negative" data-i18n-id="s-e701">Tühjad päised</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="negative">
+                  <th data-i18n-id="s-1e72">Leidsin</th>
+                  <td data-i18n-id="s-ab85">700 kilpkonnavideot</td>
+                </tr>
+                <tr class="negative">
+                  <th data-i18n-id="s-fbc2">Igaüks</th>
+                  <td data-i18n-id="s-7836">2 sekundit pikk</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+          <section id="legibility">
+            <h3 data-section="legibility" data-i18n-id="s-8596">Loetavus</h3>
+
+            <div class="positive">
+              <p data-i18n-id="s-5df2">MITME SUURTÄHELISE SÕNA JÄRJESTIKUNE RIDA KÄIVITAB KÄSITSI KONTROLLIMISE HOIATUSE.</p>
+            </div>
+
+            <p class="positive" data-i18n-id="s-bf95"><u>Allajoonitud tekst</u></p>
+
+            <p class="positive" data-i18n-id="s-6979"><em>Natuke kursiivis on fine, kuid suured kaldkirja tekstiplokid pole väga
+                loetavad. Natuke on muidugi vastuvõetav, kuid on piirid ja terve lõik on liiga palju.
+                See, näiteks, on terve lõik. See on natuke raske lugeda, eks? Kuid see test ei
+                käivitu enne, kui see on nii pikk, nii et te ei tohiks näha valehoiatusi oma sisus, välja arvatud juhul, kui kirjutate
+                tõesti suuri lõike regulaarselt.</em></p>
+
+            <p class="positive" style="text-align: justify;" data-i18n-id="s-19a2">Joondatud tekst</p>
+
+            <p class="positive" data-i18n-id="s-d9c4">Ülemäärane ülaindeks või alaindeks; <sub>alaindeksit tuleks kasutada väikeste viidete
+                ja joonealuste märkuste jaoks, mitte tervete lausete või lõikude jaoks.</sub></p>
+
+            <p class="positive" data-i18n-id="s-d136"><span style="font-size: 10px;">Väga väike font</span></p>
+
+            <div class="positive">
+              <p data-i18n-id="s-38f1">* Võltsloendid tavaliste märkide abil,</p>
+              <p data-i18n-id="s-ed7f">* tähed, numbrid ja emojid.</p>
+            </div>
+
+            <div class="positive">
+              <li data-i18n-id="s-83f0">Puuduv UL-silt</li>
+            </div>
+          </section>
+
+          <section id="form-elements">
+            <h3 data-section="form-elements" data-i18n-id="s-68c5">Vormid</h3>
+
+            <p data-i18n-id="s-0d4e">Nupp ilma sildita</p>
+            <div class="positive">
+              <button class="btn btn-primary p-3 pt-4" data-i18n-id="s-6e2d"></button>
+            </div>
+
+            <p data-i18n-id="s-296d">Sisendid nähtamatu sildiga, mis küsivad, kas on ka nähtav silt.</p>
+            <div class="positive">
+              <input type="text" title="Email" />
+            </div>
+
+            <p data-i18n-id="s-7c79">Sisendid ainult kohahoidja sildiga, mis küsivad, kas on ka nähtav silt.</p>
+            <div class="positive">
+              <input type="text" placeholder="Email" />
+            </div>
+
+            <div class="positive">
+              <p data-i18n-id="s-d629">Nupp juurdepääsetava sildiga, mis erineb tema nähtavast sildist.</p>
+              <button class="btn btn-primary" aria-label="bye" data-i18n-id="s-d5c2">Tere</button>
+            </div>
+
+            <div class="positive">
+              <p data-i18n-id="s-96f6">Nupp vigase aria-labelledby atribuudiga.</p>
+              <button class="btn btn-primary" aria-labelledby="bye" data-i18n-id="s-e158">Tere</button>
+            </div>
+
+            <div class="positive">
+              <p data-i18n-id="s-5477">Nupp üleliigse sildiga.</p>
+              <button class="btn btn-primary" data-i18n-id="s-a933">Vajutage seda nuppu</button>
+            </div>
+
+            <div class="positive">
+              <p data-i18n-id="s-1764">Lähtesta nupp.</p>
+              <input class="btn btn-danger" type="reset" />
+            </div>
+
+            <p class="positive" data-i18n-id="s-7c9a"><a href="./editable.htm" tabindex="2">Tabelduse järjekorra rikkumine</a></p>
+          </section>
+
+
+
+
+
+
+        </div>
+      </div>
+    </div>
+
+  </main>

@@ -1,0 +1,364 @@
+<main class="container col-lg-12 mx-auto py-5">
+    <div class="row docs">
+      <div class="col-12 col-md-5 col-lg-4 mb-5">
+        <div id="on-this-page" class="list-group ms-2 ms-lg-5 position-sticky top-0 pt-3">
+        </div>
+      </div>
+      <div class="col-12 col-md-7 col-lg-8 pt-3" data-bs-spy="scroll" data-bs-target="#on-this-page"
+        data-bs-smooth-scroll="true">
+        <h1 data-i18n-id="s-fe89">インストールと設定</h1>
+
+        <section id="modules">
+          <h2 class="pt-3 pb-2" data-i18n-id="s-6f09">設定済みバージョン</h2>
+          <ul class="list-unstyled ps-0">
+            <li data-i18n-id="s-a850"><a href="https://www.drupal.org/project/editoria11y" class="arrow"><strong>Drupal インストーラー</strong></a>
+            </li>
+            <li data-i18n-id="s-c7b0"><a href="https://wordpress.org/plugins/editoria11y-accessibility-checker/"
+                class="arrow"><strong>WordPress インストーラー</strong></a></li>
+            <li data-i18n-id="s-128f"><a href="https://codeberg.org/sebastiangreger/kirby-a11yprompter" class="arrow"><strong>Kirby
+                  インストーラー</strong></a> <em>(コントリビュート)</em></li>
+            <li data-i18n-id="s-4002"><a href="https://plugins.craftcms.com/editoria11y" class="arrow"><strong>CraftCMS インストーラー</strong></a>
+              <em>(コントリビュート)</em>
+            </li>
+          </ul>
+        </section>
+        <section id="diy">
+          <h2 data-i18n-id="s-cef2">
+            カスタムインストール
+          </h2>
+          <p data-i18n-id="s-df5a">独自の実装を構築するには、言語パック・JS min ファイル・CSS min ファイルの<a href=”https://github.com/itmaybejj/editoria11y”
+              data-type=”URL” data-id=”https://github.com/itmaybejj/editoria11y”
+              class=”liinternal”>ローカルコピーをダウンロード</a>（または<a               href=”https://cdn.jsdelivr.net/gh/itmaybejj/editoria11y@2/dist/editoria11y.min.js” class=”liinternal”>CDN
+              バージョン</a>を参照）して、新しい “Ed11y” インスタンスを作成してください。</p>
+          <p data-i18n-id="s-4e8a"><strong>ESM/JS モジュールのインポート</strong>の場合：</p>
+          <pre class="language-markup"><code><!--// Load CSS
+<link href="/dist/css/editoria11y.min.css?v=3.0" rel="stylesheet">
+// Load JS and language pack
+<script type="module">
+  import Ed11y from “/dist/js/ed11y.esm.min.js?v=3.0”;
+  import ed11yLang from “/dist/js/lang/en.js”;
+  // Instantiate with language and CSS
+  const ed11y = new Ed11y.Ed11y({
+    lang: ‘en’,
+    cssUrls: [“/dist/css/editoria11y.min.css”]
+  });
+</script>
+--></code></pre>
+          <p data-i18n-id="s-b7f0">レガシーブラウザやシステムには .umd JavaScript ファイルを使用してください：</p>
+          <pre class="language-markup"><code><!--
+// Call CSS, JS and a Language Pack
+<link href="/dist/editoria11y.min.css" rel="stylesheet">
+<script src="/dist/js/ed11y.umd.js"></script>;
+<script src="/dist/js/lang/en.umd.js"></script>
+// Create a new Ed11y instance
+<script>
+  const ed11y = new Ed11y.Ed11y({
+    lang: ‘en’,
+    cssUrls: [“/dist/css/editoria11y.min.css”]
+  });
+</script>
+                --></code></pre>
+        </section>
+
+        <section id="params">
+          <h2 data-i18n-id="s-c50b">パラメーター</h2>
+          <p data-i18n-id="s-6877">本番環境での実装では、ログイン中の編集者のみに対して呼び出されるようにし（サイト訪問者にチェッカーを表示したくはないでしょう）、<a               href="https://github.com/itmaybejj/editoria11y/blob/3.0.x/src/js/utils/ed11y-default-options.js"
+              class="liinternal"><strong>デフォルトパラメーター</strong></a>の必要な項目を上書きできます。</p>
+          <p data-i18n-id="s-084e">すべてのパラメーターにはデフォルト値が設定されているため、変更したい項目のみ記述してください。</p>
+          <p data-i18n-id="s-a20c">カスタマイズを多く施した実装の例：</p>
+          <pre class="language-javascript"><code><!--const ed11y = new Ed11y.Ed11y({
+  // Define content regions
+  checkRoot: 'main, .footer-content-zone',
+  // Add custom CSS files
+  cssUrls: [
+    '/css/editoria11y.min.css',
+    '/css/custom.css'
+  ],
+  // Define Web components to include in checks
+  shadowComponents: 'accordion, lightbox',
+  // We want the box to open automatically for errors:
+  alertMode: 'assertive',
+  // Our external link icon has visually hidden text
+  // to delete before checking if the link has text:
+  linkIgnoreStrings: ['(opens in new window)'],
+  // Content editors cannot edit these elements:
+  ignoreElements: 'nav *, #social-block',
+  // Prevent this user from hiding alerts.
+  allowHide: false,
+  allowOK: true,
+  // Don't scan while the editor toolbar is open:
+  preventCheckingIfPresent: ".editor-toolbar",
+  // Turn off warnings that an element might be visually hidden:
+  checkVisible: false,
+  // Dispatch a JS event before highlighting this,
+  // so our JS can modify it first:
+  hiddenHandlers: ".accordion-panel",
+  // Dispatch a JS event when the library is ready
+  // for custom tests, then wait for 3 ed11yResume
+  // events from our 3 tests to continue.
+  customTests: 3,
+  checks: {
+    // Turn off the HEADING_FIRST test
+    HEADING_FIRST: false,
+    // Allow dismissing the HEADING_SKIPPED_LEVEL test
+    HEADING_SKIPPED_LEVEL: {
+       type: 'warning',
+    }
+  }
+
+}); --></code></pre>
+          <p data-i18n-id="s-18e0">ターンキー統合では、これらの変数を動的に設定するケースもよくあります。たとえば、最近編集されたページを “assertive” モードで読み込み、数分後に “polite” に切り替えるといった使い方です。</p>
+        </section>
+
+        <section id="theme">
+          <h2 data-i18n-id="s-6c0a">テーマ設定</h2>
+
+          <p data-i18n-id="s-e058">いくつかのパラメーターを使って、テーマの選択・カラーの上書き・CSS の注入が行えます。</p>
+
+          <p data-i18n-id="s-ebc7">将来のアップデートを容易にするため、変更が必要なパラメーターのみ記述してください。</p>
+          <pre             class="language-javascript"><code><!--// Add custom CSS file
+cssUrls: ['/css/editoria11y.min.css', '/css/custom.css'],
+theme : 'darkTheme', // Select base theme
+darkTheme: {         // Override base colors
+    bg: '#0a2051',
+    bgHighlight: '#7b1919',
+    text: '#f4f7ff',
+    primary: '#4930a0',
+    primaryText: '#f4f7ff',
+    secondary: '#20160c',
+    warning: '#fad859',
+    alert: '#b80519',
+    button: '#dde8ff',
+    focusRing: 'cyan',
+    activeTab: '#0a2051',
+    tipHeader: '#4930a0',
+},
+// Override fonts
+baseFontSize: 14, // px
+baseFontFamily: '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif', --></code></pre>
+        </section>
+
+        <section id="js-events">
+          <h2 class="wp-block-heading has-text-align-left has-secondary-background-color has-background has-large-font-size" data-i18n-id="s-4568">
+            便利な JS イベント</h2>
+
+          <p data-i18n-id="s-3ca2">テーマ開発者はこれらのイベントをフックして、ページへの変更や応答処理を実装できます。</p>
+
+          <p data-i18n-id="s-2fb1">通常の発生順序：</p>
+
+          <ul class="wp-block-list">
+            <li data-i18n-id="s-abfb"><strong><code>ed11yRunCustomTests</code></strong>：Results
+              オブジェクトがカスタム結果の注入を受け付ける準備ができた際に発火します。このイベントが発火するには、customTests
+              パラメーターを実行するカスタムテスト関数の数（おそらく1つ）に設定する必要があります。詳細は次のセクションをご覧ください。</li>
+
+            <li data-i18n-id="s-16d6"><strong><code>ed11yResults</code></strong>：すべてのチェックが完了した際に発火します。API 統合では Ed11y.results
+              オブジェクトからデータを取得できます。</li>
+
+            <li data-i18n-id="s-5693"><strong><code>ed11yPanelOpened</code></strong>：パネルが自動または手動で開いた際に発火します。</li>
+
+            <li data-i18n-id="s-4100"><strong><code>ed11yShowHidden</code></strong>：<code>data-ed11y-result</code> の番号と <code>viaJump</code> の
+              boolean を提供します。”ed11yShowHidden”
+              パラメーターが設定され<em><strong>かつ</strong></em>要素の親がセレクターに一致する場合のみ発火します。アコーディオン・タブ・カルーセルなど、まだ開いていないコンテナのアラートを表示するために使用します。使用例は次のセクションをご覧ください。
+            </li>
+
+            <li data-i18n-id="s-20be"><strong><code>ed11yPop</code></strong>：<code>data-ed11y-result</code> の ID と
+              <code>result</code>・<code>tip</code> オブジェクトへの参照を提供します。ツールチップが表示された際に発火し、実行時にツールチップを変更することができます。
+            </li>
+
+            <li data-i18n-id="s-a26b"><strong><code>ed11yShut</code></strong>：<code>data-ed11y-result</code> の ID を提供します。ツールチップが閉じた際に発火します。
+            </li>
+
+            <li><span data-translate data-i18n-id="s-4631"><strong><code>ed11yDismissalUpdate</code></strong>：ユーザーがアラートを非表示にしたり復元したりした際に詳細情報を提供します。API
+              統合に使用します。イベントオブジェクトには以下が含まれます：</span>
+              <ul>
+                <li data-i18n-id="s-a6bd"><code>dismissPage</code></li>
+
+                <li data-i18n-id="s-754f"><code>dismissTest</code></li>
+
+                <li data-i18n-id="s-0a00"><code>dismissKey</code></li>
+
+                <li data-i18n-id="s-c8b0"><code>dismissAction</code></li>
+              </ul>
+            </li>
+          </ul>
+          <p data-i18n-id="s-ec32">サンプルは以降のセクションでご確認いただけます。</p>
+        </section>
+
+        <section id="modify-tips">
+          <h2 class="wp-block-heading has-secondary-background-color has-background has-large-font-size" data-i18n-id="s-ac90">ツールチップのカスタマイズ
+          </h2>
+
+          <p data-i18n-id="s-edfa">ツールチップのテキストを変更するだけであれば、<code>ed11yLang.en</code> グローバル（ライブラリ呼び出し前）または
+            <code>Ed11y.M</code>（ライブラリ呼び出し後）オブジェクト内の項目を直接上書きできます。たとえば、言語パックを <code>Drupal.ed11yLang</code> にエイリアスした
+            Drupal モジュールの場合：
+          </p>
+
+          <p data-i18n-id="s-c4d7"><code>Drupal.ed11yLang.lang.testNames.title = “Please write shorter headings.”</code></p>
+
+          <p data-i18n-id="s-f0b0">これは<a href=”https://github.com/itmaybejj/editoria11y/blob/3.0.x/src/lang/baseAll.js” data-type=”link”
+              data-id=”https://github.com/itmaybejj/editoria11y/blob/2.3.x/js/ed11y-localization.js”
+              class=”liinternal”>ローカライゼーションファイルのデフォルトキー</a>にも、使用中の言語別翻訳にも適用されます。</p>
+
+          <p data-i18n-id="s-842f">Drupal モジュールは <code>editLinks</code> パラメーターを使って、ツールチップにカスタム編集リンクを追加することもできます。”Page editor” と “Layout
+            editor” にご注目ください：</p>
+
+          <figure class="wp-block-image size-full"><img loading="lazy" data-recalc-dims="1" fetchpriority="high" decoding="async" width="580" height="300" src="https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?resize=580%2C300&amp;ssl=1" alt="「Page editor」と「Layout editor」のリンクが挿入されたツールチップ。" class="wp-image-523" srcset="https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?w=1290&amp;ssl=1 1290w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?resize=600%2C311&amp;ssl=1 600w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?resize=768%2C398&amp;ssl=1 768w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?resize=1200%2C621&amp;ssl=1 1200w" sizes="(max-width: 580px) 100vw, 580px" data-i18n-id="s-6d4d" /></figure>
+
+          <p data-i18n-id="s-bcd2">そのパラメーターを設定するコードの簡略例：</p>
+          <pre class="language-javascript"><code><!--const editLinks = document.createElement('div');
+const editLink = document.createElement('a');
+      editLink.href="/node/1/edit";
+      editLink.textContent = "Edit page";
+editLinks.appendChild(editLink);
+const ed11y = new Ed11y({
+               editLinks: editLinks,
+              }); --></code></pre>
+          <p data-i18n-id="s-14d9">Drupal モジュールはさらに、<strong><code>ed11yPop</code></strong> イベントを使用して、ツールチップ表示時のコンテキストに応じて編集リンクを動的に表示・非表示にします。
+          </p>
+
+          <p data-i18n-id="s-78f4">このイベントは <code>result</code> と <code>tip</code> オブジェクトへの参照を提供します：</p>
+          <pre class="language-javascript"><code><!--// Listen for event
+document.addEventListener('ed11yPop', e => {
+  if (e.detail.result.element.closest(
+    drupalSettings.editoria11y.hide_edit_links)
+  ) {
+      e.detail.tip.shadowRoot.querySelector(
+        ‘.ed11y-custom-edit-links’
+        )?.setAttribute(‘hidden’, ‘’);
+     }
+}); --></code></pre>
+        </section>
+
+        <section id="custom-tests">
+          <h2 data-i18n-id="s-794a">カスタムテスト</h2>
+
+          <p data-i18n-id="s-921d"><strong><em>customTests</em></strong> パラメーターが<strong><em>数値</em></strong>の場合、Editoria11y はチェック中に
+            “ed11yRunCustomTests” イベントを発火し、指定した数の “<code>ed11yResume</code>” イベントを最大 500ms 待ち受けます。</p>
+
+          <p data-i18n-id="s-a897">これを活用して、カスタムテストを含む任意の数のスクリプトを呼び出し、ツールチップが描画される前に結果を結果配列に追加できます。</p>
+
+          <p data-i18n-id="s-820a">たとえば、メールから難読化された URL を含む貼り付けリンクにフラグを立てるツールチップを作成したい場合：</p>
+
+          <figure class="wp-block-image size-full"><img loading="lazy" data-recalc-dims="1" decoding="async" width="580" height="462" src="https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2023/12/Screenshot-2023-12-06-at-5.13.38-PM.png?resize=580%2C462&amp;ssl=1" alt="「URL is Safe Link Encoded」と表示されたツールチップ。" class="wp-image-323" srcset="https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2023/12/Screenshot-2023-12-06-at-5.13.38-PM.png?w=1056&amp;ssl=1 1056w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2023/12/Screenshot-2023-12-06-at-5.13.38-PM.png?resize=600%2C478&amp;ssl=1 600w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2023/12/Screenshot-2023-12-06-at-5.13.38-PM.png?resize=768%2C612&amp;ssl=1 768w" sizes="(max-width: 580px) 100vw, 580px" data-i18n-id="s-f6c3" /></figure>
+
+          <p data-i18n-id="s-a3f5">手順：</p>
+
+          <ol class="wp-block-list">
+            <li data-i18n-id="s-7c1e"><code>ed11yRunCustomTests</code> イベントのリスナーを追加する</li>
+
+            <li data-i18n-id="s-b8b0">対象の要素を見つける</li>
+
+            <li data-i18n-id="s-3ff7">ツールチップメッセージを定義する</li>
+
+            <li data-i18n-id="s-181b">Editoria11y にツールチップを描画させるために “resume” イベントを発火する：</li>
+          </ol>
+
+          <pre class="language-javascript"><code><!--document.addEventListener('ed11yRunCustomTests', function() {
+  // 1. Write your custom test. This can be anything you want.
+  //
+  // This example searches the active root using the .getElements() function,
+  // which is aware of the checkRoots and ignoreElements parameters.
+  const safeLinks = Drupal.Ed11y.getElements('a[href*="safelinks.protection.outlook.com/?"]', 'root');
+
+  // This is just a utility function for this particular test...
+  const decodeSafelink = function(url) {
+      const params = new URL(url).searchParams;
+      let decoded = params.get('url');
+      if (!!decoded) {
+            decoded = Ed11y.sanitizeForHTML(decoded);
+            return `<p>The actual URL may be:<br><em style='word-wrap: break-word;'>${decoded}</em></p>`
+      }
+      return ‘’;
+  }
+
+  // 2. Add the test name to the active language pack.
+  // Add a title:
+  Drupal.ed11yLang.lang.testNames.outlookSafeLink = ‘URL is Safe Link encoded’;
+
+  // 3. Push each item you want flagged to Ed11y.results.
+  //
+  // You must provide:
+  //   element:      The element itself
+  //   test:         A key for your test, matching step 2.
+  //   type:         warning or error
+  //   content:      The tip HTML.
+  //   position:     “beforebegin” for interactive elements,
+  //                 “afterbegin” for paragraphs and table cells.
+  //   dismiss:      false for errors,
+  //                 a unique string for manual checks.
+  safeLinks?.forEach((el) => {
+   Drupal.Ed11y.State.results.push({
+     element: el,
+     test:    ‘outlookSafeLink’,
+     type:    ‘error’,
+     content: `<div class="title">Please fix the URL in this link</div>
+               ${decodeSafelink(el.href)}
+               <div class="why">
+                <p>The URL for this link is an Outlook “Safe Link” that was copied from an email.
+                It includes the original recipient’s email address,
+                and will break if Microsoft shuts down the service.</p>
+                <p>The pasted URL is:<br>
+                <em style='word-break: break-all;font-size: 90%;line-height: 1.2;
+                display: block;'>${Drupal.Ed11y.sanitizeHTML(el.href)}</em></p>
+               </div>
+            `,
+     position: ‘beforebegin’,
+     dismiss:  false,
+   });
+  });
+  // 4. When you are done with all your custom tests, dispatch an “ed11yResume” event:
+  let allDone = new CustomEvent(‘ed11yResume’);
+  document.dispatchEvent(allDone);
+}) --></code></pre>
+        </section>
+
+        <section id="hidden-content">
+          <h2 data-i18n-id="s-a67a">非表示またはサイズ制約のあるコンテンツのアラート対処</h2>
+
+
+          <p data-i18n-id="s-be6c">タブ・スライダー・アコーディオンなど多くのインタラクティブコンポーネントはコンテンツを非表示にします。Editoria11y
+            の情報パネルには、問題箇所に直接ジャンプするための前後ボタンが含まれています。問題のツールチップが現在表示されていないと Editoria11y
+            が判断した場合、ユーザーに問題があることを通知し、最初に見つかった表示中の親要素（例：アコーディオン周囲の div）をハイライトします。</p>
+
+          <p data-i18n-id="s-4f58">理想的には、Editoria11y
+            の可視性チェックが実行される前にテーマが該当要素を表示するようにして、カルーセルが自動的に進み、アコーディオンが自動的に開いて問題を表示するといった、シームレスな動作を実現することが望まれます。</p>
+
+          <p data-i18n-id="s-7e11">パネルが最初に開いたとき（例：問題のある<strong><em>すべての</em></strong>アコーディオンパネルを展開する場合）にこれを行うには、<code>ed11yPanelOpened</code>
+            の JS イベントリスナーを追加し、関連する <code>ed11y-element-result</code> 要素に対して querySelectorAll
+            を実行して、テーマがそのページ部分を表示するために使用している関数をトリガーしてください。</p>
+
+          <p data-i18n-id="s-1c3f">jQuery を使った例です。パネルが開くと、固定メニューを無効化（要素が隠れないように）し、閉じているアコーディオンアイテム内の <code>ed11y-element-result</code>
+            要素を探してトグルボタンのクリックをシミュレートします：</p>
+          <pre class="language-javascript"><code><!--document.addEventListener("ed11yPanelOpened", function () {
+  $('body').addClass('no-stick');
+  $('ed11y-element-result').each(function () {
+    if ($(this).parents('.ps-accordion-content[style*="display"]').length > 0) {
+    $(this).parents(‘.ps-accordion-content’).prev().find(‘.ps-accordion-item-button’).click();
+    }
+}) --></code></pre>
+
+          <p data-i18n-id="s-fbae">パネルの「次へ」ボタンで<strong><em>特定の</em></strong>ツールチップにジャンプする際のみコンテンツを表示する場合（例：閉じたタブや次のカルーセルスライド）、パラメーターで
+            <code>hiddenHandlers</code> に対象の CSS セレクターを設定し、<code>checkVisible</code> を TRUE にしてください。その後
+            <code>ed11yShowHidden</code> イベントのリスナーを追加します。このイベントは、Editoria11y がオプションで指定した <code>hiddenHandlers</code>
+            セレクターに一致するコンテナ内にツールチップがあると検知した際に発火します。この JS イベントには、これから表示しようとしているツールチップの ID が含まれます。Editoria11y
+            はこのイベントを発火した後に短時間待機し、JS が要素を表示するための時間を確保します。
+          </p>
+
+          <p data-i18n-id="s-dae0">ペンシルベニア州立大学の実装例です。指定された ID に一致する要素を探し、その親のインタラクティブコンポーネントコンテナを特定して、トグルを有効化するイベントをトリガーします：</p>
+          <pre class="language-javascript"><code><!--context.addEventListener('ed11yShowHidden', e => {
+  if (!e.detail.viaJump) {
+       return;
+  }
+  context.getElementById(e.detail.id)
+    .closest(‘[data-interactive-component]’)
+    .dispatchEvent(new CustomEvent(‘component:activate’));
+}); --></code></pre>
+          <p data-i18n-id="s-d99d">注意：一部のテーマは可視性チェックと互換性がありません。たとえば <code>&lt;main&gt;</code> コンテナの高さが 0px
+            の場合などです。そのようなサイトでは、<code>checkVisible</code> を false に設定してすべての可視性チェックを無効化してください。</p>
+
+        </section>
+
+      </div><!-- コンテンツカラム終了 -->
+
+    </div>
+  </main>

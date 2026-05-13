@@ -1,0 +1,475 @@
+<!doctype html>
+<html lang="et" data-bs-theme="light">
+
+<head>
+  <link rel="icon" type="image/png" href="/assets/favicons/favicon-512x512.png" sizes="512x512" />
+  <link rel="icon" type="image/png" href="/assets/favicons/favicon-192x192.png" sizes="192x192" />
+  <link rel="icon" type="image/png" href="/assets/favicons/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/assets/favicons/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <meta charset="utf-8" />
+  <title>Funktsioonid — Editoria11y</title>
+  <link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="/assets/theme.css" rel="stylesheet" />
+  <meta name="theme-color" content="#712cf9" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-md">
+      <div class="container col-sm-12 mx-auto">
+        <a href="/et/" class="d-flex align-items-center  navbar-brand">
+          <svg class="logo-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+            viewBox="-.75 -3.5 10.1699 19.1777">
+            <path fill="currentColor"
+              d="M3.7031,10.5527c-.3633-.6562-.6426-1.1387-.8379-1.4473l-.3105-.4863-.2344-.3574c-.5117-.7969-1.0449-1.4551-1.5996-1.9746.3164-.2617.6113-.3926.8848-.3926.3359,0,.6348.123.8965.3691s.5918.7148.9902,1.4062c.4531-1.4727,1.0293-2.8691,1.7285-4.1895.3867-.7188.7314-1.2021,1.0342-1.4502s.7041-.3721,1.2041-.3721c.2656,0,.5938.041.9844.123-1.0039.8086-1.8066,1.7695-2.4082,2.8828s-1.3789,3.0762-2.332,5.8887Z" />
+          </svg> Editoria<span style="margin-left: -1px;">11</span>y
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar" aria-label="Lülita navigatsioon">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Editoria11y</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Sulge"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 nav-pills">
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div id="lang-picker"></div>
+  </header>
+  <main class="container col-lg-12 mx-auto py-5">
+    <div class="row docs">
+      <div class="col-12 col-md-5 col-lg-4 mb-5">
+        <div id="on-this-page" class="list-group ms-2 ms-lg-5 position-sticky top-0 pt-3">
+        </div>
+      </div>
+      <div class="col-12 col-md-7 col-lg-8 pt-3" data-bs-spy="scroll" data-bs-target="#on-this-page"
+        data-bs-smooth-scroll="true" tabindex="0">
+        <section id="features">
+          <h1 class="text-body-emphasis pt-2 pb-5">Funktsioonid</h1>
+          <p class="fs-6">Editoria11y põhitestid tuvastavad rohkem kui 50 levinud sisu juurdepääsetavusprobleemi; otsused,
+            mis kahjustavad loetavust, vead, mis muudavad ekraanilugejad vähem tõhusaks, ja vead, mis vähendavad SEO-d.</p>
+          <p class="fs-6">Lisandmoodulid pakuvad ~40 täiendavat testi arendajatele ja disaineritele, kohandatud teste ja erinevaid
+            ülelaiuseid kvaliteeditagamisvahendeid.</p>
+          <p class="fs-6">Sisu testid keskenduvad probleemidele, mis ilmnevad <strong>pärast</strong> seda, kui saidid on üle antud
+            sisuautoritele. Saite tuleb enne käivitamist testida käsitsi auditeerimisvahenditega, klaviatuuride ja ekraanilugejatega,
+            kuid isegi kõige juurdepääsetavam sait esimesel päeval kipub muutuma, kuna muudatused toovad uusi probleeme.</p>
+          <p class="fs-6">See, mis eristab Editoria11y-d teiste juurdepääsetavusvahendite seas, on see, et selle testid töötavad reaalajas,
+            brauseris, kui autorid muudavad ja eelvaatavad oma tööd. <strong>Autorid reageerivad tõenäolisemalt vahetule,
+              reasisesele tagasisidele</strong>, märkavad hoiatusi ja teevad parandusi, kui nad peavad meeles käima
+            armatuurlaual või käsitsi kontrollimist tegema.</p>
+        </section>
+        <section id="authoring">
+          <h2>Autori kogemus</h2>
+          <div class="clearfix">
+            <img src="/assets/images/3x-toolbar" class="image-fluid float-start me-3" alt="Editoria11y tööriistariba ekraanipilt, millel on 4 viga." width="97" height="50" loading="lazy" />
+            <p>Autorid näevad Editoria11y tööriistariba sisu muutmise ajal. Kui probleeme tuvastatakse, muutub see kollaseks või
+              punaseks ja kuvab probleemide arvu. Arvu klõpsamine kerib esimese hoiatuseni ja avab selle tööriistavihje.</p>
+          </div>
+          <div class="row">
+            <img loading="lazy" src="/assets/images/3x-generic-tip.png" class="img-fluid col-6 col-lg-8" height="798" width="1278" alt="Vihje näitab, et link on nimetatud ainult „click here&quot;." />
+            <p class="col-6 col-lg-4 align-content-center">Vihjed ilmuvad reasiseselt, probleemi lihtsakeelse kirjeldusega,
+              paranduse soovitustega ja märkustega selle kohta, miks probleem on oluline.</p>
+          </div>
+          <div class="row">
+            <img loading="lazy" class="img-fluid col-6 col-lg-8" src="/assets/images/3x-tools.jpg" height="473" width="405" alt="Pealkirja struktuuri visualiseerija, mis on kuvatud lehe peal" />
+            <p class="col-6 col-lg-4 align-content-center">Tööriistariba sisaldab täiendavaid vahendeid käsitsi kontrollimisteks,
+              sealhulgas pealkirja struktuuri ja alternatiivteksti visualiseerijaid ning loetavuse hindamist.</p>
+          </div>
+        </section>
+        <section id="admins">
+          <h2>Saidi administraatori juhtelemendid</h2>
+          <p>Kontrollija iga nähtavat aspekti saab kohandada. Parameetrid ja sündmused võimaldavad testide eemaldamist,
+            vihjete ümberkirjutamist, kohandatud testide lisamist ja kohandatud teemade seadmist.</p>
+          <p>Drupal ja WordPress pistikprogrammid lisavad täiendavaid funktsioone, nagu sünkroonitud eiramised, ülelaiuseid
+            armatuurlauad ja CSV aruannete eksport.</p>
+          <figure class="figure my-4 rounded shadow mb-5 border">
+            <img loading="lazy" class="figure-img img-fluid" src="/assets/images/3x-dashboard.png" height="765" width="1600" alt="Aruandluse armatuurlaud, mis näitab hiljutisi probleeme ja lehti kõige rohkem probleemidega." />
+            <figcaption class="figure-caption p-3 pt-2">Drupali armatuurlaud, mis sisaldab filtreeritavaid probleemide loendeid,
+              lehti probleemidega ja eiramisi.</figcaption>
+          </figure>
+        </section>
+        <section id="tests">
+          <h2 data-section="tests">Testid</h2>
+          <p class="fs-6">Editoria11y testid keskenduvad veebi kasutajakogemuse parandamisele kõigi jaoks, mõõdetuna inimeste,
+            mitte ainult tehniliste standardite järgi. Kuigi põhitestid on mõeldud aitama saavutada veebisisu juurdepääsetavuse
+            juhiseid (<a href="https://www.w3.org/WAI/WCAG22/quickref/">WCAG 2.2 AA</a>), on teised mõjutatud
+            <a href="https://www.w3.org/TR/coga-usable/">kognitiivsete ja õppimispuuete juurdepääsetavuse töörühma</a> tööst,
+            samuti üldistest kasutatavuse ja disaini parimatest praktikatest.</p>
+          <p class="fs-6 pb-3">Üksikuid teste saavad saidi administraatorid välja lülitada.</p>
+          <div class="row listgrid">
+            <div class="col-12 col-xl-4">
+              <h3 class="fs-5 nomenu pt-0">Pildi alternatiivtekst</h3>
+              <ul>
+                <li>Pildil puudub alt-atribuut</li>
+                <li>Alternatiivtekst on failinimetus</li>
+                <li>Alternatiivtekst on kohatäide ("TBD")</li>
+                <li>Alternatiivtekst on hääldamatud sümbolid</li>
+                <li>Alternatiivtekst sisaldab üleliigseid sõnu ("pilt...")</li>
+                <li>Alternatiivtekst on liiga pikk</li>
+                <li>Dekoratiivsel pildil võib olla väärtus</li>
+                <li>Karuselli pilt märgitud dekoratiivseks</li>
+                <li>Subtiitritega pildil puudub alternatiivtekst</li>
+                <li>Alternatiivtekst kordab subtiitrit</li>
+              </ul>
+              <h3 class="fs-5 nomenu pt-0">Lingitud pildid</h3>
+              <ul>
+                <li>Lingitud pildil puudub alternatiivtekst</li>
+                <li>Lingitud pildi alt on URL või failinimetus</li>
+                <li>Lingitud pildi alt on kohatäide</li>
+                <li>Lingitud pildi alt on hääldamatud sümbolid</li>
+                <li>Lingitud pildi alt kirjeldab pilti, mitte linki</li>
+                <li>Lingitud pildi alt sisaldab üleliigseid sõnu</li>
+                <li>Lingitud pildi alt on liiga pikk</li>
+                <li>Pildil lingis tekstiga puudub alt-atribuut</li>
+              </ul>
+              <h3 class="fs-5 nomenu pt-0">Manustatud meedia</h3>
+              <ul>
+                <li>Video vajab subtiitreid</li>
+                <li>Heli vajab transkripti</li>
+                <li>Andmevisualisatsioon vajab juurdepääsetavat alternatiivi</li>
+                <li>Raamil puudub pealkiri</li>
+                <li>Raam on klaviatuuri navigatsioonist välistatud</li>
+                <li>Raami sisu vajab käsitsi juurdepääsetavuse kontrollimist</li>
+                <li>Lingitud dokument ei pruugi olla ekraanilugejale juurdepääsetav</li>
+                <li>PDF-il puudub juurdepääsetav alternatiiv</li>
+                <li>Pesastatud interaktiivsed paigutuskomponendid</li>
+              </ul>
+            </div>
+            <div class="col-12 col-xl-4">
+              <h3 class="fs-5 nomenu pt-0">Tähenduslikud lingid</h3>
+              <ul>
+                <li>Tühi link</li>
+                <li>Lingi tekst on URL</li>
+                <li>Lingi tekst on ainult DOI number</li>
+                <li>Lingi tekst ütleb „klõpsake siia"</li>
+                <li>Lingi tekst on ainult üldised sõnad ("loe rohkem")</li>
+                <li>Erinevad lingid jagavad sama teksti</li>
+                <li>Lingitud ikoonil või pildil puudub tekstialternatiiv</li>
+                <li>Link avaneb uues vahekaardis ilma hoiatuseta</li>
+                <li>Link viitab failile ilma hoiatuseta</li>
+                <li>Lingi tekst on ainult sümbolid või emojid</li>
+                <li>Tähenduslik lingi tekst peidetud nägevatelt kasutajatelt</li>
+                <li>Üleliigne lingi tööriistavihje</li>
+                <li>Katkine lehesisene ankrulink</li>
+                <li>Duplikaatne ID atribuut</li>
+                <li>Link võib viidata arenduskeskkonnale</li>
+              </ul>
+              <h3 class="fs-5 nomenu pt-0">Pealkirjad</h3>
+              <ul>
+                <li>Lehel puudub pealkiri 1</li>
+                <li>Esimene pealkiri on alapealkiri</li>
+                <li>Pealkiri jättis taseme vahele</li>
+                <li>Pealkiri on tühi</li>
+                <li>Pealkirjana kasutatav pilt vajab alternatiivteksti</li>
+                <li>Pealkiri on väga pikk</li>
+                <li>Rasvane lõik võib olla pealkiri</li>
+                <li>Lühike tsitaadiplokk võib olla pealkiri</li>
+              </ul>
+              <h3 class="fs-5 nomenu pt-0">Teksti loetavus</h3>
+              <ul>
+                <li>Ülemäärane suurtähtedega tekst</li>
+                <li>Suur rasvase või kaldkirja tekstiplokk</li>
+                <li>Tekst on liiga väike</li>
+                <li>Mittelingi tekst on allajoonitud</li>
+                <li>Tekst on joondatud</li>
+                <li>Ülaindeks või alaindeks kasutatakse valesti vormindamiseks</li>
+                <li>Võltsloend, mis kasutab märke või sümboleid</li>
+                <li>Loendiüksus väljaspool loendit</li>
+              </ul>
+
+            </div>
+            <div class="col-12 col-xl-4">
+              <h3 class="fs-5 nomenu pt-0">Värvikontrastsus</h3>
+              <ul>
+                <li>Tekstil on ebapiisav kontrastsus</li>
+                <li>Teksti kontrastsus vajab käsitsi kontrollimist</li>
+                <li>Ikoonil või graafilisel elemendil on ebapiisav kontrastsus</li>
+                <li>Ikooni või graafilise elemendi kontrastsus vajab käsitsi kontrollimist</li>
+                <li>Sisendi tekstil on ebapiisav kontrastsus</li>
+                <li>Kohatäite tekstil on ebapiisav kontrastsus</li>
+              </ul>
+              <h3 class="fs-5 nomenu pt-0">Tabelid</h3>
+              <ul>
+                <li>Tabelil puudub päiserida või -veerg</li>
+                <li>Tabeli päiselahter on tühi</li>
+                <li>Sisu pealkiri kasutatud tabeli sees</li>
+              </ul>
+              <h3 class="fs-5 nomenu pt-0">Vormid & interaktiivsed elemendid</h3>
+              <ul>
+                <li>Nupul puudub juurdepääsetav silt</li>
+                <li>Nupul on kehtetu ARIA silt</li>
+                <li>Nupu silt sisaldab sõna „nupp"</li>
+                <li>Nähtav silt ei vasta juurdepääsetavale nimele</li>
+                <li>Sisendil puudub seotud silt</li>
+                <li>Sisend kasutab ainult nähtamatut silti</li>
+                <li>Sisend kasutab ainult kohatäidet sildina</li>
+                <li>Lähtesta nupp võib põhjustada juhuslikku andmekadu</li>
+                <li>Element on ekraanilugejate eest peidetud, kuid on endiselt klaviatuuriga fokuseritav</li>
+                <li>Positiivne tabindex rikub lugemis- ja tabelduse järjekorra</li>
+              </ul>
+              <h3 class="fs-5 nomenu pt-0">Lehe metaandmed</h3>
+              <ul>
+                <li>Lehe pealkiri puudub</li>
+                <li>Lehe keelt ei ole deklareeritud</li>
+                <li>Vaateaken takistab teksti skaleerimist</li>
+                <li>Leht uueneb automaatselt</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section class="row mt-5 pt-5" id="csa">
+          <h2 class="pt-3" data-section="csa">CSA funktsioonid</h2>
+
+          <p class="fs-5">
+            Editoria11y edendab juurdepääsetavust ainulaadsel viisil. Selle tööriistad on väga tõhusad, aidates mittetehnilisi
+            autoreid koostada sisu, mida puuetega veebikasutajad saavad võrdselt nautida. Peame seda avalikuks hüveks,
+            seega <strong>Editoria11y on alati tasuta kasutatav</strong>.
+          </p>
+          <p class="fs-5">
+            Editoria11y ei ole aga tasuta arendada ega toetada.
+          </p>
+          <p class="fs-5">
+            CSA täidab lünga: projekti liikmed rahastavad Editoria11y teegi, selle CMS-i pistikprogrammide arendamist ning
+            CSA komplekti: kiiresti kasvavat avatud lähtekoodiga kvaliteeditagamisvahendite komplekti, mis pakub sarnaseid
+            funktsioone ärilistele toodetele, palju madalama hinnaga.
+
+            CSA komplekt Drupalile on praegu tasuta beetaversioonis ja saabub WordPressi Q3 2026.
+          </p>
+          <figure class="figure my-4 shadow border rounded p-0 m-2 col-sm-12 col-xl-11">
+            <img alt="Saidi roomamine on pooleli" src="../../assets/images/3x-crawl.png" height="786" width="1986" class="img-fluid rounded-top figure-img" />
+            <figcaption class="figure-caption p-2 pt-2">CSA roomaja värskendab armatuurlauda.</figcaption>
+          </figure>
+
+        </section>
+        <section id="csa-tools" class="pb-5 mt-5 row g-5">
+
+          <div class="mt-2">
+            <h3 class="pt-3" data-section="csa-tools">CSA tööriistad</h3>
+            <ul class="fs-5">
+              <li>
+                Arendaja, loetavuse ja kontrastsuse testid.
+              </li>
+              <li>
+                Rollipõhine eraldatud konfiguratsioon arendajatele ja sisuloojatele.
+              </li>
+              <li>
+                Kohandatud testide koostajad.
+              </li>
+              <li>
+                Ühe klõpsuga ülelaiused eiramised
+              </li>
+              <li>
+                Armatuurlaua hooldustööriistad ja saidi roomajad
+              </li>
+            </ul>
+            <img alt="Värvivalija testi tööriistavihjes" src="../../assets/images/3x-colors.png" height="1022" width="1288" class="img-fluid col-sm-12 col-xl-9 mt-0 p-0" />
+          </div>
+
+        </section>
+        <section id="benefits" class="pb-5 mt-5 row g-5">
+
+
+          <div class="">
+            <h3 class="pt-0" data-section="benefits">CSA liikmelisuse eelised</h3>
+            <ul class="fs-5">
+              <li>Prioriteetne tugi.</li>
+              <li>Kaalutud mõju projekti teemaplaanikavale.</li>
+              <li>Automaatne juurdepääs uutele teemaplaanikava funktsioonidele.</li>
+              <li>Otsene seadistuse abi (sõltuvalt tasemest).</li>
+              <li><a href="https://form.jotform.com/260627656020150">Avalik toetaja krediit</a> (sõltuvalt tasemest/taotluse korral; tingimused kehtivad).</li>
+            </ul>
+          
+            <h3 class="nomenu">Huvitatud?</h3>
+            <p class="fs-5">CSA komplekti toetatakse panusta-mida-suudad-mudeli kaudu. Editoria11y põhiosa, nii teek kui ka pistikprogrammid, jääb igaveseks tasuta.</p>
+            <p class><a class="btn btn-primary" href="/et/hinnad/">Liitu CSA-ga</a></p>
+
+          </div>
+
+        </section>
+
+
+
+
+
+        <h2 id="projects" data-section="false">CSA sponsoreeritud projektid</h2>
+        <section id="active-projects">
+          <h3 class="pt-4" data-section="active-projects">Aktiivne</h3>
+          <div class="accord">
+            <details>
+              <summary>
+                K2 2026: Käivita Editoria11y CSA kogukond
+              </summary>
+              <div>
+                <p>Järelejäänud töö:</p>
+                <ul class="fs-6">
+                  <li>
+                    Loo tellimuste ja sponsoreerumiste töötlemiseks fiskaalne üksus.
+                  </li>
+                  <li>
+                    Seadista litsentsisüsteem.
+                  </li>
+                </ul>
+              </div>
+            </details>
+            <details>
+              <summary>
+                K2 2026: Kohandatud reeglite koostaja
+              </summary>
+              <div>
+                <ol class="fs-6">
+                  <li>Drupalile lõpetatud.</li>
+                  <li>Teha: vii koostaja WordPressi üle.</li>
+                </ol>
+              </div>
+            </details>
+            <details>
+              <summary>
+                K3 2026: Porta 3.x teek WordPressi
+              </summary>
+              <div>
+                <ol class="fs-6">
+                  <li><span data-translate>Loo CSA alammoodul kogukonna toetatavate funktsioonidega</span>
+                    <ul>
+                      <li>Loo armatuurlaua hooldustööriistad, et kustutada aegunud tulemused ja uuesti roomata olemasolev sisu.</li>
+                      <li>Võimalda teatud testide märkimine OK-ks üle kogu saidi, mitte ainult ühel lehel.</li>
+                      <li>Võimalda eraldatud konfiguratsioon, eraldi seadistuste ja testidega arendajatele ja sisuautoritele.</li>
+                    </ul>
+                  </li>
+                </ol>
+              </div>
+            </details>
+          </div>
+        </section>
+        <section id="finished">
+          <h3 data-section="finished" class="pt-5">Hiljuti lõpetatud</h3>
+          <div class="accord">
+            <details>
+              <summary>
+                K1 2026: Teegi 3.x ümberkiri
+              </summary>
+              <div>
+                <ul class="fs-6">
+                  <li>
+                    Ühenda Editoria11y ja Sa11y reeglistikud. Alates hargnemisest kirjutas Sa11y ~50 täiendavat testi ja võttis kasutusele ESM-i tööriistad, ning Editoria11y rakendas jõudluse parandusi ja lisas parameetreid reaalajas kontrollimise lubamiseks. Sa11y 4.2.2 ja Editoria11y 3.0.0 alustab meie ühist tulevikku.
+                  </li>
+                  <li>
+                    Lisa „eraldatud konfiguratsioon" tugi, et lubada arendajatele ja sisuloojatele eraldi reeglistikke.
+                  </li>
+                  <li>Lisa masintõlked hiina, taani, hollandi, saksa, kreeka, ungari, itaalia, jaapani,
+                    norra (bokmål), poola, portugali (Brasiilia), portugali (Portugal), hispaania, rootsi ja ukraina keeles
+                    inimlike täiustuste mallidena.</li>
+                  <li><em class="fs-6 lh-1"><strong>Praegune olek</strong>: kodeerimistöö on lõpetatud; märgistatakse väljalase
+                      pärast dokumentatsiooni ja demote uuendamist.</em></li>
+                </ul>
+              </div>
+            </details>
+            <details>
+              <summary>
+                K1 2026: Drupali mooduli 3.x ümberkiri
+              </summary>
+              <div>
+                <ol class="fs-6">
+                  <li>Laiendage armatuurlauda tugevamate aruandlus- ja filtreerimisvahenditega.</li>
+                  <li>Lisa masintõlked hiina, taani, hollandi, saksa, kreeka, ungari, itaalia, jaapani,
+                    norra (bokmål), poola, portugali (Brasiilia), portugali (Portugal), hispaania, rootsi ja ukraina keeles
+                    inimlike täiustuste mallidena.</li>
+                  <li>Tee CSV ekspordifunktsioonid kohandatavaks</li>
+                  <li><span data-translate>Loodi CSA alammoodul kogukonna toetatavate funktsioonidega</span>
+                    <ul>
+                      <li>Loo armatuurlaua hooldustööriistad, et kustutada aegunud tulemused ja uuesti roomata olemasolev sisu.</li>
+                      <li>Võimalda teatud testide märkimine OK-ks üle kogu saidi, mitte ainult ühel lehel.</li>
+                      <li>Võimalda eraldatud konfiguratsioon, eraldi seadistuste ja testidega arendajatele ja sisuautoritele.</li>
+                    </ul>
+                  </li>
+                </ol>
+              </div>
+            </details>
+          </div>
+        </section>
+        <section id="project-ideas">
+          <h3 data-section="project-ideas" class="pt-5">Arutelu all</h3>
+          <p>Arutage ja hääletage neid ideid <a               href="https://github.com/itmaybejj/editoria11y/discussions">Editoria11y teegi foorumites</a>.</p>
+          <p>Ideed on märgistatud raskuse/prioriteedi hinnangutega vastavalt praegusele kogukonna vestlusele.</p>
+          <ul class="mt-1 p-5 pt-0">
+            <li>Mitme saidi jälgimise armatuurlaud</li>
+            <li>Katkiste linkide tuvastamine</li>
+            <li>PDF-i skannimine</li>
+            <li>Tööriistavihje koodi asukoha vahekaart</li>
+            <li>Tööriistavihje lehe aruande eksport</li>
+            <li>Märgistatud sõnad</li>
+            <li>CLI arendaja tööriistad</li>
+            <li>Järjehoidjad/brauseri pistikprogrammid</li>
+            <li>ACT reeglite valideerimine</li>
+            <li>Laienda nimi/roll/väärtus valideerimist</li>
+          </ul>
+        </section>
+
+
+      </div>
+
+
+    </div>
+  </main>
+  <footer class="container col-lg-12 mx-auto pt-3 text-body-secondary text-center text-md-start">
+    <div class="container">
+      <div class="footer-nav text-center">
+        <a class="btn btn-primary btn-lg" data-slug="about" href="/et/">Meist</a>
+        <a class="btn btn-primary btn-lg" data-slug="features" href="/et/funktsioonid/">Funktsioonid</a>
+        <a class="btn btn-primary btn-lg" data-slug="demo" href="/et/demo/">Demo</a>
+        <a class="btn btn-primary btn-lg" data-slug="license" href="/et/hinnad/">Hinnad ja panustamine</a>
+      </div>
+      <div class="row footer">
+        <div class="col col-3">
+          <a href="https://github.com/itmaybejj/editoria11y"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+              height="20" fill="currentColor" class="bi bi-git" viewBox="0 0 16 16">
+              <path
+                d="M15.698 7.287 8.712.302a1.03 1.03 0 0 0-1.457 0l-1.45 1.45 1.84 1.84a1.223 1.223 0 0 1 1.55 1.56l1.773 1.774a1.224 1.224 0 0 1 1.267 2.025 1.226 1.226 0 0 1-2.002-1.334L8.58 5.963v4.353a1.226 1.226 0 1 1-1.008-.036V5.887a1.226 1.226 0 0 1-.666-1.608L5.093 2.465l-4.79 4.79a1.03 1.03 0 0 0 0 1.457l6.986 6.986a1.03 1.03 0 0 0 1.457 0l6.953-6.953a1.03 1.03 0 0 0 0-1.457" />
+            </svg> <strong>Teek</strong></a>
+        </div>
+        <div class="col col-3">
+          <a href="https://github.com/itmaybejj/editoria11y/discussions"><svg xmlns="http://www.w3.org/2000/svg"
+              width="20" height="20" fill="currentColor" class="bi bi-chat-right-heart-fill" viewBox="0 0 16 16">
+              <path
+                d="M16 2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h9.586a1 1 0 0 1 .707.293l2.853 2.853a.5.5 0 0 0 .854-.353zM8 3.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132" />
+            </svg> <strong>Foorum</strong></a>
+        </div>
+        <div class="col col-3">
+          <a href="https://github.com/itmaybejj/editoria11y/issues"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+              height="20" fill="currentColor" class="bi bi-patch-plus-fill" viewBox="0 0 16 16">
+              <path
+                d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01zM8.5 6v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 1 0" />
+            </svg> <strong>Probleemid</strong></a>
+        </div>
+        <div class="col col-3">
+          <a href="/et/kontaktid/"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+              class="bi bi-person-lines-fill" height="24" width="24" viewBox="0 0 16 18">
+              <path
+                d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z">
+              </path>
+            </svg> <strong>Kontaktid</strong></a>
+        </div>
+        <div class="col col-12 subfooter">
+          <a href="/et/privaatsuspoliitika/">Privaatsuspoliitika</a>
+          <a href="/et/kupsiste-poliitika/">Küpsiste poliitika</a>
+          <a href="/et/kasutustingimused/">Kasutustingimused</a>
+          <a href="/et/oiguslik-teave/">Õiguslik teave</a>
+          <span>&copy; 2026 Editoria11y LLC</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="/assets/bootstrap/js/bootstrap.bundle.min.js" class="astro-vvvwv3sm"></script>
+  <script src="/assets/lang/i18n.js"></script>
+  <script src="/assets/theme.js"></script>
+</body>
+
+</html>

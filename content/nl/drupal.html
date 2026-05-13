@@ -1,0 +1,496 @@
+<main class="container col-lg-12 mx-auto py-5">
+    <div class="row docs">
+      <div class="col-12 col-md-5 col-lg-4 mb-5">
+        <div id="on-this-page" class="list-group ms-2 ms-lg-5 position-sticky top-0 pt-3">
+        </div>
+      </div>
+      <div class="col-12 col-md-7 col-lg-8 pt-3">
+        <div data-bs-spy="scroll" data-bs-target="#on-this-page" data-bs-smooth-scroll="true">
+          <h1 data-i18n-id="s-e367">Editoria11y voor Drupal</h1>
+          <section id="features">
+            <h2 class="pt-3" data-i18n-id="s-1dcf">Kernfuncties</h2>
+
+            <p class="fs-6" data-i18n-id="s-a8c0">De Drupal-module verbindt de checker-bibliotheek met de redactionele backend
+              en voegt talrijke server-side tools toe voor rapportage, beheer en configuratie</p>
+
+            <figure class="figure my-4 row">
+              <div class="col-lg-8">
+                <img loading="lazy" src="/assets/images/3x-editing.png" class="rounded border figure-img img-fluid" height="1088" width="2237" alt="Drupal-editor met inline tips" data-i18n-id="s-ee36" />
+              </div>
+              <figcaption class="figure-caption col-lg-4" data-i18n-id="s-8e69">Problemen worden zowel bij het laden van de frontend als
+                tijdens het typen in CKEditor en Gutenberg gedetecteerd.</figcaption>
+            </figure>
+
+            <figure class="figure my-4 row">
+              <div class="col-lg-8">
+                <img loading="lazy" src="/assets/images/3x-generic-tip.png" class="rounded border figure-img img-fluid" height="798" width="1278" alt="Tip geeft aan dat een link alleen de naam 'klik hier' heeft." data-i18n-id="s-1639" />
+              </div>
+              <figcaption class="figure-caption col-lg-4" data-i18n-id="s-9881">Tooltips krijgen knoppen om naar de editor te springen, de
+                melding te negeren (voor de actieve gebruiker) of als OK te markeren (voor alle gebruikers). Herhaalde
+                meldingen bieden pagina- of sitebrede acties.
+              </figcaption>
+            </figure>
+
+            <figure class="figure my-4 row">
+              <div class="col-lg-8">
+                <img loading="lazy" src="/assets/images/3x-drupal-custom-tests.png" class="rounded border figure-img img-fluid" alt="Interface voor het bouwen van aangepaste tests met velden voor de titel en inhoud van de tip, evenals element-selectors en uitsluitingen." data-i18n-id="s-0830" />
+              </div>
+              <figcaption class="figure-caption col-lg-4">
+                <p class="mb-2" data-i18n-id="s-37bf">De CSA-submodule voegt toe:</p>
+                <ul class="ps-3">
+                  <li data-i18n-id="s-caff"><strong>Een bouwer voor aangepaste tests</strong></li>
+                  <li data-i18n-id="s-b145">40+ ontwikkelaarstests</li>
+                  <li data-i18n-id="s-f55d">Contrastcontrole</li>
+                  <li data-i18n-id="s-b70c">Site-crawlers</li>
+                  <li data-i18n-id="s-5377">Leesbaarheidsanalyse</li>
+                  <li data-i18n-id="s-6602">Gesplitste configuraties voor ontwikkelaars/redacteuren</li>
+                </ul>
+              <span data-translate data-i18n-id="s-bc47"></figcaption>
+            </figure>
+
+            <figure class="figure">
+              <img loading="lazy" class="figure-img img-fluid rounded border" src="/assets/images/3x-dashboard.png" height="765" width="1600" alt="Rapportagedashboard met recente problemen en pagina's met de meeste problemen." data-i18n-id="s-2559" />
+              <figcaption class="figure-caption p-3 pt-2" data-i18n-id="s-cdbf">Een sitebreed dashboard biedt filterbare en
+                exporteerbare rapporten van meldingen en afwijzingen.</figcaption>
+            </figure>
+
+          </section>
+          <h2 data-i18n-id="s-8fec">Installatie en belangrijkste stappen</h2>
+          <p data-i18n-id="s-7627">Het <a href="https://www.drupal.org/project/editoria11y/">gebundelde installatiepakket</a> op Drupal.org
+            bevat meerdere modules:</p>
+          <ul>
+            <li data-i18n-id="s-b830">
+              Editoria11y: de kerninhoudscontrole en het dashboard.
+            </li>
+            <li data-i18n-id="s-b351">
+              Editoria11y CSA: ontwikkelaarstests en dashboardonderhoudstools.
+            </li>
+            <li data-i18n-id="s-74fe">
+              Editoria11y Export: CSV-rapportagetools.
+            </li>
+          </ul>
+          <p data-i18n-id="s-88fd">Installeer zoals elke andere module en voer vervolgens deze belangrijkste stappen uit:</p>
+          <ol>
+            <li data-i18n-id="s-7187"><strong>Controleer rechten.</strong> Vertrouwde auteurs moeten "Mark OK," "Mark as Ignored" en "View the
+              dashboard" hebben.</li>
+            <li data-i18n-id="s-1ac1"><strong>Controleer belangrijke pagina's op herhalende of nutteloze meldingen.</strong> Markeer ze als OK
+              in de tooltip, of pas de configuratie aan om elementen via selector te negeren.</li>
+            <li data-i18n-id="s-e5b2">Zoek naar tips die moeilijk te zien zijn – buiten het scherm, afgekapt, achter andere elementen, of op
+              verborgen elementen. Gebruik de tips in "Verborgen of buiten beeld geplaatste tips oplossen" hieronder om
+              dit te verhelpen.</li>
+            <li data-i18n-id="s-c564">Als de site al inhoud heeft en u een CSA-abonnement heeft, bezoek dan het tabblad "recheck" van het
+              dashboard en <strong>crawl de site</strong> om de siterapporten voor te laden. Dit is optioneel, maar
+              oudere pagina's verschijnen niet in rapporten totdat ze zijn gecrawld of bezocht door een ingelogde
+              gebruiker.</li>
+          </ol>
+          <p data-i18n-id="s-e025">Bekijk een <a href="https://youtu.be/uYvNYPg38nU?si=dqADyWpTtOhniHTP&t=696">video-introductie van de
+              configuratieopties</a> (v2.4).</p>
+
+          <h2 id="check-roots" data-i18n-id="s-9202">Nutteloze meldingen verbergen</h2>
+          <p data-i18n-id="s-fa47">
+            <strong>Goede configuraties onderdrukken nutteloze meldingen, zodat inhoudsauteurs zich kunnen richten op
+              problemen die ze daadwerkelijk moeten oplossen</strong>.
+          </p>
+          <p data-i18n-id="s-996e">Hoewel u tests volledig kunt uitschakelen, is het doorgaans beter om meldingen op specifieke elementen of
+            pagina's te verbergen.</p>
+          <hr/>
+          <p data-i18n-id="s-7918">
+            Bij elke testrun verzamelt Editoria11y één set elementen uit de instelling "Controleer inhoud in deze
+            containers" en filtert die vervolgens meerdere keren. Dit is hoe een testrun eruit ziet:
+          </p>
+          <ol>
+            <li data-i18n-id="s-994a">
+              Controle annuleren als de configuratie controle op deze pagina of voor deze gebruiker verhindert.
+            </li>
+            <li data-i18n-id="s-10c9">
+              <strong>Verzamel</strong> elementen in opgegeven paginaregio's,
+              bijv.:<br/><code>body > *:not('.ed11y-element')</code><br/>
+              <em>Voor Editoria11y CSA-gebruikers zijn dit de regio's op het tabblad
+                <strong>Ontwikkelaarstests</strong>.</em>
+            </li>
+            <li data-i18n-id="s-7524">
+              <strong>Verwijder</strong> elementen die overeenkomen met negeringsselectors,
+              bijv.:<br/><code>.widgets, .utility-menu</code><br/>
+              <em>Voor Editoria11y CSA-gebruikers zijn dit de selectors op het tabblad
+                <strong>Ontwikkelaarstests</strong>.</em>
+            </li>
+            <li data-i18n-id="s-58d0">
+              Voer tests uit en synchroniseer resultaten naar het dashboard.
+            </li>
+            <li>
+              <span data-translate data-i18n-id="s-f8c6">Als de gesplitste configuratie actief is en de gebruiker een inhoudsredacteur is, filter dan
+              ontwikkelaarsresultaten:</span>
+              <ul>
+                <li data-i18n-id="s-72c9"><strong>Verwijder</strong> resultaten van tests ingesteld op "Alleen ontwikkelaar."</li>
+                <li data-i18n-id="s-576e"><strong>Verwijder</strong> resultaten op elementen buiten opgegeven
+                  <strong><em>inhouds</em></strong>regio's, bijv.:<br/><code>main, footer</code>
+                </li>
+                <li data-i18n-id="s-bb1d"><strong>Verwijder</strong> resultaten op elementen die overeenkomen met
+                  <strong><em>inhouds</em></strong>negeringsselectors.
+                </li>
+              </ul>
+              Let op: er is geen tweede "verzamel"-fase. De ontwikkelaarspaginaregio's moeten de inhoudsregio's
+              omvatten.</span>
+            </li>
+            <li data-i18n-id="s-b79c">Open het paneel en toon meldingen als de configuratie overeenkomt met een automatisch-openen-instelling.
+            </li>
+          </ol>
+
+          <h3 id="dismiss" data-i18n-id="s-be02">Meldingen afwijzen</h3>
+          <p data-i18n-id="s-2ae3">Tests kunnen in de bibliotheek worden geconfigureerd als fouten of waarschuwingen ("handmatige controles").
+            Waarschuwingen kunnen worden afgewezen. Er zijn twee soorten afwijzingen beschikbaar vanuit de voettekst van
+            elke tooltip:</p>
+          <div class="my-2"
+            style="background: url(/assets/images/3x-generic-tip.png) 100% 98%; max-width: 600px; padding-top: 6%; background-size: 108%;">
+          </div>
+          <ul>
+            <li data-i18n-id="s-7b65">"Ignore" wordt opgeslagen als gebruikersvoorkeur: de melding is nu verborgen voor de huidige gebruiker,
+              maar alleen voor de huidige gebruiker.</li>
+            <li data-i18n-id="s-654c">"Mark OK" verbergt de melding voor alle gebruikers.</li>
+          </ul>
+          <p data-i18n-id="s-dc14">Of een gebruiker een melding kan afwijzen, wordt bepaald op rolniveau in de gebruikersrechten van Drupal.
+            <strong>De meeste auteurs moeten meldingen kunnen afwijzen</strong>. Het heeft geen zin iemand een
+            handmatige controle toe te wijzen als diegene het item niet als gecontroleerd kan markeren.
+          </p>
+
+          <h3 id="roots" data-i18n-id="s-d932">Elementen negeren</h3>
+          <p data-i18n-id="s-9d1e">Deze twee configuratie-instellingen zijn het belangrijkst!</p>
+          <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
+            <label for="edit-content-root">Controleer inhoud in deze containers</label>
+            <div><textarea class="form-control" id="edit-content-root" name="content_root" rows="1" cols="30"
+                disabled></textarea>
+            </div>
+            <div class="mt-3">
+              <label for="edit-ignore-elements">Sla deze elementen over</label>
+              <div>
+                <textarea class="form-control" id="edit-ignore-elements" disabled name="ignore_elements" rows="1"
+                  cols="30" class=""></textarea>
+              </div>
+            </div>
+          </div>
+          <p data-i18n-id="s-6051">
+            Stel de eerste in om alle delen van de pagina op te nemen die inhoudsauteurs kunnen bewerken. Als ze
+            bijvoorbeeld het inhoudsgebied <code>main</code>, <code>.sidebar</code> en <code>.footer-column-two</code>
+            kunnen bewerken, stel die selectors dan in als uw inhoudscontrolegebied.
+          </p>
+          <p data-i18n-id="s-f29c">
+            Gebruik de tweede om subsecties "uit te sluiten". Als <code>main</code> bijvoorbeeld diverse widgets en
+            insluitingen bevat die alleen ontwikkelaars kunnen aanpassen, vermeld die dan:
+            <code>.widget-1, .social-embed</code>;
+          </p>
+          <p data-i18n-id="s-10ef">Als u de gesplitste configuratie gebruikt, ziet u een vergelijkbaar paar instellingen op het tabblad
+            Ontwikkelaarstests:</p>
+          <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
+            <div>
+              <fieldset>
+                <legend>
+                  Ontwikkelaarcontrolegebied
+                </legend>
+                <div class="fieldset__wrapper fieldset__wrapper--group">
+
+                  <div id="edit-dev-check-root">
+                    <div>
+                      <input aria-describedby="edit-dev-check-root--description" type="radio"
+                        id="edit-dev-check-root-automatic" name="dev_check_root" value="automatic" checked="checked" />
+                      <label for="edit-dev-check-root-automatic" class="form-item__label option">Alle elementen</label>
+                    </div>
+                    <div class="d-flex">
+                      <input aria-describedby="edit-dev-check-root--description" type="radio"
+                        id="edit-dev-check-root-match" name="dev_check_root" value="match"
+                        class="align-self-baseline mt-1 me-1" />
+                      <label for="edit-dev-check-root-match" class="form-item__label option">Alleen de containers
+                        vermeld op het tabblad Inhoudsinstellingen</label>
+                    </div>
+                    <div class="">
+                      <input aria-describedby="edit-dev-check-root--description" type="radio"
+                        id="edit-dev-check-root-specify" name="dev_check_root" value="specify"
+                        class="form-radio form-boolean form-boolean--type-radio" />
+                      <label for="edit-dev-check-root-specify" class="">De hieronder vermelde specifieke
+                        containers</label>
+                    </div>
+                  </div>
+
+                </div>
+              </fieldset>
+
+              <div class="">
+                <label for="edit-always-ignore" class="mt-3">Negeren voor zowel ontwikkelaars als
+                  inhoudsredacteuren</label>
+                <div class="form-textarea-wrapper">
+                  <textarea id="edit-always-ignore" class="form-control" name="always_ignore" rows="1" cols="20"
+                    placeholder=""></textarea>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+          <p data-i18n-id="s-8c02">Het belangrijkste om te weten over de ontwikkelaarscontrolegebieden is dat ze <strong>niet
+              onafhankelijk</strong> zijn van de inhoudscontrolegebieden. In een gesplitste configuratie worden de
+            ontwikkelaarsgebieden gecontroleerd, en die resultaten worden vervolgens <strong>gefilterd</strong> om
+            overeen te komen met de inhoudsgebieden. Gebieden die zijn uitgesloten voor ontwikkelaars worden ook
+            uitgesloten voor inhoudsredacteuren. Sluit bewerkbare inhoudsgebieden niet uit!</p>
+
+          <p data-i18n-id="s-0312">Sommige tests maken nauwkeurigere configuratie mogelijk, om alleen bepaalde meldingen op betreffende
+            elementen te verbergen. Zoek ze op onder:</p>
+          <ul>
+            <li data-i18n-id="s-d53d">Inhoudstest: Te controleren links</li>
+            <li data-i18n-id="s-0d1e">Inhoudstest: Te controleren insluitingen</li>
+            <li data-i18n-id="s-10c1">Inhoudstest: Dynamische en shadow-inhoud detecteren</li>
+            <li data-i18n-id="s-e6e4">Ontwikkelaarstests: Contrast</li>
+          </ul>
+
+          <h3 id="pages" data-i18n-id="s-177c">Verbergen voor specifieke pagina's of gebruikers</h3>
+          <p data-i18n-id="s-e874">
+            De eenvoudigste manier om dit te doen is door CSS-klassen of ID's door te geven aan deze opties:
+          </p>
+          <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
+            <label for="edit-no-load" class="form-item__label">Niet controleren op pagina's met deze elementen</label>
+            <div class="form-textarea-wrapper">
+              <textarea data-drupal-selector="edit-no-load" aria-describedby="edit-no-load--description"
+                id="edit-no-load" name="no_load" rows="1" cols="20" class="form-control"></textarea>
+            </div>
+
+            <label for="edit-ignore-all-if-absent" class="form-item__label">Alle meldingen verbergen op pagina's waar
+              deze elementen niet aanwezig zijn</label>
+            <div class="form-textarea-wrapper">
+              <textarea data-drupal-selector="edit-ignore-all-if-absent"
+                aria-describedby="edit-ignore-all-if-absent--description" id="edit-ignore-all-if-absent"
+                name="ignore_all_if_absent" rows="1" cols="20" class="form-control"></textarea>
+            </div>
+
+          </div>
+          <p data-i18n-id="s-0877">
+            De eerste voorkomt dat controles worden uitgevoerd, en de werkbalk wordt niet weergegeven.
+          </p>
+          <p data-i18n-id="s-5cbd">
+            De tweede start de checker geminimaliseerd en markeert automatisch (voor de huidige gebruiker) alle
+            problemen als "Ignored", zelfs als het fouten zijn. Hierdoor kunnen tests worden uitgevoerd en het dashboard
+            worden bijgewerkt zonder de gebruiker te storen.
+          </p>
+          <p data-i18n-id="s-1661">
+            Als u deze wilt gebruiken om te bepalen welke gebruikers de checker zien, moet u mogelijk uw thema aanpassen
+            om een klasse uit te voeren, bijv. <code>.user-247</code>
+          </p>
+
+          <h2 id="dashboard" data-i18n-id="s-f4d7">Sitebrede resultaten beheren</h2>
+          <section id="refresh">
+            <h3 class="pt-3" data-i18n-id="s-012a">Crawlen en resultaten bijwerken</h3>
+            <p data-i18n-id="s-75a9">Editoria11y is een <strong>realtime bewakingsinstrument, geen crawler</strong>. De sitebrede rapporten
+              worden bijgewerkt wanneer auteurs pagina's bekijken, zodat regelmatig crawlen over het algemeen niet nodig
+              is. De CSA-module <em>bevat</em> wel een crawler, maar die is alleen nodig in deze drie situaties:</p>
+            <ol>
+              <li data-i18n-id="s-dfb1">
+                Bij de eerste installatie van Editoria11y op een bestaande site met veel pagina's. Pagina's moeten
+                worden bezocht voordat ze op het dashboard verschijnen, zodat een snelle eerste crawl tijd bespaart.
+              </li>
+              <li data-i18n-id="s-f602">
+                Grote updates van thema's of modules kunnen problemen op veel pagina's oplossen (of veroorzaken) die pas
+                verschijnen nadat ze zijn bezocht of gecrawld.
+              </li>
+              <li data-i18n-id="s-a530">
+                Bulkacties in de beheerinterface, zoals het verwijderen van pagina's of omleidingen, laten doorgaans
+                resultaten achter van pagina's die niet meer bestaan of zijn verplaatst. In deze gevallen helpt het om
+                de onderhoudstools van het tabblad "Refresh" te gebruiken om pagina-URL's te vernieuwen en verwijderde
+                pagina's te detecteren en te verwijderen.
+              </li>
+            </ol>
+            <p data-i18n-id="s-8e5a">Er verlaten geen gegevens uw site tijdens een crawl. De CSA-crawler is geen cloudtool; hij gebruikt uw
+              browser om de pagina's op uw eigen site te laden en te controleren. Het nadeel van deze aanpak is dat
+              <strong>browsers achtergrondtabbladen pauzeren</strong>. U moet uw computer ingeschakeld en actief houden
+              tijdens een crawl. Plan om een nieuw venster te openen voor de crawler en houd dat als het actieve tabblad
+              in de voorgrond terwijl het werkt. U kunt ondertussen in een ander venster blijven werken. De crawler
+              werkt zijn schatting bij na elke batch pagina's.
+            </p>
+          </section>
+          <section id="reports">
+            <h3 data-i18n-id="s-a242">Rapporten bekijken</h3>
+            <div class="my-4 border shadow"
+              style="background: url(/assets/images/3x-dashboard.png) 86% 0%; padding-top: 28%; background-size: 106%;">
+            </div>
+            <ul>
+              <li data-i18n-id="s-e328">
+                <strong>Recent</strong> maakt het mogelijk om individuele meldingen te verkennen. Zo kunt u bijvoorbeeld
+                filteren om alle instanties van hetzelfde meldingstype te vinden, of zien welke meldingen vaak voorkomen
+                in recente inhoud, of welke auteurs nog steeds dezelfde fout maken.
+              </li>
+              <li data-i18n-id="s-796f">
+                <strong>Pagina's</strong> toont meldingenaantallen per pagina, gegroepeerd per pagina. Hiermee kunt u
+                pagina's met de meeste problemen vinden en filteren op pagina-attributen zoals inhoudstype en
+                publicatiestatus.
+              </li>
+              <li data-i18n-id="s-9423">
+                <strong>Meldingen</strong> toont problemen per type.
+              </li>
+              <li data-i18n-id="s-52ed">
+                <strong>Afwijzingen</strong> maakt het mogelijk om te bewaken of auteurs correct afwijzen, en bevat
+                "reset"-knoppen om afgewezen meldingen ongedaan te maken.
+              </li>
+              <li data-i18n-id="s-3379">
+                <strong>Export</strong> bevat versies van de rapporten Pagina's, Meldingen en Afwijzingen die kunnen
+                worden gefilterd om CSV-downloads voor te bereiden. <em>Geleverd door de CSV Export-submodule</em>
+              </li>
+              <li data-i18n-id="s-9814">
+                <strong>Refresh</strong> bevat dashboardonderhoudstools om meldingen van verwijderde pagina's te
+                verwijderen, meldingen van geparametriseerde pseudo-pagina's zoals /search?query=example te verwijderen,
+                opgeslagen paginatitels en -URL's bij te werken, en een handmatige crawl uit te voeren. <em>Geleverd
+                  door de CSA-submodule</em>
+              </li>
+            </ul>
+          </section>
+
+          <h2 id="positioning" data-i18n-id="s-c35b">Verborgen of buiten beeld geplaatste tips oplossen</h2>
+
+          <p data-i18n-id="s-68ce">De module biedt velden voor twee van de configuratieopties van de bibliotheek om te wijzigen hoe tips
+            worden geplaatst:</p>
+
+          <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
+            <label for="edit-element-hides-overflow" class="form-item__label">Elementen met verborgen overloop</label>
+            <textarea data-drupal-selector="edit-element-hides-overflow"
+              aria-describedby="edit-element-hides-overflow--description" id="edit-element-hides-overflow"
+              name="element_hides_overflow" rows="1" cols="60" class="form-control"></textarea>
+            <label for="edit-hidden-handlers" class="form-item__label">Thema-JS verwerkt het onthullen van verborgen
+              tooltips binnen deze containers</label>
+            <textarea data-drupal-selector="edit-hidden-handlers" aria-describedby="edit-hidden-handlers--description"
+              id="edit-hidden-handlers" name="hidden_handlers" rows="1" cols="60" class="form-control"></textarea>
+          </div>
+          <p data-i18n-id="s-34e4">Sommige thema's hebben kolommen of widgets die horizontale of verticale overloop verbergen. De bibliotheek
+            detecteert automatisch wanneer een schakelaar buiten het zichtbare deel van de <strong>pagina</strong> zou
+            vallen. Door de bibliotheek te vertellen dat bepaalde containers overloop verbergen, probeert ze ook tips
+            voor elementen in die containers binnen hun grenzen te plaatsen.</p>
+          <p data-i18n-id="s-7cb7">Sommige thema's hebben widgets die de zichtbaarheid van inhoud omschakelen, zoals accordeons, tabbladen en
+            diashows. Tips in deze elementen worden dan ook verborgen. Door een lijst van selectors voor deze widgets op
+            te geven, pauzeert Editoria11y even wanneer een gebruiker via een volgende- of vorige-knop naar die tips
+            probeert te springen. Drupal-thema's en modules kunnen vervolgens de instructies volgen uit het
+            bibliotheekgedeelte over <a href="/en/install/#hidden-content">omgaan met tips op verborgen inhoud</a> om de
+            verborgen inhoud zichtbaar te maken.</p>
+
+          <h2 id="runtime" data-i18n-id="s-7e38">Uw eigen configuratie schrijven</h2>
+          <p data-i18n-id="s-a5d3">In PHP: de Drupal-module biedt een <code>hook_editoria11y_alter_config</code> om de inhoud van
+            <code>drupalSettings.editoria11y</code> te wijzigen in een module of thema. Bijvoorbeeld:
+          </p>
+          <pre class="language-php"><code><!--<?php
+/**
+ * @file
+ * MY_MODULE module file.
+ */
+
+use Drupal\Core\Cache\CacheableMetadata;
+
+/**
+ * Implements hook_editoria11y_alter_config().
+ *
+ * Attaches Editoria11y library and config based on context.
+ */
+function MY_MODULE_editoria11y_alter_config(array &$attach, CacheableMetadata $cacheableMetadata): void {
+  $config = Drupal::config('editoria11y.settings');
+
+  // Module settings being changed need to bust the cache.
+  $cacheableMetadata->addCacheableDependency($config);
+
+  // Get and modify any of the values being passed to drupalSettings.editoria11y.
+  if (!empty($attach['allow_ok'])) {
+    $attach['allow_ok'] = 'okAll';
+  }
+}--></code></pre>
+          <p data-i18n-id="s-2368">Het aanpassen van <code>drupalSettings</code> helpt alleen als de module-JS al is ingesteld om die waarde
+            door te geven aan de bibliotheek. Om extra parameters toe te voegen, moet u het JS-object
+            <code>options</code> rechtstreeks aanpassen. De module controleert op één globale JS-variabele
+            <code>editoria11yOptionsOverride</code>. Als deze is ingesteld, geeft hij het object <code>options</code>
+            door aan een functie <code>editoria11yOptions</code> die u in uw module of thema hebt opgegeven. U kunt nu
+            elk van de <a href="https://editorsally.ddev.site/en/install/#params">bibliotheekparameters</a> instellen.
+          </p>
+          <pre class="language-javascript"><code><!--var editoria11yOptionsOverride = true;
+var editoria11yOptions = function(options) {
+  // You now have access to the processed options object that will be passed to the library.
+
+  // E.g., to add a selector to the ignore list:
+  if (options['ignoreElements'] === false) {
+    // Provide the selector as the only value.
+    options['ignoreElements'] = `.example`;
+  } else {
+    // Append additional selectors with comma separator.
+    options['ignoreElements'] = `${options['ignoreElements']}, .example`
+  }
+
+  // Return your processed options.
+  return options;
+}
+--></code></pre>
+          <section id="custom-tests">
+            <h2 data-i18n-id="s-e0f0">Uw eigen tests schrijven</h2>
+            <p data-i18n-id="s-6ece">Voeg eerst in de moduleconfiguratie 1 toe aan de opties "Aangepaste tests" zodat de module weet dat hij
+              op de tests moet letten.</p>
+            <p data-i18n-id="s-4316">Maak vervolgens een Drupal JS-bibliotheek met uw tests in uw thema of module, met behulp van de <a href="/en/install/#custom-tests">bibliotheekgids voor het schrijven van aangepaste tests</a>.</p>
+            <p data-i18n-id="s-b4ea">Hier is een werkend voorbeeld van Princeton: een aangepaste test die waarschuwt voor Safe Links. Merk op
+              dat het de klasse Editoria11y benadert via <code>Drupal.Ed11y.</code></p>
+            <pre class="language-javascript"><code><!--const psEd11yCustomTests = function() {
+
+  // 1.
+  // Get elements to test, via Drupal.Ed11y.getElements.
+  // The 'root' parameter tells it to respect config for check areas and ignores.
+  const safeLinks = Drupal.Ed11y.getElements('a[href*="safelinks.protection.outlook.com/?"]', 'root');
+
+  // Add the test name to the lang object.
+  Drupal.ed11yLang.lang.testNames.outlookSafeLink = 'URL is Safe Link encoded';
+
+  // 2.
+  // Create the tip content.
+  const decodeSafelink = function(url) {
+    const params = new URL(url).searchParams;
+    let decoded = params.get('url');
+    const p = document.createElement('p');
+    if (!!decoded) {
+      p.innerHTML = `<p><span class="badge">To fix</span>Update this link with the correct URL, which is probably:<br>
+    <em style='word-wrap: break-word;font-size: 90%;line-height: 1.2;display: block;'></em></p>`
+      p.querySelector('em').textContent = Drupal.Ed11y.sanitizeHTML(decoded);
+    }
+    return p;
+  };
+  safeLinks?.forEach((el) => {
+    const content = document.createElement('div');
+    content.innerHTML = `<div class="title">Please fix this Outlook "Safe Link"</div>
+            <div class="why">
+                <p>The URL for this link is an Outlook "Safe Link" that was copied from an email.
+                It includes the original recipient's email address,
+                and will break if Microsoft shuts down the service.</p>
+                <p>The pasted URL is:<br>
+                <em style='word-break: break-all;font-size: 90%;line-height: 1.2;
+                display: block;'></em></p>
+            </div>
+            `;
+    content.querySelector('em').textContent = Drupal.Ed11y.sanitizeHTML(el.href);
+    content.querySelector('.why').insertAdjacentElement('beforebegin', decodeSafelink(el.href));
+
+    // 3.
+    // Push the tip to the library results object.
+    Drupal.Ed11y.State.results.push({
+      element: el,
+      test: 'outlookSafeLink',
+      type: 'error',
+      content: content,
+      position: 'beforebegin',
+      inline: false,
+      dismiss: false,
+    });
+  });
+
+  // 4.
+  // Tell Editoria11y you are done adding custom results.
+  const allDone = new CustomEvent('ed11yResume');
+  document.dispatchEvent(allDone);
+};--></code></pre>
+
+          </section>
+          <section id="help">
+            <h2 data-i18n-id="s-4690">Hulp krijgen</h2>
+            <p data-i18n-id="s-f149">Bekijk de <a href="../contacts">contactpagina</a> voor opties voor communityondersteuning. @itmaybejj is
+              meestal online in de Drupal Slack wanneer de zon op is op het westelijk halfrond.</p>
+            <p data-i18n-id="s-4a16">De meeste <a href="../license/">CSA-bijdrageniveaus</a> omvatten een jaarlijkse check-in, waarbij directe
+              hulp bij installatie en configuratie mogelijk is</p>
+          </section>
+
+        </div>
+      </div>
+    </div>
+  </main>

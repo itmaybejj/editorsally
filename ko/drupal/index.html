@@ -1,0 +1,520 @@
+<!doctype html>
+<html lang="ko" data-bs-theme="light">
+
+<head>
+  <link rel="icon" type="image/png" href="/assets/favicons/favicon-512x512.png" sizes="512x512" />
+  <link rel="icon" type="image/png" href="/assets/favicons/favicon-192x192.png" sizes="192x192" />
+  <link rel="icon" type="image/png" href="/assets/favicons/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/assets/favicons/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <meta charset="utf-8" />
+  <title>Drupal용 Editoria11y — Editoria11y</title>
+  <link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="/assets/theme.css" rel="stylesheet" />
+  <meta name="theme-color" content="#712cf9" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-md">
+      <div class="container col-sm-12 mx-auto">
+        <a href="/ko/" class="d-flex align-items-center  navbar-brand">
+          <svg class="logo-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+            viewBox="-.75 -3.5 10.1699 19.1777">
+            <path fill="currentColor"
+              d="M3.7031,10.5527c-.3633-.6562-.6426-1.1387-.8379-1.4473l-.3105-.4863-.2344-.3574c-.5117-.7969-1.0449-1.4551-1.5996-1.9746.3164-.2617.6113-.3926.8848-.3926.3359,0,.6348.123.8965.3691s.5918.7148.9902,1.4062c.4531-1.4727,1.0293-2.8691,1.7285-4.1895.3867-.7188.7314-1.2021,1.0342-1.4502s.7041-.3721,1.2041-.3721c.2656,0,.5938.041.9844.123-1.0039.8086-1.8066,1.7695-2.4082,2.8828s-1.3789,3.0762-2.332,5.8887Z" />
+          </svg> Editoria<span style="margin-left: -1px;">11</span>y
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar" aria-label="내비게이션 전환">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Editoria11y</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="닫기"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 nav-pills">
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div id="lang-picker"></div>
+  </header>
+  <main class="container col-lg-12 mx-auto py-5">
+    
+      <div class="col-12 col-md-5 col-lg-4 mb-5">
+        <div id="on-this-page" class="list-group ms-2 ms-lg-5 position-sticky top-0 pt-3">
+        </div>
+      </div>
+      <div class="col-12 col-md-7 col-lg-8 pt-3">
+        </div>
+          <h1>Drupal용 Editoria11y</h1>
+          
+            <h2 class="pt-3">핵심 기능</h2>
+
+            <p class="fs-6">Drupal 모듈은 검사기 라이브러리를 편집 백엔드와 연결하고,
+              보고, 거버넌스 및 구성을 위한 여러 서버 측 도구를 추가합니다</p>
+
+            <figure class="figure my-4 row">
+              <div class="col-lg-8">
+                <img loading="lazy" src="/assets/images/3x-editing.png" class="rounded border figure-img img-fluid" height="1088" width="2237" alt="인라인 팁이 있는 Drupal 편집기" />
+              </div>
+              <figcaption class="figure-caption col-lg-4">문제는 프런트엔드에서 페이지 로드 시와
+                CKEditor 및 Gutenberg에서 실시간 입력 중에 감지됩니다.</figcaption>
+            </figure>
+
+            <figure class="figure my-4 row">
+              <div class="col-lg-8">
+                <img loading="lazy" src="/assets/images/3x-generic-tip.png" class="rounded border figure-img img-fluid" height="798" width="1278" alt="링크 이름이 「여기를 클릭」뿐이라고 표시된 팁." />
+              </div>
+              <figcaption class="figure-caption col-lg-4">툴팁에 [편집기로 이동], [알림 무시(현재 사용자만)], [확인 표시(모든 사용자)] 버튼이 추가됩니다. 반복되는 알림에는 페이지 전체 또는 사이트 전체 일괄 작업이 제공됩니다.
+              </figcaption>
+            </figure>
+
+            
+              <div class="col-lg-8">
+                <img loading="lazy" src="/assets/images/3x-drupal-custom-tests.png" class="rounded border figure-img img-fluid" alt="팁 제목 및 콘텐츠, 요소 선택자 및 제외 항목의 필드를 보여주는 사용자 정의 테스트 빌더 인터페이스." />
+              </div>
+              
+                <p class="mb-2">CSA 서브모듈에 추가되는 기능:</p>
+                <ul class="ps-3">
+                  <li><strong>사용자 정의 테스트 빌더</strong></li>
+                  <li>40개 이상의 개발자 테스트</li>
+                  <li>명도 대비 검사</li>
+                  <li>사이트 크롤러</li>
+                  <li>가독성 분석</li>
+                  <li>개발자/편집자용 분리 구성</li>
+                </ul>
+              
+            
+
+            <figure class="figure">
+              <img loading="lazy" class="figure-img img-fluid rounded border" src="/assets/images/3x-dashboard.png" height="765" width="1600" alt="최근 문제와 문제가 가장 많은 페이지를 보여주는 보고 대시보드." />
+              <figcaption class="figure-caption p-3 pt-2">사이트 전체 대시보드에서 알림 및 닫기 기록에 대한
+                필터링 가능하고 내보낼 수 있는 보고서를 제공합니다.</figcaption>
+            </figure>
+
+          
+          <h2>설치 및 주요 설정 단계</h2>
+          <p>Drupal.org의 <a href="https://www.drupal.org/project/editoria11y/">번들 설치 프로그램</a>에는
+            여러 모듈이 포함되어 있습니다:</p>
+          <ul>
+            <li>
+              Editoria11y: 핵심 콘텐츠 검사기 및 대시보드.
+            </li>
+            <li>
+              Editoria11y CSA: 개발자 테스트 및 대시보드 유지 관리 도구.
+            </li>
+            <li>
+              Editoria11y Export: CSV 보고 도구.
+            </li>
+          </ul>
+          <p>다른 모듈과 동일하게 설치한 후 다음 주요 단계를 수행하세요:</p>
+          <ol>
+            <li><strong>권한을 확인하세요.</strong> 신뢰할 수 있는 작성자에게는 「확인 표시」, 「무시됨으로 표시」 및 「대시보드 보기」 권한이 있어야 합니다.</li>
+            <li><strong>주요 페이지에서 반복적이거나 도움이 되지 않는 알림을 확인하세요.</strong> 툴팁에서 확인으로 표시하거나, 구성을 조정하여 선택자로 요소를 무시하세요.</li>
+            <li>보기 어려운 팁(화면 밖, 잘린 상태, 다른 요소 뒤, 숨겨진 요소에 있는 팁)을 찾으세요. 아래의 「팁 위치 수정」 안내를 참고하세요.</li>
+            <li>사이트에 이미 콘텐츠가 있고 CSA 구독이 있는 경우, 대시보드 「재검사」 탭을 방문하여 <strong>사이트를 크롤링</strong>하고 보고서를 미리 불러오세요. 이 작업은 선택 사항이지만, 이전 페이지는 로그인한 사용자가 방문하거나 크롤링되기 전까지 보고서에 표시되지 않습니다.
+            </li>
+          </ol>
+          <p><a href="https://youtu.be/uYvNYPg38nU?si=dqADyWpTtOhniHTP&t=696">구성 옵션에 대한 동영상 소개</a>를 시청하세요(v2.4).</p>
+
+          <h2 id="check-roots">불필요한 알림 숨기기</h2>
+          <p>
+            <strong>좋은 구성은 불필요한 알림을 줄여 콘텐츠 작성자가 실제로 수정해야 할 문제에 집중할 수 있게 합니다</strong>.
+          </p>
+          <p>테스트를 완전히 끌 수도 있지만, 특정 요소나 페이지에서 알림을 숨기는 것이 일반적으로 더 좋습니다.
+          </p>
+          <hr/>
+          <p>
+            각 테스트 실행 시, Editoria11y는 「이 컨테이너에서 콘텐츠 확인」 설정에서 단일 요소 집합을 수집한 후 여러 번 필터링합니다. 테스트 실행의 모습은 다음과 같습니다:
+          </p>
+          <ol>
+            <li>
+              이 페이지 또는 이 사용자에 대한 구성이 검사를 방지하는 경우 검사를 취소합니다.
+            </li>
+            <li>
+              <strong>수집</strong>: 지정된 페이지 영역의 요소 수집,
+              예:<br/><code>body > *:not('.ed11y-element')</code><br/>
+              <em>Editoria11y CSA 사용자의 경우, 이는 <strong>개발자 테스트</strong> 탭의 영역입니다.</em>
+            </li>
+            <li>
+              <strong>제외</strong>: 무시 선택자와 일치하는 요소 제외,
+              예:<br/><code>.widgets, .utility-menu</code><br/>
+              <em>Editoria11y CSA 사용자의 경우, 이는 <strong>개발자 테스트</strong> 탭의 선택자입니다.</em>
+            </li>
+            <li>
+              테스트를 실행하고 결과를 대시보드에 동기화합니다.
+            </li>
+            <li>
+              <span data-translate>분리 구성이 활성화되어 있고 사용자가 콘텐츠 편집자인 경우, 개발자 결과를 필터링합니다:</span>
+              <ul>
+                <li><strong>제외</strong>: 「개발자 전용」으로 설정된 테스트의 결과 제외.</li>
+                <li><strong>제외</strong>: 지정된 <strong><em>콘텐츠</em></strong> 영역 밖의 요소에 대한 결과 제외,
+                  예:<br/><code>main, footer</code></li>
+                <li><strong>제외</strong>: <strong><em>콘텐츠</em></strong> 무시 선택자와 일치하는 요소에 대한 결과 제외.</li>
+              </ul>
+              Note that there is not a second "gather" phase. The developer page regions must include the content
+              regions.
+            </li>
+            <li>자동 열기 설정과 구성이 일치하면 패널을 열고 알림을 표시합니다.</li>
+          </ol>
+
+          <h3 id="dismiss">알림 닫기</h3>
+          <p>테스트는 라이브러리에서 오류 또는 경고(「수동 확인」)로 구성할 수 있습니다. 경고는 닫을 수 있습니다. 각 툴팁 하단에서 두 가지 유형의 닫기가 제공됩니다:</p>
+          <div class="my-2"
+            style="background: url(/assets/images/3x-generic-tip.png) 100% 98%; max-width: 600px; padding-top: 6%; background-size: 108%;">
+          </div>
+          <ul>
+            <li>「무시」는 사용자 기본 설정으로 저장됩니다. 알림은 현재 사용자에게만 숨겨지며, 다른 사용자에게는 그대로 표시됩니다.</li>
+            <li>「확인 표시」는 모든 사용자에게 알림을 숨깁니다.</li>
+          </ul>
+          <p>사용자가 알림을 닫을 수 있는지 여부는 Drupal 사용자 권한에서 역할 수준으로 제어됩니다. <strong>대부분의 작성자는 알림을 닫을 수 있어야 합니다</strong>. 항목이 확인되었음을 표시할 수 없다면 수동 확인을 할당하는 의미가 없습니다.
+          </p>
+
+          <h3 id="roots">요소 무시</h3>
+          <p>이 두 가지 구성 설정이 가장 중요합니다!</p>
+          <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
+            <label for="edit-content-root">Check content in these containers</label>
+            <div><textarea class="form-control" id="edit-content-root" name="content_root" rows="1" cols="30"
+                disabled></textarea>
+            </div>
+            <div class="mt-3">
+              <label for="edit-ignore-elements">Skip over these elements</label>
+              <div>
+                <textarea class="form-control" id="edit-ignore-elements" disabled name="ignore_elements" rows="1"
+                  cols="30" class=""></textarea>
+              </div>
+            </div>
+          </div>
+          <p>
+            콘텐츠 작성자가 편집할 수 있는 페이지의 모든 부분을 포함하도록 첫 번째를 설정하세요. 예를 들어, <code>main</code> 콘텐츠 영역, <code>.sidebar</code> 및 <code>.footer-column-two</code>를 편집할 수 있다면 해당 선택자를 콘텐츠 확인 영역으로 설정하세요.
+          </p>
+          <p>
+            두 번째를 사용하여 하위 섹션을 「제외」하세요. 예를 들어, <code>main</code>에 개발자만 수정할 수 있는 다양한 위젯과 임베드가 포함되어 있다면 해당 항목을 나열하세요: <code>.widget-1, .social-embed</code>;
+          </p>
+          <p>분리 구성을 사용하는 경우, 개발자 테스트 탭에서 유사한 설정 쌍을 볼 수 있습니다:</p>
+          <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
+            <div>
+              <fieldset>
+                <legend>
+                  Developer check area
+                </legend>
+                <div class="fieldset__wrapper fieldset__wrapper--group">
+
+                  <div id="edit-dev-check-root">
+                    <div>
+                      <input aria-describedby="edit-dev-check-root--description" type="radio"
+                        id="edit-dev-check-root-automatic" name="dev_check_root" value="automatic" checked="checked" />
+                      <label for="edit-dev-check-root-automatic" class="form-item__label option">All elements</label>
+                    </div>
+                    <div class="d-flex">
+                      <input aria-describedby="edit-dev-check-root--description" type="radio"
+                        id="edit-dev-check-root-match" name="dev_check_root" value="match"
+                        class="align-self-baseline mt-1 me-1" />
+                      <label for="edit-dev-check-root-match" class="form-item__label option">Only the containers listed
+                        in the Content Setting tab</label>
+                    </div>
+                    <div class="">
+                      <input aria-describedby="edit-dev-check-root--description" type="radio"
+                        id="edit-dev-check-root-specify" name="dev_check_root" value="specify"
+                        class="form-radio form-boolean form-boolean--type-radio" />
+                      <label for="edit-dev-check-root-specify" class="">The specific containers listed below</label>
+                    </div>
+                  </div>
+
+                </div>
+              </fieldset>
+
+              <div class="">
+                <label for="edit-always-ignore" class="mt-3">Ignore for both developers and content editors</label>
+                <div class="form-textarea-wrapper">
+                  <textarea id="edit-always-ignore" class="form-control" name="always_ignore" rows="1" cols="20"
+                    placeholder=""></textarea>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+          <p>개발자 확인 영역에 대해 알아야 할 핵심은 콘텐츠 확인 영역과 <strong>독립적이지 않다</strong>는 것입니다. 분리 구성에서 개발자 영역을 확인한 후 해당 결과를 콘텐츠 영역에 맞게 <strong>필터링</strong>합니다. 개발자에게 제외된 영역은 콘텐츠 편집자에게도 제외됩니다. 편집 가능한 콘텐츠 영역을 제외하지 마세요!</p>
+
+          <p>일부 테스트는 영향받은 요소에서 특정 알림만 숨길 수 있도록 더 정밀한 구성을 허용합니다. 다음에서 확인하세요:</p>
+          <ul>
+            <li>콘텐츠 테스트: 확인할 링크</li>
+            <li>콘텐츠 테스트: 확인할 임베드</li>
+            <li>콘텐츠 테스트: 동적 및 섀도우 콘텐츠 감지</li>
+            <li>개발자 테스트: 명도 대비</li>
+          </ul>
+
+          <h3 id="pages">특정 페이지 또는 사용자에게 숨기기</h3>
+          <p>
+            이를 수행하는 가장 쉬운 방법은 이 옵션에 CSS 클래스 또는 ID를 전달하는 것입니다:
+          </p>
+          <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
+            <label for="edit-no-load" class="form-item__label">Do not check on pages with these elements</label>
+            <div class="form-textarea-wrapper">
+              <textarea data-drupal-selector="edit-no-load" aria-describedby="edit-no-load--description"
+                id="edit-no-load" name="no_load" rows="1" cols="20" class="form-control"></textarea>
+            </div>
+
+            <label for="edit-ignore-all-if-absent" class="form-item__label">Hide all alerts on pages where these
+              elements are not present</label>
+            <div class="form-textarea-wrapper">
+              <textarea data-drupal-selector="edit-ignore-all-if-absent"
+                aria-describedby="edit-ignore-all-if-absent--description" id="edit-ignore-all-if-absent"
+                name="ignore_all_if_absent" rows="1" cols="20" class="form-control"></textarea>
+            </div>
+
+          </div>
+          <p>
+            첫 번째는 검사 실행을 방지하며 툴바가 표시되지 않습니다.
+          </p>
+          <p>
+            두 번째는 검사기를 최소화된 상태로 시작하고, (현재 사용자에 대해) 오류인 경우에도 모든 문제를 자동으로 「무시됨」으로 표시합니다. 이를 통해 테스트를 실행하고 대시보드를 업데이트할 수 있지만 사용자를 방해하지 않습니다.
+          </p>
+          <p>
+            이를 사용하여 어떤 사용자가 검사기를 볼지 제어하려면 테마를 조정하여 클래스(예: <code>.user-247</code>)를 출력해야 할 수 있습니다.
+          </p>
+
+          <h2 id="dashboard">사이트 전체 결과 관리</h2>
+          <section id="refresh">
+            <h3 class="pt-3">크롤링 및 결과 업데이트</h3>
+            <p>Editoria11y는 <strong>실시간 모니터링 도구이며 크롤러가 아닙니다</strong>. 사이트 전체 보고서는 작성자가 페이지를 볼 때 업데이트되므로 정기적인 크롤링은 일반적으로 필요하지 않습니다. CSA 모듈에는 크롤러가 <em>포함되어</em> 있지만, 다음 세 가지 상황에서만 필요합니다:</p>
+            <ol>
+              <li>
+                많은 페이지가 있는 기존 사이트에 Editoria11y를 처음 설치할 때. 페이지는 대시보드에 표시되기 전에 방문되어야 하므로, 초기 빠른 크롤링으로 시간을 절약할 수 있습니다.
+              </li>
+              <li>
+                테마나 모듈의 주요 업데이트는 방문하거나 크롤링하기 전까지 보고서에 나타나지 않는 여러 페이지에서 문제를 수정하거나 발생시킬 수 있습니다.
+              </li>
+              <li>
+                페이지 삭제 또는 리디렉션과 같은 관리 인터페이스의 대량 작업은 더 이상 존재하지 않거나 이동된 페이지의 결과를 남기는 경향이 있습니다. 이 경우 「새로 고침」 탭의 유지 관리 작업을 사용하여 페이지 URL을 갱신하고 삭제된 페이지를 감지하여 제거하는 것이 도움이 됩니다.
+              </li>
+            </ol>
+            <p>크롤링 중에 사이트에서 데이터가 유출되지 않습니다. CSA 크롤러는 클라우드 도구가 아닙니다. 브라우저를 사용하여 자체 사이트의 페이지를 로드하고 검사합니다. 이 접근 방식의 단점은 <strong>브라우저가 백그라운드 탭을 일시 중지</strong>한다는 것입니다. 크롤링 중에 컴퓨터를 켜두고 절전 모드가 되지 않도록 해야 합니다. 크롤러를 위한 새 창을 열고, 크롤링이 진행되는 동안 해당 창을 활성 탭으로 유지하세요. 다른 창에서는 계속 작업할 수 있습니다. 크롤러는 각 배치의 페이지 처리 후 예상 시간을 업데이트합니다.</p>
+          </section>
+          <section id="reports">
+            <h3>보고서 보기</h3>
+            <div class="my-4 border shadow"
+              style="background: url(/assets/images/3x-dashboard.png) 86% 0%; padding-top: 28%; background-size: 106%;">
+            </div>
+            <ul>
+              <li>
+                <strong>최근</strong>은 개별 알림별로 탐색할 수 있습니다. 동일한 알림 유형의 모든 인스턴스를 필터링하거나, 최근 콘텐츠에서 자주 나타나는 알림을 확인하거나, 동일한 실수를 반복하는 작성자를 파악할 수 있습니다.
+              </li>
+              <li>
+                <strong>페이지</strong>는 페이지별로 알림 수를 표시합니다. 가장 많은 문제가 있는 페이지를 찾고, 콘텐츠 유형 및 게시 상태와 같은 페이지 속성으로 필터링할 수 있습니다.
+              </li>
+              <li>
+                <strong>알림</strong>은 유형별로 문제를 표시합니다.
+              </li>
+              <li>
+                <strong>닫기 기록</strong>은 작성자가 올바르게 닫고 있는지 모니터링하고, 닫은 알림을 복원하는 「초기화」 버튼이 있습니다.
+              </li>
+              <li>
+                <strong>내보내기</strong>는 CSV 다운로드를 준비하기 위해 필터링할 수 있는 페이지, 알림 및 닫기 기록 보고서 버전을 포함합니다. <em>CSV 내보내기 서브모듈 제공</em>
+              </li>
+              <li>
+                <strong>새로 고침</strong>은 삭제된 페이지의 알림 삭제, /search?query=example 과 같은 매개변수가 있는 의사 페이지의 알림 삭제, 저장된 페이지 제목 및 URL 업데이트, 수동 크롤링 실행을 위한 대시보드 유지 관리 도구를 포함합니다. <em>CSA 서브모듈 제공</em>
+              </li>
+            </ul>
+          </section>
+
+          <h2 id="positioning">숨겨지거나 화면 밖 팁 수정</h2>
+
+          <p>모듈은 팁 배치 방법을 변경하기 위한 라이브러리 구성 옵션 두 가지의 필드를 제공합니다:
+          </p>
+
+          <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
+            <label for="edit-element-hides-overflow" class="form-item__label">Elements with overflow hidden</label>
+            <textarea data-drupal-selector="edit-element-hides-overflow"
+              aria-describedby="edit-element-hides-overflow--description" id="edit-element-hides-overflow"
+              name="element_hides_overflow" rows="1" cols="60" class="form-control"></textarea>
+            <label for="edit-hidden-handlers" class="form-item__label">Theme JS will handle revealing hidden tooltips
+              inside these containers</label>
+            <textarea data-drupal-selector="edit-hidden-handlers" aria-describedby="edit-hidden-handlers--description"
+              id="edit-hidden-handlers" name="hidden_handlers" rows="1" cols="60" class="form-control"></textarea>
+          </div>
+          <p>일부 테마에는 가로 또는 세로 오버플로를 숨기는 열이나 위젯이 있습니다. 라이브러리는 토글이 <strong>페이지</strong>의 보이는 부분 밖에 위치할 때 자동으로 감지합니다. 특정 컨테이너가 오버플로를 숨긴다고 라이브러리에 알리면 해당 컨테이너 내의 요소에 대한 팁을 컨테이너 경계 내에 배치하려고 시도합니다.</p>
+          <p>일부 테마에는 아코디언, 탭, 슬라이드쇼와 같이 콘텐츠의 가시성을 전환하는 위젯이 있습니다. 이 요소 내의 팁도 숨겨집니다. 이러한 위젯의 선택자 목록을 제공하면 사용자가 이전 또는 다음 버튼을 사용하여 해당 팁으로 이동하려 할 때 Editoria11y가 잠시 일시 중지합니다. Drupal 테마와 모듈은 <a href="/ko/install/#hidden-content">숨겨진 콘텐츠의 팁 처리</a>에 관한 라이브러리 섹션의 지침을 따라 숨겨진 콘텐츠를 표시할 수 있습니다.
+          </p>
+
+          <h2 id="runtime">사용자 정의 구성 작성</h2>
+          <p>PHP에서: Drupal 모듈은 모듈이나 테마에서 <code>drupalSettings.editoria11y</code>의 내용을 변경하기 위한 <code>hook_editoria11y_alter_config</code>를 제공합니다. 예를 들어:
+          </p>
+          <pre class="language-php"><code><!--<?php
+/**
+ * @file
+ * MY_MODULE module file.
+ */
+
+use Drupal\Core\Cache\CacheableMetadata;
+
+/**
+ * Implements hook_editoria11y_alter_config().
+ *
+ * Attaches Editoria11y library and config based on context.
+ */
+function MY_MODULE_editoria11y_alter_config(array &$attach, CacheableMetadata $cacheableMetadata): void {
+  $config = Drupal::config('editoria11y.settings');
+
+  // Module settings being changed need to bust the cache.
+  $cacheableMetadata->addCacheableDependency($config);
+
+  // Get and modify any of the values being passed to drupalSettings.editoria11y.
+  if (!empty($attach['allow_ok'])) {
+    $attach['allow_ok'] = 'okAll';
+  }
+}--></code></pre>
+          <p><code>drupalSettings</code> 수정은 모듈 JS가 이미 해당 값을 라이브러리에 전달하도록 설정되어 있는 경우에만 도움이 됩니다. 파라미터를 더 추가하려면 JS <code>options</code> 객체를 직접 수정해야 합니다. 모듈은 <code>editoria11yOptionsOverride</code>라는 하나의 전역 JS 변수를 확인합니다. 이것이 설정되면 모듈 또는 테마에서 제공한 <code>editoria11yOptions</code> 함수에 <code>options</code> 객체를 전달합니다. 이제 <a href="https://editorsally.ddev.site/en/install/#params">라이브러리 파라미터</a>를 모두 설정할 수 있습니다.</p>
+          <pre class="language-javascript"><code><!--var editoria11yOptionsOverride = true;
+var editoria11yOptions = function(options) {
+  // You now have access to the processed options object that will be passed to the library.
+
+  // E.g., to add a selector to the ignore list:
+  if (options['ignoreElements'] === false) {
+    // Provide the selector as the only value.
+    options['ignoreElements'] = `.example`;
+  } else {
+    // Append additional selectors with comma separator.
+    options['ignoreElements'] = `${options['ignoreElements']}, .example`
+  }
+
+  // Return your processed options.
+  return options;
+}
+--></code></pre>
+          <section id="custom-tests">
+            <h2>사용자 정의 테스트 작성</h2>
+            <p>먼저 모듈 구성에서 「사용자 정의 테스트」 옵션에 1을 추가하여 테스트를 주시하도록 설정합니다.</p>
+            <p>그런 다음 <a href="/ko/install/#custom-tests">사용자 정의 테스트 작성에 관한 라이브러리 안내서</a>를 사용하여 테마나 모듈에 테스트가 포함된 Drupal JS 라이브러리를 만드세요.</p>
+            <p>프린스턴의 Safe Links에 대한 사용자 정의 테스트의 실제 작동 예시입니다. <code>Drupal.Ed11y.</code>를 통해 Editoria11y 클래스에 접근하는 방식에 주목하세요.</p>
+            <pre class="language-javascript"><code><!--const psEd11yCustomTests = function() {
+
+  // 1.
+  // Get elements to test, via Drupal.Ed11y.getElements.
+  // The 'root' parameter tells it to respect config for check areas and ignores.
+  const safeLinks = Drupal.Ed11y.getElements('a[href*="safelinks.protection.outlook.com/?"]', 'root');
+
+  // Add the test name to the lang object.
+  Drupal.ed11yLang.lang.testNames.outlookSafeLink = 'URL is Safe Link encoded';
+
+  // 2.
+  // Create the tip content.
+  const decodeSafelink = function(url) {
+    const params = new URL(url).searchParams;
+    let decoded = params.get('url');
+    const p = document.createElement('p');
+    if (!!decoded) {
+      p.innerHTML = `<p><span class="badge">To fix</span>Update this link with the correct URL, which is probably:<br>
+    <em style='word-wrap: break-word;font-size: 90%;line-height: 1.2;display: block;'></em></p>`
+      p.querySelector('em').textContent = Drupal.Ed11y.sanitizeHTML(decoded);
+    }
+    return p;
+  };
+  safeLinks?.forEach((el) => {
+    const content = document.createElement('div');
+    content.innerHTML = `<div class="title">Please fix this Outlook "Safe Link"</div>
+            <div class="why">
+                <p>The URL for this link is an Outlook "Safe Link" that was copied from an email.
+                It includes the original recipient's email address,
+                and will break if Microsoft shuts down the service.</p>
+                <p>The pasted URL is:<br>
+                <em style='word-break: break-all;font-size: 90%;line-height: 1.2;
+                display: block;'></em></p>
+            </div>
+            `;
+    content.querySelector('em').textContent = Drupal.Ed11y.sanitizeHTML(el.href);
+    content.querySelector('.why').insertAdjacentElement('beforebegin', decodeSafelink(el.href));
+
+    // 3.
+    // Push the tip to the library results object.
+    Drupal.Ed11y.State.results.push({
+      element: el,
+      test: 'outlookSafeLink',
+      type: 'error',
+      content: content,
+      position: 'beforebegin',
+      inline: false,
+      dismiss: false,
+    });
+  });
+
+  // 4.
+  // Tell Editoria11y you are done adding custom results.
+  const allDone = new CustomEvent('ed11yResume');
+  document.dispatchEvent(allDone);
+};--></code></pre>
+
+          </section>
+          <section id="help">
+            <h2>도움 받기</h2>
+            <p>커뮤니티 지원 옵션은 <a href="/ko/contacts/">연락처</a> 페이지를 확인하세요. @itmaybejj는 서반구의 해가 떠 있는 시간 동안 주로 Drupal Slack에서 활동합니다.</p>
+            <p><a href="/ko/license/">CSA 기여 등급</a>의 대부분은 연간 체크인을 포함하며, 설정 및 구성에 대한 직접 지원이 포함될 수 있습니다</p>
+          </section>
+
+        
+      
+    
+  
+</main>
+  <footer class="container col-lg-12 mx-auto pt-3 text-body-secondary text-center text-md-start">
+    <div class="container">
+      <div class="footer-nav text-center">
+        <a class="btn btn-primary btn-lg" data-slug="about" href="/ko/">소개</a>
+        <a class="btn btn-primary btn-lg" data-slug="features" href="/ko/features/">기능</a>
+        <a class="btn btn-primary btn-lg" data-slug="demo" href="/ko/demo/">데모</a>
+        <a class="btn btn-primary btn-lg" data-slug="license" href="/ko/license/">가격 및 기여</a>
+      </div>
+      <div class="row footer">
+        <div class="col col-3">
+          <a href="https://github.com/itmaybejj/editoria11y"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+              height="20" fill="currentColor" class="bi bi-git" viewBox="0 0 16 16">
+              <path
+                d="M15.698 7.287 8.712.302a1.03 1.03 0 0 0-1.457 0l-1.45 1.45 1.84 1.84a1.223 1.223 0 0 1 1.55 1.56l1.773 1.774a1.224 1.224 0 0 1 1.267 2.025 1.226 1.226 0 0 1-2.002-1.334L8.58 5.963v4.353a1.226 1.226 0 1 1-1.008-.036V5.887a1.226 1.226 0 0 1-.666-1.608L5.093 2.465l-4.79 4.79a1.03 1.03 0 0 0 0 1.457l6.986 6.986a1.03 1.03 0 0 0 1.457 0l6.953-6.953a1.03 1.03 0 0 0 0-1.457" />
+            </svg> <strong>라이브러리</strong></a>
+        </div>
+        <div class="col col-3">
+          <a href="https://github.com/itmaybejj/editoria11y/discussions"><svg xmlns="http://www.w3.org/2000/svg"
+              width="20" height="20" fill="currentColor" class="bi bi-chat-right-heart-fill" viewBox="0 0 16 16">
+              <path
+                d="M16 2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h9.586a1 1 0 0 1 .707.293l2.853 2.853a.5.5 0 0 0 .854-.353zM8 3.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132" />
+            </svg> <strong>포럼</strong></a>
+        </div>
+        <div class="col col-3">
+          <a href="https://github.com/itmaybejj/editoria11y/issues"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+              height="20" fill="currentColor" class="bi bi-patch-plus-fill" viewBox="0 0 16 16">
+              <path
+                d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01zM8.5 6v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 1 0" />
+            </svg> <strong>이슈</strong></a>
+        </div>
+        <div class="col col-3">
+          <a href="/ko/contacts/"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+              class="bi bi-person-lines-fill" height="24" width="24" viewBox="0 0 16 18">
+              <path
+                d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z">
+              </path>
+            </svg> <strong>연락처</strong></a>
+        </div>
+        <div class="col col-12 subfooter">
+          <a href="/ko/privacy-policy/">개인정보 보호정책</a>
+          <a href="/ko/cookie-policy/">쿠키 정책</a>
+          <a href="/ko/terms-of-use/">이용약관</a>
+          <a href="/ko/legal-notice/">법적 고지</a>
+          <span>&copy; 2026 Editoria11y LLC</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="/assets/bootstrap/js/bootstrap.bundle.min.js" class="astro-vvvwv3sm"></script>
+  <script src="/assets/lang/i18n.js"></script>
+  <script src="/assets/theme.js"></script>
+</body>
+
+</html>

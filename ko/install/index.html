@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="ko" data-bs-theme="light">
+
+<head>
+  <link rel="icon" type="image/png" href="/assets/favicons/favicon-512x512.png" sizes="512x512" />
+  <link rel="icon" type="image/png" href="/assets/favicons/favicon-192x192.png" sizes="192x192" />
+  <link rel="icon" type="image/png" href="/assets/favicons/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/assets/favicons/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <meta charset="utf-8" />
+  <title>설치 &amp; 구성 — Editoria11y</title>
+  <link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="/assets/theme.css" rel="stylesheet" />
+  <meta name="theme-color" content="#712cf9" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-md">
+      <div class="container col-sm-12 mx-auto">
+        <a href="/ko/" class="d-flex align-items-center  navbar-brand">
+          <svg class="logo-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+            viewBox="-.75 -3.5 10.1699 19.1777">
+            <path fill="currentColor"
+              d="M3.7031,10.5527c-.3633-.6562-.6426-1.1387-.8379-1.4473l-.3105-.4863-.2344-.3574c-.5117-.7969-1.0449-1.4551-1.5996-1.9746.3164-.2617.6113-.3926.8848-.3926.3359,0,.6348.123.8965.3691s.5918.7148.9902,1.4062c.4531-1.4727,1.0293-2.8691,1.7285-4.1895.3867-.7188.7314-1.2021,1.0342-1.4502s.7041-.3721,1.2041-.3721c.2656,0,.5938.041.9844.123-1.0039.8086-1.8066,1.7695-2.4082,2.8828s-1.3789,3.0762-2.332,5.8887Z" />
+          </svg> Editoria<span style="margin-left: -1px;">11</span>y
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar" aria-label="내비게이션 전환">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Editoria11y</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="닫기"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 nav-pills">
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div id="lang-picker"></div>
+  </header>
+  <main class="container col-lg-12 mx-auto py-5">
+    <div class="row docs">
+      <div class="col-12 col-md-5 col-lg-4 mb-5">
+        <div id="on-this-page" class="list-group ms-2 ms-lg-5 position-sticky top-0 pt-3">
+        </div>
+      </div>
+      <div class="col-12 col-md-7 col-lg-8 pt-3" data-bs-spy="scroll" data-bs-target="#on-this-page"
+        data-bs-smooth-scroll="true">
+        <h1>설치 & 구성</h1>
+
+        <section id="modules">
+          <h2 class="pt-3 pb-2">사전 구성된 버전</h2>
+          <ul class="list-unstyled ps-0">
+            <li><a href="https://www.drupal.org/project/editoria11y" class="arrow"><strong>Drupal 설치 프로그램</strong></a>
+            </li>
+            <li><a href="https://wordpress.org/plugins/editoria11y-accessibility-checker/"
+                class="arrow"><strong>WordPress 설치 프로그램</strong></a></li>
+            <li><a href="https://codeberg.org/sebastiangreger/kirby-a11yprompter" class="arrow"><strong>Kirby
+                  설치 프로그램</strong></a> <em>(커뮤니티 제공)</em></li>
+            <li><a href="https://plugins.craftcms.com/editoria11y" class="arrow"><strong>CraftCMS 설치 프로그램</strong></a>
+              <em>(커뮤니티 제공)</em>
+            </li>
+          </ul>
+        </section>
+        <section id="diy">
+          <h2>
+            사용자 정의 설치
+          </h2>
+          <p>직접 구현을 빌드하려면, 언어 팩, JS min 파일, CSS min 파일의 <a href="https://github.com/itmaybejj/editoria11y" data-type="URL" data-id="https://github.com/itmaybejj/editoria11y" class="liinternal">로컬 복사본을 다운로드</a>하거나(<a href="https://cdn.jsdelivr.net/gh/itmaybejj/editoria11y@2/dist/editoria11y.min.js" class="liinternal">CDN 버전</a> 참조) 새 「Ed11y」 인스턴스를 생성하세요.</p>
+          <p><strong>ESM/JS 모듈 임포트</strong>의 경우: </p>
+          <pre class="language-markup"><code><!--// Load CSS
+<link href="/dist/css/editoria11y.min.css?v=3.0" rel="stylesheet">
+// Load JS and language pack
+<script type="module">
+  import Ed11y from "/dist/js/ed11y.esm.min.js?v=3.0";
+  import ed11yLang from "/dist/js/lang/en.js";
+  // Instantiate with language and CSS
+  const ed11y = new Ed11y.Ed11y({
+    lang: 'en',
+    cssUrls: ["/dist/css/editoria11y.min.css"]
+  });
+</script>
+--></code></pre>
+          <p>레거시 브라우저 및 시스템에는 .umd JavaScript 파일을 사용하세요:</p>
+          <pre class="language-markup"><code><!--
+// Call CSS, JS and a Language Pack
+<link href="/dist/editoria11y.min.css" rel="stylesheet">
+<script src="/dist/js/ed11y.umd.js"></script>;
+<script src="/dist/js/lang/en.umd.js"></script>
+// Create a new Ed11y instance
+<script>
+  const ed11y = new Ed11y.Ed11y({
+    lang: 'en',
+    cssUrls: ["/dist/css/editoria11y.min.css"]
+  });
+</script>
+                --></code></pre>
+        </section>
+
+        <section id="params">
+          <h2>파라미터</h2>
+          <p>완전한 구현은 로그인한 편집자에게만 호출되어야 하며(사이트 방문자에게 검사기가 보이는 것은 원치 않으실 것입니다!), <a href="https://github.com/itmaybejj/editoria11y/blob/3.0.x/src/js/utils/ed11y-default-options.js" class="liinternal"><strong>기본 파라미터</strong></a>를 재정의할 수 있습니다.</p>
+          <p>모든 파라미터에 기본값이 제공되므로 재정의할 항목만 포함하세요.</p>
+          <p>고도로 맞춤 설정된 구현은 다음과 같을 수 있습니다:</p>
+          <pre class="language-javascript"><code><!--const ed11y = new Ed11y.Ed11y({
+  // Define content regions
+  checkRoot: 'main, .footer-content-zone',
+  // Add custom CSS files
+  cssUrls: [
+    '/css/editoria11y.min.css',
+    '/css/custom.css'
+  ],
+  // Define Web components to include in checks
+  shadowComponents: 'accordion, lightbox',
+  // We want the box to open automatically for errors:
+  alertMode: 'assertive',
+  // Our external link icon has visually hidden text
+  // to delete before checking if the link has text:
+  linkIgnoreStrings: ['(opens in new window)'],
+  // Content editors cannot edit these elements:
+  ignoreElements: 'nav *, #social-block',
+  // Prevent this user from hiding alerts.
+  allowHide: false,
+  allowOK: true,
+  // Don't scan while the editor toolbar is open:
+  preventCheckingIfPresent: ".editor-toolbar",
+  // Turn off warnings that an element might be visually hidden:
+  checkVisible: false,
+  // Dispatch a JS event before highlighting this,
+  // so our JS can modify it first:
+  hiddenHandlers: ".accordion-panel",
+  // Dispatch a JS event when the library is ready
+  // for custom tests, then wait for 3 ed11yResume
+  // events from our 3 tests to continue.
+  customTests: 3,
+  checks: {
+    // Turn off the HEADING_FIRST test
+    HEADING_FIRST: false,
+    // Allow dismissing the HEADING_SKIPPED_LEVEL test
+    HEADING_SKIPPED_LEVEL: {
+       type: 'warning',
+    }
+  }
+
+}); --></code></pre>
+          <p>턴키 통합은 종종 이 변수들을 즉석에서 설정합니다. 예를 들어, 최근 편집된 페이지를 「assertive」 모드로 로드하고 몇 분 후 「polite」로 전환합니다.</p>
+        </section>
+
+        <section id="theme">
+          <h2>테마 설정</h2>
+
+          <p>여러 파라미터를 통해 테마 선택, 색상 재정의 및 CSS 삽입이 가능합니다.</p>
+
+          <p>향후 업데이트를 쉽게 하기 위해 재정의가 필요한 파라미터만 포함하세요.</p>
+          <pre             class="language-javascript"><code><!--// Add custom CSS file
+cssUrls: ['/css/editoria11y.min.css', '/css/custom.css'],
+theme : 'darkTheme', // Select base theme
+darkTheme: {         // Override base colors
+    bg: '#0a2051',
+    bgHighlight: '#7b1919',
+    text: '#f4f7ff',
+    primary: '#4930a0',
+    primaryText: '#f4f7ff',
+    secondary: '#20160c',
+    warning: '#fad859',
+    alert: '#b80519',
+    button: '#dde8ff',
+    focusRing: 'cyan',
+    activeTab: '#0a2051',
+    tipHeader: '#4930a0',
+},
+// Override fonts
+baseFontSize: 14, // px
+baseFontFamily: '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif', --></code></pre>
+        </section>
+
+        <section id="js-events">
+          <h2 class="wp-block-heading has-text-align-left has-secondary-background-color has-background has-large-font-size">
+            유용한 JS 이벤트</h2>
+
+          <p>테마 개발자는 이 이벤트에 훅을 걸어 필요에 따라 페이지를 반응하고 수정할 수 있습니다.</p>
+
+          <p>일반적인 발생 순서...</p>
+
+          <ul class="wp-block-list">
+            <li><strong><code>ed11yRunCustomTests</code></strong>: 결과 객체가 사용자 정의 결과를 삽입할 준비가 되었을 때 발송됩니다. 이 이벤트가 발송되려면 customTests 파라미터가 실행할 사용자 정의 테스트 함수의 수(아마도 하나...)로 설정되어야 합니다. 다음 섹션에서 자세한 내용을 확인하세요.</li>
+
+            <li><strong><code>ed11yResults</code></strong>: 모든 검사가 완료되면 발송됩니다. API 통합에서는 Ed11y.results 객체에서 데이터를 수집할 수 있습니다.</li>
+
+            <li><strong><code>ed11yPanelOpened</code></strong>: 패널이 자동 또는 수동으로 열리면 발송됩니다.</li>
+
+            <li><strong><code>ed11yShowHidden</code></strong>: <code>data-ed11y-result</code> 번호와 <code>viaJump</code> 부울 값을 제공합니다. 「ed11yShowHidden」 파라미터가 설정되어 있고 <em><strong>그리고</strong></em> 요소의 부모 중 하나가 선택자와 일치하는 경우에만 발송됩니다. 아직 열리지 않은 컨테이너(예: 아코디언, 탭, 캐러셀)의 알림을 표시하는 데 사용됩니다. 다음 섹션에 사용 예시가 있습니다.
+            </li>
+
+            <li><strong><code>ed11yPop</code></strong>: <code>data-ed11y-result</code> ID와 <code>result</code> 및 <code>tip</code> 객체에 대한 참조를 제공합니다. 툴팁이 나타날 때 발송되며, 런타임에 팁을 수정할 수 있습니다.</li>
+
+            <li><strong><code>ed11yShut</code></strong>: <code>data-ed11y-result</code> ID를 제공합니다. 툴팁이 닫힐 때 발송됩니다.</li>
+
+            <li><span data-translate><strong><code>ed11yDismissalUpdate</code></strong>: 사용자가 알림을 닫거나
+              복원할 때 확장된 정보를 제공합니다. API 연동에 사용됩니다. 이벤트 객체에 포함된 항목:</span>
+              <ul>
+                <li><code>dismissPage</code></li>
+
+                <li><code>dismissTest</code></li>
+
+                <li><code>dismissKey</code></li>
+
+                <li><code>dismissAction</code></li>
+              </ul>
+            </li>
+          </ul>
+          <p>다음 섹션에서 샘플을 확인할 수 있습니다.</p>
+        </section>
+
+        <section id="modify-tips">
+          <h2 class="wp-block-heading has-secondary-background-color has-background has-large-font-size">팁 수정
+          </h2>
+
+          <p>팁 텍스트만 수정하려면, 라이브러리 호출 전에 ed11yLang.en 전역 객체를, 또는 호출 후에 Ed11y.M 객체의 항목을 직접 재정의하면 됩니다. 예를 들어, 언어 팩을 Drupal.ed11yLang으로 별칭 지정한 Drupal 모듈에서:</p>
+
+          <p><code>Drupal.ed11yLang.lang.testNames.title = "Please write shorter headings."</code></p>
+
+          <p>이는 <a href="https://github.com/itmaybejj/editoria11y/blob/3.0.x/src/lang/baseAll.js" data-type="link" data-id="https://github.com/itmaybejj/editoria11y/blob/2.3.x/js/ed11y-localization.js" class="liinternal">현지화 파일의 기본 키</a> 또는 활성 언어별 번역에 있는 모든 항목에 적용됩니다.
+          </p>
+
+          <p>Drupal 모듈은 <code>editLinks</code> 파라미터를 사용하여 팁에 사용자 정의 편집 링크를 추가합니다. 「페이지 편집기」와 「레이아웃 편집기」를 참고하세요:</p>
+
+          <figure class="wp-block-image size-full"><img loading="lazy" data-recalc-dims="1" fetchpriority="high" decoding="async" width="580" height="300" src="https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?resize=580%2C300&amp;ssl=1" alt="「페이지 편집기」 및 「레이아웃 편집기」 링크가 삽입된 툴팁." class="wp-image-523" srcset="https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?w=1290&amp;ssl=1 1290w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?resize=600%2C311&amp;ssl=1 600w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?resize=768%2C398&amp;ssl=1 768w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?resize=1200%2C621&amp;ssl=1 1200w" sizes="(max-width: 580px) 100vw, 580px" /></figure>
+
+          <p>해당 파라미터를 설정하는 코드의 간략한 예시:</p>
+          <pre class="language-javascript"><code><!--const editLinks = document.createElement('div');
+const editLink = document.createElement('a');
+      editLink.href="/node/1/edit";
+      editLink.textContent = "Edit page";
+editLinks.appendChild(editLink);
+const ed11y = new Ed11y({
+               editLinks: editLinks,
+              }); --></code></pre>
+          <p>Drupal 모듈은 그런 다음 <strong><code>ed11yPop</code></strong> 이벤트를 사용하여 팁이 표시될 때 컨텍스트에 따라 편집 링크를 동적으로 표시하고 숨깁니다.</p>
+
+          <p>이 이벤트는 <code>result</code>와 <code>tip</code> 객체에 대한 참조를 제공합니다:</p>
+          <pre class="language-javascript"><code><!--// Listen for event
+document.addEventListener('ed11yPop', e => {
+  if (e.detail.result.element.closest(
+    drupalSettings.editoria11y.hide_edit_links)
+  ) {
+      e.detail.tip.shadowRoot.querySelector(
+        '.ed11y-custom-edit-links'
+        )?.setAttribute('hidden', '');
+     }
+}); --></code></pre>
+        </section>
+
+        <section id="custom-tests">
+          <h2>사용자 정의 테스트</h2>
+
+          <p><strong><em>customTests</em></strong> 파라미터가 <strong><em>숫자</em></strong>인 경우, Editoria11y는 검사 중에 「ed11yRunCustomTests」 이벤트를 발송하고, 해당 수의 「<code>ed11yResume</code>」 이벤트를 기다리며 최대 500ms 동안 일시 중지합니다.</p>
+
+          <p>이를 활용하면 사용자 정의 테스트가 담긴 여러 스크립트를 호출하고, 팁이 렌더링되기 전에 결과를 결과 배열에 추가할 수 있습니다.</p>
+
+          <p>예를 들어, 이메일에서 붙여넣은 난독화된 URL을 포함한 링크에 플래그를 달기 위해 이 팁을 만들고자 한다면:</p>
+
+          <figure class="wp-block-image size-full"><img loading="lazy" data-recalc-dims="1" decoding="async" width="580" height="462" src="https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2023/12/Screenshot-2023-12-06-at-5.13.38-PM.png?resize=580%2C462&amp;ssl=1" alt="「URL이 Safe Link 인코딩됨」이라고 표시된 팁" class="wp-image-323" srcset="https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2023/12/Screenshot-2023-12-06-at-5.13.38-PM.png?w=1056&amp;ssl=1 1056w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2023/12/Screenshot-2023-12-06-at-5.13.38-PM.png?resize=600%2C478&amp;ssl=1 600w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2023/12/Screenshot-2023-12-06-at-5.13.38-PM.png?resize=768%2C612&amp;ssl=1 768w" sizes="(max-width: 580px) 100vw, 580px" /></figure>
+
+          <p>다음 단계를 수행하세요:</p>
+
+          <ol class="wp-block-list">
+            <li><code>ed11yRunCustomTests</code> 이벤트에 대한 리스너 추가</li>
+
+            <li>일치하는 요소 찾기</li>
+
+            <li>팁 메시지 정의</li>
+
+            <li>Editoria11y가 팁을 그릴 수 있도록 「resume」 이벤트를 발송:</li>
+          </ol>
+
+          <pre class="language-javascript"><code><!--document.addEventListener('ed11yRunCustomTests', function() {
+  // 1. Write your custom test. This can be anything you want.
+  //
+  // This example searches the active root using the .getElements() function,
+  // which is aware of the checkRoots and ignoreElements parameters.
+  const safeLinks = Drupal.Ed11y.getElements('a[href*="safelinks.protection.outlook.com/?"]', 'root');
+
+  // This is just a utility function for this particular test...
+  const decodeSafelink = function(url) {
+      const params = new URL(url).searchParams;
+      let decoded = params.get('url');
+      if (!!decoded) {
+            decoded = Ed11y.sanitizeForHTML(decoded);
+            return `<p>The actual URL may be:<br><em style='word-wrap: break-word;'>${decoded}</em></p>`
+      }
+      return '';
+  }
+
+  // 2. Add the test name to the active language pack.
+  // Add a title:
+  Drupal.ed11yLang.lang.testNames.outlookSafeLink = 'URL is Safe Link encoded';
+
+  // 3. Push each item you want flagged to Ed11y.results.
+  //
+  // You must provide:
+  //   element:      The element itself
+  //   test:         A key for your test, matching step 2.
+  //   type:         warning or error
+  //   content:      The tip HTML.
+  //   position:     "beforebegin" for interactive elements,
+  //                 "afterbegin" for paragraphs and table cells.
+  //   dismiss:      false for errors,
+  //                 a unique string for manual checks.
+  safeLinks?.forEach((el) => {
+   Drupal.Ed11y.State.results.push({
+     element: el,
+     test:    'outlookSafeLink',
+     type:    'error',
+     content: `<div class="title">Please fix the URL in this link</div>
+               ${decodeSafelink(el.href)}
+               <div class="why">
+                <p>The URL for this link is an Outlook "Safe Link" that was copied from an email.
+                It includes the original recipient's email address,
+                and will break if Microsoft shuts down the service.</p>
+                <p>The pasted URL is:<br>
+                <em style='word-break: break-all;font-size: 90%;line-height: 1.2;
+                display: block;'>${Drupal.Ed11y.sanitizeHTML(el.href)}</em></p>
+               </div>
+            `,
+     position: 'beforebegin',
+     dismiss:  false,
+   });
+  });
+  // 4. When you are done with all your custom tests, dispatch an "ed11yResume" event:
+  let allDone = new CustomEvent('ed11yResume');
+  document.dispatchEvent(allDone);
+}) --></code></pre>
+        </section>
+
+        <section id="hidden-content">
+          <h2>숨겨지거나 크기가 제한된 콘텐츠의 알림 처리</h2>
+
+
+          <p>많은 인터랙티브 컴포넌트(탭, 슬라이더, 아코디언)는 콘텐츠를 숨깁니다. Editoria11y 정보 패널에는 문제로 직접 이동하는 이전/다음 버튼이 포함되어 있습니다. Editoria11y는 문제의 툴팁이 현재 보이지 않는다고 판단하면 문제가 있다는 알림을 표시한 후 첫 번째로 보이는 상위 요소(예: 아코디언 주변의 div)를 강조 표시합니다.</p>
+
+          <p>이상적으로는 테마가 Editoria11y의 가시성 검사가 실행되기 전에 해당 요소를 표시하여 사용자에게 모든 것이 마법처럼 작동하도록 합니다. 캐러셀은 자동 진행되고 아코디언은 자동으로 열려 문제를 표시합니다.</p>
+
+          <p>패널이 처음 열릴 때 이를 수행하려면(예: 문제가 있는 <strong><em>모든</em></strong> 아코디언 패널 펼치기), <code>ed11yPanelOpened</code>에 대한 JS 이벤트 리스너를 추가한 다음, 관련 <code>ed11y-element-result</code> 요소에 대해 querySelectorAll을 수행하고, 테마가 해당 페이지 부분을 표시하는 데 사용하는 함수를 트리거하세요.
+          </p>
+
+          <p>jQuery 기반 예시입니다. 패널이 열리면 고정 메뉴를 비활성화하고(요소가 가려지지 않도록), 닫힌 아코디언 항목 내의 <code>ed11y-element-result</code> 요소를 찾아 토글 버튼 클릭을 시뮬레이션합니다:</p>
+          <pre class="language-javascript"><code><!--document.addEventListener("ed11yPanelOpened", function () {
+  $('body').addClass('no-stick');
+  $('ed11y-element-result').each(function () {
+    if ($(this).parents('.ps-accordion-content[style*="display"]').length > 0) {
+    $(this).parents('.ps-accordion-content').prev().find('.ps-accordion-item-button').click();
+    }
+}) --></code></pre>
+
+          <p>패널의 「다음」 버튼을 통해 <strong><em>특정</em></strong> 팁으로 이동할 때만 콘텐츠를 표시하려면(예: 닫힌 탭이나 다음 캐러셀 슬라이드), 파라미터에서 <code>hiddenHandlers</code>를 관련 CSS 선택자로 설정하고 <code>checkVisible</code>를 TRUE로 설정해야 합니다. 그런 다음 <code>ed11yShowHidden</code> 이벤트에 대한 이벤트 리스너를 추가하세요. 이 이벤트는 Editoria11y가 팁이 옵션 목록에 제공된 <code>hiddenHandlers</code> 선택자 중 하나를 가진 컨테이너 안에 있다고 인식하면 발생합니다. 이 JS 이벤트에는 열리려는 팁의 ID가 포함됩니다. Editoria11y는 이 이벤트를 발송한 후 잠시 일시 중지하여 JS가 요소를 표시할 시간을 줍니다.
+          </p>
+
+          <p>펜 스테이트의 구현 예시입니다. 제공된 ID와 일치하는 요소를 찾은 다음 상위 인터랙티브 컴포넌트 컨테이너를 찾고, 토글을 활성화하는 이벤트를 트리거합니다:</p>
+          <pre class="language-javascript"><code><!--context.addEventListener('ed11yShowHidden', e => {
+  if (!e.detail.viaJump) {
+       return;
+  }
+  context.getElementById(e.detail.id)
+    .closest('[data-interactive-component]')
+    .dispatchEvent(new CustomEvent('component:activate'));
+}); --></code></pre>
+          <p>마지막 참고 사항: 일부 테마는 가시성 검사와 호환되지 않습니다. 예를 들어 <code>&lt;main&gt;</code> 컨테이너의 높이가 0px인 경우입니다. 이런 사이트는 <code>checkVisible</code>를 false로 설정하여 모든 가시성 검사를 비활성화해야 합니다.
+          </p>
+
+        </section>
+
+      </div><!-- End content column -->
+
+    </div>
+  </main>
+  <footer class="container col-lg-12 mx-auto pt-3 text-body-secondary text-center text-md-start">
+    <div class="container">
+      <div class="footer-nav text-center">
+        <a class="btn btn-primary btn-lg" data-slug="about" href="/ko/">소개</a>
+        <a class="btn btn-primary btn-lg" data-slug="features" href="/ko/features/">기능</a>
+        <a class="btn btn-primary btn-lg" data-slug="demo" href="/ko/demo/">데모</a>
+        <a class="btn btn-primary btn-lg" data-slug="license" href="/ko/license/">가격 및 기여</a>
+      </div>
+      <div class="row footer">
+        <div class="col col-3">
+          <a href="https://github.com/itmaybejj/editoria11y"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+              height="20" fill="currentColor" class="bi bi-git" viewBox="0 0 16 16">
+              <path
+                d="M15.698 7.287 8.712.302a1.03 1.03 0 0 0-1.457 0l-1.45 1.45 1.84 1.84a1.223 1.223 0 0 1 1.55 1.56l1.773 1.774a1.224 1.224 0 0 1 1.267 2.025 1.226 1.226 0 0 1-2.002-1.334L8.58 5.963v4.353a1.226 1.226 0 1 1-1.008-.036V5.887a1.226 1.226 0 0 1-.666-1.608L5.093 2.465l-4.79 4.79a1.03 1.03 0 0 0 0 1.457l6.986 6.986a1.03 1.03 0 0 0 1.457 0l6.953-6.953a1.03 1.03 0 0 0 0-1.457" />
+            </svg> <strong>라이브러리</strong></a>
+        </div>
+        <div class="col col-3">
+          <a href="https://github.com/itmaybejj/editoria11y/discussions"><svg xmlns="http://www.w3.org/2000/svg"
+              width="20" height="20" fill="currentColor" class="bi bi-chat-right-heart-fill" viewBox="0 0 16 16">
+              <path
+                d="M16 2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h9.586a1 1 0 0 1 .707.293l2.853 2.853a.5.5 0 0 0 .854-.353zM8 3.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132" />
+            </svg> <strong>포럼</strong></a>
+        </div>
+        <div class="col col-3">
+          <a href="https://github.com/itmaybejj/editoria11y/issues"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+              height="20" fill="currentColor" class="bi bi-patch-plus-fill" viewBox="0 0 16 16">
+              <path
+                d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01zM8.5 6v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 1 0" />
+            </svg> <strong>이슈</strong></a>
+        </div>
+        <div class="col col-3">
+          <a href="/ko/contacts/"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+              class="bi bi-person-lines-fill" height="24" width="24" viewBox="0 0 16 18">
+              <path
+                d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z">
+              </path>
+            </svg> <strong>연락처</strong></a>
+        </div>
+        <div class="col col-12 subfooter">
+          <a href="/ko/privacy-policy/">개인정보 보호정책</a>
+          <a href="/ko/cookie-policy/">쿠키 정책</a>
+          <a href="/ko/terms-of-use/">이용약관</a>
+          <a href="/ko/legal-notice/">법적 고지</a>
+          <span>&copy; 2026 Editoria11y LLC</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="/assets/bootstrap/js/bootstrap.bundle.min.js" class="astro-vvvwv3sm"></script>
+  <script src="/assets/lang/i18n.js"></script>
+  <script src="/assets/theme.js"></script>
+</body>
+
+</html>

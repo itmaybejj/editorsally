@@ -1,0 +1,23 @@
+# Editoria11y marketing site
+# Crawlers should index translated pages under /<lang>/<slug>/ but
+# not build artifacts, translation sources, or scratch files.
+
+User-agent: *
+
+# Source fragments and build pipeline — not deployed pages
+Disallow: /content/
+Disallow: /scripts/
+Disallow: /template.html
+
+# Translation infrastructure
+Disallow: /assets/lang/manifest.json
+
+# Node tooling
+Disallow: /node_modules/
+Disallow: /package.json
+Disallow: /package-lock.json
+
+# DDEV local-dev config
+Disallow: /.ddev/
+
+Sitemap: https://editoria11y.com/sitemap.xml

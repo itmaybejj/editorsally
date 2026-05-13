@@ -1,136 +1,134 @@
 ---
 name: translations
-description: Translate HTML pages and update stale translations for the project's 16 target languages.
+description: Translate page fragments and update stale segments for the project's target languages.
 ---
 
-# HTML Translation Workflow
+# Fragment-Based Translation Workflow
 
-This site is a static HTML marketing site. The canonical English pages live at `en/<page>/index.html`. Translated pages live at `<langCode>/<page>/index.html`.
+The site is built from `<main>`-only HTML fragments at `content/<lang>/<page>.html`. Each translatable block carries a `data-i18n-id` attribute. `assets/lang/manifest.json` hashes each English segment under `source` and tracks per-language hash-last-translated-from under `translations`. The translation skill diffs hashes to do incremental updates.
 
-## The 16 Target Languages
+Built `<lang>/<page>/index.html` files are produced by `scripts/build-pages.js` and **are not edited directly**.
 
-`da`, `de`, `el`, `es`, `fr`, `hu`, `it`, `ja`, `nb`, `nl`, `pl`, `pt-br`, `pt-pt`, `sv`, `uk`, `zh`
+## The Target Languages
+
+bg	da	el	es	fi	hu	it	ko	lv	nl	pt-br	ro	sl	tr	zh
+cs	de	en	et	fr	id	ja	lt	nb	pl	pt-pt	sk	sv	uk
 
 ## Pages
 
-`about`, `contacts`, `demo`, `drupal`, `features`, `install`, `license`
+`about`, `features`, `demo`, `contacts`, `install`, `drupal`, `license`, `privacy-policy`, `cookie-policy`, `terms-of-use`, `legal-notice`
 
-## Invoking this Skill
+## Invoking
 
-Usage: `/translations <langCode> [page]`
-
-- `/translations es` — translate or update all pages for Spanish
-- `/translations es about` — translate or update only the about page for Spanish
-- `/translations --status` — show which translations are stale or missing
-
-## Translation Steps
-
-### 1. Check Manifest
-
-Read `assets/lang/manifest.json`. For the requested language+page:
-- If the entry is `null`: this is a **new translation** — translate the full English page.
-- If the entry is a commit hash: run `git diff <hash> HEAD -- en/<page>/index.html` to see what changed. If empty, the translation is current. If there are changes, this is an **update** — apply only the changed sections to the existing translation.
-
-### 2. Proofread the English Source
-- Determine from the git diff which sections of the English source changed (if this is an update).
-- Correct errors, grammar, and clarity in page sections modified in the diff, and fix before translating. If the fixes are not for obvious errors, note this in the chat and pause for user review.
-
-### 3. Scaffold new pages
-
-For **new translations** (manifest entry is `null`), run the scaffold script first:
-
-```bash
-node scripts/scaffold-translation.js <langCode> [page]
+```
+/translations <langCode> [page]
+/translations --status
 ```
 
-This copies the English source and automatically handles:
-- `lang` attribute on `<html>`
-- `<title>` tag translation
-- Internal link rewriting (`../slug` → `/<langCode>/slug`)
-- Nav `aria-label` translations (Toggle navigation, Close)
-- Footer link labels (Library → Biblioteca, etc.)
-- CTA button labels at the bottom of each page
+## Workflow
 
-The script requires a `nav` entry in `assets/lang/i18n.js` for the target language (including `footer` strings). If this is the first page for a new language, add the nav entry first (see step 6).
+### 1. Refresh source hashes
 
-The script will skip pages that already exist at the destination path.
+Always start by running `node scripts/normalize-segments.js` to assign IDs to any new English blocks and refresh the `source` hashes in the manifest. Idempotent — safe to run anytime.
 
-### 4. Translate the `<main>` content
+### 2. Compute the per-segment delta
 
-After scaffolding, the file has all chrome localized but the `<main>` content is still in English. Translate only the prose content inside `<main>`:
+For each (lang, page) in scope:
 
-#### What to Translate
-- All visible text content (headings, paragraphs, list items, button labels, link text)
-- The demo content. Because the checker itself is multilingual, the demo content is not English-specific and should be translated along with the rest of the page.
-- `alt` attributes on images
-- `aria-label` attributes on non-chrome elements (within `<main>`)
+- `source[page]` — current English hashes (canonical).
+- `translations[lang][page]` — hashes the existing translation was last synced to.
 
-#### What to Preserve Verbatim
-- All HTML structure, classes, IDs, and `data-*` attributes
-- `<code>` and `<pre>` blocks (code examples must not be translated)
-- URLs and `href`/`src` values (internal links are already rewritten by the scaffold)
-- `<script>` tags and JavaScript content
-- SVG markup
-- Image `src` paths
-- CSS class names
-- The brand name "Editoria11y" (never translate)
-- Technical terms: HTML, CSS, JavaScript, Drupal, WordPress, CMS, API, WYSIWYG, CKEditor, TinyMCE, Gutenberg
+Three categories per segment ID:
 
-#### Smart Quotes in HTML Tags (Critical)
-Never use smart/curly quotes (`"` `"` `'` `'`) inside HTML tags. All attribute values must use straight quotes (`"` or `'`). LLMs tend to produce smart quotes when generating translated HTML. After translating, verify that no smart quotes have been introduced inside `<` `>` delimiters. For example:
-- **Wrong**: `<h2 class="pt-4" id="demo">`
-- **Correct**: `<h2 class="pt-4" id="demo">`
+- **New** — present in `source[page]`, absent in `translations[lang][page]`. Fresh translation needed.
+- **Changed** — present in both, hashes differ. Retranslate this segment only.
+- **Orphan** — present in `translations[lang][page]`, absent in `source[page]`. Drop from the target fragment and the manifest.
 
-### 4. Update (changed sections only)
+If `translations[lang][page]` is `{}` (empty), the entire page needs a fresh pass — every segment is treated as new. This happens for newly-scaffolded languages and for pages flagged after migration as structurally drifted (notably `about` and `license` across most languages, due to pre-existing English edits that never propagated).
 
-When updating an existing translation based on a git diff:
+### 3. Read only what you need
 
-1. Read the git diff to understand what changed in the English source.
-2. Read the existing translated page.
-3. Locate the corresponding sections in the translation.
-4. Apply the changes — translate only the new/modified English text while preserving the surrounding translated content.
-5. Do NOT retranslate unchanged sections.
+Open `content/en/<page>.html` and locate just the segments to translate by their `data-i18n-id`. Do **not** read the whole page if only a few segments are affected. For changed segments, also open `content/<lang>/<page>.html` and read the existing translation of the same ID — it's often a good starting point or context.
 
-### 5. Update the Manifest
+### 4. Translate
 
-After translating, update `assets/lang/manifest.json`:
-- Set the page entry to the current `HEAD` commit hash (run `git rev-parse HEAD`).
+For each segment to translate:
 
-### 6. Update i18n.js (first page for a new language only)
+- **Block segments** (`<p>`, `<li>`, `<h*>`, `<button>`, etc.): translate the visible text, preserve HTML structure, classes, IDs, `data-*` attrs, `<a href>`, inline `<code>`/`<strong>`/`<em>`, and any nested `<img>`. Image alt text is its own segment and is handled separately — do NOT translate alt attributes when working on a block segment that contains an `<img>`.
+- **Image segments** (`<img>`): translate the `alt`, `aria-label`, `title`, and `longdesc` attributes if present. Leave decorative images (`alt=""`) untouched. Image segments share the same `data-i18n-id` slot as block segments — match by ID.
+- Preserve straight quotes (`"`, `'`) inside HTML tags. Never use smart/curly quotes inside `<…>`.
+- Never translate: the brand name `Editoria11y`, code examples, SVG markup, CSS class names, URL paths, technical terms (HTML, CSS, JavaScript, Drupal, WordPress, CMS, API, WYSIWYG, CKEditor, TinyMCE, Gutenberg).
+- Demo content IS translatable. The checker itself is multilingual, so the demo paragraphs should be localized.
+- Always ask each agent to do two passes: one to translate, one to polish/proofread like a native speaker, correcting errors and awkward phrasing.
 
-When creating the first page for a new language:
-1. Add a `nav` entry in `assets/lang/i18n.js` with translated navigation strings, including `label`, `footer`, `gettingStarted`, `wpLabel`, `toggleNav`, and `close`.
-2. If the language will use translated URL slugs, add a `paths` entry.
-3. Then run the scaffold script — it reads these strings to localize the page chrome.
+If a source segment looks like a near-merge or near-split of an existing target segment, prefer reusing the existing translation as a starting point rather than translating from scratch.
 
-### 7. Regenerate the Sitemap
+### 5. Splice into the target fragment
 
-If this run **added a new page**, **added a new language**, **moved/renamed a page**, or **deleted a page**, regenerate `sitemap.xml`:
+Edit `content/<lang>/<page>.html`. For each translated segment, find the element with the matching `data-i18n-id` and replace its inner content (for blocks) or its translatable attributes (for `<img>`). Preserve the element itself, its tag, classes, IDs, and the `data-i18n-id` attribute.
+
+For orphan segments: delete the entire element.
+
+### 6. Update the manifest
+
+After splicing, set `translations[lang][page][segId]` to `source[page][segId]` for every segment you translated. Remove entries for orphan IDs. Write the manifest back.
+
+### 7. Rebuild
+
+```bash
+node scripts/build-pages.js <lang> [page]
+```
+
+This produces the deployed `<lang>/<page>/index.html` from the fragment + `template.html`. The build strips `data-i18n-id` from the output.
+
+### 8. Verify (recommended for big changes)
+
+```bash
+node scripts/verify-build.js <lang> [page]
+```
+
+Semantic-diffs the built file against the version at git HEAD. Catches accidental content loss.
+
+### 9. Regenerate the sitemap (only if pages or languages changed)
 
 ```bash
 node scripts/generate-sitemap.js
 ```
 
-The script walks `i18n.canonicalPaths` × `i18n.allLanguages` and writes a `<url>` entry (with `xhtml:link` alternates and `x-default`) for every `<langCode>/<slug>/index.html` that exists on disk. It is safe to run any time; updates that only retranslate existing pages do not require a regeneration.
+Not needed for content edits within an existing (lang, page).
 
-When adding a page or language, also:
-- Add the new slug to `canonicalPaths` (and any translated `paths` entries) in `assets/lang/i18n.js`.
-- Add the new language to `allLanguages` (and `nav`) in `assets/lang/i18n.js`.
-- Add the new page key to every language entry in `assets/lang/manifest.json`.
+## Adding a New Language
 
-## Translation Quality Guidelines
+1. Add the lang code to `i18n.allLanguages` and `nativeNames` in `assets/lang/i18n.js`. Add a full `nav` entry with translated chrome strings.
+2. Run `node scripts/scaffold-translation.js <langCode>` to create empty fragments under `content/<langCode>/` (initially seeded from English text). The script also adds empty manifest entries.
+3. Run the translation workflow above to populate the content.
+4. Uncomment the lang code in `supportedLanguages` when ready to surface to visitors.
+5. Run `node scripts/generate-sitemap.js`.
 
-- Use natural, fluent phrasing — not word-for-word translation.
-- Match the tone: friendly, professional, informative.
-- Keep technical accuracy (accessibility terminology should use the accepted terms in the target language).
-- `pt-pt` and `pt-br` differ significantly — do not copy one for the other.
-- Japanese (`ja`) and Chinese (`zh`) have no plural forms.
-- Polish (`pl`) and Ukrainian (`uk`) have 3 plural forms.
+## Quality Guidelines
 
-## Status Check
+- Natural, fluent phrasing — not word-for-word.
+- Tone: friendly, professional, informative.
+- Use accepted accessibility terminology in the target language.
+- `pt-br` and `pt-pt` differ significantly — never copy one for the other.
+- Japanese and Chinese have no plural forms.
+- Polish and Ukrainian have three plural forms.
 
-When invoked with `--status`, read `assets/lang/manifest.json` and for each language+page:
-- `null` → "Missing"
-- Has a commit hash → run `git diff <hash> HEAD -- en/<page>/index.html`. If diff is empty → "Current". If diff has changes → "Stale (N lines changed)".
+## Status Check (`--status`)
 
-Print a summary table.
+Read `assets/lang/manifest.json`. For each (lang, page):
+
+- Empty translations entry (`{}`) → "Fresh translation needed".
+- All hashes match source → "Current".
+- Otherwise → "Stale (N of M segments changed)".
+
+Print a table grouped by language.
+
+## Token-Efficiency Notes
+
+The whole point of this workflow is to minimize tokens spent on translation. Specifically:
+
+- Don't read whole pages. Read individual segments by ID.
+- Don't write whole pages. Splice individual segments into the existing fragment.
+- Don't re-translate unchanged segments. Trust the hash diff.
+- For a one-paragraph English edit, expect to touch one segment per language — a few hundred tokens, not a few thousand.

@@ -9,10 +9,9 @@
   <link rel="shortcut icon" href="/favicon.ico" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
   <meta charset="utf-8" />
-  <title>Drupal CSA Docs — Editoria11y</title>
+  <title>Editoria11y for Drupal — Editoria11y</title>
   <link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
   <link href="/assets/theme.css" rel="stylesheet" />
-  <link href="/assets/prism/prism.css" rel="stylesheet" />
   <meta name="theme-color" content="#712cf9" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -21,7 +20,7 @@
   <header>
     <nav class="navbar navbar-expand-md">
       <div class="container col-sm-12 mx-auto">
-        <a href="../" class="d-flex align-items-center  navbar-brand">
+        <a href="/en/" class="d-flex align-items-center  navbar-brand">
           <svg class="logo-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
             viewBox="-.75 -3.5 10.1699 19.1777">
             <path fill="currentColor"
@@ -34,7 +33,7 @@
         </button>
         <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
           <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Editora11y</h5>
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Editoria11y</h5>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
           </div>
           <div class="offcanvas-body">
@@ -63,8 +62,7 @@
 
             <figure class="figure my-4 row">
               <div class="col-lg-8">
-                <img loading="lazy" src="/assets/images/3x-editing.png" class="rounded border figure-img img-fluid"
-                  height="1088" width="2237" alt="Drupal editor with inline tips" />
+                <img loading="lazy" src="/assets/images/3x-editing.png" class="rounded border figure-img img-fluid" height="1088" width="2237" alt="Drupal editor with inline tips" />
               </div>
               <figcaption class="figure-caption col-lg-4">Issues are detected both on-load in the frontend
                 and
@@ -73,8 +71,7 @@
 
             <figure class="figure my-4 row">
               <div class="col-lg-8">
-                <img loading="lazy" src="/assets/images/3x-generic-tip.png" class="rounded border figure-img img-fluid"
-                  height="798" width="1278" alt="Tip indicated a link is only named click here." />
+                <img loading="lazy" src="/assets/images/3x-generic-tip.png" class="rounded border figure-img img-fluid" height="798" width="1278" alt="Tip indicated a link is only named click here." />
               </div>
               <figcaption class="figure-caption col-lg-4">Tooltips gain buttons
                 to jump into editor, ignore the alert (for the active user) or mark it OK (for all
@@ -84,9 +81,7 @@
 
             <figure class="figure my-4 row">
               <div class="col-lg-8">
-                <img loading="lazy" src="/assets/images/3x-drupal-custom-tests.png"
-                  class="rounded border figure-img img-fluid"
-                  alt="Custom test builder interface showing fields for tip title and content, as well as element selectors and exclusions." />
+                <img loading="lazy" src="/assets/images/3x-drupal-custom-tests.png" class="rounded border figure-img img-fluid" alt="Custom test builder interface showing fields for tip title and content, as well as element selectors and exclusions." />
               </div>
               <figcaption class="figure-caption col-lg-4">
                 <p class="mb-2">The CSA submodule adds:</p>
@@ -102,9 +97,7 @@
             </figure>
 
             <figure class="figure">
-              <img loading="lazy" class="figure-img img-fluid rounded border" src="/assets/images/3x-dashboard.png"
-                height="765" width="1600"
-                alt="Reporting dashboard showing recent issues and pages with the most issues." />
+              <img loading="lazy" class="figure-img img-fluid rounded border" src="/assets/images/3x-dashboard.png" height="765" width="1600" alt="Reporting dashboard showing recent issues and pages with the most issues." />
               <figcaption class="figure-caption p-3 pt-2">A site-wide dashboard provides filterable and
                 exportable reports of alerts and dismissals.</figcaption>
             </figure>
@@ -147,7 +140,7 @@
           </p>
           <p>While you can turn off tests altogether, it is usually better to hide alerts on specific elements or pages.
           </p>
-          <hr>
+          <hr/>
           <p>
             During each test run, Editoria11y gathers a single set of elements from the "Check content in these
             containers" setting, and then filters it several times. This is what a test run looks like:
@@ -158,28 +151,28 @@
             </li>
             <li>
               <strong>Gather</strong> elements in specified page regions,
-              e.g.:<br><code>body > *:not('.ed11y-element')</code><br>
+              e.g.:<br/><code>body > *:not('.ed11y-element')</code><br/>
               <em>For Editoria11y CSA users, these are the regions on the <strong>Developer tests</strong> tab.</em>
             </li>
             <li>
               <strong>Drop</strong> elements that match ignore selectors,
-              e.g.:<br><code>.widgets, .utility-menu</code><br>
+              e.g.:<br/><code>.widgets, .utility-menu</code><br/>
               <em>For Editoria11y CSA users, these are the selectors on the <strong>Developer tests</strong> tab.</em>
             </li>
             <li>
               Run tests and sync results to the dashboard.
             </li>
             <li>
-              If split configuration is active and the user is a content editor, filter developer results:
+              <span data-translate>If split configuration is active and the user is a content editor, filter developer results:</span>
               <ul>
                 <li><strong>Drop</strong> results from tests set to "Developer only."</li>
                 <li><strong>Drop</strong> results on elements from outside specified <strong><em>content</em></strong>
-                  regions, e.g.:<br><code>main, footer</code></li>
+                  regions, e.g.:<br/><code>main, footer</code></li>
                 <li><strong>Drop</strong> results on elements that match <strong><em>content</em></strong> ignore
                   selectors.</li>
               </ul>
-              Note that there is not a second "gather" phase. The developer page regions must include the content
-              regions.
+              <span data-translate>Note that there is not a second "gather" phase. The developer page regions must include the content
+              regions.</span>
             </li>
             <li>Open the panel and draw alerts if configuration matches an auto-open setting.</li>
           </ol>
@@ -237,20 +230,20 @@
                   <div id="edit-dev-check-root">
                     <div>
                       <input aria-describedby="edit-dev-check-root--description" type="radio"
-                        id="edit-dev-check-root-automatic" name="dev_check_root" value="automatic" checked="checked">
+                        id="edit-dev-check-root-automatic" name="dev_check_root" value="automatic" checked="checked" />
                       <label for="edit-dev-check-root-automatic" class="form-item__label option">All elements</label>
                     </div>
                     <div class="d-flex">
                       <input aria-describedby="edit-dev-check-root--description" type="radio"
                         id="edit-dev-check-root-match" name="dev_check_root" value="match"
-                        class="align-self-baseline mt-1 me-1">
+                        class="align-self-baseline mt-1 me-1" />
                       <label for="edit-dev-check-root-match" class="form-item__label option">Only the containers listed
                         in the Content Setting tab</label>
                     </div>
                     <div class="">
                       <input aria-describedby="edit-dev-check-root--description" type="radio"
                         id="edit-dev-check-root-specify" name="dev_check_root" value="specify"
-                        class="form-radio form-boolean form-boolean--type-radio">
+                        class="form-radio form-boolean form-boolean--type-radio" />
                       <label for="edit-dev-check-root-specify" class="">The specific containers listed below</label>
                     </div>
                   </div>
@@ -398,8 +391,7 @@
           <p>Some themes have widgets that toggle the visibility of content, such as accordions, tabs and slideshows.
             Tips inside these elements will also be hidden. Providing a list of selectors for these widgets means
             Editoria11y will pause briefly when a user tries to jump to those tips using a next or previous button.
-            Drupal themes and modules can then follow the directions from the library section on <a
-              href="../install/#hidden-content">dealing with tips on hidden content</a> to reveal the hidden content.
+            Drupal themes and modules can then follow the directions from the library section on <a href="/en/install/#hidden-content">dealing with tips on hidden content</a> to reveal the hidden content.
           </p>
 
           <h2 id="runtime">Write your own config</h2>
@@ -434,8 +426,7 @@ function MY_MODULE_editoria11y_alter_config(array &$attach, CacheableMetadata $c
             the library. To add additional parameters, you need to modify the JS <code>options</code> object directly.
             The module checks for one global JS variable of <code>editoria11yOptionsOverride</code>. If this is set, it
             will pass the <code>options</code> object to an <code>editoria11yOptions</code> function you have provided
-            in your module or theme. You can now set any of the <a
-              href="https://editorsally.ddev.site/en/install/#params">library parameters</a>.</p>
+            in your module or theme. You can now set any of the <a               href="https://editorsally.ddev.site/en/install/#params">library parameters</a>.</p>
           <pre class="language-javascript"><code><!--var editoria11yOptionsOverride = true;
 var editoria11yOptions = function(options) {
   // You now have access to the processed options object that will be passed to the library.
@@ -457,8 +448,7 @@ var editoria11yOptions = function(options) {
             <h2>Write your own tests</h2>
             <p>First, in the module config, add 1 to the "Custom tests" options so it knows to
               watch for the tests.</p>
-            <p>Then create a Drupal JS library with your tests in your theme or module, using the <a
-                href="../install/#custom-tests">library guide to writing custom tests</a>.</p>
+            <p>Then create a Drupal JS library with your tests in your theme or module, using the <a href="/en/install/#custom-tests">library guide to writing custom tests</a>.</p>
             <p>Here's a working example from Princeton, of a custom test to alert on Safe Links. Note that it accesses
               the Editoria11y class through <code>Drupal.Ed11y.</code></p>
             <pre class="language-javascript"><code><!--const psEd11yCustomTests = function() {
@@ -521,9 +511,9 @@ var editoria11yOptions = function(options) {
           </section>
           <section id="help">
             <h2>Getting help</h2>
-            <p>Check the <a href="../contacts">contacts</a> page for community support options. @itmaybejj is usually
+            <p>Check the <a href="/en/contacts/">contacts</a> page for community support options. @itmaybejj is usually
               online in the Drupal Slack when the sun is up in the western hemisphere.</p>
-            <p>Most of the <a href="../license/">CSA contribution levels</a> include an annual checkin, which
+            <p>Most of the <a href="/en/license/">CSA contribution levels</a> include an annual checkin, which
               can include direct
               assistance
               with setup and configuration</p>
@@ -535,45 +525,55 @@ var editoria11yOptions = function(options) {
   </main>
   <footer class="container col-lg-12 mx-auto pt-3 text-body-secondary text-center text-md-start">
     <div class="container">
-      <div class="footer-nav mt-5 pt-5 text-center"><a class="btn btn-primary btn-lg" href="../">About</a> <a
-          class="btn btn-primary btn-lg" href="../features/">Features</a> <a class="btn btn-primary btn-lg"
-          href="../demo/">Demo</a> <a class="btn btn-primary btn-lg" aria-current="page" href="../license/">Support the project</a></div>
-      <div class="footer">
-        <a href="https://github.com/itmaybejj/editoria11y"><svg xmlns="http://www.w3.org/2000/svg" width="20"
-            height="20" fill="currentColor" class="bi bi-git" viewBox="0 0 16 16">
-            <path
-              d="M15.698 7.287 8.712.302a1.03 1.03 0 0 0-1.457 0l-1.45 1.45 1.84 1.84a1.223 1.223 0 0 1 1.55 1.56l1.773 1.774a1.224 1.224 0 0 1 1.267 2.025 1.226 1.226 0 0 1-2.002-1.334L8.58 5.963v4.353a1.226 1.226 0 1 1-1.008-.036V5.887a1.226 1.226 0 0 1-.666-1.608L5.093 2.465l-4.79 4.79a1.03 1.03 0 0 0 0 1.457l6.986 6.986a1.03 1.03 0 0 0 1.457 0l6.953-6.953a1.03 1.03 0 0 0 0-1.457" />
-          </svg> <strong>Library</strong></a>
-        <a href="https://github.com/itmaybejj/editoria11y/discussions"><svg xmlns="http://www.w3.org/2000/svg"
-            width="20" height="20" fill="currentColor" class="bi bi-chat-right-heart-fill" viewBox="0 0 16 16">
-            <path
-              d="M16 2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h9.586a1 1 0 0 1 .707.293l2.853 2.853a.5.5 0 0 0 .854-.353zM8 3.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132" />
-          </svg> <strong>Forum</strong></a>
-        <a href="https://github.com/itmaybejj/editoria11y/issues"><svg xmlns="http://www.w3.org/2000/svg" width="20"
-            height="20" fill="currentColor" class="bi bi-patch-plus-fill" viewBox="0 0 16 16">
-            <path
-              d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01zM8.5 6v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 1 0" />
-          </svg> <strong>Issues</strong></a>
-        <a href="../contacts"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-            class="bi bi-person-lines-fill" height="24" width="24" viewBox="0 0 16 18">
-            <path
-              d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z">
-            </path>
-          </svg> <strong>Contacts</strong></a>
+      <div class="footer-nav text-center">
+        <a class="btn btn-primary btn-lg" data-slug="about" href="/en/">About</a>
+        <a class="btn btn-primary btn-lg" data-slug="features" href="/en/features/">Features</a>
+        <a class="btn btn-primary btn-lg" data-slug="demo" href="/en/demo/">Demo</a>
+        <a class="btn btn-primary btn-lg" data-slug="license" href="/en/license/">Support the project</a>
       </div>
-      <div class="col col-12 subfooter">
-        <a href="../privacy-policy/">Privacy</a>
-        <a href="../cookie-policy/">Cookie Policy</a>
-        <a href="../terms-of-use/">Terms of Use</a>
-        <a href="../legal-notice/">Legal Notice</a>
-        <span>&copy; 2026 Editoria11y LLC</span>
+      <div class="row footer">
+        <div class="col col-3">
+          <a href="https://github.com/itmaybejj/editoria11y"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+              height="20" fill="currentColor" class="bi bi-git" viewBox="0 0 16 16">
+              <path
+                d="M15.698 7.287 8.712.302a1.03 1.03 0 0 0-1.457 0l-1.45 1.45 1.84 1.84a1.223 1.223 0 0 1 1.55 1.56l1.773 1.774a1.224 1.224 0 0 1 1.267 2.025 1.226 1.226 0 0 1-2.002-1.334L8.58 5.963v4.353a1.226 1.226 0 1 1-1.008-.036V5.887a1.226 1.226 0 0 1-.666-1.608L5.093 2.465l-4.79 4.79a1.03 1.03 0 0 0 0 1.457l6.986 6.986a1.03 1.03 0 0 0 1.457 0l6.953-6.953a1.03 1.03 0 0 0 0-1.457" />
+            </svg> <strong>Library</strong></a>
+        </div>
+        <div class="col col-3">
+          <a href="https://github.com/itmaybejj/editoria11y/discussions"><svg xmlns="http://www.w3.org/2000/svg"
+              width="20" height="20" fill="currentColor" class="bi bi-chat-right-heart-fill" viewBox="0 0 16 16">
+              <path
+                d="M16 2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h9.586a1 1 0 0 1 .707.293l2.853 2.853a.5.5 0 0 0 .854-.353zM8 3.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132" />
+            </svg> <strong>Forum</strong></a>
+        </div>
+        <div class="col col-3">
+          <a href="https://github.com/itmaybejj/editoria11y/issues"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+              height="20" fill="currentColor" class="bi bi-patch-plus-fill" viewBox="0 0 16 16">
+              <path
+                d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01zM8.5 6v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 1 0" />
+            </svg> <strong>Issues</strong></a>
+        </div>
+        <div class="col col-3">
+          <a href="/en/contacts/"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+              class="bi bi-person-lines-fill" height="24" width="24" viewBox="0 0 16 18">
+              <path
+                d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z">
+              </path>
+            </svg> <strong>Contacts</strong></a>
+        </div>
+        <div class="col col-12 subfooter">
+          <a href="/en/privacy-policy/">Privacy Policy</a>
+          <a href="/en/cookie-policy/">Cookie Policy</a>
+          <a href="/en/terms-of-use/">Terms of Use</a>
+          <a href="/en/legal-notice/">Legal Notice</a>
+          <span>&copy; 2026 Editoria11y LLC</span>
+        </div>
       </div>
     </div>
   </footer>
   <script src="/assets/bootstrap/js/bootstrap.bundle.min.js" class="astro-vvvwv3sm"></script>
   <script src="/assets/lang/i18n.js"></script>
   <script src="/assets/theme.js"></script>
-  <script src="/assets/prism/prism.js"></script>
 </body>
 
 </html>

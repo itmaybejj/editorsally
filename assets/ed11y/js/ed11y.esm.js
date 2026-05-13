@@ -1,6 +1,6 @@
 /*!
 			* Editoria11y accessibility checker
-			* @version 3.0.0-428
+			* @version 3.0.1-510
 			* @author John Jameson
 			* @license GPLv2
 			* @copyright © 2026 Princeton University.
@@ -488,8 +488,9 @@ const Constants = /* @__PURE__ */ (function myConstants() {
     Root.areaToCheck = [];
     Root.Readability = [];
     if (fixedRoots) {
-      Root.areaToCheck = fixedRoots;
-      Root.Readability = fixedRoots;
+      const rootElements = fixedRoots.map((entry) => entry?.fixedRoot).filter(Boolean);
+      Root.areaToCheck = rootElements;
+      Root.Readability = rootElements;
       return;
     }
     try {
@@ -713,7 +714,7 @@ function find(selector, desiredRoot, exclude) {
   if (desiredRoot === "document") {
     root.push(document.body);
     if (State.option.fixedRoots) {
-      root.push(State.option.fixedRoots);
+      root.push(State.option.fixedRoots.map((entry) => entry?.fixedRoot).filter(Boolean));
     }
   } else if (desiredRoot === "root") {
     root.push(Constants.Root.areaToCheck);
@@ -1199,14 +1200,44 @@ function generateRegexString(input, matchStart = false) {
   const finalPattern = matchStart ? `^(?:${joinedPatterns})` : joinedPatterns;
   return new RegExp(finalPattern, "i");
 }
-async function dismissDigest(pepper, message) {
-  const msgUint8 = new TextEncoder().encode(pepper + message);
-  const hashBuffer = await window.crypto.subtle.digest("SHA-256", msgUint8);
-  if (Uint8Array.prototype.toHex) {
-    return new Uint8Array(hashBuffer).toHex();
+function cyrb128Hex(str) {
+  let h1 = 1779033703;
+  let h2 = 3144134277;
+  let h3 = 1013904242;
+  let h4 = 2773480762;
+  for (let i = 0; i < str.length; i++) {
+    const k = str.charCodeAt(i);
+    h1 = h2 ^ Math.imul(h1 ^ k, 597399067);
+    h2 = h3 ^ Math.imul(h2 ^ k, 2869860233);
+    h3 = h4 ^ Math.imul(h3 ^ k, 951274213);
+    h4 = h1 ^ Math.imul(h4 ^ k, 2716044179);
   }
-  const hashArray = Array.from(new Uint8Array(hashBuffer));
-  return hashArray.map((b) => b.toString(16).padStart(2, "0")).join("");
+  h1 = Math.imul(h3 ^ h1 >>> 18, 597399067);
+  h2 = Math.imul(h4 ^ h2 >>> 22, 2869860233);
+  h3 = Math.imul(h1 ^ h3 >>> 17, 951274213);
+  h4 = Math.imul(h2 ^ h4 >>> 19, 2716044179);
+  return [h1 ^ h2 ^ h3 ^ h4, h2 ^ h1, h3 ^ h1, h4 ^ h1].map((n) => (n >>> 0).toString(16).padStart(8, "0")).join("");
+}
+let dismissDigestFallbackWarned = false;
+async function dismissDigest(pepper, message) {
+  const input = `${pepper}${message}`;
+  const subtle = globalThis.crypto?.subtle;
+  if (subtle?.digest) {
+    const msgUint8 = new TextEncoder().encode(input);
+    const hashBuffer = await subtle.digest("SHA-256", msgUint8);
+    if (Uint8Array.prototype.toHex) {
+      return new Uint8Array(hashBuffer).toHex();
+    }
+    const hashArray = Array.from(new Uint8Array(hashBuffer));
+    return hashArray.map((b) => b.toString(16).padStart(2, "0")).join("");
+  }
+  if (!dismissDigestFallbackWarned) {
+    dismissDigestFallbackWarned = true;
+    console.warn(
+      "Editoria11y: SubtleCrypto unavailable (likely an insecure http:// origin). Falling back to a non-cryptographic hash for dismiss keys. Serve the page over https or from localhost to silence this warning."
+    );
+  }
+  return cyrb128Hex(input);
 }
 let langCache;
 function validateLang(code, displayLangCode) {
@@ -1804,7 +1835,7 @@ function findShadowComponents(option) {
     });
   }
 }
-const version = "3.0.0-428";
+const version = "3.0.1-510";
 const sprite = {
   alts: '<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 576 512"><path fill="currentColor" d="M160 80l352 0c9 0 16 7 16 16l0 224c0 8.8-7.2 16-16 16l-21 0L388 179c-4-7-12-11-20-11s-16 4-20 11l-52 80-12-17c-5-6-12-10-19-10s-15 4-19 10L176 336 160 336c-9 0-16-7-16-16l0-224c0-9 7-16 16-16zM96 96l0 224c0 35 29 64 64 64l352 0c35 0 64-29 64-64l0-224c0-35-29-64-64-64L160 32c-35 0-64 29-64 64zM48 120c0-13-11-24-24-24S0 107 0 120L0 344c0 75 61 136 136 136l320 0c13 0 24-11 24-24s-11-24-24-24l-320 0c-49 0-88-39-88-88l0-224zm208 24a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z"></path></svg>',
   close: '<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 384 512"><path fill="currentColor" d="M343 151c13-13 13-33 0-46s-33-13-45 0L192 211 87 105c-13-13-33-13-45 0s-13 33 0 45L147 256 41 361c-13 13-13 33 0 45s33 13 45 0L192 301 297 407c13 13 33 13 45 0s13-33 0-45L237 256 343 151z"></path></svg>',
@@ -1888,7 +1919,12 @@ ${this.error.stack}
       if (State.option) {
         const oldPepper = State.option.pepper;
         State.option.pepper = "hidden";
-        optionsInfo.textContent += `Options: ${JSON.stringify(State.option)}`;
+        const safe = (_key, value) => {
+          if (value instanceof Node) return `[${value.nodeName || "Node"}]`;
+          if (typeof value === "function") return "[Function]";
+          return value;
+        };
+        optionsInfo.textContent += `Options: ${JSON.stringify(State.option, safe)}`;
         State.option.pepper = oldPepper;
       } else {
         optionsInfo.textContent += "Options object is not available.";
@@ -2024,8 +2060,9 @@ function initializeRoot(desiredRoot, desiredReadabilityRoot, fixedRoots) {
   Constants.Root.areaToCheck = [];
   Constants.Root.Readability = [];
   if (fixedRoots) {
-    Constants.Root.areaToCheck = fixedRoots;
-    Constants.Root.Readability = fixedRoots;
+    const rootElements = fixedRoots.map((entry) => entry?.fixedRoot).filter(Boolean);
+    Constants.Root.areaToCheck = rootElements;
+    Constants.Root.Readability = rootElements;
     return;
   }
   try {
@@ -4707,7 +4744,7 @@ function closestScrollable(el) {
   }
 }
 function alignPanel() {
-  if (!UI.panelElement) {
+  if (typeof UI.panel?.classList?.add !== "function") {
     return false;
   }
   if (State.option.panelPosition === "left") {
@@ -5689,6 +5726,14 @@ function prepareCustomRuleset() {
   State.option.customRules?.forEach((cr) => {
     Lang.testNames[cr.testKey] = cr.testName;
     Lang.langStrings[cr.testKey] = `<div class="title" tabindex="-1">${sanitizeHTML(cr.testName)}</div>${sanitizeHTML(cr.tipContent)}`;
+    if (!cr.caseSensitive) {
+      if (cr.includeText.length) {
+        cr.includeText = cr.includeText.map((inc) => inc.toLowerCase());
+      }
+      if (cr.excludeText.length) {
+        cr.excludeText = cr.excludeText.map((exc) => exc.toLowerCase());
+      }
+    }
   });
 }
 const pushCustomRule = (cr, el, text) => {
@@ -5821,7 +5866,7 @@ function updatePanel() {
   } else {
     if (UI.totalCount > 0) {
       UI.seen[encodeURI(State.option.currentPage)] = UI.totalCount;
-      localStorage.setItem("editoria11yResultCount", JSON.stringify(UI.seen));
+      store.setItem("editoria11yResultCount", JSON.stringify(UI.seen));
     } else {
       delete UI.seen[encodeURI(State.option.currentPage)];
     }
@@ -6083,7 +6128,7 @@ function dismissOne(dismissalType, test, dismissalKey) {
     UI.panelShowDismissed.removeAttribute("hidden");
   }
   if (State.option.syncedDismissals === false) {
-    localStorage.setItem("ed11ydismissed", JSON.stringify(UI.dismissedAlerts));
+    store.setItem("ed11ydismissed", JSON.stringify(UI.dismissedAlerts));
   }
   const dismissalDetail = {
     dismissPage: State.option.currentPage,
@@ -6554,7 +6599,7 @@ const slowIncremental = lagBounce(() => {
   incrementalCheckDebounce();
 }, 500);
 function windowResize() {
-  if (UI.panel?.classList.contains("ed11y-active") === true) {
+  if (UI.panel?.classList?.contains("ed11y-active") === true) {
     alignAlts();
     alignButtons();
   }
@@ -6564,6 +6609,9 @@ function windowResize() {
   alignPanel();
 }
 const scrollWatch = (container) => {
+  const stampHost = typeof container.documentElement === "object" ? container.documentElement : container;
+  if (stampHost?.dataset?.ed11yScrollWatch === "true") return;
+  if (stampHost?.dataset) stampHost.dataset.ed11yScrollWatch = "true";
   container.addEventListener(
     "scroll",
     () => {
@@ -6579,22 +6627,48 @@ const scrollWatch = (container) => {
     }
   );
 };
-function intersectionObservers() {
-  Elements.Found.editable?.forEach((editable) => {
-    scrollWatch(editable);
-  });
-  scrollWatch(document);
-  document.addEventListener(
+const attachIntegrationListeners = (doc) => {
+  if (!doc || doc.documentElement?.dataset?.ed11yIntegrationListeners === "true") return;
+  doc.documentElement.dataset.ed11yIntegrationListeners = "true";
+  doc.addEventListener(
+    "keydown",
+    () => {
+      UI.interaction = true;
+    },
+    { passive: true }
+  );
+  doc.addEventListener(
+    "click",
+    () => {
+      UI.interaction = true;
+    },
+    { passive: true }
+  );
+  doc.addEventListener(
     "selectionchange",
     () => {
       if (!UI.running) {
         selectionChanged();
       }
     },
-    {
-      passive: true
-    }
+    { passive: true }
   );
+};
+function intersectionObservers() {
+  Elements.Found.editable?.forEach((editable) => {
+    scrollWatch(editable);
+  });
+  scrollWatch(document);
+  attachIntegrationListeners(document);
+  if (Array.isArray(State.option.fixedRoots)) {
+    State.option.fixedRoots.forEach((root) => {
+      const foreignDoc = root?.fixedRoot?.ownerDocument;
+      if (foreignDoc && foreignDoc !== document) {
+        scrollWatch(foreignDoc);
+        attachIntegrationListeners(foreignDoc);
+      }
+    });
+  }
 }
 const selectionChanged = lagBounce(() => {
   if (rangeChange()) {
@@ -6821,7 +6895,7 @@ function checkAll() {
   UI.roots = [];
   if (State.option.fixedRoots) {
     State.option.fixedRoots.forEach((root) => {
-      UI.roots.push(root);
+      if (root?.fixedRoot) UI.roots.push(root.fixedRoot);
     });
   } else {
     UI.roots = [...document.querySelectorAll(`:is(${State.option.checkRoot})`)];
@@ -6959,6 +7033,22 @@ const incrementalCheckDebounce = lagBounce(() => {
 function refresh() {
   incrementalCheckDebounce();
 }
+function setFixedRoots(newFixedRoots, newEditableContent) {
+  State.option.fixedRoots = Array.isArray(newFixedRoots) && newFixedRoots.length > 0 ? newFixedRoots : false;
+  if (typeof newEditableContent !== "undefined") {
+    State.option.editableContent = newEditableContent;
+  }
+  if (Array.isArray(newFixedRoots)) {
+    newFixedRoots.forEach((root) => {
+      const foreignDoc = root?.fixedRoot?.ownerDocument;
+      if (foreignDoc && foreignDoc !== document) {
+        attachIntegrationListeners(foreignDoc);
+      }
+    });
+  }
+  UI.forceFullCheck = true;
+  refresh();
+}
 function resetPanel() {
   UI.visualizing = true;
   visualize();
@@ -6995,9 +7085,15 @@ function dismissThis(dismissalType, button) {
   } else {
     dismissOne(dismissalType, test, dismissKey);
   }
+  pauseObservers();
   reset();
+  const toClear = tip?.getRootNode()?.host;
+  if (toClear) {
+    toClear.remove();
+  }
   UI.showPanel = true;
   checkAll();
+  resumeObservers();
   const rememberGoto = UI.openJumpPosition;
   window.setTimeout(
     () => {
@@ -7011,7 +7107,8 @@ function dismissThis(dismissalType, button) {
       }
     },
     500,
-    rememberGoto
+    rememberGoto,
+    tip
   );
 }
 function toggleShowDismissals() {
@@ -7042,13 +7139,13 @@ function togglePanel() {
         }
         checkAll();
         State.option.userPrefersShut = false;
-        localStorage.setItem("editoria11yShow", "1");
+        store.setItem("editoria11yShow", "1");
       } else {
         UI.showDismissed = false;
         UI.showPanel = false;
         reset();
         State.option.userPrefersShut = true;
-        localStorage.setItem("editoria11yShow", "0");
+        store.setItem("editoria11yShow", "0");
       }
       panelLabel();
     }
@@ -8653,7 +8750,9 @@ const ed11yDefaultOptions = {
   checkRoot: false,
   // Editoria11y uses "checkRoots" below.
   fixedRoots: false,
-  // Array of specific nodes, overrides previous.
+  // Array object pairs:
+  // { fixedRoot: element, framePositioner: element }
+  // framePositioner is the wrapper element outside an iframe.
   // Exclusions
   containerIgnore: "",
   contrastIgnore: ".sr-only",
@@ -8929,7 +9028,7 @@ const ed11yDefaultOptions = {
   // WP uses 'This image has an empty alt attribute; it's filename is etc.jpg'
   editLinks: false,
   // Add links to edit content in tooltips.
-  userPrefersShut: localStorage.getItem("editoria11yShow") === "0",
+  userPrefersShut: store.getItem("editoria11yShow") === "0",
   // Sa11y checks ==================
   checks: {
     // Sa11y: Heading checks
@@ -9256,7 +9355,7 @@ const postProcessOptions = (userOptions) => {
   const localResultCount = store.getItem("editoria11yResultCount");
   UI.seen = localResultCount && localResultCount !== "undefined" ? JSON.parse(localResultCount) : {};
   if (State.option.syncedDismissals === false) {
-    UI.dismissedAlerts = localStorage.getItem("ed11ydismissed");
+    UI.dismissedAlerts = store.getItem("ed11ydismissed");
     UI.dismissedAlerts = UI.dismissedAlerts ? JSON.parse(UI.dismissedAlerts) : {};
   } else {
     UI.dismissedAlerts = {};
@@ -9292,24 +9391,15 @@ async function initialize(userOptions) {
       }
     });
     checkAll();
-    window.addEventListener(
-      "keydown",
-      () => {
-        UI.interaction = true;
-      },
-      {
-        passive: true
-      }
-    );
-    window.addEventListener(
-      "click",
-      () => {
-        UI.interaction = true;
-      },
-      {
-        passive: true
-      }
-    );
+    attachIntegrationListeners(document);
+    if (Array.isArray(State.option.fixedRoots)) {
+      State.option.fixedRoots.forEach((root) => {
+        const foreignDoc = root?.fixedRoot?.ownerDocument;
+        if (foreignDoc && foreignDoc !== document) {
+          attachIntegrationListeners(foreignDoc);
+        }
+      });
+    }
     window.addEventListener(
       "resize",
       () => {
@@ -9362,6 +9452,7 @@ export {
   refresh,
   reset,
   sanitizeHTML,
+  setFixedRoots,
   sprite,
   version
 };

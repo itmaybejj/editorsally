@@ -64,6 +64,15 @@
     }
   });
 
+  /* Footer active-page marker — promotes the matching footer button to btn-dark */
+  document.querySelectorAll('footer .footer-nav a[data-slug]').forEach(btn => {
+    if (btn.dataset.slug === currentCanonical) {
+      btn.classList.remove('btn-primary');
+      btn.classList.add('btn-dark');
+      btn.setAttribute('aria-current', 'page');
+    }
+  });
+
   /* Language picker */
   const pickerEl = document.getElementById('lang-picker');
   if (pickerEl && i18n) {

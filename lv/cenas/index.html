@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="lv" data-bs-theme="light">
+
+<head>
+  <link rel="icon" type="image/png" href="/assets/favicons/favicon-512x512.png" sizes="512x512" />
+  <link rel="icon" type="image/png" href="/assets/favicons/favicon-192x192.png" sizes="192x192" />
+  <link rel="icon" type="image/png" href="/assets/favicons/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/assets/favicons/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <meta charset="utf-8" />
+  <title>Atbalstīt projektu — Editoria11y</title>
+  <link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="/assets/theme.css" rel="stylesheet" />
+  <meta name="theme-color" content="#712cf9" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-md">
+      <div class="container col-sm-12 mx-auto">
+        <a href="/lv/" class="d-flex align-items-center  navbar-brand">
+          <svg class="logo-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+            viewBox="-.75 -3.5 10.1699 19.1777">
+            <path fill="currentColor"
+              d="M3.7031,10.5527c-.3633-.6562-.6426-1.1387-.8379-1.4473l-.3105-.4863-.2344-.3574c-.5117-.7969-1.0449-1.4551-1.5996-1.9746.3164-.2617.6113-.3926.8848-.3926.3359,0,.6348.123.8965.3691s.5918.7148.9902,1.4062c.4531-1.4727,1.0293-2.8691,1.7285-4.1895.3867-.7188.7314-1.2021,1.0342-1.4502s.7041-.3721,1.2041-.3721c.2656,0,.5938.041.9844.123-1.0039.8086-1.8066,1.7695-2.4082,2.8828s-1.3789,3.0762-2.332,5.8887Z" />
+          </svg> Editoria<span style="margin-left: -1px;">11</span>y
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar" aria-label="Pārslēgt navigāciju">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Editoria11y</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Aizvērt"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 nav-pills">
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div id="lang-picker"></div>
+  </header>
+  <main class="container col-lg-12 mx-auto py-5">
+    <div class="row">
+      <div class="col-12">
+        <h1 class="text-body-emphasis pt-2 pb-2" data-section="membership">Atbalstīt projektu</h1>
+        <p class="fs-5">
+          Editoria11y veicina pieejamību unikālā veidā. Tā rīki ir ļoti efektīvi, palīdzot
+          netehniskiem autoriem sagatavot saturu, ko var vienlīdz baudīt lietotāji ar invaliditāti.
+          Mēs uzskatām to par sabiedrisko labumu,
+          tāpēc <strong>Editoria11y vienmēr būs bezmaksas lietošanai</strong>.
+        </p>
+        <p class="fs-5">
+          Tomēr Editoria11y nav bezmaksas izstrādē vai atbalstā.
+        </p>
+        <p class="fs-5">
+          "Kopienas atbalstīto papildinājumu" (CSA) projekts aizpilda šo robu: projekta dalībnieki finansē
+          Editoria11y bibliotēkas, tās CMS spraudņu un CSA komplekta izstrādi: strauji augošs
+          kvalitātes nodrošināšanas rīku komplekts, kas nodrošina līdzīgu
+          funkcionalitāti kā komerciālie produkti — atvērtā koda un uz vietas.</p>
+        <h3 class="fs-5">Vākšanas mērķi:</h3>
+        <ol class="fs-6">
+          <li>
+            2000 €/mēnesī: <strong>ilgtspējīgs projekts</strong>.<br/><em>Sedz fiksētās izmaksas un esošās atbalsta vajadzības.</em>
+          </li>
+          <li>
+            5000 €/mēnesī: <strong>paātrināta izstrāde</strong>.<br/><em>Ļauj nolīgt izstrādātājus sarežģītāku <a href="https://github.com/itmaybejj/editoria11y/discussions">funkciju pieprasījumu</a> apstrādei un atbalstam.</em>
+          </li>
+          <li>
+            10 000 €/mēnesī: <strong>īsta ekosistēma</strong>.<br/><em>Ļauj pētīt mākoņa API bāzētu funkciju piedāvājumu ar ievērojamām sākuma izmaksām.</em>
+          </li>
+        </ol>
+      </div>
+
+      <div class="container text-center fs-5 p-3 pt-0 rounded-3" id="price-grid">
+        <div class="row">
+          <div class="col-lg-3"></div>
+          <div class="row col-lg-9 py-4 pt-0 align-items-start text-start">
+            <h2 class="nomenu pt-3">Atbalstiet ar abonementu</h2>
+            <div class="col-md-4 mb-3">
+              <label for="support-level">Contribution</label>
+              <select id="support-level" class="form-select ">
+                <option value="100">150%</option>
+                <option value="80">120%</option>
+                <option value="60" selected>100% of estimated need</option>
+                <option value="50">75%</option>
+                <option value="44">66%</option>
+                <option value="33">50%</option>
+                <option value="22">33%</option>
+                <option value="17">25%</option>
+              </select>
+            </div>
+            <div class="col-md-4 mb-3">
+              <label for="currency">Currency</label>
+              <select class="form-select" id="currency">
+                <option value="EUR">€ EUR</option>
+                <option value="USD">$ USD</option>
+                <option value="GBP">£ GBP</option>
+              </select>
+            </div>
+
+            <div class="col-md-4 mb-3">
+              <div class="row pb-3 form-check form-switch ps-0">
+                <div><label class="" for="annual-pricing">
+                    Annual
+                  </label></div>
+                <input class="form-check-input ms-3 fs-3 border-2" type="checkbox" value="" id="annual-pricing" switch />
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="row">
+          <div class="col-lg-3 py-4 px-0" id="free">
+            <div class="bg-light me-3 border border-secondary-subtle shadow overflow-hidden rounded">
+              <div class="p-2 border-bottom border-secondary-subtle">Free</div>
+              <div class="p-3 pb-1">
+                <div class="fs-6 text-start">
+                  <ul class="small ms-3">
+                    <li><a href="https://wordpress.org/support/topic/shockingly-full-featured/">"<em>Pārsteidzoši</em>
+                        pilnvērtīgs"</a></li>
+                    <li><a href="https://www.drupal.org/project/editoria11y/">Drupal</a> &amp; <a                         href="https://wordpress.org/plugins/editoria11y-accessibility-checker/">WordPress</a></li>
+                    <li class="fw-semibold">50+ satura pārbaudes</li>
+                    <li class="fw-semibold">Pārbaude rakstīšanas laikā</li>
+                    <li class="fw-semibold">Sinhronizēti noraidījumi</li>
+                    <li class="fw-semibold">Vietnes atskaites</li>
+                    <li class="fw-semibold">Atskaišu eksports</li>
+                    <li class="fw-semibold">Neierobežotas lapas</li>
+                    <li class="fw-semibold">Foruma atbalsts</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 py-4 px-0" id="individual">
+            <div class="bg-light shadow overflow-hidden rounded-start">
+              <div class="text-bg-info p-2 border-bottom border-light-subtle">Personal</div>
+              <div class="text-bg-info p-3 pb-1 d-flex flex-column justify-content-center">
+                <p class="lh-1"><span class="currency">€</span><span class="price fs-3">9</span><span                     class="period">/mēnesī</span></p>
+                <div class="fs-5 text-start">
+                  <p class="fs-6 text-center"><em class="fs-6 ms-1 mb-2">Viss, kas iekļauts bezmaksas versijā, plus:</em></p>
+                  <ul class="small">
+                    <li><strong>30+ izstrādātāju pārbaudes</strong></li>
+                    <li><strong>Pielāgotu pārbaužu veidotājs</strong></li>
+                    <li><strong>Vietnes mēroga noraidījumi</strong></li>
+                    <li><strong>Lasāmības panelis</strong></li>
+                    <li><strong>Atsvaidzināšanas rāpuļprogrammas</strong></li>
+                    <li class="credit"><strong>Iestatīšanas palīdzība</strong></li>
+                    <li class="credit"><strong><a href="https://form.jotform.com/260627656020150">Atbalstītāja
+                          atzīme</a></strong></li>
+                  </ul>
+                </div>
+
+                <p class><a class="btn btn-dark" title="Individual">Abonēt</a></p>
+                <p class="period-warning fs-6" hidden><em>Tikai gada norēķins
+                    </em>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 border-info px-0 fs-4 border rounded-3 shadow-lg" style="z-index: 3;" id="team">
+            <div class="text-bg-info p-2 rounded-top">Team</div>
+            <div class="p-3 rounded-bottom">
+              <div class="py-3 pb-4">
+                <select class="form-select fw-bold" style="width: auto; display: inline-block;" id="price-pick">
+                  <option value="5">5</option>
+                  <option value="25" selected>25</option>
+                  <option value="50">50</option>
+                  <option value="200">200</option>
+                  <option value="500">500</option>
+                  <option value="1000">1000</option>
+                </select> <label for="price-pick" class="fs-6">sites</label>
+              </div>
+              <div id="price-result">
+                <p class="lh-1"><span class="currency">€</span><span class="price fs-3">9.99</span><span                     class="period fs-5">/mēnesī</span></p>
+                <div class="fs-5 text-start">
+                  <p class="fs-6 text-center full"><em class="fs-6 ms-1 mb-2">Viss, kas iekļauts personīgajā versijā, plus:</em></p>
+                  <ul class="small">
+                    <li class="full"><strong>Iestatīšanas palīdzība</strong></li>
+                    <li class="credit"><strong>E-pasta atbalsts</strong></li>
+                    <li class="credit"><strong>Gada konsultācija</strong></li>
+                    <li class="credit"><strong><a href="https://form.jotform.com/260627656020150">Atbalstītāja
+                          atzīme</a></strong></li>
+                  </ul>
+                </div>
+
+                <p class><a class="btn btn-dark" title="Team">Abonēt</a></p>
+                <p class="period-warning fs-6" hidden><em>Tikai gada norēķins
+                    </em>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 py-4 px-0">
+            <div class="shadow overflow-hidden rounded-end" id="enterprise">
+              <div class="text-bg-info p-2 border-bottom border-light-subtle">Unlimited</div>
+              <div class="text-bg-info p-3 pb-1 d-flex flex-column justify-content-center">
+                <p class="lh-1"><span class="currency">€</span><span class="price fs-3">2700</span><span                     class="period">/mēnesī</span></p>
+                <div class="fs-5 text-start">
+                  <p class="fs-6 text-center"><em class="fs-6 ms-1 mb-2">Viss, kas iekļauts personīgajā versijā, plus:</em></p>
+                  <ul class="small">
+                    <li><strong>Neierobežotas vietnes</strong></li>
+                    <li><strong>Iestatīšanas palīdzība</strong></li>
+                    <li class="full"><strong>E-pasta atbalsts</strong></li>
+                    <li><strong>Gada konsultācija</strong></li>
+                    <li><strong><a href="https://form.jotform.com/260627656020150">Atbalstītāja atzīme</a></strong></li>
+                  </ul>
+                </div>
+                <p class><a class="btn btn-dark" title="Enterprise">Abonēt</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-3"></div>
+          <div class="col-lg-9 px-0 pt-4 text-left">
+            <p class="small"><em>Vērtības noapaļotas līdz tuvākajam veselajam skaitlim; nodoklis/PVN tiek aprēķināts
+                norēķinu laikā.</em><br/><em>Spraudņi atbalsta baltās etiķetes pārdošanu aģentūrām.</em>
+            </p>
+
+          </div>
+
+        </div>
+      </div>
+
+      <div class="row justify-content-center pt-5">
+        <div class="col-lg-10">
+          <h2>Atbalsts ar koda ieguldījumiem</h2>
+          <p class="fs-6">Licenču atslēgas ir veids, kā mēs mudinām atbalstu un partnerību. Daudzi atvērtā koda izstrādātāji un aģentūras dod priekšroku ieguldīt laiku vai kodu, nevis naudu, tāpēc mēs labprāt apspriedīsim:</p>
+          <ul class="list-unstyled ps-0">
+            <li class="arrow">
+              <span>Abonementa kredīti par apstiprinātiem laika un pūļu ieguldījumiem.</span>
+            </li>
+            <li class="arrow">
+              <span>Abonementa kredīti par tiešā veidā sponsorētu darbu un partnerībām.</span>
+            </li>
+            <li class="arrow">
+              <span>Abonementa kredīti par iepriekš apstiprinātiem nozīmīgiem laika un pūļu ieguldījumiem, lai uzlabotu saistīto atvērtā koda projektu pieejamību.</span>
+            </li>
+          </ul>
+          <p class="mb-1"><a class="btn btn-bd-primary" href="https://form.jotform.com/260628163281153">Pieteikties
+              abonementa kredītiem</a></p>
+          <p class="small">
+            <em>Lūdzu, apspriediet funkciju ieguldījumus ar projekta uzturētājiem pirms darba uzsākšanas.</em>
+          </p>
+        </div>
+      </div>
+      <section id="existing" class="row mt-5 pt-5">
+        <div class="col-lg-10 mx-auto">
+          <h2 data-section="existing">Resursi esošajiem dalībniekiem</h2>
+          <div class="accord col-lg-8">
+            <ul class="fs-5 mt-3">
+              <li><a href="/lv/kontakti/">Kontakti</a> atbalsta pieprasījumiem</li>
+              <li>
+                <a href="https://customers.freemius.com/login">Abonementa pārvaldības portāls</a>
+              </li>
+            </ul>
+            <details class="rounded bd-info">
+              <summary>Licences atjaunošanas ieguldījumu līmeņi</summary>
+              <p class="text-start small pt-3 pb-2">Abonementi pēc noklusējuma atjaunojas ar tādu pašu ieguldījumu līmeni.</p>
+              <p>Ja izvēlaties mainīt ieguldījumu līmeni atjaunošanas laikā, ņemiet vērā, ka visiem līmeņiem ir piekļuve tādām pašām spraudņa funkcijām, bet ne visi līmeņi ir tiesīgi saņemt tādus pašus dalības labumus. Skatiet tabulu lapas augšdaļā.</p>
+              <table id="renewal-codes" class="table mb-0 table-secondary text-center">
+                <thead>
+                  <tr>
+                    <th>Ieguldījumu līmenis</th>
+                    <th>Atjaunošanas kods</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>150%</td>
+                    <td>--</td>
+                  </tr>
+                  <tr>
+                    <td>120%</td>
+                    <td>120px</td>
+                  </tr>
+                  <tr>
+                    <td>Pilns (100%)</td>
+                    <td>100px</td>
+                  </tr>
+                  <tr>
+                    <td>75%</td>
+                    <td>75px</td>
+                  </tr>
+                  <tr>
+                    <td>66%</td>
+                    <td>66px</td>
+                  </tr>
+                  <tr>
+                    <td>50%</td>
+                    <td>50px</td>
+                  </tr>
+                  <tr>
+                    <td>33%</td>
+                    <td>33px</td>
+                  </tr>
+                  <tr>
+                    <td>25%</td>
+                    <td>25px</td>
+                  </tr>
+                </tbody>
+              </table>
+            </details>
+          </div>
+
+
+        </div>
+
+      </section>
+
+
+    </div>
+    
+  </main>
+  <footer class="container col-lg-12 mx-auto pt-3 text-body-secondary text-center text-md-start">
+    <div class="container">
+      <div class="footer-nav text-center">
+        <a class="btn btn-primary btn-lg" data-slug="about" href="/lv/">Par mums</a>
+        <a class="btn btn-primary btn-lg" data-slug="features" href="/lv/funkcijas/">Funkcijas</a>
+        <a class="btn btn-primary btn-lg" data-slug="demo" href="/lv/demo/">Demonstrācija</a>
+        <a class="btn btn-primary btn-lg" data-slug="license" href="/lv/cenas/">Cenas un atbalsts</a>
+      </div>
+      <div class="row footer">
+        <div class="col col-3">
+          <a href="https://github.com/itmaybejj/editoria11y"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+              height="20" fill="currentColor" class="bi bi-git" viewBox="0 0 16 16">
+              <path
+                d="M15.698 7.287 8.712.302a1.03 1.03 0 0 0-1.457 0l-1.45 1.45 1.84 1.84a1.223 1.223 0 0 1 1.55 1.56l1.773 1.774a1.224 1.224 0 0 1 1.267 2.025 1.226 1.226 0 0 1-2.002-1.334L8.58 5.963v4.353a1.226 1.226 0 1 1-1.008-.036V5.887a1.226 1.226 0 0 1-.666-1.608L5.093 2.465l-4.79 4.79a1.03 1.03 0 0 0 0 1.457l6.986 6.986a1.03 1.03 0 0 0 1.457 0l6.953-6.953a1.03 1.03 0 0 0 0-1.457" />
+            </svg> <strong>Bibliotēka</strong></a>
+        </div>
+        <div class="col col-3">
+          <a href="https://github.com/itmaybejj/editoria11y/discussions"><svg xmlns="http://www.w3.org/2000/svg"
+              width="20" height="20" fill="currentColor" class="bi bi-chat-right-heart-fill" viewBox="0 0 16 16">
+              <path
+                d="M16 2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h9.586a1 1 0 0 1 .707.293l2.853 2.853a.5.5 0 0 0 .854-.353zM8 3.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132" />
+            </svg> <strong>Forums</strong></a>
+        </div>
+        <div class="col col-3">
+          <a href="https://github.com/itmaybejj/editoria11y/issues"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+              height="20" fill="currentColor" class="bi bi-patch-plus-fill" viewBox="0 0 16 16">
+              <path
+                d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01zM8.5 6v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 1 0" />
+            </svg> <strong>Problēmas</strong></a>
+        </div>
+        <div class="col col-3">
+          <a href="/lv/kontakti/"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+              class="bi bi-person-lines-fill" height="24" width="24" viewBox="0 0 16 18">
+              <path
+                d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z">
+              </path>
+            </svg> <strong>Kontakti</strong></a>
+        </div>
+        <div class="col col-12 subfooter">
+          <a href="/lv/privatuma-politika/">Privātuma politika</a>
+          <a href="/lv/sikdatnu-politika/">Sīkdatņu politika</a>
+          <a href="/lv/noteikumi/">Lietošanas noteikumi</a>
+          <a href="/lv/juridiska-informacija/">Juridiska informācija</a>
+          <span>&copy; 2026 Editoria11y LLC</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="/assets/bootstrap/js/bootstrap.bundle.min.js" class="astro-vvvwv3sm"></script>
+  <script src="/assets/lang/i18n.js"></script>
+  <script src="/assets/theme.js"></script>
+</body>
+
+</html>

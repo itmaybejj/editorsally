@@ -1,0 +1,479 @@
+<!doctype html>
+<html lang="ro" data-bs-theme="light">
+
+<head>
+  <link rel="icon" type="image/png" href="/assets/favicons/favicon-512x512.png" sizes="512x512" />
+  <link rel="icon" type="image/png" href="/assets/favicons/favicon-192x192.png" sizes="192x192" />
+  <link rel="icon" type="image/png" href="/assets/favicons/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/assets/favicons/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <meta charset="utf-8" />
+  <title>Funcții — Editoria11y</title>
+  <link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="/assets/theme.css" rel="stylesheet" />
+  <meta name="theme-color" content="#712cf9" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-md">
+      <div class="container col-sm-12 mx-auto">
+        <a href="/ro/" class="d-flex align-items-center  navbar-brand">
+          <svg class="logo-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+            viewBox="-.75 -3.5 10.1699 19.1777">
+            <path fill="currentColor"
+              d="M3.7031,10.5527c-.3633-.6562-.6426-1.1387-.8379-1.4473l-.3105-.4863-.2344-.3574c-.5117-.7969-1.0449-1.4551-1.5996-1.9746.3164-.2617.6113-.3926.8848-.3926.3359,0,.6348.123.8965.3691s.5918.7148.9902,1.4062c.4531-1.4727,1.0293-2.8691,1.7285-4.1895.3867-.7188.7314-1.2021,1.0342-1.4502s.7041-.3721,1.2041-.3721c.2656,0,.5938.041.9844.123-1.0039.8086-1.8066,1.7695-2.4082,2.8828s-1.3789,3.0762-2.332,5.8887Z" />
+          </svg> Editoria<span style="margin-left: -1px;">11</span>y
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar" aria-label="Comută navigarea">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Editoria11y</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Închide"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 nav-pills">
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div id="lang-picker"></div>
+  </header>
+  <main class="container col-lg-12 mx-auto py-5">
+    <div class="row docs">
+      <div class="col-12 col-md-5 col-lg-4 mb-5">
+        <div id="on-this-page" class="list-group ms-2 ms-lg-5 position-sticky top-0 pt-3">
+        </div>
+      </div>
+      <div class="col-12 col-md-7 col-lg-8 pt-3" data-bs-spy="scroll" data-bs-target="#on-this-page"
+        data-bs-smooth-scroll="true" tabindex="0">
+        <section id="features">
+          <h1 class="text-body-emphasis pt-2 pb-5">Funcții</h1>
+          <p class="fs-6">Testele de bază ale Editoria11y detectează mai mult de 50 de probleme comune de accesibilitate a conținutului;
+            decizii care afectează lizibilitatea, greșeli care fac cititorii de ecran mai puțin eficienți și erori care reduc SEO.</p>
+          <p class="fs-6">Programele suplimentare oferă ~40 de teste suplimentare pentru dezvoltatori și designeri, teste personalizate și diverse
+            instrumente de asigurare a calității la nivel de site.</p>
+          <p class="fs-6">Testele de conținut vizează probleme care apar <strong>după</strong> ce site-urile sunt predate
+            autorilor de conținut. Site-urile trebuie testate cu instrumente de audit manual, tastaturi și cititoare de ecran înainte
+            de lansare, dar chiar și cel mai accesibil site de la lansare tinde să se degradeze pe măsură ce editările aduc probleme noi.</p>
+          <p class="fs-6">Ceea ce îl diferențiază pe Editoria11y față de alte instrumente de accesibilitate este că testele rulează live, în
+            browser, pe măsură ce autorii editează și previzualizează munca. <strong>Autorii au mai multe șanse să reacționeze la feedback imediat,
+              inline</strong>, să observe alertele și să facă corecțiile, decât să-și amintească să viziteze un
+            panou de control sau să ruleze o verificare manuală.</p>
+        </section>
+        <section id="authoring">
+          <h2>Experiența autorului</h2>
+          <div class="clearfix">
+            <img src="/assets/images/3x-toolbar" class="image-fluid float-start me-3" alt="Captură de ecran a barei de instrumente Editoria11y, afișând 4 erori." width="97" height="50" loading="lazy" />
+            <p>Autorii văd bara de instrumente Editoria11y în timp ce editează conținut. Când sunt detectate probleme, aceasta devine galbenă sau
+              roșie și afișează un număr de probleme. Clic pe număr derulează la prima alertă și deschide indiciul acesteia.</p>
+          </div>
+          <div class="row">
+            <img loading="lazy" src="/assets/images/3x-generic-tip.png" class="img-fluid col-6 col-lg-8" height="798" width="1278" alt="Indiciu care arată că un link este etichetat doar cu „click here" . />
+            <p class="col-6 col-lg-4 align-content-center">Indiciile apar inline, cu o descriere în limbaj simplu a
+              erorii, sugestii de corectare și note despre motivul pentru care problema contează.</p>
+          </div>
+          <div class="row">
+            <img loading="lazy" class="img-fluid col-6 col-lg-8" src="/assets/images/3x-tools.jpg" height="473" width="405" alt="Vizualizator de structură a titlurilor suprapus pe pagină" />
+            <p class="col-6 col-lg-4 align-content-center">Bara de instrumente conține instrumente suplimentare pentru verificări manuale,
+              inclusiv vizualizatoare de structură titluri și text alt și scoruri de lizibilitate.</p>
+          </div>
+        </section>
+        <section id="admins">
+          <h2>Controale admin de site</h2>
+          <p>Fiecare aspect vizibil al verificatorului poate fi personalizat. Parametrii și evenimentele permit eliminarea testelor,
+            rescrierea sfaturilor, inserarea testelor personalizate și setarea temelor personalizate.</p>
+          <p>Pluginurile pentru Drupal și WordPress adaugă funcții suplimentare, cum ar fi respingeri sincronizate, panouri de control
+            la nivel de site și exporturi de rapoarte CSV.</p>
+          <figure class="figure my-4 rounded shadow mb-5 border">
+            <img loading="lazy" class="figure-img img-fluid" src="/assets/images/3x-dashboard.png" height="765" width="1600" alt="Tablou de bord care afișează problemele recente și paginile cu cele mai multe erori." />
+            <figcaption class="figure-caption p-3 pt-2">Panoul de control Drupal, care include liste filtrabile de probleme,
+              pagini cu probleme și respingeri.</figcaption>
+          </figure>
+        </section>
+        <section id="tests">
+          <h2 data-section="tests">Teste</h2>
+          <p class="fs-6">Testele Editoria11y se concentrează pe îmbunătățirea experienței Web pentru toți utilizatorii, măsurată de
+            oameni, nu doar de standarde tehnice. În timp ce testele cheie sunt menite să ajute la atingerea Ghidurilor de accesibilitate
+            a conținutului web (<a href="https://www.w3.org/WAI/WCAG22/quickref/">WCAG 2.2 AA</a>), altele sunt influențate de
+            munca <a href="https://www.w3.org/TR/coga-usable/">Grupului de lucru privind accesibilitatea persoanelor cu dizabilități
+              cognitive și de învățare</a>, precum și de cele mai bune practici generale de utilizabilitate și design.</p>
+          <p class="fs-6 pb-3">Testele individuale pot fi dezactivate de administratorii de site.</p>
+          <div class="row listgrid">
+            <div class="col-12 col-xl-4">
+              <h3 class="fs-5 nomenu pt-0">Text alternativ pentru imagini</h3>
+              <ul>
+                <li>Imaginii îi lipsește atributul alt</li>
+                <li>Textul alt este un nume de fișier</li>
+                <li>Textul alt este un substituent („TBD")</li>
+                <li>Textul alt conține simboluri nepronunțabile</li>
+                <li>Textul alt conține cuvinte redundante („imagine de&hellip;")</li>
+                <li>Textul alt este prea lung</li>
+                <li>Imaginea decorativă poate avea valoare</li>
+                <li>Imaginea din carusel marcată decorativă</li>
+                <li>Imaginea cu legendă nu are text alt</li>
+                <li>Textul alt duplică legenda</li>
+              </ul>
+              <h3 class="fs-5 nomenu pt-0">Imagini legate</h3>
+              <ul>
+                <li>Imaginea legată nu are text alt</li>
+                <li>Alt-ul imaginii legate este un URL sau un nume de fișier</li>
+                <li>Alt-ul imaginii legate este un substituent</li>
+                <li>Alt-ul imaginii legate conține simboluri nepronunțabile</li>
+                <li>Alt-ul imaginii legate descrie imaginea, nu linkul</li>
+                <li>Alt-ul imaginii legate conține cuvinte redundante</li>
+                <li>Alt-ul imaginii legate este prea lung</li>
+                <li>Imaginea dintr-un link cu text nu are atribut alt</li>
+              </ul>
+              <h3 class="fs-5 nomenu pt-0">Media încorporată</h3>
+              <ul>
+                <li>Videoul necesită subtitrare</li>
+                <li>Audioul necesită o transcriere</li>
+                <li>Vizualizarea de date necesită o alternativă accesibilă</li>
+                <li>Frame-ului îi lipsește un titlu</li>
+                <li>Frame exclus din navigarea cu tastatura</li>
+                <li>Conținutul frame-ului necesită o verificare manuală de accesibilitate</li>
+                <li>Documentul legat poate să nu fie accesibil pentru cititorii de ecran</li>
+                <li>PDF-ul nu are o alternativă accesibilă</li>
+                <li>Componente de layout interactive imbricate</li>
+              </ul>
+            </div>
+            <div class="col-12 col-xl-4">
+              <h3 class="fs-5 nomenu pt-0">Linkuri semnificative</h3>
+              <ul>
+                <li>Link gol</li>
+                <li>Textul linkului este un URL</li>
+                <li>Textul linkului este doar un număr DOI</li>
+                <li>Textul linkului spune „click here"</li>
+                <li>Textul linkului conține doar cuvinte generice („read more")</li>
+                <li>Linkuri diferite au același text</li>
+                <li>Iconița sau imaginea legată nu are alternativă text</li>
+                <li>Linkul se deschide într-un tab nou fără avertisment</li>
+                <li>Linkul indică un fișier fără avertisment</li>
+                <li>Textul linkului conține doar simboluri sau emoji</li>
+                <li>Textul linkului semnificativ ascuns de utilizatorii văzători</li>
+                <li>Tooltip redundant al linkului</li>
+                <li>Link de ancoră în pagină defect</li>
+                <li>Atribut ID duplicat</li>
+                <li>Linkul poate indica un mediu de dezvoltare</li>
+              </ul>
+              <h3 class="fs-5 nomenu pt-0">Titluri</h3>
+              <ul>
+                <li>Paginii îi lipsește un Titlu 1</li>
+                <li>Primul titlu este un subtitlu</li>
+                <li>Titlul sare un nivel</li>
+                <li>Titlul este gol</li>
+                <li>Imaginea folosită ca titlu necesită text alt</li>
+                <li>Titlul este foarte lung</li>
+                <li>Paragraful bold ar putea fi un titlu</li>
+                <li>Citatul scurt ar putea fi un titlu</li>
+              </ul>
+              <h3 class="fs-5 nomenu pt-0">Lizibilitatea textului</h3>
+              <ul>
+                <li>Text excesiv cu majuscule</li>
+                <li>Bloc mare de text bold sau italic</li>
+                <li>Textul este prea mic</li>
+                <li>Textul care nu este link este subliniat</li>
+                <li>Textul este aliniat</li>
+                <li>Subscript sau superscript utilizat greșit ca formatare</li>
+                <li>Listă falsă folosind caractere sau simboluri</li>
+                <li>Element de listă în afara unei liste</li>
+              </ul>
+
+            </div>
+            <div class="col-12 col-xl-4">
+              <h3 class="fs-5 nomenu pt-0">Contrast de culoare</h3>
+              <ul>
+                <li>Textul are contrast insuficient</li>
+                <li>Contrastul textului necesită o verificare manuală</li>
+                <li>Iconița sau grafica are contrast insuficient</li>
+                <li>Contrastul iconiței sau graficii necesită o verificare manuală</li>
+                <li>Textul câmpului de intrare are contrast insuficient</li>
+                <li>Textul substituent are contrast insuficient</li>
+              </ul>
+              <h3 class="fs-5 nomenu pt-0">Tabele</h3>
+              <ul>
+                <li>Tabelului îi lipsește un rând sau coloană antet</li>
+                <li>Celula antet a tabelului este goală</li>
+                <li>Titlu de conținut utilizat în interiorul unui tabel</li>
+              </ul>
+              <h3 class="fs-5 nomenu pt-0">Formulare & elemente interactive</h3>
+              <ul>
+                <li>Butonul nu are o etichetă accesibilă</li>
+                <li>Butonul are o etichetă ARIA invalidă</li>
+                <li>Eticheta butonului include cuvântul „button"</li>
+                <li>Eticheta vizibilă nu corespunde numelui accesibil</li>
+                <li>Câmpul de intrare nu are o etichetă asociată</li>
+                <li>Câmpul de intrare folosește doar o etichetă invizibilă</li>
+                <li>Câmpul de intrare folosește doar un substituent ca etichetă</li>
+                <li>Butonul de resetare poate cauza pierderea accidentală a datelor</li>
+                <li>Elementul ascuns de cititorii de ecran, dar totuși focusabil cu tastatura</li>
+                <li>Tabindex pozitiv perturbă ordinea de citire și de tab</li>
+              </ul>
+              <h3 class="fs-5 nomenu pt-0">Metadate pagină</h3>
+              <ul>
+                <li>Titlul paginii lipsește</li>
+                <li>Limba paginii nu este declarată</li>
+                <li>Viewport-ul împiedică scalarea textului</li>
+                <li>Pagina se reîmprospătează automat</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section class="row mt-5 pt-5" id="csa">
+          <h2 class="pt-3" data-section="csa">Funcții CSA</h2>
+
+          <p class="fs-5">
+            Editoria11y promovează accesibilitatea într-un mod unic. Instrumentele sale sunt extrem de eficiente în a-i ajuta pe autorii non-tehnici
+            să pregătească conținut accesibil în mod egal pentru utilizatorii web cu dizabilități. Considerăm aceasta un bun public,
+            deci <strong>Editoria11y va fi întotdeauna gratuit</strong>.
+          </p>
+          <p class="fs-5">
+            Editoria11y nu este, totuși, gratuit de dezvoltat sau susținut.
+          </p>
+          <p class="fs-5">
+            CSA completează golul: membrii proiectului finanțează dezvoltarea bibliotecii Editoria11y, a pluginurilor sale CMS și
+            a suitei CSA: un set de instrumente de asigurare a calității open-source, în creștere rapidă, care oferă
+            funcționalitate similară cu produsele comerciale, la un preț mult mai mic.
+
+            Suita CSA pentru Drupal este momentan gratuită în versiune beta și va fi disponibilă pentru WordPress în T3 2026.
+          </p>
+          <figure class="figure my-4 shadow border rounded p-0 m-2 col-sm-12 col-xl-11">
+            <img alt="Crawler de site în funcțiune" src="../../assets/images/3x-crawl.png" height="786" width="1986" class="img-fluid rounded-top figure-img" />
+            <figcaption class="figure-caption p-2 pt-2">Crawler-ul CSA actualizând un tablou de bord.</figcaption>
+          </figure>
+
+        </section>
+        <section id="csa-tools" class="pb-5 mt-5 row g-5">
+
+          <div class="mt-2">
+            <h3 class="pt-3" data-section="csa-tools">Instrumente CSA</h3>
+            <ul class="fs-5">
+              <li>
+                Teste pentru dezvoltatori, lizibilitate și contrast.
+              </li>
+              <li>
+                Configurare separată (split) bazată pe roluri, pentru dezvoltatori și creatori de conținut.
+              </li>
+              <li>
+                Constructor de teste personalizate.
+              </li>
+              <li>
+                Respingeri la nivel de site cu un singur clic
+              </li>
+              <li>
+                Instrumente de întreținere a tabloului de bord și crawlere
+              </li>
+            </ul>
+            <img alt="Selector de culoare în indiciul de test" src="../../assets/images/3x-colors.png" height="1022" width="1288" class="img-fluid col-sm-12 col-xl-9 mt-0 p-0" />
+          </div>
+
+        </section>
+        <section id="benefits" class="pb-5 mt-5 row g-5">
+
+
+          <div class="">
+            <h3 class="pt-0" data-section="benefits">Beneficii de membru CSA</h3>
+            <ul class="fs-5">
+              <li>Suport prioritar.</li>
+              <li>Influență semnificativă asupra foii de parcurs a proiectului.</li>
+              <li>Acces automat la noile funcții din foaia de parcurs.</li>
+              <li>Asistență directă la configurare (în funcție de nivel).</li>
+              <li><a href="https://form.jotform.com/260627656020150">Credit public de susținător</a> (în funcție de nivel/la
+                cerere; se aplică termeni).</li>
+            </ul>
+          
+            <h3 class="nomenu">Interesat?</h3>
+            <p class="fs-5">Suita CSA este susținută printr-un model „contribuie cât poți".
+              Editoria11y core, atât biblioteca cât și pluginurile, rămân gratuite pentru totdeauna.</p>
+            <p class><a class="btn btn-primary" href="/ro/preturi/">Alăturați-vă CSA</a></p>
+
+          </div>
+
+        </section>
+
+
+
+
+
+        <h2 id="projects" data-section="false">Proiecte sponsorizate CSA</h2>
+        <section id="active-projects">
+          <h3 class="pt-4" data-section="active-projects">Activ</h3>
+          <div class="accord">
+            <details>
+              <summary>
+                T2 2026: Lansarea comunității Editoria11y CSA
+              </summary>
+              <div>
+                <p>Lucrări rămase:</p>
+                <ul class="fs-6">
+                  <li>
+                    Crearea unei entități fiscale pentru procesarea abonamentelor și a sponsorizărilor.
+                  </li>
+                  <li>
+                    Configurarea unui sistem de licențiere.
+                  </li>
+                </ul>
+              </div>
+            </details>
+            <details>
+              <summary>
+                T2 2026: Constructor de reguli personalizate
+              </summary>
+              <div>
+                <ol class="fs-6">
+                  <li>Finalizat pentru Drupal.</li>
+                  <li>De făcut: portarea constructorului la WordPress.</li>
+                </ol>
+              </div>
+            </details>
+            <details>
+              <summary>
+                T3 2026: Portare bibliotecă 3.x la WordPress
+              </summary>
+              <div>
+                <ol class="fs-6">
+                  <li><span data-translate>Crearea submodulului CSA cu funcții susținute de comunitate</span>
+                    <ul>
+                      <li>Crearea de instrumente de întreținere a panoului de control pentru a elimina rezultatele depășite și a recrawla conținutul existent.</li>
+                      <li>Permiterea marcării anumitor teste ca OK la nivel de site, nu doar pe o pagină.</li>
+                      <li>Permiterea configurării split, cu setări și teste separate pentru dezvoltatori și editori de conținut.</li>
+                    </ul>
+                  </li>
+                </ol>
+              </div>
+            </details>
+          </div>
+        </section>
+        <section id="finished">
+          <h3 data-section="finished" class="pt-5">Recent finalizate</h3>
+          <div class="accord">
+            <details>
+              <summary>
+                T1 2026: Rescrierea bibliotecii 3.x
+              </summary>
+              <div>
+                <ul class="fs-6">
+                  <li>
+                    Unificarea seturilor de reguli Editoria11y și Sa11y. De la bifurcare, Sa11y a scris ~50 de teste suplimentare și a adoptat
+                    unelte ESM, iar Editoria11y a implementat îmbunătățiri de performanță și a adăugat parametri pentru a activa
+                    verificarea în timp real. Sa11y 4.2.2 și Editoria11y 3.0.0 marchează începutul viitorului nostru comun.
+                  </li>
+                  <li>
+                    Adăugarea suportului pentru „configurare split" pentru a permite seturi de reguli separate pentru dezvoltatori și creatori de conținut.
+                  </li>
+                  <li>Adăugarea de traduceri automate pentru chineză, daneză, olandeză, germană, greacă, maghiară, italiană, japoneză,
+                    norvegiană Bokmål, poloneză, portugheză (Brazilia), portugheză (Portugalia), spaniolă, suedeză și ucraineană
+                    ca șabloane pentru rafinare umană.</li>
+                  <li><em class="fs-6 lh-1"><strong>Stare curentă</strong>: lucrările de codare sunt finalizate; va fi etichetat ca versiune
+                      după actualizarea documentației și a demonstrațiilor.</em></li>
+                </ul>
+              </div>
+            </details>
+            <details>
+              <summary>
+                T1 2026: Rescrierea modulului Drupal 3.x
+              </summary>
+              <div>
+                <ol class="fs-6">
+                  <li>Extinderea panoului de control cu instrumente de raportare și filtrare mai robuste.</li>
+                  <li>Adăugarea de traduceri automate pentru chineză, daneză, olandeză, germană, greacă, maghiară, italiană, japoneză,
+                    norvegiană Bokmål, poloneză, portugheză (Brazilia), portugheză (Portugalia), spaniolă, suedeză și ucraineană
+                    ca șabloane pentru rafinare umană.</li>
+                  <li>Personalizarea funcțiilor de export CSV</li>
+                  <li><span data-translate>Crearea submodulului CSA cu funcții susținute de comunitate</span>
+                    <ul>
+                      <li>Crearea de instrumente de întreținere a panoului de control pentru a elimina rezultatele depășite și a recrawla conținutul existent.</li>
+                      <li>Permiterea marcării anumitor teste ca OK la nivel de site, nu doar pe o pagină.</li>
+                      <li>Permiterea configurării split, cu setări și teste separate pentru dezvoltatori și editori de conținut.</li>
+                    </ul>
+                  </li>
+                </ol>
+              </div>
+            </details>
+          </div>
+        </section>
+        <section id="project-ideas">
+          <h3 data-section="project-ideas" class="pt-5">În discuție</h3>
+          <p>Discutați și votați aceste idei pe <a               href="https://github.com/itmaybejj/editoria11y/discussions">forumurile bibliotecii Editoria11y</a>.</p>
+          <p>Ideile sunt marcate cu estimări de dificultate/prioritate bazate pe discuțiile curente ale comunității.</p>
+          <ul class="mt-1 p-5 pt-0">
+            <li>Panou de monitorizare multi-site</li>
+            <li>Detectarea linkurilor rupte</li>
+            <li>Scanare PDF</li>
+            <li>Tab de locație a codului în indiciu</li>
+            <li>Export raport pagină din indiciu</li>
+            <li>Cuvinte marcate</li>
+            <li>Instrumente CLI pentru dezvoltatori</li>
+            <li>Bookmarklet-uri/Pluginuri browser</li>
+            <li>Validare reguli ACT</li>
+            <li>Extinderea validării name/role/value</li>
+          </ul>
+        </section>
+
+
+      </div>
+
+
+    </div>
+  </main>
+  <footer class="container col-lg-12 mx-auto pt-3 text-body-secondary text-center text-md-start">
+    <div class="container">
+      <div class="footer-nav text-center">
+        <a class="btn btn-primary btn-lg" data-slug="about" href="/ro/">Despre</a>
+        <a class="btn btn-primary btn-lg" data-slug="features" href="/ro/functionalitati/">Funcționalități</a>
+        <a class="btn btn-primary btn-lg" data-slug="demo" href="/ro/demo/">Demo</a>
+        <a class="btn btn-primary btn-lg" data-slug="license" href="/ro/preturi/">Prețuri și contribuții</a>
+      </div>
+      <div class="row footer">
+        <div class="col col-3">
+          <a href="https://github.com/itmaybejj/editoria11y"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+              height="20" fill="currentColor" class="bi bi-git" viewBox="0 0 16 16">
+              <path
+                d="M15.698 7.287 8.712.302a1.03 1.03 0 0 0-1.457 0l-1.45 1.45 1.84 1.84a1.223 1.223 0 0 1 1.55 1.56l1.773 1.774a1.224 1.224 0 0 1 1.267 2.025 1.226 1.226 0 0 1-2.002-1.334L8.58 5.963v4.353a1.226 1.226 0 1 1-1.008-.036V5.887a1.226 1.226 0 0 1-.666-1.608L5.093 2.465l-4.79 4.79a1.03 1.03 0 0 0 0 1.457l6.986 6.986a1.03 1.03 0 0 0 1.457 0l6.953-6.953a1.03 1.03 0 0 0 0-1.457" />
+            </svg> <strong>Bibliotecă</strong></a>
+        </div>
+        <div class="col col-3">
+          <a href="https://github.com/itmaybejj/editoria11y/discussions"><svg xmlns="http://www.w3.org/2000/svg"
+              width="20" height="20" fill="currentColor" class="bi bi-chat-right-heart-fill" viewBox="0 0 16 16">
+              <path
+                d="M16 2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h9.586a1 1 0 0 1 .707.293l2.853 2.853a.5.5 0 0 0 .854-.353zM8 3.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132" />
+            </svg> <strong>Forum</strong></a>
+        </div>
+        <div class="col col-3">
+          <a href="https://github.com/itmaybejj/editoria11y/issues"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+              height="20" fill="currentColor" class="bi bi-patch-plus-fill" viewBox="0 0 16 16">
+              <path
+                d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01zM8.5 6v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 1 0" />
+            </svg> <strong>Probleme</strong></a>
+        </div>
+        <div class="col col-3">
+          <a href="/ro/contact/"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+              class="bi bi-person-lines-fill" height="24" width="24" viewBox="0 0 16 18">
+              <path
+                d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z">
+              </path>
+            </svg> <strong>Contact</strong></a>
+        </div>
+        <div class="col col-12 subfooter">
+          <a href="/ro/confidentialitate/">Politica de confidențialitate</a>
+          <a href="/ro/cookies/">Politica privind modulele cookie</a>
+          <a href="/ro/termeni/">Termeni de utilizare</a>
+          <a href="/ro/nota-juridica/">Notă juridică</a>
+          <span>&copy; 2026 Editoria11y LLC</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="/assets/bootstrap/js/bootstrap.bundle.min.js" class="astro-vvvwv3sm"></script>
+  <script src="/assets/lang/i18n.js"></script>
+  <script src="/assets/theme.js"></script>
+</body>
+
+</html>

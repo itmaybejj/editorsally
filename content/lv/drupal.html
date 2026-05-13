@@ -1,0 +1,436 @@
+<main class="container col-lg-12 mx-auto py-5">
+    <div class="row docs">
+      <div class="col-12 col-md-5 col-lg-4 mb-5">
+        <div id="on-this-page" class="list-group ms-2 ms-lg-5 position-sticky top-0 pt-3">
+        </div>
+      </div>
+      <div class="col-12 col-md-7 col-lg-8 pt-3">
+        <div data-bs-spy="scroll" data-bs-target="#on-this-page" data-bs-smooth-scroll="true">
+          <h1 data-i18n-id="s-e367">Editoria11y Drupal modulim</h1>
+          <section id="features">
+            <h2 class="pt-3" data-i18n-id="s-1dcf">Pamata funkcijas</h2>
+
+            <p class="fs-6" data-i18n-id="s-a8c0">Drupal modulis savieno pārbaudītāja bibliotēku ar redakcijas aizmuguri
+              un pievieno virkni servera puses rīkus atskaišu, pārvaldības un konfigurācijas vajadzībām</p>
+
+            <figure class="figure my-4 row">
+              <div class="col-lg-8">
+                <img loading="lazy" src="/assets/images/3x-editing.png" class="rounded border figure-img img-fluid" height="1088" width="2237" alt="Drupal redaktors ar tiešsaistes padomiem" data-i18n-id="s-ee36" />
+              </div>
+              <figcaption class="figure-caption col-lg-4" data-i18n-id="s-8e69">Problēmas tiek atklātas gan ielādes laikā priekšgalā,
+                gan rakstīšanas laikā CKEditor un Gutenberg redaktoros.</figcaption>
+            </figure>
+
+            <figure class="figure my-4 row">
+              <div class="col-lg-8">
+                <img loading="lazy" src="/assets/images/3x-generic-tip.png" class="rounded border figure-img img-fluid" height="798" width="1278" alt="Padoms, kas norāda, ka saite ir nosaukta tikai &quot;click here&quot;." data-i18n-id="s-1639" />
+              </div>
+              <figcaption class="figure-caption col-lg-4" data-i18n-id="s-9881">Rīka padomiem tiek pievienotas pogas,
+                lai pārietu uz redaktoru, ignorētu brīdinājumu (aktīvajam lietotājam) vai atzīmētu to kā OK (visiem
+                lietotājiem). Atkārtoti brīdinājumi piedāvā lapas vai vietnes mēroga darbības.
+              </figcaption>
+            </figure>
+
+            <figure class="figure my-4 row">
+              <div class="col-lg-8">
+                <img loading="lazy" src="/assets/images/3x-drupal-custom-tests.png" class="rounded border figure-img img-fluid" alt="Pielāgotu pārbaužu veidotāja saskarne ar laukiem padoma virsrakstam un saturam, kā arī elementu selektoriem un izņēmumiem." data-i18n-id="s-0830" />
+              </div>
+              <figcaption class="figure-caption col-lg-4">
+                <p class="mb-2" data-i18n-id="s-37bf">CSA apakšmodulis pievieno:</p>
+                <ul class="ps-3">
+                  <li data-i18n-id="s-caff"><strong>Pielāgotu pārbaužu veidotājs</strong></li>
+                  <li data-i18n-id="s-b145">40+ izstrādātāju pārbaudes</li>
+                  <li data-i18n-id="s-f55d">Kontrasta pārbaude</li>
+                  <li data-i18n-id="s-b70c">Vietnes rāpuļprogrammas</li>
+                  <li data-i18n-id="s-5377">Lasāmības analīze</li>
+                  <li data-i18n-id="s-6602">Sadalītā konfigurācija izstrādātājiem/redaktoriem</li>
+                </ul>
+              <span data-translate data-i18n-id="s-bc47"></figcaption>
+            </figure>
+
+            <figure class="figure">
+              <img loading="lazy" class="figure-img img-fluid rounded border" src="/assets/images/3x-dashboard.png" height="765" width="1600" alt="Atskaišu informācijas panelis ar jaunākajām problēmām un lapām ar visvairāk problēmām." data-i18n-id="s-2559" />
+              <figcaption class="figure-caption p-3 pt-2" data-i18n-id="s-cdbf">Vietnes mēroga informācijas panelis nodrošina filtrējamas un
+                eksportējamas brīdinājumu un noraidījumu atskaites.</figcaption>
+            </figure>
+
+          </section>
+          <h2 data-i18n-id="s-8fec">Instalācija un galvenie iestatīšanas soļi</h2>
+          <p data-i18n-id="s-7627"><a href="https://www.drupal.org/project/editoria11y/">Komplektētais instalētājs</a> Drupal.org vietnē ietver
+            vairākus moduļus:</p>
+          <ul>
+            <li data-i18n-id="s-b830">
+              Editoria11y: pamata satura pārbaudītājs un informācijas panelis.
+            </li>
+            <li data-i18n-id="s-b351">
+              Editoria11y CSA: izstrādātāju pārbaudes un informācijas paneļa uzturēšanas rīki.
+            </li>
+            <li data-i18n-id="s-74fe">
+              Editoria11y Export: CSV atskaišu rīki.
+            </li>
+          </ul>
+          <p data-i18n-id="s-88fd">Instalējiet kā jebkuru citu moduli un pēc tam veiciet šos galvenos soļus:</p>
+          <ol>
+            <li data-i18n-id="s-7187"><strong>Pārbaudiet atļaujas.</strong> Uzticamajiem autoriem vajadzētu būt "Atzīmēt kā OK," "Atzīmēt kā ignorētu" un "Skatīt informācijas paneli."</li>
+            <li data-i18n-id="s-1ac1"><strong>Pārbaudiet galvenās lapas attiecībā uz atkārtotiem vai nenoderīgiem brīdinājumiem.</strong> Vai nu atzīmējiet tos kā OK rīka padomā, vai pielāgojiet konfigurāciju, lai ignorētu elementus pēc selektora.</li>
+            <li data-i18n-id="s-e5b2">Meklējiet padomus, kas ir grūti saskatāmi — ārpus ekrāna, apgriezti, aiz citiem elementiem vai slēptos elementos.
+              Izmantojiet padomus sadaļā "Padomu pozicionēšanas labošana" zemāk, lai labotu.</li>
+            <li data-i18n-id="s-c564">Ja vietnē jau ir saturs un jums ir CSA abonements, apmeklējiet informācijas paneļa cilni "Pārpārbaudīt" un
+              <strong>rāpojiet pa vietni</strong>, lai iepriekš ielādētu vietnes atskaites. Tas nav obligāti, bet vecākas lapas neparādīsies atskaitēs, kamēr tās netiks rāpinātas vai apmeklētas no pieteikušās lietotāja.
+            </li>
+          </ol>
+          <p data-i18n-id="s-e025">Skatiet <a href="https://youtu.be/uYvNYPg38nU?si=dqADyWpTtOhniHTP&t=696">video ievadu par
+              konfigurācijas opcijām</a> (v2.4).</p>
+
+          <h2 id="check-roots" data-i18n-id="s-9202">Paslēpt nenoderīgus brīdinājumus</h2>
+          <p data-i18n-id="s-fa47">
+            <strong>Labas konfigurācijas nomāc nenoderīgus brīdinājumus, lai satura autori varētu koncentrēties uz problēmām, kas jālabo</strong>.
+          </p>
+          <p data-i18n-id="s-996e">Lai gan varat pilnībā izslēgt pārbaudes, parasti labāk ir paslēpt brīdinājumus par konkrētiem elementiem vai lapām.
+          </p>
+          <hr/>
+          <p data-i18n-id="s-7918">
+            Katras pārbaudes palaišanas laikā Editoria11y apkopo vienu elementu kopu no iestatījuma "Pārbaudīt saturu šajos konteineros" un pēc tam vairākas reizes filtrē to. Lūk, kā izskatās pārbaudes palaišana:
+          </p>
+          <ol>
+            <li data-i18n-id="s-994a">
+              Pārtraukt pārbaudi, ja konfigurācija neļauj pārbaudīt šajā lapā vai šim lietotājam.
+            </li>
+            <li data-i18n-id="s-10c9">
+              <strong>Apkopot</strong> elementus norādītajos lapas reģionos,
+              piem.:<br/><code>body > *:not('.ed11y-element')</code><br/>
+              <em>Editoria11y CSA lietotājiem šie ir reģioni cilnē <strong>Izstrādātāju pārbaudes</strong>.</em>
+            </li>
+            <li data-i18n-id="s-7524">
+              <strong>Noņemt</strong> elementus, kas atbilst ignorēšanas selektoriem,
+              piem.:<br/><code>.widgets, .utility-menu</code><br/>
+              <em>Editoria11y CSA lietotājiem šie ir selektori cilnē <strong>Izstrādātāju pārbaudes</strong>.</em>
+            </li>
+            <li data-i18n-id="s-58d0">
+              Palaist pārbaudes un sinhronizēt rezultātus ar informācijas paneli.
+            </li>
+            <li>
+              <span data-translate data-i18n-id="s-f8c6">Ja sadalītā konfigurācija ir aktīva un lietotājs ir satura redaktors, filtrēt izstrādātāju rezultātus:</span>
+              <ul>
+                <li data-i18n-id="s-72c9"><strong>Noņemt</strong> rezultātus no pārbaudēm, kas iestatītas kā "Tikai izstrādātājiem."</li>
+                <li data-i18n-id="s-576e"><strong>Noņemt</strong> rezultātus par elementiem ārpus norādītajiem <strong><em>satura</em></strong>
+                  reģioniem, piem.:<br/><code>main, footer</code></li>
+                <li data-i18n-id="s-bb1d"><strong>Noņemt</strong> rezultātus par elementiem, kas atbilst <strong><em>satura</em></strong> ignorēšanas
+                  selektoriem.</li>
+              </ul>
+              Note that there is not a second "gather" phase. The developer page regions must include the content
+              regions.</span>
+            </li>
+            <li data-i18n-id="s-b79c">Atvērt paneli un parādīt brīdinājumus, ja konfigurācija atbilst automātiskās atvēršanas iestatījumam.</li>
+          </ol>
+
+          <h3 id="dismiss" data-i18n-id="s-be02">Noraidīt brīdinājumus</h3>
+          <p data-i18n-id="s-2ae3">Pārbaudes var konfigurēt bibliotēkā kā kļūdas vai brīdinājumus ("manuālās pārbaudes"). Brīdinājumus var noraidīt.
+            Katrā rīka padoma kājenē ir pieejami divi noraidīšanas veidi:</p>
+          <div class="my-2"
+            style="background: url(/assets/images/3x-generic-tip.png) 100% 98%; max-width: 600px; padding-top: 6%; background-size: 108%;">
+          </div>
+          <ul>
+            <li data-i18n-id="s-7b65">"Ignorēt" tiek saglabāts kā lietotāja preferences: brīdinājums tagad ir paslēpts pašreizējam lietotājam, bet tikai pašreizējam lietotājam.</li>
+            <li data-i18n-id="s-654c">"Atzīmēt kā OK" paslēpj brīdinājumu visiem lietotājiem.</li>
+          </ul>
+          <p data-i18n-id="s-dc14">To, vai lietotājs var noraidīt brīdinājumu, kontrolē lomas līmenī Drupal lietotāju atļaujās.
+            <strong>Lielākajai daļai autoru vajadzētu atļaut noraidīt brīdinājumus</strong>. Nav jēgas piešķirt kādam manuālo pārbaudi, ja viņš nevar atzīmēt elementu kā pārbaudītu.
+          </p>
+
+          <h3 id="roots" data-i18n-id="s-d932">Ignorēt elementus</h3>
+          <p data-i18n-id="s-9d1e">Šie divi konfigurācijas iestatījumi ir vissvarīgākie!</p>
+          <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
+            <label for="edit-content-root">Check content in these containers</label>
+            <div><textarea class="form-control" id="edit-content-root" name="content_root" rows="1" cols="30"
+                disabled></textarea>
+            </div>
+            <div class="mt-3">
+              <label for="edit-ignore-elements">Skip over these elements</label>
+              <div>
+                <textarea class="form-control" id="edit-ignore-elements" disabled name="ignore_elements" rows="1"
+                  cols="30" class=""></textarea>
+              </div>
+            </div>
+          </div>
+          <p data-i18n-id="s-6051">
+            Iestatiet pirmo, lai iekļautu visas lapas daļas, ko satura autori var rediģēt. Piem., ja viņi var rediģēt
+            <code>main</code> satura apgabalu, <code>.sidebar</code> un <code>.footer-column-two</code>, iestatiet šos
+            selektorus kā satura pārbaudes apgabalu.
+          </p>
+          <p data-i18n-id="s-f29c">
+            Izmantojiet otro, lai "izslēgtu" apakšsadaļas. Piem., ja <code>main</code> satur dažādus logrīkus un iestrādājumus,
+            ko var modificēt tikai izstrādātāji, uzskaitiet tos: <code>.widget-1, .social-embed</code>;
+          </p>
+          <p data-i18n-id="s-10ef">Ja izmantojat sadalīto konfigurāciju, cilnē Izstrādātāju pārbaudes redzēsit līdzīgu iestatījumu pāri:</p>
+          <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
+            <div>
+              <fieldset>
+                <legend>
+                  Developer check area
+                </legend>
+                <div class="fieldset__wrapper fieldset__wrapper--group">
+
+                  <div id="edit-dev-check-root">
+                    <div>
+                      <input aria-describedby="edit-dev-check-root--description" type="radio"
+                        id="edit-dev-check-root-automatic" name="dev_check_root" value="automatic" checked="checked" />
+                      <label for="edit-dev-check-root-automatic" class="form-item__label option">All elements</label>
+                    </div>
+                    <div class="d-flex">
+                      <input aria-describedby="edit-dev-check-root--description" type="radio"
+                        id="edit-dev-check-root-match" name="dev_check_root" value="match"
+                        class="align-self-baseline mt-1 me-1" />
+                      <label for="edit-dev-check-root-match" class="form-item__label option">Only the containers listed
+                        in the Content Setting tab</label>
+                    </div>
+                    <div class="">
+                      <input aria-describedby="edit-dev-check-root--description" type="radio"
+                        id="edit-dev-check-root-specify" name="dev_check_root" value="specify"
+                        class="form-radio form-boolean form-boolean--type-radio" />
+                      <label for="edit-dev-check-root-specify" class="">The specific containers listed below</label>
+                    </div>
+                  </div>
+
+                </div>
+              </fieldset>
+
+              <div class="">
+                <label for="edit-always-ignore" class="mt-3">Ignore for both developers and content editors</label>
+                <div class="form-textarea-wrapper">
+                  <textarea id="edit-always-ignore" class="form-control" name="always_ignore" rows="1" cols="20"
+                    placeholder=""></textarea>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+          <p data-i18n-id="s-8c02">Galvenais, kas jāzina par izstrādātāju pārbaudes apgabaliem, ir tas, ka tie <strong>nav neatkarīgi</strong> no satura pārbaudes apgabaliem. Sadalītā konfigurācijā izstrādātāju apgabali tiek pārbaudīti, un pēc tam šie rezultāti tiek <strong>filtrēti</strong>, lai atbilstu satura apgabaliem. Visi apgabali, kas ir izslēgti izstrādātājiem, tiks izslēgti arī satura redaktoriem. Neizslēdziet rediģējamos satura apgabalus!</p>
+
+          <p data-i18n-id="s-0312">Dažas pārbaudes ļauj precīzāku konfigurāciju, lai paslēptu tikai noteiktus brīdinājumus par ietekmētajiem elementiem. Meklējiet tos sadaļā:</p>
+          <ul>
+            <li data-i18n-id="s-d53d">Satura pārbaudes: Pārbaudāmās saites</li>
+            <li data-i18n-id="s-0d1e">Satura pārbaudes: Pārbaudāmie iestrādājumi</li>
+            <li data-i18n-id="s-10c1">Satura pārbaudes: Dinamiskā un ēnu satura atklāšana</li>
+            <li data-i18n-id="s-e6e4">Izstrādātāju pārbaudes: Kontrasts</li>
+          </ul>
+
+          <h3 id="pages" data-i18n-id="s-177c">Paslēpt konkrētām lapām vai lietotājiem</h3>
+          <p data-i18n-id="s-e874">
+            Vienkāršākais veids to izdarīt ir nodot CSS klases vai ID šīm opcijām:
+          </p>
+          <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
+            <label for="edit-no-load" class="form-item__label">Do not check on pages with these elements</label>
+            <div class="form-textarea-wrapper">
+              <textarea data-drupal-selector="edit-no-load" aria-describedby="edit-no-load--description"
+                id="edit-no-load" name="no_load" rows="1" cols="20" class="form-control"></textarea>
+            </div>
+
+            <label for="edit-ignore-all-if-absent" class="form-item__label">Hide all alerts on pages where these
+              elements are not present</label>
+            <div class="form-textarea-wrapper">
+              <textarea data-drupal-selector="edit-ignore-all-if-absent"
+                aria-describedby="edit-ignore-all-if-absent--description" id="edit-ignore-all-if-absent"
+                name="ignore_all_if_absent" rows="1" cols="20" class="form-control"></textarea>
+            </div>
+
+          </div>
+          <p data-i18n-id="s-0877">
+            Pirmā novērsīs pārbaužu palaišanu, un rīkjosla netiks rādīta.
+          </p>
+          <p data-i18n-id="s-5cbd">
+            Otrā sāks pārbaudītāju minimizētā stāvoklī un automātiski atzīmēs (pašreizējam lietotājam) visas problēmas kā "Ignorētas," pat ja tās ir kļūdas. Tas ļauj pārbaudēm darboties un atjaunināt informācijas paneli, netraucējot lietotāju.
+          </p>
+          <p data-i18n-id="s-1661">
+            Ja vēlaties to izmantot, lai kontrolētu, kuri lietotāji redz pārbaudītāju, jums, iespējams, jāpielāgo tēma, lai izvadītu klasi, piem. <code>.user-247</code>
+          </p>
+
+          <h2 id="dashboard" data-i18n-id="s-f4d7">Pārvaldīt vietnes mēroga rezultātus</h2>
+          <section id="refresh">
+            <h3 class="pt-3" data-i18n-id="s-012a">Rāpināšana un rezultātu atjaunināšana</h3>
+            <p data-i18n-id="s-75a9">Editoria11y ir <strong>reāllaika uzraudzības rīks, nevis rāpuļprogramma</strong>. Tās vietnes mēroga atskaites atjauninās, kad autori apmeklē lapas, tāpēc regulāra rāpināšana parasti nav nepieciešama. CSA modulis <em>ietver</em> rāpuļprogrammu, bet tai vajadzētu būt nepieciešamai tikai šādos trīs gadījumos:</p>
+            <ol>
+              <li data-i18n-id="s-dfb1">
+                Pirmoreiz instalējot Editoria11y esošā vietnē ar daudzām lapām. Lapas jāapmeklē, pirms tās parādīsies informācijas panelī, tāpēc ātra sākotnējā rāpināšana ietaupa laiku.
+              </li>
+              <li data-i18n-id="s-f602">
+                Nozīmīgi tēmu vai moduļu atjauninājumi var labot (vai izraisīt) problēmas daudzās lapās, kas neparādīsies, kamēr tās netiks apmeklētas vai rāpinātas.
+              </li>
+              <li data-i18n-id="s-a530">
+                Lielapjoma darbības administratora saskarnē, piemēram, lapu vai novirzīšanu dzēšana, mēdz atstāt aiz sevis rezultātus no lapām, kas vairs nepastāv vai ir pārvietotas. Šādos gadījumos palīdz izmantot cilnes "Atsvaidzināt" uzturēšanas darbības, lai atjauninātu lapu URL un atklātu un noņemtu dzēstās lapas.
+              </li>
+            </ol>
+            <p data-i18n-id="s-8e5a">Rāpināšanas laikā nevieni dati neatstāj jūsu vietni. CSA rāpuļprogramma nav mākoņa rīks; tā izmanto jūsu pārlūkprogrammu, lai ielādētu un pārbaudītu lapas jūsu pašu vietnē. Šīs pieejas trūkums ir tas, ka <strong>pārlūkprogrammas aptur fona cilnes</strong>. Rāpināšanas laikā jums jāpatur dators ieslēgts un nomodā. Plānojiet atvērt jaunu logu rāpuļprogrammai un atstāt to kā priekšplāna cilni šim logam, kamēr tā darbojas. Jūs varat turpināt strādāt citā logā. Rāpuļprogramma atjauninās savu novērtējumu pēc katras lapu paketes.</p>
+          </section>
+          <section id="reports">
+            <h3 data-i18n-id="s-a242">Atskaišu skatīšana</h3>
+            <div class="my-4 border shadow"
+              style="background: url(/assets/images/3x-dashboard.png) 86% 0%; padding-top: 28%; background-size: 106%;">
+            </div>
+            <ul>
+              <li data-i18n-id="s-e328">
+                <strong>Jaunākais</strong> ļauj pārlūkot pa atsevišķiem brīdinājumiem. Tas ļauj filtrēt, lai atrastu visas viena brīdinājuma tipa instances, vai redzēt, kuri brīdinājumi bieži parādās jaunākajā saturā, vai kuri autori joprojām pieļauj tādu pašu kļūdu.
+              </li>
+              <li data-i18n-id="s-796f">
+                <strong>Lapas</strong> rāda brīdinājumu skaitu pa lapām, grupētas pēc lapas. Tas ļauj atrast lapas ar visvairāk problēmām un filtrēt pēc lapas atribūtiem, piemēram, satura veida un publicēšanas statusa.
+              </li>
+              <li data-i18n-id="s-9423">
+                <strong>Brīdinājumi</strong> rāda problēmas pēc veida.
+              </li>
+              <li data-i18n-id="s-52ed">
+                <strong>Noraidījumi</strong> ļauj uzraudzīt, vai autori norāda pareizi, un satur "atiestatīšanas" pogas noraidīto brīdinājumu atjaunošanai.
+              </li>
+              <li data-i18n-id="s-3379">
+                <strong>Eksports</strong> satur lapu, brīdinājumu un noraidījumu atskaišu versijas, ko var filtrēt, lai sagatavotu CSV lejupielādes. <em>Nodrošina CSV eksporta apakšmodulis</em>
+              </li>
+              <li data-i18n-id="s-9814">
+                <strong>Atsvaidzināt</strong> satur informācijas paneļa uzturēšanas rīkus, lai noņemtu brīdinājumus no dzēstajām lapām, noņemtu brīdinājumus no parametrizētām pseidolapām, piemēram, /search?query=example, atjauninātu saglabātos lapu virsrakstus un URL, un palaistu manuālu rāpināšanu. <em>Nodrošina CSA apakšmodulis</em>
+              </li>
+            </ul>
+          </section>
+
+          <h2 id="positioning" data-i18n-id="s-c35b">Labot slēptus vai ārpus ekrāna esošus padomus</h2>
+
+          <p data-i18n-id="s-68ce">Modulis nodrošina laukus divām bibliotēkas konfigurācijas opcijām, lai mainītu padomu izvietojumu:
+          </p>
+
+          <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
+            <label for="edit-element-hides-overflow" class="form-item__label">Elements with overflow hidden</label>
+            <textarea data-drupal-selector="edit-element-hides-overflow"
+              aria-describedby="edit-element-hides-overflow--description" id="edit-element-hides-overflow"
+              name="element_hides_overflow" rows="1" cols="60" class="form-control"></textarea>
+            <label for="edit-hidden-handlers" class="form-item__label">Theme JS will handle revealing hidden tooltips
+              inside these containers</label>
+            <textarea data-drupal-selector="edit-hidden-handlers" aria-describedby="edit-hidden-handlers--description"
+              id="edit-hidden-handlers" name="hidden_handlers" rows="1" cols="60" class="form-control"></textarea>
+          </div>
+          <p data-i18n-id="s-34e4">Dažām tēmām ir kolonnas vai logrīki, kas slēpj horizontālo vai vertikālo pārplūšanu. Bibliotēka automātiski nosaka, kad pārslēdzējs atrastos ārpus <strong>lapas</strong> redzamās daļas. Norādot bibliotēkai, ka noteikti konteineri slēpj pārplūšanu, tā arī mēģinās pozicionēt padomus elementiem šajos konteineros to robežu iekšpusē.</p>
+          <p data-i18n-id="s-7cb7">Dažām tēmām ir logrīki, kas pārslēdz satura redzamību, piemēram, akordeoni, cilnes un slaidrādes.
+            Padomi šo elementu iekšpusē arī tiks paslēpti. Selektoru saraksta nodrošināšana šiem logrīkiem nozīmē,
+            ka Editoria11y īsi apstāsies, kad lietotājs mēģina pāriet uz šiem padomiem, izmantojot nākamā vai iepriekšējā pogu.
+            Drupal tēmas un moduļi var pēc tam sekot norādījumiem no bibliotēkas sadaļas par <a href="/en/install/#hidden-content">darbību ar padomiem slēptā saturā</a>, lai atklātu slēpto saturu.
+          </p>
+
+          <h2 id="runtime" data-i18n-id="s-7e38">Rakstīt savu konfigurāciju</h2>
+          <p data-i18n-id="s-a5d3">PHP: Drupal modulis nodrošina <code>hook_editoria11y_alter_config</code>, lai mainītu
+            <code>drupalSettings.editoria11y</code> saturu modulī vai tēmā. Piemēram:
+          </p>
+          <pre class="language-php"><code><!--<?php
+/**
+ * @file
+ * MY_MODULE module file.
+ */
+
+use Drupal\Core\Cache\CacheableMetadata;
+
+/**
+ * Implements hook_editoria11y_alter_config().
+ *
+ * Attaches Editoria11y library and config based on context.
+ */
+function MY_MODULE_editoria11y_alter_config(array &$attach, CacheableMetadata $cacheableMetadata): void {
+  $config = Drupal::config('editoria11y.settings');
+
+  // Module settings being changed need to bust the cache.
+  $cacheableMetadata->addCacheableDependency($config);
+
+  // Get and modify any of the values being passed to drupalSettings.editoria11y.
+  if (!empty($attach['allow_ok'])) {
+    $attach['allow_ok'] = 'okAll';
+  }
+}--></code></pre>
+          <p data-i18n-id="s-2368"><code>drupalSettings</code> modificēšana palīdz tikai tad, ja moduļa JS jau ir iestatīts, lai nodotu šo vērtību bibliotēkai. Lai pievienotu papildu parametrus, jums ir jāmodificē JS <code>options</code> objekts tieši.
+            Modulis pārbauda vienu globālu JS mainīgo <code>editoria11yOptionsOverride</code>. Ja tas ir iestatīts, tas nodos <code>options</code> objektu <code>editoria11yOptions</code> funkcijai, ko esat nodrošinājis savā modulī vai tēmā. Tagad varat iestatīt jebkuru no <a               href="https://editorsally.ddev.site/en/install/#params">bibliotēkas parametriem</a>.</p>
+          <pre class="language-javascript"><code><!--var editoria11yOptionsOverride = true;
+var editoria11yOptions = function(options) {
+  // You now have access to the processed options object that will be passed to the library.
+
+  // E.g., to add a selector to the ignore list:
+  if (options['ignoreElements'] === false) {
+    // Provide the selector as the only value.
+    options['ignoreElements'] = `.example`;
+  } else {
+    // Append additional selectors with comma separator.
+    options['ignoreElements'] = `${options['ignoreElements']}, .example`
+  }
+
+  // Return your processed options.
+  return options;
+}
+--></code></pre>
+          <section id="custom-tests">
+            <h2 data-i18n-id="s-e0f0">Rakstīt savas pārbaudes</h2>
+            <p data-i18n-id="s-6ece">Vispirms moduļa konfigurācijā pievienojiet 1 opcijai "Pielāgotās pārbaudes", lai tas zinātu, ka jāuzrauga pārbaudes.</p>
+            <p data-i18n-id="s-4316">Pēc tam izveidojiet Drupal JS bibliotēku ar savām pārbaudēm savā tēmā vai modulī, izmantojot <a href="/en/install/#custom-tests">bibliotēkas ceļvedi pielāgotu pārbaužu rakstīšanai</a>.</p>
+            <p data-i18n-id="s-b4ea">Šeit ir strādājošs piemērs no Princeton, ar pielāgotu pārbaudi brīdinājumiem par Safe Links. Ievērojiet, ka tas piekļūst Editoria11y klasei caur <code>Drupal.Ed11y.</code></p>
+            <pre class="language-javascript"><code><!--const psEd11yCustomTests = function() {
+
+  // 1.
+  // Get elements to test, via Drupal.Ed11y.getElements.
+  // The 'root' parameter tells it to respect config for check areas and ignores.
+  const safeLinks = Drupal.Ed11y.getElements('a[href*="safelinks.protection.outlook.com/?"]', 'root');
+
+  // Add the test name to the lang object.
+  Drupal.ed11yLang.lang.testNames.outlookSafeLink = 'URL is Safe Link encoded';
+
+  // 2.
+  // Create the tip content.
+  const decodeSafelink = function(url) {
+    const params = new URL(url).searchParams;
+    let decoded = params.get('url');
+    const p = document.createElement('p');
+    if (!!decoded) {
+      p.innerHTML = `<p><span class="badge">To fix</span>Update this link with the correct URL, which is probably:<br>
+    <em style='word-wrap: break-word;font-size: 90%;line-height: 1.2;display: block;'></em></p>`
+      p.querySelector('em').textContent = Drupal.Ed11y.sanitizeHTML(decoded);
+    }
+    return p;
+  };
+  safeLinks?.forEach((el) => {
+    const content = document.createElement('div');
+    content.innerHTML = `<div class="title">Please fix this Outlook "Safe Link"</div>
+            <div class="why">
+                <p>The URL for this link is an Outlook "Safe Link" that was copied from an email.
+                It includes the original recipient's email address,
+                and will break if Microsoft shuts down the service.</p>
+                <p>The pasted URL is:<br>
+                <em style='word-break: break-all;font-size: 90%;line-height: 1.2;
+                display: block;'></em></p>
+            </div>
+            `;
+    content.querySelector('em').textContent = Drupal.Ed11y.sanitizeHTML(el.href);
+    content.querySelector('.why').insertAdjacentElement('beforebegin', decodeSafelink(el.href));
+
+    // 3.
+    // Push the tip to the library results object.
+    Drupal.Ed11y.State.results.push({
+      element: el,
+      test: 'outlookSafeLink',
+      type: 'error',
+      content: content,
+      position: 'beforebegin',
+      inline: false,
+      dismiss: false,
+    });
+  });
+
+  // 4.
+  // Tell Editoria11y you are done adding custom results.
+  const allDone = new CustomEvent('ed11yResume');
+  document.dispatchEvent(allDone);
+};--></code></pre>
+
+          </section>
+          <section id="help">
+            <h2 data-i18n-id="s-4690">Palīdzības saņemšana</h2>
+            <p data-i18n-id="s-f149">Skatiet lapu <a href="/en/contacts/">Kontakti</a>, lai uzzinātu par kopienas atbalsta iespējām. @itmaybejj parasti ir tiešsaistē Drupal Slack, kad saule spīd virs rietumu puslodes.</p>
+            <p data-i18n-id="s-4a16">Lielākā daļa <a href="/en/license/">CSA ieguldījumu līmeņu</a> ietver gada tikšanos, kas var ietvert tiešu
+              palīdzību
+              ar iestatīšanu un konfigurāciju</p>
+          </section>
+
+        </div>
+      </div>
+    </div>
+  </main>

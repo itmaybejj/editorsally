@@ -1,0 +1,494 @@
+<!doctype html>
+<html lang="sv" data-bs-theme="light">
+
+<head>
+  <link rel="icon" type="image/png" href="/assets/favicons/favicon-512x512.png" sizes="512x512" />
+  <link rel="icon" type="image/png" href="/assets/favicons/favicon-192x192.png" sizes="192x192" />
+  <link rel="icon" type="image/png" href="/assets/favicons/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/assets/favicons/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <meta charset="utf-8" />
+  <title>Funktioner — Editoria11y</title>
+  <link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="/assets/theme.css" rel="stylesheet" />
+  <meta name="theme-color" content="#712cf9" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-md">
+      <div class="container col-sm-12 mx-auto">
+        <a href="/sv/" class="d-flex align-items-center  navbar-brand">
+          <svg class="logo-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+            viewBox="-.75 -3.5 10.1699 19.1777">
+            <path fill="currentColor"
+              d="M3.7031,10.5527c-.3633-.6562-.6426-1.1387-.8379-1.4473l-.3105-.4863-.2344-.3574c-.5117-.7969-1.0449-1.4551-1.5996-1.9746.3164-.2617.6113-.3926.8848-.3926.3359,0,.6348.123.8965.3691s.5918.7148.9902,1.4062c.4531-1.4727,1.0293-2.8691,1.7285-4.1895.3867-.7188.7314-1.2021,1.0342-1.4502s.7041-.3721,1.2041-.3721c.2656,0,.5938.041.9844.123-1.0039.8086-1.8066,1.7695-2.4082,2.8828s-1.3789,3.0762-2.332,5.8887Z" />
+          </svg> Editoria<span style="margin-left: -1px;">11</span>y
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar" aria-label="Växla navigering">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Editoria11y</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Stäng"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 nav-pills">
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div id="lang-picker"></div>
+  </header>
+  <main class="container col-lg-12 mx-auto py-5">
+    <div class="row docs">
+      <div class="col-12 col-md-5 col-lg-4 mb-5">
+        <div id="on-this-page" class="list-group ms-2 ms-lg-5 position-sticky top-0 pt-3">
+        </div>
+      </div>
+      <div class="col-12 col-md-7 col-lg-8 pt-3" data-bs-spy="scroll" data-bs-target="#on-this-page"
+        data-bs-smooth-scroll="true" tabindex="0">
+        <section id="features">
+          <h1 class="text-body-emphasis pt-2 pb-5">Funktioner</h1>
+          <p class="fs-6">Editoria11y:s kärnkontroller identifierar mer än 50 vanliga tillgänglighetsproblem i innehåll:
+            beslut som försämrar läsbarheten, misstag som gör skärmläsare mindre effektiva och fel som sänker SEO.</p>
+          <p class="fs-6">Tillägg ger ungefär 40 ytterligare kontroller för utvecklare och designers, anpassade tester
+            och olika webbplatsövergripande verktyg för kvalitetssäkring.</p>
+          <p class="fs-6">Innehållskontrollerna fokuserar på problem som uppstår <strong>efter</strong> att webbplatser
+            lämnas över till redaktörer. Webbplatser behöver testas med manuella granskningsverktyg, tangentbord och
+            skärmläsare innan lansering, men även den mest tillgängliga webbplatsen tenderar att försämras med tiden när
+            redigeringar för med sig nya problem.</p>
+          <p class="fs-6">Det som skiljer Editoria11y från andra tillgänglighetsverktyg är att kontrollerna körs live, i
+            webbläsaren, medan redaktörer redigerar och förhandsgranskar sitt arbete. <strong>Redaktörer reagerar mer
+              sannolikt på omedelbar, infälld återkoppling</strong>, uppmärksammar varningar och gör korrigeringar, än
+            att de kommer ihåg att besöka en kontrollpanel eller köra en manuell kontroll.</p>
+        </section>
+        <section id="authoring">
+          <h2>Redaktörens upplevelse</h2>
+          <div class="clearfix">
+            <img src="/assets/images/3x-toolbar" class="image-fluid float-start me-3" alt="Skärmbild av Editoria11y-verktygsfältet, som visar 4 fel." width="97" height="50" loading="lazy" />
+            <p>Redaktörer ser Editoria11y-verktygsfältet medan de redigerar innehåll. När problem upptäcks blir det gult
+              eller rött och visar ett antal problem. Att klicka på antalet rullar till den första varningen och öppnar
+              dess verktygstips.</p>
+          </div>
+          <div class="row">
+            <img loading="lazy" src="/assets/images/3x-generic-tip.png" class="img-fluid col-6 col-lg-8" height="798" width="1278" alt="Tips som indikerar att en länk bara heter klicka här." />
+            <p class="col-6 col-lg-4 align-content-center">Tips visas infällt, med en lättförståelig beskrivning av
+              felet, förslag på åtgärd och en förklaring av varför problemet är viktigt.</p>
+          </div>
+          <div class="row">
+            <img loading="lazy" class="img-fluid col-6 col-lg-8" src="/assets/images/3x-tools.jpg" height="473" width="405" alt="Rubrikstrukturvisualiserare överlagd på sidan" />
+            <p class="col-6 col-lg-4 align-content-center">Verktygsfältet innehåller ytterligare verktyg för manuella
+              kontroller, inklusive visualiserare för rubrikstruktur och alt-text samt läsbarhetspoäng.</p>
+          </div>
+        </section>
+        <section id="admins">
+          <h2>Webbplatsadministratörens kontroller</h2>
+          <p>Alla synliga aspekter av granskaren kan anpassas. Parametrar och händelser gör det möjligt att ta bort
+            tester, skriva om tips, infoga anpassade tester och ange anpassade teman.</p>
+          <p>Insticksprogram för Drupal och WordPress lägger till ytterligare funktioner, till exempel synkroniserade
+            avfärdanden, webbplatsövergripande kontrollpaneler och CSV-rapportexporter.</p>
+          <figure class="figure my-4 rounded shadow mb-5 border">
+            <img loading="lazy" class="figure-img img-fluid" src="/assets/images/3x-dashboard.png" height="765" width="1600" alt="Rapporteringskontrollpanel som visar senaste problem och sidor med flest problem." />
+            <figcaption class="figure-caption p-3 pt-2">Drupal-kontrollpanelen, som innehåller filterbara listor över
+              problem, sidor med problem och avfärdanden.</figcaption>
+          </figure>
+        </section>
+        <section id="tests">
+          <h2 data-section="tests">Tester</h2>
+          <p class="fs-6">Editoria11y:s tester fokuserar på att förbättra webbupplevelsen för alla användare, mätt av
+            människor, inte bara tekniska standarder. Medan centrala tester är avsedda att hjälpa till att uppnå
+            riktlinjerna för webbtillgänglighet (<a href="https://www.w3.org/WAI/WCAG22/quickref/">WCAG 2.2 AA</a>),
+            påverkas andra av arbetet från <a href="https://www.w3.org/TR/coga-usable/">arbetsgruppen för tillgänglighet
+              vid kognitiva funktionsnedsättningar och inlärningssvårigheter</a>, samt allmänna bästa metoder för
+            användbarhet och design.</p>
+          <p class="fs-6 pb-3">Enskilda tester kan stängas av av webbplatsadministratörer.</p>
+          <div class="row listgrid">
+            <div class="col-12 col-xl-4">
+              <h3 class="fs-5 nomenu pt-0">Alt-text för bilder</h3>
+              <ul>
+                <li>Bild saknar alt-attribut</li>
+                <li>Alt-texten är ett filnamn</li>
+                <li>Alt-texten är en platshållare ("TBD")</li>
+                <li>Alt-texten är outtalbara symboler</li>
+                <li>Alt-texten innehåller överflödiga ord ("bild av&hellip;")</li>
+                <li>Alt-texten är för lång</li>
+                <li>Dekorativ bild kan ha värde</li>
+                <li>Karusellbild markerad som dekorativ</li>
+                <li>Bild med bildtext saknar alt-text</li>
+                <li>Alt-texten är ett duplikat av bildtexten</li>
+              </ul>
+              <h3 class="fs-5 nomenu pt-0">Länkade bilder</h3>
+              <ul>
+                <li>Länkad bild saknar alt-text</li>
+                <li>Alt-text för länkad bild är en URL eller ett filnamn</li>
+                <li>Alt-text för länkad bild är en platshållare</li>
+                <li>Alt-text för länkad bild är outtalbara symboler</li>
+                <li>Alt-text för länkad bild beskriver bilden, inte länken</li>
+                <li>Alt-text för länkad bild innehåller överflödiga ord</li>
+                <li>Alt-text för länkad bild är för lång</li>
+                <li>Bild i länk med text saknar alt-attribut</li>
+              </ul>
+              <h3 class="fs-5 nomenu pt-0">Inbäddade medier</h3>
+              <ul>
+                <li>Video behöver textning</li>
+                <li>Ljud behöver ett transkript</li>
+                <li>Datavisualisering behöver ett tillgängligt alternativ</li>
+                <li>Ram saknar en titel</li>
+                <li>Ram är utesluten från tangentbordsnavigering</li>
+                <li>Raminnehåll behöver manuell tillgänglighetskontroll</li>
+                <li>Länkat dokument kanske inte är tillgängligt för skärmläsare</li>
+                <li>PDF saknar ett tillgängligt alternativ</li>
+                <li>Kapslade interaktiva layoutkomponenter</li>
+              </ul>
+            </div>
+            <div class="col-12 col-xl-4">
+              <h3 class="fs-5 nomenu pt-0">Meningsfulla länkar</h3>
+              <ul>
+                <li>Tom länk</li>
+                <li>Länktext är en URL</li>
+                <li>Länktext är bara ett DOI-nummer</li>
+                <li>Länktext lyder "klicka här"</li>
+                <li>Länktext är bara generiska ord ("läs mer")</li>
+                <li>Olika länkar delar samma text</li>
+                <li>Länkad ikon eller bild saknar textalternativ</li>
+                <li>Länk öppnar en ny flik utan varning</li>
+                <li>Länk pekar på en fil utan varning</li>
+                <li>Länktext är bara symboler eller emoji</li>
+                <li>Meningsfull länktext dold för seende användare</li>
+                <li>Överflödigt länkverktygstips</li>
+                <li>Bruten ankarlänk på sidan</li>
+                <li>Duplicerat ID-attribut</li>
+                <li>Länk kan peka till en utvecklingsmiljö</li>
+              </ul>
+              <h3 class="fs-5 nomenu pt-0">Rubriker</h3>
+              <ul>
+                <li>Sidan saknar en Rubrik 1</li>
+                <li>Första rubriken är en underrubrik</li>
+                <li>Rubrik hoppar över en nivå</li>
+                <li>Rubrik är tom</li>
+                <li>Bild som används som rubrik behöver alt-text</li>
+                <li>Rubriken är mycket lång</li>
+                <li>Fetstilt stycke kan vara en rubrik</li>
+                <li>Kort blockcitat kan vara en rubrik</li>
+              </ul>
+              <h3 class="fs-5 nomenu pt-0">Textläsbarhet</h3>
+              <ul>
+                <li>Överdriven text med versaler</li>
+                <li>Stort block med fetstilt eller kursiv text</li>
+                <li>Texten är för liten</li>
+                <li>Text som inte är en länk är understruken</li>
+                <li>Texten är marginaljusterad (justified)</li>
+                <li>Nedsänkt eller upphöjd text missbrukad som formatering</li>
+                <li>Falsk lista med tecken eller symboler</li>
+                <li>Listobjekt utanför en lista</li>
+              </ul>
+
+            </div>
+            <div class="col-12 col-xl-4">
+              <h3 class="fs-5 nomenu pt-0">Färgkontrast</h3>
+              <ul>
+                <li>Text har otillräcklig kontrast</li>
+                <li>Textkontrast kräver manuell kontroll</li>
+                <li>Ikon eller grafik har otillräcklig kontrast</li>
+                <li>Ikon- eller grafikkontrast kräver manuell kontroll</li>
+                <li>Inmatningstext har otillräcklig kontrast</li>
+                <li>Platshållartext har otillräcklig kontrast</li>
+              </ul>
+              <h3 class="fs-5 nomenu pt-0">Tabeller</h3>
+              <ul>
+                <li>Tabell saknar en rubrikrad eller -kolumn</li>
+                <li>Tabellrubrikcell är tom</li>
+                <li>Innehållsrubrik används inuti en tabell</li>
+              </ul>
+              <h3 class="fs-5 nomenu pt-0">Formulär &amp; interaktiva element</h3>
+              <ul>
+                <li>Knapp saknar tillgänglig etikett</li>
+                <li>Knapp har en ogiltig ARIA-etikett</li>
+                <li>Knappetikett innehåller ordet "knapp"</li>
+                <li>Synlig etikett matchar inte tillgängligt namn</li>
+                <li>Inmatningsfält saknar kopplad etikett</li>
+                <li>Inmatningsfält använder bara en osynlig etikett</li>
+                <li>Inmatningsfält använder bara en platshållare som etikett</li>
+                <li>Återställningsknapp kan orsaka oavsiktlig dataförlust</li>
+                <li>Element dolt för skärmläsare men fortfarande tangentbordsfokuserbart</li>
+                <li>Positivt tabindex bryter läs- och tabbordning</li>
+              </ul>
+              <h3 class="fs-5 nomenu pt-0">Sidmetadata</h3>
+              <ul>
+                <li>Sidtitel saknas</li>
+                <li>Sidspråk är inte deklarerat</li>
+                <li>Visningsport förhindrar textskalning</li>
+                <li>Sidan uppdateras automatiskt</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section class="row mb-5 pb-5" id="csa">
+          <h2 class="pt-3" data-section="csa">CSA-funktioner</h2>
+
+          <p class="fs-5">
+            Editoria11y främjar tillgänglighet på ett unikt sätt. Dess verktyg är mycket effektiva för att hjälpa
+            icke-tekniska redaktörer att förbereda innehåll som kan användas på lika villkor av webbanvändare med
+            funktionsnedsättning. Vi betraktar detta som ett allmänt intresse, så <strong>Editoria11y kommer alltid att
+              vara gratis att använda</strong>.
+          </p>
+          <p class="fs-5">
+            Editoria11y är dock inte gratis att utveckla eller underhålla.
+          </p>
+          <p class="fs-5">
+            CSA fyller luckan: projektmedlemmar finansierar utvecklingen av Editoria11y-biblioteket, dess
+            CMS-insticksprogram och CSA-sviten: en snabbt växande uppsättning verktyg med öppen källkod för
+            kvalitetssäkring som erbjuder liknande funktionalitet som kommersiella produkter, till en betydligt lägre
+            kostnad.
+
+            CSA-sviten för Drupal är för närvarande gratis i beta och kommer att finnas tillgänglig för WordPress under
+            kvartal 3 2026.
+          </p>
+          <figure class="figure my-4 shadow border rounded p-0 m-2 col-sm-12 col-xl-11">
+            <img alt="Webbplatscrawling pågår" src="../../assets/images/3x-crawl.png" height="786" width="1986" class="img-fluid rounded-top figure-img" />
+            <figcaption class="figure-caption p-2 pt-2">CSA-crawler uppdaterar en kontrollpanel.</figcaption>
+          </figure>
+
+        </section>
+        <section id="csa-tools" class="pb-5 mt-5 row g-5">
+
+          <div class="mt-2">
+            <h3 class="pt-3" data-section="csa-tools">Tester &amp; Verktyg</h3>
+            <ul class="fs-5">
+              <li>
+                Tester för utvecklare, läsbarhet och kontrast.
+              </li>
+              <li>
+                Rollbaserad delad konfiguration för utvecklare och innehållsskapare.
+              </li>
+              <li>
+                Verktyg för att skapa anpassade tester.
+              </li>
+              <li>
+                Webbplatsövergripande avfärdanden med ett klick
+              </li>
+              <li>
+                Underhållsverktyg och genomsökare för kontrollpanelen
+              </li>
+            </ul>
+            <img alt="Färgväljare i testverktygstips" src="../../assets/images/3x-colors.png" height="1022" width="1288" class="img-fluid col-sm-12 col-xl-9 mt-0 p-0" />
+          </div>
+
+        </section>
+        <section id="benefits" class="pb-5 mt-5 row g-5">
+
+
+          <div class="">
+            <h3 class="pt-0" data-section="benefits">Gemenskapsförmåner</h3>
+            <ul class="fs-5">
+              <li>Prioriterad support.</li>
+              <li>Viktat inflytande på projektets färdplan.</li>
+              <li>Automatisk tillgång till nya funktioner på färdplanen.</li>
+              <li>Direkt installationshjälp (beroende på nivå).</li>
+              <li><a href="https://form.jotform.com/260627656020150">Offentligt stöderkännande</a> (beroende på nivå/på
+                begäran; villkor gäller).</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="nomenu">Bidra-vad-du-kan-licens</h3>
+            <p class="fs-5">Efter beta-perioden kommer CSA-sviten att göras tillgänglig genom en
+              bidra-vad-du-kan-modell. Editoria11y-kärnan, både biblioteket och insticksprogrammen, förblir gratis.</p>
+            <p class><a class="btn btn-primary" href="/sv/priser/">Visa licensalternativ och alternativ</a></p>
+
+          </div>
+
+        </section>
+
+
+
+
+
+        <h2 id="projects" data-section="false">CSA-sponsrade projekt</h2>
+        <section id="active-projects">
+          <h3 class="pt-4" data-section="active-projects">Aktiva</h3>
+          <div class="accord">
+            <details>
+              <summary>
+                Kvartal 2 2026: Lansering av Editoria11y CSA-gemenskapen
+              </summary>
+              <div>
+                <p>Återstående arbete:</p>
+                <ul class="fs-6">
+                  <li>
+                    Skapa en juridisk enhet för att hantera prenumerationer och sponsorer.
+                  </li>
+                  <li>
+                    Upprätta ett licenssystem.
+                  </li>
+                </ul>
+              </div>
+            </details>
+            <details>
+              <summary>
+                Kvartal 2 2026: Verktyg för att bygga anpassade regler
+              </summary>
+              <div>
+                <ol class="fs-6">
+                  <li>Klart för Drupal.</li>
+                  <li>Att göra: porta verktyget till WordPress.</li>
+                </ol>
+              </div>
+            </details>
+            <details>
+              <summary>
+                Kvartal 3 2026: Porta 3.x-biblioteket till WordPress
+              </summary>
+              <div>
+                <ol class="fs-6">
+                  <li><span data-translate>Skapa CSA-undermodul med gemenskapsstödda funktioner</span>
+                    <ul>
+                      <li>Skapa underhållsverktyg för kontrollpanelen för att ta bort föråldrade resultat och crawla om
+                        befintligt innehåll.</li>
+                      <li>Möjliggör att markera vissa tester som OK för hela webbplatsen, inte bara på en sida.</li>
+                      <li>Möjliggör delad konfiguration med separata inställningar och tester för utvecklare och
+                        innehållsredaktörer.</li>
+                    </ul>
+                  </li>
+                </ol>
+              </div>
+            </details>
+          </div>
+        </section>
+        <section id="finished">
+          <h3 data-section="finished" class="pt-5">Nyligen färdigställt</h3>
+          <div class="accord">
+            <details>
+              <summary>
+                Kvartal 1 2026: Omskrivning av biblioteket 3.x
+              </summary>
+              <div>
+                <ul class="fs-6">
+                  <li>
+                    Sammanslagning av Editoria11y- och Sa11y-regeluppsättningar. Sedan förgreningen har Sa11y skrivit
+                    ungefär 50 ytterligare tester och antagit ESM-verktyg, och Editoria11y har implementerat
+                    prestandaförbättringar och lagt till parametrar för att möjliggöra realtidskontroll. Sa11y 4.2.2 och
+                    Editoria11y 3.0.0 inleder vår gemensamma framtid.
+                  </li>
+                  <li>
+                    Lägg till stöd för "delad konfiguration" för att möjliggöra separata regeluppsättningar för
+                    utvecklare och innehållsskapare.
+                  </li>
+                  <li>Lägg till maskinöversättningar för kinesiska, danska, nederländska, tyska, grekiska, ungerska,
+                    italienska, japanska, norskt bokmål, polska, portugisiska (Brasilien), portugisiska (Portugal),
+                    spanska, svenska och ukrainska som mallar för mänsklig bearbetning.</li>
+                  <li><em class="fs-6 lh-1"><strong>Aktuell status</strong>: kodningsarbetet är klart; en release-tagg
+                      sätts efter att dokumentation och demos har uppdaterats.</em></li>
+                </ul>
+              </div>
+            </details>
+            <details>
+              <summary>
+                Kvartal 1 2026: Omskrivning av Drupal-modulen 3.x
+              </summary>
+              <div>
+                <ol class="fs-6">
+                  <li>Utöka kontrollpanelen med mer robusta rapport- och filtreringsverktyg.</li>
+                  <li>Lägg till maskinöversättningar för kinesiska, danska, nederländska, tyska, grekiska, ungerska,
+                    italienska, japanska, norskt bokmål, polska, portugisiska (Brasilien), portugisiska (Portugal),
+                    spanska, svenska och ukrainska som mallar för mänsklig bearbetning.</li>
+                  <li>Gör CSV-exportfunktionerna anpassningsbara</li>
+                  <li><span data-translate>Skapa CSA-undermodul med gemenskapsstödda funktioner</span>
+                    <ul>
+                      <li>Skapa underhållsverktyg för kontrollpanelen för att ta bort föråldrade resultat och crawla om
+                        befintligt innehåll.</li>
+                      <li>Möjliggör att markera vissa tester som OK för hela webbplatsen, inte bara på en sida.</li>
+                      <li>Möjliggör delad konfiguration med separata inställningar och tester för utvecklare och
+                        innehållsredaktörer.</li>
+                    </ul>
+                  </li>
+                </ol>
+              </div>
+            </details>
+          </div>
+        </section>
+        <section id="project-ideas">
+          <h3 data-section="project-ideas" class="pt-5">Under diskussion</h3>
+          <p>Diskutera och rösta på dessa idéer i <a               href="https://github.com/itmaybejj/editoria11y/discussions">Editoria11y-bibliotekets forum</a>.</p>
+          <p>Idéer är märkta med uppskattningar av svårighetsgrad och prioritet baserat på nuvarande
+            gemenskapsdiskussioner.</p>
+          <ul class="mt-1 p-5 pt-0">
+            <li>Övervakningskontrollpanel för flera webbplatser</li>
+            <li>Identifiering av brutna länkar</li>
+            <li>PDF-skanning</li>
+            <li>Flik för kodplats i verktygstips</li>
+            <li>Sidrapportexport i verktygstips</li>
+            <li>Flaggade ord</li>
+            <li>CLI-utvecklingsverktyg</li>
+            <li>Bokmärken/Webbläsartillägg</li>
+            <li>ACT-regelvalidering</li>
+            <li>Utöka validering av namn/roll/värde</li>
+          </ul>
+        </section>
+
+
+      </div>
+
+
+    </div>
+  </main>
+  <footer class="container col-lg-12 mx-auto pt-3 text-body-secondary text-center text-md-start">
+    <div class="container">
+      <div class="footer-nav text-center">
+        <a class="btn btn-primary btn-lg" data-slug="about" href="/sv/">Om oss</a>
+        <a class="btn btn-primary btn-lg" data-slug="features" href="/sv/funktioner/">Funktioner</a>
+        <a class="btn btn-primary btn-lg" data-slug="demo" href="/sv/demo/">Demo</a>
+        <a class="btn btn-primary btn-lg" data-slug="license" href="/sv/priser/">Priser och bidrag</a>
+      </div>
+      <div class="row footer">
+        <div class="col col-3">
+          <a href="https://github.com/itmaybejj/editoria11y"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+              height="20" fill="currentColor" class="bi bi-git" viewBox="0 0 16 16">
+              <path
+                d="M15.698 7.287 8.712.302a1.03 1.03 0 0 0-1.457 0l-1.45 1.45 1.84 1.84a1.223 1.223 0 0 1 1.55 1.56l1.773 1.774a1.224 1.224 0 0 1 1.267 2.025 1.226 1.226 0 0 1-2.002-1.334L8.58 5.963v4.353a1.226 1.226 0 1 1-1.008-.036V5.887a1.226 1.226 0 0 1-.666-1.608L5.093 2.465l-4.79 4.79a1.03 1.03 0 0 0 0 1.457l6.986 6.986a1.03 1.03 0 0 0 1.457 0l6.953-6.953a1.03 1.03 0 0 0 0-1.457" />
+            </svg> <strong>Bibliotek</strong></a>
+        </div>
+        <div class="col col-3">
+          <a href="https://github.com/itmaybejj/editoria11y/discussions"><svg xmlns="http://www.w3.org/2000/svg"
+              width="20" height="20" fill="currentColor" class="bi bi-chat-right-heart-fill" viewBox="0 0 16 16">
+              <path
+                d="M16 2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h9.586a1 1 0 0 1 .707.293l2.853 2.853a.5.5 0 0 0 .854-.353zM8 3.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132" />
+            </svg> <strong>Forum</strong></a>
+        </div>
+        <div class="col col-3">
+          <a href="https://github.com/itmaybejj/editoria11y/issues"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+              height="20" fill="currentColor" class="bi bi-patch-plus-fill" viewBox="0 0 16 16">
+              <path
+                d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01zM8.5 6v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 1 0" />
+            </svg> <strong>Problem</strong></a>
+        </div>
+        <div class="col col-3">
+          <a href="/sv/kontakt/"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+              class="bi bi-person-lines-fill" height="24" width="24" viewBox="0 0 16 18">
+              <path
+                d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z">
+              </path>
+            </svg> <strong>Kontakt</strong></a>
+        </div>
+        <div class="col col-12 subfooter">
+          <a href="/sv/integritet/">Integritetspolicy</a>
+          <a href="/sv/cookiepolicy/">Cookiepolicy</a>
+          <a href="/sv/anvandarvillkor/">Användarvillkor</a>
+          <a href="/sv/juridiskt-meddelande/">Juridiskt meddelande</a>
+          <span>&copy; 2026 Editoria11y LLC</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="/assets/bootstrap/js/bootstrap.bundle.min.js" class="astro-vvvwv3sm"></script>
+  <script src="/assets/lang/i18n.js"></script>
+  <script src="/assets/theme.js"></script>
+</body>
+
+</html>

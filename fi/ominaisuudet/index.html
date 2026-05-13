@@ -1,0 +1,484 @@
+<!doctype html>
+<html lang="fi" data-bs-theme="light">
+
+<head>
+  <link rel="icon" type="image/png" href="/assets/favicons/favicon-512x512.png" sizes="512x512" />
+  <link rel="icon" type="image/png" href="/assets/favicons/favicon-192x192.png" sizes="192x192" />
+  <link rel="icon" type="image/png" href="/assets/favicons/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/assets/favicons/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <meta charset="utf-8" />
+  <title>Ominaisuudet — Editoria11y</title>
+  <link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="/assets/theme.css" rel="stylesheet" />
+  <meta name="theme-color" content="#712cf9" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-md">
+      <div class="container col-sm-12 mx-auto">
+        <a href="/fi/" class="d-flex align-items-center  navbar-brand">
+          <svg class="logo-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+            viewBox="-.75 -3.5 10.1699 19.1777">
+            <path fill="currentColor"
+              d="M3.7031,10.5527c-.3633-.6562-.6426-1.1387-.8379-1.4473l-.3105-.4863-.2344-.3574c-.5117-.7969-1.0449-1.4551-1.5996-1.9746.3164-.2617.6113-.3926.8848-.3926.3359,0,.6348.123.8965.3691s.5918.7148.9902,1.4062c.4531-1.4727,1.0293-2.8691,1.7285-4.1895.3867-.7188.7314-1.2021,1.0342-1.4502s.7041-.3721,1.2041-.3721c.2656,0,.5938.041.9844.123-1.0039.8086-1.8066,1.7695-2.4082,2.8828s-1.3789,3.0762-2.332,5.8887Z" />
+          </svg> Editoria<span style="margin-left: -1px;">11</span>y
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar" aria-label="Vaihda navigointia">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Editoria11y</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Sulje"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 nav-pills">
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div id="lang-picker"></div>
+  </header>
+  <main class="container col-lg-12 mx-auto py-5">
+    <div class="row docs">
+      <div class="col-12 col-md-5 col-lg-4 mb-5">
+        <div id="on-this-page" class="list-group ms-2 ms-lg-5 position-sticky top-0 pt-3">
+        </div>
+      </div>
+      <div class="col-12 col-md-7 col-lg-8 pt-3" data-bs-spy="scroll" data-bs-target="#on-this-page"
+        data-bs-smooth-scroll="true" tabindex="0">
+        <section id="features">
+          <h1 class="text-body-emphasis pt-2 pb-5">Ominaisuudet</h1>
+          <p class="fs-6">Editoria11y:n ydintestit havaitsevat yli 50 yleistä sisällön saavutettavuusongelmaa: päätöksiä,
+            jotka heikentävät luettavuutta, virheitä, jotka tekevät ruudunlukijoista tehottomampia, ja virheitä,
+            jotka heikentävät hakukoneoptimointia.</p>
+          <p class="fs-6">Lisäosat tarjoavat ~40 lisätestiä kehittäjille ja suunnittelijoille, mukautettuja testejä ja
+            erilaisia sivustolaajuisia laadunvarmistustyökaluja.</p>
+          <p class="fs-6">Sisältötestit keskittyvät ongelmiin, jotka ilmaantuvat <strong>sen jälkeen</strong>, kun sivustot
+            on luovutettu sisällöntuottajille. Sivustot täytyy testata manuaalisilla tarkastustyökaluilla,
+            näppäimistöillä ja ruudunlukijoilla ennen julkaisua, mutta jopa kaikkein saavutettavin sivusto
+            ensimmäisenä päivänä on taipuvainen rapautumaan muokkausten tuodessa uusia ongelmia.</p>
+          <p class="fs-6">Mikä erottaa Editoria11y:n muista saavutettavuustyökaluista on se, että sen testit suoritetaan
+            reaaliajassa, selaimessa, tekijöiden muokatessa ja esikatsellessa työtään. <strong>Tekijät reagoivat
+              todennäköisemmin välittömään, upotettuun palautteeseen</strong>, huomaavat varoitukset ja tekevät
+            korjauksia kuin muistaisivat vierailla kojelaudalla tai suorittaa manuaalisen tarkistuksen.</p>
+        </section>
+        <section id="authoring">
+          <h2>Tekijän kokemus</h2>
+          <div class="clearfix">
+            <img src="/assets/images/3x-toolbar" class="image-fluid float-start me-3" alt="Kuvakaappaus Editoria11y-työkalupalkista, jossa näkyy 4 virhettä." width="97" height="50" loading="lazy" />
+            <p>Tekijät näkevät Editoria11y-työkalupalkin sisältöä muokatessaan. Kun ongelmia havaitaan,
+              se muuttuu keltaiseksi tai punaiseksi ja näyttää ongelmamäärän. Napsauttamalla lukumäärää
+              sivu vierittää ensimmäiseen varoitukseen ja avaa sen työkaluvinkin.</p>
+          </div>
+          <div class="row">
+            <img loading="lazy" src="/assets/images/3x-generic-tip.png" class="img-fluid col-6 col-lg-8" height="798" width="1278" alt="Vinkki, joka ilmaisee linkin nimeksi annettu vain &quot;click here&quot;." />
+            <p class="col-6 col-lg-4 align-content-center">Vinkit näkyvät suoraan sivulla selkokielisenä kuvauksena
+              virheestä — mukana korjausehdotukset ja selitys, miksi ongelma on tärkeä.</p>
+          </div>
+          <div class="row">
+            <img loading="lazy" class="img-fluid col-6 col-lg-8" src="/assets/images/3x-tools.jpg" height="473" width="405" alt="Otsikkorakenteen visualisointi sivun päällä" />
+            <p class="col-6 col-lg-4 align-content-center">Työkalupalkki sisältää lisätyökaluja manuaalisiin tarkistuksiin,
+              kuten otsikkorakenteen ja alt-tekstin visualisointityökalut sekä luettavuuspisteytyksen.</p>
+          </div>
+        </section>
+        <section id="admins">
+          <h2>Sivuston hallintaominaisuudet</h2>
+          <p>Jokaista tarkistimen näkyvää puolta voidaan mukauttaa. Parametrit ja tapahtumat mahdollistavat
+            testien poistamisen, vinkkien uudelleenkirjoittamisen, mukautettujen testien lisäämisen ja
+            mukautettujen teemojen asettamisen.</p>
+          <p>Drupal- ja WordPress-lisäosat lisäävät lisäominaisuuksia, kuten synkronoidut hylkäykset,
+            sivustolaajuiset kojelaudat ja CSV-raporttiviennit.</p>
+          <figure class="figure my-4 rounded shadow mb-5 border">
+            <img loading="lazy" class="figure-img img-fluid" src="/assets/images/3x-dashboard.png" height="765" width="1600" alt="Raportointipaneeli, jossa näkyvät viimeisimmät ongelmat ja eniten ongelmia sisältävät sivut." />
+            <figcaption class="figure-caption p-3 pt-2">Drupalin hallintapaneeli, joka sisältää suodatettavat listat ongelmista,
+              ongelmallisista sivuista ja hylkäyksistä.</figcaption>
+          </figure>
+        </section>
+        <section id="tests">
+          <h2 data-section="tests">Testit</h2>
+          <p class="fs-6">Editoria11y:n testit keskittyvät parantamaan verkon käyttökokemusta kaikille käyttäjille,
+            ihmisten mittaamana, ei vain teknisten standardien mukaan. Vaikka ydintestit on suunniteltu
+            auttamaan saavuttamaan Web Content Accessibility Guidelines (<a href="https://www.w3.org/WAI/WCAG22/quickref/">WCAG 2.2 AA</a>), muihin vaikuttavat
+            <a href="https://www.w3.org/TR/coga-usable/">Cognitive and Learning Disabilities Accessibility
+              Task Force</a> -työryhmän työ sekä yleiset käytettävyys- ja suunnittelun parhaat käytännöt.</p>
+          <p class="fs-6 pb-3">Yksittäiset testit voidaan poistaa käytöstä sivuston ylläpitäjien toimesta.</p>
+          <div class="row listgrid">
+            <div class="col-12 col-xl-4">
+              <h3 class="fs-5 nomenu pt-0">Kuvien alt-teksti</h3>
+              <ul>
+                <li>Kuvasta puuttuu alt-attribuutti</li>
+                <li>Alt-teksti on tiedostonimi</li>
+                <li>Alt-teksti on paikkamerkki ("TBD")</li>
+                <li>Alt-teksti on lausumattomia symboleita</li>
+                <li>Alt-teksti sisältää tarpeettomia sanoja ("kuva…")</li>
+                <li>Alt-teksti on liian pitkä</li>
+                <li>Koristeellisella kuvalla saattaa olla merkitystä</li>
+                <li>Karusellin kuva merkitty koristeelliseksi</li>
+                <li>Tekstityksen saaneella kuvalla ei ole alt-tekstiä</li>
+                <li>Alt-teksti toistaa tekstityksen</li>
+              </ul>
+              <h3 class="fs-5 nomenu pt-0">Linkitetyt kuvat</h3>
+              <ul>
+                <li>Linkitetyllä kuvalla ei ole alt-tekstiä</li>
+                <li>Linkitetyn kuvan alt on URL tai tiedostonimi</li>
+                <li>Linkitetyn kuvan alt on paikkamerkki</li>
+                <li>Linkitetyn kuvan alt on lausumattomia symboleita</li>
+                <li>Linkitetyn kuvan alt kuvailee kuvaa, ei linkkiä</li>
+                <li>Linkitetyn kuvan alt sisältää tarpeettomia sanoja</li>
+                <li>Linkitetyn kuvan alt on liian pitkä</li>
+                <li>Linkissä olevalla kuvalla, jolla on teksti, ei ole alt-attribuuttia</li>
+              </ul>
+              <h3 class="fs-5 nomenu pt-0">Upotettu media</h3>
+              <ul>
+                <li>Video tarvitsee tekstitykset</li>
+                <li>Ääni tarvitsee tekstityksen</li>
+                <li>Datavisualisointi tarvitsee saavutettavan vaihtoehdon</li>
+                <li>Framelta puuttuu otsikko</li>
+                <li>Frame suljettu pois näppäimistönavigoinnista</li>
+                <li>Framen sisältö tarvitsee manuaalisen saavutettavuustarkistuksen</li>
+                <li>Linkitetty asiakirja ei ehkä ole ruudunlukijoille saavutettava</li>
+                <li>PDF:stä puuttuu saavutettava vaihtoehto</li>
+                <li>Sisäkkäiset interaktiiviset asettelukomponentit</li>
+              </ul>
+            </div>
+            <div class="col-12 col-xl-4">
+              <h3 class="fs-5 nomenu pt-0">Merkitykselliset linkit</h3>
+              <ul>
+                <li>Tyhjä linkki</li>
+                <li>Linkin teksti on URL</li>
+                <li>Linkin teksti on vain DOI-numero</li>
+                <li>Linkin teksti sanoo "klikkaa tästä"</li>
+                <li>Linkin teksti on vain yleisiä sanoja ("lue lisää")</li>
+                <li>Eri linkeillä on sama teksti</li>
+                <li>Linkitetyllä kuvakkeella tai kuvalla ei ole tekstivaihtoehtoa</li>
+                <li>Linkki avautuu uudessa välilehdessä ilman varoitusta</li>
+                <li>Linkki osoittaa tiedostoon ilman varoitusta</li>
+                <li>Linkin teksti on vain symboleita tai emojeja</li>
+                <li>Merkityksellinen linkin teksti piilossa näkeviltä käyttäjiltä</li>
+                <li>Turha linkin title-attribuutti</li>
+                <li>Rikkinäinen sivun sisäinen ankkurilinkki</li>
+                <li>Päällekkäinen ID-attribuutti</li>
+                <li>Linkki saattaa osoittaa kehitysympäristöön</li>
+              </ul>
+              <h3 class="fs-5 nomenu pt-0">Otsikot</h3>
+              <ul>
+                <li>Sivulta puuttuu Heading 1</li>
+                <li>Ensimmäinen otsikko on alaotsikko</li>
+                <li>Otsikko ohittaa tason</li>
+                <li>Otsikko on tyhjä</li>
+                <li>Otsikkona käytetty kuva tarvitsee alt-tekstin</li>
+                <li>Otsikko on erittäin pitkä</li>
+                <li>Lihavoitu kappale saattaa olla otsikko</li>
+                <li>Lyhyt lainaus saattaa olla otsikko</li>
+              </ul>
+              <h3 class="fs-5 nomenu pt-0">Tekstin luettavuus</h3>
+              <ul>
+                <li>Liiallinen iso kirjainten käyttö</li>
+                <li>Suuri lohko lihavointia tai kursivointia</li>
+                <li>Teksti on liian pientä</li>
+                <li>Ei-linkkiteksti on alleviivattu</li>
+                <li>Teksti on tasattu</li>
+                <li>Alaindeksiä tai yläindeksiä käytetään väärin muotoiluna</li>
+                <li>Väärä lista merkkejä tai symboleita käyttäen</li>
+                <li>Listakohde listan ulkopuolella</li>
+              </ul>
+
+            </div>
+            <div class="col-12 col-xl-4">
+              <h3 class="fs-5 nomenu pt-0">Värikontrasti</h3>
+              <ul>
+                <li>Tekstin kontrasti on riittämätön</li>
+                <li>Tekstin kontrasti vaatii manuaalisen tarkistuksen</li>
+                <li>Kuvakkeen tai grafiikan kontrasti on riittämätön</li>
+                <li>Kuvakkeen tai grafiikan kontrasti vaatii manuaalisen tarkistuksen</li>
+                <li>Syöttökentän tekstin kontrasti on riittämätön</li>
+                <li>Paikkamerkkitekstin kontrasti on riittämätön</li>
+              </ul>
+              <h3 class="fs-5 nomenu pt-0">Taulukot</h3>
+              <ul>
+                <li>Taulukosta puuttuu otsikkorivi tai -sarake</li>
+                <li>Taulukko-otsikkosolun sisältö on tyhjä</li>
+                <li>Sisältöotsikko käytetty taulukon sisällä</li>
+              </ul>
+              <h3 class="fs-5 nomenu pt-0">Lomakkeet & interaktiiviset elementit</h3>
+              <ul>
+                <li>Painikkeella ei ole saavutettavaa merkintää</li>
+                <li>Painikkeella on virheellinen ARIA-merkintä</li>
+                <li>Painikkeen merkintä sisältää sanan "painike"</li>
+                <li>Näkyvä merkintä ei vastaa saavutettavaa nimeä</li>
+                <li>Kentällä ei ole yhdistettyä merkintää</li>
+                <li>Kenttä käyttää vain näkymätöntä merkintää</li>
+                <li>Kenttä käyttää vain paikkamerkkiä merkintänä</li>
+                <li>Nollaa-painike saattaa aiheuttaa tahattoman tietojen menetyksen</li>
+                <li>Elementti piilotettu ruudunlukijoilta mutta silti näppäimistöllä fokusoitavissa</li>
+                <li>Positiivinen tab-indeksi rikkoo luku- ja tab-järjestyksen</li>
+              </ul>
+              <h3 class="fs-5 nomenu pt-0">Sivun metatiedot</h3>
+              <ul>
+                <li>Sivun otsikko puuttuu</li>
+                <li>Sivun kieltä ei ole ilmoitettu</li>
+                <li>Viewport estää tekstin skaalauksen</li>
+                <li>Sivu päivittyy automaattisesti</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section class="row mt-5 pt-5" id="csa">
+          <h2 class="pt-3" data-section="csa">CSA-ominaisuudet</h2>
+
+          <p class="fs-5">
+            Editoria11y edistää saavutettavuutta ainutlaatuisella tavalla. Sen työkalut ovat erittäin tehokkaita
+            auttamaan ei-teknisiä tekijöitä valmistelemaan sisältöä, josta vammaiset verkkokäyttäjät voivat nauttia
+            tasavertaisesti. Pidämme tätä yleisenä hyvänä,
+            joten <strong>Editoria11y on aina ilmainen käyttää</strong>.
+          </p>
+          <p class="fs-5">
+            Editoria11y ei kuitenkaan ole ilmainen kehittää tai tukea.
+          </p>
+          <p class="fs-5">
+            CSA täyttää tämän aukon: projektin jäsenet rahoittavat Editoria11y-kirjaston, CMS-lisäosien ja
+            CSA-paketin kehitystyötä — nopeasti kasvava kokoelma avoimen lähdekoodin laadunvarmistustyökaluja,
+            jotka tarjoavat kaupallisten tuotteiden tasoisen toiminnallisuuden murto-osalla hinnasta.
+
+            CSA-paketti Drupalille on tällä hetkellä ilmainen beta-vaiheessa, ja se saapuu WordPressille Q3 2026.
+          </p>
+          <figure class="figure my-4 shadow border rounded p-0 m-2 col-sm-12 col-xl-11">
+            <img alt="Sivuston indeksointi käynnissä" src="../../assets/images/3x-crawl.png" height="786" width="1986" class="img-fluid rounded-top figure-img" />
+            <figcaption class="figure-caption p-2 pt-2">CSA-indeksoija päivittää hallintapaneelia.</figcaption>
+          </figure>
+
+        </section>
+        <section id="csa-tools" class="pb-5 mt-5 row g-5">
+
+          <div class="mt-2">
+            <h3 class="pt-3" data-section="csa-tools">CSA-työkalut</h3>
+            <ul class="fs-5">
+              <li>
+                Kehittäjä-, luettavuus- ja kontrastistestit.
+              </li>
+              <li>
+                Roolipohjainen jaettu konfiguraatio kehittäjille ja sisällöntuottajille.
+              </li>
+              <li>
+                Mukautettujen testien rakentajat.
+              </li>
+              <li>
+                Yhden napsautuksen sivustolaajuiset hylkäykset
+              </li>
+              <li>
+                Hallintapaneelin ylläpitotyökalut ja indeksoijat
+              </li>
+            </ul>
+            <img alt="Värinvalitsin testivinkin sisällä" src="../../assets/images/3x-colors.png" height="1022" width="1288" class="img-fluid col-sm-12 col-xl-9 mt-0 p-0" />
+          </div>
+
+        </section>
+        <section id="benefits" class="pb-5 mt-5 row g-5">
+
+
+          <div class="">
+            <h3 class="pt-0" data-section="benefits">CSA-jäsenyyden edut</h3>
+            <ul class="fs-5">
+              <li>Prioriteettituki.</li>
+              <li>Painotettu vaikutus projektin tiekartalle.</li>
+              <li>Automaattinen pääsy tiekartan uusiin ominaisuuksiin.</li>
+              <li>Suora asennusapu (tason mukaan).</li>
+              <li><a href="https://form.jotform.com/260627656020150">Julkinen tukijamaininta</a> (tason/pyynnön mukaan; ehdot voimassa).</li>
+            </ul>
+          
+            <h3 class="nomenu">Kiinnostunut?</h3>
+            <p class="fs-5">CSA-pakettia tuetaan "maksa mitä voit" -mallilla. Editoria11y-ydin, sekä kirjasto että lisäosat, pysyy ilmaisena ikuisesti.</p>
+            <p class><a class="btn btn-primary" href="/fi/hinnat/">Liity CSA:han</a></p>
+
+          </div>
+
+        </section>
+
+
+
+
+
+        <h2 id="projects" data-section="false">CSA:n sponsoroimat projektit</h2>
+        <section id="active-projects">
+          <h3 class="pt-4" data-section="active-projects">Aktiiviset</h3>
+          <div class="accord">
+            <details>
+              <summary>
+                Q2 2026: Editoria11y CSA -yhteisön käynnistäminen
+              </summary>
+              <div>
+                <p>Jäljellä olevat tehtävät:</p>
+                <ul class="fs-6">
+                  <li>
+                    Perusta juridinen yhteisö tilausten ja sponsorointitulojen käsittelyä varten.
+                  </li>
+                  <li>
+                    Ota lisensointijärjestelmä käyttöön.
+                  </li>
+                </ul>
+              </div>
+            </details>
+            <details>
+              <summary>
+                Q2 2026: Mukautettu sääntörakentaja
+              </summary>
+              <div>
+                <ol class="fs-6">
+                  <li>Valmis Drupalille.</li>
+                  <li>Tehtävä: porttaa rakentaja WordPressiin.</li>
+                </ol>
+              </div>
+            </details>
+            <details>
+              <summary>
+                Q3 2026: Portaa 3.x-kirjasto WordPressiin
+              </summary>
+              <div>
+                <ol class="fs-6">
+                  <li><span data-translate>Luo CSA-aliohjain yhteisön tukemilla ominaisuuksilla</span>
+                    <ul>
+                      <li>Luo hallintapaneelin ylläpitotyökalut vanhentuneiden tulosten pudottamiseen ja olemassa olevan sisällön uudelleenindeksointiin.</li>
+                      <li>Salli tiettyjen testien merkitseminen OK:ksi sivustolaajuisesti, ei vain yhdellä sivulla.</li>
+                      <li>Salli jaettu konfiguraatio erillisillä asetuksilla ja testeillä kehittäjille ja sisällöntuottajille.</li>
+                    </ul>
+                  </li>
+                </ol>
+              </div>
+            </details>
+          </div>
+        </section>
+        <section id="finished">
+          <h3 data-section="finished" class="pt-5">Äskettäin valmistuneet</h3>
+          <div class="accord">
+            <details>
+              <summary>
+                Q1 2026: Kirjasto 3.x:n uudelleenkirjoitus
+              </summary>
+              <div>
+                <ul class="fs-6">
+                  <li>
+                    Yhdistä Editoria11y ja Sa11y -sääntöjoukot. Haarautumisen jälkeen Sa11y kirjoitti ~50 lisätestiä
+                    ja otti käyttöön ESM-työkalut, ja Editoria11y toteutti suorituskyvyn parannuksia ja lisäsi
+                    parametreja reaaliaikaisen tarkistuksen mahdollistamiseksi. Sa11y 4.2.2 ja Editoria11y 3.0.0
+                    aloittavat yhteisen tulevaisuutemme.
+                  </li>
+                  <li>
+                    Lisää "jaetun konfiguraation" tuki, joka mahdollistaa erilliset sääntöjoukot kehittäjille
+                    ja sisällöntuottajille.
+                  </li>
+                  <li>Lisää konetekstit kiinaksi, tanskaksi, hollanniksi, saksaksi, kreikaksi, unkariksi, italiaksi, japaniksi,
+                    norjaksi (bokmål), puolaksi, portugali (Brasilia), portugali (Portugali), espanjaksi, ruotsiksi ja
+                    ukrainaksi — pohjana ihmisten tekemää viimeistelyä varten.</li>
+                  <li><em class="fs-6 lh-1"><strong>Nykytila</strong>: koodaustyö on valmis; julkaisu merkitään
+                      dokumentaation ja demojen päivittämisen jälkeen.</em></li>
+                </ul>
+              </div>
+            </details>
+            <details>
+              <summary>
+                Q1 2026: Drupal-moduulin 3.x-uudelleenkirjoitus
+              </summary>
+              <div>
+                <ol class="fs-6">
+                  <li>Laajenna hallintapaneelia entistä kattavammilla raportointi- ja suodatustyökaluilla.</li>
+                  <li>Lisää konetekstit kiinaksi, tanskaksi, hollanniksi, saksaksi, kreikaksi, unkariksi, italiaksi, japaniksi,
+                    norjaksi (bokmål), puolaksi, portugali (Brasilia), portugali (Portugali), espanjaksi, ruotsiksi ja
+                    ukrainaksi — pohjana ihmisten tekemää viimeistelyä varten.</li>
+                  <li>Tee CSV-vientitoiminnot mukautettaviksi</li>
+                  <li><span data-translate>Luo CSA-aliohjain yhteisön tukemilla ominaisuuksilla</span>
+                    <ul>
+                      <li>Luo hallintapaneelin ylläpitotyökalut vanhentuneiden tulosten pudottamiseen ja olemassa olevan sisällön uudelleenindeksointiin.</li>
+                      <li>Salli tiettyjen testien merkitseminen OK:ksi sivustolaajuisesti, ei vain yhdellä sivulla.</li>
+                      <li>Salli jaettu konfiguraatio erillisillä asetuksilla ja testeillä kehittäjille ja sisällöntuottajille.</li>
+                    </ul>
+                  </li>
+                </ol>
+              </div>
+            </details>
+          </div>
+        </section>
+        <section id="project-ideas">
+          <h3 data-section="project-ideas" class="pt-5">Keskustelussa</h3>
+          <p>Keskustele näistä ideoista ja äänestä niistä <a               href="https://github.com/itmaybejj/editoria11y/discussions">Editoria11y-kirjaston foorumeilla</a>.</p>
+          <p>Ideat on merkitty vaikeus/prioriteetti-arvioilla nykyisen yhteisökeskustelun perusteella.</p>
+          <ul class="mt-1 p-5 pt-0">
+            <li>Monisivustoinen seurantakojelauta</li>
+            <li>Rikkinäisten linkkien havaitseminen</li>
+            <li>PDF-skannaus</li>
+            <li>Työkaluvinkin koodisijainti-välilehti</li>
+            <li>Työkaluvinkin sivuraportin vienti</li>
+            <li>Merkityt sanat</li>
+            <li>CLI-kehittäjätyökalut</li>
+            <li>Kirjanmerkit/Selainlisäosat</li>
+            <li>ACT-sääntöjen validointi</li>
+            <li>Laajenna nimi/rooli/arvo-validointia</li>
+          </ul>
+        </section>
+
+
+      </div>
+
+
+    </div>
+  </main>
+  <footer class="container col-lg-12 mx-auto pt-3 text-body-secondary text-center text-md-start">
+    <div class="container">
+      <div class="footer-nav text-center">
+        <a class="btn btn-primary btn-lg" data-slug="about" href="/fi/">Tietoa</a>
+        <a class="btn btn-primary btn-lg" data-slug="features" href="/fi/ominaisuudet/">Ominaisuudet</a>
+        <a class="btn btn-primary btn-lg" data-slug="demo" href="/fi/demo/">Demo</a>
+        <a class="btn btn-primary btn-lg" data-slug="license" href="/fi/hinnat/">Hinnat ja tuki</a>
+      </div>
+      <div class="row footer">
+        <div class="col col-3">
+          <a href="https://github.com/itmaybejj/editoria11y"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+              height="20" fill="currentColor" class="bi bi-git" viewBox="0 0 16 16">
+              <path
+                d="M15.698 7.287 8.712.302a1.03 1.03 0 0 0-1.457 0l-1.45 1.45 1.84 1.84a1.223 1.223 0 0 1 1.55 1.56l1.773 1.774a1.224 1.224 0 0 1 1.267 2.025 1.226 1.226 0 0 1-2.002-1.334L8.58 5.963v4.353a1.226 1.226 0 1 1-1.008-.036V5.887a1.226 1.226 0 0 1-.666-1.608L5.093 2.465l-4.79 4.79a1.03 1.03 0 0 0 0 1.457l6.986 6.986a1.03 1.03 0 0 0 1.457 0l6.953-6.953a1.03 1.03 0 0 0 0-1.457" />
+            </svg> <strong>Kirjasto</strong></a>
+        </div>
+        <div class="col col-3">
+          <a href="https://github.com/itmaybejj/editoria11y/discussions"><svg xmlns="http://www.w3.org/2000/svg"
+              width="20" height="20" fill="currentColor" class="bi bi-chat-right-heart-fill" viewBox="0 0 16 16">
+              <path
+                d="M16 2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h9.586a1 1 0 0 1 .707.293l2.853 2.853a.5.5 0 0 0 .854-.353zM8 3.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132" />
+            </svg> <strong>Foorumi</strong></a>
+        </div>
+        <div class="col col-3">
+          <a href="https://github.com/itmaybejj/editoria11y/issues"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+              height="20" fill="currentColor" class="bi bi-patch-plus-fill" viewBox="0 0 16 16">
+              <path
+                d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01zM8.5 6v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 1 0" />
+            </svg> <strong>Ongelmat</strong></a>
+        </div>
+        <div class="col col-3">
+          <a href="/fi/yhteystiedot/"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+              class="bi bi-person-lines-fill" height="24" width="24" viewBox="0 0 16 18">
+              <path
+                d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z">
+              </path>
+            </svg> <strong>Yhteystiedot</strong></a>
+        </div>
+        <div class="col col-12 subfooter">
+          <a href="/fi/tietosuoja/">Tietosuojakäytäntö</a>
+          <a href="/fi/evasteet/">Evästekäytäntö</a>
+          <a href="/fi/kayttoehdot/">Käyttöehdot</a>
+          <a href="/fi/oikeudellinen-ilmoitus/">Oikeudellinen ilmoitus</a>
+          <span>&copy; 2026 Editoria11y LLC</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="/assets/bootstrap/js/bootstrap.bundle.min.js" class="astro-vvvwv3sm"></script>
+  <script src="/assets/lang/i18n.js"></script>
+  <script src="/assets/theme.js"></script>
+</body>
+
+</html>

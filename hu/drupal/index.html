@@ -9,10 +9,9 @@
   <link rel="shortcut icon" href="/favicon.ico" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
   <meta charset="utf-8" />
-  <title>Drupal CSA Docs — Editoria11y</title>
+  <title>Editoria11y Drupalhoz — Editoria11y</title>
   <link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
   <link href="/assets/theme.css" rel="stylesheet" />
-  <link href="/assets/prism/prism.css" rel="stylesheet" />
   <meta name="theme-color" content="#712cf9" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -34,7 +33,7 @@
         </button>
         <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
           <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Editora11y</h5>
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Editoria11y</h5>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Bezárás"></button>
           </div>
           <div class="offcanvas-body">
@@ -47,15 +46,15 @@
     <div id="lang-picker"></div>
   </header>
   <main class="container col-lg-12 mx-auto py-5">
-    <div class="row docs">
+    
       <div class="col-12 col-md-5 col-lg-4 mb-5">
         <div id="on-this-page" class="list-group ms-2 ms-lg-5 position-sticky top-0 pt-3">
         </div>
       </div>
       <div class="col-12 col-md-7 col-lg-8 pt-3">
-        <div data-bs-spy="scroll" data-bs-target="#on-this-page" data-bs-smooth-scroll="true">
+        </div>
           <h1>Editoria11y Drupalhoz</h1>
-          <section id="features">
+          
             <h2 class="pt-3">Alapfunkciók</h2>
 
             <p class="fs-6">A Drupal modul összekapcsolja az ellenőrző könyvtárat a szerkesztői háttérrendszerrel, és
@@ -63,8 +62,7 @@
 
             <figure class="figure my-4 row">
               <div class="col-lg-8">
-                <img loading="lazy" src="/assets/images/3x-editing.png" class="rounded border figure-img img-fluid"
-                  height="1088" width="2237" alt="Drupal szerkesztő soron belüli tippekkel" />
+                <img loading="lazy" src="/assets/images/3x-editing.png" class="rounded border figure-img img-fluid" height="1088" width="2237" alt="Drupal szerkesztő soron belüli tippekkel" />
               </div>
               <figcaption class="figure-caption col-lg-4">A problémák mind a frontend betöltésekor, mind a CKEditor
                 és Gutenberg szerkesztőkben gépelés közben észlelésre kerülnek.</figcaption>
@@ -72,8 +70,7 @@
 
             <figure class="figure my-4 row">
               <div class="col-lg-8">
-                <img loading="lazy" src="/assets/images/3x-generic-tip.png" class="rounded border figure-img img-fluid"
-                  height="798" width="1278" alt="A tipp jelzi, hogy a link neve csak „kattintson ide" ." />
+                <img loading="lazy" src="/assets/images/3x-generic-tip.png" class="rounded border figure-img img-fluid" height="798" width="1278" alt="A tipp jelzi, hogy a link neve csak „kattintson ide" . />
               </div>
               <figcaption class="figure-caption col-lg-4">Az eszköztippek gombokat kapnak a szerkesztőbe ugráshoz, a
                 figyelmeztetés figyelmen kívül hagyásához (az aktuális felhasználó számára) vagy rendben jelöléséhez
@@ -82,13 +79,11 @@
               </figcaption>
             </figure>
 
-            <figure class="figure my-4 row">
+            
               <div class="col-lg-8">
-                <img loading="lazy" src="/assets/images/3x-drupal-custom-tests.png"
-                  class="rounded border figure-img img-fluid"
-                  alt="Egyéni tesztszerkesztő felület a tipp címéhez és tartalmához tartozó mezőkkel, valamint elemszelektorokkal és kizárásokkal." />
+                <img loading="lazy" src="/assets/images/3x-drupal-custom-tests.png" class="rounded border figure-img img-fluid" alt="Egyéni tesztszerkesztő felület a tipp címéhez és tartalmához tartozó mezőkkel, valamint elemszelektorokkal és kizárásokkal." />
               </div>
-              <figcaption class="figure-caption col-lg-4">
+              
                 <p class="mb-2">A CSA almodul a következőket adja hozzá:</p>
                 <ul class="ps-3">
                   <li><strong>Egyéni tesztszerkesztő</strong></li>
@@ -98,18 +93,16 @@
                   <li>Olvashatósági elemzés</li>
                   <li>Szétválasztott konfiguráció fejlesztőknek/szerkesztőknek</li>
                 </ul>
-              </figcaption>
-            </figure>
+              
+            
 
             <figure class="figure">
-              <img loading="lazy" class="figure-img img-fluid rounded border" src="/assets/images/3x-dashboard.png"
-                height="765" width="1600"
-                alt="Jelentési vezérlőpult a legutóbbi problémákkal és a legtöbb problémát tartalmazó oldalakkal." />
+              <img loading="lazy" class="figure-img img-fluid rounded border" src="/assets/images/3x-dashboard.png" height="765" width="1600" alt="Jelentési vezérlőpult a legutóbbi problémákkal és a legtöbb problémát tartalmazó oldalakkal." />
               <figcaption class="figure-caption p-3 pt-2">A webhelyszintű vezérlőpult szűrhető és
                 exportálható jelentéseket biztosít a figyelmeztetésekről és elutasításokról.</figcaption>
             </figure>
 
-          </section>
+          
           <h2>Telepítés és legfontosabb beállítási lépések</h2>
           <p>A Drupal.org-on elérhető <a href="https://www.drupal.org/project/editoria11y/">csomagolt telepítő</a> több
             modult tartalmaz:</p>
@@ -149,7 +142,7 @@
           </p>
           <p>Bár teljesen kikapcsolhatja a teszteket, általában jobb az adott elemekre vagy oldalakra vonatkozó
             figyelmeztetések elrejtése.</p>
-          <hr>
+          <hr/>
           <p>
             Minden tesztfuttatás során az Editoria11y egyetlen elemkészletet gyűjt össze a „Tartalom ellenőrzése ezekben
             a konténerekben" beállításból, majd többszörösen szűri azt. Így néz ki egy tesztfuttatás:
@@ -161,13 +154,13 @@
             </li>
             <li>
               Elemek <strong>összegyűjtése</strong> a megadott oldalrégiókból,
-              pl.:<br><code>body > *:not('.ed11y-element')</code><br>
+              pl.:<br/><code>body > *:not('.ed11y-element')</code><br/>
               <em>Editoria11y CSA felhasználók számára ezek a régiók a <strong>Fejlesztői tesztek</strong> fülön
                 találhatók.</em>
             </li>
             <li>
               A figyelmen kívül hagyási szelektoroknak megfelelő elemek <strong>eldobása</strong>,
-              pl.:<br><code>.widgets, .utility-menu</code><br>
+              pl.:<br/><code>.widgets, .utility-menu</code><br/>
               <em>Editoria11y CSA felhasználók számára ezek a szelektorok a <strong>Fejlesztői tesztek</strong> fülön
                 találhatók.</em>
             </li>
@@ -175,12 +168,12 @@
               Tesztek futtatása és eredmények szinkronizálása a vezérlőpulttal.
             </li>
             <li>
-              Ha a szétválasztott konfiguráció aktív és a felhasználó tartalomszerkesztő, a fejlesztői eredmények
-              szűrése:
+              <span data-translate>Ha a szétválasztott konfiguráció aktív és a felhasználó tartalomszerkesztő, a fejlesztői eredmények
+              szűrése:</span>
               <ul>
                 <li>A „Csak fejlesztői" jelölésű tesztek eredményeinek <strong>eldobása</strong>.</li>
                 <li>A megadott <strong><em>tartalom</em></strong> régiókon kívüli elemek eredményeinek
-                  <strong>eldobása</strong>, pl.:<br><code>main, footer</code>
+                  <strong>eldobása</strong>, pl.:<br/><code>main, footer</code>
                 </li>
                 <li>A <strong><em>tartalom</em></strong> figyelmen kívül hagyási szelektorainak megfelelő elemek
                   eredményeinek <strong>eldobása</strong>.</li>
@@ -245,20 +238,20 @@
                   <div id="edit-dev-check-root">
                     <div>
                       <input aria-describedby="edit-dev-check-root--description" type="radio"
-                        id="edit-dev-check-root-automatic" name="dev_check_root" value="automatic" checked="checked">
+                        id="edit-dev-check-root-automatic" name="dev_check_root" value="automatic" checked="checked" />
                       <label for="edit-dev-check-root-automatic" class="form-item__label option">Minden elem</label>
                     </div>
                     <div class="d-flex">
                       <input aria-describedby="edit-dev-check-root--description" type="radio"
                         id="edit-dev-check-root-match" name="dev_check_root" value="match"
-                        class="align-self-baseline mt-1 me-1">
+                        class="align-self-baseline mt-1 me-1" />
                       <label for="edit-dev-check-root-match" class="form-item__label option">Csak a Tartalombeállítások
                         fülön felsorolt konténerek</label>
                     </div>
                     <div class="">
                       <input aria-describedby="edit-dev-check-root--description" type="radio"
                         id="edit-dev-check-root-specify" name="dev_check_root" value="specify"
-                        class="form-radio form-boolean form-boolean--type-radio">
+                        class="form-radio form-boolean form-boolean--type-radio" />
                       <label for="edit-dev-check-root-specify" class="">Az alább felsorolt konkrét konténerek</label>
                     </div>
                   </div>
@@ -417,8 +410,7 @@
           <p>Egyes témáknak vannak olyan widgetjei, amelyek váltogatják a tartalom láthatóságát, mint például
             harmonikák, fülek és diavetítések. Az ilyen elemekbe helyezett tippek szintén rejtettek lesznek. Ha megadja
             ezeknek a widgeteknek a szelektorlistáját, az Editoria11y röviden szünetel, amikor a felhasználó az előző
-            vagy következő gombbal próbál ezekhez a tippekhez ugrani. A Drupal témák és modulok ezután a könyvtár <a
-              href="/hu/install/#hidden-content">rejtett tartalmakon lévő tippek kezelése</a> szakaszának utasításait
+            vagy következő gombbal próbál ezekhez a tippekhez ugrani. A Drupal témák és modulok ezután a könyvtár <a href="/hu/telepites/#hidden-content">rejtett tartalmakon lévő tippek kezelése</a> szakaszának utasításait
             követhetik a rejtett tartalom megjelenítéséhez.</p>
 
           <h2 id="runtime">Saját konfiguráció írása</h2>
@@ -477,8 +469,7 @@ var editoria11yOptions = function(options) {
             <h2>Saját tesztek írása</h2>
             <p>Először a modul konfigurációjában adjon hozzá 1-et az „Egyéni tesztek" opcióhoz, hogy a rendszer tudja,
               figyelnie kell a tesztekre.</p>
-            <p>Ezután hozzon létre egy Drupal JavaScript könyvtárat a tesztjeivel a témájában vagy moduljában, a <a
-                href="/hu/install/#custom-tests">könyvtár útmutatóját az egyéni tesztek írásához</a> követve.</p>
+            <p>Ezután hozzon létre egy Drupal JavaScript könyvtárat a tesztjeivel a témájában vagy moduljában, a <a href="/hu/telepites/#custom-tests">könyvtár útmutatóját az egyéni tesztek írásához</a> követve.</p>
             <p>Íme egy működő példa a Princetontól egy egyéni teszthez, amely Safe Linkekre figyelmeztet. Vegye
               figyelembe, hogy az Editoria11y osztályt a <code>Drupal.Ed11y.</code> révén éri el.</p>
             <pre class="language-javascript"><code><!--const psEd11yCustomTests = function() {
@@ -548,52 +539,62 @@ var editoria11yOptions = function(options) {
               segítséget is magában foglalhat a telepítéshez és konfigurációhoz.</p>
           </section>
 
-        </div>
-      </div>
-    </div>
-  </main>
+        
+      
+    
+  
+</main>
   <footer class="container col-lg-12 mx-auto pt-3 text-body-secondary text-center text-md-start">
     <div class="container">
-      <div class="footer-nav mt-5 pt-5 text-center"><a class="btn btn-primary btn-lg" href="/hu/">Rólunk</a> <a
-          class="btn btn-primary btn-lg" href="/hu/features">Funkciók</a> <a class="btn btn-primary btn-lg"
-          href="/hu/demo">Demo</a> <a class="btn btn-primary btn-lg" aria-current="page" href="/hu/license">Árak és
-          hozzájárulások</a></div>
-      <div class="footer">
-        <a href="https://github.com/itmaybejj/editoria11y"><svg xmlns="http://www.w3.org/2000/svg" width="20"
-            height="20" fill="currentColor" class="bi bi-git" viewBox="0 0 16 16">
-            <path
-              d="M15.698 7.287 8.712.302a1.03 1.03 0 0 0-1.457 0l-1.45 1.45 1.84 1.84a1.223 1.223 0 0 1 1.55 1.56l1.773 1.774a1.224 1.224 0 0 1 1.267 2.025 1.226 1.226 0 0 1-2.002-1.334L8.58 5.963v4.353a1.226 1.226 0 1 1-1.008-.036V5.887a1.226 1.226 0 0 1-.666-1.608L5.093 2.465l-4.79 4.79a1.03 1.03 0 0 0 0 1.457l6.986 6.986a1.03 1.03 0 0 0 1.457 0l6.953-6.953a1.03 1.03 0 0 0 0-1.457" />
-          </svg> <strong>Könyvtár</strong></a>
-        <a href="https://github.com/itmaybejj/editoria11y/discussions"><svg xmlns="http://www.w3.org/2000/svg"
-            width="20" height="20" fill="currentColor" class="bi bi-chat-right-heart-fill" viewBox="0 0 16 16">
-            <path
-              d="M16 2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h9.586a1 1 0 0 1 .707.293l2.853 2.853a.5.5 0 0 0 .854-.353zM8 3.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132" />
-          </svg> <strong>Fórum</strong></a>
-        <a href="https://github.com/itmaybejj/editoria11y/issues"><svg xmlns="http://www.w3.org/2000/svg" width="20"
-            height="20" fill="currentColor" class="bi bi-patch-plus-fill" viewBox="0 0 16 16">
-            <path
-              d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01zM8.5 6v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 1 0" />
-          </svg> <strong>Hibák</strong></a>
-        <a href="/hu/contacts"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-            class="bi bi-person-lines-fill" height="24" width="24" viewBox="0 0 16 18">
-            <path
-              d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z">
-            </path>
-          </svg> <strong>Kapcsolat</strong></a>
+      <div class="footer-nav text-center">
+        <a class="btn btn-primary btn-lg" data-slug="about" href="/hu/">Rólunk</a>
+        <a class="btn btn-primary btn-lg" data-slug="features" href="/hu/funkciok/">Funkciók</a>
+        <a class="btn btn-primary btn-lg" data-slug="demo" href="/hu/demo/">Demo</a>
+        <a class="btn btn-primary btn-lg" data-slug="license" href="/hu/arak/">Árak és hozzájárulások</a>
       </div>
-      <div class="col col-12 subfooter">
-        <a href="/hu/privacy-policy">Adatvédelmi szabályzat</a>
-        <a href="/hu/cookie-policy">Cookie-szabályzat</a>
-        <a href="/hu/terms-of-use">Felhasználási feltételek</a>
-        <a href="/hu/legal-notice">Jogi nyilatkozat</a>
-        &copy; 2026 Editoria11y LLC
+      <div class="row footer">
+        <div class="col col-3">
+          <a href="https://github.com/itmaybejj/editoria11y"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+              height="20" fill="currentColor" class="bi bi-git" viewBox="0 0 16 16">
+              <path
+                d="M15.698 7.287 8.712.302a1.03 1.03 0 0 0-1.457 0l-1.45 1.45 1.84 1.84a1.223 1.223 0 0 1 1.55 1.56l1.773 1.774a1.224 1.224 0 0 1 1.267 2.025 1.226 1.226 0 0 1-2.002-1.334L8.58 5.963v4.353a1.226 1.226 0 1 1-1.008-.036V5.887a1.226 1.226 0 0 1-.666-1.608L5.093 2.465l-4.79 4.79a1.03 1.03 0 0 0 0 1.457l6.986 6.986a1.03 1.03 0 0 0 1.457 0l6.953-6.953a1.03 1.03 0 0 0 0-1.457" />
+            </svg> <strong>Könyvtár</strong></a>
+        </div>
+        <div class="col col-3">
+          <a href="https://github.com/itmaybejj/editoria11y/discussions"><svg xmlns="http://www.w3.org/2000/svg"
+              width="20" height="20" fill="currentColor" class="bi bi-chat-right-heart-fill" viewBox="0 0 16 16">
+              <path
+                d="M16 2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h9.586a1 1 0 0 1 .707.293l2.853 2.853a.5.5 0 0 0 .854-.353zM8 3.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132" />
+            </svg> <strong>Fórum</strong></a>
+        </div>
+        <div class="col col-3">
+          <a href="https://github.com/itmaybejj/editoria11y/issues"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+              height="20" fill="currentColor" class="bi bi-patch-plus-fill" viewBox="0 0 16 16">
+              <path
+                d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01zM8.5 6v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 1 0" />
+            </svg> <strong>Hibák</strong></a>
+        </div>
+        <div class="col col-3">
+          <a href="/hu/kapcsolat/"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+              class="bi bi-person-lines-fill" height="24" width="24" viewBox="0 0 16 18">
+              <path
+                d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z">
+              </path>
+            </svg> <strong>Kapcsolat</strong></a>
+        </div>
+        <div class="col col-12 subfooter">
+          <a href="/hu/adatvedelem/">Adatvédelmi szabályzat</a>
+          <a href="/hu/cookie-szabalyzat/">Cookie-szabályzat</a>
+          <a href="/hu/felhasznalasi-feltetelek/">Felhasználási feltételek</a>
+          <a href="/hu/jogi-nyilatkozat/">Jogi nyilatkozat</a>
+          <span>&copy; 2026 Editoria11y LLC</span>
+        </div>
       </div>
     </div>
   </footer>
   <script src="/assets/bootstrap/js/bootstrap.bundle.min.js" class="astro-vvvwv3sm"></script>
   <script src="/assets/lang/i18n.js"></script>
   <script src="/assets/theme.js"></script>
-  <script src="/assets/prism/prism.js"></script>
 </body>
 
 </html>

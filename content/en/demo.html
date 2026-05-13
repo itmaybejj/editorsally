@@ -1,0 +1,415 @@
+<main class="container col-lg-12 mx-auto py-5">
+    <div class="row docs">
+      <div class="col-12 col-md-5 col-lg-4 mb-5">
+        <div id="on-this-page" class="list-group ms-2 ms-lg-5 position-sticky top-0 pt-3">
+        </div>
+      </div>
+      <div class="col-12 col-md-7 col-lg-8 pt-3" data-bs-spy="scroll" data-bs-target="#on-this-page"
+        data-bs-smooth-scroll="true" tabindex="0">
+
+
+
+        <h1 class="pt-4" id="demo" data-i18n-id="s-4496">Demo</h1>
+        <p class="fs-5" data-i18n-id="s-e32c">View a <a href="https://youtu.be/uYvNYPg38nU?si=6YANYrJpVzNAJYDl&t=260">video introduction to
+            the checker's history and features</a>,
+          or try editing the demo content below, opening and dismissing alerts,
+          and using the toolbar <span style="text-wrap: nowrap;">(<img src="/assets/images/3x-toolbar" class="inline-block" style="width: 5rem; height: auto;" alt="Screenshot of the Editoria11y toolbar, showing 4 errors." width="97" height="50" loading="lazy" data-i18n-id="s-65d5" />)</span> to view the heading outline. This demo includes both the core tests and the CSA
+          suite.</p>
+        <p class="fs-5 mb-5 pb-5" data-i18n-id="s-7580">This demo uses a TinyMCE editor. Editoria11y is compatible with most text editors, and
+          has turnkey implementations for CKEditor and Gutenberg in WordPress and Drupal.</p>
+        <div id="ed11y-demo" class="p-5" contenteditable="">
+          <section id="headings">
+
+            <h3 class="pt-1" data-i18n-id="s-71f7">Headings</h3>
+
+            <p data-i18n-id="s-e638">This heading skipped a level:</p>
+            <div class="positive">
+              <h6 id="this-h6-should-have-been-an-h3" data-i18n-id="s-1775">Oops</h6>
+            </div>
+
+            <p data-i18n-id="s-3c22">This heading has no text at all:</p>
+            <div class="positive">
+              <h4 class="empty-example" data-i18n-id="s-e89e"> </h4>
+            </div>
+
+            <p data-i18n-id="s-a98b">This short blockquote might be heading:</p>
+            <div class="positive">
+              <blockquote data-i18n-id="s-8223">I'm a fake heading</blockquote>
+            </div>
+
+            <p data-i18n-id="s-7243">This all-bold paragraph might be a heading:</p>
+            <p class="positive" data-i18n-id="s-8ce3"><strong>I am a fake heading</strong></p>
+
+            <p data-i18n-id="s-7a7a">This heading is really long:</p>
+            <div class="positive">
+              <h4 data-i18n-id="s-695c">Headings and subheadings create a navigable table of contents for assistive devices. The numbers
+                indicate indents in a nesting relationship. Very long headings probably mean the author is saying too
+                much in the heading.</h4>
+            </div>
+
+          </section>
+
+
+          <section id="text-alternatives">
+            <h3 data-section="text-alternatives" data-i18n-id="s-2a0c">Text alternatives for images</h3>
+
+            <p data-i18n-id="s-ecfd">This heading is made of an image of text with no alt:</p>
+            <div class="positive">
+              <h4 data-i18n-id="s-88ba"><img loading="lazy" alt src="/assets/images/px20240813sm.jpg" data-i18n-id="s-e33e" /></h4>
+            </div>
+
+            <p data-i18n-id="s-875a">Image with no alt attribute at all:</p>
+            <p class="positive" data-i18n-id="s-2b48"><img loading="lazy" src="/assets/images/px20240813sm.jpg" data-i18n-id="s-95a0" /></p>
+
+            <p data-i18n-id="s-5df5">Image with an invalid alt attribute, e.g., <code                 class="language-plaintext highlighter-rouge">alt="'"</code></p>
+
+            <p class="positive" data-i18n-id="s-47b7"><img loading="lazy" alt="'" src="/assets/images/px20240813sm.jpg" data-i18n-id="s-87b9" /></p>
+
+            <p id="image-with-a-filename-as-an-alt" data-i18n-id="s-c893">Image with a filename as an alt</p>
+
+            <p class="positive" data-i18n-id="s-9d21"><img loading="lazy" alt="filename.jpg" src="/assets/images/px20240813sm.jpg" data-i18n-id="s-685d" /></p>
+
+            <p id="image-with-redundant-text-in-its-alt" data-i18n-id="s-f6e9">Image with redundant text in its alt, such as “image of:”</p>
+
+            <p class="positive" data-i18n-id="s-7003"><img loading="lazy" alt="Image of a dog." src="/assets/images/px20240813sm.jpg" data-i18n-id="s-2149" /></p>
+
+            <p id="linked-image-with-redundant-text-in-its-alt" data-i18n-id="s-6554">Linked image with redundant text in its alt, such as
+              “image of:”</p>
+
+            <p class="positive" data-i18n-id="s-d93d"><a href="./editable.htm"><img loading="lazy" alt="Image of a dog." src="/assets/images/px20240813sm.jpg" data-i18n-id="s-2642" /></a></p>
+
+            <p id="image-with-placeholder-alt" data-i18n-id="s-40e9">Image with placeholder alt:</p>
+            <p class="positive" data-i18n-id="s-541e"><img loading="lazy" alt="TBD" src="/assets/images/px20240813sm.jpg" data-i18n-id="s-fe01" /></p>
+
+            <p id="linked-image-with-placeholder-alt" data-i18n-id="s-6266"><strong>Linked</strong> image with placeholder alt:</p>
+            <p class="positive" data-i18n-id="s-7d43"><a href="./editable.htm"><img loading="lazy" alt="TBD" src="/assets/images/px20240813sm.jpg" data-i18n-id="s-b0f2" /></a></p>
+
+            <p id="image-with-machine-alt" data-i18n-id="s-3ef4">Image with machine code alt:</p>
+            <p class="positive" data-i18n-id="s-33a5"><img loading="lazy" alt="$700VIDEOSABOUTTURTLESALL2SECONDSLONG" src="/assets/images/px20240813sm.jpg" data-i18n-id="s-ec2e" /></p>
+
+            <p id="linked-image-with-machine-alt" data-i18n-id="s-2818">Linked image with machine code alt:</p>
+            <p class="positive" data-i18n-id="s-d528"><a href="./editable.htm"><img loading="lazy" alt="$700VIDEOSABOUTTURTLESALL2SECONDSLONG" src="/assets/images/px20240813sm.jpg" data-i18n-id="s-e48d" /></a></p>
+
+            <p id="image-with-very-long-alt-text" data-i18n-id="s-eb13">Image with very long alt text:</p>
+
+            <p class="positive" data-i18n-id="s-f72c"><img loading="lazy" alt="Look at this doggy. This doggy is so happy. This doggy got to go on a walk and the walk went to a lake and there were all kinds of fascinating smells. What an amazing day this doggy had." src="/assets/images/px20240813sm.jpg" data-i18n-id="s-724f" /></p>
+
+            <p id="images-in-links-where-the-alt-text-may-be-describing-the-image-instead-of-the-link" data-i18n-id="s-2731">Images in links
+              where the alt text may be describing the image instead of the link</p>
+
+            <p class="positive" data-i18n-id="s-08a9"><a href="https://www.youtube.com/watch?v=DLzxrzFCyOs">This link has text and an
+                image.<img loading="lazy" alt="A lovely gray box" src="/assets/images/px20240813sm.jpg" data-i18n-id="s-c699" /></a></p>
+
+            <p id="images-in-links-decorative" data-i18n-id="s-25ca">Any linked image (test off by default)</p>
+            <p class="positive" data-i18n-id="s-281c"><a href="https://www.youtube.com/watch?v=DLzxrzFCyOs"><img loading="lazy" alt="Hello there" src="/assets/images/px20240813sm.jpg" data-i18n-id="s-f3c6" /></a></p>
+
+            <p data-i18n-id="s-3cd8">Image in figure marked decorative:</p>
+            <figure class="positive">
+              <img loading="lazy" alt src="/assets/images/px20240813sm.jpg" data-i18n-id="s-3051" />
+              <figcaption data-i18n-id="s-8ef6">Figcaption is present.</figcaption>
+            </figure>
+
+            <p data-i18n-id="s-a78d">Image in figure with an alt the same as the figcaption:</p>
+            <figure class="positive">
+              <img loading="lazy" alt="Figcaption is the same as alt" src="/assets/images/px20240813sm.jpg" data-i18n-id="s-d8b0" />
+              <figcaption data-i18n-id="s-13b7">Figcaption is the same as alt</figcaption>
+            </figure>
+            <p data-i18n-id="s-296e">Image in a carousel without an alt:</p>
+            <div class="positive">
+              <img loading="lazy" alt class="carousel" src="/assets/images/px20240813sm.jpg" data-i18n-id="s-f79d" />
+            </div>
+          </section>
+          <section id="contrast">
+            <h3 data-section="contrast" data-i18n-id="s-e272">Contrast</h3>
+            <p data-i18n-id="s-09f2">Illegible color combination:</p>
+            <div class="positive">
+              <p style="background: #ccc; color: #ddd;" data-i18n-id="s-601e">Super legible.</p>
+            </div>
+            <p data-i18n-id="s-aa41">Color needs a manual check:</p>
+            <div class="positive">
+              <p style="background: linear-gradient(45deg,#ccc 25%,#0000 25% 75%,#ccc 75%,#ccc),linear-gradient(45deg,#ccc 25%,#0000 25% 75%,#ccc 75%,#ccc)" data-i18n-id="s-490b">
+                And incalculable.</p>
+            </div>
+            <div class="positive"><label>Input with low contrast
+                <input class="form-text" type="text" style="color: #777;" /></label></div>
+
+            <style>
+              #unsupported-placeholder::placeholder {
+                color: color(rec2020 0.9 0.4 0.2);
+              }
+            </style>
+
+            <label for="unsupported-placeholder">Color of placeholder cannot be calculated</label>
+            <div class="positive" style="background: transparent;"><input type="text" id="unsupported-placeholder"
+                placeholder="Rec2020 color space" /></div>
+
+
+            <p data-i18n-id="s-0774">SVG graphic without enough contrast</p>
+            <div class="positive"><svg style="width: 16px; height: 16px;" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                <path fill="#999"
+                  d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376C296.3 401.1 253.9 416 208 416 93.1 416 0 322.9 0 208S93.1 0 208 0 416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" ></path>
+              </svg></div>
+
+            <p data-i18n-id="s-be2b">SVG graphic where contrast needs a manual check</p>
+            <div class="positive"
+              style="background: linear-gradient(45deg,#ccc 45%,#0000 45% 75%,#ccc 75%,#ccc),linear-gradient(145deg,#ccc 45%,#0000 45% 75%,#ccc 75%,#ccc)">
+              <svg style="width: 16px; height: 16px;" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                <path fill="color(rec2020 0.9 0.4 0.2)"
+                  d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376C296.3 401.1 253.9 416 208 416 93.1 416 0 322.9 0 208S93.1 0 208 0 416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" ></path>
+              </svg>
+            </div>
+
+
+          </section>
+          <section id="embed-media">
+            <h3 data-section="embed-media" data-i18n-id="s-af2b">Embeds &amp; Media</h3>
+
+            <p data-i18n-id="s-98f7">Video flagged as manual check needed for captioning:</p>
+            <div class="positive" style="width: 560px; aspect-ratio: 560 / 315; max-width: 100%; cursor: not-allowed;">
+              <iframe width="560" height="315" inert=""
+                src="https://www.youtube-nocookie.com/embed/QGsevnbItdU?si=W_b2i2o_n5v1ArvA"
+                style="width: 560px; aspect-ratio: 560 / 315; max-width: 100%; cursor: not-allowed;"
+                title="YouTube: How it's done video. Playback is disabled." sandbox="allow-scripts allow-same-origin"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="origin" allowfullscreen></iframe>
+              <div><small><em>Playback disabled to prevent cookies.</em></small></div>
+            </div>
+
+            <p data-i18n-id="s-e14a">Audio needs a transcript:</p>
+            <div class="positive">
+              <div style="border: 1px solid #444; background: #ccc; width: 320px; height: 60px;"><audio                   style="height: 60px;"></audio>
+              </div>
+            </div>
+
+            <p data-i18n-id="s-573a">Iframe missing a title that also needs a manual check:</p>
+            <div class="positive">
+              <iframe data-needs-src=""></iframe>
+            </div>
+
+            <p data-i18n-id="s-fe95">Unfocusable iframe:</p>
+            <div class="positive">
+              <iframe title="example" sandbox="" tabindex="-1" data-needs-src=""></iframe>
+            </div>
+
+            <p data-i18n-id="s-e27f">Nested interactive components</p>
+            <div class="positive">
+              <details>
+                <summary data-i18n-id="s-5064">Accordion</summary>
+                <details>
+                  <summary data-i18n-id="s-2b8d">Accordion</summary>Surprise!
+                </details>
+              </details>
+            </div>
+          </section>
+          <section id="meaningful-links">
+            <h3 data-section="meaningful-links" data-i18n-id="s-5965">Meaningful Links</h3>
+
+            <p id="links-with-no-text-at-all" data-i18n-id="s-59ab">Links with no text at all</p>
+            <p class="positive" data-i18n-id="s-5287"><a href="https://www.youtube.com/watch?v=DLzxrzFCyOs"
+                style="display: inline-block; width: 3rem; border-bottom: 1px solid;"></a> Empty links</p>
+
+            <p id="links-titled-with-a-url" data-i18n-id="s-c3d3">Links only labelled with a URL:</p>
+            <p class="positive" data-i18n-id="s-e764"><a                 href="https://www.youtube.com/watch?v=DLzxrzFCyOs">https://www.youtube.com/watch?v=DLzxrzFCyOs</a></p>
+
+            <p id="links-titled-with-a-symbol" data-i18n-id="s-7be5">Links only labelled with symbols:</p>
+            <p class="positive" data-i18n-id="s-aa44"><a href="https://www.youtube.com/watch?v=DLzxrzFCyOs">↣</a></p>
+
+            <p data-i18n-id="s-e5a4">Links with the same names go different places</p>
+            <p class="positive" data-i18n-id="s-cb73"><a href="https://www.youtube.com/watch?v=fjOeJssZX_Q">Turtles</a> <a                 href="https://www.youtube.com/watch?v=cWppAbqm9I8">Turtles</a></p>
+
+            <p id="links-titled-with-doi" data-i18n-id="s-cc2d">Links only labelled with a DOI number:</p>
+            <p class="positive" data-i18n-id="s-fb8e"><a href="https://doi.org/10.1145/3493612.3520468">doi.org/10.1145/3493612.3520468</a>
+            </p>
+
+            <p id="links-titled-with-click" data-i18n-id="s-5f07">Links with meaningless labels:</p>
+            <p class="positive" data-i18n-id="s-b240"><a href="https://www.youtube.com/watch?v=DLzxrzFCyOs"
+                title="https://www.youtube.com/watch?v=DLzxrzFCyOs">Click here</a></p>
+
+            <p id="links-titled-with-empty" data-i18n-id="s-17f2">Linked icons without text alternatives:</p>
+            <p class="positive" data-i18n-id="s-1498"><a href="https://www.youtube.com/watch?v=DLzxrzFCyOs"><svg                   style="width: 16px; height: 16px;" xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 512 512"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                  <path                     d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376C296.3 401.1 253.9 416 208 416 93.1 416 0 322.9 0 208S93.1 0 208 0 416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" ></path>
+                </svg></a></p>
+
+            <p id="links-that-open-in-a-new-window-without-an-external-link-icon-or-text-warning" data-i18n-id="s-d12a">Links that open in a
+              new window without an external link icon or text warning</p>
+
+            <p class="positive" data-i18n-id="s-038b"><a href="https://www.youtube.com/watch?v=DLzxrzFCyOs" target="_blank">Alert for opens-in
+                test.</a></p>
+
+            <p id="links-to-PDF" data-i18n-id="s-d87d">Links to PDFs</p>
+            <p class="positive" data-i18n-id="s-7b08"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ#.pdf" class="">Have fun.</a></p>
+
+            <p id="links-to-doc" data-i18n-id="s-bbe9">Links to other documents</p>
+            <p class="positive" data-i18n-id="s-f1a0"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ#.doc" class="">A fake doc link.</a>
+            </p>
+
+            <p id="links-redundant" data-i18n-id="s-9145">Links with redundant title attributes</p>
+            <p class="positive" data-i18n-id="s-d8f6"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" title="Hover me">Hover me</a></p>
+
+            <p data-i18n-id="s-c1a1">Links with attributes that remove them from the tab index:</p>
+            <p class="positive" data-i18n-id="s-5811"><a href="./editable.htm" aria-hidden="true">Aria-hidden links without a negative
+                tabindex.</a></p>
+
+            <p data-i18n-id="s-f661">Links aria-labelledby attributes to elements with no text:</p>
+            <p class="positive" data-i18n-id="s-dfac"><a href="./editable.htm" id="oops" aria-labelledby="oops"></a></p>
+
+            <p data-i18n-id="s-d2dc">Links with generic words in their aria label:</p>
+            <p class="positive" data-i18n-id="s-e206"><a href="www.google.com/" aria-label="has aria label">learn more</a></p>
+
+            <p data-i18n-id="s-8271">Linked image with no alt text:</p>
+            <p class="positive" data-i18n-id="s-5df8"><a href="./editable.htm"><img loading="lazy" alt src="/assets/images/px20240813sm.jpg" class data-i18n-id="s-5b80" /></a></p>
+
+            <p data-i18n-id="s-4f11">Linked image with unpronounceable alt text:</p>
+            <p class="positive" data-i18n-id="s-5fe3"><a href="./editable.htm"><img loading="lazy" alt="'" src="/assets/images/px20240813sm.jpg" class data-i18n-id="s-4ba2" /></a></p>
+
+            <p data-i18n-id="s-0fd8">Linked image with no alt text attribute:</p>
+            <p class="positive" data-i18n-id="s-c130"><a href="./editable.htm"><img loading="lazy" src="/assets/images/px20240813sm.jpg" class data-i18n-id="s-d8bc" /></a></p>
+
+            <p data-i18n-id="s-91cb">Linked image with no alt text attribute in a link with text:</p>
+            <p class="positive" data-i18n-id="s-4db6"><a href="./editable.htm">Search <img loading="lazy" src="/assets/images/px20240813sm.jpg" class data-i18n-id="s-0709" /></a></p>
+
+            <p data-i18n-id="s-78cc">Linked image with only a filename as alt text:</p>
+            <p class="positive" data-i18n-id="s-b669"><a href="./editable.htm"><img loading="lazy" alt="http://jpg.gif" src="/assets/images/px20240813sm.jpg" data-i18n-id="s-9712" />
+              </a></p>
+
+            <p data-i18n-id="s-f1f2">Linked image with suspiciously long alt text:</p>
+            <p class="positive" data-i18n-id="s-3c58"><a href="./editable.htm"><img loading="lazy" alt="Look at this doggy. This doggy is so happy. This doggy got to go on a walk and the walk went to a lake and there were all kinds of fascinating smells. What an amazing day this doggy had." src="/assets/images/px20240813sm.jpg" data-i18n-id="s-2557" />
+              </a></p>
+
+            <p data-i18n-id="s-7af4">Broken in page links</p>
+            <p class="positive" data-i18n-id="s-fe67">
+              <a href="#oh-no">There's no such ID.</a>
+            </p>
+
+            <p data-i18n-id="s-f5ef">Links to dev server</p>
+            <p class="positive" data-i18n-id="s-7568">
+              <a href="https://tugboatqa.com">Oops</a>
+            </p>
+
+            <p data-i18n-id="s-1f03">Duplicate anchors</p>
+            <p class="positive" data-i18n-id="s-e967"><a id="dupe" href="#dupe">Anchor 1</a> <a id="dupe" href="#dupe">Anchor 2</a></p>
+          </section>
+          <section>
+            <h3 id="table-tests" data-i18n-id="s-d5ad">Tables</h3>
+
+            <p id="tables-without-valid-headers" data-i18n-id="s-bf63">Tables without valid headers</p>
+
+            <table class="positive">
+              <tbody>
+                <tr>
+                  <td data-i18n-id="s-9ea0">A table without a TH header is invalid</td>
+                  <td class="positive">
+                    <h4 data-i18n-id="s-51f8">Outline headers do not count</h4>
+                  </td>
+                  <td class="negative">
+                    <p data-i18n-id="s-9700"><strong>Disable should be content header test inside tables</strong></p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <table>
+              <thead>
+                <tr>
+                  <th class="positive" data-i18n-id="s-3760"></th>
+                  <th class="negative" data-i18n-id="s-e701">Empty headers</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="negative">
+                  <th data-i18n-id="s-1e72">I found</th>
+                  <td data-i18n-id="s-ab85">700 Videos of Turtles</td>
+                </tr>
+                <tr class="negative">
+                  <th data-i18n-id="s-fbc2">Each</th>
+                  <td data-i18n-id="s-7836">2 Seconds Long</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+          <section id="legibility">
+            <h3 data-section="legibility" data-i18n-id="s-8596">Legibility</h3>
+
+            <div class="positive">
+              <p data-i18n-id="s-5df2">SEVERAL WORDS IN A ROW OF CAPS LOCK TEXT WILL TRIGGER A MANUAL CHECK WARNING.</p>
+            </div>
+
+            <p class="positive" data-i18n-id="s-bf95"><u>Underlined text</u></p>
+
+            <p class="positive" data-i18n-id="s-6979"><em>A little italics is fine, but large blocks of of emphasized text are not very
+                legible. A little is acceptable of course, but there are limits, and a whole paragraph is way too much.
+                This, for example, is a whole paragraph. It's kind of hard to read, isn't it? But this test does not
+                trip until it is this long, so you should not see false positives in your content unless you write
+                really big paragraphs like this regularly.</em></p>
+
+            <p class="positive" style="text-align: justify;" data-i18n-id="s-19a2">Justified text</p>
+
+            <p class="positive" data-i18n-id="s-d9c4">Excessive superscript or subscript; <sub>subscript should be used for small references
+                and footnotes, not entire sentences or paragraphs.</sub></p>
+
+            <p class="positive" data-i18n-id="s-d136"><span style="font-size: 10px;">Teeny fonts</span></p>
+
+            <div class="positive">
+              <p data-i18n-id="s-38f1">* Fake lists using common characters,</p>
+              <p data-i18n-id="s-ed7f">* letters, numbers and emoji.</p>
+            </div>
+
+            <div class="positive">
+              <li data-i18n-id="s-83f0">Missing UL tag</li>
+            </div>
+          </section>
+
+          <section id="form-elements">
+            <h3 data-section="form-elements" data-i18n-id="s-68c5">Forms</h3>
+
+            <p data-i18n-id="s-0d4e">Button with no label</p>
+            <div class="positive">
+              <button class="btn btn-primary p-3 pt-4" data-i18n-id="s-6e2d"></button>
+            </div>
+
+            <p data-i18n-id="s-296d">Inputs with an invisible label, asking if there is also a visible label.</p>
+            <div class="positive">
+              <input type="text" title="Email" />
+            </div>
+
+            <p data-i18n-id="s-7c79">Inputs with only a placeholder label, asking if there is also a visible label.</p>
+            <div class="positive">
+              <input type="text" placeholder="Email" />
+            </div>
+
+            <div class="positive">
+              <p data-i18n-id="s-d629">Button with an accessible label different from its visible label.</p>
+              <button class="btn btn-primary" aria-label="bye" data-i18n-id="s-d5c2">Hi</button>
+            </div>
+
+            <div class="positive">
+              <p data-i18n-id="s-96f6">Button with an invalid aria-labelledby attribute.</p>
+              <button class="btn btn-primary" aria-labelledby="bye" data-i18n-id="s-e158">Hi</button>
+            </div>
+
+            <div class="positive">
+              <p data-i18n-id="s-5477">Button with redundant label.</p>
+              <button class="btn btn-primary" data-i18n-id="s-a933">Press this button</button>
+            </div>
+
+            <div class="positive">
+              <p data-i18n-id="s-1764">Reset button.</p>
+              <input class="btn btn-danger" type="reset" />
+            </div>
+
+            <p class="positive" data-i18n-id="s-7c9a"><a href="./editable.htm" tabindex="2">Jumbling the tab index</a></p>
+          </section>
+
+
+
+
+
+
+        </div>
+      </div>
+    </div>
+
+  </main>

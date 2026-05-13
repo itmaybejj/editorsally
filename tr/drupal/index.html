@@ -1,0 +1,518 @@
+<!doctype html>
+<html lang="tr" data-bs-theme="light">
+
+<head>
+  <link rel="icon" type="image/png" href="/assets/favicons/favicon-512x512.png" sizes="512x512" />
+  <link rel="icon" type="image/png" href="/assets/favicons/favicon-192x192.png" sizes="192x192" />
+  <link rel="icon" type="image/png" href="/assets/favicons/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/assets/favicons/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <meta charset="utf-8" />
+  <title>Drupal için Editoria11y — Editoria11y</title>
+  <link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="/assets/theme.css" rel="stylesheet" />
+  <meta name="theme-color" content="#712cf9" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-md">
+      <div class="container col-sm-12 mx-auto">
+        <a href="/tr/" class="d-flex align-items-center  navbar-brand">
+          <svg class="logo-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+            viewBox="-.75 -3.5 10.1699 19.1777">
+            <path fill="currentColor"
+              d="M3.7031,10.5527c-.3633-.6562-.6426-1.1387-.8379-1.4473l-.3105-.4863-.2344-.3574c-.5117-.7969-1.0449-1.4551-1.5996-1.9746.3164-.2617.6113-.3926.8848-.3926.3359,0,.6348.123.8965.3691s.5918.7148.9902,1.4062c.4531-1.4727,1.0293-2.8691,1.7285-4.1895.3867-.7188.7314-1.2021,1.0342-1.4502s.7041-.3721,1.2041-.3721c.2656,0,.5938.041.9844.123-1.0039.8086-1.8066,1.7695-2.4082,2.8828s-1.3789,3.0762-2.332,5.8887Z" />
+          </svg> Editoria<span style="margin-left: -1px;">11</span>y
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar" aria-label="Gezinmeyi aç/kapat">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Editoria11y</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Kapat"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 nav-pills">
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div id="lang-picker"></div>
+  </header>
+  <main class="container col-lg-12 mx-auto py-5">
+    
+      <div class="col-12 col-md-5 col-lg-4 mb-5">
+        <div id="on-this-page" class="list-group ms-2 ms-lg-5 position-sticky top-0 pt-3">
+        </div>
+      </div>
+      <div class="col-12 col-md-7 col-lg-8 pt-3">
+        </div>
+          <h1>Drupal için Editoria11y</h1>
+          
+            <h2 class="pt-3">Temel özellikler</h2>
+
+            <p class="fs-6">Drupal modülü, denetleyici kütüphanesini editoryal arka uca bağlar
+              ve raporlama, yönetim ve yapılandırma için çok sayıda sunucu tarafı araç ekler.</p>
+
+            <figure class="figure my-4 row">
+              <div class="col-lg-8">
+                <img loading="lazy" src="/assets/images/3x-editing.png" class="rounded border figure-img img-fluid" height="1088" width="2237" alt="Satır içi ipuçları bulunan Drupal editörü" />
+              </div>
+              <figcaption class="figure-caption col-lg-4">Sorunlar hem ön uçta sayfa yüklenirken hem de
+                CKEditor ve Gutenberg'de yazarken tespit edilir.</figcaption>
+            </figure>
+
+            <figure class="figure my-4 row">
+              <div class="col-lg-8">
+                <img loading="lazy" src="/assets/images/3x-generic-tip.png" class="rounded border figure-img img-fluid" height="798" width="1278" alt="Bir bağlantının yalnızca &quot;tıklayın&quot; olarak adlandırıldığını gösteren ipucu." />
+              </div>
+              <figcaption class="figure-caption col-lg-4">İpuçları, düzenleyiciye atlamak, uyarıyı yoksaymak (aktif kullanıcı için) veya tamam olarak işaretlemek için (tüm
+                kullanıcılar için) düğmeler kazanır. Tekrarlayan uyarılar sayfa genelinde veya site genelinde eylemler sunar.
+              </figcaption>
+            </figure>
+
+            
+              <div class="col-lg-8">
+                <img loading="lazy" src="/assets/images/3x-drupal-custom-tests.png" class="rounded border figure-img img-fluid" alt="İpucu başlığı ve içerik alanlarının yanı sıra öğe seçiciler ve dışlamaları gösteren özel test oluşturucu arayüzü." />
+              </div>
+              
+                <p class="mb-2">CSA alt modülü şunları ekler:</p>
+                <ul class="ps-3">
+                  <li><strong>Özel test oluşturucu</strong></li>
+                  <li>40'tan fazla geliştirici testi</li>
+                  <li>Kontrast denetimi</li>
+                  <li>Site tarayıcıları</li>
+                  <li>Okunabilirlik analizi</li>
+                  <li>Geliştiriciler/editörler için ayrılmış yapılandırmalar</li>
+                </ul>
+              
+            
+
+            <figure class="figure">
+              <img loading="lazy" class="figure-img img-fluid rounded border" src="/assets/images/3x-dashboard.png" height="765" width="1600" alt="En çok sorun bulunan son sorunları ve sayfaları gösteren raporlama kontrol paneli." />
+              <figcaption class="figure-caption p-3 pt-2">Site genelinde bir kontrol paneli, uyarıların ve kapatmaların filtrelenebilir ve dışa aktarılabilir raporlarını sağlar.</figcaption>
+            </figure>
+
+          
+          <h2>Kurulum ve temel kurulum adımları</h2>
+          <p>Drupal.org'daki <a href="https://www.drupal.org/project/editoria11y/">paketlenmiş yükleyici</a> birkaç modül içerir:</p>
+          <ul>
+            <li>
+              Editoria11y: temel içerik denetleyicisi ve kontrol paneli.
+            </li>
+            <li>
+              Editoria11y CSA: geliştirici testleri ve kontrol paneli bakım araçları.
+            </li>
+            <li>
+              Editoria11y Export: CSV raporlama araçları.
+            </li>
+          </ul>
+          <p>Diğer modüller gibi kurun ve ardından şu temel adımları izleyin:</p>
+          <ol>
+            <li><strong>İzinleri kontrol edin.</strong> Güvenilir yazarların "Tamam İşaretle," "Yoksayıldı Olarak İşaretle" ve "Kontrol panelini görüntüle" izinleri olmalıdır.</li>
+            <li><strong>Tekrarlayan veya yararsız uyarılar için önemli sayfaları kontrol edin.</strong> Bunları ipucu üzerinde Tamam olarak işaretleyin veya seçici kullanarak öğeleri yoksaymak için yapılandırmayı ayarlayın.</li>
+            <li>Görülmesi zor ipuçları arayın; ekran dışı, kesilmiş, diğer öğelerin arkasında veya gizli öğelerde bulunanlar. Düzeltmek için aşağıdaki "İpucu konumlandırmayı düzelt" bölümündeki ipuçlarını kullanın.</li>
+            <li>Site zaten içerik barındırıyorsa ve bir CSA aboneliğiniz varsa, kontrol paneli "yeniden tara" sekmesini ziyaret edin ve site raporlarını önceden yüklemek için <strong>siteyi tarayın</strong>. Bu isteğe bağlıdır, ancak eski sayfalar oturum açmış bir kullanıcı tarafından ziyaret edilip taranana kadar raporlarda görünmez.
+            </li>
+          </ol>
+          <p>Yapılandırma seçeneklerine <a href="https://youtu.be/uYvNYPg38nU?si=dqADyWpTtOhniHTP&t=696">video girişini görüntüleyin</a> (v2.4).</p>
+
+          <h2 id="check-roots">Yararsız uyarıları gizle</h2>
+          <p>
+            <strong>İyi yapılandırmalar yararsız uyarıları bastırır, böylece içerik yazarları düzeltmeleri gereken sorunlara odaklanabilir</strong>.
+          </p>
+          <p>Testleri tamamen kapatabilseniz de, genellikle belirli öğeler veya sayfalardaki uyarıları gizlemek daha iyidir.
+          </p>
+          <hr/>
+          <p>
+            Her test çalıştırmasında Editoria11y, "Bu kaplardaki içeriği denetle" ayarından tek bir öğe kümesi toplar ve ardından bunu birkaç kez filtreler. Bir test çalıştırması şöyle görünür:
+          </p>
+          <ol>
+            <li>
+              Yapılandırma bu sayfa veya bu kullanıcı için denetimi engelliyorsa denetimi iptal edin.
+            </li>
+            <li>
+              <strong>Topla</strong> belirtilen sayfa bölgelerindeki öğeleri,
+              örneğin:<br/><code>body > *:not('.ed11y-element')</code><br/>
+              <em>Editoria11y CSA kullanıcıları için bunlar <strong>Geliştirici testleri</strong> sekmesindeki bölgelerdir.</em>
+            </li>
+            <li>
+              <strong>Bırak</strong> yoksay seçicileriyle eşleşen öğeleri,
+              örneğin:<br/><code>.widgets, .utility-menu</code><br/>
+              <em>Editoria11y CSA kullanıcıları için bunlar <strong>Geliştirici testleri</strong> sekmesindeki seçicilerdir.</em>
+            </li>
+            <li>
+              Testleri çalıştır ve sonuçları kontrol paneliyle senkronize et.
+            </li>
+            <li>
+              <span data-translate>Ayrılmış yapılandırma etkinse ve kullanıcı bir içerik editörüyse, geliştirici sonuçlarını filtrele:</span>
+              <ul>
+                <li><strong>Bırak</strong> "Yalnızca geliştirici" olarak ayarlanan testlerin sonuçlarını.</li>
+                <li><strong>Bırak</strong> belirtilen <strong><em>içerik</em></strong> bölgelerinin dışındaki öğelerdeki sonuçları,
+                  örneğin:<br/><code>main, footer</code></li>
+                <li><strong>Bırak</strong> <strong><em>içerik</em></strong> yoksay seçicileriyle eşleşen öğelerdeki sonuçları.</li>
+              </ul>
+              İkinci bir "toplama" aşaması olmadığını unutmayın. Geliştirici sayfa bölgeleri, içerik bölgelerini kapsamalıdır.
+            </li>
+            <li>Yapılandırma bir otomatik açma ayarıyla eşleşiyorsa paneli açın ve uyarıları çizin.</li>
+          </ol>
+
+          <h3 id="dismiss">Uyarıları kapat</h3>
+          <p>Testler kütüphanede hata veya uyarı ("manuel kontrol") olarak yapılandırılabilir. Uyarılar kapatılabilir. Her ipucunun alt kısmından iki tür kapatma mevcuttur:</p>
+          <div class="my-2"
+            style="background: url(/assets/images/3x-generic-tip.png) 100% 98%; max-width: 600px; padding-top: 6%; background-size: 108%;">
+          </div>
+          <ul>
+            <li>"Yoksay", bir kullanıcı tercihi olarak depolanır: uyarı artık geçerli kullanıcı için gizlenir, ancak yalnızca bu kullanıcı için.</li>
+            <li>"Tamam İşaretle", uyarıyı tüm kullanıcılar için gizler.</li>
+          </ul>
+          <p>Bir kullanıcının uyarıyı kapatıp kapatamayacağı, Drupal'ın kullanıcı izinlerinde rol düzeyinde kontrol edilir. <strong>Çoğu yazara uyarıları kapatma izni verilmelidir</strong>. Bir öğeyi kontrol etmiş olarak işaretleyemiyorlarsa birine manuel kontrol atamak anlamsızdır.
+          </p>
+
+          <h3 id="roots">Öğeleri yoksay</h3>
+          <p>Bu iki yapılandırma ayarı en önemlileridir!</p>
+          <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
+            <label for="edit-content-root">Check content in these containers</label>
+            <div><textarea class="form-control" id="edit-content-root" name="content_root" rows="1" cols="30"
+                disabled></textarea>
+            </div>
+            <div class="mt-3">
+              <label for="edit-ignore-elements">Skip over these elements</label>
+              <div>
+                <textarea class="form-control" id="edit-ignore-elements" disabled name="ignore_elements" rows="1"
+                  cols="30" class=""></textarea>
+              </div>
+            </div>
+          </div>
+          <p>
+            İçerik yazarlarının düzenleyebildiği sayfa içeriğinin herhangi bir bölümünü dahil etmek için birincisini ayarlayın. Örneğin, <code>main</code> içerik alanını, <code>.sidebar</code>'ı ve <code>.footer-column-two</code>'yu düzenleyebiliyorlarsa bunları içerik denetim alanı olarak ayarlayın.
+          </p>
+          <p>
+            Alt bölümleri "devre dışı bırakmak" için ikincisini kullanın. Örneğin, <code>main</code> yalnızca geliştiricilerin değiştirebileceği çeşitli widget'lar ve gömülü öğeler içeriyorsa bunları listeleyin: <code>.widget-1, .social-embed</code>;
+          </p>
+          <p>Ayrılmış yapılandırmayı kullanıyorsanız Geliştirici Testleri sekmesinde benzer bir ayar çifti göreceksiniz:</p>
+          <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
+            <div>
+              <fieldset>
+                <legend>
+                  Developer check area
+                </legend>
+                <div class="fieldset__wrapper fieldset__wrapper--group">
+
+                  <div id="edit-dev-check-root">
+                    <div>
+                      <input aria-describedby="edit-dev-check-root--description" type="radio"
+                        id="edit-dev-check-root-automatic" name="dev_check_root" value="automatic" checked="checked" />
+                      <label for="edit-dev-check-root-automatic" class="form-item__label option">All elements</label>
+                    </div>
+                    <div class="d-flex">
+                      <input aria-describedby="edit-dev-check-root--description" type="radio"
+                        id="edit-dev-check-root-match" name="dev_check_root" value="match"
+                        class="align-self-baseline mt-1 me-1" />
+                      <label for="edit-dev-check-root-match" class="form-item__label option">Only the containers listed
+                        in the Content Setting tab</label>
+                    </div>
+                    <div class="">
+                      <input aria-describedby="edit-dev-check-root--description" type="radio"
+                        id="edit-dev-check-root-specify" name="dev_check_root" value="specify"
+                        class="form-radio form-boolean form-boolean--type-radio" />
+                      <label for="edit-dev-check-root-specify" class="">The specific containers listed below</label>
+                    </div>
+                  </div>
+
+                </div>
+              </fieldset>
+
+              <div class="">
+                <label for="edit-always-ignore" class="mt-3">Ignore for both developers and content editors</label>
+                <div class="form-textarea-wrapper">
+                  <textarea id="edit-always-ignore" class="form-control" name="always_ignore" rows="1" cols="20"
+                    placeholder=""></textarea>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+          <p>Geliştirici denetim alanları hakkında bilinmesi gereken temel şey, içerik denetim alanlarından <strong>bağımsız olmadığıdır</strong>. Ayrılmış bir yapılandırmada geliştirici alanları denetlenir ve ardından bu sonuçlar içerik alanlarıyla eşleşecek şekilde <strong>filtrelenir</strong>. Geliştiriciler için hariç tutulan alanlar içerik editörleri için de hariç tutulur. Düzenlenebilir içerik alanlarını hariç tutmayın!</p>
+
+          <p>Bazı testler, yalnızca etkilenen öğelerdeki belirli uyarıları gizlemek için daha hassas yapılandırmaya olanak tanır. Bunları şu başlıklar altında arayın:</p>
+          <ul>
+            <li>İçerik testleri: Denetlenecek bağlantılar</li>
+            <li>İçerik testleri: Denetlenecek gömülü öğeler</li>
+            <li>İçerik testleri: Dinamik ve gölge içeriği algılama</li>
+            <li>Geliştirici testleri: Kontrast</li>
+          </ul>
+
+          <h3 id="pages">Belirli sayfalar veya kullanıcılar için gizle</h3>
+          <p>
+            Bunu yapmanın en kolay yolu, bu seçeneklere CSS sınıfları veya kimlikleri iletmektir:
+          </p>
+          <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
+            <label for="edit-no-load" class="form-item__label">Do not check on pages with these elements</label>
+            <div class="form-textarea-wrapper">
+              <textarea data-drupal-selector="edit-no-load" aria-describedby="edit-no-load--description"
+                id="edit-no-load" name="no_load" rows="1" cols="20" class="form-control"></textarea>
+            </div>
+
+            <label for="edit-ignore-all-if-absent" class="form-item__label">Hide all alerts on pages where these
+              elements are not present</label>
+            <div class="form-textarea-wrapper">
+              <textarea data-drupal-selector="edit-ignore-all-if-absent"
+                aria-describedby="edit-ignore-all-if-absent--description" id="edit-ignore-all-if-absent"
+                name="ignore_all_if_absent" rows="1" cols="20" class="form-control"></textarea>
+            </div>
+
+          </div>
+          <p>
+            Birincisi, denetimlerin çalışmasını engeller ve araç çubuğu gösterilmez.
+          </p>
+          <p>
+            İkincisi, denetleyiciyi küçültülmüş olarak başlatır ve tüm sorunları (hatalar dahil) mevcut kullanıcı için otomatik olarak "Yoksayıldı" olarak işaretler. Bu, testlerin çalışmasına ve kontrol panelini güncellemesine izin verirken kullanıcıyı rahatsız etmez.
+          </p>
+          <p>
+            Hangi kullanıcıların denetleyiciyi göreceğini kontrol etmek için bunları kullanmak istiyorsanız, temanızı bir sınıf çıkarmak için ayarlamanız gerekebilir, örneğin <code>.user-247</code>
+          </p>
+
+          <h2 id="dashboard">Site genelinde sonuçları yönetin</h2>
+          <section id="refresh">
+            <h3 class="pt-3">Sonuçları tarama ve güncelleme</h3>
+            <p>Editoria11y, <strong>gerçek zamanlı bir izleme aracıdır, tarayıcı değildir</strong>. Site genelindeki raporlar yazarlar sayfaları görüntülediğinde güncellenir, bu nedenle düzenli tarama genellikle gerekli değildir. CSA modülü <em>bir</em> tarayıcı içerir, ancak yalnızca şu üç durumda gerekli olabilir:</p>
+            <ol>
+              <li>
+                Editoria11y'yi çok sayıda sayfası olan mevcut bir sitede ilk kez kurarken. Sayfaların kontrol panelinde görünmesi için ziyaret edilmesi gerekir, bu nedenle hızlı bir başlangıç taraması zamandan tasarruf sağlar.
+              </li>
+              <li>
+                Tema veya modül güncellemeleri, ziyaret edilene veya taranana kadar görünmeyecek birçok sayfada sorunları düzeltebilir (veya neden olabilir).
+              </li>
+              <li>
+                Yönetici arayüzündeki sayfaları silme veya yeniden yönlendirme gibi toplu işlemler, artık var olmayan veya taşınmış sayfaların sonuçlarını geride bırakma eğilimindedir. Bu durumlarda sayfa URL'lerini yenilemek ve silinen sayfaları tespit edip bırakmak için "Yenile" sekmesinin bakım eylemlerini kullanmak yardımcı olur.
+              </li>
+            </ol>
+            <p>Tarama sırasında sitenizden hiçbir veri çıkmaz. CSA tarayıcısı bir bulut aracı değildir; kendi sitenizin sayfalarını yüklemek ve denetlemek için tarayıcınızı kullanır. Bu yaklaşımın dezavantajı, <strong>tarayıcıların arka plan sekmelerini duraklatmasıdır</strong>. Tarama sırasında bilgisayarınızı açık ve uyanık tutmanız gerekecektir. Tarayıcı için yeni bir pencere açmayı ve çalışırken o pencerenin ön plan sekmesi olarak kalmasını sağlamayı planlayın. Başka bir pencerede çalışmaya devam edebilirsiniz. Tarayıcı, her sayfa grubundan sonra tahminini güncelleyecektir.</p>
+          </section>
+          <section id="reports">
+            <h3>Raporları görüntüleme</h3>
+            <div class="my-4 border shadow"
+              style="background: url(/assets/images/3x-dashboard.png) 86% 0%; padding-top: 28%; background-size: 106%;">
+            </div>
+            <ul>
+              <li>
+                <strong>Son</strong> bölümü, bireysel uyarıları incelemeye olanak tanır. Bu bölüm, aynı uyarı türünün tüm örneklerini bulmak, son içeriklerde sık görünen uyarıları veya hangi yazarların aynı hatayı yapmaya devam ettiğini görmek gibi şeyleri yapmanıza olanak tanır.
+              </li>
+              <li>
+                <strong>Sayfalar</strong>, sayfaya göre gruplandırılmış uyarı sayılarını gösterir. Bu bölüm, en çok sorunu olan sayfaları bulmayı ve içerik türü ile yayınlanma durumu gibi sayfa özelliklerine göre filtrelemeyi sağlar.
+              </li>
+              <li>
+                <strong>Uyarılar</strong>, sorunları türe göre gösterir.
+              </li>
+              <li>
+                <strong>Kapatmalar</strong>, yazarların doğru şekilde kapatıp kapatmadığını izlemeye olanak tanır ve kapatılan uyarıları geri yüklemek için "sıfırla" düğmeleri içerir.
+              </li>
+              <li>
+                <strong>Dışa Aktar</strong>, CSV indirme hazırlamak için filtrelenebilen Sayfalar, Uyarılar ve Kapatmalar raporlarının versiyonlarını içerir. <em>CSV Dışa Aktar alt modülü tarafından sağlanır</em>
+              </li>
+              <li>
+                <strong>Yenile</strong>, silinen sayfalardan gelen uyarıları kaldırmaya, /search?query=example gibi parametreli sahte sayfalardan gelen uyarıları kaldırmaya, depolanan sayfa başlıklarını ve URL'lerini güncellemeye ve manuel tarama çalıştırmaya yarayan kontrol paneli bakım araçlarını içerir. <em>CSA alt modülü tarafından sağlanır</em>
+              </li>
+            </ul>
+          </section>
+
+          <h2 id="positioning">Gizli veya ekran dışı ipuçlarını düzelt</h2>
+
+          <p>Modül, ipuçların yerleştirilme biçimini değiştirmek için kütüphanenin iki yapılandırma seçeneğine alan sağlar:
+          </p>
+
+          <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
+            <label for="edit-element-hides-overflow" class="form-item__label">Elements with overflow hidden</label>
+            <textarea data-drupal-selector="edit-element-hides-overflow"
+              aria-describedby="edit-element-hides-overflow--description" id="edit-element-hides-overflow"
+              name="element_hides_overflow" rows="1" cols="60" class="form-control"></textarea>
+            <label for="edit-hidden-handlers" class="form-item__label">Theme JS will handle revealing hidden tooltips
+              inside these containers</label>
+            <textarea data-drupal-selector="edit-hidden-handlers" aria-describedby="edit-hidden-handlers--description"
+              id="edit-hidden-handlers" name="hidden_handlers" rows="1" cols="60" class="form-control"></textarea>
+          </div>
+          <p>Bazı temalar, yatay veya dikey taşmayı gizleyen sütunlar veya widget'lar içerir. Kütüphane, bir açma/kapama düğmesinin <strong>sayfanın</strong> görünür kısmının dışına düşeceğini otomatik olarak algılar. Kütüphaneye belirli kapların taşmayı gizlediğini söylemek, ipuçlarını bu kaplardaki öğeler için de sınırları içinde konumlandırmaya çalışmasını sağlar.</p>
+          <p>Bazı temalar, içeriğin görünürlüğünü değiştiren widget'lara sahiptir (akordiyonlar, sekmeler ve slayt gösterileri gibi). Bu öğelerin içindeki ipuçları da gizlenecektir. Bu widget'lar için seçici listesi sağlamak, bir kullanıcı ileri veya geri düğmesiyle bu ipuçlarına atlamaya çalıştığında Editoria11y'nin kısa bir süre duraklaması anlamına gelir. Drupal temaları ve modülleri daha sonra gizli içeriği göstermek için <a href="/tr/kurulum/#hidden-content">gizli içerikte ipuçlarıyla başa çıkma</a> konusundaki kütüphane bölümündeki yönergeleri takip edebilir.
+          </p>
+
+          <h2 id="runtime">Kendi yapılandırmanızı yazın</h2>
+          <p>PHP'de: Drupal modülü, bir modül veya temada <code>drupalSettings.editoria11y</code> içeriğini değiştirmek için bir <code>hook_editoria11y_alter_config</code> sağlar. Örneğin:
+          </p>
+          <pre class="language-php"><code><!--<?php
+/**
+ * @file
+ * MY_MODULE module file.
+ */
+
+use Drupal\Core\Cache\CacheableMetadata;
+
+/**
+ * Implements hook_editoria11y_alter_config().
+ *
+ * Attaches Editoria11y library and config based on context.
+ */
+function MY_MODULE_editoria11y_alter_config(array &$attach, CacheableMetadata $cacheableMetadata): void {
+  $config = Drupal::config('editoria11y.settings');
+
+  // Module settings being changed need to bust the cache.
+  $cacheableMetadata->addCacheableDependency($config);
+
+  // Get and modify any of the values being passed to drupalSettings.editoria11y.
+  if (!empty($attach['allow_ok'])) {
+    $attach['allow_ok'] = 'okAll';
+  }
+}--></code></pre>
+          <p><code>drupalSettings</code>'ı değiştirmek yalnızca modül JS'i bu değeri kütüphaneye iletecek şekilde zaten kurulmuşsa yardımcı olur. Ek parametreler eklemek için JS <code>options</code> nesnesini doğrudan değiştirmeniz gerekir. Modül, <code>editoria11yOptionsOverride</code> adında bir global JS değişkeni kontrol eder. Bu ayarlanmışsa modül veya temanda sağladığınız bir <code>editoria11yOptions</code> işlevine <code>options</code> nesnesini iletir. Artık <a href="https://editorsally.ddev.site/en/install/#params">kütüphane parametrelerinden</a> herhangi birini ayarlayabilirsiniz.</p>
+          <pre class="language-javascript"><code><!--var editoria11yOptionsOverride = true;
+var editoria11yOptions = function(options) {
+  // You now have access to the processed options object that will be passed to the library.
+
+  // E.g., to add a selector to the ignore list:
+  if (options['ignoreElements'] === false) {
+    // Provide the selector as the only value.
+    options['ignoreElements'] = `.example`;
+  } else {
+    // Append additional selectors with comma separator.
+    options['ignoreElements'] = `${options['ignoreElements']}, .example`
+  }
+
+  // Return your processed options.
+  return options;
+}
+--></code></pre>
+          <section id="custom-tests">
+            <h2>Kendi testlerinizi yazın</h2>
+            <p>Öncelikle modül yapılandırmasında testleri izlemesini bildirmek için "Özel testler" seçeneğine 1 ekleyin.</p>
+            <p>Ardından <a href="/tr/kurulum/#custom-tests">özel test yazma kütüphane kılavuzunu</a> kullanarak testlerinizi içeren bir Drupal JS kütüphanesi oluşturun.</p>
+            <p>Safe Links için özel bir test olan Princeton'dan çalışan bir örnek. Editoria11y sınıfına <code>Drupal.Ed11y.</code> aracılığıyla eriştiğine dikkat edin.</p>
+            <pre class="language-javascript"><code><!--const psEd11yCustomTests = function() {
+
+  // 1.
+  // Get elements to test, via Drupal.Ed11y.getElements.
+  // The 'root' parameter tells it to respect config for check areas and ignores.
+  const safeLinks = Drupal.Ed11y.getElements('a[href*="safelinks.protection.outlook.com/?"]', 'root');
+
+  // Add the test name to the lang object.
+  Drupal.ed11yLang.lang.testNames.outlookSafeLink = 'URL is Safe Link encoded';
+
+  // 2.
+  // Create the tip content.
+  const decodeSafelink = function(url) {
+    const params = new URL(url).searchParams;
+    let decoded = params.get('url');
+    const p = document.createElement('p');
+    if (!!decoded) {
+      p.innerHTML = `<p><span class="badge">To fix</span>Update this link with the correct URL, which is probably:<br>
+    <em style='word-wrap: break-word;font-size: 90%;line-height: 1.2;display: block;'></em></p>`
+      p.querySelector('em').textContent = Drupal.Ed11y.sanitizeHTML(decoded);
+    }
+    return p;
+  };
+  safeLinks?.forEach((el) => {
+    const content = document.createElement('div');
+    content.innerHTML = `<div class="title">Please fix this Outlook "Safe Link"</div>
+            <div class="why">
+                <p>The URL for this link is an Outlook "Safe Link" that was copied from an email.
+                It includes the original recipient's email address,
+                and will break if Microsoft shuts down the service.</p>
+                <p>The pasted URL is:<br>
+                <em style='word-break: break-all;font-size: 90%;line-height: 1.2;
+                display: block;'></em></p>
+            </div>
+            `;
+    content.querySelector('em').textContent = Drupal.Ed11y.sanitizeHTML(el.href);
+    content.querySelector('.why').insertAdjacentElement('beforebegin', decodeSafelink(el.href));
+
+    // 3.
+    // Push the tip to the library results object.
+    Drupal.Ed11y.State.results.push({
+      element: el,
+      test: 'outlookSafeLink',
+      type: 'error',
+      content: content,
+      position: 'beforebegin',
+      inline: false,
+      dismiss: false,
+    });
+  });
+
+  // 4.
+  // Tell Editoria11y you are done adding custom results.
+  const allDone = new CustomEvent('ed11yResume');
+  document.dispatchEvent(allDone);
+};--></code></pre>
+
+          </section>
+          <section id="help">
+            <h2>Yardım alma</h2>
+            <p>Topluluk destek seçenekleri için <a href="/tr/iletisim/">iletişim</a> sayfasına bakın. @itmaybejj genellikle batı yarıküresinde güneş doğduğunda Drupal Slack'te çevrimiçidir.</p>
+            <p><a href="/tr/fiyatlar/">CSA katkı seviyelerinin</a> çoğu, kurulum ve yapılandırma konusunda doğrudan yardımı kapsayan yıllık bir görüşme içerir.</p>
+          </section>
+
+        
+      
+    
+  
+</main>
+  <footer class="container col-lg-12 mx-auto pt-3 text-body-secondary text-center text-md-start">
+    <div class="container">
+      <div class="footer-nav text-center">
+        <a class="btn btn-primary btn-lg" data-slug="about" href="/tr/">Hakkında</a>
+        <a class="btn btn-primary btn-lg" data-slug="features" href="/tr/ozellikler/">Özellikler</a>
+        <a class="btn btn-primary btn-lg" data-slug="demo" href="/tr/demo/">Demo</a>
+        <a class="btn btn-primary btn-lg" data-slug="license" href="/tr/fiyatlar/">Fiyatlar ve katkılar</a>
+      </div>
+      <div class="row footer">
+        <div class="col col-3">
+          <a href="https://github.com/itmaybejj/editoria11y"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+              height="20" fill="currentColor" class="bi bi-git" viewBox="0 0 16 16">
+              <path
+                d="M15.698 7.287 8.712.302a1.03 1.03 0 0 0-1.457 0l-1.45 1.45 1.84 1.84a1.223 1.223 0 0 1 1.55 1.56l1.773 1.774a1.224 1.224 0 0 1 1.267 2.025 1.226 1.226 0 0 1-2.002-1.334L8.58 5.963v4.353a1.226 1.226 0 1 1-1.008-.036V5.887a1.226 1.226 0 0 1-.666-1.608L5.093 2.465l-4.79 4.79a1.03 1.03 0 0 0 0 1.457l6.986 6.986a1.03 1.03 0 0 0 1.457 0l6.953-6.953a1.03 1.03 0 0 0 0-1.457" />
+            </svg> <strong>Kütüphane</strong></a>
+        </div>
+        <div class="col col-3">
+          <a href="https://github.com/itmaybejj/editoria11y/discussions"><svg xmlns="http://www.w3.org/2000/svg"
+              width="20" height="20" fill="currentColor" class="bi bi-chat-right-heart-fill" viewBox="0 0 16 16">
+              <path
+                d="M16 2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h9.586a1 1 0 0 1 .707.293l2.853 2.853a.5.5 0 0 0 .854-.353zM8 3.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132" />
+            </svg> <strong>Forum</strong></a>
+        </div>
+        <div class="col col-3">
+          <a href="https://github.com/itmaybejj/editoria11y/issues"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+              height="20" fill="currentColor" class="bi bi-patch-plus-fill" viewBox="0 0 16 16">
+              <path
+                d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01zM8.5 6v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 1 0" />
+            </svg> <strong>Sorunlar</strong></a>
+        </div>
+        <div class="col col-3">
+          <a href="/tr/iletisim/"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+              class="bi bi-person-lines-fill" height="24" width="24" viewBox="0 0 16 18">
+              <path
+                d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z">
+              </path>
+            </svg> <strong>İletişim</strong></a>
+        </div>
+        <div class="col col-12 subfooter">
+          <a href="/tr/gizlilik/">Gizlilik Politikası</a>
+          <a href="/tr/cerez-politikasi/">Çerez Politikası</a>
+          <a href="/tr/kullanim-kosullari/">Kullanım Koşulları</a>
+          <a href="/tr/yasal-bildirim/">Yasal Bildirim</a>
+          <span>&copy; 2026 Editoria11y LLC</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="/assets/bootstrap/js/bootstrap.bundle.min.js" class="astro-vvvwv3sm"></script>
+  <script src="/assets/lang/i18n.js"></script>
+  <script src="/assets/theme.js"></script>
+</body>
+
+</html>

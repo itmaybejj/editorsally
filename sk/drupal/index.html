@@ -1,0 +1,526 @@
+<!doctype html>
+<html lang="sk" data-bs-theme="light">
+
+<head>
+  <link rel="icon" type="image/png" href="/assets/favicons/favicon-512x512.png" sizes="512x512" />
+  <link rel="icon" type="image/png" href="/assets/favicons/favicon-192x192.png" sizes="192x192" />
+  <link rel="icon" type="image/png" href="/assets/favicons/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/assets/favicons/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <meta charset="utf-8" />
+  <title>Editoria11y pre Drupal — Editoria11y</title>
+  <link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="/assets/theme.css" rel="stylesheet" />
+  <meta name="theme-color" content="#712cf9" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-md">
+      <div class="container col-sm-12 mx-auto">
+        <a href="/sk/" class="d-flex align-items-center  navbar-brand">
+          <svg class="logo-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+            viewBox="-.75 -3.5 10.1699 19.1777">
+            <path fill="currentColor"
+              d="M3.7031,10.5527c-.3633-.6562-.6426-1.1387-.8379-1.4473l-.3105-.4863-.2344-.3574c-.5117-.7969-1.0449-1.4551-1.5996-1.9746.3164-.2617.6113-.3926.8848-.3926.3359,0,.6348.123.8965.3691s.5918.7148.9902,1.4062c.4531-1.4727,1.0293-2.8691,1.7285-4.1895.3867-.7188.7314-1.2021,1.0342-1.4502s.7041-.3721,1.2041-.3721c.2656,0,.5938.041.9844.123-1.0039.8086-1.8066,1.7695-2.4082,2.8828s-1.3789,3.0762-2.332,5.8887Z" />
+          </svg> Editoria<span style="margin-left: -1px;">11</span>y
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar" aria-label="Prepnúť navigáciu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Editoria11y</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Zavrieť"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 nav-pills">
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div id="lang-picker"></div>
+  </header>
+  <main class="container col-lg-12 mx-auto py-5">
+    
+      <div class="col-12 col-md-5 col-lg-4 mb-5">
+        <div id="on-this-page" class="list-group ms-2 ms-lg-5 position-sticky top-0 pt-3">
+        </div>
+      </div>
+      <div class="col-12 col-md-7 col-lg-8 pt-3">
+        </div>
+          <h1>Editoria11y pre Drupal</h1>
+          
+            <h2 class="pt-3">Základné funkcie</h2>
+
+            <p class="fs-6">Modul pre Drupal prepojuje knižnicu nástroja na kontrolu s redakčným backendom
+              a pridáva mnohé serverové nástroje na reportovanie, správu a konfiguráciu</p>
+
+            <figure class="figure my-4 row">
+              <div class="col-lg-8">
+                <img loading="lazy" src="/assets/images/3x-editing.png" class="rounded border figure-img img-fluid" height="1088" width="2237" alt="Drupal editor s inline tipmi" />
+              </div>
+              <figcaption class="figure-caption col-lg-4">Problémy sú detegované počas načítania na frontende
+                aj
+                pri písaní v editoroch CKEditor a Gutenberg.</figcaption>
+            </figure>
+
+            <figure class="figure my-4 row">
+              <div class="col-lg-8">
+                <img loading="lazy" src="/assets/images/3x-generic-tip.png" class="rounded border figure-img img-fluid" height="798" width="1278" alt="Tip upozorňujúci, že odkaz je pomenovaný len „kliknite tu&quot;." />
+              </div>
+              <figcaption class="figure-caption col-lg-4">Tooltipy získajú tlačidlá
+                na skok do editora, ignorovanie upozornenia (pre aktívneho používateľa) alebo označenie ako OK (pre všetkých
+                používateľov). Opakujúce sa upozornenia ponúkajú akcie na úrovni stránky alebo celého webu.
+              </figcaption>
+            </figure>
+
+            
+              <div class="col-lg-8">
+                <img loading="lazy" src="/assets/images/3x-drupal-custom-tests.png" class="rounded border figure-img img-fluid" alt="Rozhranie nástroja na tvorbu vlastných testov zobrazujúce polia pre názov a obsah tipu, ako aj selektory a výnimky prvkov." />
+              </div>
+              
+                <p class="mb-2">Submodul CSA pridáva:</p>
+                <ul class="ps-3">
+                  <li><strong>Nástroj na tvorbu vlastných testov</strong></li>
+                  <li>40+ vývojárskych testov</li>
+                  <li>Kontrola kontrastu</li>
+                  <li>Prehľadávače webu</li>
+                  <li>Analýza čitateľnosti</li>
+                  <li>Rozdelená konfigurácia pre vývojárov/editorov</li>
+                </ul>
+              
+            
+
+            <figure class="figure">
+              <img loading="lazy" class="figure-img img-fluid rounded border" src="/assets/images/3x-dashboard.png" height="765" width="1600" alt="Reportovací dashboard zobrazujúci nedávne problémy a stránky s najviac problémami." />
+              <figcaption class="figure-caption p-3 pt-2">Celositeový dashboard poskytuje filtrovateľné a
+                exportovateľné správy o upozorneniach a odmietnutiach.</figcaption>
+            </figure>
+
+          
+          <h2>Inštalácia a kľúčové kroky nastavenia</h2>
+          <p><a href="https://www.drupal.org/project/editoria11y/">Balený inštalátor</a> na Drupal.org obsahuje
+            niekoľko modulov:</p>
+          <ul>
+            <li>
+              Editoria11y: základný nástroj na kontrolu obsahu a dashboard.
+            </li>
+            <li>
+              Editoria11y CSA: vývojárske testy a nástroje na údržbu dashboardu.
+            </li>
+            <li>
+              Editoria11y Export: nástroje na CSV reportovanie.
+            </li>
+          </ul>
+          <p>Nainštalujte ako akýkoľvek iný modul a potom vykonajte tieto kľúčové kroky:</p>
+          <ol>
+            <li><strong>Skontrolujte oprávnenia.</strong> Dôveryhodní autori by mali mať oprávnenia „Označiť ako OK", „Označiť ako ignorované" a „Zobraziť dashboard".</li>
+            <li><strong>Skontrolujte kľúčové stránky na repetitívne alebo nepomocné upozornenia.</strong> Buď ich označte ako OK v tooltipe, alebo upravte konfiguráciu na ignorovanie prvkov podľa selektora.</li>
+            <li>Hľadajte tipy, ktoré je ťažké vidieť — mimo obrazovky, orezané, skryté za inými prvkami alebo na skrytých prvkoch. Na ich opravu použite tipy v sekcii „Oprava umiestnenia tipov" nižšie.</li>
+            <li>Ak web už obsahuje obsah a máte predplatné CSA, navštívte záložku „recheck" na dashboarde a <strong>prehľadajte web</strong> na predbežné načítanie správ webu. Toto je voliteľné, ale staršie stránky sa nebudú zobrazovať v správach, kým ich neprehľadáte alebo nenavštívi prihlásený používateľ.
+            </li>
+          </ol>
+          <p>Pozrite si <a href="https://youtu.be/uYvNYPg38nU?si=dqADyWpTtOhniHTP&t=696">video predstavenie konfiguračných možností</a> (v2.4).</p>
+
+          <h2 id="check-roots">Skryť nepomocné upozornenia</h2>
+          <p>
+            <strong>Dobrá konfigurácia potláča nepomocné upozornenia, aby sa autori obsahu mohli sústrediť na problémy, ktoré by mali opraviť</strong>.
+          </p>
+          <p>Aj keď môžete testy úplne vypnúť, zvyčajne je lepšie skryť upozornenia na konkrétnych prvkoch alebo stránkach.
+          </p>
+          <hr/>
+          <p>
+            Počas každého testovacieho behu Editoria11y zhromaždí jednu sadu prvkov z nastavenia „Kontrolovať obsah v týchto kontajneroch" a potom ju niekoľkokrát filtruje. Takto vyzerá testovací beh:
+          </p>
+          <ol>
+            <li>
+              Zrušiť kontrolu, ak konfigurácia zabraňuje kontrole na tejto stránke alebo pre tohto používateľa.
+            </li>
+            <li>
+              <strong>Zhromaždiť</strong> prvky v určených oblastiach stránky,
+              napr.:<br/><code>body > *:not('.ed11y-element')</code><br/>
+              <em>Pre používateľov Editoria11y CSA sú to oblasti na záložke <strong>Vývojárske testy</strong>.</em>
+            </li>
+            <li>
+              <strong>Odstrániť</strong> prvky zodpovedajúce selektorom ignorovania,
+              napr.:<br/><code>.widgets, .utility-menu</code><br/>
+              <em>Pre používateľov Editoria11y CSA sú to selektory na záložke <strong>Vývojárske testy</strong>.</em>
+            </li>
+            <li>
+              Spustiť testy a synchronizovať výsledky s dashboardom.
+            </li>
+            <li>
+              <span data-translate>Ak je aktívna rozdelená konfigurácia a používateľ je editor obsahu, filtrovať výsledky pre vývojárov:</span>
+              <ul>
+                <li><strong>Odstrániť</strong> výsledky z testov nastavených na „Len pre vývojárov".</li>
+                <li><strong>Odstrániť</strong> výsledky prvkov mimo určených <strong><em>obsahových</em></strong>
+                  oblastí, napr.:<br/><code>main, footer</code></li>
+                <li><strong>Odstrániť</strong> výsledky prvkov zodpovedajúcich selektorom ignorovania <strong><em>obsahu</em></strong>.</li>
+              </ul>
+              Note that there is not a second "gather" phase. The developer page regions must include the content
+              regions.
+            </li>
+            <li>Otvoriť panel a zobraziť upozornenia, ak konfigurácia zodpovedá nastaveniu automatického otvorenia.</li>
+          </ol>
+
+          <h3 id="dismiss">Odmietnutie upozornení</h3>
+          <p>Testy možno konfigurovať v knižnici ako chyby alebo varovania („manuálne kontroly"). Varovania možno odmietnuť. Z päty každého tooltipu sú k dispozícii dva typy odmietnutí:</p>
+          <div class="my-2"
+            style="background: url(/assets/images/3x-generic-tip.png) 100% 98%; max-width: 600px; padding-top: 6%; background-size: 108%;">
+          </div>
+          <ul>
+            <li>„Ignorovať" je uložené ako predvoľba používateľa: upozornenie je teraz skryté pre aktuálneho používateľa, ale len pre neho.</li>
+            <li>„Označiť ako OK" skryje upozornenie pre všetkých používateľov.</li>
+          </ul>
+          <p>To, či môže používateľ odmietnuť upozornenie, je kontrolované na úrovni roly v oprávneniach Drupalu.
+            <strong>Väčšina autorov by mala mať povolené odmietať upozornenia</strong>. Nemá zmysel priradiť niekomu manuálnu kontrolu, ak nemôže označiť položku ako skontrolovanú.
+          </p>
+
+          <h3 id="roots">Ignorovanie prvkov</h3>
+          <p>Tieto dve konfiguračné nastavenia sú najdôležitejšie!</p>
+          <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
+            <label for="edit-content-root">Check content in these containers</label>
+            <div><textarea class="form-control" id="edit-content-root" name="content_root" rows="1" cols="30"
+                disabled></textarea>
+            </div>
+            <div class="mt-3">
+              <label for="edit-ignore-elements">Skip over these elements</label>
+              <div>
+                <textarea class="form-control" id="edit-ignore-elements" disabled name="ignore_elements" rows="1"
+                  cols="30" class=""></textarea>
+              </div>
+            </div>
+          </div>
+          <p>
+            Nastavte prvé tak, aby zahŕňalo všetky časti obsahu stránky, ktoré môžu autori upravovať. Napr. ak môžu upravovať oblasť obsahu <code>main</code>, <code>.sidebar</code> a <code>.footer-column-two</code>, nastavte tieto selektory ako oblasť kontroly obsahu.
+          </p>
+          <p>
+            Druhé použite na „vyradenie" podsekcií. Napr. ak <code>main</code> obsahuje rôzne widgety a vložený obsah, ktoré môžu upravovať iba vývojári, uveďte tieto: <code>.widget-1, .social-embed</code>;
+          </p>
+          <p>Ak používate rozdelenú konfiguráciu, uvidíte podobný pár nastavení na záložke Vývojárske testy:</p>
+          <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
+            <div>
+              <fieldset>
+                <legend>
+                  Developer check area
+                </legend>
+                <div class="fieldset__wrapper fieldset__wrapper--group">
+
+                  <div id="edit-dev-check-root">
+                    <div>
+                      <input aria-describedby="edit-dev-check-root--description" type="radio"
+                        id="edit-dev-check-root-automatic" name="dev_check_root" value="automatic" checked="checked" />
+                      <label for="edit-dev-check-root-automatic" class="form-item__label option">All elements</label>
+                    </div>
+                    <div class="d-flex">
+                      <input aria-describedby="edit-dev-check-root--description" type="radio"
+                        id="edit-dev-check-root-match" name="dev_check_root" value="match"
+                        class="align-self-baseline mt-1 me-1" />
+                      <label for="edit-dev-check-root-match" class="form-item__label option">Only the containers listed
+                        in the Content Setting tab</label>
+                    </div>
+                    <div class="">
+                      <input aria-describedby="edit-dev-check-root--description" type="radio"
+                        id="edit-dev-check-root-specify" name="dev_check_root" value="specify"
+                        class="form-radio form-boolean form-boolean--type-radio" />
+                      <label for="edit-dev-check-root-specify" class="">The specific containers listed below</label>
+                    </div>
+                  </div>
+
+                </div>
+              </fieldset>
+
+              <div class="">
+                <label for="edit-always-ignore" class="mt-3">Ignore for both developers and content editors</label>
+                <div class="form-textarea-wrapper">
+                  <textarea id="edit-always-ignore" class="form-control" name="always_ignore" rows="1" cols="20"
+                    placeholder=""></textarea>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+          <p>Kľúčová vec, ktorú treba vedieť o oblastiach kontroly pre vývojárov, je, že nie sú <strong>nezávislé</strong> od oblastí kontroly obsahu. V rozdelené konfigurácii sú kontrolované oblasti pre vývojárov a potom sú tieto výsledky <strong>filtrované</strong> podľa oblastí obsahu. Akékoľvek oblasti vylúčené pre vývojárov budú vylúčené aj pre editorov obsahu. Nevylučujte editovateľné oblasti obsahu!</p>
+
+          <p>Niektoré testy umožňujú presnejšiu konfiguráciu na skrytie len určitých upozornení na postihnutých prvkoch. Hľadajte ich pod:</p>
+          <ul>
+            <li>Obsahové testy: Odkazy na kontrolu</li>
+            <li>Obsahové testy: Vložený obsah na kontrolu</li>
+            <li>Obsahové testy: Detekcia dynamického a shadow obsahu</li>
+            <li>Vývojárske testy: Kontrast</li>
+          </ul>
+
+          <h3 id="pages">Skryť pre konkrétne stránky alebo používateľov</h3>
+          <p>
+            Najjednoduchší spôsob je odovzdanie CSS tried alebo ID do týchto možností:
+          </p>
+          <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
+            <label for="edit-no-load" class="form-item__label">Do not check on pages with these elements</label>
+            <div class="form-textarea-wrapper">
+              <textarea data-drupal-selector="edit-no-load" aria-describedby="edit-no-load--description"
+                id="edit-no-load" name="no_load" rows="1" cols="20" class="form-control"></textarea>
+            </div>
+
+            <label for="edit-ignore-all-if-absent" class="form-item__label">Hide all alerts on pages where these
+              elements are not present</label>
+            <div class="form-textarea-wrapper">
+              <textarea data-drupal-selector="edit-ignore-all-if-absent"
+                aria-describedby="edit-ignore-all-if-absent--description" id="edit-ignore-all-if-absent"
+                name="ignore_all_if_absent" rows="1" cols="20" class="form-control"></textarea>
+            </div>
+
+          </div>
+          <p>
+            Prvá zabráni spusteniu kontrol a panel sa nezobrazí.
+          </p>
+          <p>
+            Druhá spustí kontrolu minimalizovanú a automaticky označí (pre aktuálneho používateľa) všetky problémy ako „Ignorované", aj keď sú to chyby. To umožňuje beh testov a aktualizáciu dashboardu bez obťažovania používateľa.
+          </p>
+          <p>
+            Ak chcete tieto nastavenia použiť na kontrolu, ktorí používatelia vidia kontrolu, možno budete musieť upraviť tému na výstup triedy, napr. <code>.user-247</code>
+          </p>
+
+          <h2 id="dashboard">Správa celositových výsledkov</h2>
+          <section id="refresh">
+            <h3 class="pt-3">Prehľadávanie a aktualizácia výsledkov</h3>
+            <p>Editoria11y je <strong>nástroj na monitorovanie v reálnom čase, nie prehľadávač</strong>. Jeho celositové správy sa aktualizujú, keď autori zobrazujú stránky, takže pravidelné prehľadávanie zvyčajne nie je potrebné. Modul CSA <em>obsahuje</em> prehľadávač, ale mal by byť potrebný len v týchto troch situáciách:</p>
+            <ol>
+              <li>
+                Pri prvej inštalácii Editoria11y na existujúci web s mnohými stránkami. Stránky musia byť navštívené, aby sa zobrazili na dashboarde, takže rýchle úvodné prehľadanie šetrí čas.
+              </li>
+              <li>
+                Väčšie aktualizácie tém alebo modulov môžu opraviť (alebo spôsobiť) problémy na mnohých stránkach, ktoré sa nezobrazí, kým nie sú navštívené alebo prehľadané.
+              </li>
+              <li>
+                Hromadné akcie v administrátorskom rozhraní ako mazanie stránok alebo presmerovaní zvyknú zanechávať výsledky zo stránok, ktoré už neexistujú alebo sa presunuli. V takýchto prípadoch pomáha použiť akcie údržby na záložke „Obnoviť" na aktualizáciu URL adries stránok a detekciu a odstránenie vymazaných stránok.
+              </li>
+            </ol>
+            <p>Počas prehľadávania neopustia vaše dáta váš web. Prehľadávač CSA nie je cloudový nástroj; na načítanie a kontrolu stránok vášho webu používa váš prehliadač. Nevýhodou tohto prístupu je, že <strong>prehliadače pozastavujú karty na pozadí</strong>. Počas prehľadávania budete musieť mať počítač zapnutý a aktívny. Plánujte otvoriť nové okno pre prehľadávač a nechajte ho ako aktívnu kartu v tomto okne počas práce. Môžete pokračovať v práci v inom okne. Prehľadávač aktualizuje svoj odhad po každej dávke stránok.</p>
+          </section>
+          <section id="reports">
+            <h3>Zobrazenie správ</h3>
+            <div class="my-4 border shadow"
+              style="background: url(/assets/images/3x-dashboard.png) 86% 0%; padding-top: 28%; background-size: 106%;">
+            </div>
+            <ul>
+              <li>
+                <strong>Nedávne</strong> umožňuje prehľadávanie podľa jednotlivých upozornení. Umožňuje veci ako filtrovanie na nájdenie všetkých výskytov rovnakého typu upozornenia, alebo sledovanie, ktoré upozornenia sa často objavujú v nedávnom obsahu, alebo ktorí autori stále robia rovnaké chyby.
+              </li>
+              <li>
+                <strong>Stránky</strong> zobrazuje počty upozornení na stránku, zoskupené podľa stránky. Umožňuje nájsť stránky s najviac problémami a filtrovať podľa atribútov stránky, ako sú typ obsahu a stav publikovania.
+              </li>
+              <li>
+                <strong>Upozornenia</strong> zobrazuje problémy podľa typu.
+              </li>
+              <li>
+                <strong>Odmietnutia</strong> umožňuje monitorovanie, či autori odmietajú správne, a obsahuje tlačidlá „obnoviť" na obnovenie odmietnutých upozornení.
+              </li>
+              <li>
+                <strong>Export</strong> obsahuje verzie správ o stránkach, upozorneniach a odmietnutiach, ktoré možno filtrovať na prípravu CSV stiahnutí. <em>Poskytuje submodul CSV Export</em>
+              </li>
+              <li>
+                <strong>Obnoviť</strong> obsahuje nástroje na údržbu dashboardu na odstránenie upozornení z vymazaných stránok, odstránenie upozornení z parametrizovaných pseudo-stránok ako /search?query=example, aktualizáciu uložených názvov a URL adries stránok a spustenie manuálneho prehľadávania. <em>Poskytuje submodul CSA</em>
+              </li>
+            </ul>
+          </section>
+
+          <h2 id="positioning">Oprava skrytých alebo mimo-obrazovkových tipov</h2>
+
+          <p>Modul poskytuje polia pre dve konfiguračné možnosti knižnice na zmenu umiestnenia tipov:
+          </p>
+
+          <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
+            <label for="edit-element-hides-overflow" class="form-item__label">Elements with overflow hidden</label>
+            <textarea data-drupal-selector="edit-element-hides-overflow"
+              aria-describedby="edit-element-hides-overflow--description" id="edit-element-hides-overflow"
+              name="element_hides_overflow" rows="1" cols="60" class="form-control"></textarea>
+            <label for="edit-hidden-handlers" class="form-item__label">Theme JS will handle revealing hidden tooltips
+              inside these containers</label>
+            <textarea data-drupal-selector="edit-hidden-handlers" aria-describedby="edit-hidden-handlers--description"
+              id="edit-hidden-handlers" name="hidden_handlers" rows="1" cols="60" class="form-control"></textarea>
+          </div>
+          <p>Niektoré témy majú stĺpce alebo widgety, ktoré skrývajú horizontálne alebo vertikálne pretečenie. Knižnica automaticky detekuje, keď by prepínač spadol mimo viditeľnú časť <strong>stránky.</strong> Informovanie knižnice o tom, že určité kontajnery skrývajú pretečenie, znamená, že sa tiež pokúsi umiestniť tipy pre prvky v týchto kontajneroch vnútri ich hraníc.</p>
+          <p>Niektoré témy majú widgety, ktoré prepínajú viditeľnosť obsahu, ako sú akordeóny, karty a prezentácie. Tipy vnútri týchto prvkov budú tiež skryté. Poskytnutie zoznamu selektorov pre tieto widgety znamená, že Editoria11y krátko pozastaví, keď sa používateľ pokúsi skočiť na tieto tipy pomocou tlačidla ďalší alebo predchádzajúci. Témy a moduly Drupalu môžu potom sledovať pokyny zo sekcie knižnice o <a href="/sk/instalacia/#hidden-content">práci s tipmi na skrytom obsahu</a> na zobrazenie skrytého obsahu.
+          </p>
+
+          <h2 id="runtime">Napíšte vlastnú konfiguráciu</h2>
+          <p>V PHP: modul Drupal poskytuje <code>hook_editoria11y_alter_config</code> na zmenu obsahu <code>drupalSettings.editoria11y</code> v module alebo téme. Napríklad:
+          </p>
+          <pre class="language-php"><code><!--<?php
+/**
+ * @file
+ * MY_MODULE module file.
+ */
+
+use Drupal\Core\Cache\CacheableMetadata;
+
+/**
+ * Implements hook_editoria11y_alter_config().
+ *
+ * Attaches Editoria11y library and config based on context.
+ */
+function MY_MODULE_editoria11y_alter_config(array &$attach, CacheableMetadata $cacheableMetadata): void {
+  $config = Drupal::config('editoria11y.settings');
+
+  // Module settings being changed need to bust the cache.
+  $cacheableMetadata->addCacheableDependency($config);
+
+  // Get and modify any of the values being passed to drupalSettings.editoria11y.
+  if (!empty($attach['allow_ok'])) {
+    $attach['allow_ok'] = 'okAll';
+  }
+}--></code></pre>
+          <p>Modifikácia <code>drupalSettings</code> pomáha iba vtedy, ak je JS modulu už nastavený na odovzdávanie tejto hodnoty knižnici. Na pridanie ďalších parametrov musíte priamo modifikovať JS objekt <code>options</code>. Modul kontroluje jednu globálnu JS premennú <code>editoria11yOptionsOverride</code>. Ak je táto nastavená, odovzdá objekt <code>options</code> funkcii <code>editoria11yOptions</code>, ktorú ste poskytli vo vašom module alebo téme. Teraz môžete nastaviť ľubovoľné z <a href="https://editorsally.ddev.site/en/install/#params">parametrov knižnice</a>.</p>
+          <pre class="language-javascript"><code><!--var editoria11yOptionsOverride = true;
+var editoria11yOptions = function(options) {
+  // You now have access to the processed options object that will be passed to the library.
+
+  // E.g., to add a selector to the ignore list:
+  if (options['ignoreElements'] === false) {
+    // Provide the selector as the only value.
+    options['ignoreElements'] = `.example`;
+  } else {
+    // Append additional selectors with comma separator.
+    options['ignoreElements'] = `${options['ignoreElements']}, .example`
+  }
+
+  // Return your processed options.
+  return options;
+}
+--></code></pre>
+          <section id="custom-tests">
+            <h2>Napíšte vlastné testy</h2>
+            <p>Najprv v konfigurácii modulu pridajte 1 k možnosti „Vlastné testy", aby vedel, že má sledovať testy.</p>
+            <p>Potom vytvorte JS knižnicu Drupalu s vašimi testami vo vašej téme alebo module, pomocou <a href="/sk/instalacia/#custom-tests">príručky knižnice na písanie vlastných testov</a>.</p>
+            <p>Tu je funkčný príklad z Princetonu vlastného testu na upozornenie na Safe Links. Všimnite si, že pristupuje ku triede Editoria11y cez <code>Drupal.Ed11y.</code></p>
+            <pre class="language-javascript"><code><!--const psEd11yCustomTests = function() {
+
+  // 1.
+  // Get elements to test, via Drupal.Ed11y.getElements.
+  // The 'root' parameter tells it to respect config for check areas and ignores.
+  const safeLinks = Drupal.Ed11y.getElements('a[href*="safelinks.protection.outlook.com/?"]', 'root');
+
+  // Add the test name to the lang object.
+  Drupal.ed11yLang.lang.testNames.outlookSafeLink = 'URL is Safe Link encoded';
+
+  // 2.
+  // Create the tip content.
+  const decodeSafelink = function(url) {
+    const params = new URL(url).searchParams;
+    let decoded = params.get('url');
+    const p = document.createElement('p');
+    if (!!decoded) {
+      p.innerHTML = `<p><span class="badge">To fix</span>Update this link with the correct URL, which is probably:<br>
+    <em style='word-wrap: break-word;font-size: 90%;line-height: 1.2;display: block;'></em></p>`
+      p.querySelector('em').textContent = Drupal.Ed11y.sanitizeHTML(decoded);
+    }
+    return p;
+  };
+  safeLinks?.forEach((el) => {
+    const content = document.createElement('div');
+    content.innerHTML = `<div class="title">Please fix this Outlook "Safe Link"</div>
+            <div class="why">
+                <p>The URL for this link is an Outlook "Safe Link" that was copied from an email.
+                It includes the original recipient's email address,
+                and will break if Microsoft shuts down the service.</p>
+                <p>The pasted URL is:<br>
+                <em style='word-break: break-all;font-size: 90%;line-height: 1.2;
+                display: block;'></em></p>
+            </div>
+            `;
+    content.querySelector('em').textContent = Drupal.Ed11y.sanitizeHTML(el.href);
+    content.querySelector('.why').insertAdjacentElement('beforebegin', decodeSafelink(el.href));
+
+    // 3.
+    // Push the tip to the library results object.
+    Drupal.Ed11y.State.results.push({
+      element: el,
+      test: 'outlookSafeLink',
+      type: 'error',
+      content: content,
+      position: 'beforebegin',
+      inline: false,
+      dismiss: false,
+    });
+  });
+
+  // 4.
+  // Tell Editoria11y you are done adding custom results.
+  const allDone = new CustomEvent('ed11yResume');
+  document.dispatchEvent(allDone);
+};--></code></pre>
+
+          </section>
+          <section id="help">
+            <h2>Získanie pomoci</h2>
+            <p>Pozrite si stránku <a href="/sk/kontakty/">kontaktov</a> pre možnosti komunitnej podpory. @itmaybejj je zvyčajne online na Drupal Slacku, keď slnko svieti na západnej pologuli.</p>
+            <p>Väčšina <a href="/sk/ceny/">úrovní príspevku CSA</a> zahŕňa ročné stretnutie, ktoré môže zahŕňať priamu
+              pomoc
+              s nastavením a konfiguráciou</p>
+          </section>
+
+        
+      
+    
+  
+</main>
+  <footer class="container col-lg-12 mx-auto pt-3 text-body-secondary text-center text-md-start">
+    <div class="container">
+      <div class="footer-nav text-center">
+        <a class="btn btn-primary btn-lg" data-slug="about" href="/sk/">O nás</a>
+        <a class="btn btn-primary btn-lg" data-slug="features" href="/sk/funkcie/">Funkcie</a>
+        <a class="btn btn-primary btn-lg" data-slug="demo" href="/sk/demo/">Demo</a>
+        <a class="btn btn-primary btn-lg" data-slug="license" href="/sk/ceny/">Ceny a príspevky</a>
+      </div>
+      <div class="row footer">
+        <div class="col col-3">
+          <a href="https://github.com/itmaybejj/editoria11y"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+              height="20" fill="currentColor" class="bi bi-git" viewBox="0 0 16 16">
+              <path
+                d="M15.698 7.287 8.712.302a1.03 1.03 0 0 0-1.457 0l-1.45 1.45 1.84 1.84a1.223 1.223 0 0 1 1.55 1.56l1.773 1.774a1.224 1.224 0 0 1 1.267 2.025 1.226 1.226 0 0 1-2.002-1.334L8.58 5.963v4.353a1.226 1.226 0 1 1-1.008-.036V5.887a1.226 1.226 0 0 1-.666-1.608L5.093 2.465l-4.79 4.79a1.03 1.03 0 0 0 0 1.457l6.986 6.986a1.03 1.03 0 0 0 1.457 0l6.953-6.953a1.03 1.03 0 0 0 0-1.457" />
+            </svg> <strong>Knižnica</strong></a>
+        </div>
+        <div class="col col-3">
+          <a href="https://github.com/itmaybejj/editoria11y/discussions"><svg xmlns="http://www.w3.org/2000/svg"
+              width="20" height="20" fill="currentColor" class="bi bi-chat-right-heart-fill" viewBox="0 0 16 16">
+              <path
+                d="M16 2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h9.586a1 1 0 0 1 .707.293l2.853 2.853a.5.5 0 0 0 .854-.353zM8 3.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132" />
+            </svg> <strong>Fórum</strong></a>
+        </div>
+        <div class="col col-3">
+          <a href="https://github.com/itmaybejj/editoria11y/issues"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+              height="20" fill="currentColor" class="bi bi-patch-plus-fill" viewBox="0 0 16 16">
+              <path
+                d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01zM8.5 6v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 1 0" />
+            </svg> <strong>Problémy</strong></a>
+        </div>
+        <div class="col col-3">
+          <a href="/sk/kontakty/"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+              class="bi bi-person-lines-fill" height="24" width="24" viewBox="0 0 16 18">
+              <path
+                d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z">
+              </path>
+            </svg> <strong>Kontakty</strong></a>
+        </div>
+        <div class="col col-12 subfooter">
+          <a href="/sk/ochrana-osobnych-udajov/">Zásady ochrany osobných údajov</a>
+          <a href="/sk/zasady-cookie/">Zásady používania súborov cookie</a>
+          <a href="/sk/podmienky-pouzivania/">Podmienky používania</a>
+          <a href="/sk/pravne-informacie/">Právne informácie</a>
+          <span>&copy; 2026 Editoria11y LLC</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="/assets/bootstrap/js/bootstrap.bundle.min.js" class="astro-vvvwv3sm"></script>
+  <script src="/assets/lang/i18n.js"></script>
+  <script src="/assets/theme.js"></script>
+</body>
+
+</html>

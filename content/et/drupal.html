@@ -1,0 +1,445 @@
+<main class="container col-lg-12 mx-auto py-5">
+    <div class="row docs">
+      <div class="col-12 col-md-5 col-lg-4 mb-5">
+        <div id="on-this-page" class="list-group ms-2 ms-lg-5 position-sticky top-0 pt-3">
+        </div>
+      </div>
+      <div class="col-12 col-md-7 col-lg-8 pt-3">
+        <div data-bs-spy="scroll" data-bs-target="#on-this-page" data-bs-smooth-scroll="true">
+          <h1 data-i18n-id="s-e367">Editoria11y Drupalile</h1>
+          <section id="features">
+            <h2 class="pt-3" data-i18n-id="s-1dcf">Põhifunktsioonid</h2>
+
+            <p class="fs-6" data-i18n-id="s-a8c0">Drupali moodul ühendab kontrolliteegi toimetamise taustaga
+              ja lisab palju serveripoolseid tööriistu aruandluse, halduse ja konfiguratsiooni jaoks</p>
+
+            <figure class="figure my-4 row">
+              <div class="col-lg-8">
+                <img loading="lazy" src="/assets/images/3x-editing.png" class="rounded border figure-img img-fluid" height="1088" width="2237" alt="Drupali redaktor reasiseste vihjetega" data-i18n-id="s-ee36" />
+              </div>
+              <figcaption class="figure-caption col-lg-4" data-i18n-id="s-8e69">Probleemid tuvastatakse nii laadimisel eesmisest vaates
+                kui ka
+                kirjutamise ajal CKEditoris ja Gutenbergis.</figcaption>
+            </figure>
+
+            <figure class="figure my-4 row">
+              <div class="col-lg-8">
+                <img loading="lazy" src="/assets/images/3x-generic-tip.png" class="rounded border figure-img img-fluid" height="798" width="1278" alt="Vihje näitab, et link on nimetatud ainult „click here&quot;." data-i18n-id="s-1639" />
+              </div>
+              <figcaption class="figure-caption col-lg-4" data-i18n-id="s-9881">Tööriistavihjed pakuvad nuppe
+                redaktorisse hüppamiseks, hoiatuse eiramiseks (praeguse kasutaja jaoks) või selle märkimiseks OK-ks (kõigi
+                kasutajate jaoks). Korduvad hoiatused pakuvad lehe- või ülelaiuseid toiminguid.
+              </figcaption>
+            </figure>
+
+            <figure class="figure my-4 row">
+              <div class="col-lg-8">
+                <img loading="lazy" src="/assets/images/3x-drupal-custom-tests.png" class="rounded border figure-img img-fluid" alt="Kohandatud testide koostaja liides, mis näitab välju vihje pealkirja ja sisu, samuti elemendi selektorite ja välistuste jaoks." data-i18n-id="s-0830" />
+              </div>
+              <figcaption class="figure-caption col-lg-4">
+                <p class="mb-2" data-i18n-id="s-37bf">CSA alammoodul lisab:</p>
+                <ul class="ps-3">
+                  <li data-i18n-id="s-caff"><strong>Kohandatud testide koostaja</strong></li>
+                  <li data-i18n-id="s-b145">40+ arendaja testi</li>
+                  <li data-i18n-id="s-f55d">Kontrastsuse kontrollimine</li>
+                  <li data-i18n-id="s-b70c">Saidi roomajad</li>
+                  <li data-i18n-id="s-5377">Loetavuse analüüs</li>
+                  <li data-i18n-id="s-6602">Eraldatud konfiguratsioonid arendajatele/toimetajatele</li>
+                </ul>
+              <span data-translate data-i18n-id="s-bc47"></figcaption>
+            </figure>
+
+            <figure class="figure">
+              <img loading="lazy" class="figure-img img-fluid rounded border" src="/assets/images/3x-dashboard.png" height="765" width="1600" alt="Aruandluse armatuurlaud, mis näitab hiljutisi probleeme ja lehti kõige rohkem probleemidega." data-i18n-id="s-2559" />
+              <figcaption class="figure-caption p-3 pt-2" data-i18n-id="s-cdbf">Ülelaine armatuurlaud pakub filtreeritavaid ja
+                eksporditavaid aruandeid hoiatuste ja eiramiste kohta.</figcaption>
+            </figure>
+
+          </section>
+          <h2 data-i18n-id="s-8fec">Installimine ja põhilised seadistusetapid</h2>
+          <p data-i18n-id="s-7627"><a href="https://www.drupal.org/project/editoria11y/">Drupal.org-i komplekteeritud installeris</a> on
+            mitu moodulit:</p>
+          <ul>
+            <li data-i18n-id="s-b830">
+              Editoria11y: põhiline sisukontrollija ja armatuurlaud.
+            </li>
+            <li data-i18n-id="s-b351">
+              Editoria11y CSA: arendaja testid ja armatuurlaua haldustööriistad.
+            </li>
+            <li data-i18n-id="s-74fe">
+              Editoria11y Export: CSV aruandlusvahendid.
+            </li>
+          </ul>
+          <p data-i18n-id="s-88fd">Installige nagu iga teine moodul ja võtke seejärel need põhilised sammud:</p>
+          <ol>
+            <li data-i18n-id="s-7187"><strong>Kontrollige õigusi.</strong> Usaldusväärsed autorid peaksid omama õigusi „Mark OK", „Mark as Ignored" ja „View
+              the dashboard."</li>
+            <li data-i18n-id="s-1ac1"><strong>Kontrollige põhilehti korduvate või mittevajalike hoiatuste suhtes.</strong> Märkige need tööriistavihjest OK-ks või
+              kohandage konfiguratsiooni, et ignoreerida elemente selektori järgi.</li>
+            <li data-i18n-id="s-e5b2">Otsige vihjeid, mis on raskesti nähtavad — ekraanivälised, kärpitud, teiste elementide taga või peidetud elementidel.
+              Kasutage allpool toodud „Fix tip positioning" nõuandeid parandamiseks.</li>
+            <li data-i18n-id="s-c564">Kui saidil on juba sisu ja teil on CSA tellimus, külastage armatuurlaua „recheck" vahekaarti ja
+              <strong>roomake saiti</strong>, et eellaadida saidi aruanded. See on vabatahtlik, kuid vanemad lehed ei ilmu
+              aruannetes enne, kui neid on roomatud või külastatakse sisselogitud kasutajaga.
+            </li>
+          </ol>
+          <p data-i18n-id="s-e025">Vaadake <a href="https://youtu.be/uYvNYPg38nU?si=dqADyWpTtOhniHTP&t=696">videot konfiguratsioonivõimaluste tutvustusega</a> (v2.4).</p>
+
+          <h2 id="check-roots" data-i18n-id="s-9202">Peida mittevajalikud hoiatused</h2>
+          <p data-i18n-id="s-fa47">
+            <strong>Hea konfiguratsioon pärsib mittevajalikke hoiatusi, et sisuautorid saaksid keskenduda probleemidele, mida nad peaksid parandama</strong>.
+          </p>
+          <p data-i18n-id="s-996e">Kuigi saate teste täielikult välja lülitada, on tavaliselt parem peita hoiatused konkreetsetel elementidel või lehtedel.
+          </p>
+          <hr/>
+          <p data-i18n-id="s-7918">
+            Iga testkäivituse ajal kogub Editoria11y ühe elementide komplekti seadest „Check content in these
+            containers" ja filtreerib seda mitu korda. Testkäivitus näeb välja järgmiselt:
+          </p>
+          <ol>
+            <li data-i18n-id="s-994a">
+              Tühista kontrollimine, kui konfiguratsioon takistab kontrollimist sellel lehel või selle kasutaja jaoks.
+            </li>
+            <li data-i18n-id="s-10c9">
+              <strong>Kogu</strong> elemendid määratud lehe piirkondades,
+              nt:<br/><code>body > *:not('.ed11y-element')</code><br/>
+              <em>Editoria11y CSA kasutajatele on need piirkonnad <strong>Arendaja testide</strong> vahekaardil.</em>
+            </li>
+            <li data-i18n-id="s-7524">
+              <strong>Eemalda</strong> elemendid, mis vastavad ignoreerimisselektoritele,
+              nt:<br/><code>.widgets, .utility-menu</code><br/>
+              <em>Editoria11y CSA kasutajatele on need selektorid <strong>Arendaja testide</strong> vahekaardil.</em>
+            </li>
+            <li data-i18n-id="s-58d0">
+              Käivitage testid ja sünkroniseerige tulemused armatuurlauale.
+            </li>
+            <li>
+              <span data-translate data-i18n-id="s-f8c6">Kui jagatud konfiguratsioon on aktiivne ja kasutaja on sisuautor, filtreeri arendajate tulemused:</span>
+              <ul>
+                <li data-i18n-id="s-72c9"><strong>Eemalda</strong> testide tulemused, mis on seatud „Ainult arendajale."</li>
+                <li data-i18n-id="s-576e"><strong>Eemalda</strong> tulemused elementidelt väljaspool määratud <strong><em>sisu</em></strong>
+                  piirkondade hulgast, nt:<br/><code>main, footer</code></li>
+                <li data-i18n-id="s-bb1d"><strong>Eemalda</strong> tulemused elementidelt, mis vastavad <strong><em>sisu</em></strong> ignoreerimiselektoritele.</li>
+              </ul>
+              Note that there is not a second "gather" phase. The developer page regions must include the content
+              regions.</span>
+            </li>
+            <li data-i18n-id="s-b79c">Avage paneel ja joonistage hoiatused, kui konfiguratsioon vastab automaatse avamise seadele.</li>
+          </ol>
+
+          <h3 id="dismiss" data-i18n-id="s-be02">Eira hoiatusi</h3>
+          <p data-i18n-id="s-2ae3">Teste saab teegis konfigureerida vigadena või hoiatustena („käsitsi kontrollimised"). Hoiatusi saab eiraada.
+            Igas tööriistavihje jaluses on saadaval kahte tüüpi eiramisi:</p>
+          <div class="my-2"
+            style="background: url(/assets/images/3x-generic-tip.png) 100% 98%; max-width: 600px; padding-top: 6%; background-size: 108%;">
+          </div>
+          <ul>
+            <li data-i18n-id="s-7b65">„Ignoreeri" salvestatakse kasutajaeelistusena: hoiatus on nüüd peidetud praeguse kasutaja jaoks, kuid ainult praeguse kasutaja jaoks.</li>
+            <li data-i18n-id="s-654c">„Märgi OK" peidab hoiatuse kõigi kasutajate jaoks.</li>
+          </ul>
+          <p data-i18n-id="s-dc14">See, kas kasutaja saab hoiatust eiraada, on kontrollitud rolli tasemel Drupali kasutajaõigustes.
+            <strong>Enamikul autoritest peaks olema lubatud hoiatusi eiraada</strong>. Pole mõtet määrata kellelegi
+            käsitsi kontrollimist, kui nad ei saa elementi kontrollituks märkida.
+          </p>
+
+          <h3 id="roots" data-i18n-id="s-d932">Ignoreeri elemente</h3>
+          <p data-i18n-id="s-9d1e">Need kaks konfiguratsiooniseadet on kõige olulisemad!</p>
+          <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
+            <label for="edit-content-root">Check content in these containers</label>
+            <div><textarea class="form-control" id="edit-content-root" name="content_root" rows="1" cols="30"
+                disabled></textarea>
+            </div>
+            <div class="mt-3">
+              <label for="edit-ignore-elements">Skip over these elements</label>
+              <div>
+                <textarea class="form-control" id="edit-ignore-elements" disabled name="ignore_elements" rows="1"
+                  cols="30" class=""></textarea>
+              </div>
+            </div>
+          </div>
+          <p data-i18n-id="s-6051">
+            Seadke esimene nii, et see hõlmab kõiki lehe sisu osi, mida sisuautorid saavad muuta. Nt kui nad saavad muuta
+            <code>main</code> sisu ala, <code>.sidebar</code>-i ja <code>.footer-column-two</code>-d, seadke need
+            selektorid oma sisu kontrollialaks.
+          </p>
+          <p data-i18n-id="s-f29c">
+            Kasutage teist „välja lõikamiseks". Nt kui <code>main</code> sisaldab erinevaid vidinaid ja manustusi,
+            mida saavad muuta ainult arendajad, loetlege need: <code>.widget-1, .social-embed</code>;
+          </p>
+          <p data-i18n-id="s-10ef">Kui kasutate eraldatud konfiguratsiooni, näete sarnast seadete paari arendaja testide vahekaardil:</p>
+          <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
+            <div>
+              <fieldset>
+                <legend>
+                  Developer check area
+                </legend>
+                <div class="fieldset__wrapper fieldset__wrapper--group">
+
+                  <div id="edit-dev-check-root">
+                    <div>
+                      <input aria-describedby="edit-dev-check-root--description" type="radio"
+                        id="edit-dev-check-root-automatic" name="dev_check_root" value="automatic" checked="checked" />
+                      <label for="edit-dev-check-root-automatic" class="form-item__label option">All elements</label>
+                    </div>
+                    <div class="d-flex">
+                      <input aria-describedby="edit-dev-check-root--description" type="radio"
+                        id="edit-dev-check-root-match" name="dev_check_root" value="match"
+                        class="align-self-baseline mt-1 me-1" />
+                      <label for="edit-dev-check-root-match" class="form-item__label option">Only the containers listed
+                        in the Content Setting tab</label>
+                    </div>
+                    <div class="">
+                      <input aria-describedby="edit-dev-check-root--description" type="radio"
+                        id="edit-dev-check-root-specify" name="dev_check_root" value="specify"
+                        class="form-radio form-boolean form-boolean--type-radio" />
+                      <label for="edit-dev-check-root-specify" class="">The specific containers listed below</label>
+                    </div>
+                  </div>
+
+                </div>
+              </fieldset>
+
+              <div class="">
+                <label for="edit-always-ignore" class="mt-3">Ignore for both developers and content editors</label>
+                <div class="form-textarea-wrapper">
+                  <textarea id="edit-always-ignore" class="form-control" name="always_ignore" rows="1" cols="20"
+                    placeholder=""></textarea>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+          <p data-i18n-id="s-8c02">Arendaja kontrollialade kohta on oluline teada, et need ei ole <strong>sõltumatud</strong>
+            sisu kontrollialadest. Eraldatud konfiguratsioonis kontrollitakse arendaja alasid ja seejärel
+            <strong>filtreeritakse</strong> tulemused vastavalt sisu aladele. Kõik arendajate jaoks välja arvatud alad
+            arvatakse välja ka sisuautorite jaoks. Ärge arvake välja muudetavaid sisualasid!</p>
+
+          <p data-i18n-id="s-0312">Mõned testid võimaldavad täpsemat konfiguratsiooni, et peita ainult teatud hoiatused mõjutatud elementidel. Otsige neid järgmiste alt:</p>
+          <ul>
+            <li data-i18n-id="s-d53d">Sisu testid: Kontrollitavad lingid</li>
+            <li data-i18n-id="s-0d1e">Sisu testid: Kontrollitavad manustused</li>
+            <li data-i18n-id="s-10c1">Sisu testid: Dünaamilise ja shadow-sisu tuvastamine</li>
+            <li data-i18n-id="s-e6e4">Arendaja testid: Kontrastsus</li>
+          </ul>
+
+          <h3 id="pages" data-i18n-id="s-177c">Peida konkreetsete lehtede või kasutajate jaoks</h3>
+          <p data-i18n-id="s-e874">
+            Lihtsaim viis selleks on edastada CSS-klassid või ID-d nendele suvanditele:
+          </p>
+          <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
+            <label for="edit-no-load" class="form-item__label">Do not check on pages with these elements</label>
+            <div class="form-textarea-wrapper">
+              <textarea data-drupal-selector="edit-no-load" aria-describedby="edit-no-load--description"
+                id="edit-no-load" name="no_load" rows="1" cols="20" class="form-control"></textarea>
+            </div>
+
+            <label for="edit-ignore-all-if-absent" class="form-item__label">Hide all alerts on pages where these
+              elements are not present</label>
+            <div class="form-textarea-wrapper">
+              <textarea data-drupal-selector="edit-ignore-all-if-absent"
+                aria-describedby="edit-ignore-all-if-absent--description" id="edit-ignore-all-if-absent"
+                name="ignore_all_if_absent" rows="1" cols="20" class="form-control"></textarea>
+            </div>
+
+          </div>
+          <p data-i18n-id="s-0877">
+            Esimene takistab kontrollimise käivitamist ja tööriistariba ei kuvata.
+          </p>
+          <p data-i18n-id="s-5cbd">
+            Teine käivitab kontrollija minimeeritult ja automaatselt märgib (praeguse kasutaja jaoks) kõik probleemid „Ignoreerituks,"
+            isegi kui need on vead. See võimaldab testide käivitamist ja armatuurlaua uuendamist, ilma kasutajat häirimata.
+          </p>
+          <p data-i18n-id="s-1661">
+            Kui soovite seda kasutada selleks, et kontrollida, millised kasutajad kontrollijat näevad, peate võib-olla kohandama oma teemat klassi väljastamiseks, nt <code>.user-247</code>
+          </p>
+
+          <h2 id="dashboard" data-i18n-id="s-f4d7">Halda ülelaiuseid tulemusi</h2>
+          <section id="refresh">
+            <h3 class="pt-3" data-i18n-id="s-012a">Roomamine ja tulemuste uuendamine</h3>
+            <p data-i18n-id="s-75a9">Editoria11y on <strong>reaalajas jälgimise tööriist, mitte roomaja</strong>. Selle ülelaiused aruanded uuenevad, kui autorid vaatavad lehti, seega tavalist roomamist ei ole üldiselt vaja. CSA moodul sisaldab roomajat, kuid seda on vaja ainult järgmistes kolmes olukorras:</p>
+            <ol>
+              <li data-i18n-id="s-dfb1">
+                Editoria11y esmakordsel installimisel olemasolevale saidile, millel on palju lehti. Lehed peavad olema külastatud enne, kui need ilmuvad armatuurlaual, nii et kiire esialgne roomamine säästab aega.
+              </li>
+              <li data-i18n-id="s-f602">
+                Teemade või moodulite suuremad uuendused võivad parandada (või põhjustada) probleeme paljudel lehtedel, mis ei ilmu enne külastamist või roomamist..
+              </li>
+              <li data-i18n-id="s-a530">
+                Bulk-toimingud haldusliideses, nagu lehtede kustutamine või ümbersuunamine, jätavad sageli maha tulemusi lehtedelt, mis enam ei eksisteeri või on liigutatud. Neil juhtudel aitab kasutada „Refresh" vahekaardi hooldus-toiminguid, et värskendada lehe URL-e ning tuvastada ja kustutada kustutatud lehed.
+              </li>
+            </ol>
+            <p data-i18n-id="s-8e5a">Roomamise ajal ei lahku teie saidilt ühtegi andmeid. CSA roomaja ei ole pilvepõhine tööriist; see kasutab teie brauserit teie enda saidi lehtede laadimiseks ja kontrollimiseks. Selle lähenemise puuduseks on see, et <strong>brauserid peatavad taustakaardid</strong>. Peate hoidma oma arvutit sisse lülitatuna ja ärkvel roomamise ajal. Planeerige avada roomaja jaoks uus aken ja jätta see selle akna esiplaanile, kui see töötab. Saate jätkata tööd teises aknas. Roomaja uuendab oma hinnangut pärast iga lehepartii.</p>
+          </section>
+          <section id="reports">
+            <h3 data-i18n-id="s-a242">Aruannete vaatamine</h3>
+            <div class="my-4 border shadow"
+              style="background: url(/assets/images/3x-dashboard.png) 86% 0%; padding-top: 28%; background-size: 106%;">
+            </div>
+            <ul>
+              <li data-i18n-id="s-e328">
+                <strong>Hiljutised</strong> võimaldab sirvida üksikute hoiatuste järgi. See võimaldab teha asju nagu filtreerida, et leida kõik sama hoiatuse tüübi eksemplarid, või näha, millised hoiatused ilmuvad sageli hiljutises sisus, või millised autorid ikka teevad sama viga.
+              </li>
+              <li data-i18n-id="s-796f">
+                <strong>Lehed</strong> näitab hoiatuste arvu lehe kohta, grupeeritud lehe järgi. See võimaldab leida lehti, millel on kõige rohkem probleeme, ja filtreerida lehe atribuutide järgi nagu sisutüüp ja avaldamise olek.
+              </li>
+              <li data-i18n-id="s-9423">
+                <strong>Hoiatused</strong> näitab probleeme tüübi järgi.
+              </li>
+              <li data-i18n-id="s-52ed">
+                <strong>Eiramised</strong> võimaldab jälgida, kas autorid eiravad õigesti, ja omab „lähtesta" nuppe eiratud hoiatuste taastamiseks.
+              </li>
+              <li data-i18n-id="s-3379">
+                <strong>Eksportimine</strong> sisaldab lehtede, hoiatuste ja eiramiste aruannete versioone, mida saab filtreerida CSV allalaadimiste ettevalmistamiseks. <em>Pakub CSV eksportimise alammoodul</em>
+              </li>
+              <li data-i18n-id="s-9814">
+                <strong>Värskendamine</strong> sisaldab armatuurlaua haldustööriistu kustutatud lehtede hoiatuste eemaldamiseks, parameetriga pseudolehtede hoiatuste eemaldamiseks (nt /search?query=example), salvestatud lehe pealkirjade ja URL-ide uuendamiseks ning käsitsi roomamise käivitamiseks. <em>Pakub CSA alammoodul</em>
+              </li>
+            </ul>
+          </section>
+
+          <h2 id="positioning" data-i18n-id="s-c35b">Paranda peidetud või ekraanivälist tööriistavihjet</h2>
+
+          <p data-i18n-id="s-68ce">Moodul pakub välju kahele teegi konfiguratsioonisuvandile, et muuta vihjete paigutust:
+          </p>
+
+          <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
+            <label for="edit-element-hides-overflow" class="form-item__label">Elements with overflow hidden</label>
+            <textarea data-drupal-selector="edit-element-hides-overflow"
+              aria-describedby="edit-element-hides-overflow--description" id="edit-element-hides-overflow"
+              name="element_hides_overflow" rows="1" cols="60" class="form-control"></textarea>
+            <label for="edit-hidden-handlers" class="form-item__label">Theme JS will handle revealing hidden tooltips
+              inside these containers</label>
+            <textarea data-drupal-selector="edit-hidden-handlers" aria-describedby="edit-hidden-handlers--description"
+              id="edit-hidden-handlers" name="hidden_handlers" rows="1" cols="60" class="form-control"></textarea>
+          </div>
+          <p data-i18n-id="s-34e4">Mõned teemad on veergude või vidinate kujul, mis peidavad horisontaalseid või vertikaalseid ületäiteid. Teek tuvastab automaatselt, millal lüliti jääks <strong>lehe</strong> nähtava osa väljapoole. Teegile ütlemine, et teatud konteinerid peidavad ületäite, tähendab, et see üritab ka nende konteinerite elementide vihjeid paigutada nende piiride sisse.</p>
+          <p data-i18n-id="s-7cb7">Mõnel teemal on komponendid, mis lülitavad sisu nähtavuse ümber, nagu akordionid, vahelehed ja slaidiesitlused.
+            Nende elementide sees olevad vihjed on samuti peidetud. Nende vidinate selektorite loendi esitamine tähendab,
+            et Editoria11y peatub lühidalt, kui kasutaja üritab nendele vihjetele hüpata järgmise või eelmise nupu abil.
+            Drupali teemad ja moodulid saavad seejärel järgida teegi jaotise juhiseid <a href="/en/install/#hidden-content">peidetud sisuga vihjete käsitlemisel</a>, et peidetud sisu paljastada.
+          </p>
+
+          <h2 id="runtime" data-i18n-id="s-7e38">Kirjutage oma konfiguratsioon</h2>
+          <p data-i18n-id="s-a5d3">PHP-s: Drupali moodul pakub <code>hook_editoria11y_alter_config</code>-i, et muuta <code>drupalSettings.editoria11y</code> sisu moodulis või teemas. Näiteks:
+          </p>
+          <pre class="language-php"><code><!--<?php
+/**
+ * @file
+ * MY_MODULE module file.
+ */
+
+use Drupal\Core\Cache\CacheableMetadata;
+
+/**
+ * Implements hook_editoria11y_alter_config().
+ *
+ * Attaches Editoria11y library and config based on context.
+ */
+function MY_MODULE_editoria11y_alter_config(array &$attach, CacheableMetadata $cacheableMetadata): void {
+  $config = Drupal::config('editoria11y.settings');
+
+  // Module settings being changed need to bust the cache.
+  $cacheableMetadata->addCacheableDependency($config);
+
+  // Get and modify any of the values being passed to drupalSettings.editoria11y.
+  if (!empty($attach['allow_ok'])) {
+    $attach['allow_ok'] = 'okAll';
+  }
+}--></code></pre>
+          <p data-i18n-id="s-2368"><code>drupalSettings</code>-i muutmine aitab ainult siis, kui mooduli JS on juba seadistatud seda väärtust teegile edastama. Täiendavate parameetrite lisamiseks peate muutma JS <code>options</code> objekti otse.
+            Moodul kontrollib üht globaalset JS muutujat <code>editoria11yOptionsOverride</code>. Kui see on seatud, edastab see <code>options</code> objekti teie moodulis või teemas pakutud <code>editoria11yOptions</code> funktsioonile. Nüüd saate seada mis tahes <a href="https://editorsally.ddev.site/en/install/#params">teegi parameetreid</a>.</p>
+          <pre class="language-javascript"><code><!--var editoria11yOptionsOverride = true;
+var editoria11yOptions = function(options) {
+  // You now have access to the processed options object that will be passed to the library.
+
+  // E.g., to add a selector to the ignore list:
+  if (options['ignoreElements'] === false) {
+    // Provide the selector as the only value.
+    options['ignoreElements'] = `.example`;
+  } else {
+    // Append additional selectors with comma separator.
+    options['ignoreElements'] = `${options['ignoreElements']}, .example`
+  }
+
+  // Return your processed options.
+  return options;
+}
+--></code></pre>
+          <section id="custom-tests">
+            <h2 data-i18n-id="s-e0f0">Kirjutage oma testid</h2>
+            <p data-i18n-id="s-6ece">Kõigepealt lisage mooduli konfiguratsioonis 1 „Kohandatud testide" suvanditele, et see teaks
+              testidele oodata.</p>
+            <p data-i18n-id="s-4316">Seejärel looge Drupali JS teek oma testidega oma teemas või moodulis, kasutades <a href="/en/install/#custom-tests">teegi juhendit kohandatud testide kirjutamiseks</a>.</p>
+            <p data-i18n-id="s-b4ea">Siin on töötav näide Princetonist, kohandatud testist, et hoiatada Safe Linkide kohta. Pange tähele, et see pääseb Editoria11y klassile juurde läbi <code>Drupal.Ed11y.</code></p>
+            <pre class="language-javascript"><code><!--const psEd11yCustomTests = function() {
+
+  // 1.
+  // Get elements to test, via Drupal.Ed11y.getElements.
+  // The 'root' parameter tells it to respect config for check areas and ignores.
+  const safeLinks = Drupal.Ed11y.getElements('a[href*="safelinks.protection.outlook.com/?"]', 'root');
+
+  // Add the test name to the lang object.
+  Drupal.ed11yLang.lang.testNames.outlookSafeLink = 'URL is Safe Link encoded';
+
+  // 2.
+  // Create the tip content.
+  const decodeSafelink = function(url) {
+    const params = new URL(url).searchParams;
+    let decoded = params.get('url');
+    const p = document.createElement('p');
+    if (!!decoded) {
+      p.innerHTML = `<p><span class="badge">To fix</span>Update this link with the correct URL, which is probably:<br>
+    <em style='word-wrap: break-word;font-size: 90%;line-height: 1.2;display: block;'></em></p>`
+      p.querySelector('em').textContent = Drupal.Ed11y.sanitizeHTML(decoded);
+    }
+    return p;
+  };
+  safeLinks?.forEach((el) => {
+    const content = document.createElement('div');
+    content.innerHTML = `<div class="title">Please fix this Outlook "Safe Link"</div>
+            <div class="why">
+                <p>The URL for this link is an Outlook "Safe Link" that was copied from an email.
+                It includes the original recipient's email address,
+                and will break if Microsoft shuts down the service.</p>
+                <p>The pasted URL is:<br>
+                <em style='word-break: break-all;font-size: 90%;line-height: 1.2;
+                display: block;'></em></p>
+            </div>
+            `;
+    content.querySelector('em').textContent = Drupal.Ed11y.sanitizeHTML(el.href);
+    content.querySelector('.why').insertAdjacentElement('beforebegin', decodeSafelink(el.href));
+
+    // 3.
+    // Push the tip to the library results object.
+    Drupal.Ed11y.State.results.push({
+      element: el,
+      test: 'outlookSafeLink',
+      type: 'error',
+      content: content,
+      position: 'beforebegin',
+      inline: false,
+      dismiss: false,
+    });
+  });
+
+  // 4.
+  // Tell Editoria11y you are done adding custom results.
+  const allDone = new CustomEvent('ed11yResume');
+  document.dispatchEvent(allDone);
+};--></code></pre>
+
+          </section>
+          <section id="help">
+            <h2 data-i18n-id="s-4690">Abi saamine</h2>
+            <p data-i18n-id="s-f149">Kontrollige <a href="/en/contacts/">kontaktide</a> lehte kogukonna toe suvandite jaoks. @itmaybejj on tavaliselt veebis Drupali Slackis, kui päike paistab lääne poolkeral.</p>
+            <p data-i18n-id="s-4a16">Enamik <a href="/en/license/">CSA panustamistasemetest</a> sisaldab iga-aastast kohtumist, mis
+              võib hõlmata otsest
+              abi
+              seadistamise ja konfiguratsiooni puhul</p>
+          </section>
+
+        </div>
+      </div>
+    </div>
+  </main>

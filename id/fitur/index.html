@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="id" data-bs-theme="light">
+
+<head>
+  <link rel="icon" type="image/png" href="/assets/favicons/favicon-512x512.png" sizes="512x512" />
+  <link rel="icon" type="image/png" href="/assets/favicons/favicon-192x192.png" sizes="192x192" />
+  <link rel="icon" type="image/png" href="/assets/favicons/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/assets/favicons/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <meta charset="utf-8" />
+  <title>Fitur — Editoria11y</title>
+  <link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="/assets/theme.css" rel="stylesheet" />
+  <meta name="theme-color" content="#712cf9" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-md">
+      <div class="container col-sm-12 mx-auto">
+        <a href="/id/" class="d-flex align-items-center  navbar-brand">
+          <svg class="logo-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+            viewBox="-.75 -3.5 10.1699 19.1777">
+            <path fill="currentColor"
+              d="M3.7031,10.5527c-.3633-.6562-.6426-1.1387-.8379-1.4473l-.3105-.4863-.2344-.3574c-.5117-.7969-1.0449-1.4551-1.5996-1.9746.3164-.2617.6113-.3926.8848-.3926.3359,0,.6348.123.8965.3691s.5918.7148.9902,1.4062c.4531-1.4727,1.0293-2.8691,1.7285-4.1895.3867-.7188.7314-1.2021,1.0342-1.4502s.7041-.3721,1.2041-.3721c.2656,0,.5938.041.9844.123-1.0039.8086-1.8066,1.7695-2.4082,2.8828s-1.3789,3.0762-2.332,5.8887Z" />
+          </svg> Editoria<span style="margin-left: -1px;">11</span>y
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar" aria-label="Beralih navigasi">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Editoria11y</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Tutup"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 nav-pills">
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div id="lang-picker"></div>
+  </header>
+  <main class="container col-lg-12 mx-auto py-5">
+    <div class="row docs">
+      <div class="col-12 col-md-5 col-lg-4 mb-5">
+        <div id="on-this-page" class="list-group ms-2 ms-lg-5 position-sticky top-0 pt-3">
+        </div>
+      </div>
+      <div class="col-12 col-md-7 col-lg-8 pt-3" data-bs-spy="scroll" data-bs-target="#on-this-page"
+        data-bs-smooth-scroll="true" tabindex="0">
+        <section id="features">
+          <h1 class="text-body-emphasis pt-2 pb-5">Fitur</h1>
+          <p class="fs-6">Pengujian inti Editoria11y mendeteksi lebih dari 50 masalah aksesibilitas konten yang umum; keputusan
+            yang merugikan keterbacaan, kesalahan yang membuat pembaca layar kurang efektif, dan kesalahan yang mengurangi SEO.</p>
+          <p class="fs-6">Add-on menyediakan ~40 pengujian tambahan untuk pengembang dan desainer, pengujian kustom, dan berbagai
+            alat jaminan kualitas seluruh situs.</p>
+          <p class="fs-6">Pengujian konten berfokus pada isu yang muncul <strong>setelah</strong> situs diserahkan kepada
+            penulis konten. Situs perlu diuji dengan alat audit manual, keyboard, dan pembaca layar sebelum
+            diluncurkan, tetapi bahkan situs yang paling aksesibel sekalipun cenderung menurun kualitasnya seiring pengeditan yang membawa masalah baru.</p>
+          <p class="fs-6">Yang membuat Editoria11y menonjol di antara alat aksesibilitas adalah bahwa pengujiannya berjalan secara langsung, di
+            browser, saat penulis mengedit dan melihat pratinjau pekerjaan mereka. <strong>Penulis lebih cenderung merespons umpan balik yang langsung dan
+              inline</strong>, memperhatikan peringatan dan melakukan koreksi, daripada harus mengingat untuk membuka
+            dasbor atau menjalankan pemeriksaan manual.</p>
+        </section>
+        <section id="authoring">
+          <h2>Pengalaman penulis</h2>
+          <div class="clearfix">
+            <img src="/assets/images/3x-toolbar" class="image-fluid float-start me-3" alt="Tangkapan layar toolbar Editoria11y, menampilkan 4 kesalahan." width="97" height="50" loading="lazy" />
+            <p>Penulis melihat toolbar Editoria11y saat mengedit konten. Ketika isu terdeteksi, toolbar menjadi kuning atau
+              merah, dan menampilkan jumlah isu. Mengeklik jumlah tersebut akan menggulir ke peringatan pertama dan membuka tooltip-nya.</p>
+          </div>
+          <div class="row">
+            <img loading="lazy" src="/assets/images/3x-generic-tip.png" class="img-fluid col-6 col-lg-8" height="798" width="1278" alt="Tip yang menunjukkan tautan hanya diberi nama &quot;klik di sini.&quot;" />
+            <p class="col-6 col-lg-4 align-content-center">Tips muncul secara inline, dengan deskripsi bahasa sederhana tentang
+              kesalahan, saran untuk koreksi, dan catatan tentang mengapa isu itu penting.</p>
+          </div>
+          <div class="row">
+            <img loading="lazy" class="img-fluid col-6 col-lg-8" src="/assets/images/3x-tools.jpg" height="473" width="405" alt="Visualisasi struktur heading yang ditampilkan di atas halaman" />
+            <p class="col-6 col-lg-4 align-content-center">Toolbar berisi alat tambahan untuk pemeriksaan manual,
+              termasuk visualisasi struktur heading dan teks alt, serta skor keterbacaan.</p>
+          </div>
+        </section>
+        <section id="admins">
+          <h2>Kontrol admin situs</h2>
+          <p>Setiap aspek yang terlihat dari pemeriksa dapat dikustomisasi. Parameter dan event memungkinkan penghapusan pengujian,
+            penulisan ulang tips, penyisipan pengujian kustom, dan penerapan tema kustom.</p>
+          <p>Plugin untuk Drupal dan WordPress menambahkan fitur tambahan, seperti pengabaian tersinkronisasi, dasbor
+            seluruh situs, dan ekspor laporan CSV.</p>
+          <figure class="figure my-4 rounded shadow mb-5 border">
+            <img loading="lazy" class="figure-img img-fluid" src="/assets/images/3x-dashboard.png" height="765" width="1600" alt="Dasbor pelaporan yang menampilkan isu terbaru dan halaman dengan isu terbanyak." />
+            <figcaption class="figure-caption p-3 pt-2">Dasbor Drupal, yang mencakup daftar isu yang dapat disaring,
+              halaman dengan isu, dan pengabaian.</figcaption>
+          </figure>
+        </section>
+        <section id="tests">
+          <h2 data-section="tests">Pengujian</h2>
+          <p class="fs-6">Pengujian Editoria11y berfokus pada peningkatan pengalaman Web bagi semua pengguna, sebagaimana diukur oleh
+            manusia, bukan hanya standar teknis. Meskipun pengujian utama dimaksudkan untuk membantu mencapai Web Content Accessibility
+            Guidelines (<a href="https://www.w3.org/WAI/WCAG22/quickref/">WCAG 2.2 AA</a>), yang lain dipengaruhi oleh
+            pekerjaan <a href="https://www.w3.org/TR/coga-usable/">Kelompok Tugas Aksesibilitas untuk Disabilitas Kognitif dan Belajar
+              </a>, serta praktik terbaik kegunaan dan desain secara umum.</p>
+          <p class="fs-6 pb-3">Pengujian individual dapat dinonaktifkan oleh admin situs.</p>
+          <div class="row listgrid">
+            <div class="col-12 col-xl-4">
+              <h3 class="fs-5 nomenu pt-0">Teks alt gambar</h3>
+              <ul>
+                <li>Gambar tidak memiliki atribut alt</li>
+                <li>Teks alt adalah nama file</li>
+                <li>Teks alt adalah placeholder ("TBD")</li>
+                <li>Teks alt adalah simbol yang tidak dapat diucapkan</li>
+                <li>Teks alt mengandung kata redundan ("gambar dari&hellip;")</li>
+                <li>Teks alt terlalu panjang</li>
+                <li>Gambar dekoratif mungkin memiliki nilai</li>
+                <li>Gambar korsel ditandai dekoratif</li>
+                <li>Gambar bertulisan tidak memiliki teks alt</li>
+                <li>Teks alt menduplikasi tulisan</li>
+              </ul>
+              <h3 class="fs-5 nomenu pt-0">Gambar tertaut</h3>
+              <ul>
+                <li>Gambar tertaut tidak memiliki teks alt</li>
+                <li>Alt gambar tertaut adalah URL atau nama file</li>
+                <li>Alt gambar tertaut adalah placeholder</li>
+                <li>Alt gambar tertaut adalah simbol yang tidak dapat diucapkan</li>
+                <li>Alt gambar tertaut mendeskripsikan gambar, bukan tautan</li>
+                <li>Alt gambar tertaut mengandung kata redundan</li>
+                <li>Alt gambar tertaut terlalu panjang</li>
+                <li>Gambar dalam tautan dengan teks tidak memiliki atribut alt</li>
+              </ul>
+              <h3 class="fs-5 nomenu pt-0">Media tertanam</h3>
+              <ul>
+                <li>Video memerlukan teks terjemahan</li>
+                <li>Audio memerlukan transkrip</li>
+                <li>Visualisasi data memerlukan alternatif yang dapat diakses</li>
+                <li>Frame tidak memiliki judul</li>
+                <li>Frame dikecualikan dari navigasi keyboard</li>
+                <li>Konten frame memerlukan pemeriksaan aksesibilitas manual</li>
+                <li>Dokumen tertaut mungkin tidak dapat diakses oleh pembaca layar</li>
+                <li>PDF tidak memiliki alternatif yang dapat diakses</li>
+                <li>Komponen tata letak interaktif bersarang</li>
+              </ul>
+            </div>
+            <div class="col-12 col-xl-4">
+              <h3 class="fs-5 nomenu pt-0">Tautan bermakna</h3>
+              <ul>
+                <li>Tautan kosong</li>
+                <li>Teks tautan adalah URL</li>
+                <li>Teks tautan hanya nomor DOI</li>
+                <li>Teks tautan bertuliskan "klik di sini"</li>
+                <li>Teks tautan hanya kata-kata generik ("baca selengkapnya")</li>
+                <li>Tautan berbeda berbagi teks yang sama</li>
+                <li>Ikon atau gambar tertaut tidak memiliki alternatif teks</li>
+                <li>Tautan terbuka di tab baru tanpa peringatan</li>
+                <li>Tautan mengarah ke file tanpa peringatan</li>
+                <li>Teks tautan hanya simbol atau emoji</li>
+                <li>Teks tautan bermakna disembunyikan dari pengguna yang dapat melihat</li>
+                <li>Tooltip tautan yang redundan</li>
+                <li>Tautan jangkar dalam halaman yang rusak</li>
+                <li>Atribut ID duplikat</li>
+                <li>Tautan mungkin mengarah ke lingkungan pengembangan</li>
+              </ul>
+              <h3 class="fs-5 nomenu pt-0">Heading</h3>
+              <ul>
+                <li>Halaman tidak memiliki Heading 1</li>
+                <li>Heading pertama adalah subheading</li>
+                <li>Heading melewati satu level</li>
+                <li>Heading kosong</li>
+                <li>Gambar yang digunakan sebagai heading memerlukan teks alt</li>
+                <li>Heading sangat panjang</li>
+                <li>Paragraf tebal mungkin merupakan heading</li>
+                <li>Blockquote pendek mungkin merupakan heading</li>
+              </ul>
+              <h3 class="fs-5 nomenu pt-0">Keterbacaan teks</h3>
+              <ul>
+                <li>Teks huruf kapital berlebihan</li>
+                <li>Blok besar teks tebal atau miring</li>
+                <li>Teks terlalu kecil</li>
+                <li>Teks bukan tautan digarisbawahi</li>
+                <li>Teks diratakan</li>
+                <li>Subskrip atau superskrip disalahgunakan sebagai pemformatan</li>
+                <li>Daftar palsu menggunakan karakter atau simbol</li>
+                <li>Item daftar di luar daftar</li>
+              </ul>
+
+            </div>
+            <div class="col-12 col-xl-4">
+              <h3 class="fs-5 nomenu pt-0">Kontras warna</h3>
+              <ul>
+                <li>Teks memiliki kontras yang tidak memadai</li>
+                <li>Kontras teks memerlukan pemeriksaan manual</li>
+                <li>Ikon atau grafik memiliki kontras yang tidak memadai</li>
+                <li>Kontras ikon atau grafik memerlukan pemeriksaan manual</li>
+                <li>Teks input memiliki kontras yang tidak memadai</li>
+                <li>Teks placeholder memiliki kontras yang tidak memadai</li>
+              </ul>
+              <h3 class="fs-5 nomenu pt-0">Tabel</h3>
+              <ul>
+                <li>Tabel tidak memiliki baris atau kolom header</li>
+                <li>Sel header tabel kosong</li>
+                <li>Heading konten digunakan di dalam tabel</li>
+              </ul>
+              <h3 class="fs-5 nomenu pt-0">Formulir & elemen interaktif</h3>
+              <ul>
+                <li>Tombol tidak memiliki label aksesibel</li>
+                <li>Tombol memiliki label ARIA yang tidak valid</li>
+                <li>Label tombol mengandung kata "button"</li>
+                <li>Label yang terlihat tidak cocok dengan nama yang dapat diakses</li>
+                <li>Input tidak memiliki label terkait</li>
+                <li>Input hanya menggunakan label tak terlihat</li>
+                <li>Input hanya menggunakan placeholder sebagai label</li>
+                <li>Tombol reset dapat menyebabkan kehilangan data yang tidak disengaja</li>
+                <li>Elemen disembunyikan dari pembaca layar tetapi masih dapat difokus dengan keyboard</li>
+                <li>Tabindex positif merusak urutan membaca dan tab</li>
+              </ul>
+              <h3 class="fs-5 nomenu pt-0">Metadata halaman</h3>
+              <ul>
+                <li>Judul halaman tidak ada</li>
+                <li>Bahasa halaman tidak dideklarasikan</li>
+                <li>Viewport mencegah penskalaan teks</li>
+                <li>Halaman menyegarkan otomatis</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section class="row mt-5 pt-5" id="csa">
+          <h2 class="pt-3" data-section="csa">Fitur CSA</h2>
+
+          <p class="fs-5">
+            Editoria11y mempromosikan aksesibilitas dengan cara yang unik. Alatnya sangat efektif dalam membantu penulis non-teknis
+            menyiapkan konten yang dapat dinikmati secara setara oleh pengguna Web penyandang disabilitas. Kami menganggap ini sebagai kebaikan publik,
+            sehingga <strong>Editoria11y akan selalu gratis untuk digunakan</strong>.
+          </p>
+          <p class="fs-5">
+            Namun, Editoria11y tidak gratis untuk dikembangkan atau didukung.
+          </p>
+          <p class="fs-5">
+            CSA mengisi kesenjangan tersebut: anggota proyek mendanai pengembangan perpustakaan Editoria11y, plugin CMS-nya, dan
+            suite CSA: sekumpulan alat jaminan kualitas sumber terbuka yang terus berkembang pesat, memberikan fungsionalitas
+            serupa dengan produk komersial, dengan harga yang jauh lebih terjangkau.
+
+            Suite CSA untuk Drupal saat ini gratis dalam versi beta, dan akan hadir untuk WordPress pada Q3 2026.
+          </p>
+          <figure class="figure my-4 shadow border rounded p-0 m-2 col-sm-12 col-xl-11">
+            <img alt="Crawl situs sedang berlangsung" src="../../assets/images/3x-crawl.png" height="786" width="1986" class="img-fluid rounded-top figure-img" />
+            <figcaption class="figure-caption p-2 pt-2">Crawler CSA memperbarui dasbor.</figcaption>
+          </figure>
+
+        </section>
+        <section id="csa-tools" class="pb-5 mt-5 row g-5">
+
+          <div class="mt-2">
+            <h3 class="pt-3" data-section="csa-tools">Alat CSA</h3>
+            <ul class="fs-5">
+              <li>
+                Uji pengembang, keterbacaan, dan kontras.
+              </li>
+              <li>
+                Konfigurasi terpisah berbasis peran untuk pengembang dan pembuat konten.
+              </li>
+              <li>
+                Pembangun pengujian kustom.
+              </li>
+              <li>
+                Penolakan seluruh situs dengan satu klik
+              </li>
+              <li>
+                Alat pemeliharaan dasbor dan crawler
+              </li>
+            </ul>
+            <img alt="Pemilih warna dalam tooltip pengujian" src="../../assets/images/3x-colors.png" height="1022" width="1288" class="img-fluid col-sm-12 col-xl-9 mt-0 p-0" />
+          </div>
+
+        </section>
+        <section id="benefits" class="pb-5 mt-5 row g-5">
+
+
+          <div class="">
+            <h3 class="pt-0" data-section="benefits">Manfaat keanggotaan CSA</h3>
+            <ul class="fs-5">
+              <li>Dukungan prioritas.</li>
+              <li>Pengaruh tertimbang pada peta jalan proyek.</li>
+              <li>Akses otomatis ke fitur baru dalam peta jalan.</li>
+              <li>Bantuan pengaturan langsung (tergantung tingkatan).</li>
+              <li><a href="https://form.jotform.com/260627656020150">Kredit pendukung publik</a> (tergantung tingkatan/berdasarkan
+                permintaan; syarat berlaku).</li>
+            </ul>
+          
+            <h3 class="nomenu">Tertarik?</h3>
+            <p class="fs-5">Suite CSA didukung melalui model kontribusi sesuai kemampuan.
+              Editoria11y inti — baik perpustakaan maupun plugin-nya — tetap gratis selamanya.</p>
+            <p class><a class="btn btn-primary" href="/id/harga/">Bergabung dengan CSA</a></p>
+
+          </div>
+
+        </section>
+
+
+
+
+
+        <h2 id="projects" data-section="false">Proyek yang disponsori CSA</h2>
+        <section id="active-projects">
+          <h3 class="pt-4" data-section="active-projects">Aktif</h3>
+          <div class="accord">
+            <details>
+              <summary>
+                Q2 2026: Meluncurkan komunitas CSA Editoria11y
+              </summary>
+              <div>
+                <p>Pekerjaan yang tersisa:</p>
+                <ul class="fs-6">
+                  <li>
+                    Buat entitas fiskal untuk memproses langganan dan sponsorship.
+                  </li>
+                  <li>
+                    Siapkan sistem lisensi.
+                  </li>
+                </ul>
+              </div>
+            </details>
+            <details>
+              <summary>
+                Q2 2026: Pembangun aturan kustom
+              </summary>
+              <div>
+                <ol class="fs-6">
+                  <li>Selesai untuk Drupal.</li>
+                  <li>Tugas berikutnya: port pembangun ke WordPress.</li>
+                </ol>
+              </div>
+            </details>
+            <details>
+              <summary>
+                Q3 2026: Port perpustakaan 3.x ke WordPress
+              </summary>
+              <div>
+                <ol class="fs-6">
+                  <li><span data-translate>Buat submodul CSA dengan fitur yang didukung komunitas</span>
+                    <ul>
+                      <li>Buat alat pemeliharaan dasbor untuk menghapus hasil yang sudah usang dan merayapi konten yang ada.</li>
+                      <li>Izinkan penandaan pengujian tertentu sebagai OK di seluruh situs, bukan hanya pada satu halaman.</li>
+                      <li>Izinkan konfigurasi terpisah, dengan pengaturan dan pengujian terpisah untuk pengembang dan editor
+                        konten.</li>
+                    </ul>
+                  </li>
+                </ol>
+              </div>
+            </details>
+          </div>
+        </section>
+        <section id="finished">
+          <h3 data-section="finished" class="pt-5">Baru selesai</h3>
+          <div class="accord">
+            <details>
+              <summary>
+                Q1 2026: Penulisan ulang perpustakaan 3.x
+              </summary>
+              <div>
+                <ul class="fs-6">
+                  <li>
+                    Gabungkan kumpulan aturan Editoria11y dan Sa11y. Sejak fork, Sa11y menulis ~50 pengujian tambahan dan mengadopsi
+                    tooling ESM, dan Editoria11y menerapkan peningkatan performa dan menambahkan parameter untuk mengaktifkan
+                    pemeriksaan real-time. Sa11y 4.2.2 dan Editoria11y 3.0.0 akan memulai masa depan bersama kami.
+                  </li>
+                  <li>
+                    Tambahkan dukungan "konfigurasi terpisah" untuk memungkinkan kumpulan aturan terpisah bagi pengembang dan pembuat konten.
+                  </li>
+                  <li>Tambahkan terjemahan mesin untuk Bahasa Tionghoa, Denmark, Belanda, Jerman, Yunani, Hungaria, Italia, Jepang,
+                    Norwegia Bokmål, Polandia, Portugis (Brasil), Portugis (Portugal), Spanyol, Swedia, dan Ukraina
+                    sebagai templat untuk penyempurnaan oleh manusia.</li>
+                  <li><em class="fs-6 lh-1"><strong>Status saat ini</strong>: pekerjaan pengkodean selesai; akan menandai rilis
+                      setelah memperbarui dokumentasi dan demo.</em></li>
+                </ul>
+              </div>
+            </details>
+            <details>
+              <summary>
+                Q1 2026: Penulisan ulang modul Drupal 3.x
+              </summary>
+              <div>
+                <ol class="fs-6">
+                  <li>Perluas dasbor dengan alat pelaporan dan pemfilteran yang lebih canggih.</li>
+                  <li>Tambahkan terjemahan mesin untuk Bahasa Tionghoa, Denmark, Belanda, Jerman, Yunani, Hungaria, Italia, Jepang,
+                    Norwegia Bokmål, Polandia, Portugis (Brasil), Portugis (Portugal), Spanyol, Swedia, dan Ukraina
+                    sebagai templat untuk penyempurnaan oleh manusia.</li>
+                  <li>Buat fungsi ekspor CSV yang dapat dikustomisasi</li>
+                  <li><span data-translate>Buat submodul CSA dengan fitur yang didukung komunitas</span>
+                    <ul>
+                      <li>Buat alat pemeliharaan dasbor untuk menghapus hasil yang sudah usang dan merayapi konten yang ada.</li>
+                      <li>Izinkan penandaan pengujian tertentu sebagai OK di seluruh situs, bukan hanya pada satu halaman.</li>
+                      <li>Izinkan konfigurasi terpisah, dengan pengaturan dan pengujian terpisah untuk pengembang dan editor
+                        konten.</li>
+                    </ul>
+                  </li>
+                </ol>
+              </div>
+            </details>
+          </div>
+        </section>
+        <section id="project-ideas">
+          <h3 data-section="project-ideas" class="pt-5">Dalam diskusi</h3>
+          <p>Diskusikan dan beri suara pada ide-ide ini di <a               href="https://github.com/itmaybejj/editoria11y/discussions">forum perpustakaan Editoria11y</a>.</p>
+          <p>Ide-ide diberi tag dengan perkiraan kesulitan/prioritas berdasarkan obrolan komunitas saat ini.</p>
+          <ul class="mt-1 p-5 pt-0">
+            <li>Dasbor pemantauan multi-situs</li>
+            <li>Deteksi tautan rusak</li>
+            <li>Pemindaian PDF</li>
+            <li>Tab lokasi kode tooltip</li>
+            <li>Ekspor laporan halaman tooltip</li>
+            <li>Kata-kata yang ditandai</li>
+            <li>Alat pengembang CLI</li>
+            <li>Bookmarklet/Plugin browser</li>
+            <li>Validasi aturan ACT</li>
+            <li>Perluas validasi nama/peran/nilai</li>
+          </ul>
+        </section>
+
+
+      </div>
+
+
+    </div>
+  </main>
+  <footer class="container col-lg-12 mx-auto pt-3 text-body-secondary text-center text-md-start">
+    <div class="container">
+      <div class="footer-nav text-center">
+        <a class="btn btn-primary btn-lg" data-slug="about" href="/id/">Tentang</a>
+        <a class="btn btn-primary btn-lg" data-slug="features" href="/id/fitur/">Fitur</a>
+        <a class="btn btn-primary btn-lg" data-slug="demo" href="/id/demo/">Demo</a>
+        <a class="btn btn-primary btn-lg" data-slug="license" href="/id/harga/">Harga dan kontribusi</a>
+      </div>
+      <div class="row footer">
+        <div class="col col-3">
+          <a href="https://github.com/itmaybejj/editoria11y"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+              height="20" fill="currentColor" class="bi bi-git" viewBox="0 0 16 16">
+              <path
+                d="M15.698 7.287 8.712.302a1.03 1.03 0 0 0-1.457 0l-1.45 1.45 1.84 1.84a1.223 1.223 0 0 1 1.55 1.56l1.773 1.774a1.224 1.224 0 0 1 1.267 2.025 1.226 1.226 0 0 1-2.002-1.334L8.58 5.963v4.353a1.226 1.226 0 1 1-1.008-.036V5.887a1.226 1.226 0 0 1-.666-1.608L5.093 2.465l-4.79 4.79a1.03 1.03 0 0 0 0 1.457l6.986 6.986a1.03 1.03 0 0 0 1.457 0l6.953-6.953a1.03 1.03 0 0 0 0-1.457" />
+            </svg> <strong>Pustaka</strong></a>
+        </div>
+        <div class="col col-3">
+          <a href="https://github.com/itmaybejj/editoria11y/discussions"><svg xmlns="http://www.w3.org/2000/svg"
+              width="20" height="20" fill="currentColor" class="bi bi-chat-right-heart-fill" viewBox="0 0 16 16">
+              <path
+                d="M16 2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h9.586a1 1 0 0 1 .707.293l2.853 2.853a.5.5 0 0 0 .854-.353zM8 3.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132" />
+            </svg> <strong>Forum</strong></a>
+        </div>
+        <div class="col col-3">
+          <a href="https://github.com/itmaybejj/editoria11y/issues"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+              height="20" fill="currentColor" class="bi bi-patch-plus-fill" viewBox="0 0 16 16">
+              <path
+                d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01zM8.5 6v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 1 0" />
+            </svg> <strong>Masalah</strong></a>
+        </div>
+        <div class="col col-3">
+          <a href="/id/kontak/"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+              class="bi bi-person-lines-fill" height="24" width="24" viewBox="0 0 16 18">
+              <path
+                d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z">
+              </path>
+            </svg> <strong>Kontak</strong></a>
+        </div>
+        <div class="col col-12 subfooter">
+          <a href="/id/kebijakan-privasi/">Kebijakan Privasi</a>
+          <a href="/id/kebijakan-cookie/">Kebijakan Cookie</a>
+          <a href="/id/syarat-penggunaan/">Syarat Penggunaan</a>
+          <a href="/id/pemberitahuan-hukum/">Pemberitahuan Hukum</a>
+          <span>&copy; 2026 Editoria11y LLC</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="/assets/bootstrap/js/bootstrap.bundle.min.js" class="astro-vvvwv3sm"></script>
+  <script src="/assets/lang/i18n.js"></script>
+  <script src="/assets/theme.js"></script>
+</body>
+
+</html>

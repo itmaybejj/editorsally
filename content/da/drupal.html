@@ -1,0 +1,495 @@
+<main class="container col-lg-12 mx-auto py-5">
+    <div class="row docs">
+      <div class="col-12 col-md-5 col-lg-4 mb-5">
+        <div id="on-this-page" class="list-group ms-2 ms-lg-5 position-sticky top-0 pt-3">
+        </div>
+      </div>
+      <div class="col-12 col-md-7 col-lg-8 pt-3">
+        <div data-bs-spy="scroll" data-bs-target="#on-this-page" data-bs-smooth-scroll="true">
+          <h1 data-i18n-id="s-e367">Editoria11y til Drupal</h1>
+          <section id="features">
+            <h2 class="pt-3" data-i18n-id="s-1dcf">Kernefunktioner</h2>
+
+            <p class="fs-6" data-i18n-id="s-a8c0">Drupal-modulet forbinder tjekkerbiblioteket med den redaktionelle backend og tilf&oslash;jer
+              mange serverside-v&aelig;rkt&oslash;jer til rapportering, governance og konfiguration</p>
+
+            <figure class="figure my-4 row">
+              <div class="col-lg-8">
+                <img loading="lazy" src="/assets/images/3x-editing.png" class="rounded border figure-img img-fluid" height="1088" width="2237" alt="Drupal-editor med inline-tips" data-i18n-id="s-ee36" />
+              </div>
+              <figcaption class="figure-caption col-lg-4" data-i18n-id="s-8e69">Problemer opdages b&aring;de ved sideindl&aelig;sning
+                p&aring; frontend og mens du skriver i CKEditor og Gutenberg.</figcaption>
+            </figure>
+
+            <figure class="figure my-4 row">
+              <div class="col-lg-8">
+                <img loading="lazy" src="/assets/images/3x-generic-tip.png" class="rounded border figure-img img-fluid" height="798" width="1278" alt="Tip viser at et link kun hedder klik her." data-i18n-id="s-1639" />
+              </div>
+              <figcaption class="figure-caption col-lg-4" data-i18n-id="s-9881">Tooltips f&aring;r knapper til at hoppe ind i editoren,
+                ignorere advarslen (for den aktive bruger) eller markere den som OK (for alle brugere). Gentagne
+                advarsler tilbyder side- eller webstedsd&aelig;kkende handlinger.
+              </figcaption>
+            </figure>
+
+            <figure class="figure my-4 row">
+              <div class="col-lg-8">
+                <img loading="lazy" src="/assets/images/3x-drupal-custom-tests.png" class="rounded border figure-img img-fluid" alt="Brugerdefineret testbygger-gr&aelig;nseflade med felter til tip-titel og -indhold samt element-selektorer og udelukkelser." data-i18n-id="s-0830" />
+              </div>
+              <figcaption class="figure-caption col-lg-4">
+                <p class="mb-2" data-i18n-id="s-37bf">CSA-undermodulet tilf&oslash;jer:</p>
+                <ul class="ps-3">
+                  <li data-i18n-id="s-caff"><strong>En brugerdefineret testbygger</strong></li>
+                  <li data-i18n-id="s-b145">40+ udviklertests</li>
+                  <li data-i18n-id="s-f55d">Kontrasttjek</li>
+                  <li data-i18n-id="s-b70c">Websteds-crawlere</li>
+                  <li data-i18n-id="s-5377">L&aelig;sbarhedsanalyse</li>
+                  <li data-i18n-id="s-6602">Opdelt konfiguration for udviklere/redakt&oslash;rer</li>
+                </ul>
+              <span data-translate data-i18n-id="s-bc47"></figcaption>
+            </figure>
+
+            <figure class="figure">
+              <img loading="lazy" class="figure-img img-fluid rounded border" src="/assets/images/3x-dashboard.png" height="765" width="1600" alt="Rapporteringsdashboard der viser seneste problemer og sider med flest problemer." data-i18n-id="s-2559" />
+              <figcaption class="figure-caption p-3 pt-2" data-i18n-id="s-cdbf">Et overordnet dashboard giver filtrerbare og
+                eksporterbare rapporter over advarsler og afvisninger.</figcaption>
+            </figure>
+
+          </section>
+          <h2 data-i18n-id="s-8fec">Installation og vigtige ops&aelig;tningstrin</h2>
+          <p data-i18n-id="s-7627">Det <a href="https://www.drupal.org/project/editoria11y/">medf&oslash;lgende installationsprogram</a>
+            p&aring; Drupal.org indeholder flere moduler:</p>
+          <ul>
+            <li data-i18n-id="s-b830">
+              Editoria11y: det centrale indholdstjek og dashboard.
+            </li>
+            <li data-i18n-id="s-b351">
+              Editoria11y CSA: udviklertests og vedligeholdelsesv&aelig;rkt&oslash;jer til dashboardet.
+            </li>
+            <li data-i18n-id="s-74fe">
+              Editoria11y Export: CSV-rapporteringsv&aelig;rkt&oslash;jer.
+            </li>
+          </ul>
+          <p data-i18n-id="s-88fd">Install&eacute;r som ethvert andet modul, og tag derefter disse vigtige skridt:</p>
+          <ol>
+            <li data-i18n-id="s-7187"><strong>Tjek rettigheder.</strong> Betroede forfattere b&oslash;r have &quot;Mark&eacute;r OK&quot;,
+              &quot;Mark&eacute;r som ignoreret&quot; og &quot;Vis dashboardet&quot;.</li>
+            <li data-i18n-id="s-1ac1"><strong>Tjek vigtige sider for gentagne eller un&oslash;dvendige advarsler.</strong> Mark&eacute;r dem
+              enten som OK i tooltippet, eller juster konfigurationen til at ignorere elementer via selektor.</li>
+            <li data-i18n-id="s-e5b2">Led efter tips der er sv&aelig;re at se &ndash; uden for sk&aelig;rmen, afsk&aring;ret, bag andre
+              elementer eller p&aring; skjulte elementer. Brug tipsene i &quot;Ret tip-placering&quot; nedenfor for at
+              l&oslash;se det.</li>
+            <li data-i18n-id="s-c564">Hvis webstedet allerede har indhold, og du har et CSA-abonnement, skal du bes&oslash;ge dashboardets
+              &quot;gentjek&quot;-fane og <strong>crawle webstedet</strong> for at forh&aring;ndsindl&aelig;se
+              rapporterne. Dette er valgfrit, men &aelig;ldre sider vises ikke i rapporter, f&oslash;r de er crawlet
+              eller bes&oslash;gt af en logget ind bruger.</li>
+          </ol>
+          <p data-i18n-id="s-e025">Se en <a href="https://youtu.be/uYvNYPg38nU?si=dqADyWpTtOhniHTP&t=696">videointroduktion til
+              konfigurationsmulighederne</a> (v2.4).</p>
+
+          <h2 id="check-roots" data-i18n-id="s-9202">Skjul un&oslash;dvendige advarsler</h2>
+          <p data-i18n-id="s-fa47">
+            <strong>Gode konfigurationer undertrykker un&oslash;dvendige advarsler, s&aring; indholdsforfattere kan
+              fokusere p&aring; de problemer, de b&oslash;r rette</strong>.
+          </p>
+          <p data-i18n-id="s-996e">Selvom du kan sl&aring; tests helt fra, er det som regel bedre at skjule advarsler p&aring; specifikke
+            elementer eller sider.</p>
+          <hr/>
+          <p data-i18n-id="s-7918">
+            Under hver testk&oslash;rsel indsamler Editoria11y et enkelt s&aelig;t elementer fra indstillingen
+            &quot;Tjek indhold i disse containere&quot; og filtrerer det derefter flere gange. S&aring;dan ser et
+            testk&oslash;rsel ud:
+          </p>
+          <ol>
+            <li data-i18n-id="s-994a">
+              Annull&eacute;r tjek hvis konfigurationen forhindrer tjek p&aring; denne side eller for denne bruger.
+            </li>
+            <li data-i18n-id="s-10c9">
+              <strong>Indsaml</strong> elementer i angivne sideomr&aring;der,
+              f.eks.:<br/><code>body > *:not('.ed11y-element')</code><br/>
+              <em>For Editoria11y CSA-brugere er dette omr&aring;derne p&aring; fanen
+                <strong>Udviklertests</strong>.</em>
+            </li>
+            <li data-i18n-id="s-7524">
+              <strong>Fjern</strong> elementer der matcher ignorer-selektorer,
+              f.eks.:<br/><code>.widgets, .utility-menu</code><br/>
+              <em>For Editoria11y CSA-brugere er dette selektorerne p&aring; fanen <strong>Udviklertests</strong>.</em>
+            </li>
+            <li data-i18n-id="s-58d0">
+              K&oslash;r tests og synkroniser resultater til dashboardet.
+            </li>
+            <li>
+              <span data-translate data-i18n-id="s-f8c6">Hvis opdelt konfiguration er aktiv, og brugeren er indholdsredakt&oslash;r, filtreres udviklerresultater:</span>
+              <ul>
+                <li data-i18n-id="s-72c9"><strong>Fjern</strong> resultater fra tests sat til &quot;Kun udvikler&quot;.</li>
+                <li data-i18n-id="s-576e"><strong>Fjern</strong> resultater p&aring; elementer uden for angivne
+                  <strong><em>indholds</em></strong>omr&aring;der, f.eks.:<br/><code>main, footer</code>
+                </li>
+                <li data-i18n-id="s-bb1d"><strong>Fjern</strong> resultater p&aring; elementer der matcher
+                  <strong><em>indholds</em></strong>ignorer-selektorer.
+                </li>
+              </ul>
+              Bem&aelig;rk at der ikke er en anden &quot;indsamlings&quot;-fase. Udviklerens sideomr&aring;der skal
+              inkludere indholdsomr&aring;derne.</span>
+            </li>
+            <li data-i18n-id="s-b79c">&Aring;bn panelet og tegn advarsler, hvis konfigurationen matcher en automatisk
+              &aring;bning-indstilling.</li>
+          </ol>
+
+          <h3 id="dismiss" data-i18n-id="s-be02">Afvis advarsler</h3>
+          <p data-i18n-id="s-2ae3">Tests kan konfigureres i biblioteket som fejl eller advarsler (&quot;manuelle tjek&quot;). Advarsler kan
+            afvises. Der er to typer afvisninger tilg&aelig;ngelige i bunden af hver tooltip:</p>
+          <div class="my-2"
+            style="background: url(/assets/images/3x-generic-tip.png) 100% 98%; max-width: 600px; padding-top: 6%; background-size: 108%;">
+          </div>
+          <ul>
+            <li data-i18n-id="s-7b65">&quot;Ignor&eacute;r&quot; gemmes som en brugerpr&aelig;ference: advarslen er nu skjult for den aktuelle
+              bruger, men kun for den aktuelle bruger.</li>
+            <li data-i18n-id="s-654c">&quot;Mark&eacute;r OK&quot; skjuler advarslen for alle brugere.</li>
+          </ul>
+          <p data-i18n-id="s-dc14">Om en bruger kan afvise en advarsel styres p&aring; rolleniveau i Drupals brugerrettigheder. <strong>De
+              fleste forfattere b&oslash;r have lov til at afvise advarsler</strong>. Der er ingen mening i at tildele
+            nogen et manuelt tjek, hvis de ikke kan markere elementet som tjekket.</p>
+
+          <h3 id="roots" data-i18n-id="s-d932">Ignor&eacute;r elementer</h3>
+          <p data-i18n-id="s-9d1e">Disse to konfigurationsindstillinger er de vigtigste!</p>
+          <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
+            <label for="edit-content-root">Tjek indhold i disse containere</label>
+            <div><textarea class="form-control" id="edit-content-root" name="content_root" rows="1" cols="30"
+                disabled></textarea>
+            </div>
+            <div class="mt-3">
+              <label for="edit-ignore-elements">Spring disse elementer over</label>
+              <div>
+                <textarea class="form-control" id="edit-ignore-elements" disabled name="ignore_elements" rows="1"
+                  cols="30" class=""></textarea>
+              </div>
+            </div>
+          </div>
+          <p data-i18n-id="s-6051">
+            S&aelig;t den f&oslash;rste til at inkludere alle dele af siden, som indholdsforfattere kan redigere.
+            F.eks., hvis de kan redigere <code>main</code>-indholdsomr&aring;det, <code>.sidebar</code> og
+            <code>.footer-column-two</code>, s&aring; angiv disse selektorer som dit indholdsomr&aring;de.
+          </p>
+          <p data-i18n-id="s-f29c">
+            Brug den anden til at &quot;fjerne&quot; underafsnit. F.eks., hvis <code>main</code> indeholder diverse
+            widgets og embeds, som kun udviklere kan &aelig;ndre, s&aring; list dem:
+            <code>.widget-1, .social-embed</code>;
+          </p>
+          <p data-i18n-id="s-10ef">Hvis du bruger opdelt konfiguration, vil du se et lignende par indstillinger p&aring; fanen Udviklertests:
+          </p>
+          <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
+            <div>
+              <fieldset>
+                <legend>
+                  Udvikler-tjek-omr&aring;de
+                </legend>
+                <div class="fieldset__wrapper fieldset__wrapper--group">
+
+                  <div id="edit-dev-check-root">
+                    <div>
+                      <input aria-describedby="edit-dev-check-root--description" type="radio"
+                        id="edit-dev-check-root-automatic" name="dev_check_root" value="automatic" checked="checked" />
+                      <label for="edit-dev-check-root-automatic" class="form-item__label option">Alle elementer</label>
+                    </div>
+                    <div class="d-flex">
+                      <input aria-describedby="edit-dev-check-root--description" type="radio"
+                        id="edit-dev-check-root-match" name="dev_check_root" value="match"
+                        class="align-self-baseline mt-1 me-1" />
+                      <label for="edit-dev-check-root-match" class="form-item__label option">Kun de containere, der er
+                        angivet p&aring; fanen Indholdsindstillinger</label>
+                    </div>
+                    <div class="">
+                      <input aria-describedby="edit-dev-check-root--description" type="radio"
+                        id="edit-dev-check-root-specify" name="dev_check_root" value="specify"
+                        class="form-radio form-boolean form-boolean--type-radio" />
+                      <label for="edit-dev-check-root-specify" class="">De specifikke containere angivet
+                        nedenfor</label>
+                    </div>
+                  </div>
+
+                </div>
+              </fieldset>
+
+              <div class="">
+                <label for="edit-always-ignore" class="mt-3">Ignor&eacute;r for b&aring;de udviklere og
+                  indholdsredakt&oslash;rer</label>
+                <div class="form-textarea-wrapper">
+                  <textarea id="edit-always-ignore" class="form-control" name="always_ignore" rows="1" cols="20"
+                    placeholder=""></textarea>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+          <p data-i18n-id="s-8c02">Det vigtigste at vide om udvikler-tjek-omr&aring;derne er, at de <strong>ikke er uafh&aelig;ngige</strong>
+            af indholdsomr&aring;derne. I en opdelt konfiguration tjekkes udvikleromr&aring;derne, og derefter
+            <strong>filtreres</strong> resultaterne til at matche indholdsomr&aring;derne. Omr&aring;der der er
+            udelukket for udviklere, vil ogs&aring; v&aelig;re udelukket for indholdsredakt&oslash;rer. Udeluk ikke
+            redigerbare indholdsomr&aring;der!
+          </p>
+
+          <p data-i18n-id="s-0312">Nogle tests giver mulighed for mere pr&aelig;cis konfiguration, s&aring; kun bestemte advarsler skjules
+            p&aring; ber&oslash;rte elementer. Find dem under:</p>
+          <ul>
+            <li data-i18n-id="s-d53d">Indholdstests: Links der skal tjekkes</li>
+            <li data-i18n-id="s-0d1e">Indholdstests: Embeds der skal tjekkes</li>
+            <li data-i18n-id="s-10c1">Indholdstests: Registrering af dynamisk indhold og shadow-indhold</li>
+            <li data-i18n-id="s-e6e4">Udviklertests: Kontrast</li>
+          </ul>
+
+          <h3 id="pages" data-i18n-id="s-177c">Skjul for specifikke sider eller brugere</h3>
+          <p data-i18n-id="s-e874">
+            Den nemmeste m&aring;de at g&oslash;re dette p&aring; er at videregive CSS-klasser eller ID'er til disse
+            muligheder:
+          </p>
+          <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
+            <label for="edit-no-load" class="form-item__label">Tjek ikke p&aring; sider med disse elementer</label>
+            <div class="form-textarea-wrapper">
+              <textarea data-drupal-selector="edit-no-load" aria-describedby="edit-no-load--description"
+                id="edit-no-load" name="no_load" rows="1" cols="20" class="form-control"></textarea>
+            </div>
+
+            <label for="edit-ignore-all-if-absent" class="form-item__label">Skjul alle advarsler p&aring; sider hvor
+              disse elementer ikke er til stede</label>
+            <div class="form-textarea-wrapper">
+              <textarea data-drupal-selector="edit-ignore-all-if-absent"
+                aria-describedby="edit-ignore-all-if-absent--description" id="edit-ignore-all-if-absent"
+                name="ignore_all_if_absent" rows="1" cols="20" class="form-control"></textarea>
+            </div>
+
+          </div>
+          <p data-i18n-id="s-0877">
+            Den f&oslash;rste forhindrer tjek i at k&oslash;re, og v&aelig;rkt&oslash;jslinjen vises ikke.
+          </p>
+          <p data-i18n-id="s-5cbd">
+            Den anden starter tjekkeren minimeret og markerer automatisk (for den aktuelle bruger) alle problemer som
+            &quot;Ignoreret&quot;, selv hvis de er fejl. Dette g&oslash;r det muligt for tests at k&oslash;re og
+            opdatere dashboardet uden at forstyrre brugeren.
+          </p>
+          <p data-i18n-id="s-1661">
+            Hvis du vil bruge disse til at styre, hvilke brugere der ser tjekkeren, skal du muligvis justere dit tema
+            til at udskrive en klasse, f.eks. <code>.user-247</code>
+          </p>
+
+          <h2 id="dashboard" data-i18n-id="s-f4d7">Administrer resultater for hele webstedet</h2>
+          <section id="refresh">
+            <h3 class="pt-3" data-i18n-id="s-012a">Crawling og opdatering af resultater</h3>
+            <p data-i18n-id="s-75a9">Editoria11y er et <strong>realtidsoverv&aring;gningsv&aelig;rkt&oslash;j, ikke en crawler</strong>.
+              Rapporterne for hele webstedet opdateres, n&aring;r forfattere bes&oslash;ger sider, s&aring;
+              regul&aelig;r crawling er normalt ikke n&oslash;dvendig. CSA-modulet <em>inkluderer</em> en crawler, men
+              den b&oslash;r kun v&aelig;re n&oslash;dvendig i disse tre situationer:</p>
+            <ol>
+              <li data-i18n-id="s-dfb1">
+                N&aring;r Editoria11y f&oslash;rst installeres p&aring; et eksisterende websted med mange sider. Sider
+                skal bes&oslash;ges, f&oslash;r de vises p&aring; dashboardet, s&aring; en hurtig indledende crawl
+                sparer tid.
+              </li>
+              <li data-i18n-id="s-f602">
+                Store opdateringer af temaer eller moduler kan rette (eller for&aring;rsage) problemer p&aring; mange
+                sider, som ikke vises, f&oslash;r de bes&oslash;ges eller crawles.
+              </li>
+              <li data-i18n-id="s-a530">
+                Massehandlinger i administrationsgrænsefladen som sletning af sider eller omdirigeringer har en tendens
+                til at efterlade resultater fra sider, der ikke l&aelig;ngere eksisterer eller er flyttet. I disse
+                tilf&aelig;lde hj&aelig;lper det at bruge vedligeholdelseshandlingerne p&aring; fanen
+                &quot;Opdater&quot; til at opdatere side-URL'er og finde og fjerne slettede sider.
+              </li>
+            </ol>
+            <p data-i18n-id="s-8e5a">Ingen data forlader dit websted under en crawl. CSA-crawleren er ikke et cloud-v&aelig;rkt&oslash;j; den
+              bruger din browser til at indl&aelig;se og tjekke siderne p&aring; dit eget websted. Ulempen ved denne
+              tilgang er, at <strong>browsere pauser baggrundsfaner</strong>. Du skal holde din computer t&aelig;ndt og
+              v&aring;gen under en crawl. Planl&aelig;g at &aring;bne et nyt vindue til crawleren og lade det v&aelig;re
+              forgrundsvinduet, mens den arbejder. Du kan forts&aelig;tte med at arbejde i et andet vindue. Crawleren
+              opdaterer sit estimat efter hver batch af sider.</p>
+          </section>
+          <section id="reports">
+            <h3 data-i18n-id="s-a242">Visning af rapporter</h3>
+            <div class="my-4 border shadow"
+              style="background: url(/assets/images/3x-dashboard.png) 86% 0%; padding-top: 28%; background-size: 106%;">
+            </div>
+            <ul>
+              <li data-i18n-id="s-e328">
+                <strong>Seneste</strong> giver mulighed for at udforske individuelle advarsler. Dette g&oslash;r det
+                muligt at filtrere for at finde alle forekomster af samme advarselstype, se hvilke advarsler der hyppigt
+                optr&aelig;der i nyt indhold, eller hvilke forfattere der stadig har en vane med at lave den samme fejl.
+              </li>
+              <li data-i18n-id="s-796f">
+                <strong>Sider</strong> viser antal advarsler per side, grupperet efter side. Dette g&oslash;r det muligt
+                at finde sider med flest problemer og filtrere efter sideattributter som indholdstype og
+                publiceringsstatus.
+              </li>
+              <li data-i18n-id="s-9423">
+                <strong>Advarsler</strong> viser problemer efter type.
+              </li>
+              <li data-i18n-id="s-52ed">
+                <strong>Afvisninger</strong> giver mulighed for at overv&aring;ge, om forfattere afviser korrekt, og har
+                &quot;nulstil&quot;-knapper til at gendanne afviste advarsler.
+              </li>
+              <li data-i18n-id="s-3379">
+                <strong>Eksport</strong> indeholder versioner af rapporterne Sider, Advarsler og Afvisninger, som kan
+                filtreres til forberedelse af CSV-downloads. <em>Leveres af CSV Export-undermodulet</em>
+              </li>
+              <li data-i18n-id="s-9814">
+                <strong>Opdater</strong> indeholder vedligeholdelsesv&aelig;rkt&oslash;jer til dashboardet til at fjerne
+                advarsler fra slettede sider, fjerne advarsler fra parameteriserede pseudosider som
+                /search?query=example, opdatere gemte sidetitler og URL'er og k&oslash;re en manuel crawl. <em>Leveres
+                  af CSA-undermodulet</em>
+              </li>
+            </ul>
+          </section>
+
+          <h2 id="positioning" data-i18n-id="s-c35b">Ret skjulte eller tips uden for sk&aelig;rmen</h2>
+
+          <p data-i18n-id="s-68ce">Modulet indeholder felter til to af bibliotekets konfigurationsmuligheder for at &aelig;ndre, hvordan tips
+            placeres:</p>
+
+          <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
+            <label for="edit-element-hides-overflow" class="form-item__label">Elementer med skjult overflow</label>
+            <textarea data-drupal-selector="edit-element-hides-overflow"
+              aria-describedby="edit-element-hides-overflow--description" id="edit-element-hides-overflow"
+              name="element_hides_overflow" rows="1" cols="60" class="form-control"></textarea>
+            <label for="edit-hidden-handlers" class="form-item__label">Tema-JavaScript h&aring;ndterer visning af
+              skjulte tooltips i disse containere</label>
+            <textarea data-drupal-selector="edit-hidden-handlers" aria-describedby="edit-hidden-handlers--description"
+              id="edit-hidden-handlers" name="hidden_handlers" rows="1" cols="60" class="form-control"></textarea>
+          </div>
+          <p data-i18n-id="s-34e4">Nogle temaer har kolonner eller widgets, der skjuler vandret eller lodret overflow. Biblioteket registrerer
+            automatisk, n&aring;r en skifteknap ville falde uden for den synlige del af <strong>siden.</strong> Ved at
+            fort&aelig;lle biblioteket, at bestemte containere skjuler overflow, vil det ogs&aring; fors&oslash;ge at
+            placere tips for elementer i disse containere inden for deres gr&aelig;nser.</p>
+          <p data-i18n-id="s-7cb7">Nogle temaer har widgets, der skifter synlighed af indhold, s&aring;som harmonikaer, faner og slideshows.
+            Tips inde i disse elementer vil ogs&aring; v&aelig;re skjulte. Ved at angive en liste over selektorer for
+            disse widgets vil Editoria11y holde en kort pause, n&aring;r en bruger fors&oslash;ger at hoppe til disse
+            tips med en n&aelig;ste- eller forrige-knap. Drupal-temaer og -moduler kan derefter f&oslash;lge
+            vejledningen fra bibliotekets afsnit om <a href="/en/install/#hidden-content">h&aring;ndtering af tips
+              p&aring; skjult indhold</a> for at afd&aelig;kke det skjulte indhold.</p>
+
+          <h2 id="runtime" data-i18n-id="s-7e38">Skriv din egen konfiguration</h2>
+          <p data-i18n-id="s-a5d3">I PHP: Drupal-modulet indeholder en <code>hook_editoria11y_alter_config</code> til at &aelig;ndre indholdet
+            af <code>drupalSettings.editoria11y</code> i et modul eller tema. For eksempel:</p>
+          <pre class="language-php"><code><!--<?php
+/**
+ * @file
+ * MY_MODULE module file.
+ */
+
+use Drupal\Core\Cache\CacheableMetadata;
+
+/**
+ * Implements hook_editoria11y_alter_config().
+ *
+ * Attaches Editoria11y library and config based on context.
+ */
+function MY_MODULE_editoria11y_alter_config(array &$attach, CacheableMetadata $cacheableMetadata): void {
+  $config = Drupal::config('editoria11y.settings');
+
+  // Module settings being changed need to bust the cache.
+  $cacheableMetadata->addCacheableDependency($config);
+
+  // Get and modify any of the values being passed to drupalSettings.editoria11y.
+  if (!empty($attach['allow_ok'])) {
+    $attach['allow_ok'] = 'okAll';
+  }
+}--></code></pre>
+          <p data-i18n-id="s-2368">&AElig;ndring af <code>drupalSettings</code> hj&aelig;lper kun, hvis modulets JavaScript allerede er sat op
+            til at videregive den v&aelig;rdi til biblioteket. For at tilf&oslash;je yderligere parametre skal du
+            &aelig;ndre JavaScript-<code>options</code>-objektet direkte. Modulet tjekker for &eacute;n global
+            JavaScript-variabel kaldet <code>editoria11yOptionsOverride</code>. Hvis denne er sat, vil det videregive
+            <code>options</code>-objektet til en <code>editoria11yOptions</code>-funktion, som du har defineret i dit
+            modul eller tema. Du kan nu angive alle <a               href="https://editorsally.ddev.site/en/install/#params">bibliotekets parametre</a>.
+          </p>
+          <pre class="language-javascript"><code><!--var editoria11yOptionsOverride = true;
+var editoria11yOptions = function(options) {
+  // You now have access to the processed options object that will be passed to the library.
+
+  // E.g., to add a selector to the ignore list:
+  if (options['ignoreElements'] === false) {
+    // Provide the selector as the only value.
+    options['ignoreElements'] = `.example`;
+  } else {
+    // Append additional selectors with comma separator.
+    options['ignoreElements'] = `${options['ignoreElements']}, .example`
+  }
+
+  // Return your processed options.
+  return options;
+}
+--></code></pre>
+          <section id="custom-tests">
+            <h2 data-i18n-id="s-e0f0">Skriv dine egne tests</h2>
+            <p data-i18n-id="s-6ece">F&oslash;rst skal du i modulkonfigurationen tilf&oslash;je 1 til indstillingen &quot;Brugerdefinerede
+              tests&quot;, s&aring; det ved, at det skal holde &oslash;je med testene.</p>
+            <p data-i18n-id="s-4316">Opret derefter et Drupal JavaScript-bibliotek med dine tests i dit tema eller modul ved hj&aelig;lp af <a href="/en/install/#custom-tests">bibliotekets guide til at skrive brugerdefinerede tests</a>.</p>
+            <p data-i18n-id="s-b4ea">Her er et fungerende eksempel fra Princeton p&aring; en brugerdefineret test, der advarer om Safe Links.
+              Bem&aelig;rk at den tilg&aring;r Editoria11y-klassen via <code>Drupal.Ed11y.</code></p>
+            <pre class="language-javascript"><code><!--const psEd11yCustomTests = function() {
+
+  // 1.
+  // Get elements to test, via Drupal.Ed11y.getElements.
+  // The 'root' parameter tells it to respect config for check areas and ignores.
+  const safeLinks = Drupal.Ed11y.getElements('a[href*="safelinks.protection.outlook.com/?"]', 'root');
+
+  // Add the test name to the lang object.
+  Drupal.ed11yLang.lang.testNames.outlookSafeLink = 'URL is Safe Link encoded';
+
+  // 2.
+  // Create the tip content.
+  const decodeSafelink = function(url) {
+    const params = new URL(url).searchParams;
+    let decoded = params.get('url');
+    const p = document.createElement('p');
+    if (!!decoded) {
+      p.innerHTML = `<p><span class="badge">To fix</span>Update this link with the correct URL, which is probably:<br>
+    <em style='word-wrap: break-word;font-size: 90%;line-height: 1.2;display: block;'></em></p>`
+      p.querySelector('em').textContent = Drupal.Ed11y.sanitizeHTML(decoded);
+    }
+    return p;
+  };
+  safeLinks?.forEach((el) => {
+    const content = document.createElement('div');
+    content.innerHTML = `<div class="title">Please fix this Outlook "Safe Link"</div>
+            <div class="why">
+                <p>The URL for this link is an Outlook "Safe Link" that was copied from an email.
+                It includes the original recipient's email address,
+                and will break if Microsoft shuts down the service.</p>
+                <p>The pasted URL is:<br>
+                <em style='word-break: break-all;font-size: 90%;line-height: 1.2;
+                display: block;'></em></p>
+            </div>
+            `;
+    content.querySelector('em').textContent = Drupal.Ed11y.sanitizeHTML(el.href);
+    content.querySelector('.why').insertAdjacentElement('beforebegin', decodeSafelink(el.href));
+
+    // 3.
+    // Push the tip to the library results object.
+    Drupal.Ed11y.State.results.push({
+      element: el,
+      test: 'outlookSafeLink',
+      type: 'error',
+      content: content,
+      position: 'beforebegin',
+      inline: false,
+      dismiss: false,
+    });
+  });
+
+  // 4.
+  // Tell Editoria11y you are done adding custom results.
+  const allDone = new CustomEvent('ed11yResume');
+  document.dispatchEvent(allDone);
+};--></code></pre>
+
+          </section>
+          <section id="help">
+            <h2 data-i18n-id="s-4690">F&aring; hj&aelig;lp</h2>
+            <p data-i18n-id="s-f149">Se <a href="../contacts">kontakt</a>-siden for mulighederne for fællesskabsstøtte. @itmaybejj er normalt
+              online p&aring; Drupal Slack, n&aring;r solen er oppe p&aring; den vestlige halvkugle.</p>
+            <p data-i18n-id="s-4a16">De fleste <a href="../license/">CSA-bidragsniveauer</a> inkluderer et &aring;rligt check-in, som kan
+              omfatte direkte hj&aelig;lp med ops&aelig;tning og konfiguration</p>
+          </section>
+
+        </div>
+      </div>
+    </div>
+  </main>

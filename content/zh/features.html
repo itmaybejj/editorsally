@@ -1,0 +1,356 @@
+<main class="container col-lg-12 mx-auto py-5">
+    <div class="row docs">
+      <div class="col-12 col-md-5 col-lg-4 mb-5">
+        <div id="on-this-page" class="list-group ms-2 ms-lg-5 position-sticky top-0 pt-3">
+        </div>
+      </div>
+      <div class="col-12 col-md-7 col-lg-8 pt-3" data-bs-spy="scroll" data-bs-target="#on-this-page"
+        data-bs-smooth-scroll="true" tabindex="0">
+        <section id="features">
+          <h1 class="text-body-emphasis pt-2 pb-5" data-i18n-id="s-3943">功能</h1>
+          <p class="fs-6" data-i18n-id="s-b729">Editoria11y 的核心检测项可识别 50 余种常见内容无障碍问题，涵盖影响可读性的设计决策、削弱屏幕阅读器效果的错误，以及降低 SEO 的问题。</p>
+          <p class="fs-6" data-i18n-id="s-0c4a">扩展插件另提供约 40 项针对开发者和设计师的额外检测，包括自定义检测项和各类全站质量保证工具。</p>
+          <p class="fs-6" data-i18n-id="s-0887">
+            内容检测聚焦于网站移交给内容作者<strong>之后</strong>出现的问题。网站在上线前需借助手动审计工具、键盘和屏幕阅读器进行测试，但即便是第一天无障碍性最优的网站，随着编辑不断引入新问题，质量也往往会逐渐下滑。
+          </p>
+          <p class="fs-6" data-i18n-id="s-44f1">Editoria11y
+            在无障碍工具中脱颖而出的关键在于：其检测在浏览器中实时运行，贯穿作者编辑和预览内容的全过程。<strong>作者更容易对即时的内联反馈作出响应</strong>——注意到提示并加以修正——而不是专门去访问仪表板或手动运行检查。
+          </p>
+        </section>
+        <section id="authoring">
+          <h2 data-i18n-id="s-fec2">作者使用体验</h2>
+          <div class="clearfix">
+            <img src="/assets/images/3x-toolbar" class="image-fluid float-start me-3" alt="Editoria11y 工具栏截图，显示 4 个错误。" width="97" height="50" loading="lazy" data-i18n-id="s-0e1b" />
+            <p data-i18n-id="s-ca49">作者在编辑内容时可看到 Editoria11y 工具栏。检测到问题时，工具栏会变为黄色或红色，并显示问题数量。点击数字可跳转到第一个提示并展开其说明气泡。</p>
+          </div>
+          <div class="row">
+            <img loading="lazy" src="/assets/images/3x-generic-tip.png" class="img-fluid col-6 col-lg-8" height="798" width="1278" alt="提示说明某链接仅命名为" data-i18n-id="s-bff1" />
+            <p class="col-6 col-lg-4 align-content-center" data-i18n-id="s-6a38">提示以内联方式呈现，包含错误的通俗描述、修正建议，以及该问题的重要性说明。</p>
+          </div>
+          <div class="row">
+            <img loading="lazy" class="img-fluid col-6 col-lg-8" src="/assets/images/3x-tools.jpg" height="473" width="405" alt="页面上叠加显示的标题大纲可视化工具" data-i18n-id="s-7aed" />
+            <p class="col-6 col-lg-4 align-content-center" data-i18n-id="s-f5e0">工具栏还提供用于手动检查的附加工具，包括标题大纲和替代文本可视化工具，以及可读性评分。</p>
+          </div>
+        </section>
+        <section id="admins">
+          <h2 data-i18n-id="s-c5cb">网站管理员控制</h2>
+          <p data-i18n-id="s-c155">检查器的所有可见方面均可自定义。通过参数和事件，可以移除检测项、重写提示、插入自定义检测项并设置自定义主题。</p>
+          <p data-i18n-id="s-e2f8">Drupal 和 WordPress 插件提供额外功能，例如同步忽略操作、全站仪表板和 CSV 报告导出。</p>
+          <figure class="figure my-4 rounded shadow mb-5 border">
+            <img loading="lazy" class="figure-img img-fluid" src="/assets/images/3x-dashboard.png" height="765" width="1600" alt="报告仪表板，显示近期问题及问题最多的页面。" data-i18n-id="s-1978" />
+            <figcaption class="figure-caption p-3 pt-2" data-i18n-id="s-f804">Drupal 仪表板，包含问题、存在问题的页面及忽略记录的可筛选列表。</figcaption>
+          </figure>
+        </section>
+        <section id="tests">
+          <h2 data-section="tests" data-i18n-id="s-7aa7">检测项</h2>
+          <p class="fs-6" data-i18n-id="s-4c74">Editoria11y 的检测项致力于从人性化角度而非纯技术标准出发，改善所有用户的网络体验。核心检测项旨在帮助达到网络内容无障碍指南（<a               href="https://www.w3.org/WAI/WCAG22/quickref/">WCAG 2.2 AA</a>）的要求，其他检测项则参考了<a               href="https://www.w3.org/TR/coga-usable/">认知和学习障碍无障碍工作组</a>的成果，以及通用可用性和设计最佳实践。</p>
+          <p class="fs-6 pb-3" data-i18n-id="s-acaf">网站管理员可关闭单项检测。</p>
+          <div class="row listgrid">
+            <div class="col-12 col-xl-4">
+              <h3 class="fs-5 nomenu pt-0" data-i18n-id="s-d4f0">图片替代文本</h3>
+              <ul>
+                <li data-i18n-id="s-91d8">图片缺少 alt 属性</li>
+                <li data-i18n-id="s-82dc">替代文本是文件名</li>
+                <li data-i18n-id="s-b384">替代文本是占位符（"TBD"）</li>
+                <li data-i18n-id="s-e9d8">替代文本是无法朗读的符号</li>
+                <li data-i18n-id="s-a464">替代文本含冗余词语（"图片显示&hellip;"）</li>
+                <li data-i18n-id="s-d390">替代文本过长</li>
+                <li data-i18n-id="s-98b4">装饰性图片可能有实际价值</li>
+                <li data-i18n-id="s-b3f7">轮播图被标记为装饰性</li>
+                <li data-i18n-id="s-046e">有说明文字的图片缺少替代文本</li>
+                <li data-i18n-id="s-27e8">替代文本与说明文字重复</li>
+              </ul>
+              <h3 class="fs-5 nomenu pt-0" data-i18n-id="s-7416">链接图片</h3>
+              <ul>
+                <li data-i18n-id="s-4344">链接图片没有替代文本</li>
+                <li data-i18n-id="s-a829">链接图片替代文本是 URL 或文件名</li>
+                <li data-i18n-id="s-7a28">链接图片替代文本是占位符</li>
+                <li data-i18n-id="s-545b">链接图片替代文本是无法朗读的符号</li>
+                <li data-i18n-id="s-f97b">链接图片替代文本描述的是图片而非链接</li>
+                <li data-i18n-id="s-331e">链接图片替代文本含冗余词语</li>
+                <li data-i18n-id="s-4ee3">链接图片替代文本过长</li>
+                <li data-i18n-id="s-114e">含文字的链接中的图片缺少 alt 属性</li>
+              </ul>
+              <h3 class="fs-5 nomenu pt-0" data-i18n-id="s-b0ee">嵌入媒体</h3>
+              <ul>
+                <li data-i18n-id="s-561c">视频需要字幕</li>
+                <li data-i18n-id="s-e31b">音频需要文字稿</li>
+                <li data-i18n-id="s-edcb">数据可视化需要无障碍替代方案</li>
+                <li data-i18n-id="s-28a4">框架缺少标题</li>
+                <li data-i18n-id="s-bf38">框架被排除在键盘导航之外</li>
+                <li data-i18n-id="s-10cc">框架内容需要手动无障碍检查</li>
+                <li data-i18n-id="s-4cec">链接文档可能不支持屏幕阅读器访问</li>
+                <li data-i18n-id="s-a85e">PDF 缺少无障碍替代方案</li>
+                <li data-i18n-id="s-4b56">嵌套的交互式布局组件</li>
+              </ul>
+            </div>
+            <div class="col-12 col-xl-4">
+              <h3 class="fs-5 nomenu pt-0" data-i18n-id="s-8c93">有意义的链接</h3>
+              <ul>
+                <li data-i18n-id="s-0ade">空链接</li>
+                <li data-i18n-id="s-4427">链接文本是 URL</li>
+                <li data-i18n-id="s-3520">链接文本仅为 DOI 号码</li>
+                <li data-i18n-id="s-d515">链接文本写的是"点击此处"</li>
+                <li data-i18n-id="s-65bb">链接文本仅为通用词语（"阅读更多"）</li>
+                <li data-i18n-id="s-dd2d">不同链接共用相同文本</li>
+                <li data-i18n-id="s-0d39">链接图标或图片没有文字替代</li>
+                <li data-i18n-id="s-5a53">链接在未提示的情况下打开新标签页</li>
+                <li data-i18n-id="s-cf05">链接在未提示的情况下指向文件</li>
+                <li data-i18n-id="s-cb51">链接文本仅为符号或表情符号</li>
+                <li data-i18n-id="s-99ab">对视力正常用户隐藏的有意义链接文本</li>
+                <li data-i18n-id="s-06c2">冗余的链接提示</li>
+                <li data-i18n-id="s-05ce">页内锚点链接失效</li>
+                <li data-i18n-id="s-d4d1">重复的 ID 属性</li>
+                <li data-i18n-id="s-98a1">链接可能指向开发环境</li>
+              </ul>
+              <h3 class="fs-5 nomenu pt-0" data-i18n-id="s-80ff">标题层级</h3>
+              <ul>
+                <li data-i18n-id="s-6d85">页面缺少一级标题</li>
+                <li data-i18n-id="s-fcfb">第一个标题是子标题</li>
+                <li data-i18n-id="s-0ec0">标题跳过层级</li>
+                <li data-i18n-id="s-8e95">标题为空</li>
+                <li data-i18n-id="s-0e78">用作标题的图片需要替代文本</li>
+                <li data-i18n-id="s-9685">标题过长</li>
+                <li data-i18n-id="s-d7a5">加粗段落可能应为标题</li>
+                <li data-i18n-id="s-7f66">短引用块可能应为标题</li>
+              </ul>
+              <h3 class="fs-5 nomenu pt-0" data-i18n-id="s-1fca">文本可读性</h3>
+              <ul>
+                <li data-i18n-id="s-42f3">过多大写文本</li>
+                <li data-i18n-id="s-a546">大段粗体或斜体文本</li>
+                <li data-i18n-id="s-2896">文本字号过小</li>
+                <li data-i18n-id="s-8c2e">非链接文本带下划线</li>
+                <li data-i18n-id="s-b9bd">文本两端对齐</li>
+                <li data-i18n-id="s-4d3b">下标或上标被误用作格式</li>
+                <li data-i18n-id="s-9809">用字符或符号模拟列表</li>
+                <li data-i18n-id="s-efec">列表项位于列表之外</li>
+              </ul>
+
+            </div>
+            <div class="col-12 col-xl-4">
+              <h3 class="fs-5 nomenu pt-0" data-i18n-id="s-aaa0">颜色对比度</h3>
+              <ul>
+                <li data-i18n-id="s-fbfd">文本对比度不足</li>
+                <li data-i18n-id="s-1dba">文本对比度需要手动检查</li>
+                <li data-i18n-id="s-3076">图标或图形对比度不足</li>
+                <li data-i18n-id="s-0e1d">图标或图形对比度需要手动检查</li>
+                <li data-i18n-id="s-2f82">输入框文本对比度不足</li>
+                <li data-i18n-id="s-0936">占位符文本对比度不足</li>
+              </ul>
+              <h3 class="fs-5 nomenu pt-0" data-i18n-id="s-f99a">表格</h3>
+              <ul>
+                <li data-i18n-id="s-00d1">表格缺少标题行或标题列</li>
+                <li data-i18n-id="s-82fd">表格标题单元格为空</li>
+                <li data-i18n-id="s-c8f0">在表格内使用了内容标题</li>
+              </ul>
+              <h3 class="fs-5 nomenu pt-0" data-i18n-id="s-fa30">表单与交互元素</h3>
+              <ul>
+                <li data-i18n-id="s-021d">按钮没有无障碍标签</li>
+                <li data-i18n-id="s-7bb8">按钮具有无效的 ARIA 标签</li>
+                <li data-i18n-id="s-308a">按钮标签包含"按钮"一词</li>
+                <li data-i18n-id="s-0e58">可见标签与无障碍名称不匹配</li>
+                <li data-i18n-id="s-91b6">输入框没有关联标签</li>
+                <li data-i18n-id="s-6b9e">输入框仅使用不可见标签</li>
+                <li data-i18n-id="s-beae">输入框仅以占位符作为标签</li>
+                <li data-i18n-id="s-f49d">重置按钮可能导致意外数据丢失</li>
+                <li data-i18n-id="s-b69f">元素对屏幕阅读器隐藏但仍可通过键盘聚焦</li>
+                <li data-i18n-id="s-7ef1">正数 tabindex 破坏阅读和 Tab 键顺序</li>
+              </ul>
+              <h3 class="fs-5 nomenu pt-0" data-i18n-id="s-b6e6">页面元数据</h3>
+              <ul>
+                <li data-i18n-id="s-1824">页面标题缺失</li>
+                <li data-i18n-id="s-0c64">未声明页面语言</li>
+                <li data-i18n-id="s-bba1">视口设置阻止文本缩放</li>
+                <li data-i18n-id="s-ccce">页面自动刷新</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section class="row mb-5 pb-5" id="csa">
+          <h2 class="pt-3" data-section="csa" data-i18n-id="s-d6f4">CSA 功能</h2>
+
+          <p class="fs-5" data-i18n-id="s-cb40">
+            Editoria11y 以独特方式推动无障碍建设。其工具能有效帮助非技术背景的作者准备出残障网络用户同样可以无障碍享用的内容。我们视此为一项公益事业，因此<strong>Editoria11y
+              将始终免费使用</strong>。
+          </p>
+          <p class="fs-5" data-i18n-id="s-b419">
+            然而，Editoria11y 的开发和支持并非免费。
+          </p>
+          <p class="fs-5" data-i18n-id="s-7d6d">
+            CSA 填补了这一空白：项目成员资助 Editoria11y 库、CMS 插件及 CSA 套件的开发——CSA 套件是一套快速成长的开源质量保证工具集，以远低于商业产品的价格提供同等功能。
+
+            Drupal 版 CSA 套件目前在测试阶段免费提供，WordPress 版将于 2026 年第三季度推出。
+          </p>
+          <figure class="figure my-4 shadow border rounded p-0 m-2 col-sm-12 col-xl-11">
+            <img alt="站点爬取进行中" src="../../assets/images/3x-crawl.png" height="786" width="1986" class="img-fluid rounded-top figure-img" data-i18n-id="s-34fd" />
+            <figcaption class="figure-caption p-2 pt-2" data-i18n-id="s-8a9c">CSA 爬虫正在刷新仪表板。</figcaption>
+          </figure>
+
+        </section>
+        <section id="csa-tools" class="pb-5 mt-5 row g-5">
+
+          <div class="mt-2">
+            <h3 class="pt-3" data-section="csa-tools" data-i18n-id="s-a391">检测项与工具</h3>
+            <ul class="fs-5">
+              <li data-i18n-id="s-fd2b">
+                开发者、可读性和对比度检测。
+              </li>
+              <li data-i18n-id="s-c3ea">
+                面向开发者和内容创作者的基于角色的分离配置。
+              </li>
+              <li data-i18n-id="s-63c7">
+                自定义检测项构建工具。
+              </li>
+              <li data-i18n-id="s-3a31">
+                一键全站忽略。
+              </li>
+              <li data-i18n-id="s-1664">
+                仪表板维护工具与爬虫。
+              </li>
+            </ul>
+            <img alt="检测提示气泡中的颜色选择器" src="../../assets/images/3x-colors.png" height="1022" width="1288" class="img-fluid col-sm-12 col-xl-9 mt-0 p-0" data-i18n-id="s-eab0" />
+          </div>
+
+        </section>
+        <section id="benefits" class="pb-5 mt-5 row g-5">
+
+
+          <div class="">
+            <h3 class="pt-0" data-section="benefits" data-i18n-id="s-9274">社区权益</h3>
+            <ul class="fs-5">
+              <li data-i18n-id="s-fa04">优先支持。</li>
+              <li data-i18n-id="s-b33f">对项目路线图有加权影响力。</li>
+              <li data-i18n-id="s-6864">自动获取路线图上的新功能。</li>
+              <li data-i18n-id="s-cc94">直接设置协助（视会员等级而定）。</li>
+              <li data-i18n-id="s-42a4"><a href="https://form.jotform.com/260627656020150">公开支持者致谢</a>（视等级/按需申请，条款适用）。</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="nomenu" data-i18n-id="s-8335">量力而为的授权模式</h3>
+            <p class="fs-5" data-i18n-id="s-e62a">测试期结束后，CSA 套件将通过量力而为的贡献模式提供。Editoria11y 核心（包括库和插件）将继续免费提供。</p>
+            <p class data-i18n-id="s-eebc"><a class="btn btn-primary" href="/en/license/">查看授权选项与替代方案</a></p>
+
+          </div>
+
+        </section>
+
+
+
+
+
+        <h2 id="projects" data-section="false" data-i18n-id="s-e590">CSA 赞助项目</h2>
+        <section id="active-projects">
+          <h3 class="pt-4" data-section="active-projects" data-i18n-id="s-52da">进行中</h3>
+          <div class="accord">
+            <details>
+              <summary data-i18n-id="s-8ea4">
+                2026 年第二季度：启动 Editoria11y CSA 社区
+              </summary>
+              <div>
+                <p data-i18n-id="s-0d22">待完成工作：</p>
+                <ul class="fs-6">
+                  <li data-i18n-id="s-c833">
+                    建立财务实体以处理订阅和赞助款项。
+                  </li>
+                  <li data-i18n-id="s-98a4">
+                    搭建授权系统。
+                  </li>
+                </ul>
+              </div>
+            </details>
+            <details>
+              <summary data-i18n-id="s-d2ae">
+                2026 年第二季度：自定义规则构建器
+              </summary>
+              <div>
+                <ol class="fs-6">
+                  <li data-i18n-id="s-4265">Drupal 版已完成。</li>
+                  <li data-i18n-id="s-4ab7">待办：将构建器移植到 WordPress。</li>
+                </ol>
+              </div>
+            </details>
+            <details>
+              <summary data-i18n-id="s-536a">
+                2026 年第三季度：将 3.x 库移植到 WordPress
+              </summary>
+              <div>
+                <ol class="fs-6">
+                  <li><span data-translate data-i18n-id="s-c4fb">创建含社区支持功能的 CSA 子模块</span>
+                    <ul>
+                      <li data-i18n-id="s-bf19">创建仪表板维护工具，用于清除过期结果并重新爬取现有内容。</li>
+                      <li data-i18n-id="s-9f92">支持将特定检测项标记为全站通过，而非仅限单个页面。</li>
+                      <li data-i18n-id="s-f2ce">支持分离配置，为开发者和内容编辑提供独立的设置和检测项。</li>
+                    </ul>
+                  </li>
+                </ol>
+              </div>
+            </details>
+          </div>
+        </section>
+        <section id="finished">
+          <h3 data-section="finished" class="pt-5" data-i18n-id="s-4646">近期完成</h3>
+          <div class="accord">
+            <details>
+              <summary data-i18n-id="s-8545">
+                2026 年第一季度：库 3.x 重写
+              </summary>
+              <div>
+                <ul class="fs-6">
+                  <li data-i18n-id="s-d7d1">
+                    合并 Editoria11y 和 Sa11y 规则集。自分叉以来，Sa11y 新增了约 50 项检测并引入了 ESM 工具链，Editoria11y
+                    则实施了性能优化并增加了支持实时检测的参数。Sa11y 4.2.2 与 Editoria11y 3.0.0 将开启两者的共同未来。
+                  </li>
+                  <li data-i18n-id="s-4bfb">
+                    新增"分离配置"支持，允许为开发者和内容创作者提供独立规则集。
+                  </li>
+                  <li data-i18n-id="s-713d">新增中文、丹麦语、荷兰语、德语、希腊语、匈牙利语、意大利语、日语、挪威书面语、波兰语、葡萄牙语（巴西）、葡萄牙语（葡萄牙）、西班牙语、瑞典语和乌克兰语的机器翻译，作为人工精修的模板。</li>
+                  <li data-i18n-id="s-a27b"><em class="fs-6 lh-1"><strong>当前状态</strong>：编码工作已完成；将在更新文档和演示后发布标签版本。</em></li>
+                </ul>
+              </div>
+            </details>
+            <details>
+              <summary data-i18n-id="s-c0ef">
+                2026 年第一季度：Drupal 模块 3.x 重写
+              </summary>
+              <div>
+                <ol class="fs-6">
+                  <li data-i18n-id="s-6957">扩展仪表板，提供更强大的报告和筛选工具。</li>
+                  <li data-i18n-id="s-5255">新增中文、丹麦语、荷兰语、德语、希腊语、匈牙利语、意大利语、日语、挪威书面语、波兰语、葡萄牙语（巴西）、葡萄牙语（葡萄牙）、西班牙语、瑞典语和乌克兰语的机器翻译，作为人工精修的模板。</li>
+                  <li data-i18n-id="s-9623">使 CSV 导出功能可自定义</li>
+                  <li><span data-translate data-i18n-id="s-2d2f">创建含社区支持功能的 CSA 子模块</span>
+                    <ul>
+                      <li data-i18n-id="s-4194">创建仪表板维护工具，用于清除过期结果并重新爬取现有内容。</li>
+                      <li data-i18n-id="s-33d7">支持将特定检测项标记为全站通过，而非仅限单个页面。</li>
+                      <li data-i18n-id="s-615b">支持分离配置，为开发者和内容编辑提供独立的设置和检测项。</li>
+                    </ul>
+                  </li>
+                </ol>
+              </div>
+            </details>
+          </div>
+        </section>
+        <section id="project-ideas">
+          <h3 data-section="project-ideas" class="pt-5" data-i18n-id="s-e19c">讨论中</h3>
+          <p data-i18n-id="s-511c">在 <a href="https://github.com/itmaybejj/editoria11y/discussions">Editoria11y 库论坛</a>中讨论这些想法并投票。</p>
+          <p data-i18n-id="s-99ee">各想法已根据当前社区讨论情况标注难度与优先级估计。</p>
+          <ul class="mt-1 p-5 pt-0">
+            <li data-i18n-id="s-47b0">多站点监控仪表板</li>
+            <li data-i18n-id="s-b625">失效链接检测</li>
+            <li data-i18n-id="s-347e">PDF 扫描</li>
+            <li data-i18n-id="s-b7fa">提示气泡代码位置标签</li>
+            <li data-i18n-id="s-ec9e">提示气泡页面报告导出</li>
+            <li data-i18n-id="s-1a54">标记词语</li>
+            <li data-i18n-id="s-0fcb">CLI 开发者工具</li>
+            <li data-i18n-id="s-5f20">书签工具/浏览器插件</li>
+            <li data-i18n-id="s-c014">ACT 规则验证</li>
+            <li data-i18n-id="s-2f70">扩展名称/角色/值验证</li>
+          </ul>
+        </section>
+
+
+      </div>
+
+
+    </div>
+  </main>

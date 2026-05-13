@@ -1,0 +1,472 @@
+<main class="container col-lg-12 mx-auto py-5">
+    <div class="row docs">
+      <div class="col-12 col-md-5 col-lg-4 mb-5">
+        <div id="on-this-page" class="list-group ms-2 ms-lg-5 position-sticky top-0 pt-3">
+        </div>
+      </div>
+      <div class="col-12 col-md-7 col-lg-8 pt-3">
+        <div data-bs-spy="scroll" data-bs-target="#on-this-page" data-bs-smooth-scroll="true">
+          <h1 data-i18n-id="s-e367">Editoria11y pentru Drupal</h1>
+          <section id="features">
+            <h2 class="pt-3" data-i18n-id="s-1dcf">Funcții principale</h2>
+
+            <p class="fs-6" data-i18n-id="s-a8c0">Modulul Drupal conectează biblioteca verificatorului la backend-ul editorial,
+              și adaugă multe instrumente server-side pentru raportare, guvernanță și configurare</p>
+
+            <figure class="figure my-4 row">
+              <div class="col-lg-8">
+                <img loading="lazy" src="/assets/images/3x-editing.png" class="rounded border figure-img img-fluid" height="1088" width="2237" alt="Editor Drupal cu sfaturi inline" data-i18n-id="s-ee36" />
+              </div>
+              <figcaption class="figure-caption col-lg-4" data-i18n-id="s-8e69">Problemele sunt detectate atât la încărcare în frontend
+                cât și
+                în timp ce tastați în CKEditor și Gutenberg.</figcaption>
+            </figure>
+
+            <figure class="figure my-4 row">
+              <div class="col-lg-8">
+                <img loading="lazy" src="/assets/images/3x-generic-tip.png" class="rounded border figure-img img-fluid" height="798" width="1278" alt="Sfat care indică că un link este denumit doar click here." data-i18n-id="s-1639" />
+              </div>
+              <figcaption class="figure-caption col-lg-4" data-i18n-id="s-9881">Indiciile primesc butoane
+                pentru a sări în editor, a ignora alerta (pentru utilizatorul curent) sau a o marca ca OK (pentru toți
+                utilizatorii). Alertele repetate oferă acțiuni la nivel de pagină sau de site.
+              </figcaption>
+            </figure>
+
+            <figure class="figure my-4 row">
+              <div class="col-lg-8">
+                <img loading="lazy" src="/assets/images/3x-drupal-custom-tests.png" class="rounded border figure-img img-fluid" alt="Interfața constructorului de teste personalizate cu câmpuri pentru titlul și conținutul sfatului, precum și selectori de elemente și excluderi." data-i18n-id="s-0830" />
+              </div>
+              <figcaption class="figure-caption col-lg-4">
+                <p class="mb-2" data-i18n-id="s-37bf">Submodulul CSA adaugă:</p>
+                <ul class="ps-3">
+                  <li data-i18n-id="s-caff"><strong>Un constructor de teste personalizate</strong></li>
+                  <li data-i18n-id="s-b145">40+ teste pentru dezvoltatori</li>
+                  <li data-i18n-id="s-f55d">Verificare a contrastului</li>
+                  <li data-i18n-id="s-b70c">Crawlere de site</li>
+                  <li data-i18n-id="s-5377">Analiză a lizibilității</li>
+                  <li data-i18n-id="s-6602">Configurații separate pentru dezvoltatori/editori</li>
+                </ul>
+              <span data-translate data-i18n-id="s-bc47"></figcaption>
+            </figure>
+
+            <figure class="figure">
+              <img loading="lazy" class="figure-img img-fluid rounded border" src="/assets/images/3x-dashboard.png" height="765" width="1600" alt="Panou de raportare care arată problemele recente și paginile cu cele mai multe probleme." data-i18n-id="s-2559" />
+              <figcaption class="figure-caption p-3 pt-2" data-i18n-id="s-cdbf">Un panou de control la nivel de site oferă rapoarte filtrabile și
+                exportabile ale alertelor și respingerilor.</figcaption>
+            </figure>
+
+          </section>
+          <h2 data-i18n-id="s-8fec">Instalare și pași cheie de configurare</h2>
+          <p data-i18n-id="s-7627"><a href="https://www.drupal.org/project/editoria11y/">Instalatorul inclus</a> de pe Drupal.org include
+            mai multe module:</p>
+          <ul>
+            <li data-i18n-id="s-b830">
+              Editoria11y: verificatorul de conținut principal și panoul de control.
+            </li>
+            <li data-i18n-id="s-b351">
+              Editoria11y CSA: teste pentru dezvoltatori și instrumente de întreținere a panoului de control.
+            </li>
+            <li data-i18n-id="s-74fe">
+              Editoria11y Export: instrumente de raportare CSV.
+            </li>
+          </ul>
+          <p data-i18n-id="s-88fd">Instalați-l ca orice alt modul, apoi urmați acești pași esențiali:</p>
+          <ol>
+            <li data-i18n-id="s-7187"><strong>Verificați permisiunile.</strong> Autorii de încredere ar trebui să aibă „Mark OK", „Mark as Ignored" și „View
+              the dashboard".</li>
+            <li data-i18n-id="s-1ac1"><strong>Verificați paginile cheie pentru alerte repetitive sau nefolositoare.</strong> Fie marcați-le ca OK în
+              indiciu, fie ajustați configurația pentru a ignora elementele după selector.</li>
+            <li data-i18n-id="s-e5b2">Căutați indicii care sunt greu de văzut — în afara ecranului, trunchiate, în spatele altor elemente sau pe elemente ascunse.
+              Folosiți indiciile din „Fix tip positioning" de mai jos pentru a remedia.</li>
+            <li data-i18n-id="s-c564">Dacă site-ul are deja conținut și aveți un abonament CSA, vizitați tab-ul „recheck" al panoului de control și
+              <strong>parcurgeți site-ul</strong> cu crawler-ul pentru a pre-încărca rapoartele de site. Aceasta este opțională, dar paginile mai vechi nu
+              vor apărea în rapoarte până când nu sunt crawlate sau vizitate de un utilizator autentificat.
+            </li>
+          </ol>
+          <p data-i18n-id="s-e025">Vizionați o <a href="https://youtu.be/uYvNYPg38nU?si=dqADyWpTtOhniHTP&t=696">introducere video la
+              opțiunile de configurare</a> (v2.4).</p>
+
+          <h2 id="check-roots" data-i18n-id="s-9202">Ascundeți alertele nefolositoare</h2>
+          <p data-i18n-id="s-fa47">
+            <strong>Configurațiile bune suprimă alertele nefolositoare, astfel autorii de conținut se pot concentra pe problemele pe care ar trebui
+              să le remedieze</strong>.
+          </p>
+          <p data-i18n-id="s-996e">Deși puteți dezactiva testele complet, este de obicei mai bine să ascundeți alertele pe elemente sau pagini specifice.
+          </p>
+          <hr/>
+          <p data-i18n-id="s-7918">
+            În timpul fiecărei rulări de test, Editoria11y adună un singur set de elemente din setarea „Check content in these
+            containers", și apoi îl filtrează de mai multe ori. Iată cum arată o rulare de test:
+          </p>
+          <ol>
+            <li data-i18n-id="s-994a">
+              Anulați verificarea dacă configurația împiedică verificarea pe această pagină sau pentru acest utilizator.
+            </li>
+            <li data-i18n-id="s-10c9">
+              <strong>Adunați</strong> elementele din regiunile specificate ale paginii,
+              de ex.:<br/><code>body > *:not('.ed11y-element')</code><br/>
+              <em>Pentru utilizatorii Editoria11y CSA, acestea sunt regiunile din tab-ul <strong>Developer tests</strong>.</em>
+            </li>
+            <li data-i18n-id="s-7524">
+              <strong>Eliminați</strong> elementele care se potrivesc selectorilor de ignorare,
+              de ex.:<br/><code>.widgets, .utility-menu</code><br/>
+              <em>Pentru utilizatorii Editoria11y CSA, aceștia sunt selectorii din tab-ul <strong>Developer tests</strong>.</em>
+            </li>
+            <li data-i18n-id="s-58d0">
+              Rulați testele și sincronizați rezultatele cu panoul de control.
+            </li>
+            <li>
+              <span data-translate data-i18n-id="s-f8c6">Dacă configurația split este activă și utilizatorul este editor de conținut, filtrați rezultatele pentru dezvoltatori:</span>
+              <ul>
+                <li data-i18n-id="s-72c9"><strong>Eliminați</strong> rezultatele din testele setate la „Developer only".</li>
+                <li data-i18n-id="s-576e"><strong>Eliminați</strong> rezultatele pe elemente din afara regiunilor de <strong><em>conținut</em></strong> specificate,
+                  de ex.:<br/><code>main, footer</code></li>
+                <li data-i18n-id="s-bb1d"><strong>Eliminați</strong> rezultatele pe elemente care se potrivesc selectorilor de ignorare pentru <strong><em>conținut</em></strong>.</li>
+              </ul>
+              Rețineți că nu există o a doua fază de „colectare". Regiunile de pagină pentru dezvoltatori trebuie să includă
+              regiunile de conținut.</span>
+            </li>
+            <li data-i18n-id="s-b79c">Deschideți panoul și desenați alertele dacă configurația corespunde unei setări de deschidere automată.</li>
+          </ol>
+
+          <h3 id="dismiss" data-i18n-id="s-be02">Respingeți alertele</h3>
+          <p data-i18n-id="s-2ae3">Testele pot fi configurate în bibliotecă ca erori sau avertismente („verificări manuale"). Avertismentele pot fi respinse.
+            Există două tipuri de respingeri disponibile din subsolul fiecărui tooltip:</p>
+          <div class="my-2"
+            style="background: url(/assets/images/3x-generic-tip.png) 100% 98%; max-width: 600px; padding-top: 6%; background-size: 108%;">
+          </div>
+          <ul>
+            <li data-i18n-id="s-7b65">„Ignorați" este stocat ca preferință de utilizator: alerta este acum ascunsă pentru utilizatorul curent, și numai
+              pentru utilizatorul curent.</li>
+            <li data-i18n-id="s-654c">„Mark OK" ascunde alerta pentru toți utilizatorii.</li>
+          </ul>
+          <p data-i18n-id="s-dc14">Dacă un utilizator poate respinge o alertă sau nu este controlat la nivel de rol prin permisiunile Drupal.
+            <strong>Majorității autorilor ar trebui să li se permită să respingă alerte</strong>. Nu are sens să atribuiți cuiva o
+            verificare manuală dacă nu poate marca acel element ca verificat.
+          </p>
+
+          <h3 id="roots" data-i18n-id="s-d932">Ignorați elementele</h3>
+          <p data-i18n-id="s-9d1e">Aceste două setări de configurare sunt cele mai importante!</p>
+          <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
+            <label for="edit-content-root">Check content in these containers</label>
+            <div><textarea class="form-control" id="edit-content-root" name="content_root" rows="1" cols="30"
+                disabled></textarea>
+            </div>
+            <div class="mt-3">
+              <label for="edit-ignore-elements">Skip over these elements</label>
+              <div>
+                <textarea class="form-control" id="edit-ignore-elements" disabled name="ignore_elements" rows="1"
+                  cols="30" class=""></textarea>
+              </div>
+            </div>
+          </div>
+          <p data-i18n-id="s-6051">
+            Setați prima pentru a include orice părți ale conținutului paginii pe care autorii le pot edita. De ex., dacă pot edita
+            zona de conținut <code>main</code>, <code>.sidebar</code> și <code>.footer-column-two</code>, setați acele
+            selectori ca zona dvs. de verificare a conținutului.
+          </p>
+          <p data-i18n-id="s-f29c">
+            Folosiți a doua pentru a „elimina" subsecțiunile. De ex., dacă <code>main</code> conține diverse widget-uri și embed-uri
+            pe care doar dezvoltatorii le pot modifica, listați-le: <code>.widget-1, .social-embed</code>;
+          </p>
+          <p data-i18n-id="s-10ef">Dacă utilizați configurația split, veți vedea o pereche similară de setări în tab-ul Developer Tests:</p>
+          <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
+            <div>
+              <fieldset>
+                <legend>
+                  Developer check area
+                </legend>
+                <div class="fieldset__wrapper fieldset__wrapper--group">
+
+                  <div id="edit-dev-check-root">
+                    <div>
+                      <input aria-describedby="edit-dev-check-root--description" type="radio"
+                        id="edit-dev-check-root-automatic" name="dev_check_root" value="automatic" checked="checked" />
+                      <label for="edit-dev-check-root-automatic" class="form-item__label option">All elements</label>
+                    </div>
+                    <div class="d-flex">
+                      <input aria-describedby="edit-dev-check-root--description" type="radio"
+                        id="edit-dev-check-root-match" name="dev_check_root" value="match"
+                        class="align-self-baseline mt-1 me-1" />
+                      <label for="edit-dev-check-root-match" class="form-item__label option">Only the containers listed
+                        in the Content Setting tab</label>
+                    </div>
+                    <div class="">
+                      <input aria-describedby="edit-dev-check-root--description" type="radio"
+                        id="edit-dev-check-root-specify" name="dev_check_root" value="specify"
+                        class="form-radio form-boolean form-boolean--type-radio" />
+                      <label for="edit-dev-check-root-specify" class="">The specific containers listed below</label>
+                    </div>
+                  </div>
+
+                </div>
+              </fieldset>
+
+              <div class="">
+                <label for="edit-always-ignore" class="mt-3">Ignore for both developers and content editors</label>
+                <div class="form-textarea-wrapper">
+                  <textarea id="edit-always-ignore" class="form-control" name="always_ignore" rows="1" cols="20"
+                    placeholder=""></textarea>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+          <p data-i18n-id="s-8c02">Lucrul cheie de știut despre zonele de verificare pentru dezvoltatori este că ele <strong>nu sunt independente</strong> de
+            zonele de verificare a conținutului. Într-o configurație split, zonele pentru dezvoltatori sunt verificate, și apoi acele rezultate
+            sunt <strong>filtrate</strong> pentru a corespunde zonelor de conținut. Orice zone excluse pentru dezvoltatori vor
+            fi, de asemenea, excluse pentru editorii de conținut. Nu excludeți zonele de conținut editabile!</p>
+
+          <p data-i18n-id="s-0312">Unele teste permit o configurare mai precisă, pentru a ascunde anumite alerte doar pe elementele afectate. Căutați-le sub:</p>
+          <ul>
+            <li data-i18n-id="s-d53d">Teste de conținut: Linkuri de verificat</li>
+            <li data-i18n-id="s-0d1e">Teste de conținut: Embed-uri de verificat</li>
+            <li data-i18n-id="s-10c1">Teste de conținut: Detectarea conținutului dinamic și shadow</li>
+            <li data-i18n-id="s-e6e4">Teste pentru dezvoltatori: Contrast</li>
+          </ul>
+
+          <h3 id="pages" data-i18n-id="s-177c">Ascundeți pentru pagini sau utilizatori specifici</h3>
+          <p data-i18n-id="s-e874">
+            Cea mai simplă modalitate de a face acest lucru este prin transmiterea claselor CSS sau ID-urilor la aceste opțiuni:
+          </p>
+          <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
+            <label for="edit-no-load" class="form-item__label">Do not check on pages with these elements</label>
+            <div class="form-textarea-wrapper">
+              <textarea data-drupal-selector="edit-no-load" aria-describedby="edit-no-load--description"
+                id="edit-no-load" name="no_load" rows="1" cols="20" class="form-control"></textarea>
+            </div>
+
+            <label for="edit-ignore-all-if-absent" class="form-item__label">Hide all alerts on pages where these
+              elements are not present</label>
+            <div class="form-textarea-wrapper">
+              <textarea data-drupal-selector="edit-ignore-all-if-absent"
+                aria-describedby="edit-ignore-all-if-absent--description" id="edit-ignore-all-if-absent"
+                name="ignore_all_if_absent" rows="1" cols="20" class="form-control"></textarea>
+            </div>
+
+          </div>
+          <p data-i18n-id="s-0877">
+            Prima va împiedica rularea verificărilor, iar bara de instrumente nu va fi afișată.
+          </p>
+          <p data-i18n-id="s-5cbd">
+            A doua va porni verificatorul minimizat și va auto-marca (pentru utilizatorul curent) toate problemele ca „Ignorat",
+            chiar dacă sunt erori. Aceasta permite testelor să ruleze și să actualizeze panoul de control fără a deranja utilizatorul.
+          </p>
+          <p data-i18n-id="s-1661">
+            Dacă doriți să folosiți aceste opțiuni pentru a controla ce utilizatori văd verificatorul, poate fi necesar să ajustați tema pentru a genera
+            o clasă, de exemplu <code>.user-247</code>
+          </p>
+
+          <h2 id="dashboard" data-i18n-id="s-f4d7">Gestionați rezultatele la nivel de site</h2>
+          <section id="refresh">
+            <h3 class="pt-3" data-i18n-id="s-012a">Parcurgerea cu crawler a site-ului și actualizarea rezultatelor</h3>
+            <p data-i18n-id="s-75a9">Editoria11y este un <strong>instrument de monitorizare în timp real, nu un crawler</strong>. Rapoartele sale la nivel de site se actualizează
+              când autorii vizitează paginile, deci parcurgerea periodică cu crawler-ul nu este de obicei necesară. Modulul CSA <em>include</em>
+              un crawler, dar ar trebui să fie necesar doar în aceste trei situații:</p>
+            <ol>
+              <li data-i18n-id="s-dfb1">
+                La instalarea inițială a Editoria11y pe un site existent cu multe pagini. Paginile trebuie vizitate înainte
+                de a apărea pe panou de control, deci o parcurgere inițială rapidă economisește timp.
+              </li>
+              <li data-i18n-id="s-f602">
+                Actualizările majore ale temelor sau modulelor pot remedia (sau cauza) probleme pe multe pagini care nu vor apărea
+                până când acestea nu sunt vizitate sau parcurse cu crawler-ul.
+              </li>
+              <li data-i18n-id="s-a530">
+                Acțiunile în masă în interfața de administrare, cum ar fi ștergerea paginilor sau a redirecționărilor, tind să lase în urmă rezultate de la
+                pagini care nu mai există sau s-au mutat. În aceste cazuri ajută să folosiți acțiunile de întreținere din tab-ul „Refresh"
+                pentru a reîmprospăta URL-urile paginilor și a detecta și elimina paginile șterse.
+              </li>
+            </ol>
+            <p data-i18n-id="s-8e5a">Nicio dată nu părăsește site-ul dvs. în timpul unui crawl. Crawler-ul CSA nu este un instrument cloud; folosește browserul dvs. pentru a
+              încărca și verifica paginile de pe propriul site. Dezavantajul acestei abordări este că <strong>browserele pun în pauză
+                tab-urile de fundal</strong>. Va trebui să mențineți computerul pornit și activ în timpul unui crawl. Planificați să deschideți
+              o fereastră nouă pentru crawler și să o lăsați ca tab de prim-plan al acelei ferestre în timp ce lucrează. Puteți
+              continua să lucrați în altă fereastră. Crawler-ul va actualiza estimarea după fiecare lot de pagini.</p>
+          </section>
+          <section id="reports">
+            <h3 data-i18n-id="s-a242">Vizualizarea rapoartelor</h3>
+            <div class="my-4 border shadow"
+              style="background: url(/assets/images/3x-dashboard.png) 86% 0%; padding-top: 28%; background-size: 106%;">
+            </div>
+            <ul>
+              <li data-i18n-id="s-e328">
+                <strong>Recente</strong> permite explorarea alertelor individuale. Puteți astfel
+                filtra pentru a găsi toate instanțele aceluiași tip de alertă, sau a vedea care alerte apar frecvent în
+                conținut recent, sau ce autori repetă aceeași greșeală.
+              </li>
+              <li data-i18n-id="s-796f">
+                <strong>Pagini</strong> arată numărul de alerte per pagină, grupate pe pagină. Aceasta vă permite să găsiți paginile cu
+                cele mai multe probleme și să filtrați după atributele paginii, cum ar fi tipul de conținut și starea de publicare.
+              </li>
+              <li data-i18n-id="s-9423">
+                <strong>Alerte</strong> arată problemele pe tip.
+              </li>
+              <li data-i18n-id="s-52ed">
+                <strong>Respingeri</strong> permit monitorizarea dacă autorii resping corect și conțin
+                butoane de „resetare" pentru a restaura alertele respinse.
+              </li>
+              <li data-i18n-id="s-3379">
+                <strong>Export</strong> conține versiuni ale rapoartelor Pagini, Alerte și Respingeri care pot fi
+                filtrate pentru a pregăti descărcări CSV. <em>Furnizat de submodulul CSV Export</em>
+              </li>
+              <li data-i18n-id="s-9814">
+                <strong>Reîmprospătare</strong> conține instrumente de întreținere a panoului de control pentru a elimina alertele de la paginile șterse, a elimina
+                alertele de la pseudo-paginile parametrizate precum /search?query=example, a actualiza titlurile și URL-urile paginilor stocate,
+                și a rula un crawl manual. <em>Furnizat de submodulul CSA</em>
+              </li>
+            </ul>
+          </section>
+
+          <h2 id="positioning" data-i18n-id="s-c35b">Remediați sfaturile ascunse sau în afara ecranului</h2>
+
+          <p data-i18n-id="s-68ce">Modulul furnizează câmpuri pentru două dintre opțiunile de configurare ale bibliotecii pentru a schimba modul în care sunt plasate sfaturile:
+          </p>
+
+          <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
+            <label for="edit-element-hides-overflow" class="form-item__label">Elements with overflow hidden</label>
+            <textarea data-drupal-selector="edit-element-hides-overflow"
+              aria-describedby="edit-element-hides-overflow--description" id="edit-element-hides-overflow"
+              name="element_hides_overflow" rows="1" cols="60" class="form-control"></textarea>
+            <label for="edit-hidden-handlers" class="form-item__label">Theme JS will handle revealing hidden tooltips
+              inside these containers</label>
+            <textarea data-drupal-selector="edit-hidden-handlers" aria-describedby="edit-hidden-handlers--description"
+              id="edit-hidden-handlers" name="hidden_handlers" rows="1" cols="60" class="form-control"></textarea>
+          </div>
+          <p data-i18n-id="s-34e4">Unele teme au coloane sau widget-uri care ascund overflow-ul orizontal sau vertical. Biblioteca detectează automat
+            când un comutator ar cădea în afara părții vizibile a <strong>paginii.</strong> Comunicarea bibliotecii că anumite containere ascund overflow-ul înseamnă că va încerca, de asemenea, să poziționeze sfaturile pentru elementele din acele
+            containere în interiorul granițelor lor.</p>
+          <p data-i18n-id="s-7cb7">Unele teme au widget-uri care comută vizibilitatea conținutului, cum ar fi acordeoane, tab-uri și prezentări de diapozitive.
+            Indiciile din interiorul acestor elemente vor fi, de asemenea, ascunse. Furnizarea unei liste de selectori pentru aceste widget-uri înseamnă
+            că Editoria11y va face o pauză scurtă când un utilizator încearcă să sară la acele indicii folosind un buton înainte sau înapoi.
+            Temele și modulele Drupal pot urma apoi instrucțiunile din secțiunea bibliotecii despre <a href="/en/install/#hidden-content">gestionarea sfaturilor pe conținut ascuns</a> pentru a dezvălui conținutul ascuns.
+          </p>
+
+          <h2 id="runtime" data-i18n-id="s-7e38">Scrieți propria configurație</h2>
+          <p data-i18n-id="s-a5d3">În PHP: modulul Drupal furnizează un <code>hook_editoria11y_alter_config</code> pentru a schimba conținutul
+            <code>drupalSettings.editoria11y</code> într-un modul sau temă. De exemplu:
+          </p>
+          <pre class="language-php"><code><!--<?php
+/**
+ * @file
+ * MY_MODULE module file.
+ */
+
+use Drupal\Core\Cache\CacheableMetadata;
+
+/**
+ * Implements hook_editoria11y_alter_config().
+ *
+ * Attaches Editoria11y library and config based on context.
+ */
+function MY_MODULE_editoria11y_alter_config(array &$attach, CacheableMetadata $cacheableMetadata): void {
+  $config = Drupal::config('editoria11y.settings');
+
+  // Module settings being changed need to bust the cache.
+  $cacheableMetadata->addCacheableDependency($config);
+
+  // Get and modify any of the values being passed to drupalSettings.editoria11y.
+  if (!empty($attach['allow_ok'])) {
+    $attach['allow_ok'] = 'okAll';
+  }
+}--></code></pre>
+          <p data-i18n-id="s-2368">Modificarea <code>drupalSettings</code> ajută doar dacă JS-ul modulului este deja configurat să transmită acea valoare bibliotecii. Pentru a adăuga parametri suplimentari, trebuie să modificați direct obiectul JS <code>options</code>.
+            Modulul verifică pentru o variabilă JS globală <code>editoria11yOptionsOverride</code>. Dacă aceasta este setată, va
+            transmite obiectul <code>options</code> unei funcții <code>editoria11yOptions</code> pe care ați furnizat-o
+            în modulul sau tema dvs. Acum puteți seta oricare dintre <a href="https://editorsally.ddev.site/en/install/#params">parametrii bibliotecii</a>.</p>
+          <pre class="language-javascript"><code><!--var editoria11yOptionsOverride = true;
+var editoria11yOptions = function(options) {
+  // You now have access to the processed options object that will be passed to the library.
+
+  // E.g., to add a selector to the ignore list:
+  if (options['ignoreElements'] === false) {
+    // Provide the selector as the only value.
+    options['ignoreElements'] = `.example`;
+  } else {
+    // Append additional selectors with comma separator.
+    options['ignoreElements'] = `${options['ignoreElements']}, .example`
+  }
+
+  // Return your processed options.
+  return options;
+}
+--></code></pre>
+          <section id="custom-tests">
+            <h2 data-i18n-id="s-e0f0">Scrieți propriile teste</h2>
+            <p data-i18n-id="s-6ece">Mai întâi, în configurarea modulului, adăugați 1 la opțiunea „Custom tests" pentru ca acesta să știe să
+              urmărească testele.</p>
+            <p data-i18n-id="s-4316">Apoi creați o bibliotecă JS Drupal cu testele dvs. în tema sau modulul dvs., folosind <a href="/en/install/#custom-tests">ghidul bibliotecii pentru scrierea testelor personalizate</a>.</p>
+            <p data-i18n-id="s-b4ea">Iată un exemplu funcțional de la Princeton, al unui test personalizat pentru a alerta pe Safe Links. Rețineți că accesează
+              clasa Editoria11y prin <code>Drupal.Ed11y.</code></p>
+            <pre class="language-javascript"><code><!--const psEd11yCustomTests = function() {
+
+  // 1.
+  // Get elements to test, via Drupal.Ed11y.getElements.
+  // The 'root' parameter tells it to respect config for check areas and ignores.
+  const safeLinks = Drupal.Ed11y.getElements('a[href*="safelinks.protection.outlook.com/?"]', 'root');
+
+  // Add the test name to the lang object.
+  Drupal.ed11yLang.lang.testNames.outlookSafeLink = 'URL is Safe Link encoded';
+
+  // 2.
+  // Create the tip content.
+  const decodeSafelink = function(url) {
+    const params = new URL(url).searchParams;
+    let decoded = params.get('url');
+    const p = document.createElement('p');
+    if (!!decoded) {
+      p.innerHTML = `<p><span class="badge">To fix</span>Update this link with the correct URL, which is probably:<br>
+    <em style='word-wrap: break-word;font-size: 90%;line-height: 1.2;display: block;'></em></p>`
+      p.querySelector('em').textContent = Drupal.Ed11y.sanitizeHTML(decoded);
+    }
+    return p;
+  };
+  safeLinks?.forEach((el) => {
+    const content = document.createElement('div');
+    content.innerHTML = `<div class="title">Please fix this Outlook "Safe Link"</div>
+            <div class="why">
+                <p>The URL for this link is an Outlook "Safe Link" that was copied from an email.
+                It includes the original recipient's email address,
+                and will break if Microsoft shuts down the service.</p>
+                <p>The pasted URL is:<br>
+                <em style='word-break: break-all;font-size: 90%;line-height: 1.2;
+                display: block;'></em></p>
+            </div>
+            `;
+    content.querySelector('em').textContent = Drupal.Ed11y.sanitizeHTML(el.href);
+    content.querySelector('.why').insertAdjacentElement('beforebegin', decodeSafelink(el.href));
+
+    // 3.
+    // Push the tip to the library results object.
+    Drupal.Ed11y.State.results.push({
+      element: el,
+      test: 'outlookSafeLink',
+      type: 'error',
+      content: content,
+      position: 'beforebegin',
+      inline: false,
+      dismiss: false,
+    });
+  });
+
+  // 4.
+  // Tell Editoria11y you are done adding custom results.
+  const allDone = new CustomEvent('ed11yResume');
+  document.dispatchEvent(allDone);
+};--></code></pre>
+
+          </section>
+          <section id="help">
+            <h2 data-i18n-id="s-4690">Obțineți ajutor</h2>
+            <p data-i18n-id="s-f149">Consultați pagina de <a href="/en/contacts/">contact</a> pentru opțiunile de asistență ale comunității. @itmaybejj este de obicei
+              disponibil în Drupal Slack când soarele este deasupra emisferei vestice.</p>
+            <p data-i18n-id="s-4a16">Majoritatea <a href="/en/license/">nivelurilor de contribuție CSA</a> includ o verificare anuală, care
+              poate include asistență directă
+              cu configurarea și instalarea</p>
+          </section>
+
+        </div>
+      </div>
+    </div>
+  </main>

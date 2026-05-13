@@ -1,0 +1,477 @@
+<!doctype html>
+<html lang="sl" data-bs-theme="light">
+
+<head>
+  <link rel="icon" type="image/png" href="/assets/favicons/favicon-512x512.png" sizes="512x512" />
+  <link rel="icon" type="image/png" href="/assets/favicons/favicon-192x192.png" sizes="192x192" />
+  <link rel="icon" type="image/png" href="/assets/favicons/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/assets/favicons/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <meta charset="utf-8" />
+  <title>Funkcije — Editoria11y</title>
+  <link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="/assets/theme.css" rel="stylesheet" />
+  <meta name="theme-color" content="#712cf9" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-md">
+      <div class="container col-sm-12 mx-auto">
+        <a href="/sl/" class="d-flex align-items-center  navbar-brand">
+          <svg class="logo-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+            viewBox="-.75 -3.5 10.1699 19.1777">
+            <path fill="currentColor"
+              d="M3.7031,10.5527c-.3633-.6562-.6426-1.1387-.8379-1.4473l-.3105-.4863-.2344-.3574c-.5117-.7969-1.0449-1.4551-1.5996-1.9746.3164-.2617.6113-.3926.8848-.3926.3359,0,.6348.123.8965.3691s.5918.7148.9902,1.4062c.4531-1.4727,1.0293-2.8691,1.7285-4.1895.3867-.7188.7314-1.2021,1.0342-1.4502s.7041-.3721,1.2041-.3721c.2656,0,.5938.041.9844.123-1.0039.8086-1.8066,1.7695-2.4082,2.8828s-1.3789,3.0762-2.332,5.8887Z" />
+          </svg> Editoria<span style="margin-left: -1px;">11</span>y
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar" aria-label="Preklopi navigacijo">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Editoria11y</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Zapri"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 nav-pills">
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div id="lang-picker"></div>
+  </header>
+  <main class="container col-lg-12 mx-auto py-5">
+    <div class="row docs">
+      <div class="col-12 col-md-5 col-lg-4 mb-5">
+        <div id="on-this-page" class="list-group ms-2 ms-lg-5 position-sticky top-0 pt-3">
+        </div>
+      </div>
+      <div class="col-12 col-md-7 col-lg-8 pt-3" data-bs-spy="scroll" data-bs-target="#on-this-page"
+        data-bs-smooth-scroll="true" tabindex="0">
+        <section id="features">
+          <h1 class="text-body-emphasis pt-2 pb-5">Funkcije</h1>
+          <p class="fs-6">Jedro testov Editoria11y zazna več kot 50 pogostih težav dostopnosti vsebine;
+            odločitve, ki škodijo berljivosti, napake, ki zmanjšujejo učinkovitost bralnikov zaslona, in napake, ki znižujejo SEO.</p>
+          <p class="fs-6">Nadgradnje zagotavljajo ~40 dodatnih testov za razvijalce in oblikovalce, teste po meri in razna
+            orodja za zagotavljanje kakovosti na ravni spletnega mesta.</p>
+          <p class="fs-6">Vsebinski testi se osredotočajo na težave, ki se pojavijo <strong>po</strong> tem, ko so spletna mesta predana
+            avtorjem vsebine. Pred lansiranjem je treba spletna mesta testirati z ročnimi revizijskimi orodji,
+            tipkovnicami in bralniki zaslona, toda celo najbolj dostopno spletno mesto se sčasoma prične slabšati,
+            ko uredniki skozi čas dodajajo vsebino.</p>
+          <p class="fs-6">Kar loči Editoria11y med orodji za dostopnost je to, da njegovi testi tečejo v živo, v brskalniku,
+            ko avtorji urejajo in predogledajo svoje delo. <strong>Avtorji se bolj verjetno odzovejo na takojšnjo,
+              vgrajeno povratno informacijo</strong>, opazijo opozorila in naredijo popravke, kot pa na e-poštna poročila
+            o revizijah, ki jih prejmejo mesece po dodajanju vsebine.</p>
+        </section>
+        <section id="authoring">
+          <h2>Izkušnja avtorja</h2>
+          <div class="clearfix">
+            <img src="/assets/images/3x-toolbar" class="image-fluid float-start me-3" alt="Posnetek zaslona orodne vrstice Editoria11y s 4 napakami." width="97" height="50" loading="lazy" />
+            <p>Avtorji med urejanjem vsebine vidijo orodno vrstico Editoria11y. Ko so zaznane težave, postane rumena ali
+              rdeča in prikaže število težav. S klikom na število se pomakne k prvemu opozorilu in odpre njegov opis.</p>
+          </div>
+          <div class="row">
+            <img loading="lazy" src="/assets/images/3x-generic-tip.png" class="img-fluid col-6 col-lg-8" height="798" width="1278" alt="Nasvet, ki opozarja, da je besedilo povezave samo »klikni tukaj«." />
+            <p class="col-6 col-lg-4 align-content-center">Nasveti se prikažejo vgrajeni s preprostim opisom
+              napake, predlogi za popravek in opombami o tem, zakaj je težava pomembna.</p>
+          </div>
+          <div class="row">
+            <img loading="lazy" class="img-fluid col-6 col-lg-8" src="/assets/images/3x-tools.jpg" height="473" width="405" alt="Vizualizator strukture naslovov, prikazan čez stran" />
+            <p class="col-6 col-lg-4 align-content-center">Orodna vrstica vsebuje dodatna orodja za ročna preverjanja,
+              vključno z vizualizatorji strukture naslovov in alt besedil ter ocenjevanjem berljivosti.</p>
+          </div>
+        </section>
+        <section id="admins">
+          <h2>Skrbniški nadzori</h2>
+          <p>Vsak vidni vidik preverjevalnika je mogoče prilagoditi. Parametri in dogodki omogočajo odstranjevanje
+            testov, prepisovanje nasvetov, vstavljanje testov po meri in nastavitev tem po meri.</p>
+          <p>Vtičniki za Drupal in WordPress dodajajo dodatne funkcije, kot so sinhronizirane opustitve, nadzorne plošče
+            za celotno spletno mesto in izvozi poročil v CSV.</p>
+          <figure class="figure my-4 rounded shadow mb-5 border">
+            <img loading="lazy" class="figure-img img-fluid" src="/assets/images/3x-dashboard.png" height="765" width="1600" alt="Poročevalska nadzorna plošča s prikazom nedavnih težav in strani z največ težavami." />
+            <figcaption class="figure-caption p-3 pt-2">Drupalova nadzorna plošča s filtrirani seznami težav,
+              strani s težavami in opustitvami.</figcaption>
+          </figure>
+        </section>
+        <section id="tests">
+          <h2 data-section="tests">Testi</h2>
+          <p class="fs-6">Testi Editoria11y se osredotočajo na izboljšanje izkušnje spleta za vse uporabnike, merjene z
+            ljudmi, ne le s tehničnimi standardi. Medtem ko so ključni testi namenjeni pomoči pri doseganju
+            Smernic za dostopnost spletnih vsebin (<a href="https://www.w3.org/WAI/WCAG22/quickref/">WCAG 2.2</a>),
+            testi vključujejo tudi »mehkejše« preveritve, ki pomagajo pri doseganju ciljev WCAG AAA in EN 301 549.</p>
+          <p class="fs-6 pb-3">Posamezne teste lahko skrbniki spletnih mest izklopijo.</p>
+          <div class="row listgrid">
+            <div class="col-12 col-xl-4">
+              <h3 class="fs-5 nomenu pt-0">Alt besedilo slike</h3>
+              <ul>
+                <li>Sliki manjka atribut alt</li>
+                <li>Alt besedilo je ime datoteke</li>
+                <li>Alt besedilo je nadomestno (»TBD«)</li>
+                <li>Alt besedilo so neizgovorljivi simboli</li>
+                <li>Alt besedilo vsebuje odvečne besede (»slika …«)</li>
+                <li>Alt besedilo je predolgo</li>
+                <li>Dekorativna slika ima morda vrednost</li>
+                <li>Slika v vrtiljaku označena kot dekorativna</li>
+                <li>Slika s podpisom nima alt besedila</li>
+                <li>Alt besedilo podvaja napis</li>
+              </ul>
+              <h3 class="fs-5 nomenu pt-0">Slike s povezavami</h3>
+              <ul>
+                <li>Slika s povezavo nima alt besedila</li>
+                <li>Alt slike s povezavo je URL ali ime datoteke</li>
+                <li>Alt slike s povezavo je nadomestno besedilo</li>
+                <li>Alt slike s povezavo so neizgovorljivi simboli</li>
+                <li>Alt slike s povezavo opisuje sliko, ne povezave</li>
+                <li>Alt slike s povezavo vsebuje odvečne besede</li>
+                <li>Alt slike s povezavo je predolgo</li>
+                <li>Slika v povezavi z besedilom nima atributa alt</li>
+              </ul>
+              <h3 class="fs-5 nomenu pt-0">Vgrajeni mediji</h3>
+              <ul>
+                <li>Video potrebuje podnapise</li>
+                <li>Zvok potrebuje zapis</li>
+                <li>Podatkovna vizualizacija potrebuje dostopno alternativo</li>
+                <li>Okviru manjka naslov</li>
+                <li>Okvir je izključen iz navigacije s tipkovnico</li>
+                <li>Vsebina okvira potrebuje ročno preverjanje dostopnosti</li>
+                <li>Dokument s povezavo morda ni dostopen bralnikom zaslona</li>
+                <li>PDF nima dostopne alternative</li>
+                <li>Gnezdene interaktivne komponente postavitve</li>
+              </ul>
+            </div>
+            <div class="col-12 col-xl-4">
+              <h3 class="fs-5 nomenu pt-0">Smiselne povezave</h3>
+              <ul>
+                <li>Prazna povezava</li>
+                <li>Besedilo povezave je URL</li>
+                <li>Besedilo povezave je le DOI številka</li>
+                <li>Besedilo povezave pravi »klikni tukaj«</li>
+                <li>Besedilo povezave so le generične besede (»preberite več«)</li>
+                <li>Različne povezave si delijo enako besedilo</li>
+                <li>Ikona ali slika s povezavo nima besedilne alternative</li>
+                <li>Povezava se odpre v novem zavihku brez opozorila</li>
+                <li>Povezava kaže na datoteko brez opozorila</li>
+                <li>Besedilo povezave so le simboli ali emodžiji</li>
+                <li>Smiselno besedilo povezave skrito pred videnimi uporabniki</li>
+                <li>Odvečni opis (tooltip) povezave</li>
+                <li>Pokvarjena in-page kotviška povezava</li>
+                <li>Podvojen atribut ID</li>
+                <li>Povezava morda kaže na razvojno okolje</li>
+              </ul>
+              <h3 class="fs-5 nomenu pt-0">Naslovi</h3>
+              <ul>
+                <li>Strani manjka Naslov 1</li>
+                <li>Prva glava je podnaslov</li>
+                <li>Naslov preskočil raven</li>
+                <li>Naslov je prazen</li>
+                <li>Slika, uporabljena kot naslov, potrebuje alt besedilo</li>
+                <li>Naslov je zelo dolg</li>
+                <li>Odstavek v krepkem je morda naslov</li>
+                <li>Kratki blokni citat je morda naslov</li>
+              </ul>
+              <h3 class="fs-5 nomenu pt-0">Berljivost besedila</h3>
+              <ul>
+                <li>Prekomerno besedilo z velikimi črkami</li>
+                <li>Veliki blok krepkega ali ležečega besedila</li>
+                <li>Besedilo je premajhno</li>
+                <li>Nepovezano besedilo je podčrtano</li>
+                <li>Besedilo je poravnano</li>
+                <li>Nadpisanost ali podpisanost zlorabljena kot oblikovanje</li>
+                <li>Lažni seznam z znaki ali simboli</li>
+                <li>Element seznama zunaj seznama</li>
+              </ul>
+
+            </div>
+            <div class="col-12 col-xl-4">
+              <h3 class="fs-5 nomenu pt-0">Barvni kontrast</h3>
+              <ul>
+                <li>Besedilo ima nezadosten kontrast</li>
+                <li>Kontrast besedila zahteva ročno preverjanje</li>
+                <li>Ikona ali grafika ima nezadosten kontrast</li>
+                <li>Kontrast ikone ali grafike zahteva ročno preverjanje</li>
+                <li>Besedilo vnosnega polja ima nezadosten kontrast</li>
+                <li>Nadomestno besedilo ima nezadosten kontrast</li>
+              </ul>
+              <h3 class="fs-5 nomenu pt-0">Tabele</h3>
+              <ul>
+                <li>Tabeli manjka vrstica ali stolpec z glavo</li>
+                <li>Celica glave tabele je prazna</li>
+                <li>Naslov vsebine je uporabljen znotraj tabele</li>
+              </ul>
+              <h3 class="fs-5 nomenu pt-0">Obrazci & interaktivni elementi</h3>
+              <ul>
+                <li>Gumb nima dostopne oznake</li>
+                <li>Gumb ima neveljavno oznako ARIA</li>
+                <li>Oznaka gumba vsebuje besedo »gumb«</li>
+                <li>Vidna oznaka se ne ujema z dostopnim imenom</li>
+                <li>Vnosno polje nima povezane oznake</li>
+                <li>Vnosno polje uporablja le nevidno oznako</li>
+                <li>Vnosno polje uporablja le nadomestno besedilo kot oznako</li>
+                <li>Gumb za ponastavitev lahko povzroči nenamerno izgubo podatkov</li>
+                <li>Element je skrit pred bralniki zaslona, toda ga tipkovnica še vedno doseže</li>
+                <li>Pozitiven tabindeks krši vrstni red branja in tabulatorja</li>
+              </ul>
+              <h3 class="fs-5 nomenu pt-0">Metapodatki strani</h3>
+              <ul>
+                <li>Naslov strani manjka</li>
+                <li>Jezik strani ni deklariran</li>
+                <li>Vidni zaslon preprečuje skaliranje besedila</li>
+                <li>Stran se samodejno osveži</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section class="row mt-5 pt-5" id="csa">
+          <h2 class="pt-3" data-section="csa">Funkcije CSA</h2>
+
+          <p class="fs-5">
+            Editoria11y promovira dostopnost na edinstven način. Njegova orodja so zelo učinkovita pri pomoči
+            netehničnim avtorjem pri pripravi vsebine, ki jo enakopravno uživajo osebe z invalidnostjo na spletu. To štejemo za
+            javno dobro, zato bo <strong>Editoria11y vedno brezplačno za uporabo</strong>
+            — osnovna knjižnica in vtičniki za Drupal in WordPress.
+          </p>
+          <p class="fs-5">
+            Editoria11y pa ni brezplačen za razvoj ali podporo.
+          </p>
+          <p class="fs-5">
+            CSA zapolnjuje vrzel: člani projekta financirajo razvoj knjižnice Editoria11y, njenih vtičnikov za CMS in
+            paketa CSA: hitro rastoči nabor odprtokodnih orodij za zagotavljanje kakovosti, ki zagotavljajo podobno
+            funkcionalnost kot komercialni produkti, po bistveno nižji ceni.
+          </p>
+          <figure class="figure my-4 shadow border rounded p-0 m-2 col-sm-12 col-xl-11">
+            <img alt="Pregled spletnega mesta v teku" src="../../assets/images/3x-crawl.png" height="786" width="1986" class="img-fluid rounded-top figure-img" />
+            <figcaption class="figure-caption p-2 pt-2">Pregledovalnik CSA osvežuje nadzorno ploščo.</figcaption>
+          </figure>
+
+        </section>
+        <section id="csa-tools" class="pb-5 mt-5 row g-5">
+
+          <div class="mt-2">
+            <h3 class="pt-3" data-section="csa-tools">Orodja CSA</h3>
+            <ul class="fs-5">
+              <li>
+                Testi za razvijalce, berljivost in kontrast.
+              </li>
+              <li>
+                Konfiguracija, prilagojena vlogi, ločena za razvijalce in ustvarjalce vsebine.
+              </li>
+              <li>
+                Gradniki testov po meri.
+              </li>
+              <li>
+                Opustitve za celotno spletno mesto z enim klikom
+              </li>
+              <li>
+                Orodja za vzdrževanje nadzorne plošče in pregledovalniki
+              </li>
+            </ul>
+            <img alt="Barvni izbirnik v opisu testa" src="../../assets/images/3x-colors.png" height="1022" width="1288" class="img-fluid col-sm-12 col-xl-9 mt-0 p-0" />
+          </div>
+
+        </section>
+        <section id="benefits" class="pb-5 mt-5 row g-5">
+
+
+          <div class="">
+            <h3 class="pt-0" data-section="benefits">Ugodnosti članstva CSA</h3>
+            <ul class="fs-5">
+              <li>Prednostna podpora.</li>
+              <li>Tehtnejši vpliv na načrt razvoja projekta.</li>
+              <li>Samodejni dostop do novih funkcij na načrtu razvoja.</li>
+              <li>Neposredna pomoč pri namestitvi (odvisno od ravni).</li>
+              <li><a href="https://form.jotform.com/260627656020150">Javno kreditiranje podpornikov</a> (odvisno od ravni/na zahtevo; pogoji se uporabljajo).</li>
+            </ul>
+          
+            <h3 class="nomenu">Vas zanima?</h3>
+            <p class="fs-5">Paket CSA je podprt z modelom prispevajte-kolikor-zmorete.
+              Jedro Editoria11y, tako knjižnica kot vtičniki, ostane za vedno brezplačno.</p>
+            <p class><a class="btn btn-primary" href="/sl/cene/">Pridružite se CSA</a></p>
+
+          </div>
+
+        </section>
+
+
+
+
+
+        <h2 id="projects" data-section="false">Sponzorirani projekti CSA</h2>
+        <section id="active-projects">
+          <h3 class="pt-4" data-section="active-projects">Aktivno</h3>
+          <div class="accord">
+            <details>
+              <summary>
+                Q2 2026: Zagon skupnosti Editoria11y CSA
+              </summary>
+              <div>
+                <p>Preostalo delo:</p>
+                <ul class="fs-6">
+                  <li>
+                    Ustvarjanje fiskalnega subjekta za obdelavo naročnin in sponzorstev.
+                  </li>
+                  <li>
+                    Vzpostavitev sistema licenciranja.
+                  </li>
+                </ul>
+              </div>
+            </details>
+            <details>
+              <summary>
+                Q2 2026: Gradnik pravil po meri
+              </summary>
+              <div>
+                <ol class="fs-6">
+                  <li>Končano za Drupal.</li>
+                  <li>Naloga: prenos gradnika v WordPress.</li>
+                </ol>
+              </div>
+            </details>
+            <details>
+              <summary>
+                Q3 2026: Prenos knjižnice 3.x v WordPress
+              </summary>
+              <div>
+                <ol class="fs-6">
+                  <li><span data-translate>Ustvarjanje podmodula CSA s funkcijami, ki jih podpira skupnost</span>
+                    <ul>
+                      <li>Ustvarjanje orodij za vzdrževanje nadzorne plošče za odstranitev zastarelih rezultatov in ponovni pregled obstoječe vsebine.</li>
+                      <li>Omogočanje označevanja določenih testov za OK na ravni celotnega spletnega mesta, ne le na eni strani.</li>
+                      <li>Omogočanje ločene konfiguracije z ločenimi nastavitvami in testi za razvijalce in urednike vsebine.</li>
+                    </ul>
+                  </li>
+                </ol>
+              </div>
+            </details>
+          </div>
+        </section>
+        <section id="finished">
+          <h3 data-section="finished" class="pt-5">Nedavno končano</h3>
+          <div class="accord">
+            <details>
+              <summary>
+                Q1 2026: Prepisovanje knjižnice 3.x
+              </summary>
+              <div>
+                <ul class="fs-6">
+                  <li>
+                    Združitev naborov pravil Editoria11y in Sa11y. Od razhajanja je Sa11y napisal ~50 dodatnih testov
+                    in sprejel orodja ESM, Editoria11y pa je implementiral izboljšave zmogljivosti in dodal parametre
+                    za omogočanje preverjanja v realnem času. Sa11y 4.2.2 in Editoria11y 3.x bosta ohranila oba nabora
+                    testov in bosta medsebojno kompatibilna.
+                  </li>
+                  <li>
+                    Dodajanje podpore za »ločeno konfiguracijo« za ločene nabore pravil za razvijalce in ustvarjalce vsebine.
+                  </li>
+                  <li>Dodajanje strojnih prevodov za kitajščino, danščino, nizozemščino, nemščino, grščino, madžarščino, italijanščino, japonščino,
+                    norveščino (bokmål), poljščino, portugalščino (Brazilija), portugalščino (Portugalska), španščino, švedščino in ukrajinščino
+                    kot predloge za človeško dodelovanje.</li>
+                  <li><em class="fs-6 lh-1"><strong>Trenutni status</strong>: kodirno delo je zaključeno; oznaka izdaje bo po posodobitvi dokumentacije in demonstracij.</em></li>
+                </ul>
+              </div>
+            </details>
+            <details>
+              <summary>
+                Q1 2026: Prepisovanje modula Drupal 3.x
+              </summary>
+              <div>
+                <ol class="fs-6">
+                  <li>Razširitev nadzorne plošče z robustnejšimi orodji za poročanje in filtriranje.</li>
+                  <li>Dodajanje strojnih prevodov za kitajščino, danščino, nizozemščino, nemščino, grščino, madžarščino, italijanščino, japonščino,
+                    norveščino (bokmål), poljščino, portugalščino (Brazilija), portugalščino (Portugalska), španščino, švedščino in ukrajinščino
+                    kot predloge za človeško dodelovanje.</li>
+                  <li>Prilagodljivost funkcij izvoza v CSV</li>
+                  <li><span data-translate>Ustvarjen podmodul CSA s funkcijami, ki jih podpira skupnost</span>
+                    <ul>
+                      <li>Ustvarjanje orodij za vzdrževanje nadzorne plošče za odstranitev zastarelih rezultatov in ponovni pregled obstoječe vsebine.</li>
+                      <li>Omogočanje označevanja določenih testov za OK na ravni celotnega spletnega mesta, ne le na eni strani.</li>
+                      <li>Omogočanje ločene konfiguracije z ločenimi nastavitvami in testi za razvijalce in urednike vsebine.</li>
+                    </ul>
+                  </li>
+                </ol>
+              </div>
+            </details>
+          </div>
+        </section>
+        <section id="project-ideas">
+          <h3 data-section="project-ideas" class="pt-5">V razpravi</h3>
+          <p>Razpravljajte in glasujte o teh idejah v <a               href="https://github.com/itmaybejj/editoria11y/discussions">forumih knjižnice Editoria11y</a>.</p>
+          <p>Ideje so označene z ocenami težavnosti/prioritete na podlagi trenutnih pogovorov skupnosti.</p>
+          <ul class="mt-1 p-5 pt-0">
+            <li>Nadzorna plošča za nadzor več spletnih mest</li>
+            <li>Zaznavanje pokvarjenih povezav</li>
+            <li>Skeniranje PDF-jev</li>
+            <li>Zavihek za lokacijo kode v opisu</li>
+            <li>Izvoz poročila strani iz opisa</li>
+            <li>Označene besede</li>
+            <li>CLI razvijalska orodja</li>
+            <li>Zaznamki/Vtičniki za brskalnik</li>
+            <li>Preverjanje pravil ACT</li>
+            <li>Razširitev preverjanja ime/vloga/vrednost</li>
+          </ul>
+        </section>
+
+
+      </div>
+
+
+    </div>
+  </main>
+  <footer class="container col-lg-12 mx-auto pt-3 text-body-secondary text-center text-md-start">
+    <div class="container">
+      <div class="footer-nav text-center">
+        <a class="btn btn-primary btn-lg" data-slug="about" href="/sl/">O nas</a>
+        <a class="btn btn-primary btn-lg" data-slug="features" href="/sl/funkcije/">Funkcije</a>
+        <a class="btn btn-primary btn-lg" data-slug="demo" href="/sl/predstavitev/">Predstavitev</a>
+        <a class="btn btn-primary btn-lg" data-slug="license" href="/sl/cene/">Cene in prispevki</a>
+      </div>
+      <div class="row footer">
+        <div class="col col-3">
+          <a href="https://github.com/itmaybejj/editoria11y"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+              height="20" fill="currentColor" class="bi bi-git" viewBox="0 0 16 16">
+              <path
+                d="M15.698 7.287 8.712.302a1.03 1.03 0 0 0-1.457 0l-1.45 1.45 1.84 1.84a1.223 1.223 0 0 1 1.55 1.56l1.773 1.774a1.224 1.224 0 0 1 1.267 2.025 1.226 1.226 0 0 1-2.002-1.334L8.58 5.963v4.353a1.226 1.226 0 1 1-1.008-.036V5.887a1.226 1.226 0 0 1-.666-1.608L5.093 2.465l-4.79 4.79a1.03 1.03 0 0 0 0 1.457l6.986 6.986a1.03 1.03 0 0 0 1.457 0l6.953-6.953a1.03 1.03 0 0 0 0-1.457" />
+            </svg> <strong>Knjižnica</strong></a>
+        </div>
+        <div class="col col-3">
+          <a href="https://github.com/itmaybejj/editoria11y/discussions"><svg xmlns="http://www.w3.org/2000/svg"
+              width="20" height="20" fill="currentColor" class="bi bi-chat-right-heart-fill" viewBox="0 0 16 16">
+              <path
+                d="M16 2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h9.586a1 1 0 0 1 .707.293l2.853 2.853a.5.5 0 0 0 .854-.353zM8 3.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132" />
+            </svg> <strong>Forum</strong></a>
+        </div>
+        <div class="col col-3">
+          <a href="https://github.com/itmaybejj/editoria11y/issues"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+              height="20" fill="currentColor" class="bi bi-patch-plus-fill" viewBox="0 0 16 16">
+              <path
+                d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01zM8.5 6v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 1 0" />
+            </svg> <strong>Težave</strong></a>
+        </div>
+        <div class="col col-3">
+          <a href="/sl/stiki/"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+              class="bi bi-person-lines-fill" height="24" width="24" viewBox="0 0 16 18">
+              <path
+                d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z">
+              </path>
+            </svg> <strong>Stiki</strong></a>
+        </div>
+        <div class="col col-12 subfooter">
+          <a href="/sl/zasebnost/">Pravilnik o zasebnosti</a>
+          <a href="/sl/piskotki/">Pravilnik o piškotkih</a>
+          <a href="/sl/pogoji/">Pogoji uporabe</a>
+          <a href="/sl/pravno-obvestilo/">Pravno obvestilo</a>
+          <span>&copy; 2026 Editoria11y LLC</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="/assets/bootstrap/js/bootstrap.bundle.min.js" class="astro-vvvwv3sm"></script>
+  <script src="/assets/lang/i18n.js"></script>
+  <script src="/assets/theme.js"></script>
+</body>
+
+</html>

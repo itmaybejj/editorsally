@@ -9,7 +9,7 @@
   <link rel="shortcut icon" href="/favicon.ico" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
   <meta charset="utf-8" />
-  <title>Add-ons — Editoria11y</title>
+  <title>Editoria11y</title>
   <link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
   <link href="/assets/theme.css" rel="stylesheet" />
   <meta name="theme-color" content="#712cf9" />
@@ -33,7 +33,7 @@
         </button>
         <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
           <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Editora11y</h5>
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Editoria11y</h5>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Zamknij"></button>
           </div>
           <div class="offcanvas-body">
@@ -60,9 +60,8 @@
         <p class="fs-5">Obejrzyj <a href="https://youtu.be/uYvNYPg38nU?si=6YANYrJpVzNAJYDl&t=260">wideo wprowadzające do
             historii i funkcji narzędzia</a>,
           lub spróbuj edytować poniższe treści demonstracyjne, otwierać i odrzucać alerty,
-          a także korzystać z paska narzędzi <span style="text-wrap: nowrap;">(<img src="/assets/images/3x-toolbar"
-              class="inline-block" style="width: 5rem; height: auto;" alt="Zrzut ekranu paska narzędzi Editoria11y
-              pokazujący 4 błędy." width="97" height="50" loading="lazy">)</span>, aby przeglądać strukturę nagłówków.
+          a także korzystać z paska narzędzi <span style="text-wrap: nowrap;">(<img src="/assets/images/3x-toolbar" class="inline-block" style="width: 5rem; height: auto;" alt="Zrzut ekranu paska narzędzi Editoria11y
+              pokazujący 4 błędy." width="97" height="50" loading="lazy" />)</span>, aby przeglądać strukturę nagłówków.
           Ta wersja demo zawiera zarówno testy podstawowe, jak i pakiet CSA.</p>
         <p class="fs-5 mb-5 pb-5">Ta wersja demo używa edytora TinyMCE. Editoria11y jest zgodny z większością edytorów
           tekstu i posiada gotowe implementacje dla CKEditor oraz Gutenberg w WordPress i Drupal.</p>
@@ -104,76 +103,70 @@
 
             <p>Ten nagłówek składa się z obrazu tekstowego bez atrybutu alt:</p>
             <div class="positive">
-              <h4><img loading="lazy" alt="" src="/assets/images/px20240813sm.jpg"></h4>
+              <h4><img loading="lazy" alt src="/assets/images/px20240813sm.jpg" /></h4>
             </div>
 
             <p>Obraz bez atrybutu alt w ogóle:</p>
-            <p class="positive"><img loading="lazy" src="/assets/images/px20240813sm.jpg"></p>
+            <p class="positive"><img loading="lazy" src="/assets/images/px20240813sm.jpg" /></p>
 
             <p>Obraz z nieprawidłowym atrybutem alt, np. <code class="language-plaintext
                 highlighter-rouge">alt=”'”</code></p>
 
-            <p class="positive"><img loading="lazy" alt="'" src="/assets/images/px20240813sm.jpg"></p>
+            <p class="positive"><img loading="lazy" alt="'" src="/assets/images/px20240813sm.jpg" /></p>
 
             <p id="image-with-a-filename-as-an-alt">Obraz z nazwą pliku jako alt</p>
 
-            <p class="positive"><img loading="lazy" alt="filename.jpg" src="/assets/images/px20240813sm.jpg"></p>
+            <p class="positive"><img loading="lazy" alt="filename.jpg" src="/assets/images/px20240813sm.jpg" /></p>
 
             <p id="image-with-redundant-text-in-its-alt">Obraz z nadmiarowym tekstem w atrybucie alt, np. „zdjęcie:”</p>
 
-            <p class="positive"><img loading="lazy" alt="Zdjęcie psa." src="/assets/images/px20240813sm.jpg"></p>
+            <p class="positive"><img loading="lazy" alt="Zdjęcie psa." src="/assets/images/px20240813sm.jpg" /></p>
 
-            <p id=”linked-image-with-redundant-text-in-its-alt”>Obraz w linku z nadmiarowym tekstem w atrybucie alt,
+            <p id="”linked-image-with-redundant-text-in-its-alt”">Obraz w linku z nadmiarowym tekstem w atrybucie alt,
               np. „zdjęcie:”</p>
 
-            <p class="positive"><a href="./editable.htm"><img loading="lazy" alt="Zdjęcie psa."
-                  src="/assets/images/px20240813sm.jpg"></a></p>
+            <p class="positive"><a href="./editable.htm"><img loading="lazy" alt="Zdjęcie psa." src="/assets/images/px20240813sm.jpg" /></a></p>
 
             <p id="image-with-placeholder-alt">Obraz z zastępczym atrybutem alt:</p>
-            <p class="positive"><img loading="lazy" alt="TBD" src="/assets/images/px20240813sm.jpg"></p>
+            <p class="positive"><img loading="lazy" alt="TBD" src="/assets/images/px20240813sm.jpg" /></p>
 
             <p id="linked-image-with-placeholder-alt">Obraz w <strong>linku</strong> z zastępczym atrybutem alt:</p>
-            <p class="positive"><a href="./editable.htm"><img loading="lazy" alt="TBD"
-                  src="/assets/images/px20240813sm.jpg"></a></p>
+            <p class="positive"><a href="./editable.htm"><img loading="lazy" alt="TBD" src="/assets/images/px20240813sm.jpg" /></a></p>
 
             <p id="image-with-machine-alt">Obraz z atrybutem alt w postaci kodu maszynowego:</p>
-            <p class="positive"><img loading="lazy" alt="$700VIDEOSABOUTTURTLESALL2SECONDSLONG"
-                src="/assets/images/px20240813sm.jpg"></p>
+            <p class="positive"><img loading="lazy" alt="$700VIDEOSABOUTTURTLESALL2SECONDSLONG" src="/assets/images/px20240813sm.jpg" /></p>
 
             <p id="linked-image-with-machine-alt">Obraz w linku z atrybutem alt w postaci kodu maszynowego:</p>
-            <p class="positive"><a href="./editable.htm"><img loading="lazy" alt="$700VIDEOSABOUTTURTLESALL2SECONDSLONG"
-                  src="/assets/images/px20240813sm.jpg"></a></p>
+            <p class="positive"><a href="./editable.htm"><img loading="lazy" alt="$700VIDEOSABOUTTURTLESALL2SECONDSLONG" src="/assets/images/px20240813sm.jpg" /></a></p>
 
             <p id="image-with-very-long-alt-text">Obraz z bardzo długim tekstem alt:</p>
 
             <p class="positive"><img loading="lazy" alt="Popatrz na tego psa. Ten pies jest taki szczęśliwy. Ten pies
                 mógł pójść na spacer, który prowadził do jeziora, gdzie było mnóstwo fascynujących zapachów. Co za
-                niesamowity dzień miał ten pies." src="/assets/images/px20240813sm.jpg"></p>
+                niesamowity dzień miał ten pies." src="/assets/images/px20240813sm.jpg" /></p>
 
             <p id="images-in-links-where-the-alt-text-may-be-describing-the-image-instead-of-the-link">Obrazy w linkach,
               gdzie tekst alt może opisywać obraz zamiast linku</p>
 
-            <p class="positive"><a href="https://www.youtube.com/watch?v=DLzxrzFCyOs">Ten link ma tekst i obraz.<img
-                  loading="lazy" alt="Ładne szare pole" src="/assets/images/px20240813sm.jpg"></a></p>
+            <p class="positive"><a href="https://www.youtube.com/watch?v=DLzxrzFCyOs">Ten link ma tekst i obraz.<img loading="lazy" alt="Ładne szare pole" src="/assets/images/px20240813sm.jpg" /></a></p>
 
             <p id="images-in-links-decorative">Dowolny obraz w linku (test domyślnie wyłączony)</p>
-            <p class="positive"><a href="https://www.youtube.com/watch?v=DLzxrzFCyOs"><img loading="lazy" alt="Cześć"
-                  src="/assets/images/px20240813sm.jpg"></a></p>
+            <p class="positive"><a href="https://www.youtube.com/watch?v=DLzxrzFCyOs"><img loading="lazy" alt="Cześć" src="/assets/images/px20240813sm.jpg" /></a></p>
 
             <p>Obraz w figure oznaczony jako dekoracyjny:</p>
             <figure class="positive">
-              <img loading="lazy" alt="" src="/assets/images/px20240813sm.jpg">
+              <img loading="lazy" alt src="/assets/images/px20240813sm.jpg" />
               <figcaption>Figcaption jest obecny.</figcaption>
             </figure>
 
             <p>Obraz w figure z atrybutem alt identycznym jak figcaption:</p>
             <figure class="positive">
-              <img loading="lazy" alt="Figcaption jest taki sam jak alt" src="/assets/images/px20240813sm.jpg">
+              <img loading="lazy" alt="Figcaption jest taki sam jak alt" src="/assets/images/px20240813sm.jpg" />
               <figcaption>Figcaption jest taki sam jak alt</figcaption>
             </figure>
             <p>Obraz w karuzeli bez atrybutu alt:</p>
             <div class="positive">
-              <img loading="lazy" alt="" class="carousel" src="/assets/images/px20240813sm.jpg">
+              <img loading="lazy" alt class="carousel" src="/assets/images/px20240813sm.jpg" />
             </div>
           </section>
           <section id="contrast">
@@ -188,7 +181,7 @@
                 75%,#ccc),linear-gradient(45deg,#ccc 25%,#0000 25% 75%,#ccc 75%,#ccc)">I niepoliczalne.</p>
             </div>
             <div class="positive"><label>Pole tekstowe z niskim kontrastem
-                <input class="form-text" type="text" style="color: #777;"></label></div>
+                <input class="form-text" type="text" style="color: #777;" /></label></div>
 
             <style>
               #unsupported-placeholder::placeholder {
@@ -198,7 +191,7 @@
 
             <label for="unsupported-placeholder">Nie można obliczyć koloru symbolu zastępczego</label>
             <div class="positive" style="background: transparent;"><input type="text" id="unsupported-placeholder"
-                placeholder="Przestrzeń kolorów Rec2020"></div>
+                placeholder="Przestrzeń kolorów Rec2020" /></div>
 
 
             <p>Grafika SVG bez wystarczającego kontrastu</p>
@@ -208,7 +201,7 @@
                 512"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
                 <path fill="#999" d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8
                   12.5-45.3 0L330.7 376C296.3 401.1 253.9 416 208 416 93.1 416 0 322.9 0 208S93.1 0 208 0 416 93.1 416
-                  208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
+                  208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" ></path>
               </svg></div>
 
             <p>Grafika SVG, gdzie kontrast wymaga ręcznego sprawdzenia</p>
@@ -219,7 +212,7 @@
                 512"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
                 <path fill="color(rec2020 0.9 0.4 0.2)" d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5
                   32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376C296.3 401.1 253.9 416 208 416 93.1 416 0 322.9 0 208S93.1 0
-                  208 0 416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
+                  208 0 416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" ></path>
               </svg></div>
 
 
@@ -273,15 +266,13 @@
                 width: 3rem; border-bottom: 1px solid;"></a> Puste linki</p>
 
             <p id="links-titled-with-a-url">Linki oznaczone wyłącznie adresem URL:</p>
-            <p class="positive"><a
-                href="https://www.youtube.com/watch?v=DLzxrzFCyOs">https://www.youtube.com/watch?v=DLzxrzFCyOs</a></p>
+            <p class="positive"><a                 href="https://www.youtube.com/watch?v=DLzxrzFCyOs">https://www.youtube.com/watch?v=DLzxrzFCyOs</a></p>
 
             <p id="links-titled-with-a-symbol">Linki oznaczone wyłącznie symbolami:</p>
             <p class="positive"><a href="https://www.youtube.com/watch?v=DLzxrzFCyOs">↣</a></p>
 
             <p>Linki o tych samych nazwach prowadzą do różnych miejsc</p>
-            <p class="positive"><a href="https://www.youtube.com/watch?v=fjOeJssZX_Q">Żółwie</a> <a
-                href="https://www.youtube.com/watch?v=cWppAbqm9I8">Żółwie</a></p>
+            <p class="positive"><a href="https://www.youtube.com/watch?v=fjOeJssZX_Q">Żółwie</a> <a                 href="https://www.youtube.com/watch?v=cWppAbqm9I8">Żółwie</a></p>
 
             <p id="links-titled-with-doi">Linki oznaczone wyłącznie numerem DOI:</p>
             <p class="positive"><a href="https://doi.org/10.1145/3493612.3520468">doi.org/10.1145/3493612.3520468</a>
@@ -298,7 +289,7 @@
                   512"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
                   <path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3
                     0L330.7 376C296.3 401.1 253.9 416 208 416 93.1 416 0 322.9 0 208S93.1 0 208 0 416 93.1 416 208zM208
-                    352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
+                    352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" ></path>
                 </svg></a></p>
 
             <p id="links-that-open-in-a-new-window-without-an-external-link-icon-or-text-warning">Linki otwierające się
@@ -330,31 +321,25 @@
             <p class="positive"><a href="www.google.com/" aria-label="has aria label">dowiedz się więcej</a></p>
 
             <p>Obraz w linku bez tekstu alt:</p>
-            <p class="positive"><a href="./editable.htm"><img loading="lazy" alt=""
-                  src="/assets/images/px20240813sm.jpg" class=""></a></p>
+            <p class="positive"><a href="./editable.htm"><img loading="lazy" alt src="/assets/images/px20240813sm.jpg" class /></a></p>
 
             <p>Obraz w linku z niemożliwym do wymówienia tekstem alt:</p>
-            <p class="positive"><a href="./editable.htm"><img loading="lazy" alt="'"
-                  src="/assets/images/px20240813sm.jpg" class=""></a></p>
+            <p class="positive"><a href="./editable.htm"><img loading="lazy" alt="'" src="/assets/images/px20240813sm.jpg" class /></a></p>
 
             <p>Obraz w linku bez atrybutu alt:</p>
-            <p class="positive"><a href="./editable.htm"><img loading="lazy" src="/assets/images/px20240813sm.jpg"
-                  class=""></a></p>
+            <p class="positive"><a href="./editable.htm"><img loading="lazy" src="/assets/images/px20240813sm.jpg" class /></a></p>
 
             <p>Obraz w linku bez atrybutu alt, w linku z tekstem:</p>
-            <p class="positive"><a href="./editable.htm">Szukaj <img loading="lazy"
-                  src="/assets/images/px20240813sm.jpg" class=""></a></p>
+            <p class="positive"><a href="./editable.htm">Szukaj <img loading="lazy" src="/assets/images/px20240813sm.jpg" class /></a></p>
 
             <p>Obraz w linku z samą nazwą pliku jako tekstem alt:</p>
-            <p class="positive"><a href="./editable.htm"><img loading="lazy" alt="http://jpg.gif"
-                  src="/assets/images/px20240813sm.jpg">
+            <p class="positive"><a href="./editable.htm"><img loading="lazy" alt="http://jpg.gif" src="/assets/images/px20240813sm.jpg" />
               </a></p>
 
             <p>Obraz w linku z podejrzanie długim tekstem alt:</p>
             <p class="positive"><a href="./editable.htm"><img loading="lazy" alt="Popatrz na tego psa. Ten pies jest
                   taki szczęśliwy. Ten pies mógł pójść na spacer, który prowadził do jeziora, gdzie było mnóstwo
-                  fascynujących zapachów. Co za niesamowity dzień miał ten pies."
-                  src="/assets/images/px20240813sm.jpg">
+                  fascynujących zapachów. Co za niesamowity dzień miał ten pies." src="/assets/images/px20240813sm.jpg" />
               </a></p>
 
             <p>Uszkodzone linki kotwicowe na stronie</p>
@@ -451,12 +436,12 @@
 
             <p>Pola z niewidoczną etykietą — sprawdzenie, czy istnieje też widoczna etykieta.</p>
             <div class="positive">
-              <input type="text" title="Email">
+              <input type="text" title="Email" />
             </div>
 
             <p>Pola z wyłącznie zastępczą etykietą — sprawdzenie, czy istnieje też widoczna etykieta.</p>
             <div class="positive">
-              <input type="text" placeholder="Email">
+              <input type="text" placeholder="Email" />
             </div>
 
             <div class="positive">
@@ -476,7 +461,7 @@
 
             <div class="positive">
               <p>Przycisk resetowania.</p>
-              <input class="btn btn-danger" type="reset">
+              <input class="btn btn-danger" type="reset" />
             </div>
 
             <p class="positive"><a href="./editable.htm" tabindex="2">Mieszanie kolejności tabulacji</a></p>
@@ -496,60 +481,55 @@
   </main>
   <footer class="container col-lg-12 mx-auto pt-3 text-body-secondary text-center text-md-start">
     <div class="container">
-      <div class="footer-nav mt-5 pt-5 text-center"><a class="btn btn-primary btn-lg" href="/pl/about/">O nas</a> <a
-          class="btn
-            btn-primary btn-lg" href="/pl/features/">Funkcje</a> <a class="btn btn-dark btn-lg" aria-current="page"
-          href="/pl/demo/">Demo</a> <a class="btn btn-primary btn-lg" href="/pl/license/">Cennik i wkłady</a></div>
-      <div class="footer">
-        <a href="https://github.com/itmaybejj/editoria11y"><svg xmlns="http://www.w3.org/2000/svg" width="20"
-            height="20" fill="currentColor" class="bi bi-git" viewBox="0 0 16 16">
-            <path
-              d="M15.698 7.287 8.712.302a1.03 1.03 0 0 0-1.457 0l-1.45 1.45 1.84 1.84a1.223 1.223 0 0 1 1.55 1.56l1.773 1.774a1.224 1.224 0 0 1 1.267 2.025 1.226 1.226 0 0 1-2.002-1.334L8.58 5.963v4.353a1.226 1.226 0 1 1-1.008-.036V5.887a1.226 1.226 0 0 1-.666-1.608L5.093 2.465l-4.79 4.79a1.03 1.03 0 0 0 0 1.457l6.986 6.986a1.03 1.03 0 0 0 1.457 0l6.953-6.953a1.03 1.03 0 0 0 0-1.457" />
-          </svg> <strong>Biblioteka</strong></a>
-        <a href="https://github.com/itmaybejj/editoria11y/discussions"><svg xmlns="http://www.w3.org/2000/svg"
-            width="20" height="20" fill="currentColor" class="bi bi-chat-right-heart-fill" viewBox="0 0 16 16">
-            <path
-              d="M16 2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h9.586a1 1 0 0 1 .707.293l2.853 2.853a.5.5 0 0 0 .854-.353zM8 3.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132" />
-          </svg> <strong>Forum</strong></a>
-        <a href="https://github.com/itmaybejj/editoria11y/issues"><svg xmlns="http://www.w3.org/2000/svg" width="20"
-            height="20" fill="currentColor" class="bi bi-patch-plus-fill" viewBox="0 0 16 16">
-            <path
-              d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01zM8.5 6v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 1 0" />
-          </svg> <strong>Zgłoszenia</strong></a>
-        <a href="/pl/contacts"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-            class="bi bi-person-lines-fill" height="24" width="24" viewBox="0 0 16 18">
-            <path
-              d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z">
-            </path>
-          </svg> <strong>Kontakt</strong></a>
+      <div class="footer-nav text-center">
+        <a class="btn btn-primary btn-lg" data-slug="about" href="/pl/">O nas</a>
+        <a class="btn btn-primary btn-lg" data-slug="features" href="/pl/funkcje/">Funkcje</a>
+        <a class="btn btn-primary btn-lg" data-slug="demo" href="/pl/demo/">Demo</a>
+        <a class="btn btn-primary btn-lg" data-slug="license" href="/pl/cennik/">Cennik i wkłady</a>
       </div>
-      <div class="col col-12 subfooter">
-        <a href="/pl/privacy-policy">Polityka prywatności</a>
-        <a href="/pl/cookie-policy">Polityka cookies</a>
-        <a href="/pl/terms-of-use">Warunki użytkowania</a>
-        <a href="/pl/legal-notice">Informacje prawne</a>
-        &copy; 2026 Editoria11y LLC
+      <div class="row footer">
+        <div class="col col-3">
+          <a href="https://github.com/itmaybejj/editoria11y"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+              height="20" fill="currentColor" class="bi bi-git" viewBox="0 0 16 16">
+              <path
+                d="M15.698 7.287 8.712.302a1.03 1.03 0 0 0-1.457 0l-1.45 1.45 1.84 1.84a1.223 1.223 0 0 1 1.55 1.56l1.773 1.774a1.224 1.224 0 0 1 1.267 2.025 1.226 1.226 0 0 1-2.002-1.334L8.58 5.963v4.353a1.226 1.226 0 1 1-1.008-.036V5.887a1.226 1.226 0 0 1-.666-1.608L5.093 2.465l-4.79 4.79a1.03 1.03 0 0 0 0 1.457l6.986 6.986a1.03 1.03 0 0 0 1.457 0l6.953-6.953a1.03 1.03 0 0 0 0-1.457" />
+            </svg> <strong>Biblioteka</strong></a>
+        </div>
+        <div class="col col-3">
+          <a href="https://github.com/itmaybejj/editoria11y/discussions"><svg xmlns="http://www.w3.org/2000/svg"
+              width="20" height="20" fill="currentColor" class="bi bi-chat-right-heart-fill" viewBox="0 0 16 16">
+              <path
+                d="M16 2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h9.586a1 1 0 0 1 .707.293l2.853 2.853a.5.5 0 0 0 .854-.353zM8 3.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132" />
+            </svg> <strong>Forum</strong></a>
+        </div>
+        <div class="col col-3">
+          <a href="https://github.com/itmaybejj/editoria11y/issues"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+              height="20" fill="currentColor" class="bi bi-patch-plus-fill" viewBox="0 0 16 16">
+              <path
+                d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01zM8.5 6v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 1 0" />
+            </svg> <strong>Zgłoszenia</strong></a>
+        </div>
+        <div class="col col-3">
+          <a href="/pl/kontakt/"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+              class="bi bi-person-lines-fill" height="24" width="24" viewBox="0 0 16 18">
+              <path
+                d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z">
+              </path>
+            </svg> <strong>Kontakt</strong></a>
+        </div>
+        <div class="col col-12 subfooter">
+          <a href="/pl/prywatnosc/">Polityka prywatności</a>
+          <a href="/pl/cookies/">Polityka cookies</a>
+          <a href="/pl/warunki/">Warunki użytkowania</a>
+          <a href="/pl/informacje-prawne/">Informacje prawne</a>
+          <span>&copy; 2026 Editoria11y LLC</span>
+        </div>
       </div>
     </div>
   </footer>
-
+  <script src="/assets/bootstrap/js/bootstrap.bundle.min.js" class="astro-vvvwv3sm"></script>
   <script src="/assets/lang/i18n.js"></script>
   <script src="/assets/theme.js"></script>
-  <script src="/assets/bootstrap/js/bootstrap.bundle.min.js" class="astro-vvvwv3sm"></script>
-
-  <script src="../../assets/tinymce/tinymce.min.js"></script>
-  <script>
-    tinymce.init({
-      selector: '#ed11y-demo',
-      license_key: 'gpl',
-      plugins: 'image lists table',
-      toolbar: 'blocks bold italic underline strikethrough blockquote  image numlist indent outdent bullist table tabledelete',
-      inline: true,
-      toolbar_persist: true,
-    });
-  </script>
-  <link rel="stylesheet" media="all" href="/assets/ed11y/css/editoria11y.min.css">
-  <script src="/assets/demo.js" type="module"></script>
 </body>
 
 </html>

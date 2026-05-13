@@ -1,0 +1,512 @@
+<!doctype html>
+<html lang="et" data-bs-theme="light">
+
+<head>
+  <link rel="icon" type="image/png" href="/assets/favicons/favicon-512x512.png" sizes="512x512" />
+  <link rel="icon" type="image/png" href="/assets/favicons/favicon-192x192.png" sizes="192x192" />
+  <link rel="icon" type="image/png" href="/assets/favicons/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/assets/favicons/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <meta charset="utf-8" />
+  <title>Demo — Editoria11y</title>
+  <link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="/assets/theme.css" rel="stylesheet" />
+  <meta name="theme-color" content="#712cf9" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-md">
+      <div class="container col-sm-12 mx-auto">
+        <a href="/et/" class="d-flex align-items-center  navbar-brand">
+          <svg class="logo-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+            viewBox="-.75 -3.5 10.1699 19.1777">
+            <path fill="currentColor"
+              d="M3.7031,10.5527c-.3633-.6562-.6426-1.1387-.8379-1.4473l-.3105-.4863-.2344-.3574c-.5117-.7969-1.0449-1.4551-1.5996-1.9746.3164-.2617.6113-.3926.8848-.3926.3359,0,.6348.123.8965.3691s.5918.7148.9902,1.4062c.4531-1.4727,1.0293-2.8691,1.7285-4.1895.3867-.7188.7314-1.2021,1.0342-1.4502s.7041-.3721,1.2041-.3721c.2656,0,.5938.041.9844.123-1.0039.8086-1.8066,1.7695-2.4082,2.8828s-1.3789,3.0762-2.332,5.8887Z" />
+          </svg> Editoria<span style="margin-left: -1px;">11</span>y
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar" aria-label="Lülita navigatsioon">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Editoria11y</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Sulge"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 nav-pills">
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div id="lang-picker"></div>
+  </header>
+  <main class="container col-lg-12 mx-auto py-5">
+    <div class="row docs">
+      <div class="col-12 col-md-5 col-lg-4 mb-5">
+        <div id="on-this-page" class="list-group ms-2 ms-lg-5 position-sticky top-0 pt-3">
+        </div>
+      </div>
+      <div class="col-12 col-md-7 col-lg-8 pt-3" data-bs-spy="scroll" data-bs-target="#on-this-page"
+        data-bs-smooth-scroll="true" tabindex="0">
+
+
+
+        <h1 class="pt-4" id="demo">Demo</h1>
+        <p class="fs-5">Vaadake <a href="https://youtu.be/uYvNYPg38nU?si=6YANYrJpVzNAJYDl&t=260">videot kontrollija ajaloost ja funktsioonidest</a>,
+          või proovige allpool olevat demo-sisu muuta, hoiatusi avada ja eiraada,
+          ning kasutage tööriistariba <span style="text-wrap: nowrap;">(<img src="/assets/images/3x-toolbar" class="inline-block" style="width: 5rem; height: auto;" alt="Editoria11y tööriistariba ekraanipilt, millel on 4 viga." width="97" height="50" loading="lazy" />)</span> pealkirja struktuuri vaatamiseks. See demo sisaldab nii põhiteste kui ka CSA komplekti.</p>
+        <p class="fs-5 mb-5 pb-5">See demo kasutab TinyMCE redaktorit. Editoria11y ühildub enamike tekstiredaktorite, ja
+          ning sisaldab valmisintegratsioone CKEditori ja Gutenbergi jaoks WordPressis ja Drupalil.</p>
+        <div id="ed11y-demo" class="p-5" contenteditable="">
+          <section id="headings">
+
+            <h3 class="pt-1">Pealkirjad</h3>
+
+            <p>See pealkiri jättis taseme vahele:</p>
+            <div class="positive">
+              <h6 id="this-h6-should-have-been-an-h3">Oops</h6>
+            </div>
+
+            <p>Sellel pealkirjal pole üldse teksti:</p>
+            <div class="positive">
+              <h4 class="empty-example"> </h4>
+            </div>
+
+            <p>See lühike tsitaadiplokk võib olla pealkiri:</p>
+            <div class="positive">
+              <blockquote>Olen võltspealkiri</blockquote>
+            </div>
+
+            <p>See täielikult rasvane lõik võib olla pealkiri:</p>
+            <p class="positive"><strong>Olen võltspealkiri</strong></p>
+
+            <p>See pealkiri on väga pikk:</p>
+            <div class="positive">
+              <h4>Pealkirjad ja alapealkirjad loovad navigeeritava sisukorra abivahendite jaoks. Numbrid
+                näitavad pesastumissuhteid. Väga pikad pealkirjad tähendavad tõenäoliselt, et autor ütleb pealkirjas liiga palju.</h4>
+            </div>
+
+          </section>
+
+
+          <section id="text-alternatives">
+            <h3 data-section="text-alternatives">Piltide tekstialternatiiivid</h3>
+
+            <p>See pealkiri on loodud tekstipildist ilma alternatiivtekstita:</p>
+            <div class="positive">
+              <h4><img loading="lazy" alt src="/assets/images/px20240813sm.jpg" /></h4>
+            </div>
+
+            <p>Pilt üldse ilma alt-atribuudita:</p>
+            <p class="positive"><img loading="lazy" src="/assets/images/px20240813sm.jpg" /></p>
+
+            <p>Pilt vigase alt-atribuudiga, nt <code class="language-plaintext highlighter-rouge">alt="'"</code></p>
+
+            <p class="positive"><img loading="lazy" alt="'" src="/assets/images/px20240813sm.jpg" /></p>
+
+            <p id="image-with-a-filename-as-an-alt">Pilt failinimega alternatiivtekstina</p>
+
+            <p class="positive"><img loading="lazy" alt="filename.jpg" src="/assets/images/px20240813sm.jpg" /></p>
+
+            <p id="image-with-redundant-text-in-its-alt">Pilt üleliigse tekstiga alternatiivtekstis, nt „pilt:"</p>
+
+            <p class="positive"><img loading="lazy" alt="Image of a dog." src="/assets/images/px20240813sm.jpg" /></p>
+
+            <p id="linked-image-with-redundant-text-in-its-alt">Lingitud pilt üleliigse tekstiga alternatiivtekstis,
+              nt „pilt:"</p>
+
+            <p class="positive"><a href="./editable.htm"><img loading="lazy" alt="Image of a dog." src="/assets/images/px20240813sm.jpg" /></a></p>
+
+            <p id="image-with-placeholder-alt">Pilt ajutise alternatiivtekstiga:</p>
+            <p class="positive"><img loading="lazy" alt="TBD" src="/assets/images/px20240813sm.jpg" /></p>
+
+            <p id="linked-image-with-placeholder-alt"><strong>Lingitud</strong> pilt ajutise alternatiivtekstiga:</p>
+            <p class="positive"><a href="./editable.htm"><img loading="lazy" alt="TBD" src="/assets/images/px20240813sm.jpg" /></a></p>
+
+            <p id="image-with-machine-alt">Pilt masinkoodiga alternatiivtekstiga:</p>
+            <p class="positive"><img loading="lazy" alt="$700VIDEOSABOUTTURTLESALL2SECONDSLONG" src="/assets/images/px20240813sm.jpg" /></p>
+
+            <p id="linked-image-with-machine-alt">Lingitud pilt masinkoodiga alternatiivtekstiga:</p>
+            <p class="positive"><a href="./editable.htm"><img loading="lazy" alt="$700VIDEOSABOUTTURTLESALL2SECONDSLONG" src="/assets/images/px20240813sm.jpg" /></a></p>
+
+            <p id="image-with-very-long-alt-text">Pilt väga pika alternatiivtekstiga:</p>
+
+            <p class="positive"><img loading="lazy" alt="Look at this doggy. This doggy is so happy. This doggy got to go on a walk and the walk went to a lake and there were all kinds of fascinating smells. What an amazing day this doggy had." src="/assets/images/px20240813sm.jpg" /></p>
+
+            <p id="images-in-links-where-the-alt-text-may-be-describing-the-image-instead-of-the-link">Pildid linkides,
+              kus alternatiivtekst võib kirjeldada pilti, mitte linki</p>
+
+            <p class="positive"><a href="https://www.youtube.com/watch?v=DLzxrzFCyOs">Sellel lingil on tekst ja
+                pilt.<img loading="lazy" alt="A lovely gray box" src="/assets/images/px20240813sm.jpg" /></a></p>
+
+            <p id="images-in-links-decorative">Iga lingitud pilt (test vaikimisi välja lülitatud)</p>
+            <p class="positive"><a href="https://www.youtube.com/watch?v=DLzxrzFCyOs"><img loading="lazy" alt="Hello there" src="/assets/images/px20240813sm.jpg" /></a></p>
+
+            <p>Pilt kujundis märgitud dekoratiivseks:</p>
+            <figure class="positive">
+              <img loading="lazy" alt src="/assets/images/px20240813sm.jpg" />
+              <figcaption>Figcaption on olemas.</figcaption>
+            </figure>
+
+            <p>Pilt kujundis, mille alternatiivtekst on sama kui figcaption:</p>
+            <figure class="positive">
+              <img loading="lazy" alt="Figcaption on sama kui alt" src="/assets/images/px20240813sm.jpg" />
+              <figcaption>Figcaption on sama kui alt</figcaption>
+            </figure>
+            <p>Pilt karusellil ilma alternatiivtekstita:</p>
+            <div class="positive">
+              <img loading="lazy" alt class="carousel" src="/assets/images/px20240813sm.jpg" />
+            </div>
+          </section>
+          <section id="contrast">
+            <h3 data-section="contrast">Kontrastsus</h3>
+            <p>Loetamatu värvikombinatsioon:</p>
+            <div class="positive">
+              <p style="background: #ccc; color: #ddd;">Väga loetav.</p>
+            </div>
+            <p>Värv vajab käsitsi kontrollimist:</p>
+            <div class="positive">
+              <p style="background: linear-gradient(45deg,#ccc 25%,#0000 25% 75%,#ccc 75%,#ccc),linear-gradient(45deg,#ccc 25%,#0000 25% 75%,#ccc 75%,#ccc)">
+                Ja arvutamatu.</p>
+            </div>
+            <div class="positive"><label>Input with low contrast
+                <input class="form-text" type="text" style="color: #777;" /></label></div>
+
+            <style>
+              #unsupported-placeholder::placeholder {
+                color: color(rec2020 0.9 0.4 0.2);
+              }
+            </style>
+
+            <label for="unsupported-placeholder">Color of placeholder cannot be calculated</label>
+            <div class="positive" style="background: transparent;"><input type="text" id="unsupported-placeholder"
+                placeholder="Rec2020 color space" /></div>
+
+
+            <p>SVG graafik ebapiisava kontrastsusega</p>
+            <div class="positive"><svg style="width: 16px; height: 16px;" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                <path fill="#999"
+                  d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376C296.3 401.1 253.9 416 208 416 93.1 416 0 322.9 0 208S93.1 0 208 0 416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" ></path>
+              </svg></div>
+
+            <p>SVG graafik, kus kontrastsus vajab käsitsi kontrollimist</p>
+            <div class="positive"
+              style="background: linear-gradient(45deg,#ccc 45%,#0000 45% 75%,#ccc 75%,#ccc),linear-gradient(145deg,#ccc 45%,#0000 45% 75%,#ccc 75%,#ccc)">
+              <svg style="width: 16px; height: 16px;" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                <path fill="color(rec2020 0.9 0.4 0.2)"
+                  d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376C296.3 401.1 253.9 416 208 416 93.1 416 0 322.9 0 208S93.1 0 208 0 416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" ></path>
+              </svg>
+            </div>
+
+
+          </section>
+          <section id="embed-media">
+            <h3 data-section="embed-media">Manustused & Meedia</h3>
+
+            <p>Video, mis on märgitud käsitsi kontrollimiseks subtitreerimise osas:</p>
+            <div class="positive" style="width: 560px; aspect-ratio: 560 / 315; max-width: 100%; cursor: not-allowed;">
+              <iframe width="560" height="315" inert=""
+                src="https://www.youtube-nocookie.com/embed/QGsevnbItdU?si=W_b2i2o_n5v1ArvA"
+                style="width: 560px; aspect-ratio: 560 / 315; max-width: 100%; cursor: not-allowed;"
+                title="YouTube: How it's done video. Playback is disabled." sandbox="allow-scripts allow-same-origin"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="origin" allowfullscreen></iframe>
+              <div><small><em>Playback disabled to prevent cookies.</em></small></div>
+            </div>
+
+            <p>Heli vajab transkripti:</p>
+            <div class="positive">
+              <div style="border: 1px solid #444; background: #ccc; width: 320px; height: 60px;"><audio                   style="height: 60px;"></audio>
+              </div>
+            </div>
+
+            <p>Iframe ilma pealkirjata, mis vajab ka käsitsi kontrollimist:</p>
+            <div class="positive">
+              <iframe data-needs-src=""></iframe>
+            </div>
+
+            <p>Mittefokuseeritav iframe:</p>
+            <div class="positive">
+              <iframe title="example" sandbox="" tabindex="-1" data-needs-src=""></iframe>
+            </div>
+
+            <p>Pesastatud interaktiivsed komponendid</p>
+            <div class="positive">
+              <details>
+                <summary>Akordion</summary>
+                <details>
+                  <summary>Akordion</summary>Surprise!
+                </details>
+              </details>
+            </div>
+          </section>
+          <section id="meaningful-links">
+            <h3 data-section="meaningful-links">Tähenduslikud lingid</h3>
+
+            <p id="links-with-no-text-at-all">Lingid üldse ilma tekstita</p>
+            <p class="positive"><a href="https://www.youtube.com/watch?v=DLzxrzFCyOs"
+                style="display: inline-block; width: 3rem; border-bottom: 1px solid;"></a> Tühjad lingid</p>
+
+            <p id="links-titled-with-a-url">Lingid, mille sildiks on ainult URL:</p>
+            <p class="positive"><a                 href="https://www.youtube.com/watch?v=DLzxrzFCyOs">https://www.youtube.com/watch?v=DLzxrzFCyOs</a></p>
+
+            <p id="links-titled-with-a-symbol">Lingid, mille sildiks on ainult sümbolid:</p>
+            <p class="positive"><a href="https://www.youtube.com/watch?v=DLzxrzFCyOs">↣</a></p>
+
+            <p>Sama nimega lingid viivad erinevatele kohtadele</p>
+            <p class="positive"><a href="https://www.youtube.com/watch?v=fjOeJssZX_Q">Kilpkonnad</a> <a                 href="https://www.youtube.com/watch?v=cWppAbqm9I8">Kilpkonnad</a></p>
+
+            <p id="links-titled-with-doi">Lingid, mille sildiks on ainult DOI number:</p>
+            <p class="positive"><a href="https://doi.org/10.1145/3493612.3520468">doi.org/10.1145/3493612.3520468</a>
+            </p>
+
+            <p id="links-titled-with-click">Lingid tähendusetu sildiga:</p>
+            <p class="positive"><a href="https://www.youtube.com/watch?v=DLzxrzFCyOs"
+                title="https://www.youtube.com/watch?v=DLzxrzFCyOs">Klõpsake siia</a></p>
+
+            <p id="links-titled-with-empty">Lingitud ikoonid ilma tekstialternatiiivideta:</p>
+            <p class="positive"><a href="https://www.youtube.com/watch?v=DLzxrzFCyOs"><svg                   style="width: 16px; height: 16px;" xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 512 512"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                  <path                     d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376C296.3 401.1 253.9 416 208 416 93.1 416 0 322.9 0 208S93.1 0 208 0 416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" ></path>
+                </svg></a></p>
+
+            <p id="links-that-open-in-a-new-window-without-an-external-link-icon-or-text-warning">Lingid, mis avanevad
+              uues aknas ilma välise lingi ikoni või tekstihoiatuseta</p>
+
+            <p class="positive"><a href="https://www.youtube.com/watch?v=DLzxrzFCyOs" target="_blank">Hoiatus uues aknas avanemise testi jaoks.</a></p>
+
+            <p id="links-to-PDF">Lingid PDF-idele</p>
+            <p class="positive"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ#.pdf" class="">Naudi.</a></p>
+
+            <p id="links-to-doc">Lingid teistele dokumentidele</p>
+            <p class="positive"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ#.doc" class="">Võlts doc-link.</a>
+            </p>
+
+            <p id="links-redundant">Lingid üleliigse title-atribuudiga</p>
+            <p class="positive"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" title="Hõljuta mind">Hõljuta mind</a></p>
+
+            <p>Lingid atribuutidega, mis eemaldavad need tabeldusindeksist:</p>
+            <p class="positive"><a href="./editable.htm" aria-hidden="true">Aria-peidetud lingid ilma negatiivse
+                tabindexita.</a></p>
+
+            <p>Lingid aria-labelledby atribuutidega elementidele, millel pole teksti:</p>
+            <p class="positive"><a href="./editable.htm" id="oops" aria-labelledby="oops"></a></p>
+
+            <p>Lingid üldiste sõnadega oma aria-sildis:</p>
+            <p class="positive"><a href="www.google.com/" aria-label="omab aria-silti">loe rohkem</a></p>
+
+            <p>Lingitud pilt ilma alternatiivtekstita:</p>
+            <p class="positive"><a href="./editable.htm"><img loading="lazy" alt src="/assets/images/px20240813sm.jpg" class /></a></p>
+
+            <p>Lingitud pilt hääldamatu alternatiivtekstiga:</p>
+            <p class="positive"><a href="./editable.htm"><img loading="lazy" alt="'" src="/assets/images/px20240813sm.jpg" class /></a></p>
+
+            <p>Lingitud pilt ilma alt-tekstiatribuudita:</p>
+            <p class="positive"><a href="./editable.htm"><img loading="lazy" src="/assets/images/px20240813sm.jpg" class /></a></p>
+
+            <p>Lingitud pilt ilma alt-tekstiatribuudita lingis, milles on tekst:</p>
+            <p class="positive"><a href="./editable.htm">Otsi <img loading="lazy" src="/assets/images/px20240813sm.jpg" class /></a></p>
+
+            <p>Lingitud pilt ainult failinimega alternatiivtekstina:</p>
+            <p class="positive"><a href="./editable.htm"><img loading="lazy" alt="http://jpg.gif" src="/assets/images/px20240813sm.jpg" />
+              </a></p>
+
+            <p>Lingitud pilt kahtlaselt pika alternatiivtekstiga:</p>
+            <p class="positive"><a href="./editable.htm"><img loading="lazy" alt="Look at this doggy. This doggy is so happy. This doggy got to go on a walk and the walk went to a lake and there were all kinds of fascinating smells. What an amazing day this doggy had." src="/assets/images/px20240813sm.jpg" />
+              </a></p>
+
+            <p>Katkised lehe sisemised lingid</p>
+            <p class="positive">
+              <a href="#oh-no">Sellist ID-d pole olemas.</a>
+            </p>
+
+            <p>Lingid arendusserverisse</p>
+            <p class="positive">
+              <a href="https://tugboatqa.com">Oops</a>
+            </p>
+
+            <p>Duplikaatankrud</p>
+            <p class="positive"><a id="dupe" href="#dupe">Ankur 1</a> <a id="dupe" href="#dupe">Ankur 2</a></p>
+          </section>
+          <section>
+            <h3 id="table-tests">Tabelid</h3>
+
+            <p id="tables-without-valid-headers">Tabelid ilma kehtivate päisteta</p>
+
+            <table class="positive">
+              <tbody>
+                <tr>
+                  <td>Tabel ilma TH päiseta on kehtetu</td>
+                  <td class="positive">
+                    <h4>Struktuuri pealkirjad ei lähe arvesse</h4>
+                  </td>
+                  <td class="negative">
+                    <p><strong>Lülita välja peaks olema sisu päiste test tabelite sees</strong></p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <table>
+              <thead>
+                <tr>
+                  <th class="positive"></th>
+                  <th class="negative">Tühjad päised</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="negative">
+                  <th>Leidsin</th>
+                  <td>700 kilpkonnavideot</td>
+                </tr>
+                <tr class="negative">
+                  <th>Igaüks</th>
+                  <td>2 sekundit pikk</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+          <section id="legibility">
+            <h3 data-section="legibility">Loetavus</h3>
+
+            <div class="positive">
+              <p>MITME SUURTÄHELISE SÕNA JÄRJESTIKUNE RIDA KÄIVITAB KÄSITSI KONTROLLIMISE HOIATUSE.</p>
+            </div>
+
+            <p class="positive"><u>Allajoonitud tekst</u></p>
+
+            <p class="positive"><em>Natuke kursiivis on fine, kuid suured kaldkirja tekstiplokid pole väga
+                loetavad. Natuke on muidugi vastuvõetav, kuid on piirid ja terve lõik on liiga palju.
+                See, näiteks, on terve lõik. See on natuke raske lugeda, eks? Kuid see test ei
+                käivitu enne, kui see on nii pikk, nii et te ei tohiks näha valehoiatusi oma sisus, välja arvatud juhul, kui kirjutate
+                tõesti suuri lõike regulaarselt.</em></p>
+
+            <p class="positive" style="text-align: justify;">Joondatud tekst</p>
+
+            <p class="positive">Ülemäärane ülaindeks või alaindeks; <sub>alaindeksit tuleks kasutada väikeste viidete
+                ja joonealuste märkuste jaoks, mitte tervete lausete või lõikude jaoks.</sub></p>
+
+            <p class="positive"><span style="font-size: 10px;">Väga väike font</span></p>
+
+            <div class="positive">
+              <p>* Võltsloendid tavaliste märkide abil,</p>
+              <p>* tähed, numbrid ja emojid.</p>
+            </div>
+
+            <div class="positive">
+              <li>Puuduv UL-silt</li>
+            </div>
+          </section>
+
+          <section id="form-elements">
+            <h3 data-section="form-elements">Vormid</h3>
+
+            <p>Nupp ilma sildita</p>
+            <div class="positive">
+              <button class="btn btn-primary p-3 pt-4"></button>
+            </div>
+
+            <p>Sisendid nähtamatu sildiga, mis küsivad, kas on ka nähtav silt.</p>
+            <div class="positive">
+              <input type="text" title="Email" />
+            </div>
+
+            <p>Sisendid ainult kohahoidja sildiga, mis küsivad, kas on ka nähtav silt.</p>
+            <div class="positive">
+              <input type="text" placeholder="Email" />
+            </div>
+
+            <div class="positive">
+              <p>Nupp juurdepääsetava sildiga, mis erineb tema nähtavast sildist.</p>
+              <button class="btn btn-primary" aria-label="bye">Tere</button>
+            </div>
+
+            <div class="positive">
+              <p>Nupp vigase aria-labelledby atribuudiga.</p>
+              <button class="btn btn-primary" aria-labelledby="bye">Tere</button>
+            </div>
+
+            <div class="positive">
+              <p>Nupp üleliigse sildiga.</p>
+              <button class="btn btn-primary">Vajutage seda nuppu</button>
+            </div>
+
+            <div class="positive">
+              <p>Lähtesta nupp.</p>
+              <input class="btn btn-danger" type="reset" />
+            </div>
+
+            <p class="positive"><a href="./editable.htm" tabindex="2">Tabelduse järjekorra rikkumine</a></p>
+          </section>
+
+
+
+
+
+
+        </div>
+      </div>
+    </div>
+
+  </main>
+  <footer class="container col-lg-12 mx-auto pt-3 text-body-secondary text-center text-md-start">
+    <div class="container">
+      <div class="footer-nav text-center">
+        <a class="btn btn-primary btn-lg" data-slug="about" href="/et/">Meist</a>
+        <a class="btn btn-primary btn-lg" data-slug="features" href="/et/funktsioonid/">Funktsioonid</a>
+        <a class="btn btn-primary btn-lg" data-slug="demo" href="/et/demo/">Demo</a>
+        <a class="btn btn-primary btn-lg" data-slug="license" href="/et/hinnad/">Hinnad ja panustamine</a>
+      </div>
+      <div class="row footer">
+        <div class="col col-3">
+          <a href="https://github.com/itmaybejj/editoria11y"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+              height="20" fill="currentColor" class="bi bi-git" viewBox="0 0 16 16">
+              <path
+                d="M15.698 7.287 8.712.302a1.03 1.03 0 0 0-1.457 0l-1.45 1.45 1.84 1.84a1.223 1.223 0 0 1 1.55 1.56l1.773 1.774a1.224 1.224 0 0 1 1.267 2.025 1.226 1.226 0 0 1-2.002-1.334L8.58 5.963v4.353a1.226 1.226 0 1 1-1.008-.036V5.887a1.226 1.226 0 0 1-.666-1.608L5.093 2.465l-4.79 4.79a1.03 1.03 0 0 0 0 1.457l6.986 6.986a1.03 1.03 0 0 0 1.457 0l6.953-6.953a1.03 1.03 0 0 0 0-1.457" />
+            </svg> <strong>Teek</strong></a>
+        </div>
+        <div class="col col-3">
+          <a href="https://github.com/itmaybejj/editoria11y/discussions"><svg xmlns="http://www.w3.org/2000/svg"
+              width="20" height="20" fill="currentColor" class="bi bi-chat-right-heart-fill" viewBox="0 0 16 16">
+              <path
+                d="M16 2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h9.586a1 1 0 0 1 .707.293l2.853 2.853a.5.5 0 0 0 .854-.353zM8 3.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132" />
+            </svg> <strong>Foorum</strong></a>
+        </div>
+        <div class="col col-3">
+          <a href="https://github.com/itmaybejj/editoria11y/issues"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+              height="20" fill="currentColor" class="bi bi-patch-plus-fill" viewBox="0 0 16 16">
+              <path
+                d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01zM8.5 6v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 1 0" />
+            </svg> <strong>Probleemid</strong></a>
+        </div>
+        <div class="col col-3">
+          <a href="/et/kontaktid/"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+              class="bi bi-person-lines-fill" height="24" width="24" viewBox="0 0 16 18">
+              <path
+                d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z">
+              </path>
+            </svg> <strong>Kontaktid</strong></a>
+        </div>
+        <div class="col col-12 subfooter">
+          <a href="/et/privaatsuspoliitika/">Privaatsuspoliitika</a>
+          <a href="/et/kupsiste-poliitika/">Küpsiste poliitika</a>
+          <a href="/et/kasutustingimused/">Kasutustingimused</a>
+          <a href="/et/oiguslik-teave/">Õiguslik teave</a>
+          <span>&copy; 2026 Editoria11y LLC</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="/assets/bootstrap/js/bootstrap.bundle.min.js" class="astro-vvvwv3sm"></script>
+  <script src="/assets/lang/i18n.js"></script>
+  <script src="/assets/theme.js"></script>
+</body>
+
+</html>

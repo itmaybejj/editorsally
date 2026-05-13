@@ -1,0 +1,492 @@
+<main class="container col-lg-12 mx-auto py-5">
+    <div class="row docs">
+      <div class="col-12 col-md-5 col-lg-4 mb-5">
+        <div id="on-this-page" class="list-group ms-2 ms-lg-5 position-sticky top-0 pt-3">
+        </div>
+      </div>
+      <div class="col-12 col-md-7 col-lg-8 pt-3">
+        <div data-bs-spy="scroll" data-bs-target="#on-this-page" data-bs-smooth-scroll="true">
+          <h1 data-i18n-id="s-e367">Editoria11y для Drupal</h1>
+          <section id="features">
+            <h2 class="pt-3" data-i18n-id="s-1dcf">Основні можливості</h2>
+
+            <p class="fs-6" data-i18n-id="s-a8c0">Модуль Drupal з'єднує бібліотеку перевірки з редакторським бекендом і додає багато
+              серверних інструментів для звітності, керування та налаштування</p>
+
+            <figure class="figure my-4 row">
+              <div class="col-lg-8">
+                <img loading="lazy" src="/assets/images/3x-editing.png" class="rounded border figure-img img-fluid" height="1088" width="2237" alt="Редактор Drupal із вбудованими підказками" data-i18n-id="s-ee36" />
+              </div>
+              <figcaption class="figure-caption col-lg-4" data-i18n-id="s-8e69">Проблеми виявляються як під час завантаження на
+                фронтенді, так і в процесі введення тексту в CKEditor і Gutenberg.</figcaption>
+            </figure>
+
+            <figure class="figure my-4 row">
+              <div class="col-lg-8">
+                <img loading="lazy" src="/assets/images/3x-generic-tip.png" class="rounded border figure-img img-fluid" height="798" width="1278" alt="Підказка вказує, що посилання має лише назву «натисніть тут»." data-i18n-id="s-1639" />
+              </div>
+              <figcaption class="figure-caption col-lg-4" data-i18n-id="s-9881">Спливаючі підказки отримують кнопки для переходу до
+                редактора, ігнорування попередження (для поточного користувача) або позначення його як «ОК» (для всіх
+                користувачів). Повторювані попередження пропонують дії для всієї сторінки або всього сайту.
+              </figcaption>
+            </figure>
+
+            <figure class="figure my-4 row">
+              <div class="col-lg-8">
+                <img loading="lazy" src="/assets/images/3x-drupal-custom-tests.png" class="rounded border figure-img img-fluid" alt="Інтерфейс конструктора власних тестів із полями для заголовка та вмісту підказки, а також селекторів елементів і виключень." data-i18n-id="s-0830" />
+              </div>
+              <figcaption class="figure-caption col-lg-4">
+                <p class="mb-2" data-i18n-id="s-37bf">Підмодуль CSA додає:</p>
+                <ul class="ps-3">
+                  <li data-i18n-id="s-caff"><strong>Конструктор власних тестів</strong></li>
+                  <li data-i18n-id="s-b145">40+ тестів для розробників</li>
+                  <li data-i18n-id="s-f55d">Перевірку контрастності</li>
+                  <li data-i18n-id="s-b70c">Сканери сайту</li>
+                  <li data-i18n-id="s-5377">Аналіз читабельності</li>
+                  <li data-i18n-id="s-6602">Роздільні конфігурації для розробників/редакторів</li>
+                </ul>
+              <span data-translate data-i18n-id="s-bc47"></figcaption>
+            </figure>
+
+            <figure class="figure">
+              <img loading="lazy" class="figure-img img-fluid rounded border" src="/assets/images/3x-dashboard.png" height="765" width="1600" alt="Панель звітів, що показує останні проблеми та сторінки з найбільшою кількістю проблем." data-i18n-id="s-2559" />
+              <figcaption class="figure-caption p-3 pt-2" data-i18n-id="s-cdbf">Загальносайтова панель надає фільтровані та
+                експортовані звіти про попередження та відхилення.</figcaption>
+            </figure>
+
+          </section>
+          <h2 data-i18n-id="s-8fec">Встановлення та основні кроки налаштування</h2>
+          <p data-i18n-id="s-7627"><a href="https://www.drupal.org/project/editoria11y/">Пакетний інсталятор</a> на Drupal.org містить кілька
+            модулів:</p>
+          <ul>
+            <li data-i18n-id="s-b830">
+              Editoria11y: основна перевірка контенту та панель керування.
+            </li>
+            <li data-i18n-id="s-b351">
+              Editoria11y CSA: тести для розробників та інструменти обслуговування панелі.
+            </li>
+            <li data-i18n-id="s-74fe">
+              Editoria11y Export: інструменти звітування у форматі CSV.
+            </li>
+          </ul>
+          <p data-i18n-id="s-88fd">Встановіть як будь-який інший модуль, а потім виконайте такі ключові кроки:</p>
+          <ol>
+            <li data-i18n-id="s-7187"><strong>Перевірте дозволи.</strong> Довірені автори повинні мати права «Позначити як ОК», «Позначити як
+              проігноровано» та «Переглянути панель».</li>
+            <li data-i18n-id="s-1ac1"><strong>Перевірте ключові сторінки на наявність повторюваних або непотрібних попереджень.</strong> Або
+              позначте їх як «ОК» у підказці, або налаштуйте конфігурацію для ігнорування елементів за селектором.</li>
+            <li data-i18n-id="s-e5b2">Шукайте підказки, які важко помітити — поза екраном, обрізані, за іншими елементами або в прихованих
+              елементах. Використовуйте поради з розділу «Виправлення розташування підказок» нижче.</li>
+            <li data-i18n-id="s-c564">Якщо сайт вже має контент і ви маєте підписку CSA, перейдіть на вкладку «recheck» панелі та
+              <strong>проскануйте сайт</strong>, щоб попередньо завантажити звіти сайту. Це необов'язково, але старі
+              сторінки не з'являться у звітах, доки їх не буде проскановано або відвідано авторизованим користувачем.
+            </li>
+          </ol>
+          <p data-i18n-id="s-e025">Перегляньте <a href="https://youtu.be/uYvNYPg38nU?si=dqADyWpTtOhniHTP&t=696">відеовступ до параметрів
+              конфігурації</a> (v2.4).</p>
+
+          <h2 id="check-roots" data-i18n-id="s-9202">Приховування непотрібних попереджень</h2>
+          <p data-i18n-id="s-fa47">
+            <strong>Правильна конфігурація пригнічує непотрібні попередження, щоб автори контенту могли зосередитися на
+              проблемах, які варто виправити</strong>.
+          </p>
+          <p data-i18n-id="s-996e">Хоча можна вимкнути тести повністю, зазвичай краще приховувати попередження для конкретних елементів або
+            сторінок.</p>
+          <hr/>
+          <p data-i18n-id="s-7918">
+            Під час кожного запуску тестів Editoria11y збирає єдиний набір елементів із налаштування «Перевірити контент
+            у цих контейнерах», а потім кілька разів фільтрує його. Ось як виглядає запуск тесту:
+          </p>
+          <ol>
+            <li data-i18n-id="s-994a">
+              Скасувати перевірку, якщо конфігурація забороняє її на цій сторінці або для цього користувача.
+            </li>
+            <li data-i18n-id="s-10c9">
+              <strong>Зібрати</strong> елементи у зазначених регіонах сторінки,
+              наприклад:<br/><code>body > *:not('.ed11y-element')</code><br/>
+              <em>Для користувачів Editoria11y CSA — це регіони на вкладці <strong>Developer tests</strong>.</em>
+            </li>
+            <li data-i18n-id="s-7524">
+              <strong>Відкинути</strong> елементи, що відповідають селекторам ігнорування,
+              наприклад:<br/><code>.widgets, .utility-menu</code><br/>
+              <em>Для користувачів Editoria11y CSA — це селектори на вкладці <strong>Developer tests</strong>.</em>
+            </li>
+            <li data-i18n-id="s-58d0">
+              Запустити тести та синхронізувати результати з панеллю.
+            </li>
+            <li>
+              <span data-translate data-i18n-id="s-f8c6">Якщо роздільна конфігурація активна і користувач є редактором контенту, відфільтрувати результати
+              розробника:</span>
+              <ul>
+                <li data-i18n-id="s-72c9"><strong>Відкинути</strong> результати з тестів, позначених як «лише для розробника».</li>
+                <li data-i18n-id="s-576e"><strong>Відкинути</strong> результати на елементах поза зазначеними регіонами
+                  <strong><em>контенту</em></strong>, наприклад:<br/><code>main, footer</code>
+                </li>
+                <li data-i18n-id="s-bb1d"><strong>Відкинути</strong> результати на елементах, що відповідають селекторам ігнорування
+                  <strong><em>контенту</em></strong>.
+                </li>
+              </ul>
+              Зверніть увагу, що другого етапу «збирання» немає. Регіони сторінки розробника повинні включати регіони
+              контенту.</span>
+            </li>
+            <li data-i18n-id="s-b79c">Відкрити панель і відобразити попередження, якщо конфігурація відповідає налаштуванню автовідкриття.
+            </li>
+          </ol>
+
+          <h3 id="dismiss" data-i18n-id="s-be02">Відхилення попереджень</h3>
+          <p data-i18n-id="s-2ae3">Тести можна налаштувати в бібліотеці як помилки або попередження («ручні перевірки»). Попередження можна
+            відхиляти. У нижній частині кожної підказки доступно два типи відхилень:</p>
+          <div class="my-2"
+            style="background: url(/assets/images/3x-generic-tip.png) 100% 98%; max-width: 600px; padding-top: 6%; background-size: 108%;">
+          </div>
+          <ul>
+            <li data-i18n-id="s-7b65">«Ігнорувати» зберігається як налаштування користувача: попередження тепер приховано для поточного
+              користувача, але лише для нього.</li>
+            <li data-i18n-id="s-654c">«Позначити як ОК» приховує попередження для всіх користувачів.</li>
+          </ul>
+          <p data-i18n-id="s-dc14">Можливість відхиляти попередження контролюється на рівні ролі в дозволах користувачів Drupal.
+            <strong>Більшості авторів слід дозволяти відхиляти попередження</strong>. Немає сенсу призначати комусь
+            ручну перевірку, якщо вони не можуть позначити елемент як перевірений.
+          </p>
+
+          <h3 id="roots" data-i18n-id="s-d932">Ігнорування елементів</h3>
+          <p data-i18n-id="s-9d1e">Ці два параметри конфігурації є найважливішими!</p>
+          <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
+            <label for="edit-content-root">Перевірити контент у цих контейнерах</label>
+            <div><textarea class="form-control" id="edit-content-root" name="content_root" rows="1" cols="30"
+                disabled></textarea>
+            </div>
+            <div class="mt-3">
+              <label for="edit-ignore-elements">Пропустити ці елементи</label>
+              <div>
+                <textarea class="form-control" id="edit-ignore-elements" disabled name="ignore_elements" rows="1"
+                  cols="30" class=""></textarea>
+              </div>
+            </div>
+          </div>
+          <p data-i18n-id="s-6051">
+            Встановіть перший параметр, щоб охопити будь-які частини сторінки, які можуть редагувати автори контенту.
+            Наприклад, якщо вони можуть редагувати область <code>main</code>, <code>.sidebar</code> і
+            <code>.footer-column-two</code>, вкажіть ці селектори як область перевірки контенту.
+          </p>
+          <p data-i18n-id="s-f29c">
+            Використовуйте другий, щоб «виключити» підрозділи. Наприклад, якщо <code>main</code> містить різні віджети
+            та вбудовані елементи, які можуть змінювати лише розробники, перерахуйте їх:
+            <code>.widget-1, .social-embed</code>;
+          </p>
+          <p data-i18n-id="s-10ef">Якщо ви використовуєте роздільну конфігурацію, ви побачите аналогічну пару налаштувань на вкладці
+            «Developer Tests»:</p>
+          <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
+            <div>
+              <fieldset>
+                <legend>
+                  Область перевірки розробника
+                </legend>
+                <div class="fieldset__wrapper fieldset__wrapper--group">
+
+                  <div id="edit-dev-check-root">
+                    <div>
+                      <input aria-describedby="edit-dev-check-root--description" type="radio"
+                        id="edit-dev-check-root-automatic" name="dev_check_root" value="automatic" checked="checked" />
+                      <label for="edit-dev-check-root-automatic" class="form-item__label option">Усі елементи</label>
+                    </div>
+                    <div class="d-flex">
+                      <input aria-describedby="edit-dev-check-root--description" type="radio"
+                        id="edit-dev-check-root-match" name="dev_check_root" value="match"
+                        class="align-self-baseline mt-1 me-1" />
+                      <label for="edit-dev-check-root-match" class="form-item__label option">Лише контейнери, зазначені
+                        на вкладці «Content Setting»</label>
+                    </div>
+                    <div class="">
+                      <input aria-describedby="edit-dev-check-root--description" type="radio"
+                        id="edit-dev-check-root-specify" name="dev_check_root" value="specify"
+                        class="form-radio form-boolean form-boolean--type-radio" />
+                      <label for="edit-dev-check-root-specify" class="">Конкретні контейнери, зазначені нижче</label>
+                    </div>
+                  </div>
+
+                </div>
+              </fieldset>
+
+              <div class="">
+                <label for="edit-always-ignore" class="mt-3">Ігнорувати як для розробників, так і для редакторів
+                  контенту</label>
+                <div class="form-textarea-wrapper">
+                  <textarea id="edit-always-ignore" class="form-control" name="always_ignore" rows="1" cols="20"
+                    placeholder=""></textarea>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+          <p data-i18n-id="s-8c02">Головне, що слід знати про область перевірки розробника: вона <strong>не є незалежною</strong> від областей
+            перевірки контенту. У роздільній конфігурації перевіряються області розробника, а потім ці результати
+            <strong>фільтруються</strong> відповідно до областей контенту. Будь-які області, виключені для розробників,
+            також будуть виключені для редакторів контенту. Не виключайте редаговані області контенту!
+          </p>
+
+          <p data-i18n-id="s-0312">Деякі тести допускають більш точне налаштування, щоб приховувати лише певні попередження на відповідних
+            елементах. Шукайте їх у розділах:</p>
+          <ul>
+            <li data-i18n-id="s-d53d">Тести контенту: посилання для перевірки</li>
+            <li data-i18n-id="s-0d1e">Тести контенту: вбудовані елементи для перевірки</li>
+            <li data-i18n-id="s-10c1">Тести контенту: виявлення динамічного та shadow-контенту</li>
+            <li data-i18n-id="s-e6e4">Тести розробника: контрастність</li>
+          </ul>
+
+          <h3 id="pages" data-i18n-id="s-177c">Приховування для конкретних сторінок або користувачів</h3>
+          <p data-i18n-id="s-e874">
+            Найпростіший спосіб — передати CSS-класи або ідентифікатори до цих параметрів:
+          </p>
+          <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
+            <label for="edit-no-load" class="form-item__label">Не перевіряти на сторінках із цими елементами</label>
+            <div class="form-textarea-wrapper">
+              <textarea data-drupal-selector="edit-no-load" aria-describedby="edit-no-load--description"
+                id="edit-no-load" name="no_load" rows="1" cols="20" class="form-control"></textarea>
+            </div>
+
+            <label for="edit-ignore-all-if-absent" class="form-item__label">Приховати всі попередження на сторінках, де
+              ці елементи відсутні</label>
+            <div class="form-textarea-wrapper">
+              <textarea data-drupal-selector="edit-ignore-all-if-absent"
+                aria-describedby="edit-ignore-all-if-absent--description" id="edit-ignore-all-if-absent"
+                name="ignore_all_if_absent" rows="1" cols="20" class="form-control"></textarea>
+            </div>
+
+          </div>
+          <p data-i18n-id="s-0877">
+            Перший параметр запобігатиме запуску перевірок, і панель інструментів не відображатиметься.
+          </p>
+          <p data-i18n-id="s-5cbd">
+            Другий запускає перевірку у згорнутому режимі та автоматично позначає (для поточного користувача) всі
+            проблеми як «Проігноровано», навіть якщо вони є помилками. Це дозволяє тестам виконуватися та оновлювати
+            панель, не турбуючи користувача.
+          </p>
+          <p data-i18n-id="s-1661">
+            Якщо ви хочете використовувати ці параметри для контролю того, які користувачі бачать перевірку, можливо,
+            вам знадобиться налаштувати тему для виведення класу, наприклад <code>.user-247</code>
+          </p>
+
+          <h2 id="dashboard" data-i18n-id="s-f4d7">Керування загальносайтовими результатами</h2>
+          <section id="refresh">
+            <h3 class="pt-3" data-i18n-id="s-012a">Сканування та оновлення результатів</h3>
+            <p data-i18n-id="s-75a9">Editoria11y — це <strong>інструмент моніторингу в реальному часі, а не сканер</strong>. Його
+              загальносайтові звіти оновлюються, коли автори переглядають сторінки, тому регулярне сканування зазвичай
+              не потрібне. Модуль CSA <em>включає</em> сканер, але він потрібен лише в трьох випадках:</p>
+            <ol>
+              <li data-i18n-id="s-dfb1">
+                Під час першого встановлення Editoria11y на наявному сайті з великою кількістю сторінок. Сторінки
+                потрібно відвідати, перш ніж вони з'являться на панелі, тому швидке початкове сканування заощадить час.
+              </li>
+              <li data-i18n-id="s-f602">
+                Значні оновлення тем або модулів можуть виправити (або спричинити) проблеми на багатьох сторінках, які
+                не з'являться, доки їх не відвідають або не проскануємо.
+              </li>
+              <li data-i18n-id="s-a530">
+                Масові дії в адміністративному інтерфейсі, як-от видалення сторінок або перенаправлень, як правило,
+                залишають результати зі сторінок, яких більше немає або які перемістилися. У таких випадках допомагають
+                дії обслуговування на вкладці «Refresh» для оновлення URL-адрес сторінок і виявлення та видалення
+                видалених сторінок.
+              </li>
+            </ol>
+            <p data-i18n-id="s-8e5a">Жодні дані не залишають ваш сайт під час сканування. Сканер CSA — це не хмарний інструмент; він
+              використовує ваш браузер для завантаження та перевірки сторінок на вашому власному сайті. Недоліком цього
+              підходу є те, що <strong>браузери призупиняють фонові вкладки</strong>. Вам потрібно буде тримати
+              комп'ютер увімкненим і активним під час сканування. Плануйте відкрити нове вікно для сканера й залишити
+              його активною вкладкою цього вікна під час роботи. Ви можете продовжувати роботу в іншому вікні. Сканер
+              оновлюватиме свою оцінку після кожного пакету сторінок.</p>
+          </section>
+          <section id="reports">
+            <h3 data-i18n-id="s-a242">Перегляд звітів</h3>
+            <div class="my-4 border shadow"
+              style="background: url(/assets/images/3x-dashboard.png) 86% 0%; padding-top: 28%; background-size: 106%;">
+            </div>
+            <ul>
+              <li data-i18n-id="s-e328">
+                <strong>Останні</strong> дозволяють досліджувати окремі попередження. Це дає змогу, наприклад,
+                відфільтрувати всі екземпляри того самого типу попередження, побачити, які попередження часто
+                з'являються в нещодавньому контенті, або які автори досі мають звичку робити ту саму помилку.
+              </li>
+              <li data-i18n-id="s-796f">
+                <strong>Сторінки</strong> показують кількість попереджень на сторінку, згруповану за сторінкою. Це
+                дозволяє знаходити сторінки з найбільшою кількістю проблем і фільтрувати за атрибутами сторінки, такими
+                як тип контенту та статус публікації.
+              </li>
+              <li data-i18n-id="s-9423">
+                <strong>Попередження</strong> показують проблеми за типом.
+              </li>
+              <li data-i18n-id="s-52ed">
+                <strong>Відхилення</strong> дозволяють стежити за тим, чи правильно автори відхиляють попередження, і
+                містять кнопки «скидання» для відновлення відхилених попереджень.
+              </li>
+              <li data-i18n-id="s-3379">
+                <strong>Експорт</strong> містить версії звітів «Сторінки», «Попередження» та «Відхилення», які можна
+                відфільтрувати для підготовки CSV-завантажень. <em>Надається підмодулем CSV Export</em>
+              </li>
+              <li data-i18n-id="s-9814">
+                <strong>Оновлення</strong> містить інструменти обслуговування панелі для видалення попереджень із
+                видалених сторінок, видалення попереджень із параметризованих псевдосторінок на зразок
+                /search?query=example, оновлення збережених заголовків і URL-адрес сторінок, а також запуску ручного
+                сканування. <em>Надається підмодулем CSA</em>
+              </li>
+            </ul>
+          </section>
+
+          <h2 id="positioning" data-i18n-id="s-c35b">Виправлення прихованих або позаекранних підказок</h2>
+
+          <p data-i18n-id="s-68ce">Модуль надає поля для двох параметрів конфігурації бібліотеки, що змінюють розміщення підказок:</p>
+
+          <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
+            <label for="edit-element-hides-overflow" class="form-item__label">Елементи з прихованим
+              переповненням</label>
+            <textarea data-drupal-selector="edit-element-hides-overflow"
+              aria-describedby="edit-element-hides-overflow--description" id="edit-element-hides-overflow"
+              name="element_hides_overflow" rows="1" cols="60" class="form-control"></textarea>
+            <label for="edit-hidden-handlers" class="form-item__label">JavaScript теми оброблятиме відображення
+              прихованих підказок усередині цих контейнерів</label>
+            <textarea data-drupal-selector="edit-hidden-handlers" aria-describedby="edit-hidden-handlers--description"
+              id="edit-hidden-handlers" name="hidden_handlers" rows="1" cols="60" class="form-control"></textarea>
+          </div>
+          <p data-i18n-id="s-34e4">Деякі теми мають стовпці або віджети, що приховують горизонтальне або вертикальне переповнення. Бібліотека
+            автоматично визначає, коли перемикач виходить за видиму частину <strong>сторінки.</strong> Якщо повідомити
+            бібліотеці, що певні контейнери приховують переповнення, вона також спробує розмістити підказки для
+            елементів у цих контейнерах всередині їхніх меж.</p>
+          <p data-i18n-id="s-7cb7">Деякі теми мають віджети, що перемикають видимість контенту, наприклад акордеони, вкладки та слайдшоу.
+            Підказки всередині цих елементів також будуть приховані. Надання списку селекторів для таких віджетів
+            означає, що Editoria11y зробить коротку паузу, коли користувач спробує перейти до цих підказок за допомогою
+            кнопок «наступна» або «попередня». Теми та модулі Drupal можуть тоді дотримуватися інструкцій із розділу
+            бібліотеки про <a href="/en/install/#hidden-content">роботу з підказками в прихованому контенті</a>, щоб
+            відкрити прихований контент.</p>
+
+          <h2 id="runtime" data-i18n-id="s-7e38">Написання власної конфігурації</h2>
+          <p data-i18n-id="s-a5d3">У PHP: модуль Drupal надає <code>hook_editoria11y_alter_config</code> для зміни вмісту
+            <code>drupalSettings.editoria11y</code> у модулі або темі. Наприклад:
+          </p>
+          <pre class="language-php"><code><!--<?php
+/**
+ * @file
+ * MY_MODULE module file.
+ */
+
+use Drupal\Core\Cache\CacheableMetadata;
+
+/**
+ * Implements hook_editoria11y_alter_config().
+ *
+ * Attaches Editoria11y library and config based on context.
+ */
+function MY_MODULE_editoria11y_alter_config(array &$attach, CacheableMetadata $cacheableMetadata): void {
+  $config = Drupal::config('editoria11y.settings');
+
+  // Module settings being changed need to bust the cache.
+  $cacheableMetadata->addCacheableDependency($config);
+
+  // Get and modify any of the values being passed to drupalSettings.editoria11y.
+  if (!empty($attach['allow_ok'])) {
+    $attach['allow_ok'] = 'okAll';
+  }
+}--></code></pre>
+          <p data-i18n-id="s-2368">Зміна <code>drupalSettings</code> допомагає лише в тому разі, якщо JavaScript модуля вже налаштований на
+            передачу цього значення до бібліотеки. Щоб додати додаткові параметри, потрібно безпосередньо змінити об'єкт
+            <code>options</code> у JavaScript. Модуль перевіряє одну глобальну JS-змінну
+            <code>editoria11yOptionsOverride</code>. Якщо вона встановлена, він передасть об'єкт <code>options</code> до
+            функції <code>editoria11yOptions</code>, яку ви надали у своєму модулі або темі. Тепер ви можете встановити
+            будь-який із <a href="https://editorsally.ddev.site/en/install/#params">параметрів бібліотеки</a>.
+          </p>
+          <pre class="language-javascript"><code><!--var editoria11yOptionsOverride = true;
+var editoria11yOptions = function(options) {
+  // You now have access to the processed options object that will be passed to the library.
+
+  // E.g., to add a selector to the ignore list:
+  if (options['ignoreElements'] === false) {
+    // Provide the selector as the only value.
+    options['ignoreElements'] = `.example`;
+  } else {
+    // Append additional selectors with comma separator.
+    options['ignoreElements'] = `${options['ignoreElements']}, .example`
+  }
+
+  // Return your processed options.
+  return options;
+}
+--></code></pre>
+          <section id="custom-tests">
+            <h2 data-i18n-id="s-e0f0">Написання власних тестів</h2>
+            <p data-i18n-id="s-6ece">Спочатку в конфігурації модуля додайте 1 до параметра «Custom tests», щоб він знав, що потрібно
+              відстежувати тести.</p>
+            <p data-i18n-id="s-4316">Потім створіть бібліотеку Drupal JavaScript із вашими тестами у вашій темі або модулі, використовуючи <a href="/en/install/#custom-tests">посібник бібліотеки зі написання власних тестів</a>.</p>
+            <p data-i18n-id="s-b4ea">Ось робочий приклад від Princeton — власний тест для сповіщення про посилання Safe Links. Зверніть увагу,
+              що він звертається до класу Editoria11y через <code>Drupal.Ed11y.</code></p>
+            <pre class="language-javascript"><code><!--const psEd11yCustomTests = function() {
+
+  // 1.
+  // Get elements to test, via Drupal.Ed11y.getElements.
+  // The 'root' parameter tells it to respect config for check areas and ignores.
+  const safeLinks = Drupal.Ed11y.getElements('a[href*="safelinks.protection.outlook.com/?"]', 'root');
+
+  // Add the test name to the lang object.
+  Drupal.ed11yLang.lang.testNames.outlookSafeLink = 'URL is Safe Link encoded';
+
+  // 2.
+  // Create the tip content.
+  const decodeSafelink = function(url) {
+    const params = new URL(url).searchParams;
+    let decoded = params.get('url');
+    const p = document.createElement('p');
+    if (!!decoded) {
+      p.innerHTML = `<p><span class="badge">To fix</span>Update this link with the correct URL, which is probably:<br>
+    <em style='word-wrap: break-word;font-size: 90%;line-height: 1.2;display: block;'></em></p>`
+      p.querySelector('em').textContent = Drupal.Ed11y.sanitizeHTML(decoded);
+    }
+    return p;
+  };
+  safeLinks?.forEach((el) => {
+    const content = document.createElement('div');
+    content.innerHTML = `<div class="title">Please fix this Outlook "Safe Link"</div>
+            <div class="why">
+                <p>The URL for this link is an Outlook "Safe Link" that was copied from an email.
+                It includes the original recipient's email address,
+                and will break if Microsoft shuts down the service.</p>
+                <p>The pasted URL is:<br>
+                <em style='word-break: break-all;font-size: 90%;line-height: 1.2;
+                display: block;'></em></p>
+            </div>
+            `;
+    content.querySelector('em').textContent = Drupal.Ed11y.sanitizeHTML(el.href);
+    content.querySelector('.why').insertAdjacentElement('beforebegin', decodeSafelink(el.href));
+
+    // 3.
+    // Push the tip to the library results object.
+    Drupal.Ed11y.State.results.push({
+      element: el,
+      test: 'outlookSafeLink',
+      type: 'error',
+      content: content,
+      position: 'beforebegin',
+      inline: false,
+      dismiss: false,
+    });
+  });
+
+  // 4.
+  // Tell Editoria11y you are done adding custom results.
+  const allDone = new CustomEvent('ed11yResume');
+  document.dispatchEvent(allDone);
+};--></code></pre>
+
+          </section>
+          <section id="help">
+            <h2 data-i18n-id="s-4690">Отримання допомоги</h2>
+            <p data-i18n-id="s-f149">Перегляньте сторінку <a href="../contacts">контактів</a> для варіантів підтримки від спільноти.
+              @itmaybejj
+              зазвичай перебуває в Drupal Slack, коли сонце світить у західній півкулі.</p>
+            <p data-i18n-id="s-4a16">Більшість <a href="../license/">рівнів внесків CSA</a> включають щорічну консультацію, яка може
+              охоплювати
+              пряму допомогу зі встановленням і налаштуванням</p>
+          </section>
+
+        </div>
+      </div>
+    </div>
+  </main>

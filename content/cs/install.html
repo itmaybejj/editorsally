@@ -1,0 +1,358 @@
+<main class="container col-lg-12 mx-auto py-5">
+    <div class="row docs">
+      <div class="col-12 col-md-5 col-lg-4 mb-5">
+        <div id="on-this-page" class="list-group ms-2 ms-lg-5 position-sticky top-0 pt-3">
+        </div>
+      </div>
+      <div class="col-12 col-md-7 col-lg-8 pt-3" data-bs-spy="scroll" data-bs-target="#on-this-page"
+        data-bs-smooth-scroll="true">
+        <h1 data-i18n-id="s-fe89">Instalace a konfigurace</h1>
+
+        <section id="modules">
+          <h2 class="pt-3 pb-2" data-i18n-id="s-6f09">Předkonfigurované verze</h2>
+          <ul class="list-unstyled ps-0">
+            <li data-i18n-id="s-a850"><a href="https://www.drupal.org/project/editoria11y" class="arrow"><strong>Instalátor pro Drupal</strong></a>
+            </li>
+            <li data-i18n-id="s-c7b0"><a href="https://wordpress.org/plugins/editoria11y-accessibility-checker/"
+                class="arrow"><strong>Instalátor pro WordPress</strong></a></li>
+            <li data-i18n-id="s-128f"><a href="https://codeberg.org/sebastiangreger/kirby-a11yprompter" class="arrow"><strong>Instalátor pro Kirby</strong></a> <em>(komunitní)</em></li>
+            <li data-i18n-id="s-4002"><a href="https://plugins.craftcms.com/editoria11y" class="arrow"><strong>Instalátor pro CraftCMS</strong></a>
+              <em>(komunitní)</em>
+            </li>
+          </ul>
+        </section>
+        <section id="diy">
+          <h2 data-i18n-id="s-cef2">
+            Vlastní instalace
+          </h2>
+          <p data-i18n-id="s-df5a">Chcete-li vytvořit vlastní implementaci, <a href="https://github.com/itmaybejj/editoria11y" data-type="URL"
+              data-id="https://github.com/itmaybejj/editoria11y" class="liinternal">stáhněte si místní kopii</a> (nebo
+            použijte <a href="https://cdn.jsdelivr.net/gh/itmaybejj/editoria11y@2/dist/editoria11y.min.js"
+              class="liinternal">verzi z CDN</a>) jazykového balíčku, minimalizovaného souboru JS a minimalizovaného souboru CSS a poté
+            vytvořte novou instanci „Ed11y".</p>
+          <p data-i18n-id="s-4e8a">Pro <strong>importy ESM/JS modulů</strong>: </p>
+          <pre class="language-markup"><code><!--// Load CSS
+<link href="/dist/css/editoria11y.min.css?v=3.0" rel="stylesheet">
+// Load JS and language pack
+<script type="module">
+  import Ed11y from "/dist/js/ed11y.esm.min.js?v=3.0";
+  import ed11yLang from "/dist/js/lang/en.js";
+  // Instantiate with language and CSS
+  const ed11y = new Ed11y.Ed11y({
+    lang: 'en',
+    cssUrls: ["/dist/css/editoria11y.min.css"]
+  });
+</script>
+--></code></pre>
+          <p data-i18n-id="s-b7f0">Pro starší prohlížeče a systémy použijte soubory .umd JavaScript:</p>
+          <pre class="language-markup"><code><!--
+// Call CSS, JS and a Language Pack
+<link href="/dist/editoria11y.min.css" rel="stylesheet">
+<script src="/dist/js/ed11y.umd.js"></script>;
+<script src="/dist/js/lang/en.umd.js"></script>
+// Create a new Ed11y instance
+<script>
+  const ed11y = new Ed11y.Ed11y({
+    lang: 'en',
+    cssUrls: ["/dist/css/editoria11y.min.css"]
+  });
+</script>
+                --></code></pre>
+        </section>
+
+        <section id="params">
+          <h2 data-i18n-id="s-c50b">Parametry</h2>
+          <p data-i18n-id="s-6877">Kompletní implementace by měla být volána pouze pro přihlášené editory (návštěvníci webu by váš kontrolní nástroj vidět neměli!), a může přepsat libovolné z <a               href="https://github.com/itmaybejj/editoria11y/blob/3.0.x/src/js/utils/ed11y-default-options.js"
+              class="liinternal"><strong>výchozích parametrů</strong></a>.</p>
+          <p data-i18n-id="s-084e">Všechny parametry mají výchozí hodnoty — uvádějte pouze ty, které chcete přepsat.</p>
+          <p data-i18n-id="s-a20c">Komplikovaná vlastní implementace by mohla vypadat takto:</p>
+          <pre class="language-javascript"><code><!--const ed11y = new Ed11y.Ed11y({
+  // Define content regions
+  checkRoot: 'main, .footer-content-zone',
+  // Add custom CSS files
+  cssUrls: [
+    '/css/editoria11y.min.css',
+    '/css/custom.css'
+  ],
+  // Define Web components to include in checks
+  shadowComponents: 'accordion, lightbox',
+  // We want the box to open automatically for errors:
+  alertMode: 'assertive',
+  // Our external link icon has visually hidden text
+  // to delete before checking if the link has text:
+  linkIgnoreStrings: ['(opens in new window)'],
+  // Content editors cannot edit these elements:
+  ignoreElements: 'nav *, #social-block',
+  // Prevent this user from hiding alerts.
+  allowHide: false,
+  allowOK: true,
+  // Don't scan while the editor toolbar is open:
+  preventCheckingIfPresent: ".editor-toolbar",
+  // Turn off warnings that an element might be visually hidden:
+  checkVisible: false,
+  // Dispatch a JS event before highlighting this,
+  // so our JS can modify it first:
+  hiddenHandlers: ".accordion-panel",
+  // Dispatch a JS event when the library is ready
+  // for custom tests, then wait for 3 ed11yResume
+  // events from our 3 tests to continue.
+  customTests: 3,
+  checks: {
+    // Turn off the HEADING_FIRST test
+    HEADING_FIRST: false,
+    // Allow dismissing the HEADING_SKIPPED_LEVEL test
+    HEADING_SKIPPED_LEVEL: {
+       type: 'warning',
+    }
+  }
+
+}); --></code></pre>
+          <p data-i18n-id="s-18e0">Předpřipravené integrace tyto proměnné často nastavují dynamicky — například načítají stránky v „asertivním" režimu, pokud byly nedávno upraveny, a po několika minutách přepínají zpět na „zdvořilý".</p>
+        </section>
+
+        <section id="theme">
+          <h2 data-i18n-id="s-6c0a">Přizpůsobení motivu</h2>
+
+          <p data-i18n-id="s-e058">Několik parametrů umožňuje vybrat motiv, přepsat barvy a vložit CSS.</p>
+
+          <p data-i18n-id="s-ebc7">Zadávejte pouze parametry, které chcete přepsat — usnadní to budoucí aktualizace.</p>
+          <pre             class="language-javascript"><code><!--// Add custom CSS file
+cssUrls: ['/css/editoria11y.min.css', '/css/custom.css'],
+theme : 'darkTheme', // Select base theme
+darkTheme: {         // Override base colors
+    bg: '#0a2051',
+    bgHighlight: '#7b1919',
+    text: '#f4f7ff',
+    primary: '#4930a0',
+    primaryText: '#f4f7ff',
+    secondary: '#20160c',
+    warning: '#fad859',
+    alert: '#b80519',
+    button: '#dde8ff',
+    focusRing: 'cyan',
+    activeTab: '#0a2051',
+    tipHeader: '#4930a0',
+},
+// Override fonts
+baseFontSize: 14, // px
+baseFontFamily: '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif', --></code></pre>
+        </section>
+
+        <section id="js-events">
+          <h2 class="wp-block-heading has-text-align-left has-secondary-background-color has-background has-large-font-size" data-i18n-id="s-4568">
+            Užitečné JS události</h2>
+
+          <p data-i18n-id="s-3ca2">Vývojáři motivů mohou tyto události zachytit a podle potřeby reagovat a upravovat stránku.</p>
+
+          <p data-i18n-id="s-2fb1">V typickém pořadí výskytu…</p>
+
+          <ul class="wp-block-list">
+            <li data-i18n-id="s-abfb"><strong><code>ed11yRunCustomTests</code></strong>: odesláno, když je objekt Results připraven
+              k vložení vlastních výsledků. Upozorňujeme, že parametr customTests musí být nastaven na počet vlastních
+              testovacích funkcí, které budete spouštět (…pravděpodobně jedna…), aby se tato událost odeslala. Podrobnosti v následující části.</li>
+
+            <li data-i18n-id="s-16d6"><strong><code>ed11yResults</code></strong>: odesláno po dokončení všech kontrol. API integrace
+              nyní mohou získávat data z objektu Ed11y.results.</li>
+
+            <li data-i18n-id="s-5693"><strong><code>ed11yPanelOpened</code></strong>: odesláno, pokud se panel otevře, automaticky nebo
+              ručně.</li>
+
+            <li data-i18n-id="s-4100"><strong><code>ed11yShowHidden</code></strong>: poskytuje číslo <code>data-ed11y-result</code> a
+              boolean <code>viaJump</code>. Odesláno pouze tehdy, je-li nastaven parametr „ed11yShowHidden"
+              <em><strong>a</strong></em> rodič prvku odpovídá selektoru. Slouží k odkrytí upozornění v
+              dosud neotevřených kontejnerech, např. v akordeonech, záložkách a karuselech. Příklady použití v další části.
+            </li>
+
+            <li data-i18n-id="s-20be"><strong><code>ed11yPop</code></strong>: poskytuje ID <code>data-ed11y-result</code> a také
+              reference na objekty <code>result</code> a <code>tip</code>. Odesláno při zobrazení tooltipu,
+              což umožňuje úpravu tipů za běhu.</li>
+
+            <li data-i18n-id="s-a26b"><strong><code>ed11yShut</code></strong>: poskytuje ID <code>data-ed11y-result</code>. Odesláno při
+              zavření tooltipu.</li>
+
+            <li><span data-translate data-i18n-id="s-4631"><strong><code>ed11yDismissalUpdate</code></strong>: poskytuje rozšířené informace, když uživatel skryje
+              nebo obnoví upozornění. Používá se pro API integrace. Objekt události obsahuje:</span>
+              <ul>
+                <li data-i18n-id="s-a6bd"><code>dismissPage</code></li>
+
+                <li data-i18n-id="s-754f"><code>dismissTest</code></li>
+
+                <li data-i18n-id="s-0a00"><code>dismissKey</code></li>
+
+                <li data-i18n-id="s-c8b0"><code>dismissAction</code></li>
+              </ul>
+            </li>
+          </ul>
+          <p data-i18n-id="s-ec32">Příklady naleznete v následujících sekcích.</p>
+        </section>
+
+        <section id="modify-tips">
+          <h2 class="wp-block-heading has-secondary-background-color has-background has-large-font-size" data-i18n-id="s-ac90">Úprava tipů
+          </h2>
+
+          <p data-i18n-id="s-edfa">Pokud chcete pouze upravit text tipu, lze přímo přepsat položky v globálním objektu ed11yLang.en (před voláním
+            knihovny) nebo Ed11y.M (po volání knihovny). Příklad pro modul Drupal, kde je jazykový balíček přiřazen jako Drupal.ed11yLang:</p>
+
+          <p data-i18n-id="s-c4d7"><code>Drupal.ed11yLang.lang.testNames.title = "Please write shorter headings."</code></p>
+
+          <p data-i18n-id="s-f0b0">Totéž platí pro libovolný <a               href="https://github.com/itmaybejj/editoria11y/blob/3.0.x/src/lang/baseAll.js" data-type="link"
+              data-id="https://github.com/itmaybejj/editoria11y/blob/2.3.x/js/ed11y-localization.js"
+              class="liinternal">výchozí klíč v lokalizačním souboru</a> nebo v aktivním jazykovém překladu.
+          </p>
+
+          <p data-i18n-id="s-842f">Modul Drupal také přidává vlastní editační odkazy do tipů pomocí parametru <code>editLinks</code>. Povšimněte si odkazů „Editor stránky" a „Editor rozvržení":</p>
+
+          <figure class="wp-block-image size-full"><img loading="lazy" data-recalc-dims="1" fetchpriority="high" decoding="async" width="580" height="300" src="https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?resize=580%2C300&amp;ssl=1" alt="Tooltip s vloženými odkazy „Editor stránky&quot; a „Editor rozvržení&quot;." class="wp-image-523" srcset="https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?w=1290&amp;ssl=1 1290w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?resize=600%2C311&amp;ssl=1 600w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?resize=768%2C398&amp;ssl=1 768w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?resize=1200%2C621&amp;ssl=1 1200w" sizes="(max-width: 580px) 100vw, 580px" data-i18n-id="s-6d4d" /></figure>
+
+          <p data-i18n-id="s-bcd2">Zjednodušená verze kódu, který nastavuje tento parametr:</p>
+          <pre class="language-javascript"><code><!--const editLinks = document.createElement('div');
+const editLink = document.createElement('a');
+      editLink.href="/node/1/edit";
+      editLink.textContent = "Edit page";
+editLinks.appendChild(editLink);
+const ed11y = new Ed11y({
+               editLinks: editLinks,
+              }); --></code></pre>
+          <p data-i18n-id="s-14d9">Modul Drupal pak používá událost <strong><code>ed11yPop</code></strong> k dynamickému zobrazení a skrytí
+            editačního odkazu na základě kontextu při zobrazení tipů. </p>
+
+          <p data-i18n-id="s-78f4">Tato událost poskytuje reference na objekty <code>result</code> a <code>tip</code>:</p>
+          <pre class="language-javascript"><code><!--// Listen for event
+document.addEventListener('ed11yPop', e => {
+  if (e.detail.result.element.closest(
+    drupalSettings.editoria11y.hide_edit_links)
+  ) {
+      e.detail.tip.shadowRoot.querySelector(
+        '.ed11y-custom-edit-links'
+        )?.setAttribute('hidden', '');
+     }
+}); --></code></pre>
+        </section>
+
+        <section id="custom-tests">
+          <h2 data-i18n-id="s-794a">Vlastní testy</h2>
+
+          <p data-i18n-id="s-921d">Pokud je parametr <strong><em>customTests</em></strong> <strong><em>číslem</em></strong>, Editoria11y
+            odešle událost „ed11yRunCustomTests" při kontrole, a poté pozastaví na dobu až 500 ms, dokud neobdrží daný počet událostí „<code>ed11yResume</code>".</p>
+
+          <p data-i18n-id="s-a897">Tímto způsobem lze volat libovolný počet skriptů s vlastními testy, které mohou vložit výsledky do pole výsledků ještě před vykreslením tipů.</p>
+
+          <p data-i18n-id="s-820a">Například, pokud byste chtěli vytvořit tento tip pro označení odkazů vložených z e-mailů s obfuskovanými URL adresami:</p>
+
+          <figure class="wp-block-image size-full"><img loading="lazy" data-recalc-dims="1" decoding="async" width="580" height="462" src="https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2023/12/Screenshot-2023-12-06-at-5.13.38-PM.png?resize=580%2C462&amp;ssl=1" alt="Tip s textem „URL is Safe Link Encoded&quot;" class="wp-image-323" srcset="https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2023/12/Screenshot-2023-12-06-at-5.13.38-PM.png?w=1056&amp;ssl=1 1056w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2023/12/Screenshot-2023-12-06-at-5.13.38-PM.png?resize=600%2C478&amp;ssl=1 600w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2023/12/Screenshot-2023-12-06-at-5.13.38-PM.png?resize=768%2C612&amp;ssl=1 768w" sizes="(max-width: 580px) 100vw, 580px" data-i18n-id="s-f6c3" /></figure>
+
+          <p data-i18n-id="s-a3f5">Postup:</p>
+
+          <ol class="wp-block-list">
+            <li data-i18n-id="s-7c1e">Přidejte naslouchač pro událost <code>ed11yRunCustomTests</code></li>
+
+            <li data-i18n-id="s-b8b0">Najděte odpovídající prvky</li>
+
+            <li data-i18n-id="s-3ff7">Definujte text tipu</li>
+
+            <li data-i18n-id="s-181b">Odešlete událost „resume", aby Editoria11y vykreslil tip:</li>
+          </ol>
+
+          <pre class="language-javascript"><code><!--document.addEventListener('ed11yRunCustomTests', function() {
+  // 1. Write your custom test. This can be anything you want.
+  //
+  // This example searches the active root using the .getElements() function,
+  // which is aware of the checkRoots and ignoreElements parameters.
+  const safeLinks = Drupal.Ed11y.getElements('a[href*="safelinks.protection.outlook.com/?"]', 'root');
+
+  // This is just a utility function for this particular test...
+  const decodeSafelink = function(url) {
+      const params = new URL(url).searchParams;
+      let decoded = params.get('url');
+      if (!!decoded) {
+            decoded = Ed11y.sanitizeForHTML(decoded);
+            return `<p>The actual URL may be:<br><em style='word-wrap: break-word;'>${decoded}</em></p>`
+      }
+      return '';
+  }
+
+  // 2. Add the test name to the active language pack.
+  // Add a title:
+  Drupal.ed11yLang.lang.testNames.outlookSafeLink = 'URL is Safe Link encoded';
+
+  // 3. Push each item you want flagged to Ed11y.results.
+  //
+  // You must provide:
+  //   element:      The element itself
+  //   test:         A key for your test, matching step 2.
+  //   type:         warning or error
+  //   content:      The tip HTML.
+  //   position:     "beforebegin" for interactive elements,
+  //                 "afterbegin" for paragraphs and table cells.
+  //   dismiss:      false for errors,
+  //                 a unique string for manual checks.
+  safeLinks?.forEach((el) => {
+   Drupal.Ed11y.State.results.push({
+     element: el,
+     test:    'outlookSafeLink',
+     type:    'error',
+     content: `<div class="title">Please fix the URL in this link</div>
+               ${decodeSafelink(el.href)}
+               <div class="why">
+                <p>The URL for this link is an Outlook "Safe Link" that was copied from an email.
+                It includes the original recipient's email address,
+                and will break if Microsoft shuts down the service.</p>
+                <p>The pasted URL is:<br>
+                <em style='word-break: break-all;font-size: 90%;line-height: 1.2;
+                display: block;'>${Drupal.Ed11y.sanitizeHTML(el.href)}</em></p>
+               </div>
+            `,
+     position: 'beforebegin',
+     dismiss:  false,
+   });
+  });
+  // 4. When you are done with all your custom tests, dispatch an "ed11yResume" event:
+  let allDone = new CustomEvent('ed11yResume');
+  document.dispatchEvent(allDone);
+}) --></code></pre>
+        </section>
+
+        <section id="hidden-content">
+          <h2 data-i18n-id="s-a67a">Upozornění na skrytém nebo výškově omezeném obsahu</h2>
+
+
+          <p data-i18n-id="s-be6c">Mnoho interaktivních komponent (záložky, posuvníky, akordeony) skrývá obsah. Informační panel Editoria11y obsahuje tlačítka pro přechod na předchozí/další problém. Pokud Editoria11y usoudí, že tooltip daného problému je momentálně neviditelný, upozorní uživatele, že něco nefunguje správně, a pak zvýrazní první viditelného předka — například div obklopující akordeón.</p>
+
+          <p data-i18n-id="s-4f58">Ideálně váš motiv tyto prvky zobrazí ještě před spuštěním kontroly viditelnosti v Editoria11y,
+            takže vše funguje pro uživatele jako kouzlo — karusely se automaticky posunou a akordeony se automaticky otevřou, aby problém zobrazily.</p>
+
+          <p data-i18n-id="s-7e11">Chcete-li to provést při prvním otevření panelu (např. rozbalení <strong><em>všech</em></strong> panelů akordeonu s problémy), přidejte naslouchač JS události pro <code>ed11yPanelOpened</code>, poté proveďte querySelectorAll pro příslušné
+            prvky <code>ed11y-element-result</code> a spusťte funkci, kterou váš motiv používá k zobrazení dané části stránky.
+          </p>
+
+          <p data-i18n-id="s-1c3f">Zde je příklad s jQuery. Při otevření panelu deaktivuje přichycené menu (aby prvky nebyly zakryty), poté vyhledá všechny prvky <code>ed11y-element-result</code> uvnitř zavřených položek akordeonu a simuluje kliknutí na jejich přepínací tlačítko:</p>
+          <pre class="language-javascript"><code><!--document.addEventListener("ed11yPanelOpened", function () {
+  $('body').addClass('no-stick');
+  $('ed11y-element-result').each(function () {
+    if ($(this).parents('.ps-accordion-content[style*="display"]').length > 0) {
+    $(this).parents('.ps-accordion-content').prev().find('.ps-accordion-item-button').click();
+    }
+}) --></code></pre>
+
+          <p data-i18n-id="s-fbae">Chcete-li zobrazit obsah pouze při přechodu na <strong><em>konkrétní</em></strong> tip pomocí tlačítka „Další" v panelu (např. v zavřené záložce nebo dalším snímku karuselu), musíte nastavit <code>hiddenHandlers</code> na příslušné CSS selektory a <code>checkVisible</code> na TRUE v parametrech. Poté přidejte naslouchač události pro <code>ed11yShowHidden</code>. Tato událost je vyvolána, pokud Editoria11y rozpozná, že tip je uvnitř kontejneru s jedním z uvedených selektorů <code>hiddenHandlers</code> v seznamu možností. Tato JS událost bude obsahovat ID tipu, který se chystá otevřít. Editoria11y pak krátce pozastaví činnost po odeslání této události, aby měl váš JS čas zpřístupnit prvek.
+          </p>
+
+          <p data-i18n-id="s-dae0">Zde je příklad z implementace Penn State. Vyhledá prvek odpovídající zadanému ID, poté najde jeho nadřazenou interaktivní komponentu a vyvolá její událost pro aktivaci přepínání:</p>
+          <pre class="language-javascript"><code><!--context.addEventListener('ed11yShowHidden', e => {
+  if (!e.detail.viaJump) {
+       return;
+  }
+  context.getElementById(e.detail.id)
+    .closest('[data-interactive-component]')
+    .dispatchEvent(new CustomEvent('component:activate'));
+}); --></code></pre>
+          <p data-i18n-id="s-d99d">Poslední poznámka: některé motivy nejsou kompatibilní s kontrolou viditelnosti — například
+            kontejner <code>&lt;main&gt;</code> má výšku 0px. Na takových webech je třeba zakázat veškerou kontrolu viditelnosti nastavením <code>checkVisible</code> na false.
+          </p>
+
+        </section>
+
+      </div><!-- End content column -->
+
+    </div>
+  </main>

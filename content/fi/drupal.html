@@ -1,0 +1,481 @@
+<main class="container col-lg-12 mx-auto py-5">
+    <div class="row docs">
+      <div class="col-12 col-md-5 col-lg-4 mb-5">
+        <div id="on-this-page" class="list-group ms-2 ms-lg-5 position-sticky top-0 pt-3">
+        </div>
+      </div>
+      <div class="col-12 col-md-7 col-lg-8 pt-3">
+        <div data-bs-spy="scroll" data-bs-target="#on-this-page" data-bs-smooth-scroll="true">
+          <h1 data-i18n-id="s-e367">Editoria11y Drupalille</h1>
+          <section id="features">
+            <h2 class="pt-3" data-i18n-id="s-1dcf">Ydintoiminnot</h2>
+
+            <p class="fs-6" data-i18n-id="s-a8c0">Drupal-moduuli kytkee tarkistuskirjaston Drupalin hallintakäyttöliittymään
+              ja lisää useita palvelinpuolen työkaluja raportointia, hallintaa ja konfigurointia varten</p>
+
+            <figure class="figure my-4 row">
+              <div class="col-lg-8">
+                <img loading="lazy" src="/assets/images/3x-editing.png" class="rounded border figure-img img-fluid" height="1088" width="2237" alt="Drupal-editori, jossa on upotettuja vinkkejä" data-i18n-id="s-ee36" />
+              </div>
+              <figcaption class="figure-caption col-lg-4" data-i18n-id="s-8e69">Ongelmat havaitaan sekä sivun latautuessa etupäällä
+                että
+                reaaliajassa CKEditorissa ja Gutenbergissä.</figcaption>
+            </figure>
+
+            <figure class="figure my-4 row">
+              <div class="col-lg-8">
+                <img loading="lazy" src="/assets/images/3x-generic-tip.png" class="rounded border figure-img img-fluid" height="798" width="1278" alt="Vinkki, jossa kerrotaan linkin nimeksi annettu vain &quot;click here&quot;." data-i18n-id="s-1639" />
+              </div>
+              <figcaption class="figure-caption col-lg-4" data-i18n-id="s-9881">Jokaisessa työkaluvinkissä on painikkeet:
+                hypätä editoriin, ohittaa varoitus (vain itselle) tai merkitä se OK:ksi (kaikille
+                käyttäjille). Toistuvissa varoituksissa on myös sivukohtaiset ja sivustolaajuiset toiminnot.
+              </figcaption>
+            </figure>
+
+            <figure class="figure my-4 row">
+              <div class="col-lg-8">
+                <img loading="lazy" src="/assets/images/3x-drupal-custom-tests.png" class="rounded border figure-img img-fluid" alt="Mukautettu testirakentajan käyttöliittymä, jossa näkyvät vinkin otsikon ja sisällön sekä elementtivalitsimien ja poissulkemisten kentät." data-i18n-id="s-0830" />
+              </div>
+              <figcaption class="figure-caption col-lg-4">
+                <p class="mb-2" data-i18n-id="s-37bf">CSA-alimoduuli lisää:</p>
+                <ul class="ps-3">
+                  <li data-i18n-id="s-caff"><strong>Mukautettu testirakentaja</strong></li>
+                  <li data-i18n-id="s-b145">40+ kehittäjätestiä</li>
+                  <li data-i18n-id="s-f55d">Kontrastintarkistus</li>
+                  <li data-i18n-id="s-b70c">Sivuston indeksoijat</li>
+                  <li data-i18n-id="s-5377">Luettavuusanalyysi</li>
+                  <li data-i18n-id="s-6602">Jaettu konfiguraatio kehittäjille/sisällöntuottajille</li>
+                </ul>
+              <span data-translate data-i18n-id="s-bc47"></figcaption>
+            </figure>
+
+            <figure class="figure">
+              <img loading="lazy" class="figure-img img-fluid rounded border" src="/assets/images/3x-dashboard.png" height="765" width="1600" alt="Raportointipaneeli, jossa näkyvät viimeisimmät ongelmat ja eniten ongelmia sisältävät sivut." data-i18n-id="s-2559" />
+              <figcaption class="figure-caption p-3 pt-2" data-i18n-id="s-cdbf">Sivustolaajuinen hallintapaneeli tarjoaa suodatettavia ja
+                vietäviä raportteja varoituksista ja hylkäyksistä.</figcaption>
+            </figure>
+
+          </section>
+          <h2 data-i18n-id="s-8fec">Asennus ja tärkeimmät käyttöönottovaiheet</h2>
+          <p data-i18n-id="s-7627">Drupal.org:n <a href="https://www.drupal.org/project/editoria11y/">pakattu asennusohjelma</a> sisältää
+            useita moduuleja:</p>
+          <ul>
+            <li data-i18n-id="s-b830">
+              Editoria11y: ydinsisällön tarkistin ja hallintapaneeli.
+            </li>
+            <li data-i18n-id="s-b351">
+              Editoria11y CSA: kehittäjätestit ja hallintapaneelin ylläpitotyökalut.
+            </li>
+            <li data-i18n-id="s-74fe">
+              Editoria11y Export: CSV-raportointityökalut.
+            </li>
+          </ul>
+          <p data-i18n-id="s-88fd">Asenna kuten mikä tahansa muu moduuli ja suorita sitten nämä keskeiset vaiheet:</p>
+          <ol>
+            <li data-i18n-id="s-7187"><strong>Tarkista käyttöoikeudet.</strong> Luotettujen tekijöiden tulisi saada "Merkitse OK:ksi," "Merkitse ohitetuksi" ja "Katso hallintapaneeli."</li>
+            <li data-i18n-id="s-1ac1"><strong>Tarkista avainsivu toistuvien tai hyödyttömien varoitusten varalta.</strong> Merkitse ne joko OK:ksi
+              työkaluvinkistä tai muuta konfiguraatiota ohittamaan elementit valitsimella.</li>
+            <li data-i18n-id="s-e5b2">Etsi vaikeasti havaittavia vinkkejä – näytön ulkopuolella, katkaistu, muiden elementtien takana tai piilotetuissa elementeissä.
+              Katso alta "Korjaa vinkin sijoittelu" -kohdan ohjeet.</li>
+            <li data-i18n-id="s-c564">Jos sivustolla on jo sisältöä ja sinulla on CSA-tilaus, vieraile hallintapaneelin "Uudelleentarkistus"-välilehdellä ja
+              <strong>indeksoi sivusto</strong> esitäyttääksesi sivustoraportit. Tämä on valinnaista, mutta vanhemmat sivut eivät
+              näy raporteissa ennen kuin ne on indeksoitu tai kirjautunut käyttäjä vierailee niillä.
+            </li>
+          </ol>
+          <p data-i18n-id="s-e025">Katso <a href="https://youtu.be/uYvNYPg38nU?si=dqADyWpTtOhniHTP&t=696">videoon johdanto
+              konfigurointivaihtoehdoista</a> (v2.4).</p>
+
+          <h2 id="check-roots" data-i18n-id="s-9202">Piilota hyödyttömät varoitukset</h2>
+          <p data-i18n-id="s-fa47">
+            <strong>Hyvät konfiguraatiot vaimentavat hyödyttömät varoitukset, jotta sisällöntuottajat voivat keskittyä ongelmiin, jotka heidän pitäisi korjata</strong>.
+          </p>
+          <p data-i18n-id="s-996e">Vaikka voit poistaa testit kokonaan käytöstä, on yleensä parempi piilottaa varoitukset tietyissä elementeissä tai sivuilla.
+          </p>
+          <hr/>
+          <p data-i18n-id="s-7918">
+            Jokaisen testisuorituksen aikana Editoria11y kerää yhden joukon elementtejä "Tarkista sisältö näissä
+            säilöissä" -asetuksesta ja suodattaa sen useita kertoja. Näin testisuoritus näyttää:
+          </p>
+          <ol>
+            <li data-i18n-id="s-994a">
+              Tarkistus peruutetaan, jos konfiguraatio kieltää tarkistuksen tällä sivulla tai tälle käyttäjälle.
+            </li>
+            <li data-i18n-id="s-10c9">
+              <strong>Kerää</strong> elementit määritetyiltä sivualueilta,
+              esim.:<br/><code>body > *:not('.ed11y-element')</code><br/>
+              <em>Editoria11y CSA -käyttäjille nämä ovat alueita <strong>Kehittäjätestit</strong>-välilehdellä.</em>
+            </li>
+            <li data-i18n-id="s-7524">
+              <strong>Pudota</strong> elementit, jotka vastaavat ohitettavia valitsimia,
+              esim.:<br/><code>.widgets, .utility-menu</code><br/>
+              <em>Editoria11y CSA -käyttäjille nämä ovat valitsimia <strong>Kehittäjätestit</strong>-välilehdellä.</em>
+            </li>
+            <li data-i18n-id="s-58d0">
+              Suorita testit ja synkronoi tulokset hallintapaneeliin.
+            </li>
+            <li>
+              <span data-translate data-i18n-id="s-f8c6">Jos jaettu konfiguraatio on aktiivinen ja käyttäjä on sisällöntuottaja, suodata kehittäjätulokset:</span>
+              <ul>
+                <li data-i18n-id="s-72c9"><strong>Pudota</strong> tulokset testeistä, jotka on asetettu "Vain kehittäjälle."</li>
+                <li data-i18n-id="s-576e"><strong>Pudota</strong> tulokset elementeistä, jotka ovat määritettyjen <strong><em>sisältö</em></strong>alueiden
+                  ulkopuolella, esim.:<br/><code>main, footer</code></li>
+                <li data-i18n-id="s-bb1d"><strong>Pudota</strong> tulokset elementeistä, jotka vastaavat <strong><em>sisällön</em></strong> ohitettavia
+                  valitsimia.</li>
+              </ul>
+              Note that there is not a second "gather" phase. The developer page regions must include the content
+              regions.</span>
+            </li>
+            <li data-i18n-id="s-b79c">Avaa paneeli ja näytä varoitukset, jos konfiguraatio edellyttää automaattista avaamista.</li>
+          </ol>
+
+          <h3 id="dismiss" data-i18n-id="s-be02">Hylkää varoitukset</h3>
+          <p data-i18n-id="s-2ae3">Kirjastossa testit voidaan asettaa virheiksi tai varoituksiksi ("manuaaliset tarkistukset"). Varoitukset voidaan hylätä.
+            Jokaisen työkaluvinkin alapalkissa on kaksi hylkäystapaa:</p>
+          <div class="my-2"
+            style="background: url(/assets/images/3x-generic-tip.png) 100% 98%; max-width: 600px; padding-top: 6%; background-size: 108%;">
+          </div>
+          <ul>
+            <li data-i18n-id="s-7b65">"Ohita" tallennetaan käyttäjäkohtaisesti: varoitus piiloutuu vain kyseiseltä käyttäjältä.</li>
+            <li data-i18n-id="s-654c">"Merkitse OK:ksi" piilottaa varoituksen kaikilta käyttäjiltä globaalisti.</li>
+          </ul>
+          <p data-i18n-id="s-dc14">Käyttäjän kyky hylätä varoitus hallitaan Drupalin käyttöoikeuksissa roolien tasolla.
+            <strong>Useimmilla tekijöillä pitäisi olla oikeus hylätä varoituksia</strong>. Ei ole mitään mieltä
+            antaa jollekulle manuaalinen tarkistus, jos he eivät voi merkitä kohdetta tarkistetuksi.
+          </p>
+
+          <h3 id="roots" data-i18n-id="s-d932">Ohita elementit</h3>
+          <p data-i18n-id="s-9d1e">Nämä kaksi konfigurointiasetusta ovat tärkeimmät!</p>
+          <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
+            <label for="edit-content-root">Check content in these containers</label>
+            <div><textarea class="form-control" id="edit-content-root" name="content_root" rows="1" cols="30"
+                disabled></textarea>
+            </div>
+            <div class="mt-3">
+              <label for="edit-ignore-elements">Skip over these elements</label>
+              <div>
+                <textarea class="form-control" id="edit-ignore-elements" disabled name="ignore_elements" rows="1"
+                  cols="30" class=""></textarea>
+              </div>
+            </div>
+          </div>
+          <p data-i18n-id="s-6051">
+            Aseta ensimmäinen sisältämään kaikki sivun osat, joita sisällöntuottajat voivat muokata. Esim. jos he voivat muokata
+            <code>main</code>-sisältöaluetta, <code>.sidebar</code>-aluetta ja <code>.footer-column-two</code>-aluetta,
+            aseta nämä valitsimet sisältöalueeksesi.
+          </p>
+          <p data-i18n-id="s-f29c">
+            Käytä toista "poistamaan" alakohtia. Esim. jos <code>main</code> sisältää erilaisia widgettejä ja upotuksia,
+            joita vain kehittäjät voivat muokata, listaa ne: <code>.widget-1, .social-embed</code>;
+          </p>
+          <p data-i18n-id="s-10ef">Jos käytät jaettua konfiguraatiota, näet vastaavan asetusparin Kehittäjätestit-välilehdellä:</p>
+          <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
+            <div>
+              <fieldset>
+                <legend>
+                  Developer check area
+                </legend>
+                <div class="fieldset__wrapper fieldset__wrapper--group">
+
+                  <div id="edit-dev-check-root">
+                    <div>
+                      <input aria-describedby="edit-dev-check-root--description" type="radio"
+                        id="edit-dev-check-root-automatic" name="dev_check_root" value="automatic" checked="checked" />
+                      <label for="edit-dev-check-root-automatic" class="form-item__label option">All elements</label>
+                    </div>
+                    <div class="d-flex">
+                      <input aria-describedby="edit-dev-check-root--description" type="radio"
+                        id="edit-dev-check-root-match" name="dev_check_root" value="match"
+                        class="align-self-baseline mt-1 me-1" />
+                      <label for="edit-dev-check-root-match" class="form-item__label option">Only the containers listed
+                        in the Content Setting tab</label>
+                    </div>
+                    <div class="">
+                      <input aria-describedby="edit-dev-check-root--description" type="radio"
+                        id="edit-dev-check-root-specify" name="dev_check_root" value="specify"
+                        class="form-radio form-boolean form-boolean--type-radio" />
+                      <label for="edit-dev-check-root-specify" class="">The specific containers listed below</label>
+                    </div>
+                  </div>
+
+                </div>
+              </fieldset>
+
+              <div class="">
+                <label for="edit-always-ignore" class="mt-3">Ignore for both developers and content editors</label>
+                <div class="form-textarea-wrapper">
+                  <textarea id="edit-always-ignore" class="form-control" name="always_ignore" rows="1" cols="20"
+                    placeholder=""></textarea>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+          <p data-i18n-id="s-8c02">Keskeistä kehittäjätarkistusalueista on tietää, että ne eivät ole <strong>riippumattomia</strong>
+            sisältötarkistusalueista. Jaetussa konfiguraatiossa kehittäjäalueet tarkistetaan, ja sitten tulokset
+            <strong>suodatetaan</strong> vastaamaan sisältöalueita. Kaikki kehittäjiltä suljetut alueet suljetaan
+            myös sisällöntuottajilta. Älä sulje muokattavia sisältöalueita!</p>
+
+          <p data-i18n-id="s-0312">Jotkin testit mahdollistavat tarkemman konfiguroinnin, jotta voidaan piilottaa vain tietyt varoitukset
+            kyseisistä elementeistä. Etsi niitä kohdan alta:</p>
+          <ul>
+            <li data-i18n-id="s-d53d">Sisältötestit: Tarkistettavat linkit</li>
+            <li data-i18n-id="s-0d1e">Sisältötestit: Tarkistettavat upotukset</li>
+            <li data-i18n-id="s-10c1">Sisältötestit: Dynaamisen ja shadow-sisällön havaitseminen</li>
+            <li data-i18n-id="s-e6e4">Kehittäjätestit: Kontrasti</li>
+          </ul>
+
+          <h3 id="pages" data-i18n-id="s-177c">Piilota tietyiltä sivuilta tai käyttäjiltä</h3>
+          <p data-i18n-id="s-e874">
+            Helpoin tapa tehdä tämä on välittää CSS-luokat tai ID:t näihin vaihtoehtoihin:
+          </p>
+          <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
+            <label for="edit-no-load" class="form-item__label">Do not check on pages with these elements</label>
+            <div class="form-textarea-wrapper">
+              <textarea data-drupal-selector="edit-no-load" aria-describedby="edit-no-load--description"
+                id="edit-no-load" name="no_load" rows="1" cols="20" class="form-control"></textarea>
+            </div>
+
+            <label for="edit-ignore-all-if-absent" class="form-item__label">Hide all alerts on pages where these
+              elements are not present</label>
+            <div class="form-textarea-wrapper">
+              <textarea data-drupal-selector="edit-ignore-all-if-absent"
+                aria-describedby="edit-ignore-all-if-absent--description" id="edit-ignore-all-if-absent"
+                name="ignore_all_if_absent" rows="1" cols="20" class="form-control"></textarea>
+            </div>
+
+          </div>
+          <p data-i18n-id="s-0877">
+            Ensimmäinen estää tarkistusten suorittamisen, eikä työkalupalkki näy.
+          </p>
+          <p data-i18n-id="s-5cbd">
+            Toinen käynnistää tarkistimen minimoituna ja merkitsee automaattisesti (nykyiselle käyttäjälle) kaikki
+            ongelmat "Ohitetuksi", vaikka ne olisivat virheitä. Tämä mahdollistaa testien suorittamisen ja
+            hallintapaneelin päivittymisen häiritsemättä käyttäjää.
+          </p>
+          <p data-i18n-id="s-1661">
+            Jos haluat käyttää näitä hallitsemaan, ketkä käyttäjät näkevät tarkistimen, sinun saattaa täytyä
+            muokata teemasasi tulostamaan luokka, esim. <code>.user-247</code>
+          </p>
+
+          <h2 id="dashboard" data-i18n-id="s-f4d7">Sivustolaajuisten tulosten hallinta</h2>
+          <section id="refresh">
+            <h3 class="pt-3" data-i18n-id="s-012a">Tulosten indeksointi ja päivittäminen</h3>
+            <p data-i18n-id="s-75a9">Editoria11y on <strong>reaaliaikainen valvontatyökalu, ei indeksoija</strong>. Sen sivustolaajuiset raportit päivittyvät
+              sitä mukaa kuin sisällöntuottajat vierailevat sivuilla, joten säännöllinen indeksointi ei yleensä ole tarpeen. CSA-moduuli <em>sisältää</em>
+              indeksoijan, mutta sitä tarvitaan vain näissä kolmessa tilanteessa:</p>
+            <ol>
+              <li data-i18n-id="s-dfb1">
+                Kun Editoria11y asennetaan ensimmäistä kertaa olemassa olevalle sivustolle, jolla on monta sivua.
+                Sivujen täytyy tulla vierailluiksi ennen kuin ne näkyvät hallintapaneelissa, joten nopea alkuindeksointi
+                säästää aikaa.
+              </li>
+              <li data-i18n-id="s-f602">
+                Suuret päivitykset teemoihin tai moduuleihin saattavat korjata (tai aiheuttaa) ongelmia monilla
+                sivuilla, jotka eivät näy ennen kuin niitä vieraillaan tai indeksoidaan.
+              </li>
+              <li data-i18n-id="s-a530">
+                Hallintaliittymän joukkotoiminnot, kuten sivujen tai uudelleenohjausten poistaminen, jättävät
+                usein jäljelle tuloksia sivuilta, joita ei enää ole tai jotka ovat siirtyneet. Näissä tapauksissa
+                käytä "Päivitä"-välilehden ylläpitotoimintoja: päivitä sivujen URL-osoitteet
+                sekä tunnista ja poista poistettujen sivujen tiedot.
+              </li>
+            </ol>
+            <p data-i18n-id="s-8e5a">Indeksoinnin aikana sivustosi data ei poistu. CSA-indeksoija ei ole pilvipalvelu; se käyttää selaintasi
+              lataamaan ja tarkistamaan sivuja omalla sivustollasi. Tämän lähestymistavan haittapuoli on, että
+              <strong>selaimet keskeyttävät taustalla olevat välilehdet</strong>. Sinun täytyy pitää tietokoneesi
+              päällä ja aktiivisena indeksoinnin aikana. Avaa uusi ikkuna indeksoijaa varten ja jätä se
+              ikkunan ensisijaiseksi välilehdeksi. Voit jatkaa työskentelyä toisessa ikkunassa.
+              Indeksoija päivittää arvionsa jokaisen sivuerän jälkeen.</p>
+          </section>
+          <section id="reports">
+            <h3 data-i18n-id="s-a242">Raporttien katselu</h3>
+            <div class="my-4 border shadow"
+              style="background: url(/assets/images/3x-dashboard.png) 86% 0%; padding-top: 28%; background-size: 106%;">
+            </div>
+            <ul>
+              <li data-i18n-id="s-e328">
+                <strong>Viimeisimmät</strong>: selaa yksittäisiä varoituksia. Tämä mahdollistaa
+                esimerkiksi suodattamisen löytääksesi kaikki saman varoitustyypin esiintymät, tai nähdäksesi
+                mitkä varoitukset esiintyvät usein viimeaikaisessa sisällössä, tai mitkä tekijät vielä toistuvasti
+                tekevät samoja virheitä.
+              </li>
+              <li data-i18n-id="s-796f">
+                <strong>Sivut</strong>: varoitusten määrät sivuittain. Voit suodattaa eniten ongelmia sisältäviä sivuja
+                ominaisuuksien kuten sisältötyypin ja julkaisutilan mukaan.
+              </li>
+              <li data-i18n-id="s-9423">
+                <strong>Varoitukset</strong> näyttää ongelmat tyypeittäin.
+              </li>
+              <li data-i18n-id="s-52ed">
+                <strong>Hylkäykset</strong>: seuraa hylkäyksiä ja palauta hylättyjä varoituksia "palauta"-painikkeella.
+              </li>
+              <li data-i18n-id="s-3379">
+                <strong>Vie</strong> sisältää versiot Sivut-, Varoitukset- ja Hylkäykset-raporteista,
+                jotka voidaan suodattaa CSV-latausten valmistelemiseksi. <em>Tarjoaa CSV Export -alimoduuli</em>
+              </li>
+              <li data-i18n-id="s-9814">
+                <strong>Päivitä</strong>: hallintapaneelin ylläpitotyökalut — pudota poistettujen sivujen varoitukset,
+                parametrisoitujen pseudosivujen (esim. /search?query=example) varoitukset, päivitä sivujen
+                otsikot ja URL-osoitteet sekä suorita manuaalinen indeksointi. <em>Tarjoaa CSA-alimoduuli</em>
+              </li>
+            </ul>
+          </section>
+
+          <h2 id="positioning" data-i18n-id="s-c35b">Piilotettujen tai näytön ulkopuolella olevien vinkkien korjaaminen</h2>
+
+          <p data-i18n-id="s-68ce">Moduuli tarjoaa kentät kahdelle kirjaston konfigurointivaihtoehdolle vinkkien sijoittelun muuttamiseksi:
+          </p>
+
+          <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
+            <label for="edit-element-hides-overflow" class="form-item__label">Elements with overflow hidden</label>
+            <textarea data-drupal-selector="edit-element-hides-overflow"
+              aria-describedby="edit-element-hides-overflow--description" id="edit-element-hides-overflow"
+              name="element_hides_overflow" rows="1" cols="60" class="form-control"></textarea>
+            <label for="edit-hidden-handlers" class="form-item__label">Theme JS will handle revealing hidden tooltips
+              inside these containers</label>
+            <textarea data-drupal-selector="edit-hidden-handlers" aria-describedby="edit-hidden-handlers--description"
+              id="edit-hidden-handlers" name="hidden_handlers" rows="1" cols="60" class="form-control"></textarea>
+          </div>
+          <p data-i18n-id="s-34e4">Jotkin teemat sisältävät sarakkeita tai widgettejä, jotka piilottavat vaaka- tai pystyvierityksen.
+            Kirjasto havaitsee automaattisesti, milloin vaihtokytkimen asettaminen menisi
+            <strong>sivun</strong> näkyvän osan ulkopuolelle. Kertomalla kirjastolle, että tietyt säilöt
+            piilottavat ylivalumisen, se yrittää myös sijoittaa vinkit kyseisten säilöjen sisällä
+            oleville elementeille niiden reunojen sisäpuolelle.</p>
+          <p data-i18n-id="s-7cb7">Jotkin teemat sisältävät widgettejä, jotka vaihtavat sisällön näkyvyyttä, kuten akordeonit,
+            välilehdet ja diaesitykset. Näiden elementtien sisällä olevat vinkit ovat myös piilotettuja.
+            Näiden widgettien valitsimelistan antaminen tarkoittaa, että Editoria11y odottaa hetken,
+            kun käyttäjä yrittää hypätä näihin vinkkeihin seuraava- tai edellinen-painikkeella. Drupal-teemat
+            ja -moduulit voivat sitten noudattaa kirjastoosion ohjeita <a href="/en/install/#hidden-content">piilotetun sisällön vinkkien käsittelystä</a>
+            paljastamaan piilotettu sisältö.
+          </p>
+
+          <h2 id="runtime" data-i18n-id="s-7e38">Kirjoita oma konfiguraatiosi</h2>
+          <p data-i18n-id="s-a5d3">PHP:ssä: Drupal-moduuli tarjoaa <code>hook_editoria11y_alter_config</code>-koukun muuttamaan
+            <code>drupalSettings.editoria11y</code>-sisältöä moduulissa tai teemassa. Esimerkiksi:
+          </p>
+          <pre class="language-php"><code><!--<?php
+/**
+ * @file
+ * MY_MODULE module file.
+ */
+
+use Drupal\Core\Cache\CacheableMetadata;
+
+/**
+ * Implements hook_editoria11y_alter_config().
+ *
+ * Attaches Editoria11y library and config based on context.
+ */
+function MY_MODULE_editoria11y_alter_config(array &$attach, CacheableMetadata $cacheableMetadata): void {
+  $config = Drupal::config('editoria11y.settings');
+
+  // Module settings being changed need to bust the cache.
+  $cacheableMetadata->addCacheableDependency($config);
+
+  // Get and modify any of the values being passed to drupalSettings.editoria11y.
+  if (!empty($attach['allow_ok'])) {
+    $attach['allow_ok'] = 'okAll';
+  }
+}--></code></pre>
+          <p data-i18n-id="s-2368"><code>drupalSettings</code>:in muokkaaminen auttaa vain, jos moduulin JS on jo asetettu
+            välittämään kyseinen arvo kirjastolle. Lisäparametrien lisäämiseksi sinun täytyy muokata
+            JS:n <code>options</code>-objektia suoraan. Moduuli tarkistaa yhden globaalin JS-muuttujan
+            <code>editoria11yOptionsOverride</code>. Jos tämä on asetettu, se välittää <code>options</code>-objektin
+            <code>editoria11yOptions</code>-funktiolle, jonka olet toimittanut moduulissasi tai teemassasi.
+            Voit nyt asettaa mitä tahansa <a               href="https://editorsally.ddev.site/en/install/#params">kirjaston parametreista</a>.</p>
+          <pre class="language-javascript"><code><!--var editoria11yOptionsOverride = true;
+var editoria11yOptions = function(options) {
+  // You now have access to the processed options object that will be passed to the library.
+
+  // E.g., to add a selector to the ignore list:
+  if (options['ignoreElements'] === false) {
+    // Provide the selector as the only value.
+    options['ignoreElements'] = `.example`;
+  } else {
+    // Append additional selectors with comma separator.
+    options['ignoreElements'] = `${options['ignoreElements']}, .example`
+  }
+
+  // Return your processed options.
+  return options;
+}
+--></code></pre>
+          <section id="custom-tests">
+            <h2 data-i18n-id="s-e0f0">Kirjoita omat testisi</h2>
+            <p data-i18n-id="s-6ece">Ensin lisää moduulin konfiguraatiossa 1 "Mukautetut testit" -vaihtoehtoon,
+              jotta se tietää odottaa testejä.</p>
+            <p data-i18n-id="s-4316">Luo sitten Drupal JS -kirjasto testeillesi teemassasi tai moduulissasi käyttäen
+            <a href="/en/install/#custom-tests">kirjaston ohjetta mukautettujen testien kirjoittamiseen</a>.</p>
+            <p data-i18n-id="s-b4ea">Tässä toimiva esimerkki Princetonilta mukautetusta testistä Safe Links -varoitukselle. Huomaa,
+              että se käyttää Editoria11y-luokkaa <code>Drupal.Ed11y.</code>:n kautta.</p>
+            <pre class="language-javascript"><code><!--const psEd11yCustomTests = function() {
+
+  // 1.
+  // Get elements to test, via Drupal.Ed11y.getElements.
+  // The 'root' parameter tells it to respect config for check areas and ignores.
+  const safeLinks = Drupal.Ed11y.getElements('a[href*="safelinks.protection.outlook.com/?"]', 'root');
+
+  // Add the test name to the lang object.
+  Drupal.ed11yLang.lang.testNames.outlookSafeLink = 'URL is Safe Link encoded';
+
+  // 2.
+  // Create the tip content.
+  const decodeSafelink = function(url) {
+    const params = new URL(url).searchParams;
+    let decoded = params.get('url');
+    const p = document.createElement('p');
+    if (!!decoded) {
+      p.innerHTML = `<p><span class="badge">To fix</span>Update this link with the correct URL, which is probably:<br>
+    <em style='word-wrap: break-word;font-size: 90%;line-height: 1.2;display: block;'></em></p>`
+      p.querySelector('em').textContent = Drupal.Ed11y.sanitizeHTML(decoded);
+    }
+    return p;
+  };
+  safeLinks?.forEach((el) => {
+    const content = document.createElement('div');
+    content.innerHTML = `<div class="title">Please fix this Outlook "Safe Link"</div>
+            <div class="why">
+                <p>The URL for this link is an Outlook "Safe Link" that was copied from an email.
+                It includes the original recipient's email address,
+                and will break if Microsoft shuts down the service.</p>
+                <p>The pasted URL is:<br>
+                <em style='word-break: break-all;font-size: 90%;line-height: 1.2;
+                display: block;'></em></p>
+            </div>
+            `;
+    content.querySelector('em').textContent = Drupal.Ed11y.sanitizeHTML(el.href);
+    content.querySelector('.why').insertAdjacentElement('beforebegin', decodeSafelink(el.href));
+
+    // 3.
+    // Push the tip to the library results object.
+    Drupal.Ed11y.State.results.push({
+      element: el,
+      test: 'outlookSafeLink',
+      type: 'error',
+      content: content,
+      position: 'beforebegin',
+      inline: false,
+      dismiss: false,
+    });
+  });
+
+  // 4.
+  // Tell Editoria11y you are done adding custom results.
+  const allDone = new CustomEvent('ed11yResume');
+  document.dispatchEvent(allDone);
+};--></code></pre>
+
+          </section>
+          <section id="help">
+            <h2 data-i18n-id="s-4690">Tuki</h2>
+            <p data-i18n-id="s-f149">Katso <a href="/en/contacts/">yhteystiedot</a>-sivulta yhteisön tukivaihtoehdot. @itmaybejj on yleensä
+              verkossa Drupal Slackissa, kun aurinko paistaa läntisellä pallonpuoliskolla.</p>
+            <p data-i18n-id="s-4a16">Useimpiin <a href="/en/license/">CSA-tukitasoihin</a> sisältyy vuosittainen katselmus, joka voi tarjota
+              suoraa apua asennuksessa ja konfiguroinnissa</p>
+          </section>
+
+        </div>
+      </div>
+    </div>
+  </main>

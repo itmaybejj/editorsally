@@ -26,7 +26,7 @@ const DOMAIN = 'https://editoria11y.com';
 const OUTPUT = path.join(ROOT, 'sitemap.xml');
 
 // ── Load i18n config ────────────────────────────────────────────────────────
-const i18nSource = fs.readFileSync(path.join(ROOT, 'lang', 'i18n.js'), 'utf8');
+const i18nSource = fs.readFileSync(path.join(ROOT, 'assets', 'lang', 'i18n.js'), 'utf8');
 const wrapped = i18nSource.replace(/^const defined_i18n\s*=/m, '__result =');
 const context = { __result: null };
 vm.runInNewContext(wrapped, context);

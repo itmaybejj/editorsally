@@ -1,0 +1,335 @@
+<main class="container col-lg-12 mx-auto py-5">
+    <div class="row docs">
+      <div class="col-12 col-md-5 col-lg-4 mb-5">
+        <div id="on-this-page" class="list-group ms-2 ms-lg-5 position-sticky top-0 pt-3">
+        </div>
+      </div>
+      <div class="col-12 col-md-7 col-lg-8 pt-3" data-bs-spy="scroll" data-bs-target="#on-this-page"
+        data-bs-smooth-scroll="true">
+        <h1 data-i18n-id="s-fe89">Kurulum & yapılandırma</h1>
+
+        <section id="modules">
+          <h2 class="pt-3 pb-2" data-i18n-id="s-6f09">Önceden yapılandırılmış sürümler</h2>
+          <ul class="list-unstyled ps-0">
+            <li data-i18n-id="s-a850"><a href="https://www.drupal.org/project/editoria11y" class="arrow"><strong>Drupal yükleyicisi</strong></a>
+            </li>
+            <li data-i18n-id="s-c7b0"><a href="https://wordpress.org/plugins/editoria11y-accessibility-checker/"
+                class="arrow"><strong>WordPress yükleyicisi</strong></a></li>
+            <li data-i18n-id="s-128f"><a href="https://codeberg.org/sebastiangreger/kirby-a11yprompter" class="arrow"><strong>Kirby
+                  yükleyicisi</strong></a> <em>(katkı)</em></li>
+            <li data-i18n-id="s-4002"><a href="https://plugins.craftcms.com/editoria11y" class="arrow"><strong>CraftCMS yükleyicisi</strong></a>
+              <em>(katkı)</em>
+            </li>
+          </ul>
+        </section>
+        <section id="diy">
+          <h2 data-i18n-id="s-cef2">
+            Özel kurulum
+          </h2>
+          <p data-i18n-id="s-df5a">Kendi uygulamanızı oluşturmak için bir dil paketinin, JS min dosyasının ve CSS min dosyasının <a href="https://github.com/itmaybejj/editoria11y" data-type="URL" data-id="https://github.com/itmaybejj/editoria11y" class="liinternal">yerel bir kopyasını indirin</a> (veya bir <a href="https://cdn.jsdelivr.net/gh/itmaybejj/editoria11y@2/dist/editoria11y.min.js" class="liinternal">CDN sürümüne</a> başvurun) ve ardından yeni bir "Ed11y" örneği oluşturun.</p>
+          <p data-i18n-id="s-4e8a"><strong>ESM/JS modül içe aktarımları</strong> için: </p>
+          <pre class="language-markup"><code><!--// Load CSS
+<link href="/dist/css/editoria11y.min.css?v=3.0" rel="stylesheet">
+// Load JS and language pack
+<script type="module">
+  import Ed11y from "/dist/js/ed11y.esm.min.js?v=3.0";
+  import ed11yLang from "/dist/js/lang/en.js";
+  // Instantiate with language and CSS
+  const ed11y = new Ed11y.Ed11y({
+    lang: 'en',
+    cssUrls: ["/dist/css/editoria11y.min.css"]
+  });
+</script>
+--></code></pre>
+          <p data-i18n-id="s-b7f0">Eski tarayıcılar ve sistemler için .umd JavaScript dosyalarını kullanın:</p>
+          <pre class="language-markup"><code><!--
+// Call CSS, JS and a Language Pack
+<link href="/dist/editoria11y.min.css" rel="stylesheet">
+<script src="/dist/js/ed11y.umd.js"></script>;
+<script src="/dist/js/lang/en.umd.js"></script>
+// Create a new Ed11y instance
+<script>
+  const ed11y = new Ed11y.Ed11y({
+    lang: 'en',
+    cssUrls: ["/dist/css/editoria11y.min.css"]
+  });
+</script>
+                --></code></pre>
+        </section>
+
+        <section id="params">
+          <h2 data-i18n-id="s-c50b">Parametreler</h2>
+          <p data-i18n-id="s-6877">Eksiksiz bir uygulama yalnızca oturum açmış düzenleyiciler için çağrılır (site ziyaretçilerinizin denetleyicinizi görmesini istemezsiniz!) ve <a href="https://github.com/itmaybejj/editoria11y/blob/3.0.x/src/js/utils/ed11y-default-options.js" class="liinternal"><strong>varsayılan parametrelerden</strong></a> herhangi birini geçersiz kılabilir.</p>
+          <p data-i18n-id="s-084e">Tüm parametreler için varsayılan değerlerin sağlandığını unutmayın; yalnızca geçersiz kılmak istediğiniz şeyleri ekleyin.</p>
+          <p data-i18n-id="s-a20c">Kapsamlı biçimde özelleştirilmiş bir uygulama şuna benzeyebilir:</p>
+          <pre class="language-javascript"><code><!--const ed11y = new Ed11y.Ed11y({
+  // Define content regions
+  checkRoot: 'main, .footer-content-zone',
+  // Add custom CSS files
+  cssUrls: [
+    '/css/editoria11y.min.css',
+    '/css/custom.css'
+  ],
+  // Define Web components to include in checks
+  shadowComponents: 'accordion, lightbox',
+  // We want the box to open automatically for errors:
+  alertMode: 'assertive',
+  // Our external link icon has visually hidden text
+  // to delete before checking if the link has text:
+  linkIgnoreStrings: ['(opens in new window)'],
+  // Content editors cannot edit these elements:
+  ignoreElements: 'nav *, #social-block',
+  // Prevent this user from hiding alerts.
+  allowHide: false,
+  allowOK: true,
+  // Don't scan while the editor toolbar is open:
+  preventCheckingIfPresent: ".editor-toolbar",
+  // Turn off warnings that an element might be visually hidden:
+  checkVisible: false,
+  // Dispatch a JS event before highlighting this,
+  // so our JS can modify it first:
+  hiddenHandlers: ".accordion-panel",
+  // Dispatch a JS event when the library is ready
+  // for custom tests, then wait for 3 ed11yResume
+  // events from our 3 tests to continue.
+  customTests: 3,
+  checks: {
+    // Turn off the HEADING_FIRST test
+    HEADING_FIRST: false,
+    // Allow dismissing the HEADING_SKIPPED_LEVEL test
+    HEADING_SKIPPED_LEVEL: {
+       type: 'warning',
+    }
+  }
+
+}); --></code></pre>
+          <p data-i18n-id="s-18e0">Anahtar teslim entegrasyonlar bu değişkenleri genellikle dinamik olarak ayarlar; örneğin sayfalar yakın zamanda düzenlendiyse "assertive" modunda yükler ve birkaç dakika sonra "polite" moduna geçer.</p>
+        </section>
+
+        <section id="theme">
+          <h2 data-i18n-id="s-6c0a">Tema oluşturma</h2>
+
+          <p data-i18n-id="s-e058">Birçok parametre, tema seçmeye, renkleri geçersiz kılmaya ve CSS eklemeye olanak tanır.</p>
+
+          <p data-i18n-id="s-ebc7">Gelecekteki güncellemeleri kolaylaştırmak için yalnızca geçersiz kılmanız gereken parametreleri ekleyin.</p>
+          <pre             class="language-javascript"><code><!--// Add custom CSS file
+cssUrls: ['/css/editoria11y.min.css', '/css/custom.css'],
+theme : 'darkTheme', // Select base theme
+darkTheme: {         // Override base colors
+    bg: '#0a2051',
+    bgHighlight: '#7b1919',
+    text: '#f4f7ff',
+    primary: '#4930a0',
+    primaryText: '#f4f7ff',
+    secondary: '#20160c',
+    warning: '#fad859',
+    alert: '#b80519',
+    button: '#dde8ff',
+    focusRing: 'cyan',
+    activeTab: '#0a2051',
+    tipHeader: '#4930a0',
+},
+// Override fonts
+baseFontSize: 14, // px
+baseFontFamily: '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif', --></code></pre>
+        </section>
+
+        <section id="js-events">
+          <h2 class="wp-block-heading has-text-align-left has-secondary-background-color has-background has-large-font-size" data-i18n-id="s-4568">
+            Kullanışlı JS olayları</h2>
+
+          <p data-i18n-id="s-3ca2">Tema geliştiricileri, gerektiğinde sayfayı tepki vermek ve değiştirmek için bu olaylara bağlanabilir.</p>
+
+          <p data-i18n-id="s-2fb1">Tipik tetiklenme sırasıyla:</p>
+
+          <ul class="wp-block-list">
+            <li data-i18n-id="s-abfb"><strong><code>ed11yRunCustomTests</code></strong>: Sonuçlar nesnesi özel sonuçların eklenmesine hazır olduğunda gönderilir. Bu olayın gönderilmesi için customTests parametresinin çalıştıracağınız özel test işlevlerinin sayısına (…muhtemelen bir…) ayarlanması gerektiğini unutmayın. Ayrıntılar aşağıdaki bölümde.</li>
+
+            <li data-i18n-id="s-16d6"><strong><code>ed11yResults</code></strong>: Tüm denetimler tamamlandığında gönderilir. API entegrasyonları artık Ed11y.results nesnesinden veri toplayabilir.</li>
+
+            <li data-i18n-id="s-5693"><strong><code>ed11yPanelOpened</code></strong>: Panel otomatik veya manuel olarak açılırsa gönderilir.</li>
+
+            <li data-i18n-id="s-4100"><strong><code>ed11yShowHidden</code></strong>: Bir <code>data-ed11y-result</code> numarası ve bir <code>viaJump</code> boolean değeri sağlar. Yalnızca "ed11yShowHidden" parametresi ayarlanmışsa <em><strong>ve</strong></em> öğenin bir üst öğesi bir seçiciyle eşleşiyorsa gönderilir. Uyarıları henüz açık olmayan kaplarda (örn. akordiyon, sekme ve atlı karıncalar) ortaya çıkarmak için kullanılır. Sonraki bölümde kullanım örnekleri.
+            </li>
+
+            <li data-i18n-id="s-20be"><strong><code>ed11yPop</code></strong>: <code>data-ed11y-result</code> kimliğinin yanı sıra <code>result</code> ve <code>tip</code> nesnelerine başvurular sağlar. Bir ipucu göründüğünde gönderilir ve çalışma zamanında ipuçlarını değiştirmenize olanak tanır.</li>
+
+            <li data-i18n-id="s-a26b"><strong><code>ed11yShut</code></strong>: <code>data-ed11y-result</code> kimliği sağlar. Bir ipucu kapandığında gönderilir.</li>
+
+            <li><span data-translate data-i18n-id="s-4631"><strong><code>ed11yDismissalUpdate</code></strong>: Bir kullanıcı uyarıyı kapattığında veya geri yüklediğinde genişletilmiş bilgi sağlar. API entegrasyonlarında kullanılır. Olay nesnesi şunları içerir:</span>
+              <ul>
+                <li data-i18n-id="s-a6bd"><code>dismissPage</code></li>
+
+                <li data-i18n-id="s-754f"><code>dismissTest</code></li>
+
+                <li data-i18n-id="s-0a00"><code>dismissKey</code></li>
+
+                <li data-i18n-id="s-c8b0"><code>dismissAction</code></li>
+              </ul>
+            </li>
+          </ul>
+          <p data-i18n-id="s-ec32">Örnekler aşağıdaki bölümlerde bulunabilir.</p>
+        </section>
+
+        <section id="modify-tips">
+          <h2 class="wp-block-heading has-secondary-background-color has-background has-large-font-size" data-i18n-id="s-ac90">İpuçlarını değiştirme
+          </h2>
+
+          <p data-i18n-id="s-edfa">Yalnızca bir ipucunun metnini değiştirmek istiyorsanız, kütüphaneyi çağırmadan önce <code>ed11yLang.en</code> global nesnesindeki ya da çağırdıktan sonra <code>Ed11y.M</code> nesnesindeki öğeleri doğrudan geçersiz kılabilirsiniz. Drupal modülünde dil paketi <code>Drupal.ed11yLang</code> olarak adlandırıldığından örnek şöyle görünür:</p>
+
+          <p data-i18n-id="s-c4d7"><code>Drupal.ed11yLang.lang.testNames.title = "Please write shorter headings."</code></p>
+
+          <p data-i18n-id="s-f0b0">Bu durum <a href="https://github.com/itmaybejj/editoria11y/blob/3.0.x/src/lang/baseAll.js" data-type="link" data-id="https://github.com/itmaybejj/editoria11y/blob/2.3.x/js/ed11y-localization.js" class="liinternal">yerelleştirme dosyasındaki varsayılan anahtarlar</a> veya etkin dile özgü çeviri için geçerlidir.
+          </p>
+
+          <p data-i18n-id="s-842f">Drupal modülü ayrıca <code>editLinks</code> parametresini kullanarak ipuçlarına özel düzenleme bağlantıları ekler. "Sayfa düzenleyicisi" ve "Düzen düzenleyicisi"ne dikkat edin:</p>
+
+          <figure class="wp-block-image size-full"><img loading="lazy" data-recalc-dims="1" fetchpriority="high" decoding="async" width="580" height="300" src="https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?resize=580%2C300&amp;ssl=1" alt="&quot;Sayfa düzenleyicisi&quot; ve &quot;Düzen düzenleyicisi&quot; bağlantıları eklenmiş ipucu." class="wp-image-523" srcset="https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?w=1290&amp;ssl=1 1290w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?resize=600%2C311&amp;ssl=1 600w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?resize=768%2C398&amp;ssl=1 768w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?resize=1200%2C621&amp;ssl=1 1200w" sizes="(max-width: 580px) 100vw, 580px" data-i18n-id="s-6d4d" /></figure>
+
+          <p data-i18n-id="s-bcd2">Bu parametreyi ayarlayan kodun basitleştirilmiş versiyonu:</p>
+          <pre class="language-javascript"><code><!--const editLinks = document.createElement('div');
+const editLink = document.createElement('a');
+      editLink.href="/node/1/edit";
+      editLink.textContent = "Edit page";
+editLinks.appendChild(editLink);
+const ed11y = new Ed11y({
+               editLinks: editLinks,
+              }); --></code></pre>
+          <p data-i18n-id="s-14d9">Drupal modülü daha sonra ipuçları gösterildiğinde bağlama göre düzenleme bağlantısını dinamik olarak gösterip gizlemek için <strong><code>ed11yPop</code></strong> olayını kullanır. </p>
+
+          <p data-i18n-id="s-78f4">Bu olay, <code>result</code> ve <code>tip</code> nesnelerine başvurular sağlar:</p>
+          <pre class="language-javascript"><code><!--// Listen for event
+document.addEventListener('ed11yPop', e => {
+  if (e.detail.result.element.closest(
+    drupalSettings.editoria11y.hide_edit_links)
+  ) {
+      e.detail.tip.shadowRoot.querySelector(
+        '.ed11y-custom-edit-links'
+        )?.setAttribute('hidden', '');
+     }
+}); --></code></pre>
+        </section>
+
+        <section id="custom-tests">
+          <h2 data-i18n-id="s-794a">Özel testler</h2>
+
+          <p data-i18n-id="s-921d"><strong><em>customTests</em></strong> parametresi bir <strong><em>sayıysa</em></strong>, Editoria11y denetim sırasında bir "ed11yRunCustomTests" olayı gönderir ve ardından belirtilen sayıda "<code>ed11yResume</code>" olayını dinlerken 500 ms'ye kadar bekler.</p>
+
+          <p data-i18n-id="s-a897">Bu mekanizma, özel testler içeren istediğiniz sayıda komut dosyasını çağırmak için kullanılabilir; bu komut dosyaları ipuçları çizilmeden önce sonuçlarını sonuçlar dizisine ekleyebilir.</p>
+
+          <p data-i18n-id="s-820a">Örneğin, gizlenmiş URL'lerle e-postalardan yapıştırılan bağlantıları işaretlemek için şu ipucunu oluşturmak isterseniz:</p>
+
+          <figure class="wp-block-image size-full"><img loading="lazy" data-recalc-dims="1" decoding="async" width="580" height="462" src="https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2023/12/Screenshot-2023-12-06-at-5.13.38-PM.png?resize=580%2C462&amp;ssl=1" alt="&quot;URL Safe Link Encoded&quot; okuyan ipucu" class="wp-image-323" srcset="https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2023/12/Screenshot-2023-12-06-at-5.13.38-PM.png?w=1056&amp;ssl=1 1056w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2023/12/Screenshot-2023-12-06-at-5.13.38-PM.png?resize=600%2C478&amp;ssl=1 600w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2023/12/Screenshot-2023-12-06-at-5.13.38-PM.png?resize=768%2C612&amp;ssl=1 768w" sizes="(max-width: 580px) 100vw, 580px" data-i18n-id="s-f6c3" /></figure>
+
+          <p data-i18n-id="s-a3f5">Yapmanız gerekenler:</p>
+
+          <ol class="wp-block-list">
+            <li data-i18n-id="s-7c1e"><code>ed11yRunCustomTests</code> olayı için bir dinleyici ekleyin</li>
+
+            <li data-i18n-id="s-b8b0">Eşleşen öğeleri bulun</li>
+
+            <li data-i18n-id="s-3ff7">İpucu mesajını tanımlayın</li>
+
+            <li data-i18n-id="s-181b">Editoria11y'nin ipucunu çizmesine izin vermek için "resume" olayını gönderin:</li>
+          </ol>
+
+          <pre class="language-javascript"><code><!--document.addEventListener('ed11yRunCustomTests', function() {
+  // 1. Write your custom test. This can be anything you want.
+  //
+  // This example searches the active root using the .getElements() function,
+  // which is aware of the checkRoots and ignoreElements parameters.
+  const safeLinks = Drupal.Ed11y.getElements('a[href*="safelinks.protection.outlook.com/?"]', 'root');
+
+  // This is just a utility function for this particular test...
+  const decodeSafelink = function(url) {
+      const params = new URL(url).searchParams;
+      let decoded = params.get('url');
+      if (!!decoded) {
+            decoded = Ed11y.sanitizeForHTML(decoded);
+            return `<p>The actual URL may be:<br><em style='word-wrap: break-word;'>${decoded}</em></p>`
+      }
+      return '';
+  }
+
+  // 2. Add the test name to the active language pack.
+  // Add a title:
+  Drupal.ed11yLang.lang.testNames.outlookSafeLink = 'URL is Safe Link encoded';
+
+  // 3. Push each item you want flagged to Ed11y.results.
+  //
+  // You must provide:
+  //   element:      The element itself
+  //   test:         A key for your test, matching step 2.
+  //   type:         warning or error
+  //   content:      The tip HTML.
+  //   position:     "beforebegin" for interactive elements,
+  //                 "afterbegin" for paragraphs and table cells.
+  //   dismiss:      false for errors,
+  //                 a unique string for manual checks.
+  safeLinks?.forEach((el) => {
+   Drupal.Ed11y.State.results.push({
+     element: el,
+     test:    'outlookSafeLink',
+     type:    'error',
+     content: `<div class="title">Please fix the URL in this link</div>
+               ${decodeSafelink(el.href)}
+               <div class="why">
+                <p>The URL for this link is an Outlook "Safe Link" that was copied from an email.
+                It includes the original recipient's email address,
+                and will break if Microsoft shuts down the service.</p>
+                <p>The pasted URL is:<br>
+                <em style='word-break: break-all;font-size: 90%;line-height: 1.2;
+                display: block;'>${Drupal.Ed11y.sanitizeHTML(el.href)}</em></p>
+               </div>
+            `,
+     position: 'beforebegin',
+     dismiss:  false,
+   });
+  });
+  // 4. When you are done with all your custom tests, dispatch an "ed11yResume" event:
+  let allDone = new CustomEvent('ed11yResume');
+  document.dispatchEvent(allDone);
+}) --></code></pre>
+        </section>
+
+        <section id="hidden-content">
+          <h2 data-i18n-id="s-a67a">Gizli veya boyut kısıtlamalı içeriklerdeki uyarılarla başa çıkma</h2>
+
+
+          <p data-i18n-id="s-be6c">Birçok etkileşimli bileşen (sekmeler, kaydırıcılar, akordiyonlar) içeriği gizler. Editoria11y bilgi paneli, sorunlara doğrudan atlamak için ileri/geri düğmeleri içerir. Editoria11y, sorunun ipucunun şu anda görünmez olduğunu düşünüyorsa kullanıcıyı bir sorun olduğu konusunda uyarır ve ardından ilk görünür atayı vurgular; örneğin bir akordiyon etrafındaki div öğesi.</p>
+
+          <p data-i18n-id="s-4f58">İdeal olarak temanız, Editoria11y'nin görünürlük denetimi çalışmadan önce bu öğeleri görünür kılar; böylece her şey kullanıcılarınız için sihir gibi çalışır — atlı karıncalar otomatik olarak ilerler ve akordiyonlar sorunu görüntülemek için otomatik olarak açılır.</p>
+
+          <p data-i18n-id="s-7e11">Bunu panel ilk açıldığında yapmak için (örn. sorunları olan <strong><em>tüm</em></strong> akordiyon panellerini açmak) <code>ed11yPanelOpened</code> için bir JS olay dinleyicisi ekleyin, ardından ilgili <code>ed11y-element-result</code> öğeleri için querySelectorAll çalıştırın ve temanızın sayfanın bu bölümünü göstermek için kullandığı işlevi tetikleyin.
+          </p>
+
+          <p data-i18n-id="s-1c3f">jQuery tabanlı bir örnek. Panel açıldığında yapışkan bir menüyü devre dışı bırakır (öğelerin örtülmemesi için), ardından kapalı akordiyon öğelerinin içindeki <code>ed11y-element-result</code> öğelerini arar ve açma/kapama düğmelerine tıklamayı simüle eder:</p>
+          <pre class="language-javascript"><code><!--document.addEventListener("ed11yPanelOpened", function () {
+  $('body').addClass('no-stick');
+  $('ed11y-element-result').each(function () {
+    if ($(this).parents('.ps-accordion-content[style*="display"]').length > 0) {
+    $(this).parents('.ps-accordion-content').prev().find('.ps-accordion-item-button').click();
+    }
+}) --></code></pre>
+
+          <p data-i18n-id="s-fbae">Yalnızca panel'in "sonraki" düğmesi aracılığıyla <strong><em>belirli</em></strong> bir ipucuna atlarken içeriği göstermek için (örn. kapalı bir sekmede veya sonraki atlı karınca slaytında), parametrelerinizde hem <code>hiddenHandlers</code>'ı ilgili CSS seçicilerine hem de <code>checkVisible</code>'ı TRUE olarak ayarlamanız gerekir. Ardından <code>ed11yShowHidden</code> olayı için bir olay dinleyicisi ekleyin. Bu olay, Editoria11y bir ipucunun seçenekler listesinde sağlanan <code>hiddenHandlers</code> seçicilerinden biriyle eşleşen bir kap içinde olduğunu fark ederse tetiklenir. Bu JS olayı, açmak üzere olduğu ipucunun kimliğini içerir. Editoria11y, JS'nize öğeyi görünür kılmak için zaman tanımak amacıyla bu olayı gönderdikten sonra kısa bir süre duraklar.
+          </p>
+
+          <p data-i18n-id="s-dae0">Penn State uygulamasından bir örnek. Sağlanan kimlikle eşleşen öğeyi bulur, ardından üst etkileşimli bileşen kabını bulur ve açma/kapama olayını tetikler:</p>
+          <pre class="language-javascript"><code><!--context.addEventListener('ed11yShowHidden', e => {
+  if (!e.detail.viaJump) {
+       return;
+  }
+  context.getElementById(e.detail.id)
+    .closest('[data-interactive-component]')
+    .dispatchEvent(new CustomEvent('component:activate'));
+}); --></code></pre>
+          <p data-i18n-id="s-d99d">Son not: bazı temalar görünürlük denetimiyle uyumlu değildir; örneğin <code>&lt;main&gt;</code> kabının yüksekliği 0 pikseldir. Bu tür siteler, <code>checkVisible</code>'ı false olarak ayarlayarak tüm görünürlük denetimini devre dışı bırakmalıdır.
+          </p>
+
+        </section>
+
+      </div><!-- End content column -->
+
+    </div>
+  </main>

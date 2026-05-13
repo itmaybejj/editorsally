@@ -1,0 +1,577 @@
+<!doctype html>
+<html lang="id" data-bs-theme="light">
+
+<head>
+  <link rel="icon" type="image/png" href="/assets/favicons/favicon-512x512.png" sizes="512x512" />
+  <link rel="icon" type="image/png" href="/assets/favicons/favicon-192x192.png" sizes="192x192" />
+  <link rel="icon" type="image/png" href="/assets/favicons/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/assets/favicons/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <meta charset="utf-8" />
+  <title>Editoria11y untuk Drupal — Editoria11y</title>
+  <link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="/assets/theme.css" rel="stylesheet" />
+  <meta name="theme-color" content="#712cf9" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-md">
+      <div class="container col-sm-12 mx-auto">
+        <a href="/id/" class="d-flex align-items-center  navbar-brand">
+          <svg class="logo-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+            viewBox="-.75 -3.5 10.1699 19.1777">
+            <path fill="currentColor"
+              d="M3.7031,10.5527c-.3633-.6562-.6426-1.1387-.8379-1.4473l-.3105-.4863-.2344-.3574c-.5117-.7969-1.0449-1.4551-1.5996-1.9746.3164-.2617.6113-.3926.8848-.3926.3359,0,.6348.123.8965.3691s.5918.7148.9902,1.4062c.4531-1.4727,1.0293-2.8691,1.7285-4.1895.3867-.7188.7314-1.2021,1.0342-1.4502s.7041-.3721,1.2041-.3721c.2656,0,.5938.041.9844.123-1.0039.8086-1.8066,1.7695-2.4082,2.8828s-1.3789,3.0762-2.332,5.8887Z" />
+          </svg> Editoria<span style="margin-left: -1px;">11</span>y
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar" aria-label="Beralih navigasi">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Editoria11y</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Tutup"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 nav-pills">
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div id="lang-picker"></div>
+  </header>
+  <main class="container col-lg-12 mx-auto py-5">
+    
+      <div class="col-12 col-md-5 col-lg-4 mb-5">
+        <div id="on-this-page" class="list-group ms-2 ms-lg-5 position-sticky top-0 pt-3">
+        </div>
+      </div>
+      <div class="col-12 col-md-7 col-lg-8 pt-3">
+        </div>
+          <h1>Editoria11y untuk Drupal</h1>
+          
+            <h2 class="pt-3">Fitur inti</h2>
+
+            <p class="fs-6">Modul Drupal menghubungkan perpustakaan pemeriksa ke backend editorial,
+              dan menambahkan banyak alat sisi server untuk pelaporan, tata kelola, dan konfigurasi</p>
+
+            <figure class="figure my-4 row">
+              <div class="col-lg-8">
+                <img loading="lazy" src="/assets/images/3x-editing.png" class="rounded border figure-img img-fluid" height="1088" width="2237" alt="Editor Drupal dengan tips langsung" />
+              </div>
+              <figcaption class="figure-caption col-lg-4">Isu terdeteksi saat halaman dimuat di frontend
+                dan
+                saat mengetik di CKEditor dan Gutenberg.</figcaption>
+            </figure>
+
+            <figure class="figure my-4 row">
+              <div class="col-lg-8">
+                <img loading="lazy" src="/assets/images/3x-generic-tip.png" class="rounded border figure-img img-fluid" height="798" width="1278" alt="Tip yang menunjukkan tautan hanya diberi nama &quot;klik di sini.&quot;" />
+              </div>
+              <figcaption class="figure-caption col-lg-4">Tooltip mendapatkan tombol
+                untuk masuk ke editor, mengabaikan peringatan (untuk pengguna aktif), atau menandainya OK (untuk semua
+                pengguna). Peringatan berulang menawarkan tindakan seluruh halaman atau seluruh situs.
+              </figcaption>
+            </figure>
+
+            
+              <div class="col-lg-8">
+                <img loading="lazy" src="/assets/images/3x-drupal-custom-tests.png" class="rounded border figure-img img-fluid" alt="Antarmuka pembangun uji kustom yang menampilkan kolom untuk judul dan konten tip, serta selektor elemen dan pengecualian." />
+              </div>
+              
+                <p class="mb-2">Submodul CSA menambahkan:</p>
+                <ul class="ps-3">
+                  <li><strong>Pembangun uji kustom</strong></li>
+                  <li>40+ uji pengembang</li>
+                  <li>Pemeriksaan kontras</li>
+                  <li>Crawler situs</li>
+                  <li>Analisis keterbacaan</li>
+                  <li>Konfigurasi terpisah untuk pengembang/editor</li>
+                </ul>
+              
+            
+
+            <figure class="figure">
+              <img loading="lazy" class="figure-img img-fluid rounded border" src="/assets/images/3x-dashboard.png" height="765" width="1600" alt="Dasbor pelaporan yang menampilkan isu terbaru dan halaman dengan isu terbanyak." />
+              <figcaption class="figure-caption p-3 pt-2">Dasbor seluruh situs menyediakan laporan yang dapat difilter dan
+                diekspor dari peringatan dan penolakan.</figcaption>
+            </figure>
+
+          
+          <h2>Langkah instalasi dan pengaturan utama</h2>
+          <p><a href="https://www.drupal.org/project/editoria11y/">Installer yang disertakan</a> di Drupal.org menyertakan
+            beberapa modul:</p>
+          <ul>
+            <li>
+              Editoria11y: pemeriksa konten inti dan dasbor.
+            </li>
+            <li>
+              Editoria11y CSA: uji pengembang dan alat pemeliharaan dasbor.
+            </li>
+            <li>
+              Editoria11y Export: alat pelaporan CSV.
+            </li>
+          </ul>
+          <p>Instal seperti modul lainnya, lalu ikuti langkah-langkah utama ini:</p>
+          <ol>
+            <li><strong>Periksa izin.</strong> Penulis tepercaya harus memiliki "Mark OK," "Mark as Ignored," dan "View
+              the dashboard."</li>
+            <li><strong>Periksa halaman-halaman penting untuk peringatan yang berulang atau tidak membantu.</strong> Tandai sebagai OK dalam
+              tooltip, atau sesuaikan konfigurasi untuk mengabaikan elemen berdasarkan selektor.</li>
+            <li>Cari tips yang sulit dilihat — di luar layar, terpotong, di belakang elemen lain, atau pada elemen tersembunyi.
+              Gunakan tips di "Fix tip positioning" di bawah ini untuk memperbaiki.</li>
+            <li>Jika situs sudah memiliki konten, dan Anda memiliki langganan CSA, kunjungi tab "recheck" dasbor, dan
+              <strong>crawl situs</strong> untuk memuat laporan situs terlebih dahulu. Ini opsional, tetapi halaman lama tidak
+              akan muncul dalam laporan hingga di-crawl atau dikunjungi oleh pengguna yang sudah login.
+            </li>
+          </ol>
+          <p>Lihat <a href="https://youtu.be/uYvNYPg38nU?si=dqADyWpTtOhniHTP&t=696">pengenalan video tentang
+              opsi konfigurasi</a> (v2.4).</p>
+
+          <h2 id="check-roots">Sembunyikan peringatan yang tidak membantu</h2>
+          <p>
+            <strong>Konfigurasi yang baik menekan peringatan yang tidak membantu, sehingga penulis konten dapat fokus pada isu yang perlu
+              diperbaiki</strong>.
+          </p>
+          <p>Meskipun Anda dapat menonaktifkan pengujian sepenuhnya, biasanya lebih baik menyembunyikan peringatan pada elemen atau halaman tertentu.
+          </p>
+          <hr/>
+          <p>
+            Selama setiap pengujian, Editoria11y mengumpulkan satu set elemen dari pengaturan "Check content in these
+            containers", kemudian memfilternya beberapa kali. Begini tampilan pengujian:
+          </p>
+          <ol>
+            <li>
+              Batalkan pemeriksaan jika konfigurasi mencegah pemeriksaan pada halaman ini atau untuk pengguna ini.
+            </li>
+            <li>
+              <strong>Kumpulkan</strong> elemen di wilayah halaman yang ditentukan,
+              mis.:<br/><code>body > *:not('.ed11y-element')</code><br/>
+              <em>Untuk pengguna Editoria11y CSA, ini adalah wilayah pada tab <strong>Developer tests</strong>.</em>
+            </li>
+            <li>
+              <strong>Hapus</strong> elemen yang cocok dengan selektor pengabaian,
+              mis.:<br/><code>.widgets, .utility-menu</code><br/>
+              <em>Untuk pengguna Editoria11y CSA, ini adalah selektor pada tab <strong>Developer tests</strong>.</em>
+            </li>
+            <li>
+              Jalankan pengujian dan sinkronkan hasil ke dasbor.
+            </li>
+            <li>
+              <span data-translate>Jika konfigurasi terpisah aktif dan pengguna adalah editor konten, saring hasil pengembang:</span>
+              <ul>
+                <li><strong>Hapus</strong> hasil dari pengujian yang disetel ke "Developer only."</li>
+                <li><strong>Hapus</strong> hasil pada elemen dari luar wilayah <strong><em>konten</em></strong> yang ditentukan,
+                  mis.:<br/><code>main, footer</code></li>
+                <li><strong>Hapus</strong> hasil pada elemen yang cocok dengan selektor abaikan <strong><em>konten</em></strong>.</li>
+              </ul>
+              Note that there is not a second "gather" phase. The developer page regions must include the content
+              regions.
+            </li>
+            <li>Buka panel dan gambar peringatan jika konfigurasi cocok dengan pengaturan buka otomatis.</li>
+          </ol>
+
+          <h3 id="dismiss">Abaikan peringatan</h3>
+          <p>Pengujian dapat dikonfigurasi dalam perpustakaan sebagai kesalahan atau peringatan ("pemeriksaan manual"). Peringatan dapat diabaikan.
+            Ada dua jenis pengabaian yang tersedia dari footer setiap tooltip:</p>
+          <div class="my-2"
+            style="background: url(/assets/images/3x-generic-tip.png) 100% 98%; max-width: 600px; padding-top: 6%; background-size: 108%;">
+          </div>
+          <ul>
+            <li>"Ignore" disimpan sebagai preferensi pengguna: peringatan kini disembunyikan untuk pengguna saat ini, tetapi hanya
+              pengguna tersebut.</li>
+            <li>"Mark OK" menyembunyikan peringatan untuk semua pengguna.</li>
+          </ul>
+          <p>Kemampuan pengguna untuk mengabaikan peringatan dikontrol di tingkat peran dalam izin pengguna Drupal.
+            <strong>Sebagian besar penulis harus diizinkan mengabaikan peringatan</strong>. Tidak ada gunanya memberi seseorang
+            pemeriksaan manual jika mereka tidak bisa menandai item tersebut sebagai sudah diperiksa.
+          </p>
+
+          <h3 id="roots">Abaikan elemen</h3>
+          <p>Dua pengaturan konfigurasi ini adalah yang paling penting!</p>
+          <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
+            <label for="edit-content-root">Check content in these containers</label>
+            <div><textarea class="form-control" id="edit-content-root" name="content_root" rows="1" cols="30"
+                disabled></textarea>
+            </div>
+            <div class="mt-3">
+              <label for="edit-ignore-elements">Skip over these elements</label>
+              <div>
+                <textarea class="form-control" id="edit-ignore-elements" disabled name="ignore_elements" rows="1"
+                  cols="30" class=""></textarea>
+              </div>
+            </div>
+          </div>
+          <p>
+            Tetapkan yang pertama untuk mencakup bagian mana pun dari konten halaman yang dapat diedit oleh penulis konten. Mis., jika mereka dapat mengedit area
+            konten <code>main</code>, <code>.sidebar</code>, dan <code>.footer-column-two</code>, tetapkan
+            selektor tersebut sebagai area pemeriksaan konten Anda.
+          </p>
+          <p>
+            Gunakan yang kedua untuk "menyingkirkan" subbagian. Mis., jika <code>main</code> berisi berbagai widget dan embed
+            yang hanya dapat dimodifikasi oleh pengembang, buat daftarnya: <code>.widget-1, .social-embed</code>;
+          </p>
+          <p>Jika Anda menggunakan konfigurasi terpisah, Anda akan melihat pasangan pengaturan serupa pada tab Developer Tests:</p>
+          <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
+            <div>
+              <fieldset>
+                <legend>
+                  Developer check area
+                </legend>
+                <div class="fieldset__wrapper fieldset__wrapper--group">
+
+                  <div id="edit-dev-check-root">
+                    <div>
+                      <input aria-describedby="edit-dev-check-root--description" type="radio"
+                        id="edit-dev-check-root-automatic" name="dev_check_root" value="automatic" checked="checked" />
+                      <label for="edit-dev-check-root-automatic" class="form-item__label option">All elements</label>
+                    </div>
+                    <div class="d-flex">
+                      <input aria-describedby="edit-dev-check-root--description" type="radio"
+                        id="edit-dev-check-root-match" name="dev_check_root" value="match"
+                        class="align-self-baseline mt-1 me-1" />
+                      <label for="edit-dev-check-root-match" class="form-item__label option">Only the containers listed
+                        in the Content Setting tab</label>
+                    </div>
+                    <div class="">
+                      <input aria-describedby="edit-dev-check-root--description" type="radio"
+                        id="edit-dev-check-root-specify" name="dev_check_root" value="specify"
+                        class="form-radio form-boolean form-boolean--type-radio" />
+                      <label for="edit-dev-check-root-specify" class="">The specific containers listed below</label>
+                    </div>
+                  </div>
+
+                </div>
+              </fieldset>
+
+              <div class="">
+                <label for="edit-always-ignore" class="mt-3">Ignore for both developers and content editors</label>
+                <div class="form-textarea-wrapper">
+                  <textarea id="edit-always-ignore" class="form-control" name="always_ignore" rows="1" cols="20"
+                    placeholder=""></textarea>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+          <p>Hal penting yang perlu diketahui tentang area pemeriksaan pengembang adalah bahwa mereka <strong>tidak independen</strong> dari
+            area pemeriksaan konten. Dalam konfigurasi terpisah, area pengembang diperiksa, dan kemudian hasilnya
+            <strong>difilter</strong> untuk cocok dengan area konten. Area yang dikecualikan untuk pengembang juga
+            akan dikecualikan untuk editor konten. Jangan kecualikan area konten yang dapat diedit!</p>
+
+          <p>Beberapa pengujian memungkinkan konfigurasi yang lebih tepat, untuk hanya menyembunyikan peringatan tertentu pada elemen yang terpengaruh. Cari
+            di bawah:</p>
+          <ul>
+            <li>Uji konten: Tautan untuk diperiksa</li>
+            <li>Uji konten: Embed untuk diperiksa</li>
+            <li>Uji konten: Mendeteksi konten dinamis dan shadow</li>
+            <li>Uji pengembang: Kontras</li>
+          </ul>
+
+          <h3 id="pages">Sembunyikan untuk halaman atau pengguna tertentu</h3>
+          <p>
+            Cara termudah untuk melakukan ini adalah dengan meneruskan kelas CSS atau ID ke opsi-opsi ini:
+          </p>
+          <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
+            <label for="edit-no-load" class="form-item__label">Do not check on pages with these elements</label>
+            <div class="form-textarea-wrapper">
+              <textarea data-drupal-selector="edit-no-load" aria-describedby="edit-no-load--description"
+                id="edit-no-load" name="no_load" rows="1" cols="20" class="form-control"></textarea>
+            </div>
+
+            <label for="edit-ignore-all-if-absent" class="form-item__label">Hide all alerts on pages where these
+              elements are not present</label>
+            <div class="form-textarea-wrapper">
+              <textarea data-drupal-selector="edit-ignore-all-if-absent"
+                aria-describedby="edit-ignore-all-if-absent--description" id="edit-ignore-all-if-absent"
+                name="ignore_all_if_absent" rows="1" cols="20" class="form-control"></textarea>
+            </div>
+
+          </div>
+          <p>
+            Yang pertama akan mencegah pemeriksaan berjalan, dan toolbar tidak akan ditampilkan.
+          </p>
+          <p>
+            Yang kedua akan memulai pemeriksa dalam keadaan diminimalkan, dan secara otomatis menandai (untuk pengguna saat ini) semua isu sebagai "Diabaikan,"
+            bahkan jika berupa kesalahan. Ini memungkinkan pengujian berjalan dan memperbarui dasbor tanpa mengganggu pengguna.
+          </p>
+          <p>
+            Jika Anda ingin menggunakan ini untuk mengontrol pengguna mana yang melihat pemeriksa, Anda mungkin perlu menyesuaikan tema untuk
+            menghasilkan kelas, mis. <code>.user-247</code>
+          </p>
+
+          <h2 id="dashboard">Kelola hasil seluruh situs</h2>
+          <section id="refresh">
+            <h3 class="pt-3">Crawling dan pembaruan hasil</h3>
+            <p>Editoria11y adalah <strong>alat pemantauan real-time, bukan crawler</strong>. Laporan seluruh situsnya diperbarui
+              saat penulis melihat halaman, sehingga crawling rutin umumnya tidak diperlukan. Modul CSA <em>memang</em> menyertakan
+              sebuah crawler, tetapi hanya diperlukan dalam tiga situasi ini:</p>
+            <ol>
+              <li>
+                Saat pertama kali menginstal Editoria11y pada situs yang sudah ada dengan banyak halaman. Halaman perlu dikunjungi sebelum
+                muncul di dasbor, sehingga crawl awal yang cepat menghemat waktu.
+              </li>
+              <li>
+                Pembaruan besar pada tema atau modul mungkin memperbaiki (atau menyebabkan) isu pada banyak halaman yang tidak akan muncul hingga
+                dikunjungi atau di-crawl..
+              </li>
+              <li>
+                Tindakan massal di antarmuka admin seperti menghapus halaman atau redirect cenderung meninggalkan hasil dari
+                halaman yang tidak lagi ada atau telah dipindahkan. Dalam kasus ini membantu untuk menggunakan tindakan pemeliharaan tab "Refresh"
+                untuk menyegarkan URL halaman, dan mendeteksi dan menghapus halaman yang dihapus.
+              </li>
+            </ol>
+            <p>Tidak ada data yang meninggalkan situs Anda selama crawl. Crawler CSA bukan alat cloud; ia menggunakan browser Anda untuk
+              memuat dan memeriksa halaman di situs Anda sendiri. Sisi negatifnya adalah <strong>browser menjeda
+                tab latar belakang</strong>. Anda perlu menjaga komputer menyala dan terjaga selama crawl. Rencanakan untuk membuka
+              jendela baru untuk crawler dan biarkan sebagai tab latar depan untuk jendela tersebut saat bekerja. Anda dapat
+              terus bekerja di jendela lain. Crawler akan memperbarui perkiraannya setelah setiap batch halaman.</p>
+          </section>
+          <section id="reports">
+            <h3>Melihat laporan</h3>
+            <div class="my-4 border shadow"
+              style="background: url(/assets/images/3x-dashboard.png) 86% 0%; padding-top: 28%; background-size: 106%;">
+            </div>
+            <ul>
+              <li>
+                <strong>Recent</strong> memungkinkan eksplorasi berdasarkan peringatan individual. Ini memungkinkan Anda melakukan hal seperti
+                memfilter untuk menemukan semua instance dari jenis peringatan yang sama, atau melihat peringatan mana yang sering muncul dalam
+                konten terbaru, atau penulis mana yang masih memiliki kebiasaan membuat kesalahan yang sama.
+              </li>
+              <li>
+                <strong>Pages</strong> menampilkan jumlah peringatan per halaman, dikelompokkan berdasarkan halaman. Ini memungkinkan Anda menemukan halaman dengan
+                isu paling banyak, dan memfilter berdasarkan atribut halaman seperti jenis konten dan status terbit.
+              </li>
+              <li>
+                <strong>Alerts</strong> menampilkan isu berdasarkan jenis.
+              </li>
+              <li>
+                <strong>Dismissals</strong> memungkinkan pemantauan apakah penulis menolak dengan benar, dan memiliki
+                tombol "reset" untuk memulihkan peringatan yang ditolak.
+              </li>
+              <li>
+                <strong>Export</strong> berisi versi laporan Pages, Alerts, dan Dismissals yang dapat
+                difilter untuk menyiapkan unduhan CSV. <em>Disediakan oleh submodul CSV Export</em>
+              </li>
+              <li>
+                <strong>Refresh</strong> berisi alat pemeliharaan dasbor untuk menghapus peringatan dari halaman yang dihapus, menghapus
+                peringatan dari pseudo-halaman berparameter seperti /search?query=example, memperbarui judul halaman dan URL yang tersimpan,
+                dan menjalankan crawl manual. <em>Disediakan oleh submodul CSA</em>
+              </li>
+            </ul>
+          </section>
+
+          <h2 id="positioning">Perbaiki tips yang tersembunyi atau di luar layar</h2>
+
+          <p>Modul menyediakan kolom untuk dua opsi konfigurasi perpustakaan untuk mengubah cara penempatan tips:
+          </p>
+
+          <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
+            <label for="edit-element-hides-overflow" class="form-item__label">Elements with overflow hidden</label>
+            <textarea data-drupal-selector="edit-element-hides-overflow"
+              aria-describedby="edit-element-hides-overflow--description" id="edit-element-hides-overflow"
+              name="element_hides_overflow" rows="1" cols="60" class="form-control"></textarea>
+            <label for="edit-hidden-handlers" class="form-item__label">Theme JS will handle revealing hidden tooltips
+              inside these containers</label>
+            <textarea data-drupal-selector="edit-hidden-handlers" aria-describedby="edit-hidden-handlers--description"
+              id="edit-hidden-handlers" name="hidden_handlers" rows="1" cols="60" class="form-control"></textarea>
+          </div>
+          <p>Beberapa tema memiliki kolom atau widget yang menyembunyikan overflow horizontal atau vertikal. Perpustakaan secara otomatis
+            mendeteksi kapan toggle akan berada di luar bagian yang terlihat dari <strong>halaman.</strong> Memberi tahu perpustakaan
+            bahwa kontainer tertentu menyembunyikan overflow berarti ia juga akan mencoba memposisikan tips untuk elemen di
+            kontainer tersebut di dalam batasnya.</p>
+          <p>Beberapa tema memiliki widget yang mengalihkan visibilitas konten, seperti akordion, tab, dan slideshow.
+            Tips di dalam elemen-elemen ini juga akan disembunyikan. Menyediakan daftar selektor untuk widget-widget ini berarti
+            Editoria11y akan berhenti sejenak saat pengguna mencoba melompat ke tips tersebut menggunakan tombol berikutnya atau sebelumnya.
+            Tema dan modul Drupal kemudian dapat mengikuti petunjuk dari bagian perpustakaan tentang <a href="/id/instalasi/#hidden-content">menangani tips pada konten tersembunyi</a> untuk menampilkan konten yang tersembunyi.
+          </p>
+
+          <h2 id="runtime">Tulis konfigurasi Anda sendiri</h2>
+          <p>Dalam PHP: modul Drupal menyediakan <code>hook_editoria11y_alter_config</code> untuk mengubah konten
+            <code>drupalSettings.editoria11y</code> di modul atau tema. Misalnya:
+          </p>
+          <pre class="language-php"><code><!--<?php
+/**
+ * @file
+ * MY_MODULE module file.
+ */
+
+use Drupal\Core\Cache\CacheableMetadata;
+
+/**
+ * Implements hook_editoria11y_alter_config().
+ *
+ * Attaches Editoria11y library and config based on context.
+ */
+function MY_MODULE_editoria11y_alter_config(array &$attach, CacheableMetadata $cacheableMetadata): void {
+  $config = Drupal::config('editoria11y.settings');
+
+  // Module settings being changed need to bust the cache.
+  $cacheableMetadata->addCacheableDependency($config);
+
+  // Get and modify any of the values being passed to drupalSettings.editoria11y.
+  if (!empty($attach['allow_ok'])) {
+    $attach['allow_ok'] = 'okAll';
+  }
+}--></code></pre>
+          <p>Memodifikasi <code>drupalSettings</code> hanya membantu jika JS modul sudah diatur untuk meneruskan nilai tersebut ke
+            perpustakaan. Untuk menambahkan parameter tambahan, Anda perlu memodifikasi objek JS <code>options</code> secara langsung.
+            Modul memeriksa satu variabel JS global <code>editoria11yOptionsOverride</code>. Jika ini disetel, ia
+            akan meneruskan objek <code>options</code> ke fungsi <code>editoria11yOptions</code> yang Anda sediakan
+            di modul atau tema Anda. Anda sekarang dapat menetapkan salah satu dari <a               href="https://editorsally.ddev.site/en/install/#params">parameter perpustakaan</a>.</p>
+          <pre class="language-javascript"><code><!--var editoria11yOptionsOverride = true;
+var editoria11yOptions = function(options) {
+  // You now have access to the processed options object that will be passed to the library.
+
+  // E.g., to add a selector to the ignore list:
+  if (options['ignoreElements'] === false) {
+    // Provide the selector as the only value.
+    options['ignoreElements'] = `.example`;
+  } else {
+    // Append additional selectors with comma separator.
+    options['ignoreElements'] = `${options['ignoreElements']}, .example`
+  }
+
+  // Return your processed options.
+  return options;
+}
+--></code></pre>
+          <section id="custom-tests">
+            <h2>Tulis pengujian Anda sendiri</h2>
+            <p>Pertama, dalam konfigurasi modul, tambahkan 1 ke opsi "Custom tests" agar ia tahu untuk
+              memantau pengujian.</p>
+            <p>Kemudian buat perpustakaan JS Drupal dengan pengujian Anda di tema atau modul Anda, menggunakan <a href="/id/instalasi/#custom-tests">panduan perpustakaan untuk menulis pengujian kustom</a>.</p>
+            <p>Berikut contoh kerja dari Princeton, berupa pengujian kustom untuk menandai Safe Links. Perhatikan bahwa ia mengakses
+              kelas Editoria11y melalui <code>Drupal.Ed11y.</code></p>
+            <pre class="language-javascript"><code><!--const psEd11yCustomTests = function() {
+
+  // 1.
+  // Get elements to test, via Drupal.Ed11y.getElements.
+  // The 'root' parameter tells it to respect config for check areas and ignores.
+  const safeLinks = Drupal.Ed11y.getElements('a[href*="safelinks.protection.outlook.com/?"]', 'root');
+
+  // Add the test name to the lang object.
+  Drupal.ed11yLang.lang.testNames.outlookSafeLink = 'URL is Safe Link encoded';
+
+  // 2.
+  // Create the tip content.
+  const decodeSafelink = function(url) {
+    const params = new URL(url).searchParams;
+    let decoded = params.get('url');
+    const p = document.createElement('p');
+    if (!!decoded) {
+      p.innerHTML = `<p><span class="badge">To fix</span>Update this link with the correct URL, which is probably:<br>
+    <em style='word-wrap: break-word;font-size: 90%;line-height: 1.2;display: block;'></em></p>`
+      p.querySelector('em').textContent = Drupal.Ed11y.sanitizeHTML(decoded);
+    }
+    return p;
+  };
+  safeLinks?.forEach((el) => {
+    const content = document.createElement('div');
+    content.innerHTML = `<div class="title">Please fix this Outlook "Safe Link"</div>
+            <div class="why">
+                <p>The URL for this link is an Outlook "Safe Link" that was copied from an email.
+                It includes the original recipient's email address,
+                and will break if Microsoft shuts down the service.</p>
+                <p>The pasted URL is:<br>
+                <em style='word-break: break-all;font-size: 90%;line-height: 1.2;
+                display: block;'></em></p>
+            </div>
+            `;
+    content.querySelector('em').textContent = Drupal.Ed11y.sanitizeHTML(el.href);
+    content.querySelector('.why').insertAdjacentElement('beforebegin', decodeSafelink(el.href));
+
+    // 3.
+    // Push the tip to the library results object.
+    Drupal.Ed11y.State.results.push({
+      element: el,
+      test: 'outlookSafeLink',
+      type: 'error',
+      content: content,
+      position: 'beforebegin',
+      inline: false,
+      dismiss: false,
+    });
+  });
+
+  // 4.
+  // Tell Editoria11y you are done adding custom results.
+  const allDone = new CustomEvent('ed11yResume');
+  document.dispatchEvent(allDone);
+};--></code></pre>
+
+          </section>
+          <section id="help">
+            <h2>Mendapatkan bantuan</h2>
+            <p>Periksa halaman <a href="/id/kontak/">kontak</a> untuk opsi dukungan komunitas. @itmaybejj biasanya
+              aktif di Drupal Slack selama jam siang di belahan barat.</p>
+            <p>Sebagian besar <a href="/id/harga/">tingkat kontribusi CSA</a> mencakup checkin tahunan, yang
+              dapat mencakup bantuan langsung
+              dengan pengaturan dan konfigurasi</p>
+          </section>
+
+        
+      
+    
+  
+</main>
+  <footer class="container col-lg-12 mx-auto pt-3 text-body-secondary text-center text-md-start">
+    <div class="container">
+      <div class="footer-nav text-center">
+        <a class="btn btn-primary btn-lg" data-slug="about" href="/id/">Tentang</a>
+        <a class="btn btn-primary btn-lg" data-slug="features" href="/id/fitur/">Fitur</a>
+        <a class="btn btn-primary btn-lg" data-slug="demo" href="/id/demo/">Demo</a>
+        <a class="btn btn-primary btn-lg" data-slug="license" href="/id/harga/">Harga dan kontribusi</a>
+      </div>
+      <div class="row footer">
+        <div class="col col-3">
+          <a href="https://github.com/itmaybejj/editoria11y"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+              height="20" fill="currentColor" class="bi bi-git" viewBox="0 0 16 16">
+              <path
+                d="M15.698 7.287 8.712.302a1.03 1.03 0 0 0-1.457 0l-1.45 1.45 1.84 1.84a1.223 1.223 0 0 1 1.55 1.56l1.773 1.774a1.224 1.224 0 0 1 1.267 2.025 1.226 1.226 0 0 1-2.002-1.334L8.58 5.963v4.353a1.226 1.226 0 1 1-1.008-.036V5.887a1.226 1.226 0 0 1-.666-1.608L5.093 2.465l-4.79 4.79a1.03 1.03 0 0 0 0 1.457l6.986 6.986a1.03 1.03 0 0 0 1.457 0l6.953-6.953a1.03 1.03 0 0 0 0-1.457" />
+            </svg> <strong>Pustaka</strong></a>
+        </div>
+        <div class="col col-3">
+          <a href="https://github.com/itmaybejj/editoria11y/discussions"><svg xmlns="http://www.w3.org/2000/svg"
+              width="20" height="20" fill="currentColor" class="bi bi-chat-right-heart-fill" viewBox="0 0 16 16">
+              <path
+                d="M16 2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h9.586a1 1 0 0 1 .707.293l2.853 2.853a.5.5 0 0 0 .854-.353zM8 3.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132" />
+            </svg> <strong>Forum</strong></a>
+        </div>
+        <div class="col col-3">
+          <a href="https://github.com/itmaybejj/editoria11y/issues"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+              height="20" fill="currentColor" class="bi bi-patch-plus-fill" viewBox="0 0 16 16">
+              <path
+                d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01zM8.5 6v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 1 0" />
+            </svg> <strong>Masalah</strong></a>
+        </div>
+        <div class="col col-3">
+          <a href="/id/kontak/"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+              class="bi bi-person-lines-fill" height="24" width="24" viewBox="0 0 16 18">
+              <path
+                d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z">
+              </path>
+            </svg> <strong>Kontak</strong></a>
+        </div>
+        <div class="col col-12 subfooter">
+          <a href="/id/kebijakan-privasi/">Kebijakan Privasi</a>
+          <a href="/id/kebijakan-cookie/">Kebijakan Cookie</a>
+          <a href="/id/syarat-penggunaan/">Syarat Penggunaan</a>
+          <a href="/id/pemberitahuan-hukum/">Pemberitahuan Hukum</a>
+          <span>&copy; 2026 Editoria11y LLC</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="/assets/bootstrap/js/bootstrap.bundle.min.js" class="astro-vvvwv3sm"></script>
+  <script src="/assets/lang/i18n.js"></script>
+  <script src="/assets/theme.js"></script>
+</body>
+
+</html>

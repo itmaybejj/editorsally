@@ -1,0 +1,322 @@
+<main class="container col-lg-12 mx-auto py-5">
+    <div class="row docs">
+      <div class="col-12 col-md-5 col-lg-4 mb-5">
+        <div id="on-this-page" class="list-group ms-2 ms-lg-5 position-sticky top-0 pt-3">
+        </div>
+      </div>
+      <div class="col-12 col-md-7 col-lg-8 pt-3" data-bs-spy="scroll" data-bs-target="#on-this-page"
+        data-bs-smooth-scroll="true">
+        <h1 data-i18n-id="s-fe89">Инсталиране & конфигуриране</h1>
+
+        <section id="modules">
+          <h2 class="pt-3 pb-2" data-i18n-id="s-6f09">Предварително конфигурирани версии</h2>
+          <ul class="list-unstyled ps-0">
+            <li data-i18n-id="s-a850"><a href="https://www.drupal.org/project/editoria11y" class="arrow"><strong>Инсталатор за Drupal</strong></a></li>
+            <li data-i18n-id="s-c7b0"><a href="https://wordpress.org/plugins/editoria11y-accessibility-checker/" class="arrow"><strong>Инсталатор за WordPress</strong></a></li>
+            <li data-i18n-id="s-128f"><a href="https://codeberg.org/sebastiangreger/kirby-a11yprompter" class="arrow"><strong>Инсталатор за Kirby</strong></a> <em>(contrib)</em></li>
+            <li data-i18n-id="s-4002"><a href="https://plugins.craftcms.com/editoria11y" class="arrow"><strong>Инсталатор за CraftCMS</strong></a> <em>(contrib)</em></li>
+          </ul>
+        </section>
+        <section id="diy">
+          <h2 data-i18n-id="s-cef2">Персонализирана инсталация</h2>
+          <p data-i18n-id="s-df5a">За да създадете своя собствена реализация, <a href="https://github.com/itmaybejj/editoria11y" data-type="URL" data-id="https://github.com/itmaybejj/editoria11y" class="liinternal">изтеглете локално копие</a> (или използвайте <a href="https://cdn.jsdelivr.net/gh/itmaybejj/editoria11y@2/dist/editoria11y.min.js" class="liinternal">CDN версия</a>) на езиков пакет, минифицирания JS файл и минифицирания CSS файл, след което създайте нов екземпляр на „Ed11y".</p>
+          <p data-i18n-id="s-4e8a">За <strong>ESM/JS модулни импорти</strong>:</p>
+          <pre class="language-markup"><code><!--// Load CSS
+<link href="/dist/css/editoria11y.min.css?v=3.0" rel="stylesheet">
+// Load JS and language pack
+<script type="module">
+  import Ed11y from "/dist/js/ed11y.esm.min.js?v=3.0";
+  import ed11yLang from "/dist/js/lang/en.js";
+  // Instantiate with language and CSS
+  const ed11y = new Ed11y.Ed11y({
+    lang: 'en',
+    cssUrls: ["/dist/css/editoria11y.min.css"]
+  });
+</script>
+--></code></pre>
+          <p data-i18n-id="s-b7f0">Използвайте .umd JavaScript файловете за по-стари браузъри и системи:</p>
+          <pre class="language-markup"><code><!--
+// Call CSS, JS and a Language Pack
+<link href="/dist/editoria11y.min.css" rel="stylesheet">
+<script src="/dist/js/ed11y.umd.js"></script>;
+<script src="/dist/js/lang/en.umd.js"></script>
+// Create a new Ed11y instance
+<script>
+  const ed11y = new Ed11y.Ed11y({
+    lang: 'en',
+    cssUrls: ["/dist/css/editoria11y.min.css"]
+  });
+</script>
+                --></code></pre>
+        </section>
+
+        <section id="params">
+          <h2 data-i18n-id="s-c50b">Параметри</h2>
+          <p data-i18n-id="s-6877">Пълната реализация трябва да се извиква само за влезли редактори (не искате посетителите на сайта да виждат проверката!), и може да замени всеки от <a href="https://github.com/itmaybejj/editoria11y/blob/3.0.x/src/js/utils/ed11y-default-options.js" class="liinternal"><strong>параметрите по подразбиране</strong></a>.</p>
+          <p data-i18n-id="s-084e">Обърнете внимание, че за всички параметри са предоставени стойности по подразбиране; включвайте само тези, които искате да замените.</p>
+          <p data-i18n-id="s-a20c">Реализация с разширена персонализация може да изглежда така:</p>
+          <pre class="language-javascript"><code><!--const ed11y = new Ed11y.Ed11y({
+  // Define content regions
+  checkRoot: 'main, .footer-content-zone',
+  // Add custom CSS files
+  cssUrls: [
+    '/css/editoria11y.min.css',
+    '/css/custom.css'
+  ],
+  // Define Web components to include in checks
+  shadowComponents: 'accordion, lightbox',
+  // We want the box to open automatically for errors:
+  alertMode: 'assertive',
+  // Our external link icon has visually hidden text
+  // to delete before checking if the link has text:
+  linkIgnoreStrings: ['(opens in new window)'],
+  // Content editors cannot edit these elements:
+  ignoreElements: 'nav *, #social-block',
+  // Prevent this user from hiding alerts.
+  allowHide: false,
+  allowOK: true,
+  // Don't scan while the editor toolbar is open:
+  preventCheckingIfPresent: ".editor-toolbar",
+  // Turn off warnings that an element might be visually hidden:
+  checkVisible: false,
+  // Dispatch a JS event before highlighting this,
+  // so our JS can modify it first:
+  hiddenHandlers: ".accordion-panel",
+  // Dispatch a JS event when the library is ready
+  // for custom tests, then wait for 3 ed11yResume
+  // events from our 3 tests to continue.
+  customTests: 3,
+  checks: {
+    // Turn off the HEADING_FIRST test
+    HEADING_FIRST: false,
+    // Allow dismissing the HEADING_SKIPPED_LEVEL test
+    HEADING_SKIPPED_LEVEL: {
+       type: 'warning',
+    }
+  }
+
+}); --></code></pre>
+          <p data-i18n-id="s-18e0">Готовите интеграции често задават тези променливи динамично — напр. зареждат страниците в режим „assertive", когато са редактирани наскоро, и превключват обратно в „polite" след няколко минути.</p>
+        </section>
+
+        <section id="theme">
+          <h2 data-i18n-id="s-6c0a">Теми</h2>
+
+          <p data-i18n-id="s-e058">Няколко параметъра позволяват избор на тема, замяна на цветове и инжектиране на CSS.</p>
+
+          <p data-i18n-id="s-ebc7">Включвайте само параметрите, които трябва да замените, за да улесните бъдещите актуализации.</p>
+          <pre             class="language-javascript"><code><!--// Add custom CSS file
+cssUrls: ['/css/editoria11y.min.css', '/css/custom.css'],
+theme : 'darkTheme', // Select base theme
+darkTheme: {         // Override base colors
+    bg: '#0a2051',
+    bgHighlight: '#7b1919',
+    text: '#f4f7ff',
+    primary: '#4930a0',
+    primaryText: '#f4f7ff',
+    secondary: '#20160c',
+    warning: '#fad859',
+    alert: '#b80519',
+    button: '#dde8ff',
+    focusRing: 'cyan',
+    activeTab: '#0a2051',
+    tipHeader: '#4930a0',
+},
+// Override fonts
+baseFontSize: 14, // px
+baseFontFamily: '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif', --></code></pre>
+        </section>
+
+        <section id="js-events">
+          <h2 class="wp-block-heading has-text-align-left has-secondary-background-color has-background has-large-font-size" data-i18n-id="s-4568">Полезни JS събития</h2>
+
+          <p data-i18n-id="s-3ca2">Разработчиците на теми могат да се абонират за тези събития, за да реагират и да модифицират страницата при необходимост.</p>
+
+          <p data-i18n-id="s-2fb1">В типичен ред на появяване…</p>
+
+          <ul class="wp-block-list">
+            <li data-i18n-id="s-abfb"><strong><code>ed11yRunCustomTests</code></strong>: изпраща се, когато обектът Results е готов за инжектиране на потребителски резултати. Обърнете внимание, че параметърът customTests трябва да бъде зададен на броя на персонализираните тестови функции, които ще изпълнявате (…вероятно една…), за да се изпрати това събитие. Подробности в следващия раздел.</li>
+
+            <li data-i18n-id="s-16d6"><strong><code>ed11yResults</code></strong>: изпраща се, когато всички проверки приключат. API интеграциите вече могат да извличат данни от обекта Ed11y.results.</li>
+
+            <li data-i18n-id="s-5693"><strong><code>ed11yPanelOpened</code></strong>: изпраща се, ако панелът се отвори — автоматично или ръчно.</li>
+
+            <li data-i18n-id="s-4100"><strong><code>ed11yShowHidden</code></strong>: предоставя число <code>data-ed11y-result</code> и булева стойност <code>viaJump</code>. Изпраща се само ако параметърът „ed11yShowHidden" е зададен <em><strong>и</strong></em> родителят на елемента отговаря на селектор. Използва се за разкриване на сигнали в все още затворени контейнери, напр. акордеони, табове и въртележки. Примери за употреба в следващия раздел.</li>
+
+            <li data-i18n-id="s-20be"><strong><code>ed11yPop</code></strong>: предоставя ID <code>data-ed11y-result</code>, както и референции към обектите <code>result</code> и <code>tip</code>. Изпраща се при появата на подсказка, позволявайки модифицирането им по време на изпълнение.</li>
+
+            <li data-i18n-id="s-a26b"><strong><code>ed11yShut</code></strong>: предоставя ID <code>data-ed11y-result</code>. Изпраща се при затваряне на подсказка.</li>
+
+            <li><span data-translate data-i18n-id="s-4631"><strong><code>ed11yDismissalUpdate</code></strong>: предоставя разширена информация, когато потребител отхвърли
+              или възстанови предупреждение. Използва се за API интеграции. Обектът на събитието съдържа:</span>
+              <ul>
+                <li data-i18n-id="s-a6bd"><code>dismissPage</code></li>
+
+                <li data-i18n-id="s-754f"><code>dismissTest</code></li>
+
+                <li data-i18n-id="s-0a00"><code>dismissKey</code></li>
+
+                <li data-i18n-id="s-c8b0"><code>dismissAction</code></li>
+              </ul>
+            </li>
+          </ul>
+          <p data-i18n-id="s-ec32">Примери можете да намерите в следващите раздели.</p>
+        </section>
+
+        <section id="modify-tips">
+          <h2 class="wp-block-heading has-secondary-background-color has-background has-large-font-size" data-i18n-id="s-ac90">Модифициране на подсказки</h2>
+
+          <p data-i18n-id="s-edfa">За промяна само на текста на подсказка, елементите в глобалния обект ed11yLang.en (преди инициализиране на библиотеката) или Ed11y.M (след инициализирането) могат да бъдат директно заменени. Напр. в Drupal модула, където сме задали псевдоним на езиковия пакет като Drupal.ed11yLang:</p>
+
+          <p data-i18n-id="s-c4d7"><code>Drupal.ed11yLang.lang.testNames.title = "Please write shorter headings."</code></p>
+
+          <p data-i18n-id="s-f0b0">Това важи за всеки от <a href="https://github.com/itmaybejj/editoria11y/blob/3.0.x/src/lang/baseAll.js" data-type="link" data-id="https://github.com/itmaybejj/editoria11y/blob/2.3.x/js/ed11y-localization.js" class="liinternal">ключовете по подразбиране в файла за локализация</a> или активния езиково-специфичен превод.</p>
+
+          <p data-i18n-id="s-842f">Drupal модулът добавя и персонализирани връзки за редактиране към подсказките, използвайки параметъра <code>editLinks</code>. Обърнете внимание на „Page editor" и „Layout editor:"</p>
+
+          <figure class="wp-block-image size-full"><img loading="lazy" data-recalc-dims="1" fetchpriority="high" decoding="async" width="580" height="300" src="https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?resize=580%2C300&amp;ssl=1" alt="Подсказка с вмъкнати връзки &quot;Page editor&quot; и &quot;Layout editor&quot;." class="wp-image-523" srcset="https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?w=1290&amp;ssl=1 1290w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?resize=600%2C311&amp;ssl=1 600w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?resize=768%2C398&amp;ssl=1 768w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?resize=1200%2C621&amp;ssl=1 1200w" sizes="(max-width: 580px) 100vw, 580px" data-i18n-id="s-6d4d" /></figure>
+
+          <p data-i18n-id="s-bcd2">Опростена версия на кода, задаващ този параметър:</p>
+          <pre class="language-javascript"><code><!--const editLinks = document.createElement('div');
+const editLink = document.createElement('a');
+      editLink.href="/node/1/edit";
+      editLink.textContent = "Edit page";
+editLinks.appendChild(editLink);
+const ed11y = new Ed11y({
+               editLinks: editLinks,
+              }); --></code></pre>
+          <p data-i18n-id="s-14d9">Drupal модулът след това използва събитието <strong><code>ed11yPop</code></strong>, за да показва и скрива динамично връзката за редактиране въз основа на контекста при показване на подсказки.</p>
+
+          <p data-i18n-id="s-78f4">Това събитие предоставя референции към обектите <code>result</code> и <code>tip</code>:</p>
+          <pre class="language-javascript"><code><!--// Listen for event
+document.addEventListener('ed11yPop', e => {
+  if (e.detail.result.element.closest(
+    drupalSettings.editoria11y.hide_edit_links)
+  ) {
+      e.detail.tip.shadowRoot.querySelector(
+        '.ed11y-custom-edit-links'
+        )?.setAttribute('hidden', '');
+     }
+}); --></code></pre>
+        </section>
+
+        <section id="custom-tests">
+          <h2 data-i18n-id="s-794a">Персонализирани тестове</h2>
+
+          <p data-i18n-id="s-921d">Ако параметърът <strong><em>customTests</em></strong> е <strong><em>число</em></strong>, Editoria11y ще изпрати събитие „ed11yRunCustomTests" по време на проверката и след това ще изчака до 500 мс, очаквайки толкова „<code>ed11yResume</code>" събития.</p>
+
+          <p data-i18n-id="s-a897">Това може да се използва за извикване на толкова скриптове с персонализирани тестове, колкото желаете, като могат да добавят резултатите си в масива с резултати преди изчертаването на подсказките.</p>
+
+          <p data-i18n-id="s-820a">Например, ако искате да създадете тази подсказка за маркиране на връзки, поставени от имейли с обфускирани URL адреси:</p>
+
+          <figure class="wp-block-image size-full"><img loading="lazy" data-recalc-dims="1" decoding="async" width="580" height="462" src="https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2023/12/Screenshot-2023-12-06-at-5.13.38-PM.png?resize=580%2C462&amp;ssl=1" alt="Подсказка с текст &quot;URL is Safe Link Encoded&quot;" class="wp-image-323" srcset="https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2023/12/Screenshot-2023-12-06-at-5.13.38-PM.png?w=1056&amp;ssl=1 1056w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2023/12/Screenshot-2023-12-06-at-5.13.38-PM.png?resize=600%2C478&amp;ssl=1 600w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2023/12/Screenshot-2023-12-06-at-5.13.38-PM.png?resize=768%2C612&amp;ssl=1 768w" sizes="(max-width: 580px) 100vw, 580px" data-i18n-id="s-f6c3" /></figure>
+
+          <p data-i18n-id="s-a3f5">Трябва да:</p>
+
+          <ol class="wp-block-list">
+            <li data-i18n-id="s-7c1e">Добавите слушател за събитието <code>ed11yRunCustomTests</code></li>
+
+            <li data-i18n-id="s-b8b0">Намерите съответстващи елементи</li>
+
+            <li data-i18n-id="s-3ff7">Дефинирате съобщението на подсказката</li>
+
+            <li data-i18n-id="s-181b">Изпратите събитието „resume", за да накарате Editoria11y да покаже подсказката:</li>
+          </ol>
+
+          <pre class="language-javascript"><code><!--document.addEventListener('ed11yRunCustomTests', function() {
+  // 1. Write your custom test. This can be anything you want.
+  //
+  // This example searches the active root using the .getElements() function,
+  // which is aware of the checkRoots and ignoreElements parameters.
+  const safeLinks = Drupal.Ed11y.getElements('a[href*="safelinks.protection.outlook.com/?"]', 'root');
+
+  // This is just a utility function for this particular test...
+  const decodeSafelink = function(url) {
+      const params = new URL(url).searchParams;
+      let decoded = params.get('url');
+      if (!!decoded) {
+            decoded = Ed11y.sanitizeForHTML(decoded);
+            return `<p>The actual URL may be:<br><em style='word-wrap: break-word;'>${decoded}</em></p>`
+      }
+      return '';
+  }
+
+  // 2. Add the test name to the active language pack.
+  // Add a title:
+  Drupal.ed11yLang.lang.testNames.outlookSafeLink = 'URL is Safe Link encoded';
+
+  // 3. Push each item you want flagged to Ed11y.results.
+  //
+  // You must provide:
+  //   element:      The element itself
+  //   test:         A key for your test, matching step 2.
+  //   type:         warning or error
+  //   content:      The tip HTML.
+  //   position:     "beforebegin" for interactive elements,
+  //                 "afterbegin" for paragraphs and table cells.
+  //   dismiss:      false for errors,
+  //                 a unique string for manual checks.
+  safeLinks?.forEach((el) => {
+   Drupal.Ed11y.State.results.push({
+     element: el,
+     test:    'outlookSafeLink',
+     type:    'error',
+     content: `<div class="title">Please fix the URL in this link</div>
+               ${decodeSafelink(el.href)}
+               <div class="why">
+                <p>The URL for this link is an Outlook "Safe Link" that was copied from an email.
+                It includes the original recipient's email address,
+                and will break if Microsoft shuts down the service.</p>
+                <p>The pasted URL is:<br>
+                <em style='word-break: break-all;font-size: 90%;line-height: 1.2;
+                display: block;'>${Drupal.Ed11y.sanitizeHTML(el.href)}</em></p>
+               </div>
+            `,
+     position: 'beforebegin',
+     dismiss:  false,
+   });
+  });
+  // 4. When you are done with all your custom tests, dispatch an "ed11yResume" event:
+  let allDone = new CustomEvent('ed11yResume');
+  document.dispatchEvent(allDone);
+}) --></code></pre>
+        </section>
+
+        <section id="hidden-content">
+          <h2 data-i18n-id="s-a67a">Работа със сигнали за скрито или ограничено по размер съдържание</h2>
+
+
+          <p data-i18n-id="s-be6c">Много интерактивни компоненти (табове, плъзгачи, акордеони) скриват съдържание. Информационният панел на Editoria11y включва бутони „напред/назад" за прескачане директно до проблемите. Ако Editoria11y прецени, че подсказката за проблема в момента е невидима, ще предупреди потребителя, че нещо не е наред, и след това ще маркира първия видим предшественик — напр. div около акордеон.</p>
+
+          <p data-i18n-id="s-4f58">В идеалния случай вашата тема ще направи тези елементи видими преди изпълнението на проверката за видимост на Editoria11y, така че всичко да работи магически за вашите потребители — въртележките се превъртат автоматично, а акордеоните се отварят автоматично, за да покажат проблема.</p>
+
+          <p data-i18n-id="s-7e11">За да направите това при първото отваряне на панела (напр. разгъване на <strong><em>всички</em></strong> секции на акордеон с проблеми), добавете JS слушател за събитието <code>ed11yPanelOpened</code>, след това извършете querySelectorAll за съответните елементи <code>ed11y-element-result</code> и задействайте функцията, която вашата тема използва, за да разкрие тази част от страницата.</p>
+
+          <p data-i18n-id="s-1c3f">Ето пример, базиран на jQuery. При отваряне на панела той деактивира залепващо меню (за да не покрива елементи), след което търси елементи <code>ed11y-element-result</code> вътре в затворени секции на акордеон и симулира щракване върху бутона им за превключване:</p>
+          <pre class="language-javascript"><code><!--document.addEventListener("ed11yPanelOpened", function () {
+  $('body').addClass('no-stick');
+  $('ed11y-element-result').each(function () {
+    if ($(this).parents('.ps-accordion-content[style*="display"]').length > 0) {
+    $(this).parents('.ps-accordion-content').prev().find('.ps-accordion-item-button').click();
+    }
+}) --></code></pre>
+
+          <p data-i18n-id="s-fbae">За разкриване на съдържание само при прескачане към <strong><em>конкретна</em></strong> подсказка чрез бутона „напред" на панела (напр. в затворен таб или следващия слайд на въртележка), трябва да зададете и <code>hiddenHandlers</code> към съответните CSS селектори, и <code>checkVisible</code> на TRUE в параметрите. След това добавете слушател за събитието <code>ed11yShowHidden</code>. То се задейства, ако Editoria11y установи, че подсказка е вътре в контейнер с един от изброените селектори <code>hiddenHandlers</code> в списъка с опции. Това JS събитие ще включва ID на подсказката, която предстои да се отвори. Editoria11y ще направи кратка пауза след изпращането на това събитие, за да даде на вашия JS время да направи елемента видим.</p>
+
+          <p data-i18n-id="s-dae0">Ето пример от реализация в Penn State. Той търси елемента, съответстващ на предоставения ID, след това намира неговия родителски интерактивен контейнер и задейства събитието му за активиране на превключвателя:</p>
+          <pre class="language-javascript"><code><!--context.addEventListener('ed11yShowHidden', e => {
+  if (!e.detail.viaJump) {
+       return;
+  }
+  context.getElementById(e.detail.id)
+    .closest('[data-interactive-component]')
+    .dispatchEvent(new CustomEvent('component:activate'));
+}); --></code></pre>
+          <p data-i18n-id="s-d99d">Последна бележка: някои теми просто не са съвместими с проверката за видимост — напр. контейнерът <code>&lt;main&gt;</code> има височина 0px. Такива сайтове трябва да деактивират цялата проверка за видимост, задавайки <code>checkVisible</code> на false.</p>
+
+        </section>
+
+      </div><!-- End content column -->
+
+    </div>
+  </main>

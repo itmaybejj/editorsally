@@ -1,0 +1,416 @@
+<main class="container col-lg-12 mx-auto py-5">
+    <div class="row docs">
+      <div class="col-12 col-md-5 col-lg-4 mb-5">
+        <div id="on-this-page" class="list-group ms-2 ms-lg-5 position-sticky top-0 pt-3">
+        </div>
+      </div>
+      <div class="col-12 col-md-7 col-lg-8 pt-3">
+        <div data-bs-spy="scroll" data-bs-target="#on-this-page" data-bs-smooth-scroll="true">
+          <h1 data-i18n-id="s-e367">Drupal için Editoria11y</h1>
+          <section id="features">
+            <h2 class="pt-3" data-i18n-id="s-1dcf">Temel özellikler</h2>
+
+            <p class="fs-6" data-i18n-id="s-a8c0">Drupal modülü, denetleyici kütüphanesini editoryal arka uca bağlar
+              ve raporlama, yönetim ve yapılandırma için çok sayıda sunucu tarafı araç ekler.</p>
+
+            <figure class="figure my-4 row">
+              <div class="col-lg-8">
+                <img loading="lazy" src="/assets/images/3x-editing.png" class="rounded border figure-img img-fluid" height="1088" width="2237" alt="Satır içi ipuçları bulunan Drupal editörü" data-i18n-id="s-ee36" />
+              </div>
+              <figcaption class="figure-caption col-lg-4" data-i18n-id="s-8e69">Sorunlar hem ön uçta sayfa yüklenirken hem de
+                CKEditor ve Gutenberg'de yazarken tespit edilir.</figcaption>
+            </figure>
+
+            <figure class="figure my-4 row">
+              <div class="col-lg-8">
+                <img loading="lazy" src="/assets/images/3x-generic-tip.png" class="rounded border figure-img img-fluid" height="798" width="1278" alt="Bir bağlantının yalnızca &quot;tıklayın&quot; olarak adlandırıldığını gösteren ipucu." data-i18n-id="s-1639" />
+              </div>
+              <figcaption class="figure-caption col-lg-4" data-i18n-id="s-9881">İpuçları, düzenleyiciye atlamak, uyarıyı yoksaymak (aktif kullanıcı için) veya tamam olarak işaretlemek için (tüm
+                kullanıcılar için) düğmeler kazanır. Tekrarlayan uyarılar sayfa genelinde veya site genelinde eylemler sunar.
+              </figcaption>
+            </figure>
+
+            <figure class="figure my-4 row">
+              <div class="col-lg-8">
+                <img loading="lazy" src="/assets/images/3x-drupal-custom-tests.png" class="rounded border figure-img img-fluid" alt="İpucu başlığı ve içerik alanlarının yanı sıra öğe seçiciler ve dışlamaları gösteren özel test oluşturucu arayüzü." data-i18n-id="s-0830" />
+              </div>
+              <figcaption class="figure-caption col-lg-4">
+                <p class="mb-2" data-i18n-id="s-37bf">CSA alt modülü şunları ekler:</p>
+                <ul class="ps-3">
+                  <li data-i18n-id="s-caff"><strong>Özel test oluşturucu</strong></li>
+                  <li data-i18n-id="s-b145">40'tan fazla geliştirici testi</li>
+                  <li data-i18n-id="s-f55d">Kontrast denetimi</li>
+                  <li data-i18n-id="s-b70c">Site tarayıcıları</li>
+                  <li data-i18n-id="s-5377">Okunabilirlik analizi</li>
+                  <li data-i18n-id="s-6602">Geliştiriciler/editörler için ayrılmış yapılandırmalar</li>
+                </ul>
+              <span data-translate data-i18n-id="s-bc47"></figcaption>
+            </figure>
+
+            <figure class="figure">
+              <img loading="lazy" class="figure-img img-fluid rounded border" src="/assets/images/3x-dashboard.png" height="765" width="1600" alt="En çok sorun bulunan son sorunları ve sayfaları gösteren raporlama kontrol paneli." data-i18n-id="s-2559" />
+              <figcaption class="figure-caption p-3 pt-2" data-i18n-id="s-cdbf">Site genelinde bir kontrol paneli, uyarıların ve kapatmaların filtrelenebilir ve dışa aktarılabilir raporlarını sağlar.</figcaption>
+            </figure>
+
+          </section>
+          <h2 data-i18n-id="s-8fec">Kurulum ve temel kurulum adımları</h2>
+          <p data-i18n-id="s-7627">Drupal.org'daki <a href="https://www.drupal.org/project/editoria11y/">paketlenmiş yükleyici</a> birkaç modül içerir:</p>
+          <ul>
+            <li data-i18n-id="s-b830">
+              Editoria11y: temel içerik denetleyicisi ve kontrol paneli.
+            </li>
+            <li data-i18n-id="s-b351">
+              Editoria11y CSA: geliştirici testleri ve kontrol paneli bakım araçları.
+            </li>
+            <li data-i18n-id="s-74fe">
+              Editoria11y Export: CSV raporlama araçları.
+            </li>
+          </ul>
+          <p data-i18n-id="s-88fd">Diğer modüller gibi kurun ve ardından şu temel adımları izleyin:</p>
+          <ol>
+            <li data-i18n-id="s-7187"><strong>İzinleri kontrol edin.</strong> Güvenilir yazarların "Tamam İşaretle," "Yoksayıldı Olarak İşaretle" ve "Kontrol panelini görüntüle" izinleri olmalıdır.</li>
+            <li data-i18n-id="s-1ac1"><strong>Tekrarlayan veya yararsız uyarılar için önemli sayfaları kontrol edin.</strong> Bunları ipucu üzerinde Tamam olarak işaretleyin veya seçici kullanarak öğeleri yoksaymak için yapılandırmayı ayarlayın.</li>
+            <li data-i18n-id="s-e5b2">Görülmesi zor ipuçları arayın; ekran dışı, kesilmiş, diğer öğelerin arkasında veya gizli öğelerde bulunanlar. Düzeltmek için aşağıdaki "İpucu konumlandırmayı düzelt" bölümündeki ipuçlarını kullanın.</li>
+            <li data-i18n-id="s-c564">Site zaten içerik barındırıyorsa ve bir CSA aboneliğiniz varsa, kontrol paneli "yeniden tara" sekmesini ziyaret edin ve site raporlarını önceden yüklemek için <strong>siteyi tarayın</strong>. Bu isteğe bağlıdır, ancak eski sayfalar oturum açmış bir kullanıcı tarafından ziyaret edilip taranana kadar raporlarda görünmez.
+            </li>
+          </ol>
+          <p data-i18n-id="s-e025">Yapılandırma seçeneklerine <a href="https://youtu.be/uYvNYPg38nU?si=dqADyWpTtOhniHTP&t=696">video girişini görüntüleyin</a> (v2.4).</p>
+
+          <h2 id="check-roots" data-i18n-id="s-9202">Yararsız uyarıları gizle</h2>
+          <p data-i18n-id="s-fa47">
+            <strong>İyi yapılandırmalar yararsız uyarıları bastırır, böylece içerik yazarları düzeltmeleri gereken sorunlara odaklanabilir</strong>.
+          </p>
+          <p data-i18n-id="s-996e">Testleri tamamen kapatabilseniz de, genellikle belirli öğeler veya sayfalardaki uyarıları gizlemek daha iyidir.
+          </p>
+          <hr/>
+          <p data-i18n-id="s-7918">
+            Her test çalıştırmasında Editoria11y, "Bu kaplardaki içeriği denetle" ayarından tek bir öğe kümesi toplar ve ardından bunu birkaç kez filtreler. Bir test çalıştırması şöyle görünür:
+          </p>
+          <ol>
+            <li data-i18n-id="s-994a">
+              Yapılandırma bu sayfa veya bu kullanıcı için denetimi engelliyorsa denetimi iptal edin.
+            </li>
+            <li data-i18n-id="s-10c9">
+              <strong>Topla</strong> belirtilen sayfa bölgelerindeki öğeleri,
+              örneğin:<br/><code>body > *:not('.ed11y-element')</code><br/>
+              <em>Editoria11y CSA kullanıcıları için bunlar <strong>Geliştirici testleri</strong> sekmesindeki bölgelerdir.</em>
+            </li>
+            <li data-i18n-id="s-7524">
+              <strong>Bırak</strong> yoksay seçicileriyle eşleşen öğeleri,
+              örneğin:<br/><code>.widgets, .utility-menu</code><br/>
+              <em>Editoria11y CSA kullanıcıları için bunlar <strong>Geliştirici testleri</strong> sekmesindeki seçicilerdir.</em>
+            </li>
+            <li data-i18n-id="s-58d0">
+              Testleri çalıştır ve sonuçları kontrol paneliyle senkronize et.
+            </li>
+            <li>
+              <span data-translate data-i18n-id="s-f8c6">Ayrılmış yapılandırma etkinse ve kullanıcı bir içerik editörüyse, geliştirici sonuçlarını filtrele:</span>
+              <ul>
+                <li data-i18n-id="s-72c9"><strong>Bırak</strong> "Yalnızca geliştirici" olarak ayarlanan testlerin sonuçlarını.</li>
+                <li data-i18n-id="s-576e"><strong>Bırak</strong> belirtilen <strong><em>içerik</em></strong> bölgelerinin dışındaki öğelerdeki sonuçları,
+                  örneğin:<br/><code>main, footer</code></li>
+                <li data-i18n-id="s-bb1d"><strong>Bırak</strong> <strong><em>içerik</em></strong> yoksay seçicileriyle eşleşen öğelerdeki sonuçları.</li>
+              </ul>
+              İkinci bir "toplama" aşaması olmadığını unutmayın. Geliştirici sayfa bölgeleri, içerik bölgelerini kapsamalıdır.</span>
+            </li>
+            <li data-i18n-id="s-b79c">Yapılandırma bir otomatik açma ayarıyla eşleşiyorsa paneli açın ve uyarıları çizin.</li>
+          </ol>
+
+          <h3 id="dismiss" data-i18n-id="s-be02">Uyarıları kapat</h3>
+          <p data-i18n-id="s-2ae3">Testler kütüphanede hata veya uyarı ("manuel kontrol") olarak yapılandırılabilir. Uyarılar kapatılabilir. Her ipucunun alt kısmından iki tür kapatma mevcuttur:</p>
+          <div class="my-2"
+            style="background: url(/assets/images/3x-generic-tip.png) 100% 98%; max-width: 600px; padding-top: 6%; background-size: 108%;">
+          </div>
+          <ul>
+            <li data-i18n-id="s-7b65">"Yoksay", bir kullanıcı tercihi olarak depolanır: uyarı artık geçerli kullanıcı için gizlenir, ancak yalnızca bu kullanıcı için.</li>
+            <li data-i18n-id="s-654c">"Tamam İşaretle", uyarıyı tüm kullanıcılar için gizler.</li>
+          </ul>
+          <p data-i18n-id="s-dc14">Bir kullanıcının uyarıyı kapatıp kapatamayacağı, Drupal'ın kullanıcı izinlerinde rol düzeyinde kontrol edilir. <strong>Çoğu yazara uyarıları kapatma izni verilmelidir</strong>. Bir öğeyi kontrol etmiş olarak işaretleyemiyorlarsa birine manuel kontrol atamak anlamsızdır.
+          </p>
+
+          <h3 id="roots" data-i18n-id="s-d932">Öğeleri yoksay</h3>
+          <p data-i18n-id="s-9d1e">Bu iki yapılandırma ayarı en önemlileridir!</p>
+          <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
+            <label for="edit-content-root">Check content in these containers</label>
+            <div><textarea class="form-control" id="edit-content-root" name="content_root" rows="1" cols="30"
+                disabled></textarea>
+            </div>
+            <div class="mt-3">
+              <label for="edit-ignore-elements">Skip over these elements</label>
+              <div>
+                <textarea class="form-control" id="edit-ignore-elements" disabled name="ignore_elements" rows="1"
+                  cols="30" class=""></textarea>
+              </div>
+            </div>
+          </div>
+          <p data-i18n-id="s-6051">
+            İçerik yazarlarının düzenleyebildiği sayfa içeriğinin herhangi bir bölümünü dahil etmek için birincisini ayarlayın. Örneğin, <code>main</code> içerik alanını, <code>.sidebar</code>'ı ve <code>.footer-column-two</code>'yu düzenleyebiliyorlarsa bunları içerik denetim alanı olarak ayarlayın.
+          </p>
+          <p data-i18n-id="s-f29c">
+            Alt bölümleri "devre dışı bırakmak" için ikincisini kullanın. Örneğin, <code>main</code> yalnızca geliştiricilerin değiştirebileceği çeşitli widget'lar ve gömülü öğeler içeriyorsa bunları listeleyin: <code>.widget-1, .social-embed</code>;
+          </p>
+          <p data-i18n-id="s-10ef">Ayrılmış yapılandırmayı kullanıyorsanız Geliştirici Testleri sekmesinde benzer bir ayar çifti göreceksiniz:</p>
+          <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
+            <div>
+              <fieldset>
+                <legend>
+                  Developer check area
+                </legend>
+                <div class="fieldset__wrapper fieldset__wrapper--group">
+
+                  <div id="edit-dev-check-root">
+                    <div>
+                      <input aria-describedby="edit-dev-check-root--description" type="radio"
+                        id="edit-dev-check-root-automatic" name="dev_check_root" value="automatic" checked="checked" />
+                      <label for="edit-dev-check-root-automatic" class="form-item__label option">All elements</label>
+                    </div>
+                    <div class="d-flex">
+                      <input aria-describedby="edit-dev-check-root--description" type="radio"
+                        id="edit-dev-check-root-match" name="dev_check_root" value="match"
+                        class="align-self-baseline mt-1 me-1" />
+                      <label for="edit-dev-check-root-match" class="form-item__label option">Only the containers listed
+                        in the Content Setting tab</label>
+                    </div>
+                    <div class="">
+                      <input aria-describedby="edit-dev-check-root--description" type="radio"
+                        id="edit-dev-check-root-specify" name="dev_check_root" value="specify"
+                        class="form-radio form-boolean form-boolean--type-radio" />
+                      <label for="edit-dev-check-root-specify" class="">The specific containers listed below</label>
+                    </div>
+                  </div>
+
+                </div>
+              </fieldset>
+
+              <div class="">
+                <label for="edit-always-ignore" class="mt-3">Ignore for both developers and content editors</label>
+                <div class="form-textarea-wrapper">
+                  <textarea id="edit-always-ignore" class="form-control" name="always_ignore" rows="1" cols="20"
+                    placeholder=""></textarea>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+          <p data-i18n-id="s-8c02">Geliştirici denetim alanları hakkında bilinmesi gereken temel şey, içerik denetim alanlarından <strong>bağımsız olmadığıdır</strong>. Ayrılmış bir yapılandırmada geliştirici alanları denetlenir ve ardından bu sonuçlar içerik alanlarıyla eşleşecek şekilde <strong>filtrelenir</strong>. Geliştiriciler için hariç tutulan alanlar içerik editörleri için de hariç tutulur. Düzenlenebilir içerik alanlarını hariç tutmayın!</p>
+
+          <p data-i18n-id="s-0312">Bazı testler, yalnızca etkilenen öğelerdeki belirli uyarıları gizlemek için daha hassas yapılandırmaya olanak tanır. Bunları şu başlıklar altında arayın:</p>
+          <ul>
+            <li data-i18n-id="s-d53d">İçerik testleri: Denetlenecek bağlantılar</li>
+            <li data-i18n-id="s-0d1e">İçerik testleri: Denetlenecek gömülü öğeler</li>
+            <li data-i18n-id="s-10c1">İçerik testleri: Dinamik ve gölge içeriği algılama</li>
+            <li data-i18n-id="s-e6e4">Geliştirici testleri: Kontrast</li>
+          </ul>
+
+          <h3 id="pages" data-i18n-id="s-177c">Belirli sayfalar veya kullanıcılar için gizle</h3>
+          <p data-i18n-id="s-e874">
+            Bunu yapmanın en kolay yolu, bu seçeneklere CSS sınıfları veya kimlikleri iletmektir:
+          </p>
+          <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
+            <label for="edit-no-load" class="form-item__label">Do not check on pages with these elements</label>
+            <div class="form-textarea-wrapper">
+              <textarea data-drupal-selector="edit-no-load" aria-describedby="edit-no-load--description"
+                id="edit-no-load" name="no_load" rows="1" cols="20" class="form-control"></textarea>
+            </div>
+
+            <label for="edit-ignore-all-if-absent" class="form-item__label">Hide all alerts on pages where these
+              elements are not present</label>
+            <div class="form-textarea-wrapper">
+              <textarea data-drupal-selector="edit-ignore-all-if-absent"
+                aria-describedby="edit-ignore-all-if-absent--description" id="edit-ignore-all-if-absent"
+                name="ignore_all_if_absent" rows="1" cols="20" class="form-control"></textarea>
+            </div>
+
+          </div>
+          <p data-i18n-id="s-0877">
+            Birincisi, denetimlerin çalışmasını engeller ve araç çubuğu gösterilmez.
+          </p>
+          <p data-i18n-id="s-5cbd">
+            İkincisi, denetleyiciyi küçültülmüş olarak başlatır ve tüm sorunları (hatalar dahil) mevcut kullanıcı için otomatik olarak "Yoksayıldı" olarak işaretler. Bu, testlerin çalışmasına ve kontrol panelini güncellemesine izin verirken kullanıcıyı rahatsız etmez.
+          </p>
+          <p data-i18n-id="s-1661">
+            Hangi kullanıcıların denetleyiciyi göreceğini kontrol etmek için bunları kullanmak istiyorsanız, temanızı bir sınıf çıkarmak için ayarlamanız gerekebilir, örneğin <code>.user-247</code>
+          </p>
+
+          <h2 id="dashboard" data-i18n-id="s-f4d7">Site genelinde sonuçları yönetin</h2>
+          <section id="refresh">
+            <h3 class="pt-3" data-i18n-id="s-012a">Sonuçları tarama ve güncelleme</h3>
+            <p data-i18n-id="s-75a9">Editoria11y, <strong>gerçek zamanlı bir izleme aracıdır, tarayıcı değildir</strong>. Site genelindeki raporlar yazarlar sayfaları görüntülediğinde güncellenir, bu nedenle düzenli tarama genellikle gerekli değildir. CSA modülü <em>bir</em> tarayıcı içerir, ancak yalnızca şu üç durumda gerekli olabilir:</p>
+            <ol>
+              <li data-i18n-id="s-dfb1">
+                Editoria11y'yi çok sayıda sayfası olan mevcut bir sitede ilk kez kurarken. Sayfaların kontrol panelinde görünmesi için ziyaret edilmesi gerekir, bu nedenle hızlı bir başlangıç taraması zamandan tasarruf sağlar.
+              </li>
+              <li data-i18n-id="s-f602">
+                Tema veya modül güncellemeleri, ziyaret edilene veya taranana kadar görünmeyecek birçok sayfada sorunları düzeltebilir (veya neden olabilir).
+              </li>
+              <li data-i18n-id="s-a530">
+                Yönetici arayüzündeki sayfaları silme veya yeniden yönlendirme gibi toplu işlemler, artık var olmayan veya taşınmış sayfaların sonuçlarını geride bırakma eğilimindedir. Bu durumlarda sayfa URL'lerini yenilemek ve silinen sayfaları tespit edip bırakmak için "Yenile" sekmesinin bakım eylemlerini kullanmak yardımcı olur.
+              </li>
+            </ol>
+            <p data-i18n-id="s-8e5a">Tarama sırasında sitenizden hiçbir veri çıkmaz. CSA tarayıcısı bir bulut aracı değildir; kendi sitenizin sayfalarını yüklemek ve denetlemek için tarayıcınızı kullanır. Bu yaklaşımın dezavantajı, <strong>tarayıcıların arka plan sekmelerini duraklatmasıdır</strong>. Tarama sırasında bilgisayarınızı açık ve uyanık tutmanız gerekecektir. Tarayıcı için yeni bir pencere açmayı ve çalışırken o pencerenin ön plan sekmesi olarak kalmasını sağlamayı planlayın. Başka bir pencerede çalışmaya devam edebilirsiniz. Tarayıcı, her sayfa grubundan sonra tahminini güncelleyecektir.</p>
+          </section>
+          <section id="reports">
+            <h3 data-i18n-id="s-a242">Raporları görüntüleme</h3>
+            <div class="my-4 border shadow"
+              style="background: url(/assets/images/3x-dashboard.png) 86% 0%; padding-top: 28%; background-size: 106%;">
+            </div>
+            <ul>
+              <li data-i18n-id="s-e328">
+                <strong>Son</strong> bölümü, bireysel uyarıları incelemeye olanak tanır. Bu bölüm, aynı uyarı türünün tüm örneklerini bulmak, son içeriklerde sık görünen uyarıları veya hangi yazarların aynı hatayı yapmaya devam ettiğini görmek gibi şeyleri yapmanıza olanak tanır.
+              </li>
+              <li data-i18n-id="s-796f">
+                <strong>Sayfalar</strong>, sayfaya göre gruplandırılmış uyarı sayılarını gösterir. Bu bölüm, en çok sorunu olan sayfaları bulmayı ve içerik türü ile yayınlanma durumu gibi sayfa özelliklerine göre filtrelemeyi sağlar.
+              </li>
+              <li data-i18n-id="s-9423">
+                <strong>Uyarılar</strong>, sorunları türe göre gösterir.
+              </li>
+              <li data-i18n-id="s-52ed">
+                <strong>Kapatmalar</strong>, yazarların doğru şekilde kapatıp kapatmadığını izlemeye olanak tanır ve kapatılan uyarıları geri yüklemek için "sıfırla" düğmeleri içerir.
+              </li>
+              <li data-i18n-id="s-3379">
+                <strong>Dışa Aktar</strong>, CSV indirme hazırlamak için filtrelenebilen Sayfalar, Uyarılar ve Kapatmalar raporlarının versiyonlarını içerir. <em>CSV Dışa Aktar alt modülü tarafından sağlanır</em>
+              </li>
+              <li data-i18n-id="s-9814">
+                <strong>Yenile</strong>, silinen sayfalardan gelen uyarıları kaldırmaya, /search?query=example gibi parametreli sahte sayfalardan gelen uyarıları kaldırmaya, depolanan sayfa başlıklarını ve URL'lerini güncellemeye ve manuel tarama çalıştırmaya yarayan kontrol paneli bakım araçlarını içerir. <em>CSA alt modülü tarafından sağlanır</em>
+              </li>
+            </ul>
+          </section>
+
+          <h2 id="positioning" data-i18n-id="s-c35b">Gizli veya ekran dışı ipuçlarını düzelt</h2>
+
+          <p data-i18n-id="s-68ce">Modül, ipuçların yerleştirilme biçimini değiştirmek için kütüphanenin iki yapılandırma seçeneğine alan sağlar:
+          </p>
+
+          <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
+            <label for="edit-element-hides-overflow" class="form-item__label">Elements with overflow hidden</label>
+            <textarea data-drupal-selector="edit-element-hides-overflow"
+              aria-describedby="edit-element-hides-overflow--description" id="edit-element-hides-overflow"
+              name="element_hides_overflow" rows="1" cols="60" class="form-control"></textarea>
+            <label for="edit-hidden-handlers" class="form-item__label">Theme JS will handle revealing hidden tooltips
+              inside these containers</label>
+            <textarea data-drupal-selector="edit-hidden-handlers" aria-describedby="edit-hidden-handlers--description"
+              id="edit-hidden-handlers" name="hidden_handlers" rows="1" cols="60" class="form-control"></textarea>
+          </div>
+          <p data-i18n-id="s-34e4">Bazı temalar, yatay veya dikey taşmayı gizleyen sütunlar veya widget'lar içerir. Kütüphane, bir açma/kapama düğmesinin <strong>sayfanın</strong> görünür kısmının dışına düşeceğini otomatik olarak algılar. Kütüphaneye belirli kapların taşmayı gizlediğini söylemek, ipuçlarını bu kaplardaki öğeler için de sınırları içinde konumlandırmaya çalışmasını sağlar.</p>
+          <p data-i18n-id="s-7cb7">Bazı temalar, içeriğin görünürlüğünü değiştiren widget'lara sahiptir (akordiyonlar, sekmeler ve slayt gösterileri gibi). Bu öğelerin içindeki ipuçları da gizlenecektir. Bu widget'lar için seçici listesi sağlamak, bir kullanıcı ileri veya geri düğmesiyle bu ipuçlarına atlamaya çalıştığında Editoria11y'nin kısa bir süre duraklaması anlamına gelir. Drupal temaları ve modülleri daha sonra gizli içeriği göstermek için <a href="/en/install/#hidden-content">gizli içerikte ipuçlarıyla başa çıkma</a> konusundaki kütüphane bölümündeki yönergeleri takip edebilir.
+          </p>
+
+          <h2 id="runtime" data-i18n-id="s-7e38">Kendi yapılandırmanızı yazın</h2>
+          <p data-i18n-id="s-a5d3">PHP'de: Drupal modülü, bir modül veya temada <code>drupalSettings.editoria11y</code> içeriğini değiştirmek için bir <code>hook_editoria11y_alter_config</code> sağlar. Örneğin:
+          </p>
+          <pre class="language-php"><code><!--<?php
+/**
+ * @file
+ * MY_MODULE module file.
+ */
+
+use Drupal\Core\Cache\CacheableMetadata;
+
+/**
+ * Implements hook_editoria11y_alter_config().
+ *
+ * Attaches Editoria11y library and config based on context.
+ */
+function MY_MODULE_editoria11y_alter_config(array &$attach, CacheableMetadata $cacheableMetadata): void {
+  $config = Drupal::config('editoria11y.settings');
+
+  // Module settings being changed need to bust the cache.
+  $cacheableMetadata->addCacheableDependency($config);
+
+  // Get and modify any of the values being passed to drupalSettings.editoria11y.
+  if (!empty($attach['allow_ok'])) {
+    $attach['allow_ok'] = 'okAll';
+  }
+}--></code></pre>
+          <p data-i18n-id="s-2368"><code>drupalSettings</code>'ı değiştirmek yalnızca modül JS'i bu değeri kütüphaneye iletecek şekilde zaten kurulmuşsa yardımcı olur. Ek parametreler eklemek için JS <code>options</code> nesnesini doğrudan değiştirmeniz gerekir. Modül, <code>editoria11yOptionsOverride</code> adında bir global JS değişkeni kontrol eder. Bu ayarlanmışsa modül veya temanda sağladığınız bir <code>editoria11yOptions</code> işlevine <code>options</code> nesnesini iletir. Artık <a href="https://editorsally.ddev.site/en/install/#params">kütüphane parametrelerinden</a> herhangi birini ayarlayabilirsiniz.</p>
+          <pre class="language-javascript"><code><!--var editoria11yOptionsOverride = true;
+var editoria11yOptions = function(options) {
+  // You now have access to the processed options object that will be passed to the library.
+
+  // E.g., to add a selector to the ignore list:
+  if (options['ignoreElements'] === false) {
+    // Provide the selector as the only value.
+    options['ignoreElements'] = `.example`;
+  } else {
+    // Append additional selectors with comma separator.
+    options['ignoreElements'] = `${options['ignoreElements']}, .example`
+  }
+
+  // Return your processed options.
+  return options;
+}
+--></code></pre>
+          <section id="custom-tests">
+            <h2 data-i18n-id="s-e0f0">Kendi testlerinizi yazın</h2>
+            <p data-i18n-id="s-6ece">Öncelikle modül yapılandırmasında testleri izlemesini bildirmek için "Özel testler" seçeneğine 1 ekleyin.</p>
+            <p data-i18n-id="s-4316">Ardından <a href="/en/install/#custom-tests">özel test yazma kütüphane kılavuzunu</a> kullanarak testlerinizi içeren bir Drupal JS kütüphanesi oluşturun.</p>
+            <p data-i18n-id="s-b4ea">Safe Links için özel bir test olan Princeton'dan çalışan bir örnek. Editoria11y sınıfına <code>Drupal.Ed11y.</code> aracılığıyla eriştiğine dikkat edin.</p>
+            <pre class="language-javascript"><code><!--const psEd11yCustomTests = function() {
+
+  // 1.
+  // Get elements to test, via Drupal.Ed11y.getElements.
+  // The 'root' parameter tells it to respect config for check areas and ignores.
+  const safeLinks = Drupal.Ed11y.getElements('a[href*="safelinks.protection.outlook.com/?"]', 'root');
+
+  // Add the test name to the lang object.
+  Drupal.ed11yLang.lang.testNames.outlookSafeLink = 'URL is Safe Link encoded';
+
+  // 2.
+  // Create the tip content.
+  const decodeSafelink = function(url) {
+    const params = new URL(url).searchParams;
+    let decoded = params.get('url');
+    const p = document.createElement('p');
+    if (!!decoded) {
+      p.innerHTML = `<p><span class="badge">To fix</span>Update this link with the correct URL, which is probably:<br>
+    <em style='word-wrap: break-word;font-size: 90%;line-height: 1.2;display: block;'></em></p>`
+      p.querySelector('em').textContent = Drupal.Ed11y.sanitizeHTML(decoded);
+    }
+    return p;
+  };
+  safeLinks?.forEach((el) => {
+    const content = document.createElement('div');
+    content.innerHTML = `<div class="title">Please fix this Outlook "Safe Link"</div>
+            <div class="why">
+                <p>The URL for this link is an Outlook "Safe Link" that was copied from an email.
+                It includes the original recipient's email address,
+                and will break if Microsoft shuts down the service.</p>
+                <p>The pasted URL is:<br>
+                <em style='word-break: break-all;font-size: 90%;line-height: 1.2;
+                display: block;'></em></p>
+            </div>
+            `;
+    content.querySelector('em').textContent = Drupal.Ed11y.sanitizeHTML(el.href);
+    content.querySelector('.why').insertAdjacentElement('beforebegin', decodeSafelink(el.href));
+
+    // 3.
+    // Push the tip to the library results object.
+    Drupal.Ed11y.State.results.push({
+      element: el,
+      test: 'outlookSafeLink',
+      type: 'error',
+      content: content,
+      position: 'beforebegin',
+      inline: false,
+      dismiss: false,
+    });
+  });
+
+  // 4.
+  // Tell Editoria11y you are done adding custom results.
+  const allDone = new CustomEvent('ed11yResume');
+  document.dispatchEvent(allDone);
+};--></code></pre>
+
+          </section>
+          <section id="help">
+            <h2 data-i18n-id="s-4690">Yardım alma</h2>
+            <p data-i18n-id="s-f149">Topluluk destek seçenekleri için <a href="/en/contacts/">iletişim</a> sayfasına bakın. @itmaybejj genellikle batı yarıküresinde güneş doğduğunda Drupal Slack'te çevrimiçidir.</p>
+            <p data-i18n-id="s-4a16"><a href="/en/license/">CSA katkı seviyelerinin</a> çoğu, kurulum ve yapılandırma konusunda doğrudan yardımı kapsayan yıllık bir görüşme içerir.</p>
+          </section>
+
+        </div>
+      </div>
+    </div>
+  </main>

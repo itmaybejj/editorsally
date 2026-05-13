@@ -1,0 +1,404 @@
+<main class="container col-lg-12 mx-auto py-5">
+    <div class="row docs">
+      <div class="col-12 col-md-5 col-lg-4 mb-5">
+        <div id="on-this-page" class="list-group ms-2 ms-lg-5 position-sticky top-0 pt-3">
+        </div>
+      </div>
+      <div class="col-12 col-md-7 col-lg-8 pt-3" data-bs-spy="scroll" data-bs-target="#on-this-page"
+        data-bs-smooth-scroll="true" tabindex="0">
+
+
+
+        <h1 class="pt-4" id="demo" data-i18n-id="s-4496">데모</h1>
+        <p class="fs-5" data-i18n-id="s-e32c"><a href="https://youtu.be/uYvNYPg38nU?si=6YANYrJpVzNAJYDl&t=260">검사기의 역사와 기능에 대한 동영상 소개</a>를 시청하거나,
+          아래 데모 콘텐츠를 편집하고, 알림을 열고 닫고,
+          툴바 <span style="text-wrap: nowrap;">(<img src="/assets/images/3x-toolbar" class="inline-block" style="width: 5rem; height: auto;" alt="4개의 오류를 보여주는 Editoria11y 툴바 스크린샷." width="97" height="50" loading="lazy" data-i18n-id="s-65d5" />)</span>를 사용하여 제목 구조를 확인해 보세요. 이 데모에는 핵심 테스트와 CSA 스위트가 모두 포함되어 있습니다.</p>
+        <p class="fs-5 mb-5 pb-5" data-i18n-id="s-7580">이 데모는 TinyMCE 편집기를 사용합니다. Editoria11y는 대부분의 텍스트 편집기와 호환되며, WordPress와 Drupal의 CKEditor 및 Gutenberg에 대한 턴키 구현을 제공합니다.</p>
+        <div id="ed11y-demo" class="p-5" contenteditable="">
+          <section id="headings">
+
+            <h3 class="pt-1" data-i18n-id="s-71f7">제목</h3>
+
+            <p data-i18n-id="s-e638">이 제목은 레벨을 건너뛰었습니다:</p>
+            <div class="positive">
+              <h6 id="this-h6-should-have-been-an-h3" data-i18n-id="s-1775">이런</h6>
+            </div>
+
+            <p data-i18n-id="s-3c22">이 제목에는 텍스트가 전혀 없습니다:</p>
+            <div class="positive">
+              <h4 class="empty-example" data-i18n-id="s-e89e"> </h4>
+            </div>
+
+            <p data-i18n-id="s-a98b">이 짧은 인용구는 제목일 수 있습니다:</p>
+            <div class="positive">
+              <blockquote data-i18n-id="s-8223">가짜 제목입니다</blockquote>
+            </div>
+
+            <p data-i18n-id="s-7243">이 전체 굵은 단락은 제목일 수 있습니다:</p>
+            <p class="positive" data-i18n-id="s-8ce3"><strong>저는 가짜 제목입니다</strong></p>
+
+            <p data-i18n-id="s-7a7a">이 제목은 매우 깁니다:</p>
+            <div class="positive">
+              <h4 data-i18n-id="s-695c">제목과 소제목은 보조 기기를 위한 탐색 가능한 목차를 만듭니다. 숫자는 중첩 관계에서의 들여쓰기를 나타냅니다. 매우 긴 제목은 작성자가 제목에 너무 많은 내용을 담고 있다는 의미일 수 있습니다.</h4>
+            </div>
+
+          </section>
+
+
+          <section id="text-alternatives">
+            <h3 data-section="text-alternatives" data-i18n-id="s-2a0c">이미지를 위한 대체 텍스트</h3>
+
+            <p data-i18n-id="s-ecfd">이 제목은 대체 텍스트가 없는 텍스트 이미지로 만들어졌습니다:</p>
+            <div class="positive">
+              <h4 data-i18n-id="s-88ba"><img loading="lazy" alt src="/assets/images/px20240813sm.jpg" data-i18n-id="s-e33e" /></h4>
+            </div>
+
+            <p data-i18n-id="s-875a">alt 속성이 전혀 없는 이미지:</p>
+            <p class="positive" data-i18n-id="s-2b48"><img loading="lazy" src="/assets/images/px20240813sm.jpg" data-i18n-id="s-95a0" /></p>
+
+            <p data-i18n-id="s-5df5">잘못된 alt 속성이 있는 이미지, 예: <code class="language-plaintext highlighter-rouge">alt="'"</code></p>
+
+            <p class="positive" data-i18n-id="s-47b7"><img loading="lazy" alt="'" src="/assets/images/px20240813sm.jpg" data-i18n-id="s-87b9" /></p>
+
+            <p id="image-with-a-filename-as-an-alt" data-i18n-id="s-c893">파일명을 alt로 사용하는 이미지</p>
+
+            <p class="positive" data-i18n-id="s-9d21"><img loading="lazy" alt="filename.jpg" src="/assets/images/px20240813sm.jpg" data-i18n-id="s-685d" /></p>
+
+            <p id="image-with-redundant-text-in-its-alt" data-i18n-id="s-f6e9">“image of:”와 같은 불필요한 텍스트가 포함된 alt를 가진 이미지</p>
+
+            <p class="positive" data-i18n-id="s-7003"><img loading="lazy" alt="Image of a dog." src="/assets/images/px20240813sm.jpg" data-i18n-id="s-2149" /></p>
+
+            <p id="linked-image-with-redundant-text-in-its-alt" data-i18n-id="s-6554">“image of:”와 같은 불필요한 텍스트가 포함된 alt를 가진
+              링크 이미지</p>
+
+            <p class="positive" data-i18n-id="s-d93d"><a href="./editable.htm"><img loading="lazy" alt="Image of a dog." src="/assets/images/px20240813sm.jpg" data-i18n-id="s-2642" /></a></p>
+
+            <p id="image-with-placeholder-alt" data-i18n-id="s-40e9">자리 표시자 alt를 가진 이미지:</p>
+            <p class="positive" data-i18n-id="s-541e"><img loading="lazy" alt="TBD" src="/assets/images/px20240813sm.jpg" data-i18n-id="s-fe01" /></p>
+
+            <p id="linked-image-with-placeholder-alt" data-i18n-id="s-6266"><strong>링크된</strong> 자리 표시자 alt를 가진 이미지:</p>
+            <p class="positive" data-i18n-id="s-7d43"><a href="./editable.htm"><img loading="lazy" alt="TBD" src="/assets/images/px20240813sm.jpg" data-i18n-id="s-b0f2" /></a></p>
+
+            <p id="image-with-machine-alt" data-i18n-id="s-3ef4">기계 코드 alt를 가진 이미지:</p>
+            <p class="positive" data-i18n-id="s-33a5"><img loading="lazy" alt="$700VIDEOSABOUTTURTLESALL2SECONDSLONG" src="/assets/images/px20240813sm.jpg" data-i18n-id="s-ec2e" /></p>
+
+            <p id="linked-image-with-machine-alt" data-i18n-id="s-2818">기계 코드 alt를 가진 링크 이미지:</p>
+            <p class="positive" data-i18n-id="s-d528"><a href="./editable.htm"><img loading="lazy" alt="$700VIDEOSABOUTTURTLESALL2SECONDSLONG" src="/assets/images/px20240813sm.jpg" data-i18n-id="s-e48d" /></a></p>
+
+            <p id="image-with-very-long-alt-text" data-i18n-id="s-eb13">매우 긴 alt 텍스트를 가진 이미지:</p>
+
+            <p class="positive" data-i18n-id="s-f72c"><img loading="lazy" alt="이 강아지를 보세요. 이 강아지는 정말 행복합니다. 이 강아지는 산책을 나갔고 그 산책은 호수까지 이어졌으며 온갖 흥미로운 냄새가 가득했습니다. 이 강아지에게 정말 놀라운 하루였습니다." src="/assets/images/px20240813sm.jpg" data-i18n-id="s-724f" /></p>
+
+            <p id="images-in-links-where-the-alt-text-may-be-describing-the-image-instead-of-the-link" data-i18n-id="s-2731">링크 대신 이미지를 설명하는 alt 텍스트를
+              가질 수 있는 링크 내 이미지</p>
+
+            <p class="positive" data-i18n-id="s-08a9"><a href="https://www.youtube.com/watch?v=DLzxrzFCyOs">이 링크에는 텍스트와
+                이미지가 있습니다.<img loading="lazy" alt="사랑스러운 회색 박스" src="/assets/images/px20240813sm.jpg" data-i18n-id="s-c699" /></a></p>
+
+            <p id="images-in-links-decorative" data-i18n-id="s-25ca">모든 링크 이미지(기본적으로 테스트 꺼짐)</p>
+            <p class="positive" data-i18n-id="s-281c"><a href="https://www.youtube.com/watch?v=DLzxrzFCyOs"><img loading="lazy" alt="안녕하세요" src="/assets/images/px20240813sm.jpg" data-i18n-id="s-f3c6" /></a></p>
+
+            <p data-i18n-id="s-3cd8">장식용으로 표시된 figure 내 이미지:</p>
+            <figure class="positive">
+              <img loading="lazy" alt src="/assets/images/px20240813sm.jpg" data-i18n-id="s-3051" />
+              <figcaption data-i18n-id="s-8ef6">Figcaption이 있습니다.</figcaption>
+            </figure>
+
+            <p data-i18n-id="s-a78d">figcaption과 동일한 alt를 가진 figure 내 이미지:</p>
+            <figure class="positive">
+              <img loading="lazy" alt="Figcaption이 alt와 동일합니다" src="/assets/images/px20240813sm.jpg" data-i18n-id="s-d8b0" />
+              <figcaption data-i18n-id="s-13b7">Figcaption이 alt와 동일합니다</figcaption>
+            </figure>
+            <p data-i18n-id="s-296e">alt가 없는 캐러셀 내 이미지:</p>
+            <div class="positive">
+              <img loading="lazy" alt class="carousel" src="/assets/images/px20240813sm.jpg" data-i18n-id="s-f79d" />
+            </div>
+          </section>
+          <section id="contrast">
+            <h3 data-section="contrast" data-i18n-id="s-e272">명도 대비</h3>
+            <p data-i18n-id="s-09f2">판독하기 어려운 색상 조합:</p>
+            <div class="positive">
+              <p style="background: #ccc; color: #ddd;" data-i18n-id="s-601e">매우 읽기 쉽습니다.</p>
+            </div>
+            <p data-i18n-id="s-aa41">색상에 수동 확인이 필요합니다:</p>
+            <div class="positive">
+              <p style="background: linear-gradient(45deg,#ccc 25%,#0000 25% 75%,#ccc 75%,#ccc),linear-gradient(45deg,#ccc 25%,#0000 25% 75%,#ccc 75%,#ccc)" data-i18n-id="s-490b">
+                계산 불가능합니다.</p>
+            </div>
+            <div class="positive"><label>Input with low contrast
+                <input class="form-text" type="text" style="color: #777;" /></label></div>
+
+            <style>
+              #unsupported-placeholder::placeholder {
+                color: color(rec2020 0.9 0.4 0.2);
+              }
+            </style>
+
+            <label for="unsupported-placeholder">Color of placeholder cannot be calculated</label>
+            <div class="positive" style="background: transparent;"><input type="text" id="unsupported-placeholder"
+                placeholder="Rec2020 color space" /></div>
+
+
+            <p data-i18n-id="s-0774">명도 대비가 부족한 SVG 그래픽</p>
+            <div class="positive"><svg style="width: 16px; height: 16px;" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                <path fill="#999"
+                  d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376C296.3 401.1 253.9 416 208 416 93.1 416 0 322.9 0 208S93.1 0 208 0 416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" ></path>
+              </svg></div>
+
+            <p data-i18n-id="s-be2b">명도 대비 수동 확인이 필요한 SVG 그래픽</p>
+            <div class="positive"
+              style="background: linear-gradient(45deg,#ccc 45%,#0000 45% 75%,#ccc 75%,#ccc),linear-gradient(145deg,#ccc 45%,#0000 45% 75%,#ccc 75%,#ccc)">
+              <svg style="width: 16px; height: 16px;" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                <path fill="color(rec2020 0.9 0.4 0.2)"
+                  d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376C296.3 401.1 253.9 416 208 416 93.1 416 0 322.9 0 208S93.1 0 208 0 416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" ></path>
+              </svg>
+            </div>
+
+
+          </section>
+          <section id="embed-media">
+            <h3 data-section="embed-media" data-i18n-id="s-af2b">임베드 & 미디어</h3>
+
+            <p data-i18n-id="s-98f7">캡션 확인이 필요하다고 플래그된 동영상:</p>
+            <div class="positive" style="width: 560px; aspect-ratio: 560 / 315; max-width: 100%; cursor: not-allowed;">
+              <iframe width="560" height="315" inert=""
+                src="https://www.youtube-nocookie.com/embed/QGsevnbItdU?si=W_b2i2o_n5v1ArvA"
+                style="width: 560px; aspect-ratio: 560 / 315; max-width: 100%; cursor: not-allowed;"
+                title="YouTube: How it's done video. Playback is disabled." sandbox="allow-scripts allow-same-origin"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="origin" allowfullscreen></iframe>
+              <div><small><em>Playback disabled to prevent cookies.</em></small></div>
+            </div>
+
+            <p data-i18n-id="s-e14a">오디오에는 자막이 필요합니다:</p>
+            <div class="positive">
+              <div style="border: 1px solid #444; background: #ccc; width: 320px; height: 60px;"><audio                   style="height: 60px;"></audio>
+              </div>
+            </div>
+
+            <p data-i18n-id="s-573a">제목이 없고 수동 확인도 필요한 Iframe:</p>
+            <div class="positive">
+              <iframe data-needs-src=""></iframe>
+            </div>
+
+            <p data-i18n-id="s-fe95">포커스할 수 없는 iframe:</p>
+            <div class="positive">
+              <iframe title="example" sandbox="" tabindex="-1" data-needs-src=""></iframe>
+            </div>
+
+            <p data-i18n-id="s-e27f">중첩된 인터랙티브 컴포넌트</p>
+            <div class="positive">
+              <details>
+                <summary data-i18n-id="s-5064">아코디언</summary>
+                <details>
+                  <summary data-i18n-id="s-2b8d">아코디언</summary>Surprise!
+                </details>
+              </details>
+            </div>
+          </section>
+          <section id="meaningful-links">
+            <h3 data-section="meaningful-links" data-i18n-id="s-5965">의미 있는 링크</h3>
+
+            <p id="links-with-no-text-at-all" data-i18n-id="s-59ab">텍스트가 전혀 없는 링크</p>
+            <p class="positive" data-i18n-id="s-5287"><a href="https://www.youtube.com/watch?v=DLzxrzFCyOs"
+                style="display: inline-block; width: 3rem; border-bottom: 1px solid;"></a> 빈 링크</p>
+
+            <p id="links-titled-with-a-url" data-i18n-id="s-c3d3">URL로만 표시된 링크:</p>
+            <p class="positive" data-i18n-id="s-e764"><a                 href="https://www.youtube.com/watch?v=DLzxrzFCyOs">https://www.youtube.com/watch?v=DLzxrzFCyOs</a></p>
+
+            <p id="links-titled-with-a-symbol" data-i18n-id="s-7be5">기호로만 표시된 링크:</p>
+            <p class="positive" data-i18n-id="s-aa44"><a href="https://www.youtube.com/watch?v=DLzxrzFCyOs">↣</a></p>
+
+            <p data-i18n-id="s-e5a4">동일한 이름을 가지지만 다른 곳으로 이동하는 링크</p>
+            <p class="positive" data-i18n-id="s-cb73"><a href="https://www.youtube.com/watch?v=fjOeJssZX_Q">거북이</a> <a                 href="https://www.youtube.com/watch?v=cWppAbqm9I8">거북이</a></p>
+
+            <p id="links-titled-with-doi" data-i18n-id="s-cc2d">DOI 번호로만 표시된 링크:</p>
+            <p class="positive" data-i18n-id="s-fb8e"><a href="https://doi.org/10.1145/3493612.3520468">doi.org/10.1145/3493612.3520468</a>
+            </p>
+
+            <p id="links-titled-with-click" data-i18n-id="s-5f07">의미 없는 레이블을 가진 링크:</p>
+            <p class="positive" data-i18n-id="s-b240"><a href="https://www.youtube.com/watch?v=DLzxrzFCyOs"
+                title="https://www.youtube.com/watch?v=DLzxrzFCyOs">여기를 클릭</a></p>
+
+            <p id="links-titled-with-empty" data-i18n-id="s-17f2">텍스트 대안이 없는 링크 아이콘:</p>
+            <p class="positive" data-i18n-id="s-1498"><a href="https://www.youtube.com/watch?v=DLzxrzFCyOs"><svg                   style="width: 16px; height: 16px;" xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 512 512"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                  <path                     d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376C296.3 401.1 253.9 416 208 416 93.1 416 0 322.9 0 208S93.1 0 208 0 416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" ></path>
+                </svg></a></p>
+
+            <p id="links-that-open-in-a-new-window-without-an-external-link-icon-or-text-warning" data-i18n-id="s-d12a">외부 링크 아이콘이나 텍스트 경고 없이
+              새 창에서 열리는 링크</p>
+
+            <p class="positive" data-i18n-id="s-038b"><a href="https://www.youtube.com/watch?v=DLzxrzFCyOs" target="_blank">새 창 열기
+                테스트에 대한 알림.</a></p>
+
+            <p id="links-to-PDF" data-i18n-id="s-d87d">PDF로의 링크</p>
+            <p class="positive" data-i18n-id="s-7b08"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ#.pdf" class="">즐겨보세요.</a></p>
+
+            <p id="links-to-doc" data-i18n-id="s-bbe9">다른 문서로의 링크</p>
+            <p class="positive" data-i18n-id="s-f1a0"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ#.doc" class="">가짜 문서 링크.</a>
+            </p>
+
+            <p id="links-redundant" data-i18n-id="s-9145">중복된 title 속성을 가진 링크</p>
+            <p class="positive" data-i18n-id="s-d8f6"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" title="마우스 올리기">마우스 올리기</a></p>
+
+            <p data-i18n-id="s-c1a1">탭 인덱스에서 제거하는 속성을 가진 링크:</p>
+            <p class="positive" data-i18n-id="s-5811"><a href="./editable.htm" aria-hidden="true">음수 tabindex 없이 aria-hidden 처리된 링크.</a></p>
+
+            <p data-i18n-id="s-f661">텍스트가 없는 요소로의 aria-labelledby 속성을 가진 링크:</p>
+            <p class="positive" data-i18n-id="s-dfac"><a href="./editable.htm" id="oops" aria-labelledby="oops"></a></p>
+
+            <p data-i18n-id="s-d2dc">aria 레이블에 일반 단어가 포함된 링크:</p>
+            <p class="positive" data-i18n-id="s-e206"><a href="www.google.com/" aria-label="has aria label">자세히 알아보기</a></p>
+
+            <p data-i18n-id="s-8271">alt 텍스트가 없는 링크 이미지:</p>
+            <p class="positive" data-i18n-id="s-5df8"><a href="./editable.htm"><img loading="lazy" alt src="/assets/images/px20240813sm.jpg" class data-i18n-id="s-5b80" /></a></p>
+
+            <p data-i18n-id="s-4f11">발음할 수 없는 alt 텍스트를 가진 링크 이미지:</p>
+            <p class="positive" data-i18n-id="s-5fe3"><a href="./editable.htm"><img loading="lazy" alt="'" src="/assets/images/px20240813sm.jpg" class data-i18n-id="s-4ba2" /></a></p>
+
+            <p data-i18n-id="s-0fd8">alt 텍스트 속성이 없는 링크 이미지:</p>
+            <p class="positive" data-i18n-id="s-c130"><a href="./editable.htm"><img loading="lazy" src="/assets/images/px20240813sm.jpg" class data-i18n-id="s-d8bc" /></a></p>
+
+            <p data-i18n-id="s-91cb">텍스트가 있는 링크 내 alt 텍스트 속성이 없는 링크 이미지:</p>
+            <p class="positive" data-i18n-id="s-4db6"><a href="./editable.htm">검색 <img loading="lazy" src="/assets/images/px20240813sm.jpg" class data-i18n-id="s-0709" /></a></p>
+
+            <p data-i18n-id="s-78cc">파일명만 alt 텍스트로 가진 링크 이미지:</p>
+            <p class="positive" data-i18n-id="s-b669"><a href="./editable.htm"><img loading="lazy" alt="http://jpg.gif" src="/assets/images/px20240813sm.jpg" data-i18n-id="s-9712" />
+              </a></p>
+
+            <p data-i18n-id="s-f1f2">의심스럽게 긴 alt 텍스트를 가진 링크 이미지:</p>
+            <p class="positive" data-i18n-id="s-3c58"><a href="./editable.htm"><img loading="lazy" alt="이 강아지를 보세요. 이 강아지는 정말 행복합니다. 이 강아지는 산책을 나갔고 그 산책은 호수까지 이어졌으며 온갖 흥미로운 냄새가 가득했습니다. 이 강아지에게 정말 놀라운 하루였습니다." src="/assets/images/px20240813sm.jpg" data-i18n-id="s-2557" />
+              </a></p>
+
+            <p data-i18n-id="s-7af4">깨진 페이지 내 링크</p>
+            <p class="positive" data-i18n-id="s-fe67">
+              <a href="#oh-no">해당 ID는 존재하지 않습니다.</a>
+            </p>
+
+            <p data-i18n-id="s-f5ef">개발 서버로의 링크</p>
+            <p class="positive" data-i18n-id="s-7568">
+              <a href="https://tugboatqa.com">이런</a>
+            </p>
+
+            <p data-i18n-id="s-1f03">중복 앵커</p>
+            <p class="positive" data-i18n-id="s-e967"><a id="dupe" href="#dupe">앵커 1</a> <a id="dupe" href="#dupe">앵커 2</a></p>
+          </section>
+          <section>
+            <h3 id="table-tests" data-i18n-id="s-d5ad">표</h3>
+
+            <p id="tables-without-valid-headers" data-i18n-id="s-bf63">유효한 헤더가 없는 표</p>
+
+            <table class="positive">
+              <tbody>
+                <tr>
+                  <td data-i18n-id="s-9ea0">TH 헤더가 없는 표는 유효하지 않습니다</td>
+                  <td class="positive">
+                    <h4 data-i18n-id="s-51f8">외곽선 헤더는 포함되지 않습니다</h4>
+                  </td>
+                  <td class="negative">
+                    <p data-i18n-id="s-9700"><strong>표 내부의 콘텐츠 헤더 테스트를 비활성화해야 합니다</strong></p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <table>
+              <thead>
+                <tr>
+                  <th class="positive" data-i18n-id="s-3760"></th>
+                  <th class="negative" data-i18n-id="s-e701">빈 헤더</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="negative">
+                  <th data-i18n-id="s-1e72">발견했습니다</th>
+                  <td data-i18n-id="s-ab85">거북이 동영상 700개</td>
+                </tr>
+                <tr class="negative">
+                  <th data-i18n-id="s-fbc2">각</th>
+                  <td data-i18n-id="s-7836">2초짜리</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+          <section id="legibility">
+            <h3 data-section="legibility" data-i18n-id="s-8596">가독성</h3>
+
+            <div class="positive">
+              <p data-i18n-id="s-5df2">여러 단어가 연속으로 대문자로 작성되면 수동 확인 경고가 트리거됩니다.</p>
+            </div>
+
+            <p class="positive" data-i18n-id="s-bf95"><u>밑줄 처리된 텍스트</u></p>
+
+            <p class="positive" data-i18n-id="s-6979"><em>약간의 기울임체는 괜찮지만, 강조 텍스트의 큰 블록은 가독성이 좋지 않습니다. 물론 어느 정도는 허용되지만 한계가 있으며, 문단 전체가 기울임체인 것은 너무 많습니다. 예를 들어, 이것은 전체 문단입니다. 읽기가 좀 어렵죠? 하지만 이 테스트는 이 정도 길이가 될 때까지 트리거되지 않으므로, 이처럼 긴 문단을 정기적으로 작성하지 않는다면 콘텐츠에서 오탐(false positive)을 보지 않을 것입니다.</em></p>
+
+            <p class="positive" style="text-align: justify;" data-i18n-id="s-19a2">양쪽 정렬 텍스트</p>
+
+            <p class="positive" data-i18n-id="s-d9c4">과도한 위 첨자 또는 아래 첨자; <sub>아래 첨자는 작은 참조와 각주에 사용해야 하며, 전체 문장이나 문단에는 사용하지 마세요.</sub></p>
+
+            <p class="positive" data-i18n-id="s-d136"><span style="font-size: 10px;">매우 작은 글꼴</span></p>
+
+            <div class="positive">
+              <p data-i18n-id="s-38f1">* 일반 문자를 사용한 가짜 목록,</p>
+              <p data-i18n-id="s-ed7f">* 문자, 숫자 및 이모지.</p>
+            </div>
+
+            <div class="positive">
+              <li data-i18n-id="s-83f0">UL 태그 누락</li>
+            </div>
+          </section>
+
+          <section id="form-elements">
+            <h3 data-section="form-elements" data-i18n-id="s-68c5">양식</h3>
+
+            <p data-i18n-id="s-0d4e">레이블이 없는 버튼</p>
+            <div class="positive">
+              <button class="btn btn-primary p-3 pt-4" data-i18n-id="s-6e2d"></button>
+            </div>
+
+            <p data-i18n-id="s-296d">표시되는 레이블도 있는지 묻는, 보이지 않는 레이블이 있는 입력 필드.</p>
+            <div class="positive">
+              <input type="text" title="Email" />
+            </div>
+
+            <p data-i18n-id="s-7c79">표시되는 레이블도 있는지 묻는, 자리 표시자 레이블만 있는 입력 필드.</p>
+            <div class="positive">
+              <input type="text" placeholder="Email" />
+            </div>
+
+            <div class="positive">
+              <p data-i18n-id="s-d629">보이는 레이블과 다른 접근 가능 레이블을 가진 버튼.</p>
+              <button class="btn btn-primary" aria-label="bye" data-i18n-id="s-d5c2">안녕하세요</button>
+            </div>
+
+            <div class="positive">
+              <p data-i18n-id="s-96f6">잘못된 aria-labelledby 속성을 가진 버튼.</p>
+              <button class="btn btn-primary" aria-labelledby="bye" data-i18n-id="s-e158">안녕하세요</button>
+            </div>
+
+            <div class="positive">
+              <p data-i18n-id="s-5477">중복된 레이블을 가진 버튼.</p>
+              <button class="btn btn-primary" data-i18n-id="s-a933">이 버튼을 누르세요</button>
+            </div>
+
+            <div class="positive">
+              <p data-i18n-id="s-1764">초기화 버튼.</p>
+              <input class="btn btn-danger" type="reset" />
+            </div>
+
+            <p class="positive" data-i18n-id="s-7c9a"><a href="./editable.htm" tabindex="2">탭 인덱스 순서 뒤섞기</a></p>
+          </section>
+
+
+
+
+
+
+        </div>
+      </div>
+    </div>
+
+  </main>

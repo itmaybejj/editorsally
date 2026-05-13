@@ -1,0 +1,422 @@
+<main class="container col-lg-12 mx-auto py-5">
+    <div class="row docs">
+      <div class="col-12 col-md-5 col-lg-4 mb-5">
+        <div id="on-this-page" class="list-group ms-2 ms-lg-5 position-sticky top-0 pt-3">
+        </div>
+      </div>
+      <div class="col-12 col-md-7 col-lg-8 pt-3" data-bs-spy="scroll" data-bs-target="#on-this-page"
+        data-bs-smooth-scroll="true" tabindex="0">
+
+
+
+        <h2 class="pt-4" id="demo" data-i18n-id="s-4496">Demo</h2>
+        <p class="fs-5" data-i18n-id="s-e32c">Veja uma <a href="https://youtu.be/uYvNYPg38nU?si=6YANYrJpVzNAJYDl&t=260">introdução em vídeo ao
+            historial e às funcionalidades do verificador</a>,
+          ou experimente editar o conteúdo de demonstração abaixo, abrir e dispensar alertas,
+          e utilizar a barra de ferramentas <span style="text-wrap: nowrap;">(<img src="/assets/images/3x-toolbar" class="inline-block" style="width: 5rem; height: auto;" alt="Captura de ecrã da barra de ferramentas do Editoria11y, com 4 erros." width="97" height="50" loading="lazy" data-i18n-id="s-65d5" />)</span> para ver o esboço dos cabeçalhos. Esta demonstração inclui tanto os testes
+          principais como o conjunto CSA.</p>
+        <p class="fs-5 mb-5 pb-5" data-i18n-id="s-7580">Esta demonstração utiliza um editor TinyMCE. O Editoria11y é compatível com a maioria
+          dos editores de texto e dispõe de implementações prontas a usar para CKEditor e Gutenberg no WordPress e no
+          Drupal.</p>
+        <div id="ed11y-demo" class="p-5" contenteditable="">
+          <section id="headings">
+
+            <h3 class="pt-1" data-i18n-id="s-71f7">Cabeçalhos</h3>
+
+            <p data-i18n-id="s-e638">Este cabeçalho saltou um nível:</p>
+            <div class="positive">
+              <h6 id="this-h6-should-have-been-an-h3" data-i18n-id="s-1775">Oops</h6>
+            </div>
+
+            <p data-i18n-id="s-3c22">Este cabeçalho não tem qualquer texto:</p>
+            <div class="positive">
+              <h4 class="empty-example" data-i18n-id="s-e89e"> </h4>
+            </div>
+
+            <p data-i18n-id="s-a98b">Esta citação curta pode ser um cabeçalho:</p>
+            <div class="positive">
+              <blockquote data-i18n-id="s-8223">Sou um cabeçalho falso</blockquote>
+            </div>
+
+            <p data-i18n-id="s-7243">Este parágrafo todo a negrito pode ser um cabeçalho:</p>
+            <p class="positive" data-i18n-id="s-8ce3"><strong>Sou um cabeçalho falso</strong></p>
+
+            <p data-i18n-id="s-7a7a">Este cabeçalho é demasiado longo:</p>
+            <div class="positive">
+              <h4 data-i18n-id="s-695c">Os cabeçalhos e subcabeçalhos criam um índice navegável para tecnologias de apoio. Os números indicam
+                níveis de indentação numa relação hierárquica. Cabeçalhos muito longos provavelmente significam que o
+                autor está a dizer demasiado no próprio cabeçalho.</h4>
+            </div>
+
+          </section>
+
+
+          <section id="text-alternatives">
+            <h3 data-section="text-alternatives" data-i18n-id="s-2a0c">Alternativas em texto para imagens</h3>
+
+            <p data-i18n-id="s-ecfd">Este cabeçalho é constituído por uma imagem de texto sem texto alternativo:</p>
+            <div class="positive">
+              <h4 data-i18n-id="s-88ba"><img loading="lazy" alt src="/assets/images/px20240813sm.jpg" data-i18n-id="s-e33e" /></h4>
+            </div>
+
+            <p data-i18n-id="s-875a">Imagem sem nenhum atributo alt:</p>
+            <p class="positive" data-i18n-id="s-2b48"><img loading="lazy" src="/assets/images/px20240813sm.jpg" data-i18n-id="s-95a0" /></p>
+
+            <p data-i18n-id="s-5df5">Imagem com um atributo alt inválido, por exemplo, <code                 class="language-plaintext highlighter-rouge">alt=”'”</code></p>
+
+            <p class="positive" data-i18n-id="s-47b7"><img loading="lazy" alt="'" src="/assets/images/px20240813sm.jpg" data-i18n-id="s-87b9" /></p>
+
+            <p id="image-with-a-filename-as-an-alt" data-i18n-id="s-c893">Imagem com um nome de ficheiro como texto alternativo</p>
+
+            <p class="positive" data-i18n-id="s-9d21"><img loading="lazy" alt="filename.jpg" src="/assets/images/px20240813sm.jpg" data-i18n-id="s-685d" /></p>
+
+            <p id="image-with-redundant-text-in-its-alt" data-i18n-id="s-f6e9">Imagem com texto redundante no alt, como por exemplo «imagem
+              de:»</p>
+
+            <p class="positive" data-i18n-id="s-7003"><img loading="lazy" alt="Image of a dog." src="/assets/images/px20240813sm.jpg" data-i18n-id="s-2149" /></p>
+
+            <p id="linked-image-with-redundant-text-in-its-alt" data-i18n-id="s-6554">Imagem com hiperligação e texto redundante no alt, como
+              por exemplo «imagem de:»</p>
+
+            <p class="positive" data-i18n-id="s-d93d"><a href="./editable.htm"><img loading="lazy" alt="Image of a dog." src="/assets/images/px20240813sm.jpg" data-i18n-id="s-2642" /></a></p>
+
+            <p id="image-with-placeholder-alt" data-i18n-id="s-40e9">Imagem com texto alternativo de substituição provisória:</p>
+            <p class="positive" data-i18n-id="s-541e"><img loading="lazy" alt="TBD" src="/assets/images/px20240813sm.jpg" data-i18n-id="s-fe01" /></p>
+
+            <p id="linked-image-with-placeholder-alt" data-i18n-id="s-6266">Imagem <strong>com hiperligação</strong> e texto alternativo de
+              substituição provisória:</p>
+            <p class="positive" data-i18n-id="s-7d43"><a href="./editable.htm"><img loading="lazy" alt="TBD" src="/assets/images/px20240813sm.jpg" data-i18n-id="s-b0f2" /></a></p>
+
+            <p id="image-with-machine-alt" data-i18n-id="s-3ef4">Imagem com texto alternativo gerado por máquina:</p>
+            <p class="positive" data-i18n-id="s-33a5"><img loading="lazy" alt="$700VIDEOSABOUTTURTLESALL2SECONDSLONG" src="/assets/images/px20240813sm.jpg" data-i18n-id="s-ec2e" /></p>
+
+            <p id="linked-image-with-machine-alt" data-i18n-id="s-2818">Imagem com hiperligação e texto alternativo gerado por máquina:</p>
+            <p class="positive" data-i18n-id="s-d528"><a href="./editable.htm"><img loading="lazy" alt="$700VIDEOSABOUTTURTLESALL2SECONDSLONG" src="/assets/images/px20240813sm.jpg" data-i18n-id="s-e48d" /></a></p>
+
+            <p id="image-with-very-long-alt-text" data-i18n-id="s-eb13">Imagem com texto alternativo excessivamente longo:</p>
+
+            <p class="positive" data-i18n-id="s-f72c"><img loading="lazy" alt="Look at this doggy. This doggy is so happy. This doggy got to go on a walk and the walk went to a lake and there were all kinds of fascinating smells. What an amazing day this doggy had." src="/assets/images/px20240813sm.jpg" data-i18n-id="s-724f" /></p>
+
+            <p id="images-in-links-where-the-alt-text-may-be-describing-the-image-instead-of-the-link" data-i18n-id="s-2731">Imagens em
+              hiperligações em que o texto alternativo pode estar a descrever a imagem em vez da hiperligação</p>
+
+            <p class="positive" data-i18n-id="s-08a9"><a href="https://www.youtube.com/watch?v=DLzxrzFCyOs">Esta hiperligação tem texto e uma
+                imagem.<img loading="lazy" alt="A lovely gray box" src="/assets/images/px20240813sm.jpg" data-i18n-id="s-c699" /></a></p>
+
+            <p id="images-in-links-decorative" data-i18n-id="s-25ca">Qualquer imagem com hiperligação (teste desativado por defeito)</p>
+            <p class="positive" data-i18n-id="s-281c"><a href="https://www.youtube.com/watch?v=DLzxrzFCyOs"><img loading="lazy" alt="Hello there" src="/assets/images/px20240813sm.jpg" data-i18n-id="s-f3c6" /></a></p>
+
+            <p data-i18n-id="s-3cd8">Imagem em figura marcada como decorativa:</p>
+            <figure class="positive">
+              <img loading="lazy" alt src="/assets/images/px20240813sm.jpg" data-i18n-id="s-3051" />
+              <figcaption data-i18n-id="s-8ef6">A legenda está presente.</figcaption>
+            </figure>
+
+            <p data-i18n-id="s-a78d">Imagem em figura com um alt igual à legenda:</p>
+            <figure class="positive">
+              <img loading="lazy" alt="A legenda é igual ao alt" src="/assets/images/px20240813sm.jpg" data-i18n-id="s-d8b0" />
+              <figcaption data-i18n-id="s-13b7">A legenda é igual ao alt</figcaption>
+            </figure>
+            <p data-i18n-id="s-296e">Imagem numa apresentação de diapositivos sem texto alternativo:</p>
+            <div class="positive">
+              <img loading="lazy" alt class="carousel" src="/assets/images/px20240813sm.jpg" data-i18n-id="s-f79d" />
+            </div>
+          </section>
+          <section id="contrast">
+            <h3 data-section="contrast" data-i18n-id="s-e272">Contraste</h3>
+            <p data-i18n-id="s-09f2">Combinação de cores ilegível:</p>
+            <div class="positive">
+              <p style="background: #ccc; color: #ddd;" data-i18n-id="s-601e">Super legível.</p>
+            </div>
+            <p data-i18n-id="s-aa41">A cor requer uma verificação manual:</p>
+            <div class="positive">
+              <p style="background: linear-gradient(45deg,#ccc 25%,#0000 25% 75%,#ccc 75%,#ccc),linear-gradient(45deg,#ccc 25%,#0000 25% 75%,#ccc 75%,#ccc)" data-i18n-id="s-490b">
+                E incalculável.</p>
+            </div>
+            <div class="positive"><label>Campo com contraste reduzido
+                <input class="form-text" type="text" style="color: #777;" /></label></div>
+
+            <style>
+              #unsupported-placeholder::placeholder {
+                color: color(rec2020 0.9 0.4 0.2);
+              }
+            </style>
+
+            <label for="unsupported-placeholder">A cor do marcador de posição não pode ser calculada</label>
+            <div class="positive" style="background: transparent;"><input type="text" id="unsupported-placeholder"
+                placeholder="Espaço de cor Rec2020" /></div>
+
+
+            <p data-i18n-id="s-0774">Gráfico SVG sem contraste suficiente</p>
+            <div class="positive"><svg style="width: 16px; height: 16px;" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                <path fill="#999"
+                  d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376C296.3 401.1 253.9 416 208 416 93.1 416 0 322.9 0 208S93.1 0 208 0 416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" ></path>
+              </svg></div>
+
+            <p data-i18n-id="s-be2b">Gráfico SVG cujo contraste requer uma verificação manual</p>
+            <div class="positive"
+              style="background: linear-gradient(45deg,#ccc 45%,#0000 45% 75%,#ccc 75%,#ccc),linear-gradient(145deg,#ccc 45%,#0000 45% 75%,#ccc 75%,#ccc)">
+              <svg style="width: 16px; height: 16px;" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                <path fill="color(rec2020 0.9 0.4 0.2)"
+                  d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376C296.3 401.1 253.9 416 208 416 93.1 416 0 322.9 0 208S93.1 0 208 0 416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" ></path>
+              </svg>
+            </div>
+
+
+          </section>
+          <section id="embed-media">
+            <h3 data-section="embed-media" data-i18n-id="s-af2b">Incorporações e multimédia</h3>
+
+            <p data-i18n-id="s-98f7">Vídeo assinalado como necessitando de verificação manual das legendas:</p>
+            <div class="positive" style="width: 560px; aspect-ratio: 560 / 315; max-width: 100%; cursor: not-allowed;">
+              <iframe width="560" height="315" inert=""
+                src="https://www.youtube-nocookie.com/embed/QGsevnbItdU?si=W_b2i2o_n5v1ArvA"
+                style="width: 560px; aspect-ratio: 560 / 315; max-width: 100%; cursor: not-allowed;"
+                title="YouTube: How it's done video. Playback is disabled." sandbox="allow-scripts allow-same-origin"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="origin" allowfullscreen></iframe>
+              <div><small><em>Reprodução desativada para evitar cookies.</em></small></div>
+            </div>
+
+            <p data-i18n-id="s-e14a">O áudio necessita de uma transcrição:</p>
+            <div class="positive">
+              <div style="border: 1px solid #444; background: #ccc; width: 320px; height: 60px;"><audio                   style="height: 60px;"></audio>
+              </div>
+            </div>
+
+            <p data-i18n-id="s-573a">Iframe sem título e que também necessita de verificação manual:</p>
+            <div class="positive">
+              <iframe data-needs-src=""></iframe>
+            </div>
+
+            <p data-i18n-id="s-fe95">Iframe sem possibilidade de foco:</p>
+            <div class="positive">
+              <iframe title="example" sandbox="" tabindex="-1" data-needs-src=""></iframe>
+            </div>
+
+            <p data-i18n-id="s-e27f">Componentes interativos aninhados</p>
+            <div class="positive">
+              <details>
+                <summary data-i18n-id="s-5064">Acordeão</summary>
+                <details>
+                  <summary data-i18n-id="s-2b8d">Acordeão</summary>Surpresa!
+                </details>
+              </details>
+            </div>
+          </section>
+          <section id="meaningful-links">
+            <h3 data-section="meaningful-links" data-i18n-id="s-5965">Hiperligações com significado</h3>
+
+            <p id="links-with-no-text-at-all" data-i18n-id="s-59ab">Hiperligações sem qualquer texto</p>
+            <p class="positive" data-i18n-id="s-5287"><a href="https://www.youtube.com/watch?v=DLzxrzFCyOs"
+                style="display: inline-block; width: 3rem; border-bottom: 1px solid;"></a> Hiperligações vazias</p>
+
+            <p id="links-titled-with-a-url" data-i18n-id="s-c3d3">Hiperligações apenas identificadas por um URL:</p>
+            <p class="positive" data-i18n-id="s-e764"><a                 href="https://www.youtube.com/watch?v=DLzxrzFCyOs">https://www.youtube.com/watch?v=DLzxrzFCyOs</a></p>
+
+            <p id="links-titled-with-a-symbol" data-i18n-id="s-7be5">Hiperligações apenas identificadas por símbolos:</p>
+            <p class="positive" data-i18n-id="s-aa44"><a href="https://www.youtube.com/watch?v=DLzxrzFCyOs">↣</a></p>
+
+            <p data-i18n-id="s-e5a4">Hiperligações com o mesmo nome que apontam para destinos diferentes</p>
+            <p class="positive" data-i18n-id="s-cb73"><a href="https://www.youtube.com/watch?v=fjOeJssZX_Q">Tartarugas</a> <a                 href="https://www.youtube.com/watch?v=cWppAbqm9I8">Tartarugas</a></p>
+
+            <p id="links-titled-with-doi" data-i18n-id="s-cc2d">Hiperligações apenas identificadas por um número DOI:</p>
+            <p class="positive" data-i18n-id="s-fb8e"><a href="https://doi.org/10.1145/3493612.3520468">doi.org/10.1145/3493612.3520468</a>
+            </p>
+
+            <p id="links-titled-with-click" data-i18n-id="s-5f07">Hiperligações com rótulos sem significado:</p>
+            <p class="positive" data-i18n-id="s-b240"><a href="https://www.youtube.com/watch?v=DLzxrzFCyOs"
+                title="https://www.youtube.com/watch?v=DLzxrzFCyOs">Clique aqui</a></p>
+
+            <p id="links-titled-with-empty" data-i18n-id="s-17f2">Ícones com hiperligação sem alternativas em texto:</p>
+            <p class="positive" data-i18n-id="s-1498"><a href="https://www.youtube.com/watch?v=DLzxrzFCyOs"><svg                   style="width: 16px; height: 16px;" xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 512 512"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                  <path                     d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376C296.3 401.1 253.9 416 208 416 93.1 416 0 322.9 0 208S93.1 0 208 0 416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" ></path>
+                </svg></a></p>
+
+            <p id="links-that-open-in-a-new-window-without-an-external-link-icon-or-text-warning" data-i18n-id="s-d12a">Hiperligações que
+              abrem numa nova janela sem ícone de ligação externa ou aviso textual</p>
+
+            <p class="positive" data-i18n-id="s-038b"><a href="https://www.youtube.com/watch?v=DLzxrzFCyOs" target="_blank">Alerta para teste
+                de abertura em nova janela.</a></p>
+
+            <p id="links-to-PDF" data-i18n-id="s-d87d">Hiperligações para ficheiros PDF</p>
+            <p class="positive" data-i18n-id="s-7b08"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ#.pdf" class="">Boa sorte.</a></p>
+
+            <p id="links-to-doc" data-i18n-id="s-bbe9">Hiperligações para outros documentos</p>
+            <p class="positive" data-i18n-id="s-f1a0"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ#.doc" class="">Uma hiperligação
+                para documento falso.</a></p>
+
+            <p id="links-redundant" data-i18n-id="s-9145">Hiperligações com atributos title redundantes</p>
+            <p class="positive" data-i18n-id="s-d8f6"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" title="Passe o rato aqui">Passe o
+                rato aqui</a></p>
+
+            <p data-i18n-id="s-c1a1">Hiperligações com atributos que as removem da ordem de tabulação:</p>
+            <p class="positive" data-i18n-id="s-5811"><a href="./editable.htm" aria-hidden="true">Hiperligações aria-hidden sem tabindex
+                negativo.</a></p>
+
+            <p data-i18n-id="s-f661">Hiperligações com atributos aria-labelledby a apontar para elementos sem texto:</p>
+            <p class="positive" data-i18n-id="s-dfac"><a href="./editable.htm" id="oops" aria-labelledby="oops"></a></p>
+
+            <p data-i18n-id="s-d2dc">Hiperligações com termos genéricos na etiqueta aria:</p>
+            <p class="positive" data-i18n-id="s-e206"><a href="www.google.com/" aria-label="has aria label">saber mais</a></p>
+
+            <p data-i18n-id="s-8271">Imagem com hiperligação sem texto alternativo:</p>
+            <p class="positive" data-i18n-id="s-5df8"><a href="./editable.htm"><img loading="lazy" alt src="/assets/images/px20240813sm.jpg" class data-i18n-id="s-5b80" /></a></p>
+
+            <p data-i18n-id="s-4f11">Imagem com hiperligação e texto alternativo impronunciável:</p>
+            <p class="positive" data-i18n-id="s-5fe3"><a href="./editable.htm"><img loading="lazy" alt="'" src="/assets/images/px20240813sm.jpg" class data-i18n-id="s-4ba2" /></a></p>
+
+            <p data-i18n-id="s-0fd8">Imagem com hiperligação sem atributo alt:</p>
+            <p class="positive" data-i18n-id="s-c130"><a href="./editable.htm"><img loading="lazy" src="/assets/images/px20240813sm.jpg" class data-i18n-id="s-d8bc" /></a></p>
+
+            <p data-i18n-id="s-91cb">Imagem com hiperligação sem atributo alt numa hiperligação com texto:</p>
+            <p class="positive" data-i18n-id="s-4db6"><a href="./editable.htm">Pesquisar <img loading="lazy" src="/assets/images/px20240813sm.jpg" class data-i18n-id="s-0709" /></a></p>
+
+            <p data-i18n-id="s-78cc">Imagem com hiperligação cujo texto alternativo é apenas um nome de ficheiro:</p>
+            <p class="positive" data-i18n-id="s-b669"><a href="./editable.htm"><img loading="lazy" alt="http://jpg.gif" src="/assets/images/px20240813sm.jpg" data-i18n-id="s-9712" />
+              </a></p>
+
+            <p data-i18n-id="s-f1f2">Imagem com hiperligação e texto alternativo suspeito de ser demasiado longo:</p>
+            <p class="positive" data-i18n-id="s-3c58"><a href="./editable.htm"><img loading="lazy" alt="Look at this doggy. This doggy is so happy. This doggy got to go on a walk and the walk went to a lake and there were all kinds of fascinating smells. What an amazing day this doggy had." src="/assets/images/px20240813sm.jpg" data-i18n-id="s-2557" />
+              </a></p>
+
+            <p data-i18n-id="s-7af4">Hiperligações internas quebradas</p>
+            <p class="positive" data-i18n-id="s-fe67">
+              <a href="#oh-no">Não existe nenhum ID com esse nome.</a>
+            </p>
+
+            <p data-i18n-id="s-f5ef">Hiperligações para servidor de desenvolvimento</p>
+            <p class="positive" data-i18n-id="s-7568">
+              <a href="https://tugboatqa.com">Oops</a>
+            </p>
+
+            <p data-i18n-id="s-1f03">Âncoras duplicadas</p>
+            <p class="positive" data-i18n-id="s-e967"><a id="dupe" href="#dupe">Âncora 1</a> <a id="dupe" href="#dupe">Âncora 2</a></p>
+          </section>
+          <section>
+            <h3 id="table-tests" data-i18n-id="s-d5ad">Tabelas</h3>
+
+            <p id="tables-without-valid-headers" data-i18n-id="s-bf63">Tabelas sem cabeçalhos válidos</p>
+
+            <table class="positive">
+              <tbody>
+                <tr>
+                  <td data-i18n-id="s-9ea0">Uma tabela sem cabeçalho TH é inválida</td>
+                  <td class="positive">
+                    <h4 data-i18n-id="s-51f8">Os cabeçalhos de esboço não contam</h4>
+                  </td>
+                  <td class="negative">
+                    <p data-i18n-id="s-9700"><strong>Desativar deve testar o conteúdo dos cabeçalhos dentro de tabelas</strong></p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <table>
+              <thead>
+                <tr>
+                  <th class="positive" data-i18n-id="s-3760"></th>
+                  <th class="negative" data-i18n-id="s-e701">Cabeçalhos vazios</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="negative">
+                  <th data-i18n-id="s-1e72">Encontrei</th>
+                  <td data-i18n-id="s-ab85">700 vídeos de tartarugas</td>
+                </tr>
+                <tr class="negative">
+                  <th data-i18n-id="s-fbc2">Cada um</th>
+                  <td data-i18n-id="s-7836">com 2 segundos de duração</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+          <section id="legibility">
+            <h3 data-section="legibility" data-i18n-id="s-8596">Legibilidade</h3>
+
+            <div class="positive">
+              <p data-i18n-id="s-5df2">VÁRIAS PALAVRAS SEGUIDAS EM MAIÚSCULAS ATIVARÃO UM AVISO DE VERIFICAÇÃO MANUAL.</p>
+            </div>
+
+            <p class="positive" data-i18n-id="s-bf95"><u>Texto sublinhado</u></p>
+
+            <p class="positive" data-i18n-id="s-6979"><em>Um pouco de itálico é aceitável, mas grandes blocos de texto enfatizado não são
+                muito legíveis. Um pouco é sempre tolerável, claro, mas há limites, e um parágrafo inteiro é demasiado.
+                Este, por exemplo, é um parágrafo inteiro. É um bocado difícil de ler, não é? Mas este teste só é
+                acionado quando o texto é tão longo quanto este, portanto não deverá ver falsos positivos no seu
+                conteúdo a menos que escreva regularmente parágrafos tão extensos como este.</em></p>
+
+            <p class="positive" style="text-align: justify;" data-i18n-id="s-19a2">Texto justificado</p>
+
+            <p class="positive" data-i18n-id="s-d9c4">Superíndice ou subíndice excessivo; <sub>o subíndice deve ser utilizado para referências
+                curtas e notas de rodapé, não para frases ou parágrafos inteiros.</sub></p>
+
+            <p class="positive" data-i18n-id="s-d136"><span style="font-size: 10px;">Tipos de letra minúsculos</span></p>
+
+            <div class="positive">
+              <p data-i18n-id="s-38f1">* Listas falsas utilizando caracteres comuns,</p>
+              <p data-i18n-id="s-ed7f">* letras, números e emoji.</p>
+            </div>
+
+            <div class="positive">
+              <li data-i18n-id="s-83f0">Etiqueta UL em falta</li>
+            </div>
+          </section>
+
+          <section id="form-elements">
+            <h3 data-section="form-elements" data-i18n-id="s-68c5">Formulários</h3>
+
+            <p data-i18n-id="s-0d4e">Botão sem etiqueta</p>
+            <div class="positive">
+              <button class="btn btn-primary p-3 pt-4" data-i18n-id="s-6e2d"></button>
+            </div>
+
+            <p data-i18n-id="s-296d">Campos com uma etiqueta invisível, a perguntar se existe também uma etiqueta visível.</p>
+            <div class="positive">
+              <input type="text" title="Email" />
+            </div>
+
+            <p data-i18n-id="s-7c79">Campos com apenas um marcador de posição como etiqueta, a perguntar se existe também uma etiqueta
+              visível.</p>
+            <div class="positive">
+              <input type="text" placeholder="Email" />
+            </div>
+
+            <div class="positive">
+              <p data-i18n-id="s-d629">Botão com uma etiqueta acessível diferente da sua etiqueta visível.</p>
+              <button class="btn btn-primary" aria-label="bye" data-i18n-id="s-d5c2">Hi</button>
+            </div>
+
+            <div class="positive">
+              <p data-i18n-id="s-96f6">Botão com um atributo aria-labelledby inválido.</p>
+              <button class="btn btn-primary" aria-labelledby="bye" data-i18n-id="s-e158">Hi</button>
+            </div>
+
+            <div class="positive">
+              <p data-i18n-id="s-5477">Botão com etiqueta redundante.</p>
+              <button class="btn btn-primary" data-i18n-id="s-a933">Premir este botão</button>
+            </div>
+
+            <div class="positive">
+              <p data-i18n-id="s-1764">Botão de reinicialização.</p>
+              <input class="btn btn-danger" type="reset" />
+            </div>
+
+            <p class="positive" data-i18n-id="s-7c9a"><a href="./editable.htm" tabindex="2">Alterar a ordem de tabulação</a></p>
+          </section>
+
+
+
+
+
+
+        </div>
+
+
+      </div>
+    </div>
+
+  </main>

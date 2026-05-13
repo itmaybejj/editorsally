@@ -1,0 +1,434 @@
+<main class="container col-lg-12 mx-auto py-5">
+    <div class="row docs">
+      <div class="col-12 col-md-5 col-lg-4 mb-5">
+        <div id="on-this-page" class="list-group ms-2 ms-lg-5 position-sticky top-0 pt-3">
+        </div>
+      </div>
+      <div class="col-12 col-md-7 col-lg-8 pt-3" data-bs-spy="scroll" data-bs-target="#on-this-page"
+        data-bs-smooth-scroll="true" tabindex="0">
+
+
+
+        <h2 class="pt-4" id="demo" data-i18n-id="s-4496">Demo</h2>
+        <p class="fs-5" data-i18n-id="s-e32c">Se en <a href="https://youtu.be/uYvNYPg38nU?si=6YANYrJpVzNAJYDl&t=260">videointroduksjon til
+            verktøyets historie og funksjoner</a>,
+          eller prøv å redigere demoinnholdet nedenfor, åpne og lukke varsler,
+          og bruk verktøylinjen <span style="text-wrap: nowrap;">(<img src="/assets/images/3x-toolbar" class="inline-block" style="width: 5rem; height: auto;" alt="Skjermbilde av Editoria11y-verktøylinjen, som
+              viser 4 feil." width="97" height="50" loading="lazy" data-i18n-id="s-65d5" />)</span> for å se overskriftsstrukturen. Denne
+          demoen
+          inkluderer både kjernetester og CSA-pakken.</p>
+        <p class="fs-5 mb-5 pb-5" data-i18n-id="s-7580">Denne demoen bruker en TinyMCE-editor. Editoria11y er kompatibel med de fleste
+          tekstredigerere, og har ferdige implementasjoner for CKEditor og Gutenberg i WordPress og Drupal.</p>
+        <div id="ed11y-demo" class="p-5" contenteditable="">
+          <section id="headings">
+
+            <h3 class="pt-1" data-i18n-id="s-71f7">Overskrifter</h3>
+
+            <p data-i18n-id="s-e638">Denne overskriften hoppet over et nivå:</p>
+            <div class="positive">
+              <h6 id="this-h6-should-have-been-an-h3" data-i18n-id="s-1775">Ups</h6>
+            </div>
+
+            <p data-i18n-id="s-3c22">Denne overskriften har ingen tekst i det hele tatt:</p>
+            <div class="positive">
+              <h4 class="empty-example" data-i18n-id="s-e89e"> </h4>
+            </div>
+
+            <p data-i18n-id="s-a98b">Dette korte blokksitattet kan være en overskrift:</p>
+            <div class="positive">
+              <blockquote data-i18n-id="s-8223">Jeg er en falsk overskrift</blockquote>
+            </div>
+
+            <p data-i18n-id="s-7243">Dette avsnittet med kun fet skrift kan være en overskrift:</p>
+            <p class="positive" data-i18n-id="s-8ce3"><strong>Jeg er en falsk overskrift</strong></p>
+
+            <p data-i18n-id="s-7a7a">Denne overskriften er veldig lang:</p>
+            <div class="positive">
+              <h4 data-i18n-id="s-695c">Overskrifter og underoverskrifter skaper en navigerbar innholdsfortegnelse for hjelpeteknologi.
+                Tallene angir innrykk i et hierarkisk forhold. Svært lange overskrifter betyr trolig at forfatteren sier
+                for mye i overskriften.</h4>
+            </div>
+
+          </section>
+
+
+          <section id="text-alternatives">
+            <h3 data-section="text-alternatives" data-i18n-id="s-2a0c">Tekstalternativer for bilder</h3>
+
+            <p data-i18n-id="s-ecfd">Denne overskriften er laget av et tekstbilde uten alt-tekst:</p>
+            <div class="positive">
+              <h4 data-i18n-id="s-88ba"><img loading="lazy" alt src="/assets/images/px20240813sm.jpg" data-i18n-id="s-e33e" /></h4>
+            </div>
+
+            <p data-i18n-id="s-875a">Bilde uten alt-attributt i det hele tatt:</p>
+            <p class="positive" data-i18n-id="s-2b48"><img loading="lazy" src="/assets/images/px20240813sm.jpg" data-i18n-id="s-95a0" /></p>
+
+            <p data-i18n-id="s-5df5">Bilde med et ugyldig alt-attributt, f.eks. <code class="language-plaintext
+                highlighter-rouge">alt=”'”</code></p>
+
+            <p class="positive" data-i18n-id="s-47b7"><img loading="lazy" alt="'" src="/assets/images/px20240813sm.jpg" data-i18n-id="s-87b9" /></p>
+
+            <p id="image-with-a-filename-as-an-alt" data-i18n-id="s-c893">Bilde med et filnavn som alt-tekst</p>
+
+            <p class="positive" data-i18n-id="s-9d21"><img loading="lazy" alt="filename.jpg" src="/assets/images/px20240813sm.jpg" data-i18n-id="s-685d" /></p>
+
+            <p id="image-with-redundant-text-in-its-alt" data-i18n-id="s-f6e9">Bilde med overflødig tekst i alt-teksten, som «bilde av:»</p>
+
+            <p class="positive" data-i18n-id="s-7003"><img loading="lazy" alt="Bilde av en hund." src="/assets/images/px20240813sm.jpg" data-i18n-id="s-2149" /></p>
+
+            <p id="linked-image-with-redundant-text-in-its-alt" data-i18n-id="s-6554">Lenket bilde med overflødig tekst i alt-teksten, som
+              «bilde av:»</p>
+
+            <p class="positive" data-i18n-id="s-d93d"><a href="./editable.htm"><img loading="lazy" alt="Bilde av en hund." src="/assets/images/px20240813sm.jpg" data-i18n-id="s-2642" /></a></p>
+
+            <p id="image-with-placeholder-alt" data-i18n-id="s-40e9">Bilde med plassholder-alt:</p>
+            <p class="positive" data-i18n-id="s-541e"><img loading="lazy" alt="TBD" src="/assets/images/px20240813sm.jpg" data-i18n-id="s-fe01" /></p>
+
+            <p id="linked-image-with-placeholder-alt" data-i18n-id="s-6266"><strong>Lenket</strong> bilde med plassholder-alt:</p>
+            <p class="positive" data-i18n-id="s-7d43"><a href="./editable.htm"><img loading="lazy" alt="TBD" src="/assets/images/px20240813sm.jpg" data-i18n-id="s-b0f2" /></a></p>
+
+            <p id="image-with-machine-alt" data-i18n-id="s-3ef4">Bilde med maskingenerert alt-tekst:</p>
+            <p class="positive" data-i18n-id="s-33a5"><img loading="lazy" alt="$700VIDEOSABOUTTURTLESALL2SECONDSLONG" src="/assets/images/px20240813sm.jpg" data-i18n-id="s-ec2e" /></p>
+
+            <p id="linked-image-with-machine-alt" data-i18n-id="s-2818">Lenket bilde med maskingenerert alt-tekst:</p>
+            <p class="positive" data-i18n-id="s-d528"><a href="./editable.htm"><img loading="lazy" alt="$700VIDEOSABOUTTURTLESALL2SECONDSLONG" src="/assets/images/px20240813sm.jpg" data-i18n-id="s-e48d" /></a></p>
+
+            <p id="image-with-very-long-alt-text" data-i18n-id="s-eb13">Bilde med svært lang alt-tekst:</p>
+
+            <p class="positive" data-i18n-id="s-f72c"><img loading="lazy" alt="Se på denne hunden. Denne hunden er så glad. Denne hunden fikk
+                gå en tur og turen gikk til en innsjø og det var alle slags fascinerende lukter. Så utrolig dag denne
+                hunden hadde." src="/assets/images/px20240813sm.jpg" data-i18n-id="s-724f" /></p>
+
+            <p id="images-in-links-where-the-alt-text-may-be-describing-the-image-instead-of-the-link" data-i18n-id="s-2731">Bilder i lenker
+              der alt-teksten kan beskrive bildet i stedet for lenken</p>
+
+            <p class="positive" data-i18n-id="s-08a9"><a href="https://www.youtube.com/watch?v=DLzxrzFCyOs">Denne lenken har tekst og et
+                bilde.<img loading="lazy" alt="En fin grå boks" src="/assets/images/px20240813sm.jpg" data-i18n-id="s-c699" /></a></p>
+
+            <p id="images-in-links-decorative" data-i18n-id="s-25ca">Alle lenkede bilder (test av som standard)</p>
+            <p class="positive" data-i18n-id="s-281c"><a href="https://www.youtube.com/watch?v=DLzxrzFCyOs"><img loading="lazy" alt="Hei der" src="/assets/images/px20240813sm.jpg" data-i18n-id="s-f3c6" /></a></p>
+
+            <p data-i18n-id="s-3cd8">Bilde i figur merket som dekorativt:</p>
+            <figure class="positive">
+              <img loading="lazy" alt src="/assets/images/px20240813sm.jpg" data-i18n-id="s-3051" />
+              <figcaption data-i18n-id="s-8ef6">Figcaption er til stede.</figcaption>
+            </figure>
+
+            <p data-i18n-id="s-a78d">Bilde i figur med en alt-tekst lik figcaption:</p>
+            <figure class="positive">
+              <img loading="lazy" alt="Figcaption er det samme som alt-teksten" src="/assets/images/px20240813sm.jpg" data-i18n-id="s-d8b0" />
+              <figcaption data-i18n-id="s-13b7">Figcaption er det samme som alt-teksten</figcaption>
+            </figure>
+            <p data-i18n-id="s-296e">Bilde i en karusell uten alt-tekst:</p>
+            <div class="positive">
+              <img loading="lazy" alt class="carousel" src="/assets/images/px20240813sm.jpg" data-i18n-id="s-f79d" />
+            </div>
+          </section>
+          <section id="contrast">
+            <h3 data-section="contrast" data-i18n-id="s-e272">Kontrast</h3>
+            <p data-i18n-id="s-09f2">Uleselig fargekombinasjon:</p>
+            <div class="positive">
+              <p style="background: #ccc; color: #ddd;" data-i18n-id="s-601e">Veldig lesbart.</p>
+            </div>
+            <p data-i18n-id="s-aa41">Farge må sjekkes manuelt:</p>
+            <div class="positive">
+              <p style="background: linear-gradient(45deg,#ccc 25%,#0000 25% 75%,#ccc
+                75%,#ccc),linear-gradient(45deg,#ccc 25%,#0000 25% 75%,#ccc 75%,#ccc)" data-i18n-id="s-490b">Og uberegnelig.</p>
+            </div>
+            <div class="positive"><label>Inndatafelt med lav kontrast
+                <input class="form-text" type="text" style="color: #777;" /></label></div>
+
+            <style>
+              #unsupported-placeholder::placeholder {
+                color: color(rec2020 0.9 0.4 0.2);
+              }
+            </style>
+
+            <label for="unsupported-placeholder">Fargen på plassholderen kan ikke beregnes</label>
+            <div class="positive" style="background: transparent;"><input type="text" id="unsupported-placeholder"
+                placeholder="Rec2020-fargerom" /></div>
+
+
+            <p data-i18n-id="s-0774">SVG-grafikk uten tilstrekkelig kontrast</p>
+            <div class="positive"><svg style="width: 16px; height: 16px;" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0
+                0 512
+                512"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                <path fill="#999" d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8
+                  12.5-45.3 0L330.7 376C296.3 401.1 253.9 416 208 416 93.1 416 0 322.9 0 208S93.1 0 208 0 416 93.1 416
+                  208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" ></path>
+              </svg></div>
+
+            <p data-i18n-id="s-be2b">SVG-grafikk der kontrasten må sjekkes manuelt</p>
+            <div class="positive" style="background: linear-gradient(45deg,#ccc 45%,#0000 45% 75%,#ccc
+              75%,#ccc),linear-gradient(145deg,#ccc 45%,#0000 45% 75%,#ccc 75%,#ccc)"><svg style="width: 16px; height:
+                16px;" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512
+                512"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                <path fill="color(rec2020 0.9 0.4 0.2)" d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5
+                  32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376C296.3 401.1 253.9 416 208 416 93.1 416 0 322.9 0 208S93.1 0
+                  208 0 416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" ></path>
+              </svg></div>
+
+
+          </section>
+          <section id="embed-media">
+            <h3 data-section="embed-media" data-i18n-id="s-af2b">Innbygging og media</h3>
+
+            <p data-i18n-id="s-98f7">Video flagget som krever manuell kontroll av teksting:</p>
+            <div class="positive" style="width: 560px; aspect-ratio: 560 / 315; max-width: 100%; cursor: not-allowed;">
+              <iframe width="560" height="315" inert=""
+                src="https://www.youtube-nocookie.com/embed/QGsevnbItdU?si=W_b2i2o_n5v1ArvA" style="width: 560px;
+                aspect-ratio: 560 / 315; max-width: 100%; cursor: not-allowed;" title="YouTube: Slik gjøres det.
+                Avspilling er deaktivert." sandbox="allow-scripts allow-same-origin" allow="accelerometer; autoplay;
+                clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="origin"
+                allowfullscreen></iframe>
+              <div><small><em>Avspilling deaktivert for å forhindre informasjonskapsler.</em></small></div>
+            </div>
+
+            <p data-i18n-id="s-e14a">Lyd trenger et transskript:</p>
+            <div class="positive">
+              <div style="border: 1px solid #444; background: #ccc; width: 320px; height: 60px;"><audio style="height:
+                  60px;"></audio>
+              </div>
+            </div>
+
+            <p data-i18n-id="s-573a">Iframe mangler en tittel og krever også manuell kontroll:</p>
+            <div class="positive">
+              <iframe data-needs-src=""></iframe>
+            </div>
+
+            <p data-i18n-id="s-fe95">Ikke-fokuserbar iframe:</p>
+            <div class="positive">
+              <iframe title="example" sandbox="" tabindex="-1" data-needs-src=""></iframe>
+            </div>
+
+            <p data-i18n-id="s-e27f">Nestede interaktive komponenter</p>
+            <div class="positive">
+              <details>
+                <summary data-i18n-id="s-5064">Trekkspill</summary>
+                <details>
+                  <summary data-i18n-id="s-2b8d">Trekkspill</summary>Overraskelse!
+                </details>
+              </details>
+            </div>
+          </section>
+          <section id="meaningful-links">
+            <h3 data-section="meaningful-links" data-i18n-id="s-5965">Meningsfulle lenker</h3>
+
+            <p id="links-with-no-text-at-all" data-i18n-id="s-59ab">Lenker uten tekst i det hele tatt</p>
+            <p class="positive" data-i18n-id="s-5287"><a href="https://www.youtube.com/watch?v=DLzxrzFCyOs" style="display: inline-block;
+                width: 3rem; border-bottom: 1px solid;"></a> Tomme lenker</p>
+
+            <p id="links-titled-with-a-url" data-i18n-id="s-c3d3">Lenker kun merket med en URL:</p>
+            <p class="positive" data-i18n-id="s-e764"><a                 href="https://www.youtube.com/watch?v=DLzxrzFCyOs">https://www.youtube.com/watch?v=DLzxrzFCyOs</a></p>
+
+            <p id="links-titled-with-a-symbol" data-i18n-id="s-7be5">Lenker kun merket med symboler:</p>
+            <p class="positive" data-i18n-id="s-aa44"><a href="https://www.youtube.com/watch?v=DLzxrzFCyOs">↣</a></p>
+
+            <p data-i18n-id="s-e5a4">Lenker med samme navn fører til forskjellige steder</p>
+            <p class="positive" data-i18n-id="s-cb73"><a href="https://www.youtube.com/watch?v=fjOeJssZX_Q">Skilpadder</a> <a                 href="https://www.youtube.com/watch?v=cWppAbqm9I8">Skilpadder</a></p>
+
+            <p id="links-titled-with-doi" data-i18n-id="s-cc2d">Lenker kun merket med et DOI-nummer:</p>
+            <p class="positive" data-i18n-id="s-fb8e"><a href="https://doi.org/10.1145/3493612.3520468">doi.org/10.1145/3493612.3520468</a>
+            </p>
+
+            <p id="links-titled-with-click" data-i18n-id="s-5f07">Lenker med meningsløse etiketter:</p>
+            <p class="positive" data-i18n-id="s-b240"><a href="https://www.youtube.com/watch?v=DLzxrzFCyOs"
+                title="https://www.youtube.com/watch?v=DLzxrzFCyOs">Klikk her</a></p>
+
+            <p id="links-titled-with-empty" data-i18n-id="s-17f2">Lenkede ikoner uten tekstalternativer:</p>
+            <p class="positive" data-i18n-id="s-1498"><a href="https://www.youtube.com/watch?v=DLzxrzFCyOs"><svg style="width: 16px; height:
+                  16px;" xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 512
+                  512"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                  <path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3
+                    0L330.7 376C296.3 401.1 253.9 416 208 416 93.1 416 0 322.9 0 208S93.1 0 208 0 416 93.1 416 208zM208
+                    352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" ></path>
+                </svg></a></p>
+
+            <p id="links-that-open-in-a-new-window-without-an-external-link-icon-or-text-warning" data-i18n-id="s-d12a">Lenker som åpnes i et
+              nytt vindu uten et eksternt lenkeikon eller tekstadvarsel</p>
+
+            <p class="positive" data-i18n-id="s-038b"><a href="https://www.youtube.com/watch?v=DLzxrzFCyOs" target="_blank">Varsel for
+                åpnes-i-test.</a></p>
+
+            <p id="links-to-PDF" data-i18n-id="s-d87d">Lenker til PDF-filer</p>
+            <p class="positive" data-i18n-id="s-7b08"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ#.pdf" class="">Ha det gøy.</a></p>
+
+            <p id="links-to-doc" data-i18n-id="s-bbe9">Lenker til andre dokumenter</p>
+            <p class="positive" data-i18n-id="s-f1a0"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ#.doc" class="">En falsk
+                dokumentlenke.</a></p>
+
+            <p id="links-redundant" data-i18n-id="s-9145">Lenker med overflødige title-attributter</p>
+            <p class="positive" data-i18n-id="s-d8f6"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" title="Hold over meg">Hold over
+                meg</a></p>
+
+            <p data-i18n-id="s-c1a1">Lenker med attributter som fjerner dem fra tab-rekkefølgen:</p>
+            <p class="positive" data-i18n-id="s-5811"><a href="./editable.htm" aria-hidden="true">Aria-skjulte lenker uten negativ
+                tabindex.</a></p>
+
+            <p data-i18n-id="s-f661">Lenker med aria-labelledby-attributter som peker til elementer uten tekst:</p>
+            <p class="positive" data-i18n-id="s-dfac"><a href="./editable.htm" id="oops" aria-labelledby="oops"></a></p>
+
+            <p data-i18n-id="s-d2dc">Lenker med generiske ord i aria-etiketten:</p>
+            <p class="positive" data-i18n-id="s-e206"><a href="www.google.com/" aria-label="has aria label">les mer</a></p>
+
+            <p data-i18n-id="s-8271">Lenket bilde uten alt-tekst:</p>
+            <p class="positive" data-i18n-id="s-5df8"><a href="./editable.htm"><img loading="lazy" alt src="/assets/images/px20240813sm.jpg" class data-i18n-id="s-5b80" /></a></p>
+
+            <p data-i18n-id="s-4f11">Lenket bilde med uutalebar alt-tekst:</p>
+            <p class="positive" data-i18n-id="s-5fe3"><a href="./editable.htm"><img loading="lazy" alt="'" src="/assets/images/px20240813sm.jpg" class data-i18n-id="s-4ba2" /></a></p>
+
+            <p data-i18n-id="s-0fd8">Lenket bilde uten alt-attributt:</p>
+            <p class="positive" data-i18n-id="s-c130"><a href="./editable.htm"><img loading="lazy" src="/assets/images/px20240813sm.jpg" class data-i18n-id="s-d8bc" /></a></p>
+
+            <p data-i18n-id="s-91cb">Lenket bilde uten alt-attributt i en lenke med tekst:</p>
+            <p class="positive" data-i18n-id="s-4db6"><a href="./editable.htm">Søk <img loading="lazy" src="/assets/images/px20240813sm.jpg" class data-i18n-id="s-0709" /></a></p>
+
+            <p data-i18n-id="s-78cc">Lenket bilde med kun et filnavn som alt-tekst:</p>
+            <p class="positive" data-i18n-id="s-b669"><a href="./editable.htm"><img loading="lazy" alt="http://jpg.gif" src="/assets/images/px20240813sm.jpg" data-i18n-id="s-9712" />
+              </a></p>
+
+            <p data-i18n-id="s-f1f2">Lenket bilde med mistenkelig lang alt-tekst:</p>
+            <p class="positive" data-i18n-id="s-3c58"><a href="./editable.htm"><img loading="lazy" alt="Se på denne hunden. Denne hunden er så
+                  glad. Denne hunden fikk gå en tur og turen gikk til en innsjø og det var alle slags fascinerende
+                  lukter. Så utrolig dag denne hunden hadde." src="/assets/images/px20240813sm.jpg" data-i18n-id="s-2557" />
+              </a></p>
+
+            <p data-i18n-id="s-7af4">Ødelagte lenker til ankere på siden</p>
+            <p class="positive" data-i18n-id="s-fe67">
+              <a href="#oh-no">Det finnes ingen slik ID.</a>
+            </p>
+
+            <p data-i18n-id="s-f5ef">Lenker til utviklerserver</p>
+            <p class="positive" data-i18n-id="s-7568">
+              <a href="https://tugboatqa.com">Ups</a>
+            </p>
+
+            <p data-i18n-id="s-1f03">Dupliserte ankere</p>
+            <p class="positive" data-i18n-id="s-e967"><a id="dupe" href="#dupe">Anker 1</a> <a id="dupe" href="#dupe">Anker 2</a></p>
+          </section>
+          <section>
+            <h3 id="table-tests" data-i18n-id="s-d5ad">Tabeller</h3>
+
+            <p id="tables-without-valid-headers" data-i18n-id="s-bf63">Tabeller uten gyldige overskrifter</p>
+
+            <table class="positive">
+              <tbody>
+                <tr>
+                  <td data-i18n-id="s-9ea0">En tabell uten TH-overskrift er ugyldig</td>
+                  <td class="positive">
+                    <h4 data-i18n-id="s-51f8">Disposisjonsoverskrifter teller ikke</h4>
+                  </td>
+                  <td class="negative">
+                    <p data-i18n-id="s-9700"><strong>Deaktiver bør være innholdsoverskrift-testen inne i tabeller</strong></p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <table>
+              <thead>
+                <tr>
+                  <th class="positive" data-i18n-id="s-3760"></th>
+                  <th class="negative" data-i18n-id="s-e701">Tomme overskrifter</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="negative">
+                  <th data-i18n-id="s-1e72">Jeg fant</th>
+                  <td data-i18n-id="s-ab85">700 videoer om skilpadder</td>
+                </tr>
+                <tr class="negative">
+                  <th data-i18n-id="s-fbc2">Hver</th>
+                  <td data-i18n-id="s-7836">2 sekunder lang</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+          <section id="legibility">
+            <h3 data-section="legibility" data-i18n-id="s-8596">Lesbarhet</h3>
+
+            <div class="positive">
+              <p data-i18n-id="s-5df2">FLERE ORD PÅ RAD MED BLOKKBOKSTAVER VIL UTLØSE EN ADVARSEL OM MANUELL KONTROLL.</p>
+            </div>
+
+            <p class="positive" data-i18n-id="s-bf95"><u>Understreket tekst</u></p>
+
+            <p class="positive" data-i18n-id="s-6979"><em>Litt kursiv er greit, men store blokker med uthevet tekst er ikke veldig lesbar.
+                Litt er selvfølgelig akseptabelt, men det er grenser, og et helt avsnitt er altfor mye. Dette er for
+                eksempel et helt avsnitt. Det er litt vanskelig å lese, ikke sant? Men denne testen utløses ikke før
+                teksten er så lang, så du bør ikke se falske positiver i innholdet ditt med mindre du skriver veldig
+                lange avsnitt som dette regelmessig.</em></p>
+
+            <p class="positive" style="text-align: justify;" data-i18n-id="s-19a2">Blokkjustert tekst</p>
+
+            <p class="positive" data-i18n-id="s-d9c4">Overdreven hevet eller senket skrift; <sub>senket skrift bør brukes for små referanser
+                og fotnoter, ikke hele setninger eller avsnitt.</sub></p>
+
+            <p class="positive" data-i18n-id="s-d136"><span style="font-size: 10px;">Bittesmå skrifttyper</span></p>
+
+            <div class="positive">
+              <p data-i18n-id="s-38f1">* Falske lister med vanlige tegn,</p>
+              <p data-i18n-id="s-ed7f">* bokstaver, tall og emoji.</p>
+            </div>
+
+            <div class="positive">
+              <li data-i18n-id="s-83f0">Manglende UL-tag</li>
+            </div>
+          </section>
+
+          <section id="form-elements">
+            <h3 data-section="form-elements" data-i18n-id="s-68c5">Skjemaer</h3>
+
+            <p data-i18n-id="s-0d4e">Knapp uten etikett</p>
+            <div class="positive">
+              <button class="btn btn-primary p-3 pt-4" data-i18n-id="s-6e2d"></button>
+            </div>
+
+            <p data-i18n-id="s-296d">Inndatafelt med en usynlig etikett, spørsmål om det også finnes en synlig etikett.</p>
+            <div class="positive">
+              <input type="text" title="E-post" />
+            </div>
+
+            <p data-i18n-id="s-7c79">Inndatafelt med kun en plassholderetikett, spørsmål om det også finnes en synlig etikett.</p>
+            <div class="positive">
+              <input type="text" placeholder="E-post" />
+            </div>
+
+            <div class="positive">
+              <p data-i18n-id="s-d629">Knapp med en tilgjengelig etikett som er forskjellig fra den synlige etiketten.</p>
+              <button class="btn btn-primary" aria-label="bye" data-i18n-id="s-d5c2">Hei</button>
+            </div>
+
+            <div class="positive">
+              <p data-i18n-id="s-96f6">Knapp med et ugyldig aria-labelledby-attributt.</p>
+              <button class="btn btn-primary" aria-labelledby="bye" data-i18n-id="s-e158">Hei</button>
+            </div>
+
+            <div class="positive">
+              <p data-i18n-id="s-5477">Knapp med overflødig etikett.</p>
+              <button class="btn btn-primary" data-i18n-id="s-a933">Trykk på denne knappen</button>
+            </div>
+
+            <div class="positive">
+              <p data-i18n-id="s-1764">Tilbakestillingsknapp.</p>
+              <input class="btn btn-danger" type="reset" />
+            </div>
+
+            <p class="positive" data-i18n-id="s-7c9a"><a href="./editable.htm" tabindex="2">Rote med tab-rekkefølgen</a></p>
+          </section>
+
+
+
+
+
+
+        </div>
+
+
+      </div>
+    </div>
+
+  </main>

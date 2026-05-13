@@ -1,0 +1,348 @@
+<main class="container col-lg-12 mx-auto py-5">
+    <div class="row docs">
+      <div class="col-12 col-md-5 col-lg-4 mb-5">
+        <div id="on-this-page" class="list-group ms-2 ms-lg-5 position-sticky top-0 pt-3">
+        </div>
+      </div>
+      <div class="col-12 col-md-7 col-lg-8 pt-3" data-bs-spy="scroll" data-bs-target="#on-this-page"
+        data-bs-smooth-scroll="true">
+        <h1 data-i18n-id="s-fe89">安装与配置</h1>
+
+        <section id="modules">
+          <h2 class="pt-3 pb-2" data-i18n-id="s-6f09">预配置版本</h2>
+          <ul class="list-unstyled ps-0">
+            <li data-i18n-id="s-a850"><a href="https://www.drupal.org/project/editoria11y" class="arrow"><strong>Drupal 安装程序</strong></a></li>
+            <li data-i18n-id="s-c7b0"><a href="https://wordpress.org/plugins/editoria11y-accessibility-checker/"
+                class="arrow"><strong>WordPress 安装程序</strong></a></li>
+            <li data-i18n-id="s-128f"><a href="https://codeberg.org/sebastiangreger/kirby-a11yprompter" class="arrow"><strong>Kirby
+                  安装程序</strong></a> <em>（社区贡献）</em></li>
+            <li data-i18n-id="s-4002"><a href="https://plugins.craftcms.com/editoria11y" class="arrow"><strong>CraftCMS 安装程序</strong></a>
+              <em>（社区贡献）</em>
+            </li>
+          </ul>
+        </section>
+        <section id="diy">
+          <h2 data-i18n-id="s-cef2">
+            自定义安装
+          </h2>
+          <p data-i18n-id="s-df5a">如需构建自己的实现，请<a href="https://github.com/itmaybejj/editoria11y" data-type="URL"
+              data-id="https://github.com/itmaybejj/editoria11y" class="liinternal">下载本地副本</a>（或引用 <a               href="https://cdn.jsdelivr.net/gh/itmaybejj/editoria11y@2/dist/editoria11y.min.js" class="liinternal">CDN
+              版本</a>），包含语言包、JS 压缩文件和 CSS 压缩文件，然后创建一个新的”Ed11y”实例。</p>
+          <p data-i18n-id="s-4e8a">使用 <strong>ESM/JS 模块导入</strong>：</p>
+          <pre class="language-markup"><code><!--// Load CSS
+<link href="/dist/css/editoria11y.min.css?v=3.0" rel="stylesheet">
+// Load JS and language pack
+<script type="module">
+  import Ed11y from “/dist/js/ed11y.esm.min.js?v=3.0”;
+  import ed11yLang from “/dist/js/lang/en.js”;
+  // Instantiate with language and CSS
+  const ed11y = new Ed11y.Ed11y({
+    lang: ‘en’,
+    cssUrls: [“/dist/css/editoria11y.min.css”]
+  });
+</script>
+--></code></pre>
+          <p data-i18n-id="s-b7f0">对于旧版浏览器和系统，请使用 .umd JavaScript 文件：</p>
+          <pre class="language-markup"><code><!--
+// Call CSS, JS and a Language Pack
+<link href="/dist/editoria11y.min.css" rel="stylesheet">
+<script src="/dist/js/ed11y.umd.js"></script>;
+<script src="/dist/js/lang/en.umd.js"></script>
+// Create a new Ed11y instance
+<script>
+  const ed11y = new Ed11y.Ed11y({
+    lang: ‘en’,
+    cssUrls: [“/dist/css/editoria11y.min.css”]
+  });
+</script>
+                --></code></pre>
+        </section>
+
+        <section id="params">
+          <h2 data-i18n-id="s-c50b">参数</h2>
+          <p data-i18n-id="s-6877">完整实现仅会为已登录的编辑者调用（您不希望网站访客看到检查器！），并可覆盖<a               href="https://github.com/itmaybejj/editoria11y/blob/3.0.x/src/js/utils/ed11y-default-options.js"
+              class="liinternal"><strong>任何默认参数</strong></a>。</p>
+          <p data-i18n-id="s-084e">请注意，所有参数均已设有默认值；只需包含您希望覆盖的部分即可。</p>
+          <p data-i18n-id="s-a20c">高度自定义的实现可能如下所示：</p>
+          <pre class="language-javascript"><code><!--const ed11y = new Ed11y.Ed11y({
+  // Define content regions
+  checkRoot: 'main, .footer-content-zone',
+  // Add custom CSS files
+  cssUrls: [
+    '/css/editoria11y.min.css',
+    '/css/custom.css'
+  ],
+  // Define Web components to include in checks
+  shadowComponents: 'accordion, lightbox',
+  // We want the box to open automatically for errors:
+  alertMode: 'assertive',
+  // Our external link icon has visually hidden text
+  // to delete before checking if the link has text:
+  linkIgnoreStrings: ['(opens in new window)'],
+  // Content editors cannot edit these elements:
+  ignoreElements: 'nav *, #social-block',
+  // Prevent this user from hiding alerts.
+  allowHide: false,
+  allowOK: true,
+  // Don't scan while the editor toolbar is open:
+  preventCheckingIfPresent: ".editor-toolbar",
+  // Turn off warnings that an element might be visually hidden:
+  checkVisible: false,
+  // Dispatch a JS event before highlighting this,
+  // so our JS can modify it first:
+  hiddenHandlers: ".accordion-panel",
+  // Dispatch a JS event when the library is ready
+  // for custom tests, then wait for 3 ed11yResume
+  // events from our 3 tests to continue.
+  customTests: 3,
+  checks: {
+    // Turn off the HEADING_FIRST test
+    HEADING_FIRST: false,
+    // Allow dismissing the HEADING_SKIPPED_LEVEL test
+    HEADING_SKIPPED_LEVEL: {
+       type: 'warning',
+    }
+  }
+
+}); --></code></pre>
+          <p data-i18n-id="s-18e0">一键式集成通常会动态设置这些变量——例如，在页面近期被编辑时以 assertive 模式加载，几分钟后切换回 polite 模式。</p>
+        </section>
+
+        <section id="theme">
+          <h2 data-i18n-id="s-6c0a">主题定制</h2>
+
+          <p data-i18n-id="s-e058">多个参数支持选择主题、覆盖颜色以及注入 CSS。</p>
+
+          <p data-i18n-id="s-ebc7">只需包含您需要覆盖的参数，以便日后更新更加便捷。</p>
+          <pre             class="language-javascript"><code><!--// Add custom CSS file
+cssUrls: ['/css/editoria11y.min.css', '/css/custom.css'],
+theme : 'darkTheme', // Select base theme
+darkTheme: {         // Override base colors
+    bg: '#0a2051',
+    bgHighlight: '#7b1919',
+    text: '#f4f7ff',
+    primary: '#4930a0',
+    primaryText: '#f4f7ff',
+    secondary: '#20160c',
+    warning: '#fad859',
+    alert: '#b80519',
+    button: '#dde8ff',
+    focusRing: 'cyan',
+    activeTab: '#0a2051',
+    tipHeader: '#4930a0',
+},
+// Override fonts
+baseFontSize: 14, // px
+baseFontFamily: '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif', --></code></pre>
+        </section>
+
+        <section id="js-events">
+          <h2 class="wp-block-heading has-text-align-left has-secondary-background-color has-background has-large-font-size" data-i18n-id="s-4568">
+            常用 JS 事件</h2>
+
+          <p data-i18n-id="s-3ca2">主题开发者可以监听这些事件，以便在需要时对页面作出响应和修改。</p>
+
+          <p data-i18n-id="s-2fb1">按典型出现顺序排列……</p>
+
+          <ul class="wp-block-list">
+            <li data-i18n-id="s-abfb"><strong><code>ed11yRunCustomTests</code></strong>：当 Results 对象就绪、可注入自定义结果时触发。请注意，必须将 customTests
+              参数设置为您将运行的自定义测试函数数量（……通常为一个……），该事件才会触发。详情见后续章节。</li>
+
+            <li data-i18n-id="s-16d6"><strong><code>ed11yResults</code></strong>：所有检查完成后触发。API 集成现在可以从 Ed11y.results 对象中提取数据。</li>
+
+            <li data-i18n-id="s-5693"><strong><code>ed11yPanelOpened</code></strong>：面板自动或手动打开时触发。</li>
+
+            <li data-i18n-id="s-4100"><strong><code>ed11yShowHidden</code></strong>：提供 <code>data-ed11y-result</code> 编号和 <code>viaJump</code>
+              布尔值。仅在设置了”ed11yShowHidden”参数<em><strong>且</strong></em>元素的某个父级匹配选择器时触发。用于在尚未展开的容器（如手风琴、标签页和轮播图）中显示警告。使用示例见下一章节。
+            </li>
+
+            <li data-i18n-id="s-20be"><strong><code>ed11yPop</code></strong>：提供 <code>data-ed11y-result</code> ID，以及 <code>result</code> 和
+              <code>tip</code> 对象的引用。在工具提示出现时触发，允许您在运行时修改提示内容。
+            </li>
+
+            <li data-i18n-id="s-a26b"><strong><code>ed11yShut</code></strong>：提供 <code>data-ed11y-result</code> ID。在工具提示关闭时触发。</li>
+
+            <li><span data-translate data-i18n-id="s-4631"><strong><code>ed11yDismissalUpdate</code></strong>：当用户忽略或恢复警告时提供详细信息。用于 API 集成。事件对象包含：</span>
+              <ul>
+                <li data-i18n-id="s-a6bd"><code>dismissPage</code></li>
+
+                <li data-i18n-id="s-754f"><code>dismissTest</code></li>
+
+                <li data-i18n-id="s-0a00"><code>dismissKey</code></li>
+
+                <li data-i18n-id="s-c8b0"><code>dismissAction</code></li>
+              </ul>
+            </li>
+          </ul>
+          <p data-i18n-id="s-ec32">示例代码可在后续章节中找到。</p>
+        </section>
+
+        <section id="modify-tips">
+          <h2 class="wp-block-heading has-secondary-background-color has-background has-large-font-size" data-i18n-id="s-ac90">修改提示内容</h2>
+
+          <p data-i18n-id="s-edfa">如果您只想修改提示的文本内容，可以直接覆盖 ed11yLang.en 全局对象（调用库之前）或 Ed11y.M 对象（调用库之后）中的对应条目。例如，在 Drupal 模块中，语言包被别名为
+            Drupal.ed11yLang：</p>
+
+          <p data-i18n-id="s-c4d7"><code>Drupal.ed11yLang.lang.testNames.title = “Please write shorter headings.”</code></p>
+
+          <p data-i18n-id="s-f0b0">对于<a href="https://github.com/itmaybejj/editoria11y/blob/3.0.x/src/lang/baseAll.js" data-type="link"
+              data-id="https://github.com/itmaybejj/editoria11y/blob/2.3.x/js/ed11y-localization.js"
+              class="liinternal">本地化文件中的任意默认键</a>或当前使用的特定语言翻译，上述方式同样适用。</p>
+
+          <p data-i18n-id="s-842f">Drupal 模块还使用 <code>editLinks</code> 参数向提示中添加自定义编辑链接。请注意”页面编辑器”和”布局编辑器”：</p>
+
+          <figure class="wp-block-image size-full"><img loading="lazy" data-recalc-dims="1" fetchpriority="high" decoding="async" width="580" height="300" src="https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?resize=580%2C300&amp;ssl=1" alt="Tooltip with &quot;Page editor&quot; and &quot;Layout editor&quot; links inserted." class="wp-image-523" srcset="https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?w=1290&amp;ssl=1 1290w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?resize=600%2C311&amp;ssl=1 600w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?resize=768%2C398&amp;ssl=1 768w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?resize=1200%2C621&amp;ssl=1 1200w" sizes="(max-width: 580px) 100vw, 580px" data-i18n-id="s-6d4d" /></figure>
+
+          <p data-i18n-id="s-bcd2">设置该参数的简化版代码如下：</p>
+          <pre class="language-javascript"><code><!--const editLinks = document.createElement('div');
+const editLink = document.createElement('a');
+      editLink.href="/node/1/edit";
+      editLink.textContent = "Edit page";
+editLinks.appendChild(editLink);
+const ed11y = new Ed11y({
+               editLinks: editLinks,
+              }); --></code></pre>
+          <p data-i18n-id="s-14d9">Drupal 模块随后使用 <strong><code>ed11yPop</code></strong> 事件，在显示提示时根据上下文动态显示或隐藏编辑链接。</p>
+
+          <p data-i18n-id="s-78f4">该事件提供了 <code>result</code> 和 <code>tip</code> 对象的引用：</p>
+          <pre class="language-javascript"><code><!--// Listen for event
+document.addEventListener('ed11yPop', e => {
+  if (e.detail.result.element.closest(
+    drupalSettings.editoria11y.hide_edit_links)
+  ) {
+      e.detail.tip.shadowRoot.querySelector(
+        ‘.ed11y-custom-edit-links’
+        )?.setAttribute(‘hidden’, ‘’);
+     }
+}); --></code></pre>
+        </section>
+
+        <section id="custom-tests">
+          <h2 data-i18n-id="s-794a">自定义测试</h2>
+
+          <p data-i18n-id="s-921d">如果 <strong><em>customTests</em></strong> 参数为一个<strong><em>数字</em></strong>，Editoria11y
+            将在检查过程中触发”ed11yRunCustomTests”事件，然后暂停最多 500 毫秒，等待相应数量的”<code>ed11yResume</code>”事件。</p>
+
+          <p data-i18n-id="s-a897">利用这一机制，您可以调用任意数量包含自定义测试的脚本，这些脚本可以在绘制提示之前将结果推入结果数组。</p>
+
+          <p data-i18n-id="s-820a">例如，如果您想创建以下提示，以标记从电子邮件中粘贴的含有混淆 URL 的链接：</p>
+
+          <figure class="wp-block-image size-full"><img loading="lazy" data-recalc-dims="1" decoding="async" width="580" height="462" src="https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2023/12/Screenshot-2023-12-06-at-5.13.38-PM.png?resize=580%2C462&amp;ssl=1" alt="Tip reading &quot;URL is Safe Link Encoded&quot;" class="wp-image-323" srcset="https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2023/12/Screenshot-2023-12-06-at-5.13.38-PM.png?w=1056&amp;ssl=1 1056w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2023/12/Screenshot-2023-12-06-at-5.13.38-PM.png?resize=600%2C478&amp;ssl=1 600w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2023/12/Screenshot-2023-12-06-at-5.13.38-PM.png?resize=768%2C612&amp;ssl=1 768w" sizes="(max-width: 580px) 100vw, 580px" data-i18n-id="s-f6c3" /></figure>
+
+          <p data-i18n-id="s-a3f5">您需要：</p>
+
+          <ol class="wp-block-list">
+            <li data-i18n-id="s-7c1e">为 <code>ed11yRunCustomTests</code> 事件添加监听器</li>
+
+            <li data-i18n-id="s-b8b0">查找匹配的元素</li>
+
+            <li data-i18n-id="s-3ff7">定义提示消息</li>
+
+            <li data-i18n-id="s-181b">触发”resume”事件，让 Editoria11y 绘制提示：</li>
+          </ol>
+
+          <pre class="language-javascript"><code><!--document.addEventListener('ed11yRunCustomTests', function() {
+  // 1. Write your custom test. This can be anything you want.
+  //
+  // This example searches the active root using the .getElements() function,
+  // which is aware of the checkRoots and ignoreElements parameters.
+  const safeLinks = Drupal.Ed11y.getElements('a[href*="safelinks.protection.outlook.com/?"]', 'root');
+
+  // This is just a utility function for this particular test...
+  const decodeSafelink = function(url) {
+      const params = new URL(url).searchParams;
+      let decoded = params.get('url');
+      if (!!decoded) {
+            decoded = Ed11y.sanitizeForHTML(decoded);
+            return `<p>The actual URL may be:<br><em style='word-wrap: break-word;'>${decoded}</em></p>`
+      }
+      return ‘’;
+  }
+
+  // 2. Add the test name to the active language pack.
+  // Add a title:
+  Drupal.ed11yLang.lang.testNames.outlookSafeLink = ‘URL is Safe Link encoded’;
+
+  // 3. Push each item you want flagged to Ed11y.results.
+  //
+  // You must provide:
+  //   element:      The element itself
+  //   test:         A key for your test, matching step 2.
+  //   type:         warning or error
+  //   content:      The tip HTML.
+  //   position:     “beforebegin” for interactive elements,
+  //                 “afterbegin” for paragraphs and table cells.
+  //   dismiss:      false for errors,
+  //                 a unique string for manual checks.
+  safeLinks?.forEach((el) => {
+   Drupal.Ed11y.State.results.push({
+     element: el,
+     test:    ‘outlookSafeLink’,
+     type:    ‘error’,
+     content: `<div class="title">Please fix the URL in this link</div>
+               ${decodeSafelink(el.href)}
+               <div class="why">
+                <p>The URL for this link is an Outlook “Safe Link” that was copied from an email.
+                It includes the original recipient’s email address,
+                and will break if Microsoft shuts down the service.</p>
+                <p>The pasted URL is:<br>
+                <em style='word-break: break-all;font-size: 90%;line-height: 1.2;
+                display: block;'>${Drupal.Ed11y.sanitizeHTML(el.href)}</em></p>
+               </div>
+            `,
+     position: ‘beforebegin’,
+     dismiss:  false,
+   });
+  });
+  // 4. When you are done with all your custom tests, dispatch an “ed11yResume” event:
+  let allDone = new CustomEvent(‘ed11yResume’);
+  document.dispatchEvent(allDone);
+}) --></code></pre>
+        </section>
+
+        <section id="hidden-content">
+          <h2 data-i18n-id="s-a67a">处理隐藏或尺寸受限内容中的警告</h2>
+
+
+          <p data-i18n-id="s-be6c">许多交互式组件（标签页、滑块、手风琴）会隐藏内容。Editoria11y 信息面板包含上一条/下一条按钮，可直接跳转至问题所在位置。如果 Editoria11y
+            判断问题的工具提示当前不可见，它会提示用户存在问题，并高亮显示第一个可见的祖先元素——例如手风琴外层的 div。</p>
+
+          <p data-i18n-id="s-4f58">理想情况下，您的主题会在 Editoria11y 的可见性检查运行之前使这些元素可见，让一切对用户来说都浑然天成——轮播图自动前进，手风琴自动展开以显示问题。</p>
+
+          <p data-i18n-id="s-7e11">要在面板首次打开时执行此操作（例如展开<strong><em>所有</em></strong>存在问题的手风琴面板），可为 <code>ed11yPanelOpened</code> 添加 JS
+            事件监听器，然后对相关 <code>ed11y-element-result</code> 元素执行 querySelectorAll，再触发主题用于显示该页面部分内容的函数。</p>
+
+          <p data-i18n-id="s-1c3f">以下是一个基于 jQuery 的示例。面板打开时，它会禁用固定菜单（避免元素被遮挡），然后查找已关闭手风琴项目内的所有 <code>ed11y-element-result</code>
+            元素，并模拟点击其切换按钮：</p>
+          <pre class="language-javascript"><code><!--document.addEventListener("ed11yPanelOpened", function () {
+  $('body').addClass('no-stick');
+  $('ed11y-element-result').each(function () {
+    if ($(this).parents('.ps-accordion-content[style*="display"]').length > 0) {
+    $(this).parents(‘.ps-accordion-content’).prev().find(‘.ps-accordion-item-button’).click();
+    }
+}) --></code></pre>
+
+          <p data-i18n-id="s-fbae">若要仅在通过面板”下一条”按钮跳转到<strong><em>特定</em></strong>提示时（例如在已关闭的标签页或下一张轮播幻灯片中）才显示内容，需要在参数中将
+            <code>hiddenHandlers</code> 设置为相关 CSS 选择器，并将 <code>checkVisible</code> 设置为 TRUE，然后为
+            <code>ed11yShowHidden</code> 事件添加监听器。当 Editoria11y 识别到提示位于包含 <code>hiddenHandlers</code> 选择器的容器内时，此事件会被触发。该
+            JS 事件将包含即将打开的提示的 ID。Editoria11y 随后会在触发此事件后短暂暂停，以便您的 JS 有时间使元素可见。
+          </p>
+
+          <p data-i18n-id="s-dae0">以下是来自宾夕法尼亚州立大学实现的示例。它查找与所提供 ID 匹配的元素，找到其父级交互组件容器，并触发其事件以激活切换：</p>
+          <pre class="language-javascript"><code><!--context.addEventListener('ed11yShowHidden', e => {
+  if (!e.detail.viaJump) {
+       return;
+  }
+  context.getElementById(e.detail.id)
+    .closest(‘[data-interactive-component]’)
+    .dispatchEvent(new CustomEvent(‘component:activate’));
+}); --></code></pre>
+          <p data-i18n-id="s-d99d">最后说明：部分主题与可见性检查不兼容，例如 <code>&lt;main&gt;</code> 容器高度为 0px 的情况。此类网站应通过将 <code>checkVisible</code> 设为 false
+            来禁用所有可见性检查。</p>
+
+        </section>
+
+      </div><!-- 内容列结束 -->
+
+    </div>
+  </main>

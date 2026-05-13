@@ -9,7 +9,7 @@
   <link rel="shortcut icon" href="/favicon.ico" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
   <meta charset="utf-8" />
-  <title>Démo — Editoria11y</title>
+  <title>Editoria11y</title>
   <link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
   <link href="/assets/theme.css" rel="stylesheet" />
   <meta name="theme-color" content="#712cf9" />
@@ -33,7 +33,7 @@
         </button>
         <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
           <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Editora11y</h5>
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Editoria11y</h5>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Fermer"></button>
           </div>
           <div class="offcanvas-body">
@@ -60,9 +60,8 @@
         <p class="fs-5">Regardez une <a href="https://youtu.be/uYvNYPg38nU?si=6YANYrJpVzNAJYDl&t=260">vidéo de
             présentation de l'historique et des fonctionnalités du vérificateur</a>,
           ou essayez de modifier le contenu de démonstration ci-dessous, d'ouvrir et de fermer les alertes,
-          et d'utiliser la barre d'outils <span style="text-wrap: nowrap;">(<img src="/assets/images/3x-toolbar"
-              class="inline-block" style="width: 5rem; height: auto;" alt="Capture d'écran de la barre d'outils
-              Editoria11y, affichant 4 erreurs." width="97" height="50" loading="lazy">)</span> pour afficher le plan
+          et d'utiliser la barre d'outils <span style="text-wrap: nowrap;">(<img src="/assets/images/3x-toolbar" class="inline-block" style="width: 5rem; height: auto;" alt="Capture d'écran de la barre d'outils
+              Editoria11y, affichant 4 erreurs." width="97" height="50" loading="lazy" />)</span> pour afficher le plan
           des titres. Cette démo inclut les tests de base et la suite CSA.</p>
         <p class="fs-5 mb-5 pb-5">Cette démo utilise un éditeur TinyMCE. Editoria11y est compatible avec la plupart des
           éditeurs de texte et propose des intégrations clés en main pour CKEditor et Gutenberg dans WordPress et
@@ -105,78 +104,72 @@
 
             <p>Ce titre est composé d'une image de texte sans attribut alt :</p>
             <div class="positive">
-              <h4><img loading="lazy" alt="" src="/assets/images/px20240813sm.jpg"></h4>
+              <h4><img loading="lazy" alt src="/assets/images/px20240813sm.jpg" /></h4>
             </div>
 
             <p>Image sans aucun attribut alt :</p>
-            <p class="positive"><img loading="lazy" src="/assets/images/px20240813sm.jpg"></p>
+            <p class="positive"><img loading="lazy" src="/assets/images/px20240813sm.jpg" /></p>
 
             <p>Image avec un attribut alt invalide, par ex. <code class="language-plaintext
                 highlighter-rouge">alt=”'”</code></p>
 
-            <p class="positive"><img loading="lazy" alt="'" src="/assets/images/px20240813sm.jpg"></p>
+            <p class="positive"><img loading="lazy" alt="'" src="/assets/images/px20240813sm.jpg" /></p>
 
             <p id="image-with-a-filename-as-an-alt">Image avec un nom de fichier comme alt</p>
 
-            <p class="positive"><img loading="lazy" alt="filename.jpg" src="/assets/images/px20240813sm.jpg"></p>
+            <p class="positive"><img loading="lazy" alt="filename.jpg" src="/assets/images/px20240813sm.jpg" /></p>
 
             <p id="image-with-redundant-text-in-its-alt">Image avec du texte redondant dans son alt, comme « image de :
               »</p>
 
-            <p class="positive"><img loading="lazy" alt="Image of a dog." src="/assets/images/px20240813sm.jpg"></p>
+            <p class="positive"><img loading="lazy" alt="Image of a dog." src="/assets/images/px20240813sm.jpg" /></p>
 
             <p id="linked-image-with-redundant-text-in-its-alt">Image liée avec du texte redondant dans son alt, comme «
               image de : »</p>
 
-            <p class="positive"><a href="./editable.htm"><img loading="lazy" alt="Image of a dog."
-                  src="/assets/images/px20240813sm.jpg"></a></p>
+            <p class="positive"><a href="./editable.htm"><img loading="lazy" alt="Image of a dog." src="/assets/images/px20240813sm.jpg" /></a></p>
 
             <p id="image-with-placeholder-alt">Image avec un alt provisoire :</p>
-            <p class="positive"><img loading="lazy" alt="TBD" src="/assets/images/px20240813sm.jpg"></p>
+            <p class="positive"><img loading="lazy" alt="TBD" src="/assets/images/px20240813sm.jpg" /></p>
 
             <p id="linked-image-with-placeholder-alt">Image <strong>liée</strong> avec un alt provisoire :</p>
-            <p class="positive"><a href="./editable.htm"><img loading="lazy" alt="TBD"
-                  src="/assets/images/px20240813sm.jpg"></a></p>
+            <p class="positive"><a href="./editable.htm"><img loading="lazy" alt="TBD" src="/assets/images/px20240813sm.jpg" /></a></p>
 
             <p id="image-with-machine-alt">Image avec un alt de code machine :</p>
-            <p class="positive"><img loading="lazy" alt="$700VIDEOSABOUTTURTLESALL2SECONDSLONG"
-                src="/assets/images/px20240813sm.jpg"></p>
+            <p class="positive"><img loading="lazy" alt="$700VIDEOSABOUTTURTLESALL2SECONDSLONG" src="/assets/images/px20240813sm.jpg" /></p>
 
             <p id="linked-image-with-machine-alt">Image liée avec un alt de code machine :</p>
-            <p class="positive"><a href="./editable.htm"><img loading="lazy" alt="$700VIDEOSABOUTTURTLESALL2SECONDSLONG"
-                  src="/assets/images/px20240813sm.jpg"></a></p>
+            <p class="positive"><a href="./editable.htm"><img loading="lazy" alt="$700VIDEOSABOUTTURTLESALL2SECONDSLONG" src="/assets/images/px20240813sm.jpg" /></a></p>
 
             <p id="image-with-very-long-alt-text">Image avec un texte alt très long :</p>
 
             <p class="positive"><img loading="lazy" alt="Regardez ce petit chien. Ce petit chien est tellement heureux.
                 Ce petit chien est allé se promener et la promenade l'a mené à un lac où il y avait toutes sortes
-                d'odeurs fascinantes. Quelle journée incroyable pour ce petit chien."
-                src="/assets/images/px20240813sm.jpg"></p>
+                d'odeurs fascinantes. Quelle journée incroyable pour ce petit chien." src="/assets/images/px20240813sm.jpg" /></p>
 
             <p id="images-in-links-where-the-alt-text-may-be-describing-the-image-instead-of-the-link">Images dans des
               liens où le texte alt décrit peut-être l'image au lieu du lien</p>
 
             <p class="positive"><a href="https://www.youtube.com/watch?v=DLzxrzFCyOs">Ce lien contient du texte et une
-                image.<img loading="lazy" alt="Une jolie boîte grise" src="/assets/images/px20240813sm.jpg"></a></p>
+                image.<img loading="lazy" alt="Une jolie boîte grise" src="/assets/images/px20240813sm.jpg" /></a></p>
 
             <p id="images-in-links-decorative">Toute image liée (test désactivé par défaut)</p>
-            <p class="positive"><a href="https://www.youtube.com/watch?v=DLzxrzFCyOs"><img loading="lazy" alt="Bonjour"
-                  src="/assets/images/px20240813sm.jpg"></a></p>
+            <p class="positive"><a href="https://www.youtube.com/watch?v=DLzxrzFCyOs"><img loading="lazy" alt="Bonjour" src="/assets/images/px20240813sm.jpg" /></a></p>
 
             <p>Image dans une figure marquée comme décorative :</p>
             <figure class="positive">
-              <img loading="lazy" alt="" src="/assets/images/px20240813sm.jpg">
+              <img loading="lazy" alt src="/assets/images/px20240813sm.jpg" />
               <figcaption>La figcaption est présente.</figcaption>
             </figure>
 
             <p>Image dans une figure avec un alt identique à la figcaption :</p>
             <figure class="positive">
-              <img loading="lazy" alt="La figcaption est identique à l'alt" src="/assets/images/px20240813sm.jpg">
+              <img loading="lazy" alt="La figcaption est identique à l'alt" src="/assets/images/px20240813sm.jpg" />
               <figcaption>La figcaption est identique à l'alt</figcaption>
             </figure>
             <p>Image dans un carrousel sans alt :</p>
             <div class="positive">
-              <img loading="lazy" alt="" class="carousel" src="/assets/images/px20240813sm.jpg">
+              <img loading="lazy" alt class="carousel" src="/assets/images/px20240813sm.jpg" />
             </div>
           </section>
           <section id="contrast">
@@ -191,7 +184,7 @@
                 75%,#ccc),linear-gradient(45deg,#ccc 25%,#0000 25% 75%,#ccc 75%,#ccc)">Et incalculable.</p>
             </div>
             <div class="positive"><label>Champ avec un contraste insuffisant
-                <input class="form-text" type="text" style="color: #777;"></label></div>
+                <input class="form-text" type="text" style="color: #777;" /></label></div>
 
             <style>
               #unsupported-placeholder::placeholder {
@@ -201,7 +194,7 @@
 
             <label for="unsupported-placeholder">La couleur du placeholder ne peut pas être calculée</label>
             <div class="positive" style="background: transparent;"><input type="text" id="unsupported-placeholder"
-                placeholder="Rec2020 color space"></div>
+                placeholder="Rec2020 color space" /></div>
 
 
             <p>Graphique SVG avec un contraste insuffisant</p>
@@ -211,7 +204,7 @@
                 512"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
                 <path fill="#999" d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8
                   12.5-45.3 0L330.7 376C296.3 401.1 253.9 416 208 416 93.1 416 0 322.9 0 208S93.1 0 208 0 416 93.1 416
-                  208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
+                  208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" ></path>
               </svg></div>
 
             <p>Graphique SVG dont le contraste nécessite une vérification manuelle</p>
@@ -222,7 +215,7 @@
                 512"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
                 <path fill="color(rec2020 0.9 0.4 0.2)" d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5
                   32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376C296.3 401.1 253.9 416 208 416 93.1 416 0 322.9 0 208S93.1 0
-                  208 0 416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
+                  208 0 416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" ></path>
               </svg></div>
 
 
@@ -276,15 +269,13 @@
                 width: 3rem; border-bottom: 1px solid;"></a> Liens vides</p>
 
             <p id="links-titled-with-a-url">Liens libellés uniquement avec une URL :</p>
-            <p class="positive"><a
-                href="https://www.youtube.com/watch?v=DLzxrzFCyOs">https://www.youtube.com/watch?v=DLzxrzFCyOs</a></p>
+            <p class="positive"><a                 href="https://www.youtube.com/watch?v=DLzxrzFCyOs">https://www.youtube.com/watch?v=DLzxrzFCyOs</a></p>
 
             <p id="links-titled-with-a-symbol">Liens libellés uniquement avec des symboles :</p>
             <p class="positive"><a href="https://www.youtube.com/watch?v=DLzxrzFCyOs">↣</a></p>
 
             <p>Liens portant le même nom menant à des destinations différentes</p>
-            <p class="positive"><a href="https://www.youtube.com/watch?v=fjOeJssZX_Q">Tortues</a> <a
-                href="https://www.youtube.com/watch?v=cWppAbqm9I8">Tortues</a></p>
+            <p class="positive"><a href="https://www.youtube.com/watch?v=fjOeJssZX_Q">Tortues</a> <a                 href="https://www.youtube.com/watch?v=cWppAbqm9I8">Tortues</a></p>
 
             <p id="links-titled-with-doi">Liens libellés uniquement avec un numéro DOI :</p>
             <p class="positive"><a href="https://doi.org/10.1145/3493612.3520468">doi.org/10.1145/3493612.3520468</a>
@@ -301,7 +292,7 @@
                   512"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
                   <path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3
                     0L330.7 376C296.3 401.1 253.9 416 208 416 93.1 416 0 322.9 0 208S93.1 0 208 0 416 93.1 416 208zM208
-                    352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
+                    352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" ></path>
                 </svg></a></p>
 
             <p id="links-that-open-in-a-new-window-without-an-external-link-icon-or-text-warning">Liens qui s'ouvrent
@@ -333,31 +324,25 @@
             <p class="positive"><a href="www.google.com/" aria-label="has aria label">en savoir plus</a></p>
 
             <p>Image liée sans texte alt :</p>
-            <p class="positive"><a href="./editable.htm"><img loading="lazy" alt=""
-                  src="/assets/images/px20240813sm.jpg" class=""></a></p>
+            <p class="positive"><a href="./editable.htm"><img loading="lazy" alt src="/assets/images/px20240813sm.jpg" class /></a></p>
 
             <p>Image liée avec un texte alt imprononçable :</p>
-            <p class="positive"><a href="./editable.htm"><img loading="lazy" alt="'"
-                  src="/assets/images/px20240813sm.jpg" class=""></a></p>
+            <p class="positive"><a href="./editable.htm"><img loading="lazy" alt="'" src="/assets/images/px20240813sm.jpg" class /></a></p>
 
             <p>Image liée sans attribut alt :</p>
-            <p class="positive"><a href="./editable.htm"><img loading="lazy" src="/assets/images/px20240813sm.jpg"
-                  class=""></a></p>
+            <p class="positive"><a href="./editable.htm"><img loading="lazy" src="/assets/images/px20240813sm.jpg" class /></a></p>
 
             <p>Image liée sans attribut alt dans un lien avec du texte :</p>
-            <p class="positive"><a href="./editable.htm">Rechercher <img loading="lazy"
-                  src="/assets/images/px20240813sm.jpg" class=""></a></p>
+            <p class="positive"><a href="./editable.htm">Rechercher <img loading="lazy" src="/assets/images/px20240813sm.jpg" class /></a></p>
 
             <p>Image liée avec uniquement un nom de fichier comme texte alt :</p>
-            <p class="positive"><a href="./editable.htm"><img loading="lazy" alt="http://jpg.gif"
-                  src="/assets/images/px20240813sm.jpg">
+            <p class="positive"><a href="./editable.htm"><img loading="lazy" alt="http://jpg.gif" src="/assets/images/px20240813sm.jpg" />
               </a></p>
 
             <p>Image liée avec un texte alt anormalement long :</p>
             <p class="positive"><a href="./editable.htm"><img loading="lazy" alt="Regardez ce petit chien. Ce petit
                   chien est tellement heureux. Ce petit chien est allé se promener et la promenade l'a mené à un lac où
-                  il y avait toutes sortes d'odeurs fascinantes. Quelle journée incroyable pour ce petit chien."
-                  src="/assets/images/px20240813sm.jpg">
+                  il y avait toutes sortes d'odeurs fascinantes. Quelle journée incroyable pour ce petit chien." src="/assets/images/px20240813sm.jpg" />
               </a></p>
 
             <p>Liens internes brisés</p>
@@ -453,12 +438,12 @@
 
             <p>Champs avec un libellé invisible, demandant s'il y a aussi un libellé visible.</p>
             <div class="positive">
-              <input type="text" title="Email">
+              <input type="text" title="Email" />
             </div>
 
             <p>Champs avec uniquement un placeholder comme libellé, demandant s'il y a aussi un libellé visible.</p>
             <div class="positive">
-              <input type="text" placeholder="Email">
+              <input type="text" placeholder="Email" />
             </div>
 
             <div class="positive">
@@ -478,7 +463,7 @@
 
             <div class="positive">
               <p>Bouton de réinitialisation.</p>
-              <input class="btn btn-danger" type="reset">
+              <input class="btn btn-danger" type="reset" />
             </div>
 
             <p class="positive"><a href="./editable.htm" tabindex="2">Perturbation de l'ordre de tabulation</a></p>
@@ -498,60 +483,55 @@
   </main>
   <footer class="container col-lg-12 mx-auto pt-3 text-body-secondary text-center text-md-start">
     <div class="container">
-      <div class="footer-nav mt-5 pt-5 text-center"><a class="btn btn-primary btn-lg" href="/fr/">À propos</a> <a
-          class="btn btn-primary btn-lg" href="/fr/features/">Fonctionnalités</a> <a class="btn btn-dark btn-lg"
-          aria-current="page" href="/fr/demo/">Démo</a> <a class="btn btn-primary btn-lg" href="/fr/license/">Tarifs
-          et contributions</a></div>
-      <div class="footer">
-        <a href="https://github.com/itmaybejj/editoria11y"><svg xmlns="http://www.w3.org/2000/svg" width="20"
-            height="20" fill="currentColor" class="bi bi-git" viewBox="0 0 16 16">
-            <path
-              d="M15.698 7.287 8.712.302a1.03 1.03 0 0 0-1.457 0l-1.45 1.45 1.84 1.84a1.223 1.223 0 0 1 1.55 1.56l1.773 1.774a1.224 1.224 0 0 1 1.267 2.025 1.226 1.226 0 0 1-2.002-1.334L8.58 5.963v4.353a1.226 1.226 0 1 1-1.008-.036V5.887a1.226 1.226 0 0 1-.666-1.608L5.093 2.465l-4.79 4.79a1.03 1.03 0 0 0 0 1.457l6.986 6.986a1.03 1.03 0 0 0 1.457 0l6.953-6.953a1.03 1.03 0 0 0 0-1.457" />
-          </svg> <strong>Bibliothèque</strong></a>
-        <a href="https://github.com/itmaybejj/editoria11y/discussions"><svg xmlns="http://www.w3.org/2000/svg"
-            width="20" height="20" fill="currentColor" class="bi bi-chat-right-heart-fill" viewBox="0 0 16 16">
-            <path
-              d="M16 2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h9.586a1 1 0 0 1 .707.293l2.853 2.853a.5.5 0 0 0 .854-.353zM8 3.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132" />
-          </svg> <strong>Forum</strong></a>
-        <a href="https://github.com/itmaybejj/editoria11y/issues"><svg xmlns="http://www.w3.org/2000/svg" width="20"
-            height="20" fill="currentColor" class="bi bi-patch-plus-fill" viewBox="0 0 16 16">
-            <path
-              d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01zM8.5 6v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 1 0" />
-          </svg> <strong>Problèmes</strong></a>
-        <a href="/fr/contacts"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-            class="bi bi-person-lines-fill" height="24" width="24" viewBox="0 0 16 18">
-            <path
-              d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z">
-            </path>
-          </svg> <strong>Contact</strong></a>
+      <div class="footer-nav text-center">
+        <a class="btn btn-primary btn-lg" data-slug="about" href="/fr/">À propos</a>
+        <a class="btn btn-primary btn-lg" data-slug="features" href="/fr/fonctionnalites/">Fonctionnalités</a>
+        <a class="btn btn-primary btn-lg" data-slug="demo" href="/fr/demo/">Démo</a>
+        <a class="btn btn-primary btn-lg" data-slug="license" href="/fr/tarifs/">Tarifs et contributions</a>
       </div>
-      <div class="col col-12 subfooter">
-        <a href="/fr/privacy-policy">Politique de confidentialité</a>
-        <a href="/fr/cookie-policy">Politique relative aux cookies</a>
-        <a href="/fr/terms-of-use">Conditions d'utilisation</a>
-        <a href="/fr/legal-notice">Mentions légales</a>
-        &copy; 2026 Editoria11y LLC
+      <div class="row footer">
+        <div class="col col-3">
+          <a href="https://github.com/itmaybejj/editoria11y"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+              height="20" fill="currentColor" class="bi bi-git" viewBox="0 0 16 16">
+              <path
+                d="M15.698 7.287 8.712.302a1.03 1.03 0 0 0-1.457 0l-1.45 1.45 1.84 1.84a1.223 1.223 0 0 1 1.55 1.56l1.773 1.774a1.224 1.224 0 0 1 1.267 2.025 1.226 1.226 0 0 1-2.002-1.334L8.58 5.963v4.353a1.226 1.226 0 1 1-1.008-.036V5.887a1.226 1.226 0 0 1-.666-1.608L5.093 2.465l-4.79 4.79a1.03 1.03 0 0 0 0 1.457l6.986 6.986a1.03 1.03 0 0 0 1.457 0l6.953-6.953a1.03 1.03 0 0 0 0-1.457" />
+            </svg> <strong>Bibliothèque</strong></a>
+        </div>
+        <div class="col col-3">
+          <a href="https://github.com/itmaybejj/editoria11y/discussions"><svg xmlns="http://www.w3.org/2000/svg"
+              width="20" height="20" fill="currentColor" class="bi bi-chat-right-heart-fill" viewBox="0 0 16 16">
+              <path
+                d="M16 2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h9.586a1 1 0 0 1 .707.293l2.853 2.853a.5.5 0 0 0 .854-.353zM8 3.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132" />
+            </svg> <strong>Forum</strong></a>
+        </div>
+        <div class="col col-3">
+          <a href="https://github.com/itmaybejj/editoria11y/issues"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+              height="20" fill="currentColor" class="bi bi-patch-plus-fill" viewBox="0 0 16 16">
+              <path
+                d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01zM8.5 6v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 1 0" />
+            </svg> <strong>Problèmes</strong></a>
+        </div>
+        <div class="col col-3">
+          <a href="/fr/contact/"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+              class="bi bi-person-lines-fill" height="24" width="24" viewBox="0 0 16 18">
+              <path
+                d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z">
+              </path>
+            </svg> <strong>Contact</strong></a>
+        </div>
+        <div class="col col-12 subfooter">
+          <a href="/fr/confidentialite/">Politique de confidentialité</a>
+          <a href="/fr/cookies/">Politique relative aux cookies</a>
+          <a href="/fr/conditions/">Conditions d'utilisation</a>
+          <a href="/fr/mentions-legales/">Mentions légales</a>
+          <span>&copy; 2026 Editoria11y LLC</span>
+        </div>
       </div>
     </div>
   </footer>
-
+  <script src="/assets/bootstrap/js/bootstrap.bundle.min.js" class="astro-vvvwv3sm"></script>
   <script src="/assets/lang/i18n.js"></script>
   <script src="/assets/theme.js"></script>
-  <script src="/assets/bootstrap/js/bootstrap.bundle.min.js" class="astro-vvvwv3sm"></script>
-
-  <script src="../../assets/tinymce/tinymce.min.js"></script>
-  <script>
-    tinymce.init({
-      selector: '#ed11y-demo',
-      license_key: 'gpl',
-      plugins: 'image lists table',
-      toolbar: 'blocks bold italic underline strikethrough blockquote  image numlist indent outdent bullist table tabledelete',
-      inline: true,
-      toolbar_persist: true,
-    });
-  </script>
-  <link rel="stylesheet" media="all" href="/assets/ed11y/css/editoria11y.min.css">
-  <script src="/assets/demo.js" type="module"></script>
 </body>
 
 </html>

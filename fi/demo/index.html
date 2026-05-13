@@ -1,0 +1,515 @@
+<!doctype html>
+<html lang="fi" data-bs-theme="light">
+
+<head>
+  <link rel="icon" type="image/png" href="/assets/favicons/favicon-512x512.png" sizes="512x512" />
+  <link rel="icon" type="image/png" href="/assets/favicons/favicon-192x192.png" sizes="192x192" />
+  <link rel="icon" type="image/png" href="/assets/favicons/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/assets/favicons/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <meta charset="utf-8" />
+  <title>Demo — Editoria11y</title>
+  <link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="/assets/theme.css" rel="stylesheet" />
+  <meta name="theme-color" content="#712cf9" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-md">
+      <div class="container col-sm-12 mx-auto">
+        <a href="/fi/" class="d-flex align-items-center  navbar-brand">
+          <svg class="logo-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+            viewBox="-.75 -3.5 10.1699 19.1777">
+            <path fill="currentColor"
+              d="M3.7031,10.5527c-.3633-.6562-.6426-1.1387-.8379-1.4473l-.3105-.4863-.2344-.3574c-.5117-.7969-1.0449-1.4551-1.5996-1.9746.3164-.2617.6113-.3926.8848-.3926.3359,0,.6348.123.8965.3691s.5918.7148.9902,1.4062c.4531-1.4727,1.0293-2.8691,1.7285-4.1895.3867-.7188.7314-1.2021,1.0342-1.4502s.7041-.3721,1.2041-.3721c.2656,0,.5938.041.9844.123-1.0039.8086-1.8066,1.7695-2.4082,2.8828s-1.3789,3.0762-2.332,5.8887Z" />
+          </svg> Editoria<span style="margin-left: -1px;">11</span>y
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar" aria-label="Vaihda navigointia">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Editoria11y</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Sulje"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 nav-pills">
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div id="lang-picker"></div>
+  </header>
+  <main class="container col-lg-12 mx-auto py-5">
+    <div class="row docs">
+      <div class="col-12 col-md-5 col-lg-4 mb-5">
+        <div id="on-this-page" class="list-group ms-2 ms-lg-5 position-sticky top-0 pt-3">
+        </div>
+      </div>
+      <div class="col-12 col-md-7 col-lg-8 pt-3" data-bs-spy="scroll" data-bs-target="#on-this-page"
+        data-bs-smooth-scroll="true" tabindex="0">
+
+
+
+        <h1 class="pt-4" id="demo">Demo</h1>
+        <p class="fs-5">Katso <a href="https://youtu.be/uYvNYPg38nU?si=6YANYrJpVzNAJYDl&t=260">videoesittely
+            tarkistimen historiasta ja ominaisuuksista</a>,
+          tai kokeile muokata alla olevaa demosisältöä, avata ja hylätä varoituksia,
+          ja käytä työkalupalkkia <span style="text-wrap: nowrap;">(<img src="/assets/images/3x-toolbar" class="inline-block" style="width: 5rem; height: auto;" alt="Kuvakaappaus Editoria11y-työkalupalkista, jossa näkyy 4 virhettä." width="97" height="50" loading="lazy" />)</span> otsikkorakenteen katselemiseen. Tämä demo sisältää sekä ydintestit että CSA-paketin.</p>
+        <p class="fs-5 mb-5 pb-5">Tämä demo käyttää TinyMCE-editoria. Editoria11y on yhteensopiva useimpien tekstieditoreiden kanssa, ja
+          sillä on valmiit integraatiot CKEditorille ja Gutenbergille WordPressissä ja Drupalissa.</p>
+        <div id="ed11y-demo" class="p-5" contenteditable="">
+          <section id="headings">
+
+            <h3 class="pt-1">Otsikot</h3>
+
+            <p>Tämä otsikko ohitti tason:</p>
+            <div class="positive">
+              <h6 id="this-h6-should-have-been-an-h3">Hups</h6>
+            </div>
+
+            <p>Tässä otsikossa ei ole lainkaan tekstiä:</p>
+            <div class="positive">
+              <h4 class="empty-example"> </h4>
+            </div>
+
+            <p>Tämä lyhyt lainaus saattaa olla otsikko:</p>
+            <div class="positive">
+              <blockquote>Olen väärä otsikko</blockquote>
+            </div>
+
+            <p>Tämä kaikki-lihavoitu kappale saattaa olla otsikko:</p>
+            <p class="positive"><strong>Olen väärä otsikko</strong></p>
+
+            <p>Tämä otsikko on todella pitkä:</p>
+            <div class="positive">
+              <h4>Otsikot ja alaotsikot luovat navigoitavan sisällysluettelon apuvälineille. Numerot
+                osoittavat sisennetyn sisäkkäissuhteen. Erittäin pitkät otsikot tarkoittavat todennäköisesti,
+                että tekijä sanoo liian paljon otsikossa.</h4>
+            </div>
+
+          </section>
+
+
+          <section id="text-alternatives">
+            <h3 data-section="text-alternatives">Kuvien tekstivaihtoehdot</h3>
+
+            <p>Tämä otsikko on tehty tekstikuvasta ilman alt-tekstiä:</p>
+            <div class="positive">
+              <h4><img loading="lazy" alt src="/assets/images/px20240813sm.jpg" /></h4>
+            </div>
+
+            <p>Kuva ilman alt-attribuuttia lainkaan:</p>
+            <p class="positive"><img loading="lazy" src="/assets/images/px20240813sm.jpg" /></p>
+
+            <p>Kuva, jolla on virheellinen alt-attribuutti, esim. <code                 class="language-plaintext highlighter-rouge">alt="'"</code></p>
+
+            <p class="positive"><img loading="lazy" alt="'" src="/assets/images/px20240813sm.jpg" /></p>
+
+            <p id="image-with-a-filename-as-an-alt">Kuva, jonka alt-tekstinä on tiedostonimi</p>
+
+            <p class="positive"><img loading="lazy" alt="filename.jpg" src="/assets/images/px20240813sm.jpg" /></p>
+
+            <p id="image-with-redundant-text-in-its-alt">Kuva, jonka alt-tekstissä on tarpeettomia sanoja, kuten “kuva:”</p>
+
+            <p class="positive"><img loading="lazy" alt="Image of a dog." src="/assets/images/px20240813sm.jpg" /></p>
+
+            <p id="linked-image-with-redundant-text-in-its-alt">Linkitetty kuva, jonka alt-tekstissä on tarpeettomia sanoja,
+              kuten “kuva:”</p>
+
+            <p class="positive"><a href="./editable.htm"><img loading="lazy" alt="Image of a dog." src="/assets/images/px20240813sm.jpg" /></a></p>
+
+            <p id="image-with-placeholder-alt">Kuva, jolla on paikkamerkkiteksti alt-tekstinä:</p>
+            <p class="positive"><img loading="lazy" alt="TBD" src="/assets/images/px20240813sm.jpg" /></p>
+
+            <p id="linked-image-with-placeholder-alt"><strong>Linkitetty</strong> kuva, jolla on paikkamerkkiteksti alt-tekstinä:</p>
+            <p class="positive"><a href="./editable.htm"><img loading="lazy" alt="TBD" src="/assets/images/px20240813sm.jpg" /></a></p>
+
+            <p id="image-with-machine-alt">Kuva, jonka alt-tekstinä on konekoodi:</p>
+            <p class="positive"><img loading="lazy" alt="$700VIDEOSABOUTTURTLESALL2SECONDSLONG" src="/assets/images/px20240813sm.jpg" /></p>
+
+            <p id="linked-image-with-machine-alt">Linkitetty kuva, jonka alt-tekstinä on konekoodi:</p>
+            <p class="positive"><a href="./editable.htm"><img loading="lazy" alt="$700VIDEOSABOUTTURTLESALL2SECONDSLONG" src="/assets/images/px20240813sm.jpg" /></a></p>
+
+            <p id="image-with-very-long-alt-text">Kuva, jonka alt-teksti on erittäin pitkä:</p>
+
+            <p class="positive"><img loading="lazy" alt="Look at this doggy. This doggy is so happy. This doggy got to go on a walk and the walk went to a lake and there were all kinds of fascinating smells. What an amazing day this doggy had." src="/assets/images/px20240813sm.jpg" /></p>
+
+            <p id="images-in-links-where-the-alt-text-may-be-describing-the-image-instead-of-the-link">Kuvia linkeissä,
+              joissa alt-teksti saattaa kuvailla kuvaa linkin sijaan</p>
+
+            <p class="positive"><a href="https://www.youtube.com/watch?v=DLzxrzFCyOs">Tässä linkissä on tekstiä ja
+                kuva.<img loading="lazy" alt="A lovely gray box" src="/assets/images/px20240813sm.jpg" /></a></p>
+
+            <p id="images-in-links-decorative">Mikä tahansa linkitetty kuva (testi oletuksena pois käytöstä)</p>
+            <p class="positive"><a href="https://www.youtube.com/watch?v=DLzxrzFCyOs"><img loading="lazy" alt="Hello there" src="/assets/images/px20240813sm.jpg" /></a></p>
+
+            <p>Kuva koristeellisena merkityssä figure-elementissä:</p>
+            <figure class="positive">
+              <img loading="lazy" alt src="/assets/images/px20240813sm.jpg" />
+              <figcaption>Figcaption on läsnä.</figcaption>
+            </figure>
+
+            <p>Kuva figure-elementissä, jolla on sama alt-teksti kuin figcaptionilla:</p>
+            <figure class="positive">
+              <img loading="lazy" alt="Figcaption on sama kuin alt" src="/assets/images/px20240813sm.jpg" />
+              <figcaption>Figcaption on sama kuin alt</figcaption>
+            </figure>
+            <p>Kuva karusellissa ilman alt-tekstiä:</p>
+            <div class="positive">
+              <img loading="lazy" alt class="carousel" src="/assets/images/px20240813sm.jpg" />
+            </div>
+          </section>
+          <section id="contrast">
+            <h3 data-section="contrast">Kontrasti</h3>
+            <p>Lukukelvoton värikombinaatio:</p>
+            <div class="positive">
+              <p style="background: #ccc; color: #ddd;">Erittäin luettava.</p>
+            </div>
+            <p>Väri vaatii manuaalisen tarkistuksen:</p>
+            <div class="positive">
+              <p style="background: linear-gradient(45deg,#ccc 25%,#0000 25% 75%,#ccc 75%,#ccc),linear-gradient(45deg,#ccc 25%,#0000 25% 75%,#ccc 75%,#ccc)">
+                Ja laskematon.</p>
+            </div>
+            <div class="positive"><label>Input with low contrast
+                <input class="form-text" type="text" style="color: #777;" /></label></div>
+
+            <style>
+              #unsupported-placeholder::placeholder {
+                color: color(rec2020 0.9 0.4 0.2);
+              }
+            </style>
+
+            <label for="unsupported-placeholder">Color of placeholder cannot be calculated</label>
+            <div class="positive" style="background: transparent;"><input type="text" id="unsupported-placeholder"
+                placeholder="Rec2020 color space" /></div>
+
+
+            <p>SVG-grafiikka ilman riittävää kontrastia</p>
+            <div class="positive"><svg style="width: 16px; height: 16px;" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                <path fill="#999"
+                  d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376C296.3 401.1 253.9 416 208 416 93.1 416 0 322.9 0 208S93.1 0 208 0 416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" ></path>
+              </svg></div>
+
+            <p>SVG-grafiikka, jonka kontrasti vaatii manuaalisen tarkistuksen</p>
+            <div class="positive"
+              style="background: linear-gradient(45deg,#ccc 45%,#0000 45% 75%,#ccc 75%,#ccc),linear-gradient(145deg,#ccc 45%,#0000 45% 75%,#ccc 75%,#ccc)">
+              <svg style="width: 16px; height: 16px;" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                <path fill="color(rec2020 0.9 0.4 0.2)"
+                  d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376C296.3 401.1 253.9 416 208 416 93.1 416 0 322.9 0 208S93.1 0 208 0 416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" ></path>
+              </svg>
+            </div>
+
+
+          </section>
+          <section id="embed-media">
+            <h3 data-section="embed-media">Upotukset & media</h3>
+
+            <p>Video merkitty manuaalista tekstitarkistusta vaativaksi:</p>
+            <div class="positive" style="width: 560px; aspect-ratio: 560 / 315; max-width: 100%; cursor: not-allowed;">
+              <iframe width="560" height="315" inert=""
+                src="https://www.youtube-nocookie.com/embed/QGsevnbItdU?si=W_b2i2o_n5v1ArvA"
+                style="width: 560px; aspect-ratio: 560 / 315; max-width: 100%; cursor: not-allowed;"
+                title="YouTube: How it's done video. Playback is disabled." sandbox="allow-scripts allow-same-origin"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="origin" allowfullscreen></iframe>
+              <div><small><em>Playback disabled to prevent cookies.</em></small></div>
+            </div>
+
+            <p>Ääni tarvitsee tekstityksen:</p>
+            <div class="positive">
+              <div style="border: 1px solid #444; background: #ccc; width: 320px; height: 60px;"><audio                   style="height: 60px;"></audio>
+              </div>
+            </div>
+
+            <p>Iframe, josta puuttuu otsikko ja joka myös vaatii manuaalisen tarkistuksen:</p>
+            <div class="positive">
+              <iframe data-needs-src=""></iframe>
+            </div>
+
+            <p>Iframe, johon ei voi siirtyä näppäimistöllä:</p>
+            <div class="positive">
+              <iframe title="example" sandbox="" tabindex="-1" data-needs-src=""></iframe>
+            </div>
+
+            <p>Sisäkkäiset interaktiiviset komponentit</p>
+            <div class="positive">
+              <details>
+                <summary>Akordeon</summary>
+                <details>
+                  <summary>Akordeon</summary>Surprise!
+                </details>
+              </details>
+            </div>
+          </section>
+          <section id="meaningful-links">
+            <h3 data-section="meaningful-links">Merkitykselliset linkit</h3>
+
+            <p id="links-with-no-text-at-all">Linkit ilman lainkaan tekstiä</p>
+            <p class="positive"><a href="https://www.youtube.com/watch?v=DLzxrzFCyOs"
+                style="display: inline-block; width: 3rem; border-bottom: 1px solid;"></a> Tyhjät linkit</p>
+
+            <p id="links-titled-with-a-url">Vain URL-osoitteella merkityt linkit:</p>
+            <p class="positive"><a                 href="https://www.youtube.com/watch?v=DLzxrzFCyOs">https://www.youtube.com/watch?v=DLzxrzFCyOs</a></p>
+
+            <p id="links-titled-with-a-symbol">Vain symboleilla merkityt linkit:</p>
+            <p class="positive"><a href="https://www.youtube.com/watch?v=DLzxrzFCyOs">↣</a></p>
+
+            <p>Samannimisillä linkeillä on eri kohteet</p>
+            <p class="positive"><a href="https://www.youtube.com/watch?v=fjOeJssZX_Q">Kilpikonnat</a> <a                 href="https://www.youtube.com/watch?v=cWppAbqm9I8">Kilpikonnat</a></p>
+
+            <p id="links-titled-with-doi">Vain DOI-numerolla merkityt linkit:</p>
+            <p class="positive"><a href="https://doi.org/10.1145/3493612.3520468">doi.org/10.1145/3493612.3520468</a>
+            </p>
+
+            <p id="links-titled-with-click">Merkityksettömillä otsikoilla varustetut linkit:</p>
+            <p class="positive"><a href="https://www.youtube.com/watch?v=DLzxrzFCyOs"
+                title="https://www.youtube.com/watch?v=DLzxrzFCyOs">Klikkaa tästä</a></p>
+
+            <p id="links-titled-with-empty">Linkitetyt kuvakkeet ilman tekstivaihtoehtoja:</p>
+            <p class="positive"><a href="https://www.youtube.com/watch?v=DLzxrzFCyOs"><svg                   style="width: 16px; height: 16px;" xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 512 512"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                  <path                     d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376C296.3 401.1 253.9 416 208 416 93.1 416 0 322.9 0 208S93.1 0 208 0 416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" ></path>
+                </svg></a></p>
+
+            <p id="links-that-open-in-a-new-window-without-an-external-link-icon-or-text-warning">Linkit, jotka avautuvat
+              uudessa ikkunassa ilman ulkoisen linkin kuvaketta tai tekstivaroitusta</p>
+
+            <p class="positive"><a href="https://www.youtube.com/watch?v=DLzxrzFCyOs" target="_blank">Varoitus avautuu-uudessa-ikkunassa
+                -testille.</a></p>
+
+            <p id="links-to-PDF">Linkit PDF-tiedostoihin</p>
+            <p class="positive"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ#.pdf" class="">Hauskaa.</a></p>
+
+            <p id="links-to-doc">Linkit muihin asiakirjoihin</p>
+            <p class="positive"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ#.doc" class="">Väärä doc-linkki.</a>
+            </p>
+
+            <p id="links-redundant">Linkit, joilla on turhat title-attribuutit</p>
+            <p class="positive"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" title="Vie kursori tänne">Vie kursori tänne</a></p>
+
+            <p>Linkit, joilla on attribuutteja, jotka poistavat ne tab-indeksistä:</p>
+            <p class="positive"><a href="./editable.htm" aria-hidden="true">Aria-hidden-linkit ilman negatiivista
+                tab-indeksiä.</a></p>
+
+            <p>Linkit aria-labelledby-attribuuteilla elementteihin, joissa ei ole tekstiä:</p>
+            <p class="positive"><a href="./editable.htm" id="oops" aria-labelledby="oops"></a></p>
+
+            <p>Linkit, joiden aria-merkinnässä on yleisiä sanoja:</p>
+            <p class="positive"><a href="www.google.com/" aria-label="has aria label">lue lisää</a></p>
+
+            <p>Linkitetty kuva ilman alt-tekstiä:</p>
+            <p class="positive"><a href="./editable.htm"><img loading="lazy" alt src="/assets/images/px20240813sm.jpg" class /></a></p>
+
+            <p>Linkitetty kuva, jonka alt-teksti ei ole lausuttavissa:</p>
+            <p class="positive"><a href="./editable.htm"><img loading="lazy" alt="'" src="/assets/images/px20240813sm.jpg" class /></a></p>
+
+            <p>Linkitetty kuva ilman alt-teksti-attribuuttia:</p>
+            <p class="positive"><a href="./editable.htm"><img loading="lazy" src="/assets/images/px20240813sm.jpg" class /></a></p>
+
+            <p>Linkitetty kuva ilman alt-teksti-attribuuttia tekstiä sisältävässä linkissä:</p>
+            <p class="positive"><a href="./editable.htm">Haku <img loading="lazy" src="/assets/images/px20240813sm.jpg" class /></a></p>
+
+            <p>Linkitetty kuva, jonka alt-tekstinä on pelkkä tiedostonimi:</p>
+            <p class="positive"><a href="./editable.htm"><img loading="lazy" alt="http://jpg.gif" src="/assets/images/px20240813sm.jpg" />
+              </a></p>
+
+            <p>Linkitetty kuva, jonka alt-teksti on epäilyttävän pitkä:</p>
+            <p class="positive"><a href="./editable.htm"><img loading="lazy" alt="Look at this doggy. This doggy is so happy. This doggy got to go on a walk and the walk went to a lake and there were all kinds of fascinating smells. What an amazing day this doggy had." src="/assets/images/px20240813sm.jpg" />
+              </a></p>
+
+            <p>Rikkinäiset sivun sisäiset linkit</p>
+            <p class="positive">
+              <a href="#oh-no">Tällaista ID:tä ei ole.</a>
+            </p>
+
+            <p>Linkit kehityspalvelimelle</p>
+            <p class="positive">
+              <a href="https://tugboatqa.com">Hups</a>
+            </p>
+
+            <p>Päällekkäiset ankkurit</p>
+            <p class="positive"><a id="dupe" href="#dupe">Ankkuri 1</a> <a id="dupe" href="#dupe">Ankkuri 2</a></p>
+          </section>
+          <section>
+            <h3 id="table-tests">Taulukot</h3>
+
+            <p id="tables-without-valid-headers">Taulukot ilman voimassa olevia otsikoita</p>
+
+            <table class="positive">
+              <tbody>
+                <tr>
+                  <td>Taulukko ilman TH-otsikkoa on virheellinen</td>
+                  <td class="positive">
+                    <h4>Outline-otsikot eivät kelpaa</h4>
+                  </td>
+                  <td class="negative">
+                    <p><strong>Poista käytöstä sisältöotsikkotesti taulukoiden sisällä</strong></p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <table>
+              <thead>
+                <tr>
+                  <th class="positive"></th>
+                  <th class="negative">Tyhjät otsikot</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="negative">
+                  <th>Löysin</th>
+                  <td>700 videota kilpikonnista</td>
+                </tr>
+                <tr class="negative">
+                  <th>Kukin</th>
+                  <td>2 sekuntia pitkä</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+          <section id="legibility">
+            <h3 data-section="legibility">Luettavuus</h3>
+
+            <div class="positive">
+              <p>USEITA PERÄKKÄISIÄ SANOJA ISOILLA KIRJAIMILLA LAUKAISEE MANUAALISEN TARKISTUSVAROITUKSEN.</p>
+            </div>
+
+            <p class="positive"><u>Alleviivattu teksti</u></p>
+
+            <p class="positive"><em>Pieni kursivointi on hyväksyttävää, mutta suuret lohkot korostettua tekstiä eivät ole kovin
+                luettavia. Pieni määrä on tietenkin hyväksyttävää, mutta on rajansa, ja kokonainen kappale on aivan
+                liikaa. Tämä esimerkiksi on kokonainen kappale. Melko vaikea lukea, eikö olekin? Mutta tämä testi ei
+                laukea ennen kuin se on näin pitkä, joten sinun ei pitäisi nähdä vääriä positiivisia sisällössäsi,
+                ellet kirjoita säännöllisesti näin pitkiä kappaleita.</em></p>
+
+            <p class="positive" style="text-align: justify;">Tasattu teksti</p>
+
+            <p class="positive">Liiallinen yläindeksi tai alaindeksi; <sub>alaindeksiä tulisi käyttää pieniin viitteisiin
+                ja alaviitteisiin, ei kokonaisiin lauseisiin tai kappaleisiin.</sub></p>
+
+            <p class="positive"><span style="font-size: 10px;">Pikkuiset fontit</span></p>
+
+            <div class="positive">
+              <p>* Väärät listat yleisiä merkkejä käyttäen,</p>
+              <p>* kirjaimia, numeroita ja emojeja.</p>
+            </div>
+
+            <div class="positive">
+              <li>Puuttuva UL-tunniste</li>
+            </div>
+          </section>
+
+          <section id="form-elements">
+            <h3 data-section="form-elements">Lomakkeet</h3>
+
+            <p>Painike ilman merkintää</p>
+            <div class="positive">
+              <button class="btn btn-primary p-3 pt-4"></button>
+            </div>
+
+            <p>Kentät, joilla on vain piilotettu merkintä — tarkistin kysyy, onko myös näkyvä merkintä.</p>
+            <div class="positive">
+              <input type="text" title="Email" />
+            </div>
+
+            <p>Kentät, joilla on vain paikkamerkki merkintänä — tarkistin kysyy, onko myös näkyvä merkintä.</p>
+            <div class="positive">
+              <input type="text" placeholder="Email" />
+            </div>
+
+            <div class="positive">
+              <p>Painike, jolla on saavutettava merkintä, joka eroaa näkyvästä merkinnästä.</p>
+              <button class="btn btn-primary" aria-label="bye">Hei</button>
+            </div>
+
+            <div class="positive">
+              <p>Painike, jolla on virheellinen aria-labelledby-attribuutti.</p>
+              <button class="btn btn-primary" aria-labelledby="bye">Hei</button>
+            </div>
+
+            <div class="positive">
+              <p>Painike, jolla on turha merkintä.</p>
+              <button class="btn btn-primary">Paina tätä painiketta</button>
+            </div>
+
+            <div class="positive">
+              <p>Nollaa-painike.</p>
+              <input class="btn btn-danger" type="reset" />
+            </div>
+
+            <p class="positive"><a href="./editable.htm" tabindex="2">Tab-indeksin sekoittaminen</a></p>
+          </section>
+
+
+
+
+
+
+        </div>
+      </div>
+    </div>
+
+  </main>
+  <footer class="container col-lg-12 mx-auto pt-3 text-body-secondary text-center text-md-start">
+    <div class="container">
+      <div class="footer-nav text-center">
+        <a class="btn btn-primary btn-lg" data-slug="about" href="/fi/">Tietoa</a>
+        <a class="btn btn-primary btn-lg" data-slug="features" href="/fi/ominaisuudet/">Ominaisuudet</a>
+        <a class="btn btn-primary btn-lg" data-slug="demo" href="/fi/demo/">Demo</a>
+        <a class="btn btn-primary btn-lg" data-slug="license" href="/fi/hinnat/">Hinnat ja tuki</a>
+      </div>
+      <div class="row footer">
+        <div class="col col-3">
+          <a href="https://github.com/itmaybejj/editoria11y"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+              height="20" fill="currentColor" class="bi bi-git" viewBox="0 0 16 16">
+              <path
+                d="M15.698 7.287 8.712.302a1.03 1.03 0 0 0-1.457 0l-1.45 1.45 1.84 1.84a1.223 1.223 0 0 1 1.55 1.56l1.773 1.774a1.224 1.224 0 0 1 1.267 2.025 1.226 1.226 0 0 1-2.002-1.334L8.58 5.963v4.353a1.226 1.226 0 1 1-1.008-.036V5.887a1.226 1.226 0 0 1-.666-1.608L5.093 2.465l-4.79 4.79a1.03 1.03 0 0 0 0 1.457l6.986 6.986a1.03 1.03 0 0 0 1.457 0l6.953-6.953a1.03 1.03 0 0 0 0-1.457" />
+            </svg> <strong>Kirjasto</strong></a>
+        </div>
+        <div class="col col-3">
+          <a href="https://github.com/itmaybejj/editoria11y/discussions"><svg xmlns="http://www.w3.org/2000/svg"
+              width="20" height="20" fill="currentColor" class="bi bi-chat-right-heart-fill" viewBox="0 0 16 16">
+              <path
+                d="M16 2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h9.586a1 1 0 0 1 .707.293l2.853 2.853a.5.5 0 0 0 .854-.353zM8 3.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132" />
+            </svg> <strong>Foorumi</strong></a>
+        </div>
+        <div class="col col-3">
+          <a href="https://github.com/itmaybejj/editoria11y/issues"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+              height="20" fill="currentColor" class="bi bi-patch-plus-fill" viewBox="0 0 16 16">
+              <path
+                d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01zM8.5 6v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 1 0" />
+            </svg> <strong>Ongelmat</strong></a>
+        </div>
+        <div class="col col-3">
+          <a href="/fi/yhteystiedot/"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+              class="bi bi-person-lines-fill" height="24" width="24" viewBox="0 0 16 18">
+              <path
+                d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z">
+              </path>
+            </svg> <strong>Yhteystiedot</strong></a>
+        </div>
+        <div class="col col-12 subfooter">
+          <a href="/fi/tietosuoja/">Tietosuojakäytäntö</a>
+          <a href="/fi/evasteet/">Evästekäytäntö</a>
+          <a href="/fi/kayttoehdot/">Käyttöehdot</a>
+          <a href="/fi/oikeudellinen-ilmoitus/">Oikeudellinen ilmoitus</a>
+          <span>&copy; 2026 Editoria11y LLC</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="/assets/bootstrap/js/bootstrap.bundle.min.js" class="astro-vvvwv3sm"></script>
+  <script src="/assets/lang/i18n.js"></script>
+  <script src="/assets/theme.js"></script>
+</body>
+
+</html>

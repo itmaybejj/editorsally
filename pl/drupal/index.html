@@ -9,10 +9,9 @@
   <link rel="shortcut icon" href="/favicon.ico" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
   <meta charset="utf-8" />
-  <title>Drupal CSA Docs — Editoria11y</title>
+  <title>Editoria11y dla Drupala — Editoria11y</title>
   <link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
   <link href="/assets/theme.css" rel="stylesheet" />
-  <link href="/assets/prism/prism.css" rel="stylesheet" />
   <meta name="theme-color" content="#712cf9" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -34,7 +33,7 @@
         </button>
         <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
           <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Editora11y</h5>
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Editoria11y</h5>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Zamknij"></button>
           </div>
           <div class="offcanvas-body">
@@ -47,15 +46,15 @@
     <div id="lang-picker"></div>
   </header>
   <main class="container col-lg-12 mx-auto py-5">
-    <div class="row docs">
+    
       <div class="col-12 col-md-5 col-lg-4 mb-5">
         <div id="on-this-page" class="list-group ms-2 ms-lg-5 position-sticky top-0 pt-3">
         </div>
       </div>
       <div class="col-12 col-md-7 col-lg-8 pt-3">
-        <div data-bs-spy="scroll" data-bs-target="#on-this-page" data-bs-smooth-scroll="true">
+        </div>
           <h1>Editoria11y dla Drupala</h1>
-          <section id="features">
+          
             <h2 class="pt-3">Podstawowe funkcje</h2>
 
             <p class="fs-6">Moduł Drupal łączy bibliotekę narzędzia sprawdzającego z zapleczem redakcyjnym i dodaje
@@ -63,8 +62,7 @@
 
             <figure class="figure my-4 row">
               <div class="col-lg-8">
-                <img loading="lazy" src="/assets/images/3x-editing.png" class="rounded border figure-img img-fluid"
-                  height="1088" width="2237" alt="Edytor Drupal z podpowiedziami inline" />
+                <img loading="lazy" src="/assets/images/3x-editing.png" class="rounded border figure-img img-fluid" height="1088" width="2237" alt="Edytor Drupal z podpowiedziami inline" />
               </div>
               <figcaption class="figure-caption col-lg-4">Problemy są wykrywane zarówno przy ładowaniu strony, jak
                 i w trakcie pisania w CKEditor i Gutenberg.</figcaption>
@@ -72,9 +70,7 @@
 
             <figure class="figure my-4 row">
               <div class="col-lg-8">
-                <img loading="lazy" src="/assets/images/3x-generic-tip.png" class="rounded border figure-img img-fluid"
-                  height="798" width="1278"
-                  alt="Podpowiedź wskazująca, że link ma nazwę wyłącznie &quot;kliknij tutaj&quot;." />
+                <img loading="lazy" src="/assets/images/3x-generic-tip.png" class="rounded border figure-img img-fluid" height="798" width="1278" alt="Podpowiedź wskazująca, że link ma nazwę wyłącznie &quot;kliknij tutaj&quot;." />
               </div>
               <figcaption class="figure-caption col-lg-4">Podpowiedzi zyskują przyciski umożliwiające przejście do
                 edytora, zignorowanie powiadomienia (dla aktywnego użytkownika) lub oznaczenie go jako OK (dla
@@ -83,13 +79,11 @@
               </figcaption>
             </figure>
 
-            <figure class="figure my-4 row">
+            
               <div class="col-lg-8">
-                <img loading="lazy" src="/assets/images/3x-drupal-custom-tests.png"
-                  class="rounded border figure-img img-fluid"
-                  alt="Interfejs kreatora własnych testów z polami na tytuł i treść podpowiedzi, a także selektory elementów i wykluczenia." />
+                <img loading="lazy" src="/assets/images/3x-drupal-custom-tests.png" class="rounded border figure-img img-fluid" alt="Interfejs kreatora własnych testów z polami na tytuł i treść podpowiedzi, a także selektory elementów i wykluczenia." />
               </div>
-              <figcaption class="figure-caption col-lg-4">
+              
                 <p class="mb-2">Submoduł CSA dodaje:</p>
                 <ul class="ps-3">
                   <li><strong>Kreator własnych testów</strong></li>
@@ -99,18 +93,16 @@
                   <li>Analizę czytelności</li>
                   <li>Rozdzielone konfiguracje dla deweloperów/redaktorów</li>
                 </ul>
-              </figcaption>
-            </figure>
+              
+            
 
             <figure class="figure">
-              <img loading="lazy" class="figure-img img-fluid rounded border" src="/assets/images/3x-dashboard.png"
-                height="765" width="1600"
-                alt="Panel raportowania pokazujący ostatnie problemy i strony z największą liczbą problemów." />
+              <img loading="lazy" class="figure-img img-fluid rounded border" src="/assets/images/3x-dashboard.png" height="765" width="1600" alt="Panel raportowania pokazujący ostatnie problemy i strony z największą liczbą problemów." />
               <figcaption class="figure-caption p-3 pt-2">Ogólnoserwisowy panel udostępnia filtrowalne i eksportowalne
                 raporty powiadomień i odrzuceń.</figcaption>
             </figure>
 
-          </section>
+          
           <h2>Instalacja i kluczowe kroki konfiguracji</h2>
           <p><a href="https://www.drupal.org/project/editoria11y/">Zbiorczy instalator</a> dostępny na Drupal.org
             zawiera kilka modułów:</p>
@@ -149,7 +141,7 @@
           </p>
           <p>Choć można całkowicie wyłączyć testy, zazwyczaj lepiej jest ukryć powiadomienia dla konkretnych elementów
             lub stron.</p>
-          <hr>
+          <hr/>
           <p>
             Podczas każdego uruchomienia testów Editoria11y gromadzi jeden zestaw elementów z ustawienia „Sprawdzaj
             treść w tych kontenerach", a następnie kilkukrotnie go filtruje. Tak wygląda przebieg testu:
@@ -160,13 +152,13 @@
             </li>
             <li>
               <strong>Zbierz</strong> elementy w określonych regionach strony,
-              np.:<br><code>body > *:not('.ed11y-element')</code><br>
+              np.:<br/><code>body > *:not('.ed11y-element')</code><br/>
               <em>Dla użytkowników Editoria11y CSA są to regiony widoczne na zakładce <strong>Testy
                   deweloperskie</strong>.</em>
             </li>
             <li>
               <strong>Odrzuć</strong> elementy pasujące do selektorów ignorowanych,
-              np.:<br><code>.widgets, .utility-menu</code><br>
+              np.:<br/><code>.widgets, .utility-menu</code><br/>
               <em>Dla użytkowników Editoria11y CSA są to selektory na zakładce <strong>Testy
                   deweloperskie</strong>.</em>
             </li>
@@ -174,12 +166,12 @@
               Uruchom testy i zsynchronizuj wyniki z panelem.
             </li>
             <li>
-              Jeśli aktywna jest konfiguracja rozdzielona i użytkownik jest redaktorem treści, przefiltruj wyniki
-              deweloperskie:
+              <span data-translate>Jeśli aktywna jest konfiguracja rozdzielona i użytkownik jest redaktorem treści, przefiltruj wyniki
+              deweloperskie:</span>
               <ul>
                 <li><strong>Odrzuć</strong> wyniki testów oznaczonych jako „Tylko dla deweloperów".</li>
                 <li><strong>Odrzuć</strong> wyniki dotyczące elementów spoza określonych regionów
-                  <strong><em>treści</em></strong>, np.:<br><code>main, footer</code>
+                  <strong><em>treści</em></strong>, np.:<br/><code>main, footer</code>
                 </li>
                 <li><strong>Odrzuć</strong> wyniki dotyczące elementów pasujących do selektorów ignorowanych dla
                   <strong><em>treści</em></strong>.
@@ -244,21 +236,21 @@
                   <div id="edit-dev-check-root">
                     <div>
                       <input aria-describedby="edit-dev-check-root--description" type="radio"
-                        id="edit-dev-check-root-automatic" name="dev_check_root" value="automatic" checked="checked">
+                        id="edit-dev-check-root-automatic" name="dev_check_root" value="automatic" checked="checked" />
                       <label for="edit-dev-check-root-automatic" class="form-item__label option">Wszystkie
                         elementy</label>
                     </div>
                     <div class="d-flex">
                       <input aria-describedby="edit-dev-check-root--description" type="radio"
                         id="edit-dev-check-root-match" name="dev_check_root" value="match"
-                        class="align-self-baseline mt-1 me-1">
+                        class="align-self-baseline mt-1 me-1" />
                       <label for="edit-dev-check-root-match" class="form-item__label option">Tylko kontenery wymienione
                         w zakładce Ustawienia treści</label>
                     </div>
                     <div class="">
                       <input aria-describedby="edit-dev-check-root--description" type="radio"
                         id="edit-dev-check-root-specify" name="dev_check_root" value="specify"
-                        class="form-radio form-boolean form-boolean--type-radio">
+                        class="form-radio form-boolean form-boolean--type-radio" />
                       <label for="edit-dev-check-root-specify" class="">Konkretne kontenery wymienione poniżej</label>
                     </div>
                   </div>
@@ -413,7 +405,7 @@
             slajdów. Podpowiedzi wewnątrz tych elementów będą również ukryte. Podanie listy selektorów tych widżetów
             sprawi, że Editoria11y zatrzyma się na chwilę, gdy użytkownik spróbuje przejść do tych podpowiedzi za pomocą
             przycisku dalej lub wstecz. Motywy i moduły Drupal mogą wtedy postępować zgodnie ze wskazówkami z sekcji
-            biblioteki dotyczącej <a href="/pl/install/#hidden-content">obsługi podpowiedzi na ukrytej treści</a>, aby
+            biblioteki dotyczącej <a href="/pl/instalacja/#hidden-content">obsługi podpowiedzi na ukrytej treści</a>, aby
             odsłonić ukrytą treść.</p>
 
           <h2 id="runtime">Napisz własną konfigurację</h2>
@@ -472,8 +464,7 @@ var editoria11yOptions = function(options) {
             <h2>Napisz własne testy</h2>
             <p>Najpierw w konfiguracji modułu dodaj 1 do opcji „Custom tests", aby wiedział, że ma oczekiwać na testy.
             </p>
-            <p>Następnie utwórz bibliotekę JS Drupal ze swoimi testami w motywie lub module, korzystając z <a
-                href="/pl/install/#custom-tests">przewodnika biblioteki do pisania własnych testów</a>.</p>
+            <p>Następnie utwórz bibliotekę JS Drupal ze swoimi testami w motywie lub module, korzystając z <a href="/pl/instalacja/#custom-tests">przewodnika biblioteki do pisania własnych testów</a>.</p>
             <p>Poniżej przykład działającego testu z Princeton — niestandardowy test do alertowania o Safe Links. Zwróć
               uwagę, że dostęp do klasy Editoria11y odbywa się przez <code>Drupal.Ed11y.</code></p>
             <pre class="language-javascript"><code><!--const psEd11yCustomTests = function() {
@@ -543,52 +534,62 @@ var editoria11yOptions = function(options) {
               zawierać bezpośrednią pomoc przy instalacji i konfiguracji</p>
           </section>
 
-        </div>
-      </div>
-    </div>
-  </main>
+        
+      
+    
+  
+</main>
   <footer class="container col-lg-12 mx-auto pt-3 text-body-secondary text-center text-md-start">
     <div class="container">
-      <div class="footer-nav mt-5 pt-5 text-center"><a class="btn btn-primary btn-lg" href="/pl/">O nas</a> <a
-          class="btn btn-primary btn-lg" href="/pl/features">Funkcje</a> <a class="btn btn-primary btn-lg"
-          href="/pl/demo">Demo</a> <a class="btn btn-primary btn-lg" aria-current="page" href="/pl/license">Cennik i
-          wkłady</a></div>
-      <div class="footer">
-        <a href="https://github.com/itmaybejj/editoria11y"><svg xmlns="http://www.w3.org/2000/svg" width="20"
-            height="20" fill="currentColor" class="bi bi-git" viewBox="0 0 16 16">
-            <path
-              d="M15.698 7.287 8.712.302a1.03 1.03 0 0 0-1.457 0l-1.45 1.45 1.84 1.84a1.223 1.223 0 0 1 1.55 1.56l1.773 1.774a1.224 1.224 0 0 1 1.267 2.025 1.226 1.226 0 0 1-2.002-1.334L8.58 5.963v4.353a1.226 1.226 0 1 1-1.008-.036V5.887a1.226 1.226 0 0 1-.666-1.608L5.093 2.465l-4.79 4.79a1.03 1.03 0 0 0 0 1.457l6.986 6.986a1.03 1.03 0 0 0 1.457 0l6.953-6.953a1.03 1.03 0 0 0 0-1.457" />
-          </svg> <strong>Biblioteka</strong></a>
-        <a href="https://github.com/itmaybejj/editoria11y/discussions"><svg xmlns="http://www.w3.org/2000/svg"
-            width="20" height="20" fill="currentColor" class="bi bi-chat-right-heart-fill" viewBox="0 0 16 16">
-            <path
-              d="M16 2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h9.586a1 1 0 0 1 .707.293l2.853 2.853a.5.5 0 0 0 .854-.353zM8 3.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132" />
-          </svg> <strong>Forum</strong></a>
-        <a href="https://github.com/itmaybejj/editoria11y/issues"><svg xmlns="http://www.w3.org/2000/svg" width="20"
-            height="20" fill="currentColor" class="bi bi-patch-plus-fill" viewBox="0 0 16 16">
-            <path
-              d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01zM8.5 6v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 1 0" />
-          </svg> <strong>Zgłoszenia</strong></a>
-        <a href="/pl/contacts"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-            class="bi bi-person-lines-fill" height="24" width="24" viewBox="0 0 16 18">
-            <path
-              d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z">
-            </path>
-          </svg> <strong>Kontakt</strong></a>
+      <div class="footer-nav text-center">
+        <a class="btn btn-primary btn-lg" data-slug="about" href="/pl/">O nas</a>
+        <a class="btn btn-primary btn-lg" data-slug="features" href="/pl/funkcje/">Funkcje</a>
+        <a class="btn btn-primary btn-lg" data-slug="demo" href="/pl/demo/">Demo</a>
+        <a class="btn btn-primary btn-lg" data-slug="license" href="/pl/cennik/">Cennik i wkłady</a>
       </div>
-      <div class="col col-12 subfooter">
-        <a href="/pl/privacy-policy">Polityka prywatności</a>
-        <a href="/pl/cookie-policy">Polityka cookies</a>
-        <a href="/pl/terms-of-use">Warunki użytkowania</a>
-        <a href="/pl/legal-notice">Informacje prawne</a>
-        &copy; 2026 Editoria11y LLC
+      <div class="row footer">
+        <div class="col col-3">
+          <a href="https://github.com/itmaybejj/editoria11y"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+              height="20" fill="currentColor" class="bi bi-git" viewBox="0 0 16 16">
+              <path
+                d="M15.698 7.287 8.712.302a1.03 1.03 0 0 0-1.457 0l-1.45 1.45 1.84 1.84a1.223 1.223 0 0 1 1.55 1.56l1.773 1.774a1.224 1.224 0 0 1 1.267 2.025 1.226 1.226 0 0 1-2.002-1.334L8.58 5.963v4.353a1.226 1.226 0 1 1-1.008-.036V5.887a1.226 1.226 0 0 1-.666-1.608L5.093 2.465l-4.79 4.79a1.03 1.03 0 0 0 0 1.457l6.986 6.986a1.03 1.03 0 0 0 1.457 0l6.953-6.953a1.03 1.03 0 0 0 0-1.457" />
+            </svg> <strong>Biblioteka</strong></a>
+        </div>
+        <div class="col col-3">
+          <a href="https://github.com/itmaybejj/editoria11y/discussions"><svg xmlns="http://www.w3.org/2000/svg"
+              width="20" height="20" fill="currentColor" class="bi bi-chat-right-heart-fill" viewBox="0 0 16 16">
+              <path
+                d="M16 2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h9.586a1 1 0 0 1 .707.293l2.853 2.853a.5.5 0 0 0 .854-.353zM8 3.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132" />
+            </svg> <strong>Forum</strong></a>
+        </div>
+        <div class="col col-3">
+          <a href="https://github.com/itmaybejj/editoria11y/issues"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+              height="20" fill="currentColor" class="bi bi-patch-plus-fill" viewBox="0 0 16 16">
+              <path
+                d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01zM8.5 6v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 1 0" />
+            </svg> <strong>Zgłoszenia</strong></a>
+        </div>
+        <div class="col col-3">
+          <a href="/pl/kontakt/"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+              class="bi bi-person-lines-fill" height="24" width="24" viewBox="0 0 16 18">
+              <path
+                d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z">
+              </path>
+            </svg> <strong>Kontakt</strong></a>
+        </div>
+        <div class="col col-12 subfooter">
+          <a href="/pl/prywatnosc/">Polityka prywatności</a>
+          <a href="/pl/cookies/">Polityka cookies</a>
+          <a href="/pl/warunki/">Warunki użytkowania</a>
+          <a href="/pl/informacje-prawne/">Informacje prawne</a>
+          <span>&copy; 2026 Editoria11y LLC</span>
+        </div>
       </div>
     </div>
   </footer>
   <script src="/assets/bootstrap/js/bootstrap.bundle.min.js" class="astro-vvvwv3sm"></script>
   <script src="/assets/lang/i18n.js"></script>
   <script src="/assets/theme.js"></script>
-  <script src="/assets/prism/prism.js"></script>
 </body>
 
 </html>

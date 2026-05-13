@@ -1,0 +1,493 @@
+<main class="container col-lg-12 mx-auto py-5">
+    <div class="row docs">
+      <div class="col-12 col-md-5 col-lg-4 mb-5">
+        <div id="on-this-page" class="list-group ms-2 ms-lg-5 position-sticky top-0 pt-3">
+        </div>
+      </div>
+      <div class="col-12 col-md-7 col-lg-8 pt-3">
+        <div data-bs-spy="scroll" data-bs-target="#on-this-page" data-bs-smooth-scroll="true">
+          <h1 data-i18n-id="s-e367">Editoria11y dla Drupala</h1>
+          <section id="features">
+            <h2 class="pt-3" data-i18n-id="s-1dcf">Podstawowe funkcje</h2>
+
+            <p class="fs-6" data-i18n-id="s-a8c0">Moduł Drupal łączy bibliotekę narzędzia sprawdzającego z zapleczem redakcyjnym i dodaje
+              wiele narzędzi po stronie serwera do raportowania, zarządzania i konfiguracji</p>
+
+            <figure class="figure my-4 row">
+              <div class="col-lg-8">
+                <img loading="lazy" src="/assets/images/3x-editing.png" class="rounded border figure-img img-fluid" height="1088" width="2237" alt="Edytor Drupal z podpowiedziami inline" data-i18n-id="s-ee36" />
+              </div>
+              <figcaption class="figure-caption col-lg-4" data-i18n-id="s-8e69">Problemy są wykrywane zarówno przy ładowaniu strony, jak
+                i w trakcie pisania w CKEditor i Gutenberg.</figcaption>
+            </figure>
+
+            <figure class="figure my-4 row">
+              <div class="col-lg-8">
+                <img loading="lazy" src="/assets/images/3x-generic-tip.png" class="rounded border figure-img img-fluid" height="798" width="1278" alt="Podpowiedź wskazująca, że link ma nazwę wyłącznie &quot;kliknij tutaj&quot;." data-i18n-id="s-1639" />
+              </div>
+              <figcaption class="figure-caption col-lg-4" data-i18n-id="s-9881">Podpowiedzi zyskują przyciski umożliwiające przejście do
+                edytora, zignorowanie powiadomienia (dla aktywnego użytkownika) lub oznaczenie go jako OK (dla
+                wszystkich użytkowników). Powtarzające się powiadomienia oferują działania obejmujące całą stronę lub
+                cały serwis.
+              </figcaption>
+            </figure>
+
+            <figure class="figure my-4 row">
+              <div class="col-lg-8">
+                <img loading="lazy" src="/assets/images/3x-drupal-custom-tests.png" class="rounded border figure-img img-fluid" alt="Interfejs kreatora własnych testów z polami na tytuł i treść podpowiedzi, a także selektory elementów i wykluczenia." data-i18n-id="s-0830" />
+              </div>
+              <figcaption class="figure-caption col-lg-4">
+                <p class="mb-2" data-i18n-id="s-37bf">Submoduł CSA dodaje:</p>
+                <ul class="ps-3">
+                  <li data-i18n-id="s-caff"><strong>Kreator własnych testów</strong></li>
+                  <li data-i18n-id="s-b145">Ponad 40 testów deweloperskich</li>
+                  <li data-i18n-id="s-f55d">Sprawdzanie kontrastu</li>
+                  <li data-i18n-id="s-b70c">Crawlery serwisu</li>
+                  <li data-i18n-id="s-5377">Analizę czytelności</li>
+                  <li data-i18n-id="s-6602">Rozdzielone konfiguracje dla deweloperów/redaktorów</li>
+                </ul>
+              <span data-translate data-i18n-id="s-bc47"></figcaption>
+            </figure>
+
+            <figure class="figure">
+              <img loading="lazy" class="figure-img img-fluid rounded border" src="/assets/images/3x-dashboard.png" height="765" width="1600" alt="Panel raportowania pokazujący ostatnie problemy i strony z największą liczbą problemów." data-i18n-id="s-2559" />
+              <figcaption class="figure-caption p-3 pt-2" data-i18n-id="s-cdbf">Ogólnoserwisowy panel udostępnia filtrowalne i eksportowalne
+                raporty powiadomień i odrzuceń.</figcaption>
+            </figure>
+
+          </section>
+          <h2 data-i18n-id="s-8fec">Instalacja i kluczowe kroki konfiguracji</h2>
+          <p data-i18n-id="s-7627"><a href="https://www.drupal.org/project/editoria11y/">Zbiorczy instalator</a> dostępny na Drupal.org
+            zawiera kilka modułów:</p>
+          <ul>
+            <li data-i18n-id="s-b830">
+              Editoria11y: główne narzędzie do sprawdzania treści i panel raportowania.
+            </li>
+            <li data-i18n-id="s-b351">
+              Editoria11y CSA: testy deweloperskie i narzędzia do utrzymania panelu.
+            </li>
+            <li data-i18n-id="s-74fe">
+              Editoria11y Export: narzędzia do raportowania w formacie CSV.
+            </li>
+          </ul>
+          <p data-i18n-id="s-88fd">Zainstaluj jak każdy inny moduł, a następnie wykonaj te kluczowe kroki:</p>
+          <ol>
+            <li data-i18n-id="s-7187"><strong>Sprawdź uprawnienia.</strong> Zaufani autorzy powinni mieć uprawnienia „Mark OK", „Mark as
+              Ignored" i „View the dashboard".</li>
+            <li data-i18n-id="s-1ac1"><strong>Sprawdź kluczowe strony pod kątem powtarzających się lub nieprzydatnych powiadomień.</strong>
+              Oznacz je jako OK w podpowiedzi lub dostosuj konfigurację, by ignorować elementy za pomocą selektora.</li>
+            <li data-i18n-id="s-e5b2">Szukaj podpowiedzi, które są trudne do zauważenia – poza ekranem, obciętych, ukrytych za innymi
+              elementami lub na ukrytych elementach. Skorzystaj z wskazówek w sekcji „Napraw pozycjonowanie podpowiedzi"
+              poniżej.</li>
+            <li data-i18n-id="s-c564">Jeśli serwis zawiera już treści i posiadasz subskrypcję CSA, przejdź do zakładki „recheck" w panelu i
+              <strong>przeskanuj serwis</strong>, aby wstępnie załadować raporty. To opcjonalne, ale starsze strony nie
+              pojawią się w raportach, dopóki nie zostaną przeskanowane lub odwiedzone przez zalogowanego użytkownika.
+            </li>
+          </ol>
+          <p data-i18n-id="s-e025">Obejrzyj <a href="https://youtu.be/uYvNYPg38nU?si=dqADyWpTtOhniHTP&t=696">wideo wprowadzenie do opcji
+              konfiguracji</a> (v2.4).</p>
+
+          <h2 id="check-roots" data-i18n-id="s-9202">Ukryj nieprzydatne powiadomienia</h2>
+          <p data-i18n-id="s-fa47">
+            <strong>Dobra konfiguracja tłumi nieprzydatne powiadomienia, dzięki czemu autorzy treści mogą skupić się na
+              problemach, które powinni naprawić</strong>.
+          </p>
+          <p data-i18n-id="s-996e">Choć można całkowicie wyłączyć testy, zazwyczaj lepiej jest ukryć powiadomienia dla konkretnych elementów
+            lub stron.</p>
+          <hr/>
+          <p data-i18n-id="s-7918">
+            Podczas każdego uruchomienia testów Editoria11y gromadzi jeden zestaw elementów z ustawienia „Sprawdzaj
+            treść w tych kontenerach", a następnie kilkukrotnie go filtruje. Tak wygląda przebieg testu:
+          </p>
+          <ol>
+            <li data-i18n-id="s-994a">
+              Anuluj sprawdzanie, jeśli konfiguracja uniemożliwia sprawdzanie na tej stronie lub dla tego użytkownika.
+            </li>
+            <li data-i18n-id="s-10c9">
+              <strong>Zbierz</strong> elementy w określonych regionach strony,
+              np.:<br/><code>body > *:not('.ed11y-element')</code><br/>
+              <em>Dla użytkowników Editoria11y CSA są to regiony widoczne na zakładce <strong>Testy
+                  deweloperskie</strong>.</em>
+            </li>
+            <li data-i18n-id="s-7524">
+              <strong>Odrzuć</strong> elementy pasujące do selektorów ignorowanych,
+              np.:<br/><code>.widgets, .utility-menu</code><br/>
+              <em>Dla użytkowników Editoria11y CSA są to selektory na zakładce <strong>Testy
+                  deweloperskie</strong>.</em>
+            </li>
+            <li data-i18n-id="s-58d0">
+              Uruchom testy i zsynchronizuj wyniki z panelem.
+            </li>
+            <li>
+              <span data-translate data-i18n-id="s-f8c6">Jeśli aktywna jest konfiguracja rozdzielona i użytkownik jest redaktorem treści, przefiltruj wyniki
+              deweloperskie:</span>
+              <ul>
+                <li data-i18n-id="s-72c9"><strong>Odrzuć</strong> wyniki testów oznaczonych jako „Tylko dla deweloperów".</li>
+                <li data-i18n-id="s-576e"><strong>Odrzuć</strong> wyniki dotyczące elementów spoza określonych regionów
+                  <strong><em>treści</em></strong>, np.:<br/><code>main, footer</code>
+                </li>
+                <li data-i18n-id="s-bb1d"><strong>Odrzuć</strong> wyniki dotyczące elementów pasujących do selektorów ignorowanych dla
+                  <strong><em>treści</em></strong>.
+                </li>
+              </ul>
+              Zwróć uwagę, że nie ma drugiej fazy „zbierania". Regiony stron deweloperskich muszą zawierać regiony
+              treści.</span>
+            </li>
+            <li data-i18n-id="s-b79c">Otwórz panel i wyświetl powiadomienia, jeśli konfiguracja pasuje do ustawienia automatycznego
+              otwierania.</li>
+          </ol>
+
+          <h3 id="dismiss" data-i18n-id="s-be02">Odrzucanie powiadomień</h3>
+          <p data-i18n-id="s-2ae3">Testy można skonfigurować w bibliotece jako błędy lub ostrzeżenia („ręczne sprawdzenia"). Ostrzeżenia można
+            odrzucić. Dostępne są dwa typy odrzuceń z poziomu stopki każdej podpowiedzi:</p>
+          <div class="my-2"
+            style="background: url(/assets/images/3x-generic-tip.png) 100% 98%; max-width: 600px; padding-top: 6%; background-size: 108%;">
+          </div>
+          <ul>
+            <li data-i18n-id="s-7b65">„Ignore" jest zapisywane jako preferencja użytkownika: powiadomienie jest teraz ukryte dla bieżącego
+              użytkownika, ale tylko dla niego.</li>
+            <li data-i18n-id="s-654c">„Mark OK" ukrywa powiadomienie dla wszystkich użytkowników.</li>
+          </ul>
+          <p data-i18n-id="s-dc14">To, czy użytkownik może odrzucić powiadomienie, jest kontrolowane na poziomie roli w uprawnieniach
+            użytkowników Drupal. <strong>Większość autorów powinna mieć możliwość odrzucania powiadomień</strong>. Nie
+            ma sensu przypisywać komuś ręcznego sprawdzenia, jeśli nie może oznaczyć elementu jako sprawdzonego.</p>
+
+          <h3 id="roots" data-i18n-id="s-d932">Ignorowanie elementów</h3>
+          <p data-i18n-id="s-9d1e">Te dwa ustawienia konfiguracyjne są najważniejsze!</p>
+          <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
+            <label for="edit-content-root">Sprawdzaj treść w tych kontenerach</label>
+            <div><textarea class="form-control" id="edit-content-root" name="content_root" rows="1" cols="30"
+                disabled></textarea>
+            </div>
+            <div class="mt-3">
+              <label for="edit-ignore-elements">Pomiń te elementy</label>
+              <div>
+                <textarea class="form-control" id="edit-ignore-elements" disabled name="ignore_elements" rows="1"
+                  cols="30" class=""></textarea>
+              </div>
+            </div>
+          </div>
+          <p data-i18n-id="s-6051">
+            Ustaw pierwsze pole tak, aby obejmowało wszystkie części strony, które autorzy treści mogą edytować. Np.
+            jeśli mogą edytować obszar <code>main</code>, <code>.sidebar</code> i <code>.footer-column-two</code>, podaj
+            te selektory jako obszar sprawdzania treści.
+          </p>
+          <p data-i18n-id="s-f29c">
+            Drugie pole służy do „wyłączenia" podsekcji. Np. jeśli <code>main</code> zawiera różne widżety i osadzenia,
+            które mogą modyfikować tylko deweloperzy, wymień je: <code>.widget-1, .social-embed</code>;
+          </p>
+          <p data-i18n-id="s-10ef">Jeśli korzystasz z konfiguracji rozdzielonej, na zakładce Testy deweloperskie zobaczysz podobną parę
+            ustawień:</p>
+          <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
+            <div>
+              <fieldset>
+                <legend>
+                  Obszar sprawdzania deweloperskiego
+                </legend>
+                <div class="fieldset__wrapper fieldset__wrapper--group">
+
+                  <div id="edit-dev-check-root">
+                    <div>
+                      <input aria-describedby="edit-dev-check-root--description" type="radio"
+                        id="edit-dev-check-root-automatic" name="dev_check_root" value="automatic" checked="checked" />
+                      <label for="edit-dev-check-root-automatic" class="form-item__label option">Wszystkie
+                        elementy</label>
+                    </div>
+                    <div class="d-flex">
+                      <input aria-describedby="edit-dev-check-root--description" type="radio"
+                        id="edit-dev-check-root-match" name="dev_check_root" value="match"
+                        class="align-self-baseline mt-1 me-1" />
+                      <label for="edit-dev-check-root-match" class="form-item__label option">Tylko kontenery wymienione
+                        w zakładce Ustawienia treści</label>
+                    </div>
+                    <div class="">
+                      <input aria-describedby="edit-dev-check-root--description" type="radio"
+                        id="edit-dev-check-root-specify" name="dev_check_root" value="specify"
+                        class="form-radio form-boolean form-boolean--type-radio" />
+                      <label for="edit-dev-check-root-specify" class="">Konkretne kontenery wymienione poniżej</label>
+                    </div>
+                  </div>
+
+                </div>
+              </fieldset>
+
+              <div class="">
+                <label for="edit-always-ignore" class="mt-3">Ignoruj zarówno dla deweloperów, jak i redaktorów
+                  treści</label>
+                <div class="form-textarea-wrapper">
+                  <textarea id="edit-always-ignore" class="form-control" name="always_ignore" rows="1" cols="20"
+                    placeholder=""></textarea>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+          <p data-i18n-id="s-8c02">Kluczowa kwestia dotycząca obszarów sprawdzania deweloperskiego: nie są one <strong>niezależne</strong> od
+            obszarów sprawdzania treści. W konfiguracji rozdzielonej sprawdzane są obszary deweloperskie, a następnie
+            wyniki są <strong>filtrowane</strong> pod kątem obszarów treści. Obszary wykluczone dla deweloperów będą
+            również wykluczone dla redaktorów treści. Nie wykluczaj edytowalnych obszarów treści!</p>
+
+          <p data-i18n-id="s-0312">Niektóre testy umożliwiają dokładniejszą konfigurację, pozwalając ukryć określone powiadomienia tylko dla
+            wybranych elementów. Szukaj ich w sekcjach:</p>
+          <ul>
+            <li data-i18n-id="s-d53d">Testy treści: Linki do sprawdzenia</li>
+            <li data-i18n-id="s-0d1e">Testy treści: Osadzenia do sprawdzenia</li>
+            <li data-i18n-id="s-10c1">Testy treści: Wykrywanie treści dynamicznej i shadow DOM</li>
+            <li data-i18n-id="s-e6e4">Testy deweloperskie: Kontrast</li>
+          </ul>
+
+          <h3 id="pages" data-i18n-id="s-177c">Ukryj dla konkretnych stron lub użytkowników</h3>
+          <p data-i18n-id="s-e874">
+            Najprostszym sposobem jest przekazanie klas CSS lub identyfikatorów do tych opcji:
+          </p>
+          <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
+            <label for="edit-no-load" class="form-item__label">Nie sprawdzaj stron zawierających te elementy</label>
+            <div class="form-textarea-wrapper">
+              <textarea data-drupal-selector="edit-no-load" aria-describedby="edit-no-load--description"
+                id="edit-no-load" name="no_load" rows="1" cols="20" class="form-control"></textarea>
+            </div>
+
+            <label for="edit-ignore-all-if-absent" class="form-item__label">Ukryj wszystkie powiadomienia na stronach,
+              gdzie te elementy nie są obecne</label>
+            <div class="form-textarea-wrapper">
+              <textarea data-drupal-selector="edit-ignore-all-if-absent"
+                aria-describedby="edit-ignore-all-if-absent--description" id="edit-ignore-all-if-absent"
+                name="ignore_all_if_absent" rows="1" cols="20" class="form-control"></textarea>
+            </div>
+
+          </div>
+          <p data-i18n-id="s-0877">
+            Pierwsze pole uniemożliwi uruchamianie sprawdzeń i pasek narzędzi nie będzie wyświetlany.
+          </p>
+          <p data-i18n-id="s-5cbd">
+            Drugie pole uruchomi narzędzie w trybie zminimalizowanym i automatycznie oznaczy (dla bieżącego użytkownika)
+            wszystkie problemy jako „Zignorowane", nawet jeśli są błędami. Pozwala to na uruchamianie testów i
+            aktualizację panelu bez przeszkadzania użytkownikowi.
+          </p>
+          <p data-i18n-id="s-1661">
+            Jeśli chcesz użyć tych opcji do kontrolowania, którzy użytkownicy widzą narzędzie, może być konieczne
+            dostosowanie motywu tak, aby wypisywał klasę, np. <code>.user-247</code>
+          </p>
+
+          <h2 id="dashboard" data-i18n-id="s-f4d7">Zarządzanie wynikami w całym serwisie</h2>
+          <section id="refresh">
+            <h3 class="pt-3" data-i18n-id="s-012a">Crawlowanie i aktualizacja wyników</h3>
+            <p data-i18n-id="s-75a9">Editoria11y to <strong>narzędzie do monitorowania w czasie rzeczywistym, a nie crawler</strong>. Raporty
+              z całego serwisu aktualizują się, gdy autorzy przeglądają strony, więc regularne crawlowanie zazwyczaj nie
+              jest potrzebne. Moduł CSA <em>zawiera</em> crawler, ale powinien być potrzebny tylko w trzech sytuacjach:
+            </p>
+            <ol>
+              <li data-i18n-id="s-dfb1">
+                Przy pierwszej instalacji Editoria11y na istniejącym serwisie z wieloma stronami. Strony muszą zostać
+                odwiedzone, zanim pojawią się w panelu, więc szybkie wstępne skanowanie oszczędza czas.
+              </li>
+              <li data-i18n-id="s-f602">
+                Duże aktualizacje motywów lub modułów mogą naprawić (lub spowodować) problemy na wielu stronach, które
+                nie pojawią się, dopóki nie zostaną odwiedzone lub przeskanowane.
+              </li>
+              <li data-i18n-id="s-a530">
+                Masowe operacje w interfejsie administracyjnym, takie jak usuwanie stron lub przekierowań, często
+                pozostawiają wyniki ze stron, które już nie istnieją lub zostały przeniesione. W takich przypadkach
+                pomocne jest użycie akcji konserwacyjnych na zakładce „Refresh", aby odświeżyć adresy URL stron i wykryć
+                oraz usunąć skasowane strony.
+              </li>
+            </ol>
+            <p data-i18n-id="s-8e5a">Żadne dane nie opuszczają Twojego serwisu podczas crawlowania. Crawler CSA nie jest narzędziem chmurowym;
+              używa Twojej przeglądarki do ładowania i sprawdzania stron we własnym serwisie. Wadą tego podejścia jest
+              to, że <strong>przeglądarki wstrzymują działanie kart w tle</strong>. Podczas crawlowania komputer musi
+              być włączony i aktywny. Zaplanuj otworzenie nowego okna dla crawlera i pozostawienie go jako
+              pierwszoplanowej karty tego okna w trakcie pracy. Możesz kontynuować pracę w innym oknie. Crawler będzie
+              aktualizował swoje szacunki po każdej partii stron.</p>
+          </section>
+          <section id="reports">
+            <h3 data-i18n-id="s-a242">Przeglądanie raportów</h3>
+            <div class="my-4 border shadow"
+              style="background: url(/assets/images/3x-dashboard.png) 86% 0%; padding-top: 28%; background-size: 106%;">
+            </div>
+            <ul>
+              <li data-i18n-id="s-e328">
+                <strong>Ostatnie</strong> umożliwia przeglądanie poszczególnych powiadomień. Pozwala to m.in. filtrować
+                wyniki w celu znalezienia wszystkich wystąpień tego samego typu powiadomienia, sprawdzać, które
+                powiadomienia pojawiają się często w nowych treściach lub którzy autorzy wciąż popełniają te same błędy.
+              </li>
+              <li data-i18n-id="s-796f">
+                <strong>Strony</strong> wyświetla liczbę powiadomień na stronę, zgrupowanych według stron. Pozwala
+                znaleźć strony z największą liczbą problemów i filtrować według atrybutów strony, takich jak typ treści
+                i status publikacji.
+              </li>
+              <li data-i18n-id="s-9423">
+                <strong>Powiadomienia</strong> pokazuje problemy według typu.
+              </li>
+              <li data-i18n-id="s-52ed">
+                <strong>Odrzucenia</strong> umożliwia monitorowanie, czy autorzy prawidłowo odrzucają powiadomienia, i
+                zawiera przyciski „reset" do przywracania odrzuconych alertów.
+              </li>
+              <li data-i18n-id="s-3379">
+                <strong>Eksport</strong> zawiera wersje raportów Strony, Powiadomienia i Odrzucenia, które można
+                filtrować i pobierać jako CSV. <em>Dostępny przez submoduł CSV Export</em>
+              </li>
+              <li data-i18n-id="s-9814">
+                <strong>Odśwież</strong> zawiera narzędzia do konserwacji panelu: usuwanie alertów ze skasowanych stron,
+                alertów z parametrycznych pseudostron jak /search?query=example, aktualizowanie zapisanych tytułów i
+                adresów URL stron oraz uruchamianie ręcznego crawlowania. <em>Dostępny przez submoduł CSA</em>
+              </li>
+            </ul>
+          </section>
+
+          <h2 id="positioning" data-i18n-id="s-c35b">Napraw ukryte lub poza ekranem podpowiedzi</h2>
+
+          <p data-i18n-id="s-68ce">Moduł udostępnia pola dla dwóch opcji konfiguracyjnych biblioteki, pozwalających zmienić sposób
+            pozycjonowania podpowiedzi:</p>
+
+          <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
+            <label for="edit-element-hides-overflow" class="form-item__label">Elementy z overflow hidden</label>
+            <textarea data-drupal-selector="edit-element-hides-overflow"
+              aria-describedby="edit-element-hides-overflow--description" id="edit-element-hides-overflow"
+              name="element_hides_overflow" rows="1" cols="60" class="form-control"></textarea>
+            <label for="edit-hidden-handlers" class="form-item__label">Motyw JS zajmie się ujawnianiem ukrytych
+              podpowiedzi wewnątrz tych kontenerów</label>
+            <textarea data-drupal-selector="edit-hidden-handlers" aria-describedby="edit-hidden-handlers--description"
+              id="edit-hidden-handlers" name="hidden_handlers" rows="1" cols="60" class="form-control"></textarea>
+          </div>
+          <p data-i18n-id="s-34e4">Niektóre motywy mają kolumny lub widżety ukrywające poziome lub pionowe przepełnienie (overflow).
+            Biblioteka automatycznie wykrywa, gdy przełącznik wypadałby poza widoczną część <strong>strony</strong>.
+            Poinformowanie biblioteki, że określone kontenery ukrywają overflow, sprawi, że będzie ona również próbowała
+            pozycjonować podpowiedzi dla elementów w tych kontenerach wewnątrz ich granic.</p>
+          <p data-i18n-id="s-7cb7">Niektóre motywy mają widżety przełączające widoczność treści, takie jak akordeony, zakładki i pokazy
+            slajdów. Podpowiedzi wewnątrz tych elementów będą również ukryte. Podanie listy selektorów tych widżetów
+            sprawi, że Editoria11y zatrzyma się na chwilę, gdy użytkownik spróbuje przejść do tych podpowiedzi za pomocą
+            przycisku dalej lub wstecz. Motywy i moduły Drupal mogą wtedy postępować zgodnie ze wskazówkami z sekcji
+            biblioteki dotyczącej <a href="/en/install/#hidden-content">obsługi podpowiedzi na ukrytej treści</a>, aby
+            odsłonić ukrytą treść.</p>
+
+          <h2 id="runtime" data-i18n-id="s-7e38">Napisz własną konfigurację</h2>
+          <p data-i18n-id="s-a5d3">W PHP: moduł Drupal udostępnia <code>hook_editoria11y_alter_config</code> do zmiany zawartości
+            <code>drupalSettings.editoria11y</code> w module lub motywie. Na przykład:
+          </p>
+          <pre class="language-php"><code><!--<?php
+/**
+ * @file
+ * MY_MODULE module file.
+ */
+
+use Drupal\Core\Cache\CacheableMetadata;
+
+/**
+ * Implements hook_editoria11y_alter_config().
+ *
+ * Attaches Editoria11y library and config based on context.
+ */
+function MY_MODULE_editoria11y_alter_config(array &$attach, CacheableMetadata $cacheableMetadata): void {
+  $config = Drupal::config('editoria11y.settings');
+
+  // Module settings being changed need to bust the cache.
+  $cacheableMetadata->addCacheableDependency($config);
+
+  // Get and modify any of the values being passed to drupalSettings.editoria11y.
+  if (!empty($attach['allow_ok'])) {
+    $attach['allow_ok'] = 'okAll';
+  }
+}--></code></pre>
+          <p data-i18n-id="s-2368">Modyfikacja <code>drupalSettings</code> działa tylko wtedy, gdy moduł JS jest już skonfigurowany do
+            przekazywania tej wartości do biblioteki. Aby dodać dodatkowe parametry, należy bezpośrednio zmodyfikować
+            obiekt JS <code>options</code>. Moduł sprawdza istnienie jednej globalnej zmiennej JS o nazwie
+            <code>editoria11yOptionsOverride</code>. Jeśli jest ustawiona, przekaże obiekt <code>options</code> do
+            funkcji <code>editoria11yOptions</code>, którą dostarczyłeś w swoim module lub motywie. Możesz teraz
+            ustawiać dowolne <a href="https://editorsally.ddev.site/en/install/#params">parametry biblioteki</a>.
+          </p>
+          <pre class="language-javascript"><code><!--var editoria11yOptionsOverride = true;
+var editoria11yOptions = function(options) {
+  // You now have access to the processed options object that will be passed to the library.
+
+  // E.g., to add a selector to the ignore list:
+  if (options['ignoreElements'] === false) {
+    // Provide the selector as the only value.
+    options['ignoreElements'] = `.example`;
+  } else {
+    // Append additional selectors with comma separator.
+    options['ignoreElements'] = `${options['ignoreElements']}, .example`
+  }
+
+  // Return your processed options.
+  return options;
+}
+--></code></pre>
+          <section id="custom-tests">
+            <h2 data-i18n-id="s-e0f0">Napisz własne testy</h2>
+            <p data-i18n-id="s-6ece">Najpierw w konfiguracji modułu dodaj 1 do opcji „Custom tests", aby wiedział, że ma oczekiwać na testy.
+            </p>
+            <p data-i18n-id="s-4316">Następnie utwórz bibliotekę JS Drupal ze swoimi testami w motywie lub module, korzystając z <a href="/en/install/#custom-tests">przewodnika biblioteki do pisania własnych testów</a>.</p>
+            <p data-i18n-id="s-b4ea">Poniżej przykład działającego testu z Princeton — niestandardowy test do alertowania o Safe Links. Zwróć
+              uwagę, że dostęp do klasy Editoria11y odbywa się przez <code>Drupal.Ed11y.</code></p>
+            <pre class="language-javascript"><code><!--const psEd11yCustomTests = function() {
+
+  // 1.
+  // Get elements to test, via Drupal.Ed11y.getElements.
+  // The 'root' parameter tells it to respect config for check areas and ignores.
+  const safeLinks = Drupal.Ed11y.getElements('a[href*="safelinks.protection.outlook.com/?"]', 'root');
+
+  // Add the test name to the lang object.
+  Drupal.ed11yLang.lang.testNames.outlookSafeLink = 'URL is Safe Link encoded';
+
+  // 2.
+  // Create the tip content.
+  const decodeSafelink = function(url) {
+    const params = new URL(url).searchParams;
+    let decoded = params.get('url');
+    const p = document.createElement('p');
+    if (!!decoded) {
+      p.innerHTML = `<p><span class="badge">To fix</span>Update this link with the correct URL, which is probably:<br>
+    <em style='word-wrap: break-word;font-size: 90%;line-height: 1.2;display: block;'></em></p>`
+      p.querySelector('em').textContent = Drupal.Ed11y.sanitizeHTML(decoded);
+    }
+    return p;
+  };
+  safeLinks?.forEach((el) => {
+    const content = document.createElement('div');
+    content.innerHTML = `<div class="title">Please fix this Outlook "Safe Link"</div>
+            <div class="why">
+                <p>The URL for this link is an Outlook "Safe Link" that was copied from an email.
+                It includes the original recipient's email address,
+                and will break if Microsoft shuts down the service.</p>
+                <p>The pasted URL is:<br>
+                <em style='word-break: break-all;font-size: 90%;line-height: 1.2;
+                display: block;'></em></p>
+            </div>
+            `;
+    content.querySelector('em').textContent = Drupal.Ed11y.sanitizeHTML(el.href);
+    content.querySelector('.why').insertAdjacentElement('beforebegin', decodeSafelink(el.href));
+
+    // 3.
+    // Push the tip to the library results object.
+    Drupal.Ed11y.State.results.push({
+      element: el,
+      test: 'outlookSafeLink',
+      type: 'error',
+      content: content,
+      position: 'beforebegin',
+      inline: false,
+      dismiss: false,
+    });
+  });
+
+  // 4.
+  // Tell Editoria11y you are done adding custom results.
+  const allDone = new CustomEvent('ed11yResume');
+  document.dispatchEvent(allDone);
+};--></code></pre>
+
+          </section>
+          <section id="help">
+            <h2 data-i18n-id="s-4690">Uzyskiwanie pomocy</h2>
+            <p data-i18n-id="s-f149">Sprawdź stronę <a href="../contacts">Kontakt</a>, aby zapoznać się z opcjami wsparcia społeczności.
+              @itmaybejj jest zazwyczaj dostępny na Drupal Slacku w godzinach, gdy słońce świeci na zachodniej półkuli.
+            </p>
+            <p data-i18n-id="s-4a16">Większość <a href="../license/">poziomów wkładu CSA</a> obejmuje coroczne spotkanie kontrolne, które może
+              zawierać bezpośrednią pomoc przy instalacji i konfiguracji</p>
+          </section>
+
+        </div>
+      </div>
+    </div>
+  </main>

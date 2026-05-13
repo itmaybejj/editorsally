@@ -1,0 +1,498 @@
+<main class="container col-lg-12 mx-auto py-5">
+    <div class="row docs">
+      <div class="col-12 col-md-5 col-lg-4 mb-5">
+        <div id="on-this-page" class="list-group ms-2 ms-lg-5 position-sticky top-0 pt-3">
+        </div>
+      </div>
+      <div class="col-12 col-md-7 col-lg-8 pt-3">
+        <div data-bs-spy="scroll" data-bs-target="#on-this-page" data-bs-smooth-scroll="true">
+          <h1 data-i18n-id="s-e367">Editoria11y Drupalhoz</h1>
+          <section id="features">
+            <h2 class="pt-3" data-i18n-id="s-1dcf">Alapfunkciók</h2>
+
+            <p class="fs-6" data-i18n-id="s-a8c0">A Drupal modul összekapcsolja az ellenőrző könyvtárat a szerkesztői háttérrendszerrel, és
+              számos szerveroldali eszközt ad hozzá jelentéskészítéshez, irányításhoz és konfigurációhoz.</p>
+
+            <figure class="figure my-4 row">
+              <div class="col-lg-8">
+                <img loading="lazy" src="/assets/images/3x-editing.png" class="rounded border figure-img img-fluid" height="1088" width="2237" alt="Drupal szerkesztő soron belüli tippekkel" data-i18n-id="s-ee36" />
+              </div>
+              <figcaption class="figure-caption col-lg-4" data-i18n-id="s-8e69">A problémák mind a frontend betöltésekor, mind a CKEditor
+                és Gutenberg szerkesztőkben gépelés közben észlelésre kerülnek.</figcaption>
+            </figure>
+
+            <figure class="figure my-4 row">
+              <div class="col-lg-8">
+                <img loading="lazy" src="/assets/images/3x-generic-tip.png" class="rounded border figure-img img-fluid" height="798" width="1278" alt="A tipp jelzi, hogy a link neve csak „kattintson ide" . data-i18n-id="s-1639" />
+              </div>
+              <figcaption class="figure-caption col-lg-4" data-i18n-id="s-9881">Az eszköztippek gombokat kapnak a szerkesztőbe ugráshoz, a
+                figyelmeztetés figyelmen kívül hagyásához (az aktuális felhasználó számára) vagy rendben jelöléséhez
+                (minden felhasználó számára). Az ismétlődő figyelmeztetések oldalszintű vagy webhelyszintű műveleteket
+                kínálnak.
+              </figcaption>
+            </figure>
+
+            <figure class="figure my-4 row">
+              <div class="col-lg-8">
+                <img loading="lazy" src="/assets/images/3x-drupal-custom-tests.png" class="rounded border figure-img img-fluid" alt="Egyéni tesztszerkesztő felület a tipp címéhez és tartalmához tartozó mezőkkel, valamint elemszelektorokkal és kizárásokkal." data-i18n-id="s-0830" />
+              </div>
+              <figcaption class="figure-caption col-lg-4">
+                <p class="mb-2" data-i18n-id="s-37bf">A CSA almodul a következőket adja hozzá:</p>
+                <ul class="ps-3">
+                  <li data-i18n-id="s-caff"><strong>Egyéni tesztszerkesztő</strong></li>
+                  <li data-i18n-id="s-b145">40+ fejlesztői teszt</li>
+                  <li data-i18n-id="s-f55d">Kontrasztellenőrzés</li>
+                  <li data-i18n-id="s-b70c">Webhelybejárók</li>
+                  <li data-i18n-id="s-5377">Olvashatósági elemzés</li>
+                  <li data-i18n-id="s-6602">Szétválasztott konfiguráció fejlesztőknek/szerkesztőknek</li>
+                </ul>
+              <span data-translate data-i18n-id="s-bc47"></figcaption>
+            </figure>
+
+            <figure class="figure">
+              <img loading="lazy" class="figure-img img-fluid rounded border" src="/assets/images/3x-dashboard.png" height="765" width="1600" alt="Jelentési vezérlőpult a legutóbbi problémákkal és a legtöbb problémát tartalmazó oldalakkal." data-i18n-id="s-2559" />
+              <figcaption class="figure-caption p-3 pt-2" data-i18n-id="s-cdbf">A webhelyszintű vezérlőpult szűrhető és
+                exportálható jelentéseket biztosít a figyelmeztetésekről és elutasításokról.</figcaption>
+            </figure>
+
+          </section>
+          <h2 data-i18n-id="s-8fec">Telepítés és legfontosabb beállítási lépések</h2>
+          <p data-i18n-id="s-7627">A Drupal.org-on elérhető <a href="https://www.drupal.org/project/editoria11y/">csomagolt telepítő</a> több
+            modult tartalmaz:</p>
+          <ul>
+            <li data-i18n-id="s-b830">
+              Editoria11y: az alapvető tartalomellenőrző és vezérlőpult.
+            </li>
+            <li data-i18n-id="s-b351">
+              Editoria11y CSA: fejlesztői tesztek és vezérlőpult-karbantartó eszközök.
+            </li>
+            <li data-i18n-id="s-74fe">
+              Editoria11y Export: CSV jelentéskészítő eszközök.
+            </li>
+          </ul>
+          <p data-i18n-id="s-88fd">Telepítse, mint bármely más modult, majd végezze el az alábbi fontos lépéseket:</p>
+          <ol>
+            <li data-i18n-id="s-7187"><strong>Ellenőrizze a jogosultságokat.</strong> A megbízható szerzőknek rendelkezniük kell a „Rendben
+              jelölés", „Figyelmen kívül hagyás" és „Vezérlőpult megtekintése" jogosultságokkal.</li>
+            <li data-i18n-id="s-1ac1"><strong>Ellenőrizze a fontosabb oldalakat az ismétlődő vagy nem hasznos figyelmeztetések
+                szempontjából.</strong> Vagy jelölje rendben az eszköztippben, vagy módosítsa a konfigurációt, hogy
+              szelektorok alapján figyelmen kívül hagyja az elemeket.</li>
+            <li data-i18n-id="s-e5b2">Keressen nehezen látható tippeket – képernyőn kívüli, csonkított, más elemek mögötti vagy rejtett
+              elemeken lévő tippeket. A javításhoz használja az alábbi „Rejtett vagy képernyőn kívüli tippek javítása"
+              szakaszban található útmutatásokat.</li>
+            <li data-i18n-id="s-c564">Ha a webhelyen már van tartalom, és rendelkezik CSA előfizetéssel, látogasson el a vezérlőpult
+              „újraellenőrzés" fülére, és <strong>járja be a webhelyet</strong> a webhelyjelentések előtöltéséhez. Ez
+              nem kötelező, de a régebbi oldalak nem jelennek meg a jelentésekben, amíg be nem járják őket, vagy egy
+              bejelentkezett felhasználó meg nem látogatja azokat.</li>
+          </ol>
+          <p data-i18n-id="s-e025">Tekintse meg a <a href="https://youtu.be/uYvNYPg38nU?si=dqADyWpTtOhniHTP&t=696">konfigurációs lehetőségeket
+              bemutató videót</a> (v2.4).</p>
+
+          <h2 id="check-roots" data-i18n-id="s-9202">Nem hasznos figyelmeztetések elrejtése</h2>
+          <p data-i18n-id="s-fa47">
+            <strong>A jó konfiguráció elnyomja a nem hasznos figyelmeztetéseket, hogy a tartalomszerzők a javítandó
+              problémákra koncentrálhassanak</strong>.
+          </p>
+          <p data-i18n-id="s-996e">Bár teljesen kikapcsolhatja a teszteket, általában jobb az adott elemekre vagy oldalakra vonatkozó
+            figyelmeztetések elrejtése.</p>
+          <hr/>
+          <p data-i18n-id="s-7918">
+            Minden tesztfuttatás során az Editoria11y egyetlen elemkészletet gyűjt össze a „Tartalom ellenőrzése ezekben
+            a konténerekben" beállításból, majd többszörösen szűri azt. Így néz ki egy tesztfuttatás:
+          </p>
+          <ol>
+            <li data-i18n-id="s-994a">
+              Az ellenőrzés megszakítása, ha a konfiguráció megakadályozza az ellenőrzést ezen az oldalon vagy ennél a
+              felhasználónál.
+            </li>
+            <li data-i18n-id="s-10c9">
+              Elemek <strong>összegyűjtése</strong> a megadott oldalrégiókból,
+              pl.:<br/><code>body > *:not('.ed11y-element')</code><br/>
+              <em>Editoria11y CSA felhasználók számára ezek a régiók a <strong>Fejlesztői tesztek</strong> fülön
+                találhatók.</em>
+            </li>
+            <li data-i18n-id="s-7524">
+              A figyelmen kívül hagyási szelektoroknak megfelelő elemek <strong>eldobása</strong>,
+              pl.:<br/><code>.widgets, .utility-menu</code><br/>
+              <em>Editoria11y CSA felhasználók számára ezek a szelektorok a <strong>Fejlesztői tesztek</strong> fülön
+                találhatók.</em>
+            </li>
+            <li data-i18n-id="s-58d0">
+              Tesztek futtatása és eredmények szinkronizálása a vezérlőpulttal.
+            </li>
+            <li>
+              <span data-translate data-i18n-id="s-f8c6">Ha a szétválasztott konfiguráció aktív és a felhasználó tartalomszerkesztő, a fejlesztői eredmények
+              szűrése:</span>
+              <ul>
+                <li data-i18n-id="s-72c9">A „Csak fejlesztői" jelölésű tesztek eredményeinek <strong>eldobása</strong>.</li>
+                <li data-i18n-id="s-576e">A megadott <strong><em>tartalom</em></strong> régiókon kívüli elemek eredményeinek
+                  <strong>eldobása</strong>, pl.:<br/><code>main, footer</code>
+                </li>
+                <li data-i18n-id="s-bb1d">A <strong><em>tartalom</em></strong> figyelmen kívül hagyási szelektorainak megfelelő elemek
+                  eredményeinek <strong>eldobása</strong>.</li>
+              </ul>
+              Vegye figyelembe, hogy nincs második „összegyűjtési" fázis. A fejlesztői oldalrégióknak tartalmazniuk kell
+              a tartalomrégiókat.</span>
+            </li>
+            <li data-i18n-id="s-b79c">A panel megnyitása és figyelmeztetések kirajzolása, ha a konfiguráció megfelel egy automatikus
+              megnyitási beállításnak.</li>
+          </ol>
+
+          <h3 id="dismiss" data-i18n-id="s-be02">Figyelmeztetések elutasítása</h3>
+          <p data-i18n-id="s-2ae3">A tesztek a könyvtárban hibákként vagy figyelmeztetésekként („kézi ellenőrzések") konfigurálhatók. A
+            figyelmeztetések elutasíthatók. Kétféle elutasítás érhető el az egyes eszköztippek láblécéből:</p>
+          <div class="my-2"
+            style="background: url(/assets/images/3x-generic-tip.png) 100% 98%; max-width: 600px; padding-top: 6%; background-size: 108%;">
+          </div>
+          <ul>
+            <li data-i18n-id="s-7b65">A „Figyelmen kívül hagyás" felhasználói beállításként tárolódik: a figyelmeztetés mostantól rejtett az
+              aktuális felhasználó számára, de csak az aktuális felhasználó számára.</li>
+            <li data-i18n-id="s-654c">A „Rendben jelölés" minden felhasználó számára elrejti a figyelmeztetést.</li>
+          </ul>
+          <p data-i18n-id="s-dc14">Hogy egy felhasználó képes-e elutasítani egy figyelmeztetést, azt a Drupal felhasználói jogosultságaiban a
+            szerepkör szintjén lehet szabályozni. <strong>A legtöbb szerzőnek engedélyezni kell a figyelmeztetések
+              elutasítását</strong>. Nincs értelme kézi ellenőrzést hozzárendelni valakihez, ha nem tudja megjelölni az
+            elemet ellenőrzöttként.</p>
+
+          <h3 id="roots" data-i18n-id="s-d932">Elemek figyelmen kívül hagyása</h3>
+          <p data-i18n-id="s-9d1e">Ez a két konfigurációs beállítás a legfontosabb!</p>
+          <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
+            <label for="edit-content-root">Tartalom ellenőrzése ezekben a konténerekben</label>
+            <div><textarea class="form-control" id="edit-content-root" name="content_root" rows="1" cols="30"
+                disabled></textarea>
+            </div>
+            <div class="mt-3">
+              <label for="edit-ignore-elements">Ezen elemek átugrása</label>
+              <div>
+                <textarea class="form-control" id="edit-ignore-elements" disabled name="ignore_elements" rows="1"
+                  cols="30" class=""></textarea>
+              </div>
+            </div>
+          </div>
+          <p data-i18n-id="s-6051">
+            Az elsőt állítsa be úgy, hogy tartalmazza az oldal azon részeit, amelyeket a tartalomszerzők
+            szerkeszthetnek. Pl. ha szerkeszthetik a <code>main</code> tartalomterületet, a <code>.sidebar</code>-t és a
+            <code>.footer-column-two</code>-t, állítsa be ezeket a szelektorokat tartalomellenőrzési területként.
+          </p>
+          <p data-i18n-id="s-f29c">
+            A másodikat használja alszakaszok „kizárásához". Pl. ha a <code>main</code> különböző widgeteket és
+            beágyazásokat tartalmaz, amelyeket csak fejlesztők módosíthatnak, sorolja fel ezeket:
+            <code>.widget-1, .social-embed</code>;
+          </p>
+          <p data-i18n-id="s-10ef">Ha a szétválasztott konfigurációt használja, hasonló beállításpárt lát a Fejlesztői tesztek fülön:</p>
+          <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
+            <div>
+              <fieldset>
+                <legend>
+                  Fejlesztői ellenőrzési terület
+                </legend>
+                <div class="fieldset__wrapper fieldset__wrapper--group">
+
+                  <div id="edit-dev-check-root">
+                    <div>
+                      <input aria-describedby="edit-dev-check-root--description" type="radio"
+                        id="edit-dev-check-root-automatic" name="dev_check_root" value="automatic" checked="checked" />
+                      <label for="edit-dev-check-root-automatic" class="form-item__label option">Minden elem</label>
+                    </div>
+                    <div class="d-flex">
+                      <input aria-describedby="edit-dev-check-root--description" type="radio"
+                        id="edit-dev-check-root-match" name="dev_check_root" value="match"
+                        class="align-self-baseline mt-1 me-1" />
+                      <label for="edit-dev-check-root-match" class="form-item__label option">Csak a Tartalombeállítások
+                        fülön felsorolt konténerek</label>
+                    </div>
+                    <div class="">
+                      <input aria-describedby="edit-dev-check-root--description" type="radio"
+                        id="edit-dev-check-root-specify" name="dev_check_root" value="specify"
+                        class="form-radio form-boolean form-boolean--type-radio" />
+                      <label for="edit-dev-check-root-specify" class="">Az alább felsorolt konkrét konténerek</label>
+                    </div>
+                  </div>
+
+                </div>
+              </fieldset>
+
+              <div class="">
+                <label for="edit-always-ignore" class="mt-3">Figyelmen kívül hagyás fejlesztők és tartalomszerkesztők
+                  számára egyaránt</label>
+                <div class="form-textarea-wrapper">
+                  <textarea id="edit-always-ignore" class="form-control" name="always_ignore" rows="1" cols="20"
+                    placeholder=""></textarea>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+          <p data-i18n-id="s-8c02">A fejlesztői ellenőrzési területekről a legfontosabb tudnivaló, hogy <strong>nem függetlenek</strong> a
+            tartalomellenőrzési területektől. Szétválasztott konfigurációban a fejlesztői területek kerülnek
+            ellenőrzésre, majd ezek az eredmények <strong>szűrésre</strong> kerülnek a tartalomterületek szerint. A
+            fejlesztők számára kizárt területek a tartalomszerkesztők számára is kizártak lesznek. Ne zárja ki a
+            szerkeszthető tartalomterületeket!</p>
+
+          <p data-i18n-id="s-0312">Egyes tesztek pontosabb konfigurációt tesznek lehetővé, hogy csak bizonyos figyelmeztetések legyenek
+            elrejtve az érintett elemeken. Keresse ezeket itt:</p>
+          <ul>
+            <li data-i18n-id="s-d53d">Tartalomtesztek: Ellenőrizendő hivatkozások</li>
+            <li data-i18n-id="s-0d1e">Tartalomtesztek: Ellenőrizendő beágyazások</li>
+            <li data-i18n-id="s-10c1">Tartalomtesztek: Dinamikus és shadow tartalom észlelése</li>
+            <li data-i18n-id="s-e6e4">Fejlesztői tesztek: Kontraszt</li>
+          </ul>
+
+          <h3 id="pages" data-i18n-id="s-177c">Elrejtés adott oldalakon vagy felhasználóknál</h3>
+          <p data-i18n-id="s-e874">
+            Ennek legegyszerűbb módja CSS osztályok vagy azonosítók megadása ezeknél a beállításoknál:
+          </p>
+          <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
+            <label for="edit-no-load" class="form-item__label">Ne ellenőrizzen az ilyen elemeket tartalmazó
+              oldalakon</label>
+            <div class="form-textarea-wrapper">
+              <textarea data-drupal-selector="edit-no-load" aria-describedby="edit-no-load--description"
+                id="edit-no-load" name="no_load" rows="1" cols="20" class="form-control"></textarea>
+            </div>
+
+            <label for="edit-ignore-all-if-absent" class="form-item__label">Minden figyelmeztetés elrejtése olyan
+              oldalakon, ahol ezek az elemek nincsenek jelen</label>
+            <div class="form-textarea-wrapper">
+              <textarea data-drupal-selector="edit-ignore-all-if-absent"
+                aria-describedby="edit-ignore-all-if-absent--description" id="edit-ignore-all-if-absent"
+                name="ignore_all_if_absent" rows="1" cols="20" class="form-control"></textarea>
+            </div>
+
+          </div>
+          <p data-i18n-id="s-0877">
+            Az első megakadályozza az ellenőrzések futtatását, és az eszköztár nem jelenik meg.
+          </p>
+          <p data-i18n-id="s-5cbd">
+            A második minimalizálva indítja az ellenőrzőt, és automatikusan „Figyelmen kívül hagyott"-ként jelöli meg
+            (az aktuális felhasználó számára) az összes problémát, még ha hibák is. Ez lehetővé teszi a tesztek
+            futtatását és a vezérlőpult frissítését a felhasználó zavarása nélkül.
+          </p>
+          <p data-i18n-id="s-1661">
+            Ha ezeket szeretné használni annak szabályozására, hogy mely felhasználók lássák az ellenőrzőt, szükség
+            lehet a téma módosítására, hogy egy osztályt adjon ki, pl. <code>.user-247</code>
+          </p>
+
+          <h2 id="dashboard" data-i18n-id="s-f4d7">Webhelyszintű eredmények kezelése</h2>
+          <section id="refresh">
+            <h3 class="pt-3" data-i18n-id="s-012a">Bejárás és eredmények frissítése</h3>
+            <p data-i18n-id="s-75a9">Az Editoria11y egy <strong>valós idejű megfigyelő eszköz, nem bejáró</strong>. Webhelyszintű jelentései
+              frissülnek, amikor a szerzők megtekintik az oldalakat, ezért a rendszeres bejárás általában nem szükséges.
+              A CSA modul <em>tartalmaz</em> bejárót, de csak az alábbi három helyzetben van rá szükség:</p>
+            <ol>
+              <li data-i18n-id="s-dfb1">
+                Amikor az Editoria11y-t először telepíti egy meglévő, sok oldalas webhelyre. Az oldalakat meg kell
+                látogatni, mielőtt megjelennének a vezérlőpulton, ezért egy gyors kezdeti bejárás időt takarít meg.
+              </li>
+              <li data-i18n-id="s-f602">
+                A témák vagy modulok nagyobb frissítései javíthatnak (vagy okozhatnak) problémákat sok oldalon, amelyek
+                nem jelennek meg, amíg meg nem látogatják vagy be nem járják őket.
+              </li>
+              <li data-i18n-id="s-a530">
+                Az adminisztrációs felületen végzett tömeges műveletek, mint az oldalak vagy átirányítások törlése,
+                hajlamosak hátrahagyni az eredményeket olyan oldalakról, amelyek már nem léteznek vagy áthelyezésre
+                kerültek. Ilyen esetekben hasznos a „Frissítés" fül karbantartási műveleteit használni az oldal URL-ek
+                frissítéséhez, valamint a törölt oldalak észleléséhez és eltávolításához.
+              </li>
+            </ol>
+            <p data-i18n-id="s-8e5a">A bejárás során semmilyen adat nem hagyja el a webhelyet. A CSA bejáró nem felhőeszköz; a böngészőjét
+              használja a saját webhelyén lévő oldalak betöltéséhez és ellenőrzéséhez. Ennek a megközelítésnek az a
+              hátránya, hogy a <strong>böngészők szüneteltetik a háttérlapokat</strong>. A bejárás alatt a számítógépnek
+              bekapcsolva és ébren kell lennie. Nyisson egy új ablakot a bejárónak, és hagyja azt az előtérben lévő
+              fülként, amíg dolgozik. Egy másik ablakban nyugodtan folytathatja a munkát. A bejáró minden oldalköteg
+              feldolgozása után frissíti a becslést.</p>
+          </section>
+          <section id="reports">
+            <h3 data-i18n-id="s-a242">Jelentések megtekintése</h3>
+            <div class="my-4 border shadow"
+              style="background: url(/assets/images/3x-dashboard.png) 86% 0%; padding-top: 28%; background-size: 106%;">
+            </div>
+            <ul>
+              <li data-i18n-id="s-e328">
+                A <strong>Legutóbbi</strong> lehetővé teszi az egyedi figyelmeztetések böngészését. Ezzel például
+                szűrhet az azonos típusú figyelmeztetések összes előfordulására, megnézheti, mely figyelmeztetések
+                jelennek meg gyakran az új tartalomban, vagy mely szerzőknek van még mindig szokásuk ugyanazt a hibát
+                elkövetni.
+              </li>
+              <li data-i18n-id="s-796f">
+                Az <strong>Oldalak</strong> oldalankénti figyelmeztetésszámot mutat, oldalak szerint csoportosítva.
+                Ezzel megtalálhatja a legtöbb problémát tartalmazó oldalakat, és szűrhet oldalattribútumok, például
+                tartalomtípus és közzétételi állapot szerint.
+              </li>
+              <li data-i18n-id="s-9423">
+                A <strong>Figyelmeztetések</strong> típus szerint mutatja a problémákat.
+              </li>
+              <li data-i18n-id="s-52ed">
+                Az <strong>Elutasítások</strong> lehetővé teszi annak nyomon követését, hogy a szerzők helyesen
+                utasítják-e el a figyelmeztetéseket, és „visszaállítás" gombokkal rendelkezik az elutasított
+                figyelmeztetések visszaállításához.
+              </li>
+              <li data-i18n-id="s-3379">
+                Az <strong>Exportálás</strong> az Oldalak, Figyelmeztetések és Elutasítások jelentések szűrhető verzióit
+                tartalmazza CSV letöltések előkészítéséhez. <em>A CSV Export almodul biztosítja</em>
+              </li>
+              <li data-i18n-id="s-9814">
+                A <strong>Frissítés</strong> vezérlőpult-karbantartó eszközöket tartalmaz a törölt oldalak
+                figyelmeztetéseinek eltávolításához, a paraméteres ál-oldalak (pl. /search?query=example)
+                figyelmeztetéseinek eltávolításához, a tárolt oldalcímek és URL-ek frissítéséhez, valamint a kézi
+                bejárás futtatásához. <em>A CSA almodul biztosítja</em>
+              </li>
+            </ul>
+          </section>
+
+          <h2 id="positioning" data-i18n-id="s-c35b">Rejtett vagy képernyőn kívüli tippek javítása</h2>
+
+          <p data-i18n-id="s-68ce">A modul mezőket biztosít a könyvtár két konfigurációs lehetőségéhez, amelyek a tippek elhelyezését
+            módosítják:</p>
+
+          <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
+            <label for="edit-element-hides-overflow" class="form-item__label">Overflow hidden tulajdonságú
+              elemek</label>
+            <textarea data-drupal-selector="edit-element-hides-overflow"
+              aria-describedby="edit-element-hides-overflow--description" id="edit-element-hides-overflow"
+              name="element_hides_overflow" rows="1" cols="60" class="form-control"></textarea>
+            <label for="edit-hidden-handlers" class="form-item__label">A téma JavaScript-je kezeli a rejtett
+              eszköztippek megjelenítését ezekben a konténerekben</label>
+            <textarea data-drupal-selector="edit-hidden-handlers" aria-describedby="edit-hidden-handlers--description"
+              id="edit-hidden-handlers" name="hidden_handlers" rows="1" cols="60" class="form-control"></textarea>
+          </div>
+          <p data-i18n-id="s-34e4">Egyes témáknak vannak olyan oszlopai vagy widgetjei, amelyek elrejtik a vízszintes vagy függőleges
+            túlcsordulást. A könyvtár automatikusan észleli, ha egy kapcsoló az <strong>oldal</strong> látható részén
+            kívülre esne. Ha megmondja a könyvtárnak, hogy bizonyos konténerek elrejtik a túlcsordulást, az megpróbálja
+            az érintett konténerek elemeinek tippjeit a határokon belül elhelyezni.</p>
+          <p data-i18n-id="s-7cb7">Egyes témáknak vannak olyan widgetjei, amelyek váltogatják a tartalom láthatóságát, mint például
+            harmonikák, fülek és diavetítések. Az ilyen elemekbe helyezett tippek szintén rejtettek lesznek. Ha megadja
+            ezeknek a widgeteknek a szelektorlistáját, az Editoria11y röviden szünetel, amikor a felhasználó az előző
+            vagy következő gombbal próbál ezekhez a tippekhez ugrani. A Drupal témák és modulok ezután a könyvtár <a href="/en/install/#hidden-content">rejtett tartalmakon lévő tippek kezelése</a> szakaszának utasításait
+            követhetik a rejtett tartalom megjelenítéséhez.</p>
+
+          <h2 id="runtime" data-i18n-id="s-7e38">Saját konfiguráció írása</h2>
+          <p data-i18n-id="s-a5d3">PHP-ban: a Drupal modul egy <code>hook_editoria11y_alter_config</code> hookot biztosít a
+            <code>drupalSettings.editoria11y</code> tartalmának módosításához egy modulban vagy témában. Például:
+          </p>
+          <pre class="language-php"><code><!--<?php
+/**
+ * @file
+ * MY_MODULE module file.
+ */
+
+use Drupal\Core\Cache\CacheableMetadata;
+
+/**
+ * Implements hook_editoria11y_alter_config().
+ *
+ * Attaches Editoria11y library and config based on context.
+ */
+function MY_MODULE_editoria11y_alter_config(array &$attach, CacheableMetadata $cacheableMetadata): void {
+  $config = Drupal::config('editoria11y.settings');
+
+  // Module settings being changed need to bust the cache.
+  $cacheableMetadata->addCacheableDependency($config);
+
+  // Get and modify any of the values being passed to drupalSettings.editoria11y.
+  if (!empty($attach['allow_ok'])) {
+    $attach['allow_ok'] = 'okAll';
+  }
+}--></code></pre>
+          <p data-i18n-id="s-2368">A <code>drupalSettings</code> módosítása csak akkor segít, ha a modul JavaScript-je már be van állítva az
+            érték átadására a könyvtárnak. További paraméterek hozzáadásához közvetlenül a JavaScript
+            <code>options</code> objektumot kell módosítania. A modul egyetlen globális JavaScript változót ellenőriz:
+            <code>editoria11yOptionsOverride</code>. Ha ez be van állítva, átadja az <code>options</code> objektumot az
+            Ön által a moduljában vagy témájában megadott <code>editoria11yOptions</code> függvénynek. Ezután bármelyik
+            <a href="https://editorsally.ddev.site/en/install/#params">könyvtárparamétert</a> beállíthatja.
+          </p>
+          <pre class="language-javascript"><code><!--var editoria11yOptionsOverride = true;
+var editoria11yOptions = function(options) {
+  // You now have access to the processed options object that will be passed to the library.
+
+  // E.g., to add a selector to the ignore list:
+  if (options['ignoreElements'] === false) {
+    // Provide the selector as the only value.
+    options['ignoreElements'] = `.example`;
+  } else {
+    // Append additional selectors with comma separator.
+    options['ignoreElements'] = `${options['ignoreElements']}, .example`
+  }
+
+  // Return your processed options.
+  return options;
+}
+--></code></pre>
+          <section id="custom-tests">
+            <h2 data-i18n-id="s-e0f0">Saját tesztek írása</h2>
+            <p data-i18n-id="s-6ece">Először a modul konfigurációjában adjon hozzá 1-et az „Egyéni tesztek" opcióhoz, hogy a rendszer tudja,
+              figyelnie kell a tesztekre.</p>
+            <p data-i18n-id="s-4316">Ezután hozzon létre egy Drupal JavaScript könyvtárat a tesztjeivel a témájában vagy moduljában, a <a href="/en/install/#custom-tests">könyvtár útmutatóját az egyéni tesztek írásához</a> követve.</p>
+            <p data-i18n-id="s-b4ea">Íme egy működő példa a Princetontól egy egyéni teszthez, amely Safe Linkekre figyelmeztet. Vegye
+              figyelembe, hogy az Editoria11y osztályt a <code>Drupal.Ed11y.</code> révén éri el.</p>
+            <pre class="language-javascript"><code><!--const psEd11yCustomTests = function() {
+
+  // 1.
+  // Get elements to test, via Drupal.Ed11y.getElements.
+  // The 'root' parameter tells it to respect config for check areas and ignores.
+  const safeLinks = Drupal.Ed11y.getElements('a[href*="safelinks.protection.outlook.com/?"]', 'root');
+
+  // Add the test name to the lang object.
+  Drupal.ed11yLang.lang.testNames.outlookSafeLink = 'URL is Safe Link encoded';
+
+  // 2.
+  // Create the tip content.
+  const decodeSafelink = function(url) {
+    const params = new URL(url).searchParams;
+    let decoded = params.get('url');
+    const p = document.createElement('p');
+    if (!!decoded) {
+      p.innerHTML = `<p><span class="badge">To fix</span>Update this link with the correct URL, which is probably:<br>
+    <em style='word-wrap: break-word;font-size: 90%;line-height: 1.2;display: block;'></em></p>`
+      p.querySelector('em').textContent = Drupal.Ed11y.sanitizeHTML(decoded);
+    }
+    return p;
+  };
+  safeLinks?.forEach((el) => {
+    const content = document.createElement('div');
+    content.innerHTML = `<div class="title">Please fix this Outlook "Safe Link"</div>
+            <div class="why">
+                <p>The URL for this link is an Outlook "Safe Link" that was copied from an email.
+                It includes the original recipient's email address,
+                and will break if Microsoft shuts down the service.</p>
+                <p>The pasted URL is:<br>
+                <em style='word-break: break-all;font-size: 90%;line-height: 1.2;
+                display: block;'></em></p>
+            </div>
+            `;
+    content.querySelector('em').textContent = Drupal.Ed11y.sanitizeHTML(el.href);
+    content.querySelector('.why').insertAdjacentElement('beforebegin', decodeSafelink(el.href));
+
+    // 3.
+    // Push the tip to the library results object.
+    Drupal.Ed11y.State.results.push({
+      element: el,
+      test: 'outlookSafeLink',
+      type: 'error',
+      content: content,
+      position: 'beforebegin',
+      inline: false,
+      dismiss: false,
+    });
+  });
+
+  // 4.
+  // Tell Editoria11y you are done adding custom results.
+  const allDone = new CustomEvent('ed11yResume');
+  document.dispatchEvent(allDone);
+};--></code></pre>
+
+          </section>
+          <section id="help">
+            <h2 data-i18n-id="s-4690">Segítségkérés</h2>
+            <p data-i18n-id="s-f149">A közösségi támogatási lehetőségekért nézze meg a <a href="../contacts">kapcsolat</a> oldalt. @itmaybejj
+              általában elérhető a Drupal Slacken, amikor a nap fent van a nyugati féltekén.</p>
+            <p data-i18n-id="s-4a16">A legtöbb <a href="../license/">CSA hozzájárulási szint</a> tartalmaz egy éves egyeztetést, amely
+              közvetlen
+              segítséget is magában foglalhat a telepítéshez és konfigurációhoz.</p>
+          </section>
+
+        </div>
+      </div>
+    </div>
+  </main>

@@ -1,0 +1,384 @@
+<main class="container col-lg-12 mx-auto py-5">
+    <div class="row docs">
+      <div class="col-12 col-md-5 col-lg-4 mb-5">
+        <div id="on-this-page" class="list-group ms-2 ms-lg-5 position-sticky top-0 pt-3">
+        </div>
+      </div>
+      <div class="col-12 col-md-7 col-lg-8 pt-3" data-bs-spy="scroll" data-bs-target="#on-this-page"
+        data-bs-smooth-scroll="true">
+        <h1 data-i18n-id="s-fe89">Installer &amp; konfigurer</h1>
+
+        <section id="modules">
+          <h2 class="pt-3 pb-2" data-i18n-id="s-6f09">Forhåndskonfigurerte versjoner</h2>
+          <ul class="list-unstyled ps-0">
+            <li data-i18n-id="s-a850"><a href="https://www.drupal.org/project/editoria11y"
+                class="arrow"><strong>Drupal-installasjon</strong></a></li>
+            <li data-i18n-id="s-c7b0"><a href="https://wordpress.org/plugins/editoria11y-accessibility-checker/"
+                class="arrow"><strong>WordPress-installasjon</strong></a></li>
+            <li data-i18n-id="s-128f"><a href="https://codeberg.org/sebastiangreger/kirby-a11yprompter"
+                class="arrow"><strong>Kirby-installasjon</strong></a> <em>(bidrag)</em></li>
+            <li data-i18n-id="s-4002"><a href="https://plugins.craftcms.com/editoria11y"
+                class="arrow"><strong>CraftCMS-installasjon</strong></a> <em>(bidrag)</em></li>
+          </ul>
+        </section>
+        <section id="diy">
+          <h2 data-i18n-id="s-cef2">
+            Egendefinert installasjon
+          </h2>
+          <p data-i18n-id="s-df5a">For å bygge din egen implementasjon, <a href="https://github.com/itmaybejj/editoria11y" data-type="URL"
+              data-id="https://github.com/itmaybejj/editoria11y" class="liinternal">last ned en lokal kopi</a> (eller
+            bruk en <a href="https://cdn.jsdelivr.net/gh/itmaybejj/editoria11y@2/dist/editoria11y.min.js"
+              class="liinternal">CDN-versjon</a>) av en språkpakke, JS-minfilen og CSS-minfilen, og opprett deretter en
+            ny «Ed11y»-instans.</p>
+          <p data-i18n-id="s-4e8a">For <strong>ESM/JS-modulimport</strong>: </p>
+          <pre class="language-markup"><code><!--// Load CSS
+<link href="/dist/css/editoria11y.min.css?v=3.0" rel="stylesheet">
+// Load JS and language pack
+<script type="module">
+  import Ed11y from “/dist/js/ed11y.esm.min.js?v=3.0”;
+  import ed11yLang from “/dist/js/lang/en.js”;
+  // Instantiate with language and CSS
+  const ed11y = new Ed11y.Ed11y({
+    lang: ‘en’,
+    cssUrls: [“/dist/css/editoria11y.min.css”]
+  });
+</script>
+--></code></pre>
+          <p data-i18n-id="s-b7f0">Bruk .umd JavaScript-filene for eldre nettlesere og systemer:</p>
+          <pre class="language-markup"><code><!--
+// Call CSS, JS and a Language Pack
+<link href="/dist/editoria11y.min.css" rel="stylesheet">
+<script src="/dist/js/ed11y.umd.js"></script>;
+<script src="/dist/js/lang/en.umd.js"></script>
+// Create a new Ed11y instance
+<script>
+  const ed11y = new Ed11y.Ed11y({
+    lang: ‘en’,
+    cssUrls: [“/dist/css/editoria11y.min.css”]
+  });
+</script>
+                --></code></pre>
+        </section>
+
+        <section id="params">
+          <h2 data-i18n-id="s-c50b">Parametere</h2>
+          <p data-i18n-id="s-6877">En fullstendig implementasjon vil kun kalles for innloggede redaktører (du vil ikke at besøkende skal se
+            verktøyet!), og kan overstyre alle <a               href="https://github.com/itmaybejj/editoria11y/blob/3.0.x/src/js/utils/ed11y-default-options.js"
+              class="liinternal"><strong>standardparameterne</strong></a>.</p>
+          <p data-i18n-id="s-084e">Merk at standardverdier er satt for alle parametere; ta kun med det du ønsker å overstyre.</p>
+          <p data-i18n-id="s-a20c">En kraftig tilpasset implementasjon kan se slik ut:</p>
+          <pre class="language-javascript"><code><!--const ed11y = new Ed11y.Ed11y({
+  // Define content regions
+  checkRoot: 'main, .footer-content-zone',
+  // Add custom CSS files
+  cssUrls: [
+    '/css/editoria11y.min.css',
+    '/css/custom.css'
+  ],
+  // Define Web components to include in checks
+  shadowComponents: 'accordion, lightbox',
+  // We want the box to open automatically for errors:
+  alertMode: 'assertive',
+  // Our external link icon has visually hidden text
+  // to delete before checking if the link has text:
+  linkIgnoreStrings: ['(opens in new window)'],
+  // Content editors cannot edit these elements:
+  ignoreElements: 'nav *, #social-block',
+  // Prevent this user from hiding alerts.
+  allowHide: false,
+  allowOK: true,
+  // Don't scan while the editor toolbar is open:
+  preventCheckingIfPresent: ".editor-toolbar",
+  // Turn off warnings that an element might be visually hidden:
+  checkVisible: false,
+  // Dispatch a JS event before highlighting this,
+  // so our JS can modify it first:
+  hiddenHandlers: ".accordion-panel",
+  // Dispatch a JS event when the library is ready
+  // for custom tests, then wait for 3 ed11yResume
+  // events from our 3 tests to continue.
+  customTests: 3,
+  checks: {
+    // Turn off the HEADING_FIRST test
+    HEADING_FIRST: false,
+    // Allow dismissing the HEADING_SKIPPED_LEVEL test
+    HEADING_SKIPPED_LEVEL: {
+       type: 'warning',
+    }
+  }
+
+}); --></code></pre>
+          <p data-i18n-id="s-18e0">Ferdige integrasjoner setter ofte disse variablene dynamisk – f.eks. ved å laste inn sider i
+            «assertive»-modus når de nylig er redigert, og deretter bytte tilbake til «polite» etter noen minutter.</p>
+        </section>
+
+        <section id="theme">
+          <h2 data-i18n-id="s-6c0a">Temaer</h2>
+
+          <p data-i18n-id="s-e058">Flere parametere gjør det mulig å velge tema, overstyre farger og injisere CSS.</p>
+
+          <p data-i18n-id="s-ebc7">Ta kun med parameterne du trenger å overstyre for å gjøre fremtidige oppdateringer enklere.</p>
+          <pre             class="language-javascript"><code><!--// Add custom CSS file
+cssUrls: ['/css/editoria11y.min.css', '/css/custom.css'],
+theme : 'darkTheme', // Select base theme
+darkTheme: {         // Override base colors
+    bg: '#0a2051',
+    bgHighlight: '#7b1919',
+    text: '#f4f7ff',
+    primary: '#4930a0',
+    primaryText: '#f4f7ff',
+    secondary: '#20160c',
+    warning: '#fad859',
+    alert: '#b80519',
+    button: '#dde8ff',
+    focusRing: 'cyan',
+    activeTab: '#0a2051',
+    tipHeader: '#4930a0',
+},
+// Override fonts
+baseFontSize: 14, // px
+baseFontFamily: '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif', --></code></pre>
+        </section>
+
+        <section id="js-events">
+          <h2 class="wp-block-heading has-text-align-left has-secondary-background-color has-background has-large-font-size" data-i18n-id="s-4568">
+            Nyttige JS-hendelser</h2>
+
+          <p data-i18n-id="s-3ca2">Temadesignere kan koble seg til disse hendelsene for å reagere på og endre siden etter behov.</p>
+
+          <p data-i18n-id="s-2fb1">I typisk rekkefølge…</p>
+
+          <ul class="wp-block-list">
+            <li data-i18n-id="s-abfb"><strong><code>ed11yRunCustomTests</code></strong>: utsendes når Results-objektet er klart for at
+              egendefinerte resultater kan injiseres. Merk at parameteren customTests må settes til antallet
+              egendefinerte testfunksjoner du skal kjøre (…sannsynligvis én…) for at denne hendelsen skal utsendes.
+              Detaljer i neste avsnitt.</li>
+
+            <li data-i18n-id="s-16d6"><strong><code>ed11yResults</code></strong>: utsendes når alle kontroller er ferdige. API-integrasjoner
+              kan nå hente data fra Ed11y.results-objektet.</li>
+
+            <li data-i18n-id="s-5693"><strong><code>ed11yPanelOpened</code></strong>: utsendes hvis panelet åpnes, automatisk eller manuelt.
+            </li>
+
+            <li data-i18n-id="s-4100"><strong><code>ed11yShowHidden</code></strong>: gir et <code>data-ed11y-result</code>-nummer og en
+              <code>viaJump</code>-boolsk verdi. Utsendes kun hvis parameteren «ed11yShowHidden» er satt
+              <em><strong>og</strong></em> en forelder til elementet samsvarer med en selektor. Brukes til å vise
+              varsler i beholdere som ikke er åpne ennå, f.eks. trekkspill, faner og karuseller. Brukseksempler i neste
+              avsnitt.
+            </li>
+
+            <li data-i18n-id="s-20be"><strong><code>ed11yPop</code></strong>: gir <code>data-ed11y-result</code>-ID samt referanser til
+              <code>result</code>- og <code>tip</code>-objektene. Utsendes når et verktøytips vises, slik at du kan
+              endre tipsene under kjøring.
+            </li>
+
+            <li data-i18n-id="s-a26b"><strong><code>ed11yShut</code></strong>: gir <code>data-ed11y-result</code>-ID. Utsendes når et
+              verktøytips lukkes.</li>
+
+            <li><span data-translate data-i18n-id="s-4631"><strong><code>ed11yDismissalUpdate</code></strong>: gir utvidet informasjon når en bruker avviser eller
+              gjenoppretter et varsel. Brukes til API-integrasjoner. Hendelsesobjektet inneholder:</span>
+              <ul>
+                <li data-i18n-id="s-a6bd"><code>dismissPage</code></li>
+
+                <li data-i18n-id="s-754f"><code>dismissTest</code></li>
+
+                <li data-i18n-id="s-0a00"><code>dismissKey</code></li>
+
+                <li data-i18n-id="s-c8b0"><code>dismissAction</code></li>
+              </ul>
+            </li>
+          </ul>
+          <p data-i18n-id="s-ec32">Eksempler finnes i de følgende avsnittene.</p>
+        </section>
+
+        <section id="modify-tips">
+          <h2 class="wp-block-heading has-secondary-background-color has-background has-large-font-size" data-i18n-id="s-ac90">Endre tips</h2>
+
+          <p data-i18n-id="s-edfa">Hvis alt du vil gjøre er å endre teksten i et tips, kan elementer i det globale ed11yLang.en-objektet (før
+            biblioteket kalles) eller Ed11y.M-objektet (etter at biblioteket er kalt) overstyres direkte. F.eks. i
+            Drupal-modulen der vi ga språkpakken aliaset Drupal.ed11yLang:</p>
+
+          <p data-i18n-id="s-c4d7"><code>Drupal.ed11yLang.lang.testNames.title = “Please write shorter headings.”</code></p>
+
+          <p data-i18n-id="s-f0b0">Dette gjelder for alle <a href="https://github.com/itmaybejj/editoria11y/blob/3.0.x/src/lang/baseAll.js"
+              data-type="link" data-id="https://github.com/itmaybejj/editoria11y/blob/2.3.x/js/ed11y-localization.js"
+              class="liinternal">standardnøklene i lokaliseringsfilen</a> eller den aktive språkspesifikke
+            oversettelsen.</p>
+
+          <p data-i18n-id="s-842f">Drupal-modulen legger også til egendefinerte redigeringslenker i tipsene ved hjelp av parameteren
+            <code>editLinks</code>. Legg merke til «Page editor» og «Layout editor:»
+          </p>
+
+          <figure class="wp-block-image size-full"><img loading="lazy" data-recalc-dims="1" fetchpriority="high" decoding="async" width="580" height="300" src="https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?resize=580%2C300&amp;ssl=1" alt="Verktøytips med innsatte lenker for «Page editor» og «Layout editor»." class="wp-image-523" srcset="https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?w=1290&amp;ssl=1 1290w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?resize=600%2C311&amp;ssl=1 600w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?resize=768%2C398&amp;ssl=1 768w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?resize=1200%2C621&amp;ssl=1 1200w" sizes="(max-width: 580px) 100vw, 580px" data-i18n-id="s-6d4d" /></figure>
+
+          <p data-i18n-id="s-bcd2">En forenklet versjon av koden som setter den parameteren:</p>
+          <pre class="language-javascript"><code><!--const editLinks = document.createElement('div');
+const editLink = document.createElement('a');
+      editLink.href="/node/1/edit";
+      editLink.textContent = "Edit page";
+editLinks.appendChild(editLink);
+const ed11y = new Ed11y({
+               editLinks: editLinks,
+              }); --></code></pre>
+          <p data-i18n-id="s-14d9">Drupal-modulen bruker deretter hendelsen <strong><code>ed11yPop</code></strong> til dynamisk å vise og
+            skjule redigeringslenken basert på kontekst når tips vises. </p>
+
+          <p data-i18n-id="s-78f4">Denne hendelsen gir referanser til <code>result</code>- og <code>tip</code>-objektene:</p>
+          <pre class="language-javascript"><code><!--// Listen for event
+document.addEventListener('ed11yPop', e => {
+  if (e.detail.result.element.closest(
+    drupalSettings.editoria11y.hide_edit_links)
+  ) {
+      e.detail.tip.shadowRoot.querySelector(
+        ‘.ed11y-custom-edit-links’
+        )?.setAttribute(‘hidden’, ‘’);
+     }
+}); --></code></pre>
+        </section>
+
+        <section id="custom-tests">
+          <h2 data-i18n-id="s-794a">Egendefinerte tester</h2>
+
+          <p data-i18n-id="s-921d">Hvis parameteren <strong><em>customTests</em></strong> er et <strong><em>tall</em></strong>, vil
+            Editoria11y sende ut en «ed11yRunCustomTests»-hendelse under kontroll, og deretter sette på pause i opptil
+            500 ms mens den lytter etter det antallet «<code>ed11yResume</code>»-hendelser.</p>
+
+          <p data-i18n-id="s-a897">Dette kan utnyttes til å kalle så mange skript med egendefinerte tester du vil, som kan skyve resultatene
+            sine inn i resultatmatrisen før tipsene tegnes.</p>
+
+          <p data-i18n-id="s-820a">For eksempel, hvis du ønsket å opprette dette tipset for å flagge lenker som er limt inn fra e-poster med
+            skjulte URL-er:</p>
+
+          <figure class="wp-block-image size-full"><img loading="lazy" data-recalc-dims="1" decoding="async" width="580" height="462" src="https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2023/12/Screenshot-2023-12-06-at-5.13.38-PM.png?resize=580%2C462&amp;ssl=1" alt="Tips med teksten «URL is Safe Link Encoded»" class="wp-image-323" srcset="https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2023/12/Screenshot-2023-12-06-at-5.13.38-PM.png?w=1056&amp;ssl=1 1056w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2023/12/Screenshot-2023-12-06-at-5.13.38-PM.png?resize=600%2C478&amp;ssl=1 600w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2023/12/Screenshot-2023-12-06-at-5.13.38-PM.png?resize=768%2C612&amp;ssl=1 768w" sizes="(max-width: 580px) 100vw, 580px" data-i18n-id="s-f6c3" /></figure>
+
+          <p data-i18n-id="s-a3f5">Du ville:</p>
+
+          <ol class="wp-block-list">
+            <li data-i18n-id="s-7c1e">Legge til en lytter for hendelsen <code>ed11yRunCustomTests</code></li>
+
+            <li data-i18n-id="s-b8b0">Finne samsvarende elementer</li>
+
+            <li data-i18n-id="s-3ff7">Definere tipsmeldingen</li>
+
+            <li data-i18n-id="s-181b">Sende ut «resume»-hendelsen for å la Editoria11y tegne tipset:</li>
+          </ol>
+
+          <pre class="language-javascript"><code><!--document.addEventListener('ed11yRunCustomTests', function() {
+  // 1. Write your custom test. This can be anything you want.
+  //
+  // This example searches the active root using the .getElements() function,
+  // which is aware of the checkRoots and ignoreElements parameters.
+  const safeLinks = Drupal.Ed11y.getElements('a[href*="safelinks.protection.outlook.com/?"]', 'root');
+
+  // This is just a utility function for this particular test...
+  const decodeSafelink = function(url) {
+      const params = new URL(url).searchParams;
+      let decoded = params.get('url');
+      if (!!decoded) {
+            decoded = Ed11y.sanitizeForHTML(decoded);
+            return `<p>The actual URL may be:<br><em style='word-wrap: break-word;'>${decoded}</em></p>`
+      }
+      return ‘’;
+  }
+
+  // 2. Add the test name to the active language pack.
+  // Add a title:
+  Drupal.ed11yLang.lang.testNames.outlookSafeLink = ‘URL is Safe Link encoded’;
+
+  // 3. Push each item you want flagged to Ed11y.results.
+  //
+  // You must provide:
+  //   element:      The element itself
+  //   test:         A key for your test, matching step 2.
+  //   type:         warning or error
+  //   content:      The tip HTML.
+  //   position:     “beforebegin” for interactive elements,
+  //                 “afterbegin” for paragraphs and table cells.
+  //   dismiss:      false for errors,
+  //                 a unique string for manual checks.
+  safeLinks?.forEach((el) => {
+   Drupal.Ed11y.State.results.push({
+     element: el,
+     test:    ‘outlookSafeLink’,
+     type:    ‘error’,
+     content: `<div class="title">Please fix the URL in this link</div>
+               ${decodeSafelink(el.href)}
+               <div class="why">
+                <p>The URL for this link is an Outlook “Safe Link” that was copied from an email.
+                It includes the original recipient’s email address,
+                and will break if Microsoft shuts down the service.</p>
+                <p>The pasted URL is:<br>
+                <em style='word-break: break-all;font-size: 90%;line-height: 1.2;
+                display: block;'>${Drupal.Ed11y.sanitizeHTML(el.href)}</em></p>
+               </div>
+            `,
+     position: ‘beforebegin’,
+     dismiss:  false,
+   });
+  });
+  // 4. When you are done with all your custom tests, dispatch an “ed11yResume” event:
+  let allDone = new CustomEvent(‘ed11yResume’);
+  document.dispatchEvent(allDone);
+}) --></code></pre>
+        </section>
+
+        <section id="hidden-content">
+          <h2 data-i18n-id="s-a67a">Håndtere varsler på skjult eller størrelsesbegrenset innhold</h2>
+
+
+          <p data-i18n-id="s-be6c">Mange interaktive komponenter (faner, glidebrytere, trekkspill) skjuler innhold. Editoria11y-infopanelet
+            inkluderer neste/forrige-knapper for å hoppe direkte til problemer. Hvis Editoria11y mener at problemets
+            verktøytips er usynlig for øyeblikket, vil det varsle brukeren om at noe er galt, og deretter markere den
+            første synlige forfederen – f.eks. diven rundt et trekkspill.</p>
+
+          <p data-i18n-id="s-4f58">Ideelt sett vil temaet ditt gjøre disse elementene synlige før Editoria11y kjører sin synlighetskontroll,
+            slik at alt bare fungerer magisk for brukerne dine — karuseller avanserer automatisk og trekkspill åpnes
+            automatisk for å vise problemet.</p>
+
+          <p data-i18n-id="s-7e11">For å gjøre dette når panelet først åpnes (f.eks. for å brette ut <strong><em>alle</em></strong>
+            trekkspillpaneler med problemer) legger du til en JS-hendelseslytter for <code>ed11yPanelOpened</code>, gjør
+            deretter en querySelectorAll etter relevante <code>ed11y-element-result</code>-elementer, og utløser
+            deretter hvilken funksjon temaet ditt bruker for å vise den delen av siden. </p>
+
+          <p data-i18n-id="s-1c3f">Her er et jQuery-basert eksempel. Når panelet åpnes, deaktiverer det en sticky-meny (slik at elementer ikke
+            dekkes til), og leter deretter etter eventuelle <code>ed11y-element-result</code>-elementer inne i lukkede
+            trekkspillelementer og simulerer et klikk på veksleknappen deres:</p>
+          <pre class="language-javascript"><code><!--document.addEventListener("ed11yPanelOpened", function () {
+  $('body').addClass('no-stick');
+  $('ed11y-element-result').each(function () {
+    if ($(this).parents('.ps-accordion-content[style*="display"]').length > 0) {
+    $(this).parents(‘.ps-accordion-content’).prev().find(‘.ps-accordion-item-button’).click();
+    }
+}) --></code></pre>
+
+          <p data-i18n-id="s-fbae">For å vise innhold kun ved hopp til et <strong><em>spesifikt</em></strong> tips via panelets «neste»-knapp
+            (f.eks. i en lukket fane eller neste karuselside), må du sette både <code>hiddenHandlers</code> til
+            relevante CSS-selektorer og <code>checkVisible</code> til TRUE i parameterne dine. Legg deretter til en
+            hendelseslytter for hendelsen <code>ed11yShowHidden</code>. Denne utløses hvis Editoria11y gjenkjenner at et
+            tips er inne i en beholder med én av de opplistede <code>hiddenHandlers</code>-selektorene i
+            alternativlisten. Denne JS-hendelsen vil inneholde ID-en til tipset det er i ferd med å åpne. Editoria11y
+            vil deretter kort tid etter å ha sendt ut denne hendelsen sette på pause, for å gi JavaScript-en din tid til
+            å gjøre elementet synlig.</p>
+
+          <p data-i18n-id="s-dae0">Her er et eksempel fra en Penn State-implementasjon. Den ser etter elementet som samsvarer med den oppgitte
+            ID-en, finner deretter sin overordnede interaktive komponentbeholder og utløser hendelsen for å aktivere
+            vekslingen:</p>
+          <pre class="language-javascript"><code><!--context.addEventListener('ed11yShowHidden', e => {
+  if (!e.detail.viaJump) {
+       return;
+  }
+  context.getElementById(e.detail.id)
+    .closest(‘[data-interactive-component]’)
+    .dispatchEvent(new CustomEvent(‘component:activate’));
+}); --></code></pre>
+          <p data-i18n-id="s-d99d">Siste merknad: noen temaer er rett og slett ikke kompatible med synlighetskontroll — f.eks. der
+            <code>&lt;main&gt;</code>-beholderen har en høyde på 0px. Slike nettsteder bør deaktivere all
+            synlighetskontroll ved å sette <code>checkVisible</code> til false.
+          </p>
+
+        </section>
+
+      </div><!-- Slutt på innholdskolonne -->
+
+    </div>
+  </main>

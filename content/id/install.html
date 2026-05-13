@@ -1,0 +1,380 @@
+<main class="container col-lg-12 mx-auto py-5">
+    <div class="row docs">
+      <div class="col-12 col-md-5 col-lg-4 mb-5">
+        <div id="on-this-page" class="list-group ms-2 ms-lg-5 position-sticky top-0 pt-3">
+        </div>
+      </div>
+      <div class="col-12 col-md-7 col-lg-8 pt-3" data-bs-spy="scroll" data-bs-target="#on-this-page"
+        data-bs-smooth-scroll="true">
+        <h1 data-i18n-id="s-fe89">Instal & konfigurasi</h1>
+
+        <section id="modules">
+          <h2 class="pt-3 pb-2" data-i18n-id="s-6f09">Versi yang sudah dikonfigurasi</h2>
+          <ul class="list-unstyled ps-0">
+            <li data-i18n-id="s-a850"><a href="https://www.drupal.org/project/editoria11y" class="arrow"><strong>Installer Drupal</strong></a>
+            </li>
+            <li data-i18n-id="s-c7b0"><a href="https://wordpress.org/plugins/editoria11y-accessibility-checker/"
+                class="arrow"><strong>Installer WordPress</strong></a></li>
+            <li data-i18n-id="s-128f"><a href="https://codeberg.org/sebastiangreger/kirby-a11yprompter" class="arrow"><strong>Installer
+                  Kirby</strong></a> <em>(kontrib)</em></li>
+            <li data-i18n-id="s-4002"><a href="https://plugins.craftcms.com/editoria11y" class="arrow"><strong>Installer CraftCMS</strong></a>
+              <em>(kontrib)</em>
+            </li>
+          </ul>
+        </section>
+        <section id="diy">
+          <h2 data-i18n-id="s-cef2">
+            Instalasi kustom
+          </h2>
+          <p data-i18n-id="s-df5a">Untuk membangun implementasi Anda sendiri, <a href="https://github.com/itmaybejj/editoria11y" data-type="URL"
+              data-id="https://github.com/itmaybejj/editoria11y" class="liinternal">unduh salinan lokal</a> (atau
+            referensikan <a href="https://cdn.jsdelivr.net/gh/itmaybejj/editoria11y@2/dist/editoria11y.min.js"
+              class="liinternal">versi CDN</a>) dari paket Bahasa, file JS min, dan file CSS min, lalu
+            buat instance "Ed11y" baru.</p>
+          <p data-i18n-id="s-4e8a">Untuk <strong>impor modul ESM/JS</strong>: </p>
+          <pre class="language-markup"><code><!--// Load CSS
+<link href="/dist/css/editoria11y.min.css?v=3.0" rel="stylesheet">
+// Load JS and language pack
+<script type="module">
+  import Ed11y from "/dist/js/ed11y.esm.min.js?v=3.0";
+  import ed11yLang from "/dist/js/lang/en.js";
+  // Instantiate with language and CSS
+  const ed11y = new Ed11y.Ed11y({
+    lang: 'en',
+    cssUrls: ["/dist/css/editoria11y.min.css"]
+  });
+</script>
+--></code></pre>
+          <p data-i18n-id="s-b7f0">Gunakan file JavaScript .umd untuk browser dan sistem lama:</p>
+          <pre class="language-markup"><code><!--
+// Call CSS, JS and a Language Pack
+<link href="/dist/editoria11y.min.css" rel="stylesheet">
+<script src="/dist/js/ed11y.umd.js"></script>;
+<script src="/dist/js/lang/en.umd.js"></script>
+// Create a new Ed11y instance
+<script>
+  const ed11y = new Ed11y.Ed11y({
+    lang: 'en',
+    cssUrls: ["/dist/css/editoria11y.min.css"]
+  });
+</script>
+                --></code></pre>
+        </section>
+
+        <section id="params">
+          <h2 data-i18n-id="s-c50b">Parameter</h2>
+          <p data-i18n-id="s-6877">Implementasi lengkap hanya akan dipanggil untuk editor yang sudah login (Anda tidak ingin pengunjung situs melihat pemeriksa Anda!), dan dapat mengganti salah satu dari <a               href="https://github.com/itmaybejj/editoria11y/blob/3.0.x/src/js/utils/ed11y-default-options.js"
+              class="liinternal"><strong>parameter default</strong></a>.</p>
+          <p data-i18n-id="s-084e">Perhatikan bahwa default disediakan untuk semua parameter; hanya sertakan hal-hal yang ingin Anda ganti.</p>
+          <p data-i18n-id="s-a20c">Implementasi yang sangat dikustomisasi mungkin terlihat seperti ini:</p>
+          <pre class="language-javascript"><code><!--const ed11y = new Ed11y.Ed11y({
+  // Define content regions
+  checkRoot: 'main, .footer-content-zone',
+  // Add custom CSS files
+  cssUrls: [
+    '/css/editoria11y.min.css',
+    '/css/custom.css'
+  ],
+  // Define Web components to include in checks
+  shadowComponents: 'accordion, lightbox',
+  // We want the box to open automatically for errors:
+  alertMode: 'assertive',
+  // Our external link icon has visually hidden text
+  // to delete before checking if the link has text:
+  linkIgnoreStrings: ['(opens in new window)'],
+  // Content editors cannot edit these elements:
+  ignoreElements: 'nav *, #social-block',
+  // Prevent this user from hiding alerts.
+  allowHide: false,
+  allowOK: true,
+  // Don't scan while the editor toolbar is open:
+  preventCheckingIfPresent: ".editor-toolbar",
+  // Turn off warnings that an element might be visually hidden:
+  checkVisible: false,
+  // Dispatch a JS event before highlighting this,
+  // so our JS can modify it first:
+  hiddenHandlers: ".accordion-panel",
+  // Dispatch a JS event when the library is ready
+  // for custom tests, then wait for 3 ed11yResume
+  // events from our 3 tests to continue.
+  customTests: 3,
+  checks: {
+    // Turn off the HEADING_FIRST test
+    HEADING_FIRST: false,
+    // Allow dismissing the HEADING_SKIPPED_LEVEL test
+    HEADING_SKIPPED_LEVEL: {
+       type: 'warning',
+    }
+  }
+
+}); --></code></pre>
+          <p data-i18n-id="s-18e0">Integrasi turnkey sering menetapkan variabel-variabel ini secara dinamis — mis., memuat halaman dalam mode "assertive" saat baru saja diedit, dan kembali ke "polite" setelah beberapa menit.</p>
+        </section>
+
+        <section id="theme">
+          <h2 data-i18n-id="s-6c0a">Tema</h2>
+
+          <p data-i18n-id="s-e058">Beberapa parameter memungkinkan pemilihan tema, penggantian warna, dan injeksi CSS.</p>
+
+          <p data-i18n-id="s-ebc7">Hanya sertakan parameter yang perlu Anda ganti untuk memudahkan pembaruan di masa mendatang.</p>
+          <pre             class="language-javascript"><code><!--// Add custom CSS file
+cssUrls: ['/css/editoria11y.min.css', '/css/custom.css'],
+theme : 'darkTheme', // Select base theme
+darkTheme: {         // Override base colors
+    bg: '#0a2051',
+    bgHighlight: '#7b1919',
+    text: '#f4f7ff',
+    primary: '#4930a0',
+    primaryText: '#f4f7ff',
+    secondary: '#20160c',
+    warning: '#fad859',
+    alert: '#b80519',
+    button: '#dde8ff',
+    focusRing: 'cyan',
+    activeTab: '#0a2051',
+    tipHeader: '#4930a0',
+},
+// Override fonts
+baseFontSize: 14, // px
+baseFontFamily: '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif', --></code></pre>
+        </section>
+
+        <section id="js-events">
+          <h2 class="wp-block-heading has-text-align-left has-secondary-background-color has-background has-large-font-size" data-i18n-id="s-4568">
+            Acara JS yang berguna</h2>
+
+          <p data-i18n-id="s-3ca2">Pembuat tema dapat memanfaatkan event-event ini untuk bereaksi dan memodifikasi halaman sesuai kebutuhan.</p>
+
+          <p data-i18n-id="s-2fb1">Dalam urutan kemunculan yang umum…</p>
+
+          <ul class="wp-block-list">
+            <li data-i18n-id="s-abfb"><strong><code>ed11yRunCustomTests</code></strong>: dikirimkan saat objek Results siap untuk
+              menerima hasil kustom. Perhatikan bahwa parameter customTests harus diatur ke jumlah fungsi
+              pengujian kustom yang akan Anda jalankan (…mungkin satu…) agar event ini dikirimkan. Detail di bagian berikut.</li>
+
+            <li data-i18n-id="s-16d6"><strong><code>ed11yResults</code></strong>: dikirimkan saat semua pemeriksaan selesai. Integrasi API
+              sekarang dapat mengambil data dari objek Ed11y.results.</li>
+
+            <li data-i18n-id="s-5693"><strong><code>ed11yPanelOpened</code></strong>: dikirimkan jika panel terbuka, secara otomatis atau
+              manual.</li>
+
+            <li data-i18n-id="s-4100"><strong><code>ed11yShowHidden</code></strong>: menyediakan nomor <code>data-ed11y-result</code> dan
+              boolean <code>viaJump</code>. Hanya dikirimkan jika parameter "ed11yShowHidden" diatur
+              <em><strong>dan</strong></em> induk elemen cocok dengan selektor. Digunakan untuk menampilkan peringatan dalam
+              kontainer yang belum terbuka, mis., akordion, tab, dan korsel. Contoh penggunaan di bagian berikutnya.
+            </li>
+
+            <li data-i18n-id="s-20be"><strong><code>ed11yPop</code></strong>: menyediakan ID <code>data-ed11y-result</code>, serta
+              referensi ke objek <code>result</code> dan <code>tip</code>. Dikirimkan saat tooltip muncul,
+              memungkinkan Anda memodifikasi tips saat runtime.</li>
+
+            <li data-i18n-id="s-a26b"><strong><code>ed11yShut</code></strong>: menyediakan ID <code>data-ed11y-result</code>. Dikirimkan saat
+              tooltip ditutup.</li>
+
+            <li><span data-translate data-i18n-id="s-4631"><strong><code>ed11yDismissalUpdate</code></strong>: menyediakan informasi tambahan ketika pengguna menolak
+              atau memulihkan peringatan. Digunakan untuk integrasi API. Objek event berisi:</span>
+              <ul>
+                <li data-i18n-id="s-a6bd"><code>dismissPage</code></li>
+
+                <li data-i18n-id="s-754f"><code>dismissTest</code></li>
+
+                <li data-i18n-id="s-0a00"><code>dismissKey</code></li>
+
+                <li data-i18n-id="s-c8b0"><code>dismissAction</code></li>
+              </ul>
+            </li>
+          </ul>
+          <p data-i18n-id="s-ec32">Contoh dapat ditemukan di bagian berikut.</p>
+        </section>
+
+        <section id="modify-tips">
+          <h2 class="wp-block-heading has-secondary-background-color has-background has-large-font-size" data-i18n-id="s-ac90">Memodifikasi tips
+          </h2>
+
+          <p data-i18n-id="s-edfa">Jika yang ingin Anda lakukan hanya memodifikasi teks tip, item dalam global ed11yLang.en (sebelum memanggil
+            perpustakaan) atau objek Ed11y.M (setelah memanggil perpustakaan) dapat langsung diganti. Mis., di modul Drupal
+            di mana kami memberi alias paket bahasa ke Drupal.ed11yLang:</p>
+
+          <p data-i18n-id="s-c4d7"><code>Drupal.ed11yLang.lang.testNames.title = "Please write shorter headings."</code></p>
+
+          <p data-i18n-id="s-f0b0">Hal ini berlaku untuk semua <a               href="https://github.com/itmaybejj/editoria11y/blob/3.0.x/src/lang/baseAll.js" data-type="link"
+              data-id="https://github.com/itmaybejj/editoria11y/blob/2.3.x/js/ed11y-localization.js"
+              class="liinternal">kunci default dalam file lokalisasi</a> atau terjemahan khusus bahasa yang aktif.
+          </p>
+
+          <p data-i18n-id="s-842f">Modul Drupal juga menambahkan tautan edit kustom ke tips, menggunakan parameter <code>editLinks</code>. Perhatikan
+            "Page editor" dan "Layout editor:"</p>
+
+          <figure class="wp-block-image size-full"><img loading="lazy" data-recalc-dims="1" fetchpriority="high" decoding="async" width="580" height="300" src="https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?resize=580%2C300&amp;ssl=1" alt="Tooltip dengan tautan &quot;Page editor&quot; dan &quot;Layout editor&quot; yang disisipkan." class="wp-image-523" srcset="https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?w=1290&amp;ssl=1 1290w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?resize=600%2C311&amp;ssl=1 600w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?resize=768%2C398&amp;ssl=1 768w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?resize=1200%2C621&amp;ssl=1 1200w" sizes="(max-width: 580px) 100vw, 580px" data-i18n-id="s-6d4d" /></figure>
+
+          <p data-i18n-id="s-bcd2">Versi sederhana dari kode yang menetapkan parameter tersebut:</p>
+          <pre class="language-javascript"><code><!--const editLinks = document.createElement('div');
+const editLink = document.createElement('a');
+      editLink.href="/node/1/edit";
+      editLink.textContent = "Edit page";
+editLinks.appendChild(editLink);
+const ed11y = new Ed11y({
+               editLinks: editLinks,
+              }); --></code></pre>
+          <p data-i18n-id="s-14d9">Modul Drupal kemudian menggunakan event <strong><code>ed11yPop</code></strong> untuk secara dinamis menampilkan dan menyembunyikan
+            tautan edit berdasarkan konteks saat tips ditampilkan. </p>
+
+          <p data-i18n-id="s-78f4">Event ini menyediakan referensi ke objek <code>result</code> dan <code>tip</code>:</p>
+          <pre class="language-javascript"><code><!--// Listen for event
+document.addEventListener('ed11yPop', e => {
+  if (e.detail.result.element.closest(
+    drupalSettings.editoria11y.hide_edit_links)
+  ) {
+      e.detail.tip.shadowRoot.querySelector(
+        '.ed11y-custom-edit-links'
+        )?.setAttribute('hidden', '');
+     }
+}); --></code></pre>
+        </section>
+
+        <section id="custom-tests">
+          <h2 data-i18n-id="s-794a">Pengujian kustom</h2>
+
+          <p data-i18n-id="s-921d">Jika parameter <strong><em>customTests</em></strong> adalah sebuah <strong><em>angka</em></strong>, Editoria11y
+            akan mengirimkan event "ed11yRunCustomTests" saat memeriksa, lalu berhenti sejenak selama 500 md sambil mendengarkan
+            event "<code>ed11yResume</code>" sebanyak angka tersebut.</p>
+
+          <p data-i18n-id="s-a897">Ini dapat dimanfaatkan untuk memanggil sebanyak mungkin skrip yang berisi pengujian kustom sesuai kebutuhan, yang dapat mendorong
+            hasilnya ke dalam array hasil sebelum tips dirender.</p>
+
+          <p data-i18n-id="s-820a">Misalnya, jika Anda ingin membuat tip ini, untuk menandai tautan yang telah ditempel dari email dengan
+            URL yang disamarkan:</p>
+
+          <figure class="wp-block-image size-full"><img loading="lazy" data-recalc-dims="1" decoding="async" width="580" height="462" src="https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2023/12/Screenshot-2023-12-06-at-5.13.38-PM.png?resize=580%2C462&amp;ssl=1" alt="Tip bertuliskan &quot;URL is Safe Link Encoded&quot;" class="wp-image-323" srcset="https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2023/12/Screenshot-2023-12-06-at-5.13.38-PM.png?w=1056&amp;ssl=1 1056w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2023/12/Screenshot-2023-12-06-at-5.13.38-PM.png?resize=600%2C478&amp;ssl=1 600w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2023/12/Screenshot-2023-12-06-at-5.13.38-PM.png?resize=768%2C612&amp;ssl=1 768w" sizes="(max-width: 580px) 100vw, 580px" data-i18n-id="s-f6c3" /></figure>
+
+          <p data-i18n-id="s-a3f5">Anda akan:</p>
+
+          <ol class="wp-block-list">
+            <li data-i18n-id="s-7c1e">Tambahkan listener untuk event <code>ed11yRunCustomTests</code></li>
+
+            <li data-i18n-id="s-b8b0">Temukan elemen yang cocok</li>
+
+            <li data-i18n-id="s-3ff7">Tentukan pesan tip</li>
+
+            <li data-i18n-id="s-181b">Kirimkan event "resume" agar Editoria11y merender tip:</li>
+          </ol>
+
+          <pre class="language-javascript"><code><!--document.addEventListener('ed11yRunCustomTests', function() {
+  // 1. Write your custom test. This can be anything you want.
+  //
+  // This example searches the active root using the .getElements() function,
+  // which is aware of the checkRoots and ignoreElements parameters.
+  const safeLinks = Drupal.Ed11y.getElements('a[href*="safelinks.protection.outlook.com/?"]', 'root');
+
+  // This is just a utility function for this particular test...
+  const decodeSafelink = function(url) {
+      const params = new URL(url).searchParams;
+      let decoded = params.get('url');
+      if (!!decoded) {
+            decoded = Ed11y.sanitizeForHTML(decoded);
+            return `<p>The actual URL may be:<br><em style='word-wrap: break-word;'>${decoded}</em></p>`
+      }
+      return '';
+  }
+
+  // 2. Add the test name to the active language pack.
+  // Add a title:
+  Drupal.ed11yLang.lang.testNames.outlookSafeLink = 'URL is Safe Link encoded';
+
+  // 3. Push each item you want flagged to Ed11y.results.
+  //
+  // You must provide:
+  //   element:      The element itself
+  //   test:         A key for your test, matching step 2.
+  //   type:         warning or error
+  //   content:      The tip HTML.
+  //   position:     "beforebegin" for interactive elements,
+  //                 "afterbegin" for paragraphs and table cells.
+  //   dismiss:      false for errors,
+  //                 a unique string for manual checks.
+  safeLinks?.forEach((el) => {
+   Drupal.Ed11y.State.results.push({
+     element: el,
+     test:    'outlookSafeLink',
+     type:    'error',
+     content: `<div class="title">Please fix the URL in this link</div>
+               ${decodeSafelink(el.href)}
+               <div class="why">
+                <p>The URL for this link is an Outlook "Safe Link" that was copied from an email.
+                It includes the original recipient's email address,
+                and will break if Microsoft shuts down the service.</p>
+                <p>The pasted URL is:<br>
+                <em style='word-break: break-all;font-size: 90%;line-height: 1.2;
+                display: block;'>${Drupal.Ed11y.sanitizeHTML(el.href)}</em></p>
+               </div>
+            `,
+     position: 'beforebegin',
+     dismiss:  false,
+   });
+  });
+  // 4. When you are done with all your custom tests, dispatch an "ed11yResume" event:
+  let allDone = new CustomEvent('ed11yResume');
+  document.dispatchEvent(allDone);
+}) --></code></pre>
+        </section>
+
+        <section id="hidden-content">
+          <h2 data-i18n-id="s-a67a">Menangani peringatan pada konten tersembunyi atau terbatas ukuran</h2>
+
+
+          <p data-i18n-id="s-be6c">Banyak komponen interaktif (tab, slider, akordion) menyembunyikan konten. Panel info Editoria11y menyertakan
+            tombol berikutnya/sebelumnya untuk langsung melompat ke isu. Jika Editoria11y berpikir tooltip isu saat ini
+            tidak terlihat, ia akan memberi tahu pengguna bahwa ada yang salah, lalu menyorot elemen induk pertama yang terlihat — mis.,
+            div di sekitar akordion.</p>
+
+          <p data-i18n-id="s-4f58">Idealnya, tema Anda akan membuat elemen-elemen tersebut terlihat sebelum pemeriksaan visibilitas Editoria11y berjalan, sehingga
+            semuanya berfungsi seperti sulap bagi pengguna Anda — korsel maju otomatis dan akordion terbuka otomatis untuk menampilkan
+            isu.</p>
+
+          <p data-i18n-id="s-7e11">Untuk melakukan ini saat panel pertama kali terbuka (mis., membuka <strong><em>semua</em></strong> panel akordion dengan
+            isu) tambahkan listener event JS untuk <code>ed11yPanelOpened</code>, lalu lakukan querySelectorAll untuk
+            elemen <code>ed11y-element-result</code> yang relevan, dan kemudian picu fungsi apa pun yang digunakan tema Anda untuk
+            menampilkan bagian halaman tersebut.
+          </p>
+
+          <p data-i18n-id="s-1c3f">Berikut contoh berbasis jQuery. Ketika panel terbuka, ia menonaktifkan menu lengket (agar elemen tidak
+            tertutup), lalu mencari elemen <code>ed11y-element-result</code> di dalam item akordion yang tertutup dan
+            mensimulasikan klik pada tombol togglenya:</p>
+          <pre class="language-javascript"><code><!--document.addEventListener("ed11yPanelOpened", function () {
+  $('body').addClass('no-stick');
+  $('ed11y-element-result').each(function () {
+    if ($(this).parents('.ps-accordion-content[style*="display"]').length > 0) {
+    $(this).parents('.ps-accordion-content').prev().find('.ps-accordion-item-button').click();
+    }
+}) --></code></pre>
+
+          <p data-i18n-id="s-fbae">Untuk menampilkan konten hanya saat melompat ke tip <strong><em>tertentu</em></strong> melalui tombol "berikutnya" panel
+            (mis., di tab tertutup atau slide korsel berikutnya), Anda perlu menetapkan
+            <code>hiddenHandlers</code> ke selektor CSS yang relevan dan <code>checkVisible</code> ke TRUE dalam
+            parameter Anda. Kemudian tambahkan listener untuk event <code>ed11yShowHidden</code>. Ini dilempar jika
+            Editoria11y mengenali bahwa tip berada di dalam kontainer dengan salah satu selektor <code>hiddenHandlers</code>
+            yang disediakan dalam daftar opsi. Event JS ini akan menyertakan ID tip yang akan dibuka. Editoria11y kemudian
+            akan berhenti sejenak setelah mengirimkan event ini, untuk memberikan waktu bagi JS Anda agar elemen menjadi terlihat.
+          </p>
+
+          <p data-i18n-id="s-dae0">Berikut contoh dari implementasi Penn State. Ini mencari elemen yang cocok dengan ID yang disediakan, lalu
+            menemukan kontainer komponen interaktif induknya, dan memicu event untuk mengaktifkan togglenya:</p>
+          <pre class="language-javascript"><code><!--context.addEventListener('ed11yShowHidden', e => {
+  if (!e.detail.viaJump) {
+       return;
+  }
+  context.getElementById(e.detail.id)
+    .closest('[data-interactive-component]')
+    .dispatchEvent(new CustomEvent('component:activate'));
+}); --></code></pre>
+          <p data-i18n-id="s-d99d">Catatan terakhir: beberapa tema tidak kompatibel dengan pemeriksaan visibilitas — mis.,
+            kontainer <code>&lt;main&gt;</code> memiliki tinggi 0px. Situs-situs tersebut harus menonaktifkan semua pemeriksaan visibilitas
+            dengan menetapkan <code>checkVisible</code> ke false.
+          </p>
+
+        </section>
+
+      </div><!-- End content column -->
+
+    </div>
+  </main>

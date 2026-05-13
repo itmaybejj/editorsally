@@ -1,0 +1,432 @@
+<main class="container col-lg-12 mx-auto py-5">
+    <div class="row docs">
+      <div class="col-12 col-md-5 col-lg-4 mb-5">
+        <div id="on-this-page" class="list-group ms-2 ms-lg-5 position-sticky top-0 pt-3">
+        </div>
+      </div>
+      <div class="col-12 col-md-7 col-lg-8 pt-3">
+        <div data-bs-spy="scroll" data-bs-target="#on-this-page" data-bs-smooth-scroll="true">
+          <h1 data-i18n-id="s-e367">Drupal 版 Editoria11y</h1>
+          <section id="features">
+            <h2 class="pt-3" data-i18n-id="s-1dcf">コア機能</h2>
+
+            <p class="fs-6" data-i18n-id="s-a8c0">Drupal モジュールはチェッカーライブラリを編集バックエンドに接続し、レポート、ガバナンス、設定のための多数のサーバーサイドツールを追加します。</p>
+
+            <figure class="figure my-4 row">
+              <div class="col-lg-8">
+                <img loading="lazy" src="/assets/images/3x-editing.png" class="rounded border figure-img img-fluid" height="1088" width="2237" alt="インラインのヒントが表示されたDrupalエディター" data-i18n-id="s-ee36" />
+              </div>
+              <figcaption class="figure-caption col-lg-4" data-i18n-id="s-8e69">問題はフロントエンドの読み込み時と、CKEditor・Gutenberg での入力中の両方で検出されます。
+              </figcaption>
+            </figure>
+
+            <figure class="figure my-4 row">
+              <div class="col-lg-8">
+                <img loading="lazy" src="/assets/images/3x-generic-tip.png" class="rounded border figure-img img-fluid" height="798" width="1278" alt="リンクの名前が「click here」のみであることを示すヒント。" data-i18n-id="s-1639" />
+              </div>
+              <figcaption class="figure-caption col-lg-4" data-i18n-id="s-9881">ツールチップにはエディターへジャンプする、アラートを無視する（現在のユーザーのみ）、または OK
+                にする（全ユーザー対象）ためのボタンが追加されます。繰り返し発生するアラートには、ページ全体またはサイト全体に対するアクションも用意されます。</figcaption>
+            </figure>
+
+            <figure class="figure my-4 row">
+              <div class="col-lg-8">
+                <img loading="lazy" src="/assets/images/3x-drupal-custom-tests.png" class="rounded border figure-img img-fluid" alt="ヒントのタイトルと内容、要素セレクターと除外対象のフィールドが表示されたカスタムテストビルダーのインターフェース。" data-i18n-id="s-0830" />
+              </div>
+              <figcaption class="figure-caption col-lg-4">
+                <p class="mb-2" data-i18n-id="s-37bf">CSA サブモジュールでは以下が追加されます：</p>
+                <ul class="ps-3">
+                  <li data-i18n-id="s-caff"><strong>カスタムテストビルダー</strong></li>
+                  <li data-i18n-id="s-b145">40 以上の開発者向けテスト</li>
+                  <li data-i18n-id="s-f55d">コントラストチェック</li>
+                  <li data-i18n-id="s-b70c">サイトクローラー</li>
+                  <li data-i18n-id="s-5377">読みやすさの分析</li>
+                  <li data-i18n-id="s-6602">開発者／編集者向けの分割設定</li>
+                </ul>
+              <span data-translate data-i18n-id="s-bc47"></figcaption>
+            </figure>
+
+            <figure class="figure">
+              <img loading="lazy" class="figure-img img-fluid rounded border" src="/assets/images/3x-dashboard.png" height="765" width="1600" alt="最近の問題と最も問題が多いページを表示するレポートダッシュボード。" data-i18n-id="s-2559" />
+              <figcaption class="figure-caption p-3 pt-2" data-i18n-id="s-cdbf">サイト全体のダッシュボードでは、アラートと非表示設定のフィルタリング可能・エクスポート可能なレポートを提供します。
+              </figcaption>
+            </figure>
+
+          </section>
+          <h2 data-i18n-id="s-8fec">インストールと主要なセットアップ手順</h2>
+          <p data-i18n-id="s-7627">Drupal.org の<a href="https://www.drupal.org/project/editoria11y/">バンドルインストーラー</a>には複数のモジュールが含まれています：</p>
+          <ul>
+            <li data-i18n-id="s-b830">
+              Editoria11y：コアコンテンツチェッカーとダッシュボード。
+            </li>
+            <li data-i18n-id="s-b351">
+              Editoria11y CSA：開発者テストとダッシュボードのメンテナンスツール。
+            </li>
+            <li data-i18n-id="s-74fe">
+              Editoria11y Export：CSV レポートツール。
+            </li>
+          </ul>
+          <p data-i18n-id="s-88fd">他のモジュールと同様にインストールし、以下の主要な手順を実行してください：</p>
+          <ol>
+            <li data-i18n-id="s-7187"><strong>権限を確認する。</strong> 信頼できる作成者には「OK にする」、「無視としてマーク」、「ダッシュボードを表示する」の権限が必要です。</li>
+            <li data-i18n-id="s-1ac1"><strong>繰り返し表示される、または役に立たないアラートがないか主要ページを確認する。</strong> ツールチップで OK としてマークするか、設定でセレクターによる要素の除外を調整してください。
+            </li>
+            <li data-i18n-id="s-e5b2">見つけにくいヒント（画面外・切り詰め・他の要素の後ろ・非表示要素など）を確認する。以下の「非表示または画面外のヒントを修正する」のセクションを参考に対処してください。</li>
+            <li data-i18n-id="s-c564">サイトにすでにコンテンツがあり、CSA
+              サブスクリプションをお持ちの場合は、ダッシュボードの「再確認」タブを開き、<strong>サイトをクロール</strong>してサイトレポートを事前に読み込んでください。任意ですが、古いページはクロールされるかログイン済みユーザーが訪問するまでレポートに表示されません。
+            </li>
+          </ol>
+          <p data-i18n-id="s-e025"><a href="https://youtu.be/uYvNYPg38nU?si=dqADyWpTtOhniHTP&t=696">設定オプションの動画紹介</a>（v2.4）をご覧ください。</p>
+
+          <h2 id="check-roots" data-i18n-id="s-9202">役に立たないアラートを非表示にする</h2>
+          <p data-i18n-id="s-fa47">
+            <strong>適切な設定により不要なアラートを抑制し、コンテンツ作成者が本当に修正すべき問題に集中できるようになります</strong>。
+          </p>
+          <p data-i18n-id="s-996e">テストを完全にオフにすることもできますが、通常は特定の要素やページのアラートのみを非表示にする方が適切です。</p>
+          <hr/>
+          <p data-i18n-id="s-7918">
+            各テスト実行中、Editoria11yは「これらのコンテナ内のコンテンツを確認する」設定から要素の単一セットを収集し、それを何度かフィルタリングします。テスト実行の流れは次のとおりです：
+          </p>
+          <ol>
+            <li data-i18n-id="s-994a">
+              設定がこのページまたはこのユーザーのチェックを禁止している場合、チェックをキャンセルする。
+            </li>
+            <li data-i18n-id="s-10c9">
+              指定されたページ領域の要素を<strong>収集</strong>する。例：<br/><code>body > *:not('.ed11y-element')</code><br/>
+              <em>Editoria11y CSAユーザーの場合、これらは<strong>開発者テスト</strong>タブの領域です。</em>
+            </li>
+            <li data-i18n-id="s-7524">
+              無視セレクターに一致する要素を<strong>除外</strong>する。例：<br/><code>.widgets, .utility-menu</code><br/>
+              <em>Editoria11y CSAユーザーの場合、これらは<strong>開発者テスト</strong>タブのセレクターです。</em>
+            </li>
+            <li data-i18n-id="s-58d0">
+              テストを実行し、結果をダッシュボードに同期する。
+            </li>
+            <li>
+              <span data-translate data-i18n-id="s-f8c6">分割設定が有効でユーザーがコンテンツエディターの場合、開発者の結果をフィルタリングする：</span>
+              <ul>
+                <li data-i18n-id="s-72c9">「開発者のみ」に設定されたテストの結果を<strong>除外</strong>する。</li>
+                <li data-i18n-id="s-576e">指定された<strong><em>コンテンツ</em></strong>領域外の要素の結果を<strong>除外</strong>する。例：<br/><code>main, footer</code>
+                </li>
+                <li data-i18n-id="s-bb1d"><strong><em>コンテンツ</em></strong>の無視セレクターに一致する要素の結果を<strong>除外</strong>する。</li>
+              </ul>
+              2回目の「収集」フェーズはありません。開発者のページ領域にはコンテンツ領域を含める必要があります。</span>
+            </li>
+            <li data-i18n-id="s-b79c">設定が自動開き設定と一致する場合、パネルを開きアラートを表示する。</li>
+          </ol>
+
+          <h3 id="dismiss" data-i18n-id="s-be02">アラートを非表示にする</h3>
+          <p data-i18n-id="s-2ae3">テストはライブラリでエラーまたは警告（「手動チェック」）として設定できます。警告は非表示にできます。各ツールチップのフッターから2種類の非表示設定が利用できます：</p>
+          <div class="my-2"
+            style="background: url(/assets/images/3x-generic-tip.png) 100% 98%; max-width: 600px; padding-top: 6%; background-size: 108%;">
+          </div>
+          <ul>
+            <li data-i18n-id="s-7b65">「無視」はユーザー設定として保存されます：アラートは現在のユーザーには非表示になりますが、そのユーザーのみです。</li>
+            <li data-i18n-id="s-654c">「OK にする」はすべてのユーザーに対してアラートを非表示にします。</li>
+          </ul>
+          <p data-i18n-id="s-dc14">ユーザーがアラートを非表示にできるかどうかは、Drupal
+            のユーザー権限のロールレベルで制御されます。<strong>ほとんどの作成者はアラートを非表示にできるべきです</strong>。アイテムを確認済みとしてマークできない場合、手動チェックを割り当てる意味がありません。
+          </p>
+
+          <h3 id="roots" data-i18n-id="s-d932">要素を無視する</h3>
+          <p data-i18n-id="s-9d1e">これら2つの設定が最も重要です！</p>
+          <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
+            <label for="edit-content-root">これらのコンテナ内のコンテンツを確認する</label>
+            <div><textarea class="form-control" id="edit-content-root" name="content_root" rows="1" cols="30"
+                disabled></textarea>
+            </div>
+            <div class="mt-3">
+              <label for="edit-ignore-elements">これらの要素をスキップする</label>
+              <div>
+                <textarea class="form-control" id="edit-ignore-elements" disabled name="ignore_elements" rows="1"
+                  cols="30" class=""></textarea>
+              </div>
+            </div>
+          </div>
+          <p data-i18n-id="s-6051">
+            最初の設定には、コンテンツ作成者が編集できるページの任意の部分を含めてください。例えば、<code>main</code>コンテンツエリア、<code>.sidebar</code>、<code>.footer-column-two</code>を編集できる場合は、それらのセレクターをコンテンツ確認エリアとして設定します。
+          </p>
+          <p data-i18n-id="s-f29c">
+            2番目の設定はサブセクションを「除外」するために使用します。例えば、<code>main</code>に開発者のみが変更できるウィジェットや埋め込みが含まれている場合は、それらをリストアップします：<code>.widget-1, .social-embed</code>。
+          </p>
+          <p data-i18n-id="s-10ef">分割設定を使用している場合、開発者テストタブに同様の設定ペアが表示されます：</p>
+          <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
+            <div>
+              <fieldset>
+                <legend>
+                  開発者チェックエリア
+                </legend>
+                <div class="fieldset__wrapper fieldset__wrapper--group">
+
+                  <div id="edit-dev-check-root">
+                    <div>
+                      <input aria-describedby="edit-dev-check-root--description" type="radio"
+                        id="edit-dev-check-root-automatic" name="dev_check_root" value="automatic" checked="checked" />
+                      <label for="edit-dev-check-root-automatic" class="form-item__label option">すべての要素</label>
+                    </div>
+                    <div class="d-flex">
+                      <input aria-describedby="edit-dev-check-root--description" type="radio"
+                        id="edit-dev-check-root-match" name="dev_check_root" value="match"
+                        class="align-self-baseline mt-1 me-1" />
+                      <label for="edit-dev-check-root-match"
+                        class="form-item__label option">コンテンツ設定タブに記載されているコンテナのみ</label>
+                    </div>
+                    <div class="">
+                      <input aria-describedby="edit-dev-check-root--description" type="radio"
+                        id="edit-dev-check-root-specify" name="dev_check_root" value="specify"
+                        class="form-radio form-boolean form-boolean--type-radio" />
+                      <label for="edit-dev-check-root-specify" class="">以下に記載された特定のコンテナ</label>
+                    </div>
+                  </div>
+
+                </div>
+              </fieldset>
+
+              <div class="">
+                <label for="edit-always-ignore" class="mt-3">開発者とコンテンツ編集者の両方で無視する</label>
+                <div class="form-textarea-wrapper">
+                  <textarea id="edit-always-ignore" class="form-control" name="always_ignore" rows="1" cols="20"
+                    placeholder=""></textarea>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+          <p data-i18n-id="s-8c02">
+            開発者チェックエリアについて知っておくべき重要なことは、コンテンツチェックエリアとは<strong>独立していない</strong>ということです。分割設定では、開発者エリアがチェックされ、その結果がコンテンツエリアと一致するように<strong>フィルタリング</strong>されます。開発者から除外されたエリアはコンテンツ編集者からも除外されます。編集可能なコンテンツエリアを除外しないでください！
+          </p>
+
+          <p data-i18n-id="s-0312">一部のテストでは、影響を受ける要素の特定のアラートのみを非表示にするための、より精密な設定が可能です。以下から探してください：</p>
+          <ul>
+            <li data-i18n-id="s-d53d">コンテンツテスト：確認するリンク</li>
+            <li data-i18n-id="s-0d1e">コンテンツテスト：確認する埋め込み</li>
+            <li data-i18n-id="s-10c1">コンテンツテスト：動的コンテンツとシャドウコンテンツの検出</li>
+            <li data-i18n-id="s-e6e4">開発者テスト：コントラスト</li>
+          </ul>
+
+          <h3 id="pages" data-i18n-id="s-177c">特定のページまたはユーザーに対して非表示にする</h3>
+          <p data-i18n-id="s-e874">
+            最も簡単な方法は、CSSクラスまたはIDをこれらのオプションに渡すことです：
+          </p>
+          <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
+            <label for="edit-no-load" class="form-item__label">これらの要素があるページではチェックしない</label>
+            <div class="form-textarea-wrapper">
+              <textarea data-drupal-selector="edit-no-load" aria-describedby="edit-no-load--description"
+                id="edit-no-load" name="no_load" rows="1" cols="20" class="form-control"></textarea>
+            </div>
+
+            <label for="edit-ignore-all-if-absent" class="form-item__label">これらの要素が存在しないページではすべてのアラートを非表示にする</label>
+            <div class="form-textarea-wrapper">
+              <textarea data-drupal-selector="edit-ignore-all-if-absent"
+                aria-describedby="edit-ignore-all-if-absent--description" id="edit-ignore-all-if-absent"
+                name="ignore_all_if_absent" rows="1" cols="20" class="form-control"></textarea>
+            </div>
+
+          </div>
+          <p data-i18n-id="s-0877">
+            最初の設定はチェックの実行を防ぎ、ツールバーは表示されません。
+          </p>
+          <p data-i18n-id="s-5cbd">
+            2番目の設定はチェッカーを最小化した状態で起動し、エラーであっても（現在のユーザーに対して）すべての問題を自動的に「無視」としてマークします。これにより、ユーザーを煩わせることなくテストを実行してダッシュボードを更新できます。
+          </p>
+          <p data-i18n-id="s-1661">
+            チェッカーを表示するユーザーを制御するためにこれらを使用する場合、テーマを調整してクラスを出力する必要があるかもしれません。例：<code>.user-247</code>
+          </p>
+
+          <h2 id="dashboard" data-i18n-id="s-f4d7">サイト全体の結果を管理する</h2>
+          <section id="refresh">
+            <h3 class="pt-3" data-i18n-id="s-012a">クロールと結果の更新</h3>
+            <p data-i18n-id="s-75a9">Editoria11y
+              は<strong>リアルタイムの監視ツールであり、クローラーではありません</strong>。サイト全体のレポートは作成者がページを閲覧した際に更新されるため、定期的なクロールは通常不要です。CSA
+              モジュールにはクローラーが含まれていますが、以下の 3 つの状況でのみ必要となります：</p>
+            <ol>
+              <li data-i18n-id="s-dfb1">
+                多くのページを持つ既存サイトにEditoria11yを最初にインストールするとき。ページはダッシュボードに表示される前に訪問される必要があるため、最初にクイッククロールを実行すると時間を節約できます。
+              </li>
+              <li data-i18n-id="s-f602">
+                テーマやモジュールの大規模な更新は、訪問またはクロールされるまで表示されない多くのページの問題を修正（または引き起こす）する可能性があります。
+              </li>
+              <li data-i18n-id="s-a530">
+                ページの削除やリダイレクトなどの管理インターフェースでの一括操作は、存在しなくなったページや移動したページの結果を残しがちです。このような場合、「更新」タブのメンテナンスアクションを使用してページURLを更新し、削除されたページを検出して除外することが役立ちます。
+              </li>
+            </ol>
+            <p data-i18n-id="s-8e5a">クロール中にサイトからデータが外部に送信されることはありません。CSA
+              クローラーはクラウドツールではなく、ブラウザを使用してサイト上のページを読み込んでチェックします。このアプローチの注意点は、<strong>ブラウザがバックグラウンドタブを一時停止する</strong>ことです。クロール中はコンピューターの電源を入れたままにしておく必要があります。クローラー用に新しいウィンドウを開き、作業中はそのウィンドウをフォアグラウンドタブとして維持してください。別のウィンドウで他の作業を続けることは可能です。クローラーはページのバッチごとに進捗の見積もりを更新します。
+            </p>
+          </section>
+          <section id="reports">
+            <h3 data-i18n-id="s-a242">レポートの表示</h3>
+            <div class="my-4 border shadow"
+              style="background: url(/assets/images/3x-dashboard.png) 86% 0%; padding-top: 28%; background-size: 106%;">
+            </div>
+            <ul>
+              <li data-i18n-id="s-e328">
+                <strong>最近</strong>では個別のアラートを探索できます。同じアラートタイプのすべての件数を絞り込んで確認したり、最近のコンテンツで頻出しているアラートを確認したり、同じミスを繰り返している作成者を特定したりできます。
+              </li>
+              <li data-i18n-id="s-796f">
+                <strong>ページ</strong>ではアラート数をページ別にまとめて表示します。問題の多いページを見つけたり、コンテンツタイプや公開ステータスなどのページ属性で絞り込んだりできます。
+              </li>
+              <li data-i18n-id="s-9423">
+                <strong>アラート</strong>では問題をタイプ別に一覧表示します。
+              </li>
+              <li data-i18n-id="s-52ed">
+                <strong>非表示設定</strong>では作成者が適切に非表示にしているかどうかを確認でき、非表示にしたアラートを元に戻す「リセット」ボタンもあります。
+              </li>
+              <li data-i18n-id="s-3379">
+                <strong>エクスポート</strong>には、CSV ダウンロード用にフィルタリングできるページ・アラート・非表示設定の各レポートが含まれています。<em>CSV
+                  エクスポートサブモジュールが提供</em>
+              </li>
+              <li data-i18n-id="s-9814">
+                <strong>更新</strong>には、削除されたページのアラートを除外したり、<code>/search?query=example</code>
+                のようなパラメーター付き疑似ページのアラートを除外したり、保存済みのページタイトルと URL を更新したり、手動クロールを実行したりするダッシュボードのメンテナンスツールが含まれています。<em>CSA
+                  サブモジュールが提供</em>
+              </li>
+            </ul>
+          </section>
+
+          <h2 id="positioning" data-i18n-id="s-c35b">非表示または画面外のヒントを修正する</h2>
+
+          <p data-i18n-id="s-68ce">モジュールはヒントの配置方法を変更するための設定フィールドを 2 つ提供します：</p>
+
+          <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
+            <label for="edit-element-hides-overflow" class="form-item__label">オーバーフローが非表示の要素</label>
+            <textarea data-drupal-selector="edit-element-hides-overflow"
+              aria-describedby="edit-element-hides-overflow--description" id="edit-element-hides-overflow"
+              name="element_hides_overflow" rows="1" cols="60" class="form-control"></textarea>
+            <label for="edit-hidden-handlers" class="form-item__label">テーマの JS がこれらのコンテナ内の非表示ツールチップを表示する処理を行う</label>
+            <textarea data-drupal-selector="edit-hidden-handlers" aria-describedby="edit-hidden-handlers--description"
+              id="edit-hidden-handlers" name="hidden_handlers" rows="1" cols="60" class="form-control"></textarea>
+          </div>
+          <p data-i18n-id="s-34e4">
+            一部のテーマには、水平または垂直のオーバーフローを非表示にする列やウィジェットがあります。ライブラリはトグルが<strong>ページ</strong>の表示領域外に出てしまう場合を自動的に検出します。特定のコンテナがオーバーフローを非表示にすることをライブラリに伝えると、そのコンテナ内の要素のヒントもコンテナの境界内に収まるよう配置しようとします。
+          </p>
+          <p data-i18n-id="s-7cb7">
+            一部のテーマには、アコーディオン・タブ・スライドショーなどコンテンツの表示を切り替えるウィジェットがあります。これらの要素内のヒントも非表示になることがあります。これらのウィジェットのセレクターリストを指定すると、ユーザーが次へ・前へボタンでヒントにジャンプしようとした際に
+            Editoria11y が一時的に処理を停止します。Drupal のテーマとモジュールは、ライブラリセクションの<a href="/en/install/#hidden-content">非表示コンテンツのヒントへの対応</a>に関する説明に従って非表示コンテンツを表示できます。</p>
+
+          <h2 id="runtime" data-i18n-id="s-7e38">独自の設定を記述する</h2>
+          <p data-i18n-id="s-a5d3">PHP の場合：Drupal モジュールはモジュールまたはテーマで <code>drupalSettings.editoria11y</code> の内容を変更するための
+            <code>hook_editoria11y_alter_config</code> を提供します。例：
+          </p>
+          <pre class="language-php"><code><!--<?php
+/**
+ * @file
+ * MY_MODULE module file.
+ */
+
+use Drupal\Core\Cache\CacheableMetadata;
+
+/**
+ * Implements hook_editoria11y_alter_config().
+ *
+ * Attaches Editoria11y library and config based on context.
+ */
+function MY_MODULE_editoria11y_alter_config(array &$attach, CacheableMetadata $cacheableMetadata): void {
+  $config = Drupal::config('editoria11y.settings');
+
+  // Module settings being changed need to bust the cache.
+  $cacheableMetadata->addCacheableDependency($config);
+
+  // Get and modify any of the values being passed to drupalSettings.editoria11y.
+  if (!empty($attach['allow_ok'])) {
+    $attach['allow_ok'] = 'okAll';
+  }
+}--></code></pre>
+          <p data-i18n-id="s-2368"><code>drupalSettings</code> の変更は、モジュールの JS がその値をライブラリに渡すよう設定されている場合にのみ有効です。追加のパラメーターを設定するには、JS の
+            <code>options</code> オブジェクトを直接変更する必要があります。モジュールは <code>editoria11yOptionsOverride</code> というグローバル JS 変数を 1
+            つチェックします。これが設定されている場合、モジュールまたはテーマで提供した <code>editoria11yOptions</code> 関数に <code>options</code>
+            オブジェクトを渡します。これで<a href="https://editorsally.ddev.site/en/install/#params">ライブラリのパラメーター</a>をすべて設定できます。
+          </p>
+          <pre class="language-javascript"><code><!--var editoria11yOptionsOverride = true;
+var editoria11yOptions = function(options) {
+  // You now have access to the processed options object that will be passed to the library.
+
+  // E.g., to add a selector to the ignore list:
+  if (options['ignoreElements'] === false) {
+    // Provide the selector as the only value.
+    options['ignoreElements'] = `.example`;
+  } else {
+    // Append additional selectors with comma separator.
+    options['ignoreElements'] = `${options['ignoreElements']}, .example`
+  }
+
+  // Return your processed options.
+  return options;
+}
+--></code></pre>
+          <section id="custom-tests">
+            <h2 data-i18n-id="s-e0f0">独自のテストを記述する</h2>
+            <p data-i18n-id="s-6ece">まず、モジュールの設定で「カスタムテスト」オプションに 1 を追加し、テストを監視するよう設定します。</p>
+            <p data-i18n-id="s-4316">次に、<a href="/en/install/#custom-tests">カスタムテストの記述に関するライブラリガイド</a>を参照して、テーマまたはモジュールにテストを含む Drupal JS
+              ライブラリを作成します。</p>
+            <p data-i18n-id="s-b4ea">以下は Princeton による Safe Links に関するアラートを出すカスタムテストの実際の動作例です。<code>Drupal.Ed11y.</code> を通じて Editoria11y
+              クラスにアクセスしていることに注意してください。</p>
+            <pre class="language-javascript"><code><!--const psEd11yCustomTests = function() {
+
+  // 1.
+  // Get elements to test, via Drupal.Ed11y.getElements.
+  // The 'root' parameter tells it to respect config for check areas and ignores.
+  const safeLinks = Drupal.Ed11y.getElements('a[href*="safelinks.protection.outlook.com/?"]', 'root');
+
+  // Add the test name to the lang object.
+  Drupal.ed11yLang.lang.testNames.outlookSafeLink = 'URL is Safe Link encoded';
+
+  // 2.
+  // Create the tip content.
+  const decodeSafelink = function(url) {
+    const params = new URL(url).searchParams;
+    let decoded = params.get('url');
+    const p = document.createElement('p');
+    if (!!decoded) {
+      p.innerHTML = `<p><span class="badge">To fix</span>Update this link with the correct URL, which is probably:<br>
+    <em style='word-wrap: break-word;font-size: 90%;line-height: 1.2;display: block;'></em></p>`
+      p.querySelector('em').textContent = Drupal.Ed11y.sanitizeHTML(decoded);
+    }
+    return p;
+  };
+  safeLinks?.forEach((el) => {
+    const content = document.createElement('div');
+    content.innerHTML = `<div class="title">Please fix this Outlook "Safe Link"</div>
+            <div class="why">
+                <p>The URL for this link is an Outlook "Safe Link" that was copied from an email.
+                It includes the original recipient's email address,
+                and will break if Microsoft shuts down the service.</p>
+                <p>The pasted URL is:<br>
+                <em style='word-break: break-all;font-size: 90%;line-height: 1.2;
+                display: block;'></em></p>
+            </div>
+            `;
+    content.querySelector('em').textContent = Drupal.Ed11y.sanitizeHTML(el.href);
+    content.querySelector('.why').insertAdjacentElement('beforebegin', decodeSafelink(el.href));
+
+    // 3.
+    // Push the tip to the library results object.
+    Drupal.Ed11y.State.results.push({
+      element: el,
+      test: 'outlookSafeLink',
+      type: 'error',
+      content: content,
+      position: 'beforebegin',
+      inline: false,
+      dismiss: false,
+    });
+  });
+
+  // 4.
+  // Tell Editoria11y you are done adding custom results.
+  const allDone = new CustomEvent('ed11yResume');
+  document.dispatchEvent(allDone);
+};--></code></pre>
+
+          </section>
+          <section id="help">
+            <h2 data-i18n-id="s-4690">サポートを受ける</h2>
+            <p data-i18n-id="s-f149">コミュニティサポートのオプションについては<a href="../contacts">お問い合わせ</a>ページをご確認ください。@itmaybejj
+              は、西半球で太陽が昇っている時間帯なら通常 Drupal Slack にオンラインでいます。</p>
+            <p data-i18n-id="s-4a16">多くの <a href="../license/">CSA 貢献プラン</a>には年次のチェックインが含まれており、セットアップや設定に関する直接のサポートを受けることもできます。</p>
+          </section>
+
+        </div>
+      </div>
+    </div>
+  </main>

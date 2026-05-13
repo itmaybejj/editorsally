@@ -1,0 +1,487 @@
+<main class="container col-lg-12 mx-auto py-5">
+    <div class="row docs">
+      <div class="col-12 col-md-5 col-lg-4 mb-5">
+        <div id="on-this-page" class="list-group ms-2 ms-lg-5 position-sticky top-0 pt-3">
+        </div>
+      </div>
+      <div class="col-12 col-md-7 col-lg-8 pt-3">
+        <div data-bs-spy="scroll" data-bs-target="#on-this-page" data-bs-smooth-scroll="true">
+          <h1 data-i18n-id="s-e367">Editoria11y för Drupal</h1>
+          <section id="features">
+            <h2 class="pt-3" data-i18n-id="s-1dcf">Kärnfunktioner</h2>
+
+            <p class="fs-6" data-i18n-id="s-a8c0">Drupal-modulen kopplar granskningsbiblioteket till den redaktionella backend-delen
+              och lägger till många serverbaserade verktyg för rapportering, styrning och konfiguration</p>
+
+            <figure class="figure my-4 row">
+              <div class="col-lg-8">
+                <img loading="lazy" src="/assets/images/3x-editing.png" class="rounded border figure-img img-fluid" height="1088" width="2237" alt="Drupal-redigerare med inbyggda tips" data-i18n-id="s-ee36" />
+              </div>
+              <figcaption class="figure-caption col-lg-4" data-i18n-id="s-8e69">Problem identifieras både vid sidladdning i frontend
+                och medan du skriver i CKEditor och Gutenberg.</figcaption>
+            </figure>
+
+            <figure class="figure my-4 row">
+              <div class="col-lg-8">
+                <img loading="lazy" src="/assets/images/3x-generic-tip.png" class="rounded border figure-img img-fluid" height="798" width="1278" alt="Tips som anger att en länk bara heter klicka här." data-i18n-id="s-1639" />
+              </div>
+              <figcaption class="figure-caption col-lg-4" data-i18n-id="s-9881">Verktygstips får knappar
+                för att hoppa in i redigeraren, ignorera aviseringen (för den aktiva användaren) eller markera den som
+                OK
+                (för alla användare). Upprepade aviseringar erbjuder sid- eller webbplatsövergripande åtgärder.
+              </figcaption>
+            </figure>
+
+            <figure class="figure my-4 row">
+              <div class="col-lg-8">
+                <img loading="lazy" src="/assets/images/3x-drupal-custom-tests.png" class="rounded border figure-img img-fluid" alt="Gränssnitt för anpassad testbyggare som visar fält för tipstitel och innehåll samt elementselektorer och uteslutningar." data-i18n-id="s-0830" />
+              </div>
+              <figcaption class="figure-caption col-lg-4">
+                <p class="mb-2" data-i18n-id="s-37bf">CSA-delmodulen lägger till:</p>
+                <ul class="ps-3">
+                  <li data-i18n-id="s-caff"><strong>En anpassad testbyggare</strong></li>
+                  <li data-i18n-id="s-b145">40+ utvecklartester</li>
+                  <li data-i18n-id="s-f55d">Kontrastkontroll</li>
+                  <li data-i18n-id="s-b70c">Webbplatsgenomsökare</li>
+                  <li data-i18n-id="s-5377">Läsbarhetsanalys</li>
+                  <li data-i18n-id="s-6602">Delade konfigurationer för utvecklare/redigerare</li>
+                </ul>
+              <span data-translate data-i18n-id="s-bc47"></figcaption>
+            </figure>
+
+            <figure class="figure">
+              <img loading="lazy" class="figure-img img-fluid rounded border" src="/assets/images/3x-dashboard.png" height="765" width="1600" alt="Rapporteringspanel som visar senaste problem och sidor med flest problem." data-i18n-id="s-2559" />
+              <figcaption class="figure-caption p-3 pt-2" data-i18n-id="s-cdbf">En webbplatsövergripande panel tillhandahåller filterbara
+                och exporterbara rapporter över aviseringar och avfärdanden.</figcaption>
+            </figure>
+
+          </section>
+          <h2 data-i18n-id="s-8fec">Installation och viktiga installationssteg</h2>
+          <p data-i18n-id="s-7627"><a href="https://www.drupal.org/project/editoria11y/">Det paketerade installationsprogrammet</a> på
+            Drupal.org innehåller flera moduler:</p>
+          <ul>
+            <li data-i18n-id="s-b830">
+              Editoria11y: kärnmodulen för innehållsgranskning och panel.
+            </li>
+            <li data-i18n-id="s-b351">
+              Editoria11y CSA: utvecklartester och underhållsverktyg för panelen.
+            </li>
+            <li data-i18n-id="s-74fe">
+              Editoria11y Export: CSV-rapporteringsverktyg.
+            </li>
+          </ul>
+          <p data-i18n-id="s-88fd">Installera som vilken annan modul som helst och vidta sedan dessa viktiga steg:</p>
+          <ol>
+            <li data-i18n-id="s-7187"><strong>Kontrollera behörigheter.</strong> Betrodda författare bör ha "Markera OK", "Markera som
+              ignorerad" och "Visa panelen".</li>
+            <li data-i18n-id="s-1ac1"><strong>Kontrollera viktiga sidor för upprepade eller onödiga aviseringar.</strong> Markera dem antingen
+              som OK i verktygstipset, eller justera konfigurationen för att ignorera element med selektor.</li>
+            <li data-i18n-id="s-e5b2">Leta efter tips som är svåra att se – utanför skärmen, trunkerade, bakom andra element eller på dolda
+              element. Använd tipsen i "Åtgärda tipspositionering" nedan för att åtgärda detta.</li>
+            <li data-i18n-id="s-c564">Om webbplatsen redan har innehåll och du har en CSA-prenumeration, besök panelens flik "kontrollera om"
+              och <strong>genomsök webbplatsen</strong> för att förladda webbplatsrapporterna. Detta är valfritt, men
+              äldre sidor visas inte i rapporter förrän de har genomsökts eller besökts av en inloggad användare.</li>
+          </ol>
+          <p data-i18n-id="s-e025">Se en <a href="https://youtu.be/uYvNYPg38nU?si=dqADyWpTtOhniHTP&t=696">videointroduktion till
+              konfigurationsalternativen</a> (v2.4).</p>
+
+          <h2 id="check-roots" data-i18n-id="s-9202">Dölj onödiga aviseringar</h2>
+          <p data-i18n-id="s-fa47">
+            <strong>Bra konfigurationer undertrycker onödiga aviseringar så att innehållsförfattare kan fokusera på
+              problem de bör åtgärda</strong>.
+          </p>
+          <p data-i18n-id="s-996e">Även om du kan stänga av tester helt och hållet är det vanligtvis bättre att dölja aviseringar för
+            specifika element eller sidor.</p>
+          <hr/>
+          <p data-i18n-id="s-7918">
+            Under varje testkörning samlar Editoria11y in en enda uppsättning element från inställningen "Kontrollera
+            innehåll i dessa behållare" och filtrerar den sedan flera gånger. Så här ser en testkörning ut:
+          </p>
+          <ol>
+            <li data-i18n-id="s-994a">
+              Avbryt kontrollen om konfigurationen förhindrar kontroll på den här sidan eller för den här användaren.
+            </li>
+            <li data-i18n-id="s-10c9">
+              <strong>Samla</strong> element i angivna sidregioner,
+              t.ex.:<br/><code>body > *:not('.ed11y-element')</code><br/>
+              <em>För Editoria11y CSA-användare är detta regionerna på fliken <strong>Utvecklartester</strong>.</em>
+            </li>
+            <li data-i18n-id="s-7524">
+              <strong>Ta bort</strong> element som matchar ignoreringsselektorer,
+              t.ex.:<br/><code>.widgets, .utility-menu</code><br/>
+              <em>För Editoria11y CSA-användare är detta selektorerna på fliken <strong>Utvecklartester</strong>.</em>
+            </li>
+            <li data-i18n-id="s-58d0">
+              Kör tester och synkronisera resultat till panelen.
+            </li>
+            <li>
+              <span data-translate data-i18n-id="s-f8c6">Om delad konfiguration är aktiv och användaren är en innehållsredigerare, filtrera utvecklarresultaten:</span>
+              <ul>
+                <li data-i18n-id="s-72c9"><strong>Ta bort</strong> resultat från tester inställda på "Endast utvecklare".</li>
+                <li data-i18n-id="s-576e"><strong>Ta bort</strong> resultat på element från utanför angivna
+                  <strong><em>innehålls</em></strong>regioner, t.ex.:<br/><code>main, footer</code>
+                </li>
+                <li data-i18n-id="s-bb1d"><strong>Ta bort</strong> resultat på element som matchar
+                  <strong><em>innehålls</em></strong>ignoreringsselektorer.
+                </li>
+              </ul>
+              Observera att det inte finns någon andra "samlingsphase". Utvecklarens sidregioner måste inkludera
+              innehållsregionerna.</span>
+            </li>
+            <li data-i18n-id="s-b79c">Öppna panelen och visa aviseringar om konfigurationen matchar en inställning för automatisk öppning.
+            </li>
+          </ol>
+
+          <h3 id="dismiss" data-i18n-id="s-be02">Avfärda aviseringar</h3>
+          <p data-i18n-id="s-2ae3">Tester kan konfigureras i biblioteket som fel eller varningar ("manuella kontroller"). Varningar kan
+            avfärdas. Det finns två typer av avfärdanden tillgängliga från sidfoten i varje verktygstips:</p>
+          <div class="my-2"
+            style="background: url(/assets/images/3x-generic-tip.png) 100% 98%; max-width: 600px; padding-top: 6%; background-size: 108%;">
+          </div>
+          <ul>
+            <li data-i18n-id="s-7b65">"Ignorera" lagras som en användarinställning: aviseringen är nu dold för den aktuella användaren, men
+              bara den aktuella användaren.</li>
+            <li data-i18n-id="s-654c">"Markera OK" döljer aviseringen för alla användare.</li>
+          </ul>
+          <p data-i18n-id="s-dc14">Huruvida en användare kan avfärda en avisering styrs på rollnivå i Drupals användarbehörigheter. <strong>De
+              flesta författare bör tillåtas att avfärda aviseringar</strong>. Det finns ingen poäng med att tilldela
+            någon en manuell kontroll om de inte kan markera objektet som kontrollerat.</p>
+
+          <h3 id="roots" data-i18n-id="s-d932">Ignorera element</h3>
+          <p data-i18n-id="s-9d1e">Dessa två konfigurationsinställningar är de viktigaste!</p>
+          <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
+            <label for="edit-content-root">Kontrollera innehåll i dessa behållare</label>
+            <div><textarea class="form-control" id="edit-content-root" name="content_root" rows="1" cols="30"
+                disabled></textarea>
+            </div>
+            <div class="mt-3">
+              <label for="edit-ignore-elements">Hoppa över dessa element</label>
+              <div>
+                <textarea class="form-control" id="edit-ignore-elements" disabled name="ignore_elements" rows="1"
+                  cols="30" class=""></textarea>
+              </div>
+            </div>
+          </div>
+          <p data-i18n-id="s-6051">
+            Ange det första för att inkludera alla delar av sidans innehåll som författare kan redigera. T.ex., om de
+            kan redigera <code>main</code>-innehållsområdet, <code>.sidebar</code> och <code>.footer-column-two</code>,
+            ange dessa selektorer som ditt innehållskontrollområde.
+          </p>
+          <p data-i18n-id="s-f29c">
+            Använd det andra för att "ta bort" underavsnitt. T.ex., om <code>main</code> innehåller olika widgets och
+            inbäddningar som bara utvecklare kan ändra, lista dessa: <code>.widget-1, .social-embed</code>;
+          </p>
+          <p data-i18n-id="s-10ef">Om du använder den delade konfigurationen ser du ett liknande par inställningar på fliken Utvecklartester:
+          </p>
+          <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
+            <div>
+              <fieldset>
+                <legend>
+                  Utvecklarkontrollområde
+                </legend>
+                <div class="fieldset__wrapper fieldset__wrapper--group">
+
+                  <div id="edit-dev-check-root">
+                    <div>
+                      <input aria-describedby="edit-dev-check-root--description" type="radio"
+                        id="edit-dev-check-root-automatic" name="dev_check_root" value="automatic" checked="checked" />
+                      <label for="edit-dev-check-root-automatic" class="form-item__label option">Alla element</label>
+                    </div>
+                    <div class="d-flex">
+                      <input aria-describedby="edit-dev-check-root--description" type="radio"
+                        id="edit-dev-check-root-match" name="dev_check_root" value="match"
+                        class="align-self-baseline mt-1 me-1" />
+                      <label for="edit-dev-check-root-match" class="form-item__label option">Endast behållarna listade i
+                        fliken Innehållsinställningar</label>
+                    </div>
+                    <div class="">
+                      <input aria-describedby="edit-dev-check-root--description" type="radio"
+                        id="edit-dev-check-root-specify" name="dev_check_root" value="specify"
+                        class="form-radio form-boolean form-boolean--type-radio" />
+                      <label for="edit-dev-check-root-specify" class="">De specifika behållarna listade nedan</label>
+                    </div>
+                  </div>
+
+                </div>
+              </fieldset>
+
+              <div class="">
+                <label for="edit-always-ignore" class="mt-3">Ignorera för både utvecklare och
+                  innehållsredigerare</label>
+                <div class="form-textarea-wrapper">
+                  <textarea id="edit-always-ignore" class="form-control" name="always_ignore" rows="1" cols="20"
+                    placeholder=""></textarea>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+          <p data-i18n-id="s-8c02">Det viktigaste att veta om utvecklarkontrollområdena är att de <strong>inte är oberoende</strong> av
+            innehållskontrollområdena. I en delad konfiguration kontrolleras utvecklarområdena och sedan
+            <strong>filtreras</strong> dessa resultat för att matcha innehållsområdena. Alla områden som utesluts för
+            utvecklare utesluts också för innehållsredigerare. Uteslut inte redigerbara innehållsområden!
+          </p>
+
+          <p data-i18n-id="s-0312">Vissa tester tillåter mer exakt konfiguration för att bara dölja vissa aviseringar på berörda element. Leta
+            efter dem under:</p>
+          <ul>
+            <li data-i18n-id="s-d53d">Innehållstester: Länkar att kontrollera</li>
+            <li data-i18n-id="s-0d1e">Innehållstester: Inbäddningar att kontrollera</li>
+            <li data-i18n-id="s-10c1">Innehållstester: Identifiera dynamiskt och shadow-innehåll</li>
+            <li data-i18n-id="s-e6e4">Utvecklartester: Kontrast</li>
+          </ul>
+
+          <h3 id="pages" data-i18n-id="s-177c">Dölj för specifika sidor eller användare</h3>
+          <p data-i18n-id="s-e874">
+            Det enklaste sättet att göra detta är genom att skicka CSS-klasser eller ID:n till dessa alternativ:
+          </p>
+          <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
+            <label for="edit-no-load" class="form-item__label">Kontrollera inte på sidor med dessa element</label>
+            <div class="form-textarea-wrapper">
+              <textarea data-drupal-selector="edit-no-load" aria-describedby="edit-no-load--description"
+                id="edit-no-load" name="no_load" rows="1" cols="20" class="form-control"></textarea>
+            </div>
+
+            <label for="edit-ignore-all-if-absent" class="form-item__label">Dölj alla aviseringar på sidor där dessa
+              element inte finns</label>
+            <div class="form-textarea-wrapper">
+              <textarea data-drupal-selector="edit-ignore-all-if-absent"
+                aria-describedby="edit-ignore-all-if-absent--description" id="edit-ignore-all-if-absent"
+                name="ignore_all_if_absent" rows="1" cols="20" class="form-control"></textarea>
+            </div>
+
+          </div>
+          <p data-i18n-id="s-0877">
+            Det första förhindrar att kontroller körs och verktygsfältet visas inte.
+          </p>
+          <p data-i18n-id="s-5cbd">
+            Det andra startar granskaren minimerad och markerar automatiskt (för den aktuella användaren) alla problem
+            som "Ignorerade", även om de är fel. Detta gör att testerna kan köras och uppdatera panelen utan att störa
+            användaren.
+          </p>
+          <p data-i18n-id="s-1661">
+            Om du vill använda dessa för att styra vilka användare som ser granskaren kan du behöva justera ditt tema
+            för att mata ut en klass, t.ex. <code>.user-247</code>
+          </p>
+
+          <h2 id="dashboard" data-i18n-id="s-f4d7">Hantera webbplatsövergripande resultat</h2>
+          <section id="refresh">
+            <h3 class="pt-3" data-i18n-id="s-012a">Genomsökning och uppdatering av resultat</h3>
+            <p data-i18n-id="s-75a9">Editoria11y är ett <strong>realtidsövervakningsverktyg, inte en genomsökare</strong>. Dess
+              webbplatsövergripande rapporter uppdateras när författare besöker sidor, så regelbunden genomsökning
+              behövs vanligtvis inte. CSA-modulen <em>inkluderar</em> en genomsökare, men den bör bara behövas i dessa
+              tre situationer:</p>
+            <ol>
+              <li data-i18n-id="s-dfb1">
+                Vid första installationen av Editoria11y på en befintlig webbplats med många sidor. Sidor måste besökas
+                innan de visas på panelen, så en snabb initial genomsökning sparar tid.
+              </li>
+              <li data-i18n-id="s-f602">
+                Större uppdateringar av teman eller moduler kan åtgärda (eller orsaka) problem på många sidor som inte
+                visas förrän de besöks eller genomsöks.
+              </li>
+              <li data-i18n-id="s-a530">
+                Massåtgärder i administratörsgränssnittet som att ta bort sidor eller omdirigeringar tenderar att lämna
+                kvar resultat från sidor som inte längre finns eller har flyttats. I dessa fall hjälper det att använda
+                fliken "Uppdatera" underhållsåtgärder för att uppdatera sid-URL:er och identifiera och ta bort borttagna
+                sidor.
+              </li>
+            </ol>
+            <p data-i18n-id="s-8e5a">Inga data lämnar din webbplats under en genomsökning. CSA-genomsökaren är inte ett molnverktyg; den
+              använder din webbläsare för att ladda och kontrollera sidorna på din egen webbplats. Nackdelen med detta
+              tillvägagångssätt är att <strong>webbläsare pausar bakgrundsflikar</strong>. Du måste hålla din dator på
+              och vaken under en genomsökning. Planera att öppna ett nytt fönster för genomsökaren och lämna det som
+              förgrundsflik för det fönstret medan det arbetar. Du kan fortsätta arbeta i ett annat fönster.
+              Genomsökaren uppdaterar sin uppskattning efter varje omgång sidor.</p>
+          </section>
+          <section id="reports">
+            <h3 data-i18n-id="s-a242">Visa rapporter</h3>
+            <div class="my-4 border shadow"
+              style="background: url(/assets/images/3x-dashboard.png) 86% 0%; padding-top: 28%; background-size: 106%;">
+            </div>
+            <ul>
+              <li data-i18n-id="s-e328">
+                <strong>Senaste</strong> möjliggör utforskning av enskilda aviseringar. Detta låter dig till exempel
+                filtrera för att hitta alla instanser av samma aviseringstyp, eller se vilka aviseringar som förekommer
+                ofta i nytt innehåll, eller vilka författare som fortfarande har en vana att göra samma misstag.
+              </li>
+              <li data-i18n-id="s-796f">
+                <strong>Sidor</strong> visar aviseringsantal per sida, grupperade per sida. Detta gör det möjligt att
+                hitta sidor med flest problem och att filtrera efter sidattribut som innehållstyp och
+                publiceringsstatus.
+              </li>
+              <li data-i18n-id="s-9423">
+                <strong>Aviseringar</strong> visar problem efter typ.
+              </li>
+              <li data-i18n-id="s-52ed">
+                <strong>Avfärdanden</strong> möjliggör övervakning av om författare avfärdar korrekt och har
+                "återställ"-knappar för att återställa avfärdade aviseringar.
+              </li>
+              <li data-i18n-id="s-3379">
+                <strong>Export</strong> innehåller versioner av rapporterna Sidor, Aviseringar och Avfärdanden som kan
+                filtreras för att förbereda CSV-nedladdningar. <em>Tillhandahålls av delmodulen CSV Export</em>
+              </li>
+              <li data-i18n-id="s-9814">
+                <strong>Uppdatera</strong> innehåller underhållsverktyg för panelen för att ta bort aviseringar från
+                borttagna sidor, ta bort aviseringar från parametriserade pseudosidor som /search?query=example,
+                uppdatera lagrade sidtitlar och URL:er och köra en manuell genomsökning. <em>Tillhandahålls av
+                  delmodulen CSA</em>
+              </li>
+            </ul>
+          </section>
+
+          <h2 id="positioning" data-i18n-id="s-c35b">Åtgärda dolda eller utanför skärmen-tips</h2>
+
+          <p data-i18n-id="s-68ce">Modulen tillhandahåller fält för två av bibliotekets konfigurationsalternativ för att ändra hur tips
+            placeras:</p>
+
+          <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
+            <label for="edit-element-hides-overflow" class="form-item__label">Element med overflow hidden</label>
+            <textarea data-drupal-selector="edit-element-hides-overflow"
+              aria-describedby="edit-element-hides-overflow--description" id="edit-element-hides-overflow"
+              name="element_hides_overflow" rows="1" cols="60" class="form-control"></textarea>
+            <label for="edit-hidden-handlers" class="form-item__label">Temats JavaScript hanterar avslöjande av dolda
+              verktygstips inuti dessa behållare</label>
+            <textarea data-drupal-selector="edit-hidden-handlers" aria-describedby="edit-hidden-handlers--description"
+              id="edit-hidden-handlers" name="hidden_handlers" rows="1" cols="60" class="form-control"></textarea>
+          </div>
+          <p data-i18n-id="s-34e4">Vissa teman har kolumner eller widgets som döljer horisontellt eller vertikalt spill. Biblioteket
+            identifierar automatiskt när en knapp hamnar utanför den synliga delen av <strong>sidan.</strong> Att tala
+            om för biblioteket att vissa behållare döljer spill innebär att det också försöker placera tips för element
+            i dessa behållare innanför deras gränser.</p>
+          <p data-i18n-id="s-7cb7">Vissa teman har widgets som växlar synligheten för innehåll, till exempel dragspelspaneler, flikar och
+            bildspel. Tips inuti dessa element döljs också. Att tillhandahålla en lista med selektorer för dessa widgets
+            innebär att Editoria11y pausar kort när en användare försöker hoppa till dessa tips med en nästa- eller
+            föregående-knapp. Drupal-teman och moduler kan sedan följa anvisningarna från bibliotekets avsnitt om <a href="/en/install/#hidden-content">hantering av tips på dolt innehåll</a> för att avslöja det dolda
+            innehållet.</p>
+
+          <h2 id="runtime" data-i18n-id="s-7e38">Skriv din egen konfiguration</h2>
+          <p data-i18n-id="s-a5d3">I PHP: Drupal-modulen tillhandahåller en <code>hook_editoria11y_alter_config</code> för att ändra
+            innehållet i <code>drupalSettings.editoria11y</code> i en modul eller ett tema. Till exempel:</p>
+          <pre class="language-php"><code><!--<?php
+/**
+ * @file
+ * MY_MODULE module file.
+ */
+
+use Drupal\Core\Cache\CacheableMetadata;
+
+/**
+ * Implements hook_editoria11y_alter_config().
+ *
+ * Attaches Editoria11y library and config based on context.
+ */
+function MY_MODULE_editoria11y_alter_config(array &$attach, CacheableMetadata $cacheableMetadata): void {
+  $config = Drupal::config('editoria11y.settings');
+
+  // Module settings being changed need to bust the cache.
+  $cacheableMetadata->addCacheableDependency($config);
+
+  // Get and modify any of the values being passed to drupalSettings.editoria11y.
+  if (!empty($attach['allow_ok'])) {
+    $attach['allow_ok'] = 'okAll';
+  }
+}--></code></pre>
+          <p data-i18n-id="s-2368">Att ändra <code>drupalSettings</code> hjälper bara om modulens JavaScript redan är konfigurerat att skicka
+            det värdet till biblioteket. För att lägga till ytterligare parametrar måste du ändra JavaScript-objektet
+            <code>options</code> direkt. Modulen söker efter en global JavaScript-variabel
+            <code>editoria11yOptionsOverride</code>. Om den är angiven skickar modulen <code>options</code>-objektet
+            till en <code>editoria11yOptions</code>-funktion som du har tillhandahållit i din modul eller ditt tema. Du
+            kan nu ange vilka som helst av <a href="https://editorsally.ddev.site/en/install/#params">bibliotekets
+              parametrar</a>.
+          </p>
+          <pre class="language-javascript"><code><!--var editoria11yOptionsOverride = true;
+var editoria11yOptions = function(options) {
+  // You now have access to the processed options object that will be passed to the library.
+
+  // E.g., to add a selector to the ignore list:
+  if (options['ignoreElements'] === false) {
+    // Provide the selector as the only value.
+    options['ignoreElements'] = `.example`;
+  } else {
+    // Append additional selectors with comma separator.
+    options['ignoreElements'] = `${options['ignoreElements']}, .example`
+  }
+
+  // Return your processed options.
+  return options;
+}
+--></code></pre>
+          <section id="custom-tests">
+            <h2 data-i18n-id="s-e0f0">Skriv dina egna tester</h2>
+            <p data-i18n-id="s-6ece">Lägg först till 1 i modulkonfigurationens alternativ "Anpassade tester" så att den vet att
+              hålla utkik efter testerna.</p>
+            <p data-i18n-id="s-4316">Skapa sedan ett Drupal JavaScript-bibliotek med dina tester i ditt tema eller din modul med hjälp av <a href="/en/install/#custom-tests">bibliotekets guide för att skriva anpassade tester</a>.</p>
+            <p data-i18n-id="s-b4ea">Här är ett fungerande exempel från Princeton, ett anpassat test för att varna om Safe Links. Observera
+              att det når Editoria11y-klassen via <code>Drupal.Ed11y.</code></p>
+            <pre class="language-javascript"><code><!--const psEd11yCustomTests = function() {
+
+  // 1.
+  // Get elements to test, via Drupal.Ed11y.getElements.
+  // The 'root' parameter tells it to respect config for check areas and ignores.
+  const safeLinks = Drupal.Ed11y.getElements('a[href*="safelinks.protection.outlook.com/?"]', 'root');
+
+  // Add the test name to the lang object.
+  Drupal.ed11yLang.lang.testNames.outlookSafeLink = 'URL is Safe Link encoded';
+
+  // 2.
+  // Create the tip content.
+  const decodeSafelink = function(url) {
+    const params = new URL(url).searchParams;
+    let decoded = params.get('url');
+    const p = document.createElement('p');
+    if (!!decoded) {
+      p.innerHTML = `<p><span class="badge">To fix</span>Update this link with the correct URL, which is probably:<br>
+    <em style='word-wrap: break-word;font-size: 90%;line-height: 1.2;display: block;'></em></p>`
+      p.querySelector('em').textContent = Drupal.Ed11y.sanitizeHTML(decoded);
+    }
+    return p;
+  };
+  safeLinks?.forEach((el) => {
+    const content = document.createElement('div');
+    content.innerHTML = `<div class="title">Please fix this Outlook "Safe Link"</div>
+            <div class="why">
+                <p>The URL for this link is an Outlook "Safe Link" that was copied from an email.
+                It includes the original recipient's email address,
+                and will break if Microsoft shuts down the service.</p>
+                <p>The pasted URL is:<br>
+                <em style='word-break: break-all;font-size: 90%;line-height: 1.2;
+                display: block;'></em></p>
+            </div>
+            `;
+    content.querySelector('em').textContent = Drupal.Ed11y.sanitizeHTML(el.href);
+    content.querySelector('.why').insertAdjacentElement('beforebegin', decodeSafelink(el.href));
+
+    // 3.
+    // Push the tip to the library results object.
+    Drupal.Ed11y.State.results.push({
+      element: el,
+      test: 'outlookSafeLink',
+      type: 'error',
+      content: content,
+      position: 'beforebegin',
+      inline: false,
+      dismiss: false,
+    });
+  });
+
+  // 4.
+  // Tell Editoria11y you are done adding custom results.
+  const allDone = new CustomEvent('ed11yResume');
+  document.dispatchEvent(allDone);
+};--></code></pre>
+
+          </section>
+          <section id="help">
+            <h2 data-i18n-id="s-4690">Få hjälp</h2>
+            <p data-i18n-id="s-f149">Se <a href="../contacts">kontaktsidan</a> för alternativ för gemenskapsstöd. @itmaybejj finns
+              oftast online i Drupal Slack när solen är uppe på västra halvklotet.</p>
+            <p data-i18n-id="s-4a16">De flesta <a href="../license/">CSA-bidragsnivåer</a> inkluderar en årlig avstämning, som kan
+              inkludera direkt assistans med installation och konfiguration</p>
+          </section>
+
+        </div>
+      </div>
+    </div>
+  </main>

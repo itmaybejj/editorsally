@@ -1,0 +1,437 @@
+<main class="container col-lg-12 mx-auto py-5">
+    <div class="row docs">
+      <div class="col-12 col-md-5 col-lg-4 mb-5">
+        <div id="on-this-page" class="list-group ms-2 ms-lg-5 position-sticky top-0 pt-3">
+        </div>
+      </div>
+      <div class="col-12 col-md-7 col-lg-8 pt-3">
+        <div data-bs-spy="scroll" data-bs-target="#on-this-page" data-bs-smooth-scroll="true">
+          <h1 data-i18n-id="s-e367">Editoria11y pro Drupal</h1>
+          <section id="features">
+            <h2 class="pt-3" data-i18n-id="s-1dcf">Základní funkce</h2>
+
+            <p class="fs-6" data-i18n-id="s-a8c0">Modul pro Drupal propojuje kontrolní knihovnu s redakčním backendem
+              a přidává řadu serverových nástrojů pro přehledy, správu a konfiguraci</p>
+
+            <figure class="figure my-4 row">
+              <div class="col-lg-8">
+                <img loading="lazy" src="/assets/images/3x-editing.png" class="rounded border figure-img img-fluid" height="1088" width="2237" alt="Editor Drupal s inline tipy" data-i18n-id="s-ee36" />
+              </div>
+              <figcaption class="figure-caption col-lg-4" data-i18n-id="s-8e69">Problémy jsou detekovány při načtení stránky na frontendu
+                a
+                při psaní v CKEditor a Gutenberg.</figcaption>
+            </figure>
+
+            <figure class="figure my-4 row">
+              <div class="col-lg-8">
+                <img loading="lazy" src="/assets/images/3x-generic-tip.png" class="rounded border figure-img img-fluid" height="798" width="1278" alt="Tip oznamující, že odkaz je pojmenován pouze „klikněte zde&quot;." data-i18n-id="s-1639" />
+              </div>
+              <figcaption class="figure-caption col-lg-4" data-i18n-id="s-9881">Tooltipům přibývají tlačítka
+                pro přechod do editoru, ignorování upozornění (pro aktuálního uživatele) nebo označení jako OK (pro všechny
+                uživatele). Opakující se upozornění nabízejí akce pro celou stránku nebo celý web.
+              </figcaption>
+            </figure>
+
+            <figure class="figure my-4 row">
+              <div class="col-lg-8">
+                <img loading="lazy" src="/assets/images/3x-drupal-custom-tests.png" class="rounded border figure-img img-fluid" alt="Rozhraní tvůrce vlastních testů zobrazující pole pro název a obsah tipu, selektory prvků a výjimky." data-i18n-id="s-0830" />
+              </div>
+              <figcaption class="figure-caption col-lg-4">
+                <p class="mb-2" data-i18n-id="s-37bf">Submodul CSA přidává:</p>
+                <ul class="ps-3">
+                  <li data-i18n-id="s-caff"><strong>Tvůrce vlastních testů</strong></li>
+                  <li data-i18n-id="s-b145">40+ vývojářských testů</li>
+                  <li data-i18n-id="s-f55d">Kontrola kontrastu</li>
+                  <li data-i18n-id="s-b70c">Crawlery pro web</li>
+                  <li data-i18n-id="s-5377">Analýza čitelnosti</li>
+                  <li data-i18n-id="s-6602">Oddělené konfigurace pro vývojáře/editory</li>
+                </ul>
+              <span data-translate data-i18n-id="s-bc47"></figcaption>
+            </figure>
+
+            <figure class="figure">
+              <img loading="lazy" class="figure-img img-fluid rounded border" src="/assets/images/3x-dashboard.png" height="765" width="1600" alt="Reportovací dashboard zobrazující nedávné problémy a stránky s nejvíce problémy." data-i18n-id="s-2559" />
+              <figcaption class="figure-caption p-3 pt-2" data-i18n-id="s-cdbf">Celostránkový dashboard poskytuje filtrovatelné a
+                exportovatelné přehledy upozornění a skrytých výsledků.</figcaption>
+            </figure>
+
+          </section>
+          <h2 data-i18n-id="s-8fec">Instalace a klíčové kroky nastavení</h2>
+          <p data-i18n-id="s-7627"><a href="https://www.drupal.org/project/editoria11y/">Balíčkový instalátor</a> na Drupal.org obsahuje
+            několik modulů:</p>
+          <ul>
+            <li data-i18n-id="s-b830">
+              Editoria11y: základní kontrola obsahu a dashboard.
+            </li>
+            <li data-i18n-id="s-b351">
+              Editoria11y CSA: vývojářské testy a nástroje pro správu dashboardu.
+            </li>
+            <li data-i18n-id="s-74fe">
+              Editoria11y Export: nástroje pro CSV reportování.
+            </li>
+          </ul>
+          <p data-i18n-id="s-88fd">Nainstalujte jako jakýkoli jiný modul a poté proveďte tyto klíčové kroky:</p>
+          <ol>
+            <li data-i18n-id="s-7187"><strong>Zkontrolujte oprávnění.</strong> Důvěryhodní autoři by měli mít „Označit jako OK", „Označit jako ignorované" a „Zobrazit dashboard."</li>
+            <li data-i18n-id="s-1ac1"><strong>Zkontrolujte klíčové stránky, zda neobsahují opakující se nebo zbytečná upozornění.</strong> Buď je označte jako OK v tipu, nebo upravte konfiguraci, aby ignorovala prvky pomocí selektoru.</li>
+            <li data-i18n-id="s-e5b2">Zkontrolujte, zda tipy nejsou špatně viditelné — mimo obrazovku, oříznuté, překryté jinými prvky nebo na skrytých prvcích.
+              K opravě použijte rady v sekci „Opravit umístění tipů" níže.</li>
+            <li data-i18n-id="s-c564">Pokud web již obsahuje obsah a máte předplatné CSA, navštivte záložku „Překontrolovat" v dashboardu a
+              <strong>prohledejte web</strong> pro předběžné načtení zpráv. Je to volitelné, ale starší stránky se v přehledech neobjeví, dokud nejsou prohledány nebo navštíveny přihlášeným uživatelem.
+            </li>
+          </ol>
+          <p data-i18n-id="s-e025">Podívejte se na <a href="https://youtu.be/uYvNYPg38nU?si=dqADyWpTtOhniHTP&t=696">video o možnostech konfigurace</a> (v2.4).</p>
+
+          <h2 id="check-roots" data-i18n-id="s-9202">Skrýt zbytečná upozornění</h2>
+          <p data-i18n-id="s-fa47">
+            <strong>Dobrá konfigurace potlačuje zbytečná upozornění, aby se autoři obsahu mohli soustředit na skutečné problémy</strong>.
+          </p>
+          <p data-i18n-id="s-996e">Přestože testy lze zcela vypnout, obvykle je lepší skrýt upozornění pouze pro konkrétní prvky nebo stránky.
+          </p>
+          <hr/>
+          <p data-i18n-id="s-7918">
+            Při každém spuštění testu Editoria11y shromáždí jednu sadu prvků z nastavení „Kontrolovat obsah v těchto
+            kontejnerech" a poté ji několikrát filtruje. Takto vypadá jedno spuštění testu:
+          </p>
+          <ol>
+            <li data-i18n-id="s-994a">
+              Zrušit kontrolu, pokud konfigurace zabraňuje kontrole na této stránce nebo pro tohoto uživatele.
+            </li>
+            <li data-i18n-id="s-10c9">
+              <strong>Shromáždit</strong> prvky v určených oblastech stránky,
+              např.:<br/><code>body > *:not('.ed11y-element')</code><br/>
+              <em>Pro uživatele Editoria11y CSA jsou to oblasti na záložce <strong>Vývojářské testy</strong>.</em>
+            </li>
+            <li data-i18n-id="s-7524">
+              <strong>Vynechat</strong> prvky, které odpovídají selektorům ignorování,
+              např.:<br/><code>.widgets, .utility-menu</code><br/>
+              <em>Pro uživatele Editoria11y CSA jsou to selektory na záložce <strong>Vývojářské testy</strong>.</em>
+            </li>
+            <li data-i18n-id="s-58d0">
+              Spustit testy a synchronizovat výsledky s dashboardem.
+            </li>
+            <li>
+              <span data-translate data-i18n-id="s-f8c6">Je-li aktivní rozdělená konfigurace a uživatel je editor obsahu, filtrovat výsledky pro vývojáře:</span>
+              <ul>
+                <li data-i18n-id="s-72c9"><strong>Vynechat</strong> výsledky z testů nastavených na „Pouze pro vývojáře."</li>
+                <li data-i18n-id="s-576e"><strong>Vynechat</strong> výsledky na prvcích mimo určené oblasti <strong><em>obsahu</em></strong>,
+                  např.:<br/><code>main, footer</code></li>
+                <li data-i18n-id="s-bb1d"><strong>Vynechat</strong> výsledky na prvcích, které odpovídají selektorům ignorování <strong><em>obsahu</em></strong>.</li>
+              </ul>
+              Note that there is not a second "gather" phase. The developer page regions must include the content
+              regions.</span>
+            </li>
+            <li data-i18n-id="s-b79c">Otevřít panel a zobrazit upozornění, pokud konfigurace odpovídá nastavení automatického otevírání.</li>
+          </ol>
+
+          <h3 id="dismiss" data-i18n-id="s-be02">Skrýt upozornění</h3>
+          <p data-i18n-id="s-2ae3">Testy lze v knihovně nastavit jako chyby nebo varování („manuální kontroly"). Varování lze skrýt.
+            V zápatí každého tooltipu jsou k dispozici dva typy skrytí:</p>
+          <div class="my-2"
+            style="background: url(/assets/images/3x-generic-tip.png) 100% 98%; max-width: 600px; padding-top: 6%; background-size: 108%;">
+          </div>
+          <ul>
+            <li data-i18n-id="s-7b65">„Ignorovat" je uloženo jako osobní předvolba: upozornění je od této chvíle skryto pro aktuálního uživatele, ale pouze pro něj.</li>
+            <li data-i18n-id="s-654c">„Označit jako OK" skryje upozornění pro všechny uživatele.</li>
+          </ul>
+          <p data-i18n-id="s-dc14">Zda může uživatel upozornění skrýt, je řízeno na úrovni role v oprávněních uživatelů Drupal.
+            <strong>Většina autorů by měla mít možnost upozornění skrývat</strong>. Nemá smysl přiřazovat někomu manuální kontrolu, pokud nemůže označit danou položku jako zkontrolovanou.
+          </p>
+
+          <h3 id="roots" data-i18n-id="s-d932">Ignorovat prvky</h3>
+          <p data-i18n-id="s-9d1e">Tato dvě nastavení konfigurace jsou nejdůležitější!</p>
+          <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
+            <label for="edit-content-root">Check content in these containers</label>
+            <div><textarea class="form-control" id="edit-content-root" name="content_root" rows="1" cols="30"
+                disabled></textarea>
+            </div>
+            <div class="mt-3">
+              <label for="edit-ignore-elements">Skip over these elements</label>
+              <div>
+                <textarea class="form-control" id="edit-ignore-elements" disabled name="ignore_elements" rows="1"
+                  cols="30" class=""></textarea>
+              </div>
+            </div>
+          </div>
+          <p data-i18n-id="s-6051">
+            Nastavte první tak, aby zahrnovalo všechny části obsahu stránky, které mohou autoři upravovat. Např. pokud mohou upravovat
+            oblast obsahu <code>main</code>, <code>.sidebar</code> a <code>.footer-column-two</code>, nastavte tyto
+            selektory jako oblast kontroly obsahu.
+          </p>
+          <p data-i18n-id="s-f29c">
+            Použijte druhé k „vyřazení" podsekcí. Např. pokud <code>main</code> obsahuje různé widgety a vložené prvky,
+            které mohou upravovat pouze vývojáři, uveďte je: <code>.widget-1, .social-embed</code>;
+          </p>
+          <p data-i18n-id="s-10ef">Pokud používáte rozdělenou konfiguraci, uvidíte podobnou dvojici nastavení na záložce Vývojářské testy:</p>
+          <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
+            <div>
+              <fieldset>
+                <legend>
+                  Developer check area
+                </legend>
+                <div class="fieldset__wrapper fieldset__wrapper--group">
+
+                  <div id="edit-dev-check-root">
+                    <div>
+                      <input aria-describedby="edit-dev-check-root--description" type="radio"
+                        id="edit-dev-check-root-automatic" name="dev_check_root" value="automatic" checked="checked" />
+                      <label for="edit-dev-check-root-automatic" class="form-item__label option">All elements</label>
+                    </div>
+                    <div class="d-flex">
+                      <input aria-describedby="edit-dev-check-root--description" type="radio"
+                        id="edit-dev-check-root-match" name="dev_check_root" value="match"
+                        class="align-self-baseline mt-1 me-1" />
+                      <label for="edit-dev-check-root-match" class="form-item__label option">Only the containers listed
+                        in the Content Setting tab</label>
+                    </div>
+                    <div class="">
+                      <input aria-describedby="edit-dev-check-root--description" type="radio"
+                        id="edit-dev-check-root-specify" name="dev_check_root" value="specify"
+                        class="form-radio form-boolean form-boolean--type-radio" />
+                      <label for="edit-dev-check-root-specify" class="">The specific containers listed below</label>
+                    </div>
+                  </div>
+
+                </div>
+              </fieldset>
+
+              <div class="">
+                <label for="edit-always-ignore" class="mt-3">Ignore for both developers and content editors</label>
+                <div class="form-textarea-wrapper">
+                  <textarea id="edit-always-ignore" class="form-control" name="always_ignore" rows="1" cols="20"
+                    placeholder=""></textarea>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+          <p data-i18n-id="s-8c02">Zásadní věc, kterou je třeba vědět o vývojářských oblastech kontroly: <strong>nejsou nezávislé</strong> na oblastech kontroly obsahu. V rozdělené konfiguraci jsou vývojářské oblasti zkontrolovány a tyto výsledky jsou poté <strong>filtrovány</strong> tak, aby odpovídaly oblastem obsahu. Všechny oblasti vyloučené pro vývojáře budou také vyloučeny pro editory obsahu. Nevylučujte upravitelné oblasti obsahu!</p>
+
+          <p data-i18n-id="s-0312">Některé testy umožňují přesnější konfiguraci, aby skryly pouze určitá upozornění na dotčených prvcích. Hledejte je pod:</p>
+          <ul>
+            <li data-i18n-id="s-d53d">Testy obsahu: Odkazy ke kontrole</li>
+            <li data-i18n-id="s-0d1e">Testy obsahu: Vložené prvky ke kontrole</li>
+            <li data-i18n-id="s-10c1">Testy obsahu: Detekce dynamického a shadow obsahu</li>
+            <li data-i18n-id="s-e6e4">Vývojářské testy: Kontrast</li>
+          </ul>
+
+          <h3 id="pages" data-i18n-id="s-177c">Skrýt pro konkrétní stránky nebo uživatele</h3>
+          <p data-i18n-id="s-e874">
+            Nejjednodušší způsob je předat CSS třídy nebo ID těmto možnostem:
+          </p>
+          <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
+            <label for="edit-no-load" class="form-item__label">Do not check on pages with these elements</label>
+            <div class="form-textarea-wrapper">
+              <textarea data-drupal-selector="edit-no-load" aria-describedby="edit-no-load--description"
+                id="edit-no-load" name="no_load" rows="1" cols="20" class="form-control"></textarea>
+            </div>
+
+            <label for="edit-ignore-all-if-absent" class="form-item__label">Hide all alerts on pages where these
+              elements are not present</label>
+            <div class="form-textarea-wrapper">
+              <textarea data-drupal-selector="edit-ignore-all-if-absent"
+                aria-describedby="edit-ignore-all-if-absent--description" id="edit-ignore-all-if-absent"
+                name="ignore_all_if_absent" rows="1" cols="20" class="form-control"></textarea>
+            </div>
+
+          </div>
+          <p data-i18n-id="s-0877">
+            První zabrání spuštění kontrol a panel nástrojů se nezobrazí.
+          </p>
+          <p data-i18n-id="s-5cbd">
+            Druhé spustí kontrolu minimalizovanou a automaticky označí (pro aktuálního uživatele) všechny problémy jako „Ignorováno",
+            i když se jedná o chyby. To umožňuje testům běžet a aktualizovat dashboard, aniž by obtěžovaly uživatele.
+          </p>
+          <p data-i18n-id="s-1661">
+            Pokud chcete tyto možnosti použít k řízení toho, kteří uživatelé vidí kontrolu, možná budete muset upravit svůj motiv tak, aby výstupoval třídu, např. <code>.user-247</code>
+          </p>
+
+          <h2 id="dashboard" data-i18n-id="s-f4d7">Správa výsledků pro celý web</h2>
+          <section id="refresh">
+            <h3 class="pt-3" data-i18n-id="s-012a">Prohledávání a aktualizace výsledků</h3>
+            <p data-i18n-id="s-75a9">Editoria11y je <strong>nástroj pro sledování v reálném čase — není to crawler</strong>. Jeho celostránkové přehledy se aktualizují, když autoři zobrazují stránky, takže pravidelné prohledávání obvykle není potřeba. Modul CSA <em>sice</em> crawler obsahuje, ale měl by být nutný pouze ve třech situacích:</p>
+            <ol>
+              <li data-i18n-id="s-dfb1">
+                Při první instalaci Editoria11y na existující web s mnoha stránkami. Stránky musí být nejprve navštíveny, než se objeví v dashboardu, takže rychlé počáteční prohledání ušetří čas.
+              </li>
+              <li data-i18n-id="s-f602">
+                Větší aktualizace motivů nebo modulů mohou opravit (nebo způsobit) problémy na mnoha stránkách, které se neobjeví, dokud nejsou navštíveny nebo prohledány.
+              </li>
+              <li data-i18n-id="s-a530">
+                Hromadné akce v rozhraní administrátora, jako je mazání stránek nebo přesměrování, mají tendenci zanechávat výsledky ze stránek, které již neexistují nebo se přesunuly. V takových případech pomáhá použít akce údržby na záložce „Obnovit" pro obnovení URL stránek a detekci a odstranění smazaných stránek.
+              </li>
+            </ol>
+            <p data-i18n-id="s-8e5a">Žádná data neopouštějí váš web při prohledávání. Crawler CSA není cloudový nástroj; používá váš prohlížeč k načtení a kontrole stránek vašeho vlastního webu. Nevýhodou tohoto přístupu je, že <strong>prohlížeče pozastavují stránky na pozadí</strong>. Během prohledávání budete muset mít počítač zapnutý a probuzený. Plánujte otevřít nové okno pro crawler a ponechte ho jako aktivní záložku v popředí tohoto okna. Mezitím můžete pokračovat v práci v jiném okně. Crawler bude po každé dávce stránek aktualizovat svůj odhad.</p>
+          </section>
+          <section id="reports">
+            <h3 data-i18n-id="s-a242">Zobrazení přehledů</h3>
+            <div class="my-4 border shadow"
+              style="background: url(/assets/images/3x-dashboard.png) 86% 0%; padding-top: 28%; background-size: 106%;">
+            </div>
+            <ul>
+              <li data-i18n-id="s-e328">
+                <strong>Nedávné</strong> umožňuje procházet jednotlivá upozornění. Umožňuje například filtrovat a najít všechny výskyty stejného typu upozornění, nebo zjistit, která upozornění se často objevují v nedávném obsahu, nebo kteří autoři mají zvyk opakovat stejné chyby.
+              </li>
+              <li data-i18n-id="s-796f">
+                <strong>Stránky</strong> zobrazuje počty upozornění na stránku, seskupené dle stránky. Umožňuje najít stránky s nejvíce problémy a filtrovat podle atributů stránky, jako je typ obsahu a stav zveřejnění.
+              </li>
+              <li data-i18n-id="s-9423">
+                <strong>Upozornění</strong> zobrazuje problémy dle typu.
+              </li>
+              <li data-i18n-id="s-52ed">
+                <strong>Skrytá upozornění</strong> umožňuje sledovat, zda autoři skrývají správně, a obsahuje tlačítka „obnovit" pro obnovení skrytých upozornění.
+              </li>
+              <li data-i18n-id="s-3379">
+                <strong>Export</strong> obsahuje verze přehledů Stránky, Upozornění a Skrytá upozornění, které lze filtrovat pro přípravu CSV stahování. <em>Poskytuje submodul CSV Export</em>
+              </li>
+              <li data-i18n-id="s-9814">
+                <strong>Obnovit</strong> obsahuje nástroje pro správu dashboardu ke stažení upozornění ze smazaných stránek, odstranění upozornění z parametrizovaných pseudostránek jako /search?query=example, aktualizaci uložených titulků a URL stránek a ruční prohledání. <em>Poskytuje submodul CSA</em>
+              </li>
+            </ul>
+          </section>
+
+          <h2 id="positioning" data-i18n-id="s-c35b">Opravit skryté nebo mimoobrazovkové tipy</h2>
+
+          <p data-i18n-id="s-68ce">Modul poskytuje pole pro dvě možnosti konfigurace knihovny, které mění umístění tipů:
+          </p>
+
+          <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
+            <label for="edit-element-hides-overflow" class="form-item__label">Elements with overflow hidden</label>
+            <textarea data-drupal-selector="edit-element-hides-overflow"
+              aria-describedby="edit-element-hides-overflow--description" id="edit-element-hides-overflow"
+              name="element_hides_overflow" rows="1" cols="60" class="form-control"></textarea>
+            <label for="edit-hidden-handlers" class="form-item__label">Theme JS will handle revealing hidden tooltips
+              inside these containers</label>
+            <textarea data-drupal-selector="edit-hidden-handlers" aria-describedby="edit-hidden-handlers--description"
+              id="edit-hidden-handlers" name="hidden_handlers" rows="1" cols="60" class="form-control"></textarea>
+          </div>
+          <p data-i18n-id="s-34e4">Některé motivy mají sloupce nebo widgety, které skrývají horizontální nebo vertikální přetečení. Knihovna automaticky
+            detekuje, když by přepínač přesáhl viditelnou část <strong>stránky.</strong> Sdělení knihovně, že určité kontejnery skrývají přetečení, znamená, že se také pokusí umístit tipy pro prvky v těchto kontejnerech uvnitř jejich hranic.</p>
+          <p data-i18n-id="s-7cb7">Některé motivy mají widgety, které přepínají viditelnost obsahu, jako jsou akordeony, záložky a prezentace.
+            Tipy uvnitř těchto prvků budou také skryty. Poskytnutí seznamu selektorů pro tyto widgety znamená, že Editoria11y krátce pozastaví, když se uživatel pokusí přejít na tyto tipy pomocí tlačítka Další nebo Předchozí.
+            Motivy a moduly Drupal pak mohou postupovat podle pokynů z části knihovny o <a href="/en/install/#hidden-content">práci s tipy na skrytém obsahu</a> a odhalit skrytý obsah.
+          </p>
+
+          <h2 id="runtime" data-i18n-id="s-7e38">Napište vlastní konfiguraci</h2>
+          <p data-i18n-id="s-a5d3">V PHP: modul Drupal poskytuje <code>hook_editoria11y_alter_config</code> pro změnu obsahu
+            <code>drupalSettings.editoria11y</code> v modulu nebo motivu. Například:
+          </p>
+          <pre class="language-php"><code><!--<?php
+/**
+ * @file
+ * MY_MODULE module file.
+ */
+
+use Drupal\Core\Cache\CacheableMetadata;
+
+/**
+ * Implements hook_editoria11y_alter_config().
+ *
+ * Attaches Editoria11y library and config based on context.
+ */
+function MY_MODULE_editoria11y_alter_config(array &$attach, CacheableMetadata $cacheableMetadata): void {
+  $config = Drupal::config('editoria11y.settings');
+
+  // Module settings being changed need to bust the cache.
+  $cacheableMetadata->addCacheableDependency($config);
+
+  // Get and modify any of the values being passed to drupalSettings.editoria11y.
+  if (!empty($attach['allow_ok'])) {
+    $attach['allow_ok'] = 'okAll';
+  }
+}--></code></pre>
+          <p data-i18n-id="s-2368">Úprava <code>drupalSettings</code> pomáhá pouze tehdy, pokud je JS modulu již nastaven tak, aby předával tuto hodnotu knihovně. Pro přidání dalších parametrů je třeba přímo upravit JS objekt <code>options</code>.
+            Modul kontroluje jednu globální JS proměnnou <code>editoria11yOptionsOverride</code>. Pokud je nastavena, předá objekt <code>options</code> funkci <code>editoria11yOptions</code>, kterou jste uvedli ve svém modulu nebo motivu. Nyní můžete nastavit libovolné <a               href="https://editorsally.ddev.site/en/install/#params">parametry knihovny</a>.</p>
+          <pre class="language-javascript"><code><!--var editoria11yOptionsOverride = true;
+var editoria11yOptions = function(options) {
+  // You now have access to the processed options object that will be passed to the library.
+
+  // E.g., to add a selector to the ignore list:
+  if (options['ignoreElements'] === false) {
+    // Provide the selector as the only value.
+    options['ignoreElements'] = `.example`;
+  } else {
+    // Append additional selectors with comma separator.
+    options['ignoreElements'] = `${options['ignoreElements']}, .example`
+  }
+
+  // Return your processed options.
+  return options;
+}
+--></code></pre>
+          <section id="custom-tests">
+            <h2 data-i18n-id="s-e0f0">Napište vlastní testy</h2>
+            <p data-i18n-id="s-6ece">Nejprve v konfiguraci modulu přidejte 1 k možnosti „Vlastní testy", aby věděl, že má testy sledovat.</p>
+            <p data-i18n-id="s-4316">Poté vytvořte JS knihovnu Drupal s vašimi testy ve svém motivu nebo modulu, pomocí <a href="/en/install/#custom-tests">průvodce psaním vlastních testů</a>.</p>
+            <p data-i18n-id="s-b4ea">Zde je funkční příklad z Princeton, vlastní test pro upozornění na Safe Links. Všimněte si, že přistupuje
+              ke třídě Editoria11y přes <code>Drupal.Ed11y.</code></p>
+            <pre class="language-javascript"><code><!--const psEd11yCustomTests = function() {
+
+  // 1.
+  // Get elements to test, via Drupal.Ed11y.getElements.
+  // The 'root' parameter tells it to respect config for check areas and ignores.
+  const safeLinks = Drupal.Ed11y.getElements('a[href*="safelinks.protection.outlook.com/?"]', 'root');
+
+  // Add the test name to the lang object.
+  Drupal.ed11yLang.lang.testNames.outlookSafeLink = 'URL is Safe Link encoded';
+
+  // 2.
+  // Create the tip content.
+  const decodeSafelink = function(url) {
+    const params = new URL(url).searchParams;
+    let decoded = params.get('url');
+    const p = document.createElement('p');
+    if (!!decoded) {
+      p.innerHTML = `<p><span class="badge">To fix</span>Update this link with the correct URL, which is probably:<br>
+    <em style='word-wrap: break-word;font-size: 90%;line-height: 1.2;display: block;'></em></p>`
+      p.querySelector('em').textContent = Drupal.Ed11y.sanitizeHTML(decoded);
+    }
+    return p;
+  };
+  safeLinks?.forEach((el) => {
+    const content = document.createElement('div');
+    content.innerHTML = `<div class="title">Please fix this Outlook "Safe Link"</div>
+            <div class="why">
+                <p>The URL for this link is an Outlook "Safe Link" that was copied from an email.
+                It includes the original recipient's email address,
+                and will break if Microsoft shuts down the service.</p>
+                <p>The pasted URL is:<br>
+                <em style='word-break: break-all;font-size: 90%;line-height: 1.2;
+                display: block;'></em></p>
+            </div>
+            `;
+    content.querySelector('em').textContent = Drupal.Ed11y.sanitizeHTML(el.href);
+    content.querySelector('.why').insertAdjacentElement('beforebegin', decodeSafelink(el.href));
+
+    // 3.
+    // Push the tip to the library results object.
+    Drupal.Ed11y.State.results.push({
+      element: el,
+      test: 'outlookSafeLink',
+      type: 'error',
+      content: content,
+      position: 'beforebegin',
+      inline: false,
+      dismiss: false,
+    });
+  });
+
+  // 4.
+  // Tell Editoria11y you are done adding custom results.
+  const allDone = new CustomEvent('ed11yResume');
+  document.dispatchEvent(allDone);
+};--></code></pre>
+
+          </section>
+          <section id="help">
+            <h2 data-i18n-id="s-4690">Kde získat pomoc</h2>
+            <p data-i18n-id="s-f149">Na stránce <a href="/en/contacts/">kontaktů</a> najdete možnosti komunitní podpory. @itmaybejj bývá online v Drupal Slacku, když je na západní polokouli den.</p>
+            <p data-i18n-id="s-4a16">Většina <a href="/en/license/">úrovní příspěvku CSA</a> zahrnuje roční konzultaci,
+              která může zahrnovat přímou pomoc s nastavením a konfigurací</p>
+          </section>
+
+        </div>
+      </div>
+    </div>
+  </main>

@@ -1,0 +1,421 @@
+<main class="container col-lg-12 mx-auto py-5">
+    <div class="row docs">
+      <div class="col-12 col-md-5 col-lg-4 mb-5">
+        <div id="on-this-page" class="list-group ms-2 ms-lg-5 position-sticky top-0 pt-3">
+        </div>
+      </div>
+      <div class="col-12 col-md-7 col-lg-8 pt-3">
+        <div data-bs-spy="scroll" data-bs-target="#on-this-page" data-bs-smooth-scroll="true">
+          <h1 data-i18n-id="s-e367">Editoria11y Drupal sistemai</h1>
+          <section id="features">
+            <h2 class="pt-3" data-i18n-id="s-1dcf">Pagrindinės funkcijos</h2>
+
+            <p class="fs-6" data-i18n-id="s-a8c0">Drupal modulis sujungia tikrintuvo biblioteką su redakcijos sistema
+              ir prideda daug serverio pusės įrankių ataskaitoms, valdymui ir konfigūracijai</p>
+
+            <figure class="figure my-4 row">
+              <div class="col-lg-8">
+                <img loading="lazy" src="/assets/images/3x-editing.png" class="rounded border figure-img img-fluid" height="1088" width="2237" alt="Drupal redaktorius su įterptiniais patarimais" data-i18n-id="s-ee36" />
+              </div>
+              <figcaption class="figure-caption col-lg-4" data-i18n-id="s-8e69">Problemos aptinkamos tiek įkeliant puslapį naršyklėje,
+                tiek rašymo metu CKEditor ir Gutenberg redaktoriuose.</figcaption>
+            </figure>
+
+            <figure class="figure my-4 row">
+              <div class="col-lg-8">
+                <img loading="lazy" src="/assets/images/3x-generic-tip.png" class="rounded border figure-img img-fluid" height="798" width="1278" alt="Patarimas, nurodantis, kad nuoroda pavadinta tik „spustelėkite čia&quot;." data-i18n-id="s-1639" />
+              </div>
+              <figcaption class="figure-caption col-lg-4" data-i18n-id="s-9881">Patarimai gauna mygtukus
+                pereiti į redaktorių, nepaisyti įspėjimo (aktyviam naudotojui) arba pažymėti jį kaip tinkamą (visiems
+                naudotojams). Pasikartojantys įspėjimai siūlo viso puslapio ar visos svetainės veiksmus.
+              </figcaption>
+            </figure>
+
+            <figure class="figure my-4 row">
+              <div class="col-lg-8">
+                <img loading="lazy" src="/assets/images/3x-drupal-custom-tests.png" class="rounded border figure-img img-fluid" alt="Pasirinktinių testų kūrimo sąsaja su laukais patarimo pavadinimui ir turiniui, taip pat elementų selektoriams ir išimtims." data-i18n-id="s-0830" />
+              </div>
+              <figcaption class="figure-caption col-lg-4">
+                <p class="mb-2" data-i18n-id="s-37bf">CSA submodulis prideda:</p>
+                <ul class="ps-3">
+                  <li data-i18n-id="s-caff"><strong>Pasirinktinių testų kūrėjas</strong></li>
+                  <li data-i18n-id="s-b145">40+ kūrėjų testų</li>
+                  <li data-i18n-id="s-f55d">Kontrasto tikrinimas</li>
+                  <li data-i18n-id="s-b70c">Svetainės naršytojai</li>
+                  <li data-i18n-id="s-5377">Skaitomumo analizė</li>
+                  <li data-i18n-id="s-6602">Padalinta konfigūracija kūrėjams/redaktoriams</li>
+                </ul>
+              <span data-translate data-i18n-id="s-bc47"></figcaption>
+            </figure>
+
+            <figure class="figure">
+              <img loading="lazy" class="figure-img img-fluid rounded border" src="/assets/images/3x-dashboard.png" height="765" width="1600" alt="Ataskaitų prietaisų skydelis, rodantis naujausias problemas ir puslapius su daugiausiai problemų." data-i18n-id="s-2559" />
+              <figcaption class="figure-caption p-3 pt-2" data-i18n-id="s-cdbf">Visos svetainės prietaisų skydelis rodo filtruojamas ir eksportuojamas įspėjimų bei atsisakymų ataskaitas.</figcaption>
+            </figure>
+
+          </section>
+          <h2 data-i18n-id="s-8fec">Diegimas ir pagrindiniai sąrankos žingsniai</h2>
+          <p data-i18n-id="s-7627"><a href="https://www.drupal.org/project/editoria11y/">Komplektinė diegimo programa</a> Drupal.org svetainėje apima kelis modulius:</p>
+          <ul>
+            <li data-i18n-id="s-b830">
+              Editoria11y: pagrindinis turinio tikrintuvas ir prietaisų skydelis.
+            </li>
+            <li data-i18n-id="s-b351">
+              Editoria11y CSA: kūrėjų testai ir prietaisų skydelio priežiūros įrankiai.
+            </li>
+            <li data-i18n-id="s-74fe">
+              Editoria11y Export: CSV ataskaitų įrankiai.
+            </li>
+          </ul>
+          <p data-i18n-id="s-88fd">Diekite kaip bet kurį kitą modulį, o tada atlikite šiuos pagrindinius žingsnius:</p>
+          <ol>
+            <li data-i18n-id="s-7187"><strong>Patikrinkite leidimus.</strong> Patikimi autoriai turėtų turėti „Pažymėti kaip tinkamą", „Pažymėti kaip nepaisomą" ir „Peržiūrėti prietaisų skydelį".</li>
+            <li data-i18n-id="s-1ac1"><strong>Patikrinkite pagrindinius puslapius, ar nėra pasikartojančių ar nenaudingų įspėjimų.</strong> Arba pažymėkite juos kaip tinkamus tiesiogiai patarimo lange, arba sureguliuokite konfigūraciją, kad elementai būtų ignoruojami pagal selektorių.</li>
+            <li data-i18n-id="s-e5b2">Ieškokite sunkiai matomų patarimų – ekrano ribose, sutrumpintų, už kitų elementų ar ant paslėptų elementų. Naudokite toliau pateiktus „Patarimo pozicionavimo taisymas" patarimus, kad ištaisytumėte.</li>
+            <li data-i18n-id="s-c564">Jei svetainėje jau yra turinys ir turite CSA prenumeratą, apsilankykite prietaisų skydelio skirtuke „Atnaujinimas" ir <strong>naršykite svetainę</strong>, kad iš anksto užpildytumėte svetainės ataskaitas. Tai neprivaloma, tačiau senesni puslapiai nepasirodys ataskaitose, kol nebus naršomi arba jų neaplankys prisijungęs naudotojas.
+            </li>
+          </ol>
+          <p data-i18n-id="s-e025">Žiūrėkite <a href="https://youtu.be/uYvNYPg38nU?si=dqADyWpTtOhniHTP&t=696">vaizdo įrašo įžangą apie konfigūracijos parinktis</a> (v2.4).</p>
+
+          <h2 id="check-roots" data-i18n-id="s-9202">Slėpti nenaudingus įspėjimus</h2>
+          <p data-i18n-id="s-fa47">
+            <strong>Gera konfigūracija slopina nenaudingus įspėjimus, kad turinio autoriai galėtų sutelkti dėmesį į problemas, kurias reikia spręsti</strong>.
+          </p>
+          <p data-i18n-id="s-996e">Nors galite visiškai išjungti testus, paprastai geriau slėpti įspėjimus ant konkrečių elementų ar puslapių.
+          </p>
+          <hr/>
+          <p data-i18n-id="s-7918">
+            Kiekvieno testo vykdymo metu Editoria11y surenka vieną elementų rinkinį iš nustatymo „Tikrinti turinį šiuose konteineriuose" ir tada filtruoja jį kelis kartus. Štai kaip atrodo testo vykdymas:
+          </p>
+          <ol>
+            <li data-i18n-id="s-994a">
+              Atšaukti tikrinimą, jei konfigūracija draudžia tikrinimą šiame puslapyje arba šiam naudotojui.
+            </li>
+            <li data-i18n-id="s-10c9">
+              <strong>Surinkti</strong> elementus nurodytose puslapio srityse,
+              pvz.:<br/><code>body > *:not('.ed11y-element')</code><br/>
+              <em>Editoria11y CSA naudotojams tai yra sritys skirtuke <strong>Kūrėjų testai</strong>.</em>
+            </li>
+            <li data-i18n-id="s-7524">
+              <strong>Pašalinti</strong> elementus, atitinkančius ignoruojamus selektorius,
+              pvz.:<br/><code>.widgets, .utility-menu</code><br/>
+              <em>Editoria11y CSA naudotojams tai yra selektoriai skirtuke <strong>Kūrėjų testai</strong>.</em>
+            </li>
+            <li data-i18n-id="s-58d0">
+              Vykdyti testus ir sinchronizuoti rezultatus su prietaisų skydeliu.
+            </li>
+            <li>
+              <span data-translate data-i18n-id="s-f8c6">Jei padalinta konfigūracija aktyvi ir naudotojas yra turinio redaktorius, filtruojami kūrėjų rezultatai:</span>
+              <ul>
+                <li data-i18n-id="s-72c9"><strong>Pašalinti</strong> rezultatus iš testų, nustatytų kaip „Tik kūrėjams".</li>
+                <li data-i18n-id="s-576e"><strong>Pašalinti</strong> rezultatus iš elementų, esančių už nurodytų <strong><em>turinio</em></strong>
+                  sričių ribų, pvz.:<br/><code>main, footer</code></li>
+                <li data-i18n-id="s-bb1d"><strong>Pašalinti</strong> rezultatus iš elementų, atitinkančių <strong><em>turinio</em></strong> ignoravimo
+                  selektorius.</li>
+              </ul>
+              Atkreipkite dėmesį, kad antros „rinkimo" fazės nėra. Kūrėjų puslapio sritys turi apimti turinio sritis.</span>
+            </li>
+            <li data-i18n-id="s-b79c">Atidaryti skydelį ir piešti įspėjimus, jei konfigūracija atitinka automatinio atidarymo nustatymą.</li>
+          </ol>
+
+          <h3 id="dismiss" data-i18n-id="s-be02">Atsisakyti įspėjimų</h3>
+          <p data-i18n-id="s-2ae3">Bibliotekoje testai konfigūruojami kaip klaidos arba įspėjimai („rankinis patikrinimas"). Įspėjimų galima atsisakyti. Kiekvieno patarimo poraštėje galimi du atsisakymų tipai:</p>
+          <div class="my-2"
+            style="background: url(/assets/images/3x-generic-tip.png) 100% 98%; max-width: 600px; padding-top: 6%; background-size: 108%;">
+          </div>
+          <ul>
+            <li data-i18n-id="s-7b65">„Ignoruoti" saugoma kaip naudotojo nuostata: įspėjimas dabar paslėptas dabartiniam naudotojui, tačiau tik dabartiniam naudotojui.</li>
+            <li data-i18n-id="s-654c">„Pažymėti kaip tinkamą" paslepia įspėjimą visiems naudotojams.</li>
+          </ul>
+          <p data-i18n-id="s-dc14">Tai, ar naudotojas gali atsisakyti įspėjimo, kontroliuojama vaidmens lygiu Drupal naudotojo leidimuose.
+            <strong>Daugeliui autorių turėtų būti leidžiama atsisakyti įspėjimų</strong>. Nėra prasmės priskirti kam nors rankinio patikrinimo, jei jie negali pažymėti elemento kaip patikrinto.
+          </p>
+
+          <h3 id="roots" data-i18n-id="s-d932">Ignoruoti elementus</h3>
+          <p data-i18n-id="s-9d1e">Šie du konfigūracijos nustatymai yra svarbiausi!</p>
+          <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
+            <label for="edit-content-root">Check content in these containers</label>
+            <div><textarea class="form-control" id="edit-content-root" name="content_root" rows="1" cols="30"
+                disabled></textarea>
+            </div>
+            <div class="mt-3">
+              <label for="edit-ignore-elements">Skip over these elements</label>
+              <div>
+                <textarea class="form-control" id="edit-ignore-elements" disabled name="ignore_elements" rows="1"
+                  cols="30" class=""></textarea>
+              </div>
+            </div>
+          </div>
+          <p data-i18n-id="s-6051">
+            Nustatykite pirmąjį taip, kad apimtų visas puslapio turinio dalis, kurias gali redaguoti autoriai. Pvz., jei jie gali redaguoti <code>main</code> turinio sritį, <code>.sidebar</code> ir <code>.footer-column-two</code>, nustatykite tuos selektorius kaip turinio tikrinimo sritį.
+          </p>
+          <p data-i18n-id="s-f29c">
+            Naudokite antrąjį, kad „išbrauktumėte" poskyrius. Pvz., jei <code>main</code> yra įvairių valdiklių ir įterpinių, kuriuos gali keisti tik kūrėjai, surašykite juos: <code>.widget-1, .social-embed</code>;
+          </p>
+          <p data-i18n-id="s-10ef">Jei naudojate padalintą konfigūraciją, skirtuke Kūrėjų testai matysite panašią nustatymų porą:</p>
+          <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
+            <div>
+              <fieldset>
+                <legend>
+                  Developer check area
+                </legend>
+                <div class="fieldset__wrapper fieldset__wrapper--group">
+
+                  <div id="edit-dev-check-root">
+                    <div>
+                      <input aria-describedby="edit-dev-check-root--description" type="radio"
+                        id="edit-dev-check-root-automatic" name="dev_check_root" value="automatic" checked="checked" />
+                      <label for="edit-dev-check-root-automatic" class="form-item__label option">All elements</label>
+                    </div>
+                    <div class="d-flex">
+                      <input aria-describedby="edit-dev-check-root--description" type="radio"
+                        id="edit-dev-check-root-match" name="dev_check_root" value="match"
+                        class="align-self-baseline mt-1 me-1" />
+                      <label for="edit-dev-check-root-match" class="form-item__label option">Only the containers listed
+                        in the Content Setting tab</label>
+                    </div>
+                    <div class="">
+                      <input aria-describedby="edit-dev-check-root--description" type="radio"
+                        id="edit-dev-check-root-specify" name="dev_check_root" value="specify"
+                        class="form-radio form-boolean form-boolean--type-radio" />
+                      <label for="edit-dev-check-root-specify" class="">The specific containers listed below</label>
+                    </div>
+                  </div>
+
+                </div>
+              </fieldset>
+
+              <div class="">
+                <label for="edit-always-ignore" class="mt-3">Ignore for both developers and content editors</label>
+                <div class="form-textarea-wrapper">
+                  <textarea id="edit-always-ignore" class="form-control" name="always_ignore" rows="1" cols="20"
+                    placeholder=""></textarea>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+          <p data-i18n-id="s-8c02">Svarbiausia žinoti apie kūrėjų tikrinimo sritis yra tai, kad jos <strong>nėra nepriklausomos</strong> nuo turinio tikrinimo sričių. Padalintoje konfigūracijoje tikrinamos kūrėjų sritys, o tada tie rezultatai <strong>filtruojami</strong> pagal turinio sritis. Visos sritys, kurios neįtrauktos kūrėjams, taip pat nebus įtrauktos turinio redaktoriams. Neišskirkite redaguojamų turinio sričių!</p>
+
+          <p data-i18n-id="s-0312">Kai kurie testai leidžia tikslesnę konfigūraciją – slėpti tik tam tikrus įspėjimus paveiktuose elementuose. Ieškokite jų:</p>
+          <ul>
+            <li data-i18n-id="s-d53d">Turinio testai: tikrinamos nuorodos</li>
+            <li data-i18n-id="s-0d1e">Turinio testai: tikrinami įterpiniai</li>
+            <li data-i18n-id="s-10c1">Turinio testai: dinaminio ir šešėlinio turinio aptikimas</li>
+            <li data-i18n-id="s-e6e4">Kūrėjų testai: kontrastas</li>
+          </ul>
+
+          <h3 id="pages" data-i18n-id="s-177c">Slėpti konkretiems puslapiams ar naudotojams</h3>
+          <p data-i18n-id="s-e874">
+            Paprasčiausias būdas tai padaryti – perduoti CSS klases ar ID šioms parinktims:
+          </p>
+          <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
+            <label for="edit-no-load" class="form-item__label">Do not check on pages with these elements</label>
+            <div class="form-textarea-wrapper">
+              <textarea data-drupal-selector="edit-no-load" aria-describedby="edit-no-load--description"
+                id="edit-no-load" name="no_load" rows="1" cols="20" class="form-control"></textarea>
+            </div>
+
+            <label for="edit-ignore-all-if-absent" class="form-item__label">Hide all alerts on pages where these
+              elements are not present</label>
+            <div class="form-textarea-wrapper">
+              <textarea data-drupal-selector="edit-ignore-all-if-absent"
+                aria-describedby="edit-ignore-all-if-absent--description" id="edit-ignore-all-if-absent"
+                name="ignore_all_if_absent" rows="1" cols="20" class="form-control"></textarea>
+            </div>
+
+          </div>
+          <p data-i18n-id="s-0877">
+            Pirmasis neleis vykdyti patikrinimų, ir įrankių juosta nebus rodoma.
+          </p>
+          <p data-i18n-id="s-5cbd">
+            Antrasis paleis tikrintuvo programą sumažintai ir automatiškai pažymės (dabartiniam naudotojui) visas problemas kaip „Ignoruojamas", net jei tai klaidos. Tai leidžia testams veikti ir atnaujinti prietaisų skydelį, netrukdant naudotojui.
+          </p>
+          <p data-i18n-id="s-1661">
+            Jei norite tai naudoti valdydami, kurie naudotojai mato tikrintuvo programą, gali reikėti sureguliuoti temą, kad ji išvestų klasę, pvz. <code>.user-247</code>
+          </p>
+
+          <h2 id="dashboard" data-i18n-id="s-f4d7">Valdyti visos svetainės rezultatus</h2>
+          <section id="refresh">
+            <h3 class="pt-3" data-i18n-id="s-012a">Naršymas ir rezultatų atnaujinimas</h3>
+            <p data-i18n-id="s-75a9">Editoria11y yra <strong>realiojo laiko stebėjimo įrankis, o ne naršyklė</strong>. Jos visos svetainės ataskaitos atnaujinamos, kai autoriai peržiūri puslapius, todėl reguliarus naršymas paprastai nereikalingas. CSA modulis <em>apima</em> naršyklę, tačiau ji turėtų būti reikalinga tik šiose trijose situacijose:</p>
+            <ol>
+              <li data-i18n-id="s-dfb1">
+                Pirmą kartą įdiegiant Editoria11y esamoje svetainėje su daugeliu puslapių. Puslapiai turi būti aplankyti prieš pasirodant prietaisų skydelyje, todėl greitas pradinis naršymas sutaupo laiko.
+              </li>
+              <li data-i18n-id="s-f602">
+                Pagrindiniai temų ar modulių atnaujinimai gali išspręsti (arba sukelti) problemas daugelyje puslapių, kurios neparodytos, kol neaplankyta ar nenaršyta.
+              </li>
+              <li data-i18n-id="s-a530">
+                Masiniai veiksmai administratoriaus sąsajoje, pvz., puslapių ar peradresavimų naikinimas, paprastai palieka rezultatus iš puslapių, kurių nebėra arba kurie perkelti. Tokiais atvejais padeda naudoti skirtuko „Atnaujinti" priežiūros veiksmus, kad atnaujintumėte puslapių URL ir aptiktumėte bei pašalintumėte ištrintus puslapius.
+              </li>
+            </ol>
+            <p data-i18n-id="s-8e5a">Naršymo metu jokie duomenys nepalieka jūsų svetainės. CSA naršyklė nėra debesies įrankis – ji naudoja jūsų naršyklę svetainės puslapiams įkelti ir tikrinti. Šio metodo trūkumas yra tas, kad <strong>naršyklės pristabdo foninius skirtukus</strong>. Naršymo metu kompiuteris turi būti įjungtas ir budinčiojo režime. Planuokite atidaryti naują langą naršyklei ir palikti ją kaip pirmojo plano skirtuką tame lange. Galite toliau dirbti kitame lange. Naršyklė atnaujins savo įvertinimą po kiekvienos puslapių partijos.</p>
+          </section>
+          <section id="reports">
+            <h3 data-i18n-id="s-a242">Peržiūrėti ataskaitas</h3>
+            <div class="my-4 border shadow"
+              style="background: url(/assets/images/3x-dashboard.png) 86% 0%; padding-top: 28%; background-size: 106%;">
+            </div>
+            <ul>
+              <li data-i18n-id="s-e328">
+                <strong>Naujausi</strong> leidžia naršyti pagal atskirus įspėjimus. Tai leidžia filtruoti ir rasti visus to paties įspėjimo tipo atvejus, arba pamatyti, kurie įspėjimai dažnai pasirodo naujame turinyje, arba kurie autoriai vis dar turi įprotį daryti tą pačią klaidą.
+              </li>
+              <li data-i18n-id="s-796f">
+                <strong>Puslapiai</strong> rodo įspėjimų skaičių puslapyje, sugrupuotą pagal puslapį. Tai leidžia rasti puslapius su daugiausiai problemų ir filtruoti pagal puslapio atributus, pvz., turinio tipą ir paskelbimo būseną.
+              </li>
+              <li data-i18n-id="s-9423">
+                <strong>Įspėjimai</strong> rodo problemas pagal tipą.
+              </li>
+              <li data-i18n-id="s-52ed">
+                <strong>Atsisakymai</strong> leidžia stebėti, ar autoriai tinkamai atsisako, ir turi „atstatymo" mygtukus atsisakytų įspėjimų atkūrimui.
+              </li>
+              <li data-i18n-id="s-3379">
+                <strong>Eksportas</strong> apima puslapių, įspėjimų ir atsisakymų ataskaitų versijas, kurias galima filtruoti, norint parengti CSV atsisiuntimus. <em>Teikia CSV eksporto submodulis</em>
+              </li>
+              <li data-i18n-id="s-9814">
+                <strong>Atnaujinimas</strong> apima prietaisų skydelio priežiūros įrankius, skirtus pašalinti įspėjimus iš ištrintų puslapių, pašalinti įspėjimus iš parametrizuotų pseudo-puslapių, pvz. /search?query=example, atnaujinti saugomus puslapių pavadinimus ir URL bei vykdyti rankinį naršymą. <em>Teikia CSA submodulis</em>
+              </li>
+            </ul>
+          </section>
+
+          <h2 id="positioning" data-i18n-id="s-c35b">Taisyti paslėptus ar ne ekrane pateikiamus patarimus</h2>
+
+          <p data-i18n-id="s-68ce">Modulis teikia laukus dviem bibliotekos konfigūracijos parinktims, leidžiančioms keisti patarimų išdėstymą:
+          </p>
+
+          <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
+            <label for="edit-element-hides-overflow" class="form-item__label">Elements with overflow hidden</label>
+            <textarea data-drupal-selector="edit-element-hides-overflow"
+              aria-describedby="edit-element-hides-overflow--description" id="edit-element-hides-overflow"
+              name="element_hides_overflow" rows="1" cols="60" class="form-control"></textarea>
+            <label for="edit-hidden-handlers" class="form-item__label">Theme JS will handle revealing hidden tooltips
+              inside these containers</label>
+            <textarea data-drupal-selector="edit-hidden-handlers" aria-describedby="edit-hidden-handlers--description"
+              id="edit-hidden-handlers" name="hidden_handlers" rows="1" cols="60" class="form-control"></textarea>
+          </div>
+          <p data-i18n-id="s-34e4">Kai kurios temos turi stulpelius ar valdiklius, slepiančius horizontalų ar vertikalų perpildymą. Biblioteka automatiškai aptinka, kai perjungimo mygtukas patektų už matomos <strong>puslapio</strong> dalies ribų. Nurodžius bibliotekai, kad tam tikri konteineriai slepia perpildymą, ji taip pat bandys pozicionuoti patarimus elementams tuose konteineriuose jų ribose.</p>
+          <p data-i18n-id="s-7cb7">Kai kurios temos turi valdiklius, perjungiančius turinio matomumą, pvz., akordeonai, skirtukai ir skaidrių demonstracijos. Patarimai šiuose elementuose taip pat bus paslėpti. Pateikus selektorių sąrašą šiems valdikliams, Editoria11y trumpam pristabdys, kai naudotojas bandys pereiti prie tų patarimų naudodamas mygtukus „kitas" ar „ankstesnis". Drupal temos ir moduliai gali tada vykdyti bibliotekos skyriaus nurodymus apie <a href="/en/install/#hidden-content">darbą su patarimais paslėptame turinyje</a>, kad atskleistų paslėptą turinį.
+          </p>
+
+          <h2 id="runtime" data-i18n-id="s-7e38">Rašykite savo konfigūraciją</h2>
+          <p data-i18n-id="s-a5d3">Drupal modulis teikia <code>hook_editoria11y_alter_config</code>, kad pakeistų <code>drupalSettings.editoria11y</code> turinį modulyje ar temoje. Pavyzdžiui:
+          </p>
+          <pre class="language-php"><code><!--<?php
+/**
+ * @file
+ * MY_MODULE module file.
+ */
+
+use Drupal\Core\Cache\CacheableMetadata;
+
+/**
+ * Implements hook_editoria11y_alter_config().
+ *
+ * Attaches Editoria11y library and config based on context.
+ */
+function MY_MODULE_editoria11y_alter_config(array &$attach, CacheableMetadata $cacheableMetadata): void {
+  $config = Drupal::config('editoria11y.settings');
+
+  // Module settings being changed need to bust the cache.
+  $cacheableMetadata->addCacheableDependency($config);
+
+  // Get and modify any of the values being passed to drupalSettings.editoria11y.
+  if (!empty($attach['allow_ok'])) {
+    $attach['allow_ok'] = 'okAll';
+  }
+}--></code></pre>
+          <p data-i18n-id="s-2368"><code>drupalSettings</code> modifikavimas padeda tik tuo atveju, jei modulio JS jau nustatytas perduoti tą reikšmę bibliotekai. Norint pridėti papildomų parametrų, reikia tiesiogiai modifikuoti JS objektą <code>options</code>. Modulis tikrina vieną globalų JS kintamąjį <code>editoria11yOptionsOverride</code>. Jei jis nustatytas, perduos objektą <code>options</code> jūsų pateiktai funkcijai <code>editoria11yOptions</code> jūsų modulyje ar temoje. Dabar galite nustatyti bet kurį iš <a href="https://editorsally.ddev.site/en/install/#params">bibliotekos parametrų</a>.</p>
+          <pre class="language-javascript"><code><!--var editoria11yOptionsOverride = true;
+var editoria11yOptions = function(options) {
+  // You now have access to the processed options object that will be passed to the library.
+
+  // E.g., to add a selector to the ignore list:
+  if (options['ignoreElements'] === false) {
+    // Provide the selector as the only value.
+    options['ignoreElements'] = `.example`;
+  } else {
+    // Append additional selectors with comma separator.
+    options['ignoreElements'] = `${options['ignoreElements']}, .example`
+  }
+
+  // Return your processed options.
+  return options;
+}
+--></code></pre>
+          <section id="custom-tests">
+            <h2 data-i18n-id="s-e0f0">Rašykite savo testus</h2>
+            <p data-i18n-id="s-6ece">Pirmiausia, modulio konfigūracijoje, pridėkite 1 prie parinkties „Pasirinktiniai testai", kad jis žinotų, ko laukti.</p>
+            <p data-i18n-id="s-4316">Tada sukurkite Drupal JS biblioteką su testais savo temoje ar modulyje, naudodami <a href="/en/install/#custom-tests">bibliotekos vadovą pasirinktinių testų rašymui</a>.</p>
+            <p data-i18n-id="s-b4ea">Čia pateikiamas veikiantis Princeton pavyzdys – pasirinktinis testas, kad būtų perspėta apie Safe Links. Atkreipkite dėmesį, kad jis pasiekia Editoria11y klasę per <code>Drupal.Ed11y.</code></p>
+            <pre class="language-javascript"><code><!--const psEd11yCustomTests = function() {
+
+  // 1.
+  // Get elements to test, via Drupal.Ed11y.getElements.
+  // The 'root' parameter tells it to respect config for check areas and ignores.
+  const safeLinks = Drupal.Ed11y.getElements('a[href*="safelinks.protection.outlook.com/?"]', 'root');
+
+  // Add the test name to the lang object.
+  Drupal.ed11yLang.lang.testNames.outlookSafeLink = 'URL is Safe Link encoded';
+
+  // 2.
+  // Create the tip content.
+  const decodeSafelink = function(url) {
+    const params = new URL(url).searchParams;
+    let decoded = params.get('url');
+    const p = document.createElement('p');
+    if (!!decoded) {
+      p.innerHTML = `<p><span class="badge">To fix</span>Update this link with the correct URL, which is probably:<br>
+    <em style='word-wrap: break-word;font-size: 90%;line-height: 1.2;display: block;'></em></p>`
+      p.querySelector('em').textContent = Drupal.Ed11y.sanitizeHTML(decoded);
+    }
+    return p;
+  };
+  safeLinks?.forEach((el) => {
+    const content = document.createElement('div');
+    content.innerHTML = `<div class="title">Please fix this Outlook "Safe Link"</div>
+            <div class="why">
+                <p>The URL for this link is an Outlook "Safe Link" that was copied from an email.
+                It includes the original recipient's email address,
+                and will break if Microsoft shuts down the service.</p>
+                <p>The pasted URL is:<br>
+                <em style='word-break: break-all;font-size: 90%;line-height: 1.2;
+                display: block;'></em></p>
+            </div>
+            `;
+    content.querySelector('em').textContent = Drupal.Ed11y.sanitizeHTML(el.href);
+    content.querySelector('.why').insertAdjacentElement('beforebegin', decodeSafelink(el.href));
+
+    // 3.
+    // Push the tip to the library results object.
+    Drupal.Ed11y.State.results.push({
+      element: el,
+      test: 'outlookSafeLink',
+      type: 'error',
+      content: content,
+      position: 'beforebegin',
+      inline: false,
+      dismiss: false,
+    });
+  });
+
+  // 4.
+  // Tell Editoria11y you are done adding custom results.
+  const allDone = new CustomEvent('ed11yResume');
+  document.dispatchEvent(allDone);
+};--></code></pre>
+
+          </section>
+          <section id="help">
+            <h2 data-i18n-id="s-4690">Pagalba</h2>
+            <p data-i18n-id="s-f149">Žr. <a href="/en/contacts/">kontaktų</a> puslapį bendruomenės palaikymo galimybėms. @itmaybejj paprastai yra prisijungęs Drupal Slack platformoje, kai vakarų pusrutulyje saulė dar nenusileidusi.</p>
+            <p data-i18n-id="s-4a16">Dauguma <a href="/en/license/">CSA įnašo lygių</a> apima metinę konsultaciją, kuri gali apimti tiesioginę
+              pagalbą
+              diegiant ir konfigūruojant</p>
+          </section>
+
+        </div>
+      </div>
+    </div>
+  </main>

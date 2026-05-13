@@ -9,10 +9,9 @@
   <link rel="shortcut icon" href="/favicon.ico" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
   <meta charset="utf-8" />
-  <title>Drupal CSA Docs — Editoria11y</title>
+  <title>Editoria11y til Drupal — Editoria11y</title>
   <link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
   <link href="/assets/theme.css" rel="stylesheet" />
-  <link href="/assets/prism/prism.css" rel="stylesheet" />
   <meta name="theme-color" content="#712cf9" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -34,7 +33,7 @@
         </button>
         <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
           <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Editora11y</h5>
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Editoria11y</h5>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Luk"></button>
           </div>
           <div class="offcanvas-body">
@@ -47,15 +46,15 @@
     <div id="lang-picker"></div>
   </header>
   <main class="container col-lg-12 mx-auto py-5">
-    <div class="row docs">
+    
       <div class="col-12 col-md-5 col-lg-4 mb-5">
         <div id="on-this-page" class="list-group ms-2 ms-lg-5 position-sticky top-0 pt-3">
         </div>
       </div>
       <div class="col-12 col-md-7 col-lg-8 pt-3">
-        <div data-bs-spy="scroll" data-bs-target="#on-this-page" data-bs-smooth-scroll="true">
+        </div>
           <h1>Editoria11y til Drupal</h1>
-          <section id="features">
+          
             <h2 class="pt-3">Kernefunktioner</h2>
 
             <p class="fs-6">Drupal-modulet forbinder tjekkerbiblioteket med den redaktionelle backend og tilf&oslash;jer
@@ -63,8 +62,7 @@
 
             <figure class="figure my-4 row">
               <div class="col-lg-8">
-                <img loading="lazy" src="/assets/images/3x-editing.png" class="rounded border figure-img img-fluid"
-                  height="1088" width="2237" alt="Drupal-editor med inline-tips" />
+                <img loading="lazy" src="/assets/images/3x-editing.png" class="rounded border figure-img img-fluid" height="1088" width="2237" alt="Drupal-editor med inline-tips" />
               </div>
               <figcaption class="figure-caption col-lg-4">Problemer opdages b&aring;de ved sideindl&aelig;sning
                 p&aring; frontend og mens du skriver i CKEditor og Gutenberg.</figcaption>
@@ -72,8 +70,7 @@
 
             <figure class="figure my-4 row">
               <div class="col-lg-8">
-                <img loading="lazy" src="/assets/images/3x-generic-tip.png" class="rounded border figure-img img-fluid"
-                  height="798" width="1278" alt="Tip viser at et link kun hedder klik her." />
+                <img loading="lazy" src="/assets/images/3x-generic-tip.png" class="rounded border figure-img img-fluid" height="798" width="1278" alt="Tip viser at et link kun hedder klik her." />
               </div>
               <figcaption class="figure-caption col-lg-4">Tooltips f&aring;r knapper til at hoppe ind i editoren,
                 ignorere advarslen (for den aktive bruger) eller markere den som OK (for alle brugere). Gentagne
@@ -81,13 +78,11 @@
               </figcaption>
             </figure>
 
-            <figure class="figure my-4 row">
+            
               <div class="col-lg-8">
-                <img loading="lazy" src="/assets/images/3x-drupal-custom-tests.png"
-                  class="rounded border figure-img img-fluid"
-                  alt="Brugerdefineret testbygger-gr&aelig;nseflade med felter til tip-titel og -indhold samt element-selektorer og udelukkelser." />
+                <img loading="lazy" src="/assets/images/3x-drupal-custom-tests.png" class="rounded border figure-img img-fluid" alt="Brugerdefineret testbygger-gr&aelig;nseflade med felter til tip-titel og -indhold samt element-selektorer og udelukkelser." />
               </div>
-              <figcaption class="figure-caption col-lg-4">
+              
                 <p class="mb-2">CSA-undermodulet tilf&oslash;jer:</p>
                 <ul class="ps-3">
                   <li><strong>En brugerdefineret testbygger</strong></li>
@@ -97,18 +92,16 @@
                   <li>L&aelig;sbarhedsanalyse</li>
                   <li>Opdelt konfiguration for udviklere/redakt&oslash;rer</li>
                 </ul>
-              </figcaption>
-            </figure>
+              
+            
 
             <figure class="figure">
-              <img loading="lazy" class="figure-img img-fluid rounded border" src="/assets/images/3x-dashboard.png"
-                height="765" width="1600"
-                alt="Rapporteringsdashboard der viser seneste problemer og sider med flest problemer." />
+              <img loading="lazy" class="figure-img img-fluid rounded border" src="/assets/images/3x-dashboard.png" height="765" width="1600" alt="Rapporteringsdashboard der viser seneste problemer og sider med flest problemer." />
               <figcaption class="figure-caption p-3 pt-2">Et overordnet dashboard giver filtrerbare og
                 eksporterbare rapporter over advarsler og afvisninger.</figcaption>
             </figure>
 
-          </section>
+          
           <h2>Installation og vigtige ops&aelig;tningstrin</h2>
           <p>Det <a href="https://www.drupal.org/project/editoria11y/">medf&oslash;lgende installationsprogram</a>
             p&aring; Drupal.org indeholder flere moduler:</p>
@@ -147,7 +140,7 @@
           </p>
           <p>Selvom du kan sl&aring; tests helt fra, er det som regel bedre at skjule advarsler p&aring; specifikke
             elementer eller sider.</p>
-          <hr>
+          <hr/>
           <p>
             Under hver testk&oslash;rsel indsamler Editoria11y et enkelt s&aelig;t elementer fra indstillingen
             &quot;Tjek indhold i disse containere&quot; og filtrerer det derefter flere gange. S&aring;dan ser et
@@ -159,24 +152,24 @@
             </li>
             <li>
               <strong>Indsaml</strong> elementer i angivne sideomr&aring;der,
-              f.eks.:<br><code>body > *:not('.ed11y-element')</code><br>
+              f.eks.:<br/><code>body > *:not('.ed11y-element')</code><br/>
               <em>For Editoria11y CSA-brugere er dette omr&aring;derne p&aring; fanen
                 <strong>Udviklertests</strong>.</em>
             </li>
             <li>
               <strong>Fjern</strong> elementer der matcher ignorer-selektorer,
-              f.eks.:<br><code>.widgets, .utility-menu</code><br>
+              f.eks.:<br/><code>.widgets, .utility-menu</code><br/>
               <em>For Editoria11y CSA-brugere er dette selektorerne p&aring; fanen <strong>Udviklertests</strong>.</em>
             </li>
             <li>
               K&oslash;r tests og synkroniser resultater til dashboardet.
             </li>
             <li>
-              Hvis opdelt konfiguration er aktiv, og brugeren er indholdsredakt&oslash;r, filtreres udviklerresultater:
+              <span data-translate>Hvis opdelt konfiguration er aktiv, og brugeren er indholdsredakt&oslash;r, filtreres udviklerresultater:</span>
               <ul>
                 <li><strong>Fjern</strong> resultater fra tests sat til &quot;Kun udvikler&quot;.</li>
                 <li><strong>Fjern</strong> resultater p&aring; elementer uden for angivne
-                  <strong><em>indholds</em></strong>omr&aring;der, f.eks.:<br><code>main, footer</code>
+                  <strong><em>indholds</em></strong>omr&aring;der, f.eks.:<br/><code>main, footer</code>
                 </li>
                 <li><strong>Fjern</strong> resultater p&aring; elementer der matcher
                   <strong><em>indholds</em></strong>ignorer-selektorer.
@@ -242,20 +235,20 @@
                   <div id="edit-dev-check-root">
                     <div>
                       <input aria-describedby="edit-dev-check-root--description" type="radio"
-                        id="edit-dev-check-root-automatic" name="dev_check_root" value="automatic" checked="checked">
+                        id="edit-dev-check-root-automatic" name="dev_check_root" value="automatic" checked="checked" />
                       <label for="edit-dev-check-root-automatic" class="form-item__label option">Alle elementer</label>
                     </div>
                     <div class="d-flex">
                       <input aria-describedby="edit-dev-check-root--description" type="radio"
                         id="edit-dev-check-root-match" name="dev_check_root" value="match"
-                        class="align-self-baseline mt-1 me-1">
+                        class="align-self-baseline mt-1 me-1" />
                       <label for="edit-dev-check-root-match" class="form-item__label option">Kun de containere, der er
                         angivet p&aring; fanen Indholdsindstillinger</label>
                     </div>
                     <div class="">
                       <input aria-describedby="edit-dev-check-root--description" type="radio"
                         id="edit-dev-check-root-specify" name="dev_check_root" value="specify"
-                        class="form-radio form-boolean form-boolean--type-radio">
+                        class="form-radio form-boolean form-boolean--type-radio" />
                       <label for="edit-dev-check-root-specify" class="">De specifikke containere angivet
                         nedenfor</label>
                     </div>
@@ -451,8 +444,7 @@ function MY_MODULE_editoria11y_alter_config(array &$attach, CacheableMetadata $c
             &aelig;ndre JavaScript-<code>options</code>-objektet direkte. Modulet tjekker for &eacute;n global
             JavaScript-variabel kaldet <code>editoria11yOptionsOverride</code>. Hvis denne er sat, vil det videregive
             <code>options</code>-objektet til en <code>editoria11yOptions</code>-funktion, som du har defineret i dit
-            modul eller tema. Du kan nu angive alle <a
-              href="https://editorsally.ddev.site/en/install/#params">bibliotekets parametre</a>.
+            modul eller tema. Du kan nu angive alle <a               href="https://editorsally.ddev.site/en/install/#params">bibliotekets parametre</a>.
           </p>
           <pre class="language-javascript"><code><!--var editoria11yOptionsOverride = true;
 var editoria11yOptions = function(options) {
@@ -475,8 +467,7 @@ var editoria11yOptions = function(options) {
             <h2>Skriv dine egne tests</h2>
             <p>F&oslash;rst skal du i modulkonfigurationen tilf&oslash;je 1 til indstillingen &quot;Brugerdefinerede
               tests&quot;, s&aring; det ved, at det skal holde &oslash;je med testene.</p>
-            <p>Opret derefter et Drupal JavaScript-bibliotek med dine tests i dit tema eller modul ved hj&aelig;lp af <a
-                href="/da/install/#custom-tests">bibliotekets guide til at skrive brugerdefinerede tests</a>.</p>
+            <p>Opret derefter et Drupal JavaScript-bibliotek med dine tests i dit tema eller modul ved hj&aelig;lp af <a href="/da/install/#custom-tests">bibliotekets guide til at skrive brugerdefinerede tests</a>.</p>
             <p>Her er et fungerende eksempel fra Princeton p&aring; en brugerdefineret test, der advarer om Safe Links.
               Bem&aelig;rk at den tilg&aring;r Editoria11y-klassen via <code>Drupal.Ed11y.</code></p>
             <pre class="language-javascript"><code><!--const psEd11yCustomTests = function() {
@@ -545,52 +536,62 @@ var editoria11yOptions = function(options) {
               omfatte direkte hj&aelig;lp med ops&aelig;tning og konfiguration</p>
           </section>
 
-        </div>
-      </div>
-    </div>
-  </main>
+        
+      
+    
+  
+</main>
   <footer class="container col-lg-12 mx-auto pt-3 text-body-secondary text-center text-md-start">
     <div class="container">
-      <div class="footer-nav mt-5 pt-5 text-center"><a class="btn btn-primary btn-lg" href="/da/">Om os</a> <a
-          class="btn btn-primary btn-lg" href="/da/features">Funktioner</a> <a class="btn btn-primary btn-lg"
-          href="/da/demo">Demo</a> <a class="btn btn-primary btn-lg" aria-current="page" href="/da/license">Priser og
-          bidrag</a></div>
-      <div class="footer">
-        <a href="https://github.com/itmaybejj/editoria11y"><svg xmlns="http://www.w3.org/2000/svg" width="20"
-            height="20" fill="currentColor" class="bi bi-git" viewBox="0 0 16 16">
-            <path
-              d="M15.698 7.287 8.712.302a1.03 1.03 0 0 0-1.457 0l-1.45 1.45 1.84 1.84a1.223 1.223 0 0 1 1.55 1.56l1.773 1.774a1.224 1.224 0 0 1 1.267 2.025 1.226 1.226 0 0 1-2.002-1.334L8.58 5.963v4.353a1.226 1.226 0 1 1-1.008-.036V5.887a1.226 1.226 0 0 1-.666-1.608L5.093 2.465l-4.79 4.79a1.03 1.03 0 0 0 0 1.457l6.986 6.986a1.03 1.03 0 0 0 1.457 0l6.953-6.953a1.03 1.03 0 0 0 0-1.457" />
-          </svg> <strong>Bibliotek</strong></a>
-        <a href="https://github.com/itmaybejj/editoria11y/discussions"><svg xmlns="http://www.w3.org/2000/svg"
-            width="20" height="20" fill="currentColor" class="bi bi-chat-right-heart-fill" viewBox="0 0 16 16">
-            <path
-              d="M16 2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h9.586a1 1 0 0 1 .707.293l2.853 2.853a.5.5 0 0 0 .854-.353zM8 3.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132" />
-          </svg> <strong>Forum</strong></a>
-        <a href="https://github.com/itmaybejj/editoria11y/issues"><svg xmlns="http://www.w3.org/2000/svg" width="20"
-            height="20" fill="currentColor" class="bi bi-patch-plus-fill" viewBox="0 0 16 16">
-            <path
-              d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01zM8.5 6v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 1 0" />
-          </svg> <strong>Problemer</strong></a>
-        <a href="/da/contacts"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-            class="bi bi-person-lines-fill" height="24" width="24" viewBox="0 0 16 18">
-            <path
-              d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z">
-            </path>
-          </svg> <strong>Kontakt</strong></a>
+      <div class="footer-nav text-center">
+        <a class="btn btn-primary btn-lg" data-slug="about" href="/da/">Om os</a>
+        <a class="btn btn-primary btn-lg" data-slug="features" href="/da/funktioner/">Funktioner</a>
+        <a class="btn btn-primary btn-lg" data-slug="demo" href="/da/demo/">Demo</a>
+        <a class="btn btn-primary btn-lg" data-slug="license" href="/da/priser/">Priser og bidrag</a>
       </div>
-      <div class="col col-12 subfooter">
-        <a href="/da/privacy-policy">Privatlivspolitik</a>
-        <a href="/da/cookie-policy">Cookiepolitik</a>
-        <a href="/da/terms-of-use">Vilkår for brug</a>
-        <a href="/da/legal-notice">Juridisk meddelelse</a>
-        &copy; 2026 Editoria11y LLC
+      <div class="row footer">
+        <div class="col col-3">
+          <a href="https://github.com/itmaybejj/editoria11y"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+              height="20" fill="currentColor" class="bi bi-git" viewBox="0 0 16 16">
+              <path
+                d="M15.698 7.287 8.712.302a1.03 1.03 0 0 0-1.457 0l-1.45 1.45 1.84 1.84a1.223 1.223 0 0 1 1.55 1.56l1.773 1.774a1.224 1.224 0 0 1 1.267 2.025 1.226 1.226 0 0 1-2.002-1.334L8.58 5.963v4.353a1.226 1.226 0 1 1-1.008-.036V5.887a1.226 1.226 0 0 1-.666-1.608L5.093 2.465l-4.79 4.79a1.03 1.03 0 0 0 0 1.457l6.986 6.986a1.03 1.03 0 0 0 1.457 0l6.953-6.953a1.03 1.03 0 0 0 0-1.457" />
+            </svg> <strong>Bibliotek</strong></a>
+        </div>
+        <div class="col col-3">
+          <a href="https://github.com/itmaybejj/editoria11y/discussions"><svg xmlns="http://www.w3.org/2000/svg"
+              width="20" height="20" fill="currentColor" class="bi bi-chat-right-heart-fill" viewBox="0 0 16 16">
+              <path
+                d="M16 2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h9.586a1 1 0 0 1 .707.293l2.853 2.853a.5.5 0 0 0 .854-.353zM8 3.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132" />
+            </svg> <strong>Forum</strong></a>
+        </div>
+        <div class="col col-3">
+          <a href="https://github.com/itmaybejj/editoria11y/issues"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+              height="20" fill="currentColor" class="bi bi-patch-plus-fill" viewBox="0 0 16 16">
+              <path
+                d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01zM8.5 6v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 1 0" />
+            </svg> <strong>Problemer</strong></a>
+        </div>
+        <div class="col col-3">
+          <a href="/da/kontakt/"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+              class="bi bi-person-lines-fill" height="24" width="24" viewBox="0 0 16 18">
+              <path
+                d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z">
+              </path>
+            </svg> <strong>Kontakt</strong></a>
+        </div>
+        <div class="col col-12 subfooter">
+          <a href="/da/privatlivspolitik/">Privatlivspolitik</a>
+          <a href="/da/cookiepolitik/">Cookiepolitik</a>
+          <a href="/da/vilkaar/">Vilkår for brug</a>
+          <a href="/da/juridisk-meddelelse/">Juridisk meddelelse</a>
+          <span>&copy; 2026 Editoria11y LLC</span>
+        </div>
       </div>
     </div>
   </footer>
   <script src="/assets/bootstrap/js/bootstrap.bundle.min.js" class="astro-vvvwv3sm"></script>
   <script src="/assets/lang/i18n.js"></script>
   <script src="/assets/theme.js"></script>
-  <script src="/assets/prism/prism.js"></script>
 </body>
 
 </html>

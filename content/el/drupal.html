@@ -1,0 +1,510 @@
+<main class="container col-lg-12 mx-auto py-5">
+    <div class="row docs">
+      <div class="col-12 col-md-5 col-lg-4 mb-5">
+        <div id="on-this-page" class="list-group ms-2 ms-lg-5 position-sticky top-0 pt-3">
+        </div>
+      </div>
+      <div class="col-12 col-md-7 col-lg-8 pt-3">
+        <div data-bs-spy="scroll" data-bs-target="#on-this-page" data-bs-smooth-scroll="true">
+          <h1 data-i18n-id="s-e367">Editoria11y για Drupal</h1>
+          <section id="features">
+            <h2 class="pt-3" data-i18n-id="s-1dcf">Βασικά χαρακτηριστικά</h2>
+
+            <p class="fs-6" data-i18n-id="s-a8c0">Το άρθρωμα Drupal συνδέει τη βιβλιοθήκη ελέγχου με το συντακτικό backend και προσθέτει
+              πολλά εργαλεία από την πλευρά του διακομιστή για αναφορές, διακυβέρνηση και διαμόρφωση</p>
+
+            <figure class="figure my-4 row">
+              <div class="col-lg-8">
+                <img loading="lazy" src="/assets/images/3x-editing.png" class="rounded border figure-img img-fluid" height="1088" width="2237" alt="Επεξεργαστής Drupal με ενσωματωμένες συμβουλές" data-i18n-id="s-ee36" />
+              </div>
+              <figcaption class="figure-caption col-lg-4" data-i18n-id="s-8e69">Τα ζητήματα εντοπίζονται τόσο κατά τη φόρτωση του
+                frontend όσο και κατά την πληκτρολόγηση στο CKEditor και το Gutenberg.</figcaption>
+            </figure>
+
+            <figure class="figure my-4 row">
+              <div class="col-lg-8">
+                <img loading="lazy" src="/assets/images/3x-generic-tip.png" class="rounded border figure-img img-fluid" height="798" width="1278" alt="Η συμβουλή υποδεικνύει ότι ένας σύνδεσμος ονομάζεται μόνο «κάντε κλικ εδώ»." data-i18n-id="s-1639" />
+              </div>
+              <figcaption class="figure-caption col-lg-4" data-i18n-id="s-9881">Οι επεξηγήσεις αποκτούν κουμπιά για
+                μετάβαση στον επεξεργαστή, αγνόηση της ειδοποίησης (για τον ενεργό χρήστη) ή επισήμανσή της ως OK
+                (για όλους τους χρήστες). Οι επαναλαμβανόμενες ειδοποιήσεις προσφέρουν ενέργειες σε επίπεδο σελίδας ή
+                ιστοτόπου.
+              </figcaption>
+            </figure>
+
+            <figure class="figure my-4 row">
+              <div class="col-lg-8">
+                <img loading="lazy" src="/assets/images/3x-drupal-custom-tests.png" class="rounded border figure-img img-fluid" alt="Διεπαφή δημιουργίας προσαρμοσμένων ελέγχων με πεδία για τίτλο και περιεχόμενο συμβουλής, καθώς και επιλογείς στοιχείων και εξαιρέσεις." data-i18n-id="s-0830" />
+              </div>
+              <figcaption class="figure-caption col-lg-4">
+                <p class="mb-2" data-i18n-id="s-37bf">Το υποάρθρωμα CSA προσθέτει:</p>
+                <ul class="ps-3">
+                  <li data-i18n-id="s-caff"><strong>Δημιουργό προσαρμοσμένων ελέγχων</strong></li>
+                  <li data-i18n-id="s-b145">Πάνω από 40 ελέγχους προγραμματιστή</li>
+                  <li data-i18n-id="s-f55d">Έλεγχο αντίθεσης</li>
+                  <li data-i18n-id="s-b70c">Ανιχνευτές ιστοτόπου</li>
+                  <li data-i18n-id="s-5377">Ανάλυση αναγνωσιμότητας</li>
+                  <li data-i18n-id="s-6602">Διαχωρισμένες διαμορφώσεις για προγραμματιστές/συντάκτες</li>
+                </ul>
+              <span data-translate data-i18n-id="s-bc47"></figcaption>
+            </figure>
+
+            <figure class="figure">
+              <img loading="lazy" class="figure-img img-fluid rounded border" src="/assets/images/3x-dashboard.png" height="765" width="1600" alt="Πίνακας αναφορών που εμφανίζει πρόσφατα ζητήματα και σελίδες με τα περισσότερα ζητήματα." data-i18n-id="s-2559" />
+              <figcaption class="figure-caption p-3 pt-2" data-i18n-id="s-cdbf">Ένας πίνακας ελέγχου σε επίπεδο ιστοτόπου παρέχει
+                φιλτραρίσιμες και εξαγώγιμες αναφορές ειδοποιήσεων και απορρίψεων.</figcaption>
+            </figure>
+
+          </section>
+          <h2 data-i18n-id="s-8fec">Εγκατάσταση και βασικά βήματα ρύθμισης</h2>
+          <p data-i18n-id="s-7627">Το <a href="https://www.drupal.org/project/editoria11y/">πακέτο εγκατάστασης</a> στο Drupal.org
+            περιλαμβάνει αρκετά αρθρώματα:</p>
+          <ul>
+            <li data-i18n-id="s-b830">
+              Editoria11y: ο βασικός ελεγκτής περιεχομένου και πίνακας ελέγχου.
+            </li>
+            <li data-i18n-id="s-b351">
+              Editoria11y CSA: έλεγχοι προγραμματιστή και εργαλεία συντήρησης πίνακα ελέγχου.
+            </li>
+            <li data-i18n-id="s-74fe">
+              Editoria11y Export: εργαλεία αναφορών CSV.
+            </li>
+          </ul>
+          <p data-i18n-id="s-88fd">Εγκαταστήστε όπως κάθε άλλο άρθρωμα και στη συνέχεια ακολουθήστε αυτά τα βασικά βήματα:</p>
+          <ol>
+            <li data-i18n-id="s-7187"><strong>Ελέγξτε τα δικαιώματα.</strong> Οι έμπιστοι συγγραφείς θα πρέπει να έχουν «Επισήμανση ως OK»,
+              «Επισήμανση ως αγνοημένο» και «Προβολή του πίνακα ελέγχου».</li>
+            <li data-i18n-id="s-1ac1"><strong>Ελέγξτε βασικές σελίδες για επαναλαμβανόμενες ή μη χρήσιμες ειδοποιήσεις.</strong> Είτε
+              επισημάνετέ τες ως OK στην επεξήγηση, είτε προσαρμόστε τη διαμόρφωση για αγνόηση στοιχείων με βάση τον
+              επιλογέα.</li>
+            <li data-i18n-id="s-e5b2">Αναζητήστε συμβουλές που είναι δύσκολο να δείτε – εκτός οθόνης, περικομμένες, πίσω από άλλα στοιχεία ή
+              σε κρυφά στοιχεία. Χρησιμοποιήστε τις συμβουλές στην ενότητα «Διόρθωση τοποθέτησης συμβουλών» παρακάτω.
+            </li>
+            <li data-i18n-id="s-c564">Εάν ο ιστότοπος έχει ήδη περιεχόμενο και έχετε συνδρομή CSA, επισκεφτείτε την καρτέλα «επανέλεγχος» του
+              πίνακα ελέγχου και <strong>σαρώστε τον ιστότοπο</strong> για προφόρτωση των αναφορών. Αυτό είναι
+              προαιρετικό, αλλά οι παλαιότερες σελίδες δεν θα εμφανιστούν στις αναφορές μέχρι να σαρωθούν ή να
+              επισκεφτούν από συνδεδεμένο χρήστη.</li>
+          </ol>
+          <p data-i18n-id="s-e025">Δείτε μια <a href="https://youtu.be/uYvNYPg38nU?si=dqADyWpTtOhniHTP&t=696">βιντεοπαρουσίαση των επιλογών
+              διαμόρφωσης</a> (v2.4).</p>
+
+          <h2 id="check-roots" data-i18n-id="s-9202">Απόκρυψη μη χρήσιμων ειδοποιήσεων</h2>
+          <p data-i18n-id="s-fa47">
+            <strong>Οι καλές διαμορφώσεις καταστέλλουν τις μη χρήσιμες ειδοποιήσεις, ώστε οι συγγραφείς περιεχομένου να
+              μπορούν να εστιάσουν σε ζητήματα που πρέπει να διορθώσουν</strong>.
+          </p>
+          <p data-i18n-id="s-996e">Ενώ μπορείτε να απενεργοποιήσετε εντελώς τους ελέγχους, είναι συνήθως καλύτερο να αποκρύψετε ειδοποιήσεις
+            σε συγκεκριμένα στοιχεία ή σελίδες.</p>
+          <hr/>
+          <p data-i18n-id="s-7918">
+            Κατά τη διάρκεια κάθε εκτέλεσης ελέγχου, το Editoria11y συλλέγει ένα σύνολο στοιχείων από τη ρύθμιση
+            «Έλεγχος περιεχομένου σε αυτά τα containers» και στη συνέχεια τα φιλτράρει αρκετές φορές. Αυτή είναι η μορφή
+            μιας εκτέλεσης ελέγχου:
+          </p>
+          <ol>
+            <li data-i18n-id="s-994a">
+              Ακύρωση ελέγχου εάν η διαμόρφωση αποτρέπει τον έλεγχο σε αυτή τη σελίδα ή για αυτόν τον χρήστη.
+            </li>
+            <li data-i18n-id="s-10c9">
+              <strong>Συλλογή</strong> στοιχείων σε καθορισμένες περιοχές σελίδας,
+              π.χ.:<br/><code>body > *:not('.ed11y-element')</code><br/>
+              <em>Για χρήστες Editoria11y CSA, αυτές είναι οι περιοχές στην καρτέλα <strong>Έλεγχοι
+                  προγραμματιστή</strong>.</em>
+            </li>
+            <li data-i18n-id="s-7524">
+              <strong>Απόρριψη</strong> στοιχείων που ταιριάζουν με επιλογείς αγνόησης,
+              π.χ.:<br/><code>.widgets, .utility-menu</code><br/>
+              <em>Για χρήστες Editoria11y CSA, αυτοί είναι οι επιλογείς στην καρτέλα <strong>Έλεγχοι
+                  προγραμματιστή</strong>.</em>
+            </li>
+            <li data-i18n-id="s-58d0">
+              Εκτέλεση ελέγχων και συγχρονισμός αποτελεσμάτων με τον πίνακα ελέγχου.
+            </li>
+            <li>
+              <span data-translate data-i18n-id="s-f8c6">Εάν η διαχωρισμένη διαμόρφωση είναι ενεργή και ο χρήστης είναι συντάκτης περιεχομένου, φιλτράρισμα των
+              αποτελεσμάτων προγραμματιστή:</span>
+              <ul>
+                <li data-i18n-id="s-72c9"><strong>Απόρριψη</strong> αποτελεσμάτων από ελέγχους που έχουν οριστεί ως «Μόνο για
+                  προγραμματιστές».</li>
+                <li data-i18n-id="s-576e"><strong>Απόρριψη</strong> αποτελεσμάτων σε στοιχεία εκτός καθορισμένων περιοχών
+                  <strong><em>περιεχομένου</em></strong>, π.χ.:<br/><code>main, footer</code>
+                </li>
+                <li data-i18n-id="s-bb1d"><strong>Απόρριψη</strong> αποτελεσμάτων σε στοιχεία που ταιριάζουν με επιλογείς αγνόησης
+                  <strong><em>περιεχομένου</em></strong>.
+                </li>
+              </ul>
+              Σημειώστε ότι δεν υπάρχει δεύτερη φάση «συλλογής». Οι περιοχές σελίδας προγραμματιστή πρέπει να
+              περιλαμβάνουν τις περιοχές περιεχομένου.</span>
+            </li>
+            <li data-i18n-id="s-b79c">Άνοιγμα του πάνελ και σχεδίαση ειδοποιήσεων εάν η διαμόρφωση ταιριάζει με μια ρύθμιση αυτόματου
+              ανοίγματος.</li>
+          </ol>
+
+          <h3 id="dismiss" data-i18n-id="s-be02">Απόρριψη ειδοποιήσεων</h3>
+          <p data-i18n-id="s-2ae3">Οι έλεγχοι μπορούν να διαμορφωθούν στη βιβλιοθήκη ως σφάλματα ή προειδοποιήσεις («χειροκίνητοι έλεγχοι»).
+            Οι προειδοποιήσεις μπορούν να απορριφθούν. Υπάρχουν δύο τύποι απορρίψεων διαθέσιμοι από το υποσέλιδο κάθε
+            επεξήγησης:</p>
+          <div class="my-2"
+            style="background: url(/assets/images/3x-generic-tip.png) 100% 98%; max-width: 600px; padding-top: 6%; background-size: 108%;">
+          </div>
+          <ul>
+            <li data-i18n-id="s-7b65">«Αγνόηση» αποθηκεύεται ως προτίμηση χρήστη: η ειδοποίηση είναι πλέον κρυφή για τον τρέχοντα χρήστη, αλλά
+              μόνο για τον τρέχοντα χρήστη.</li>
+            <li data-i18n-id="s-654c">«Επισήμανση ως OK» αποκρύπτει την ειδοποίηση για όλους τους χρήστες.</li>
+          </ul>
+          <p data-i18n-id="s-dc14">Το εάν ένας χρήστης μπορεί να απορρίψει μια ειδοποίηση ελέγχεται σε επίπεδο ρόλου στα δικαιώματα χρηστών
+            του Drupal. <strong>Οι περισσότεροι συγγραφείς θα πρέπει να μπορούν να απορρίπτουν ειδοποιήσεις</strong>.
+            Δεν έχει νόημα να αναθέσετε σε κάποιον έναν χειροκίνητο έλεγχο εάν δεν μπορεί να επισημάνει το στοιχείο ως
+            ελεγμένο.</p>
+
+          <h3 id="roots" data-i18n-id="s-d932">Αγνόηση στοιχείων</h3>
+          <p data-i18n-id="s-9d1e">Αυτές οι δύο ρυθμίσεις διαμόρφωσης είναι οι πιο σημαντικές!</p>
+          <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
+            <label for="edit-content-root">Έλεγχος περιεχομένου σε αυτά τα containers</label>
+            <div><textarea class="form-control" id="edit-content-root" name="content_root" rows="1" cols="30"
+                disabled></textarea>
+            </div>
+            <div class="mt-3">
+              <label for="edit-ignore-elements">Παράλειψη αυτών των στοιχείων</label>
+              <div>
+                <textarea class="form-control" id="edit-ignore-elements" disabled name="ignore_elements" rows="1"
+                  cols="30" class=""></textarea>
+              </div>
+            </div>
+          </div>
+          <p data-i18n-id="s-6051">
+            Ρυθμίστε το πρώτο ώστε να περιλαμβάνει όλα τα μέρη του περιεχομένου σελίδας που μπορούν να επεξεργαστούν οι
+            συγγραφείς. Π.χ., εάν μπορούν να επεξεργαστούν την περιοχή περιεχομένου <code>main</code>, το
+            <code>.sidebar</code> και το <code>.footer-column-two</code>, ορίστε αυτούς τους επιλογείς ως περιοχή
+            ελέγχου περιεχομένου.
+          </p>
+          <p data-i18n-id="s-f29c">
+            Χρησιμοποιήστε το δεύτερο για να «αποκλείσετε» υποενότητες. Π.χ., εάν το <code>main</code> περιέχει διάφορα
+            widgets και embeds που μόνο προγραμματιστές μπορούν να τροποποιήσουν, καταχωρίστε αυτά:
+            <code>.widget-1, .social-embed</code>;
+          </p>
+          <p data-i18n-id="s-10ef">Εάν χρησιμοποιείτε τη διαχωρισμένη διαμόρφωση, θα δείτε ένα παρόμοιο ζεύγος ρυθμίσεων στην καρτέλα Έλεγχοι
+            προγραμματιστή:</p>
+          <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
+            <div>
+              <fieldset>
+                <legend>
+                  Περιοχή ελέγχου προγραμματιστή
+                </legend>
+                <div class="fieldset__wrapper fieldset__wrapper--group">
+
+                  <div id="edit-dev-check-root">
+                    <div>
+                      <input aria-describedby="edit-dev-check-root--description" type="radio"
+                        id="edit-dev-check-root-automatic" name="dev_check_root" value="automatic" checked="checked" />
+                      <label for="edit-dev-check-root-automatic" class="form-item__label option">Όλα τα στοιχεία</label>
+                    </div>
+                    <div class="d-flex">
+                      <input aria-describedby="edit-dev-check-root--description" type="radio"
+                        id="edit-dev-check-root-match" name="dev_check_root" value="match"
+                        class="align-self-baseline mt-1 me-1" />
+                      <label for="edit-dev-check-root-match" class="form-item__label option">Μόνο τα containers που
+                        αναφέρονται στην καρτέλα Ρυθμίσεις περιεχομένου</label>
+                    </div>
+                    <div class="">
+                      <input aria-describedby="edit-dev-check-root--description" type="radio"
+                        id="edit-dev-check-root-specify" name="dev_check_root" value="specify"
+                        class="form-radio form-boolean form-boolean--type-radio" />
+                      <label for="edit-dev-check-root-specify" class="">Τα συγκεκριμένα containers που αναφέρονται
+                        παρακάτω</label>
+                    </div>
+                  </div>
+
+                </div>
+              </fieldset>
+
+              <div class="">
+                <label for="edit-always-ignore" class="mt-3">Αγνόηση τόσο για προγραμματιστές όσο και για συντάκτες
+                  περιεχομένου</label>
+                <div class="form-textarea-wrapper">
+                  <textarea id="edit-always-ignore" class="form-control" name="always_ignore" rows="1" cols="20"
+                    placeholder=""></textarea>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+          <p data-i18n-id="s-8c02">Το βασικό που πρέπει να γνωρίζετε σχετικά με τις περιοχές ελέγχου προγραμματιστή είναι ότι <strong>δεν
+              είναι ανεξάρτητες</strong> από τις περιοχές ελέγχου περιεχομένου. Σε μια διαχωρισμένη διαμόρφωση, οι
+            περιοχές προγραμματιστή ελέγχονται και στη συνέχεια τα αποτελέσματα <strong>φιλτράρονται</strong> ώστε να
+            ταιριάζουν με τις περιοχές περιεχομένου. Οποιεσδήποτε περιοχές εξαιρούνται για τους προγραμματιστές θα
+            εξαιρούνται επίσης για τους συντάκτες περιεχομένου. Μην εξαιρείτε επεξεργάσιμες περιοχές περιεχομένου!</p>
+
+          <p data-i18n-id="s-0312">Ορισμένοι έλεγχοι επιτρέπουν πιο ακριβή διαμόρφωση, για απόκρυψη μόνο συγκεκριμένων ειδοποιήσεων σε
+            επηρεαζόμενα στοιχεία. Αναζητήστε τους στις ενότητες:</p>
+          <ul>
+            <li data-i18n-id="s-d53d">Έλεγχοι περιεχομένου: Σύνδεσμοι προς έλεγχο</li>
+            <li data-i18n-id="s-0d1e">Έλεγχοι περιεχομένου: Ενσωματώσεις προς έλεγχο</li>
+            <li data-i18n-id="s-10c1">Έλεγχοι περιεχομένου: Ανίχνευση δυναμικού και shadow περιεχομένου</li>
+            <li data-i18n-id="s-e6e4">Έλεγχοι προγραμματιστή: Αντίθεση</li>
+          </ul>
+
+          <h3 id="pages" data-i18n-id="s-177c">Απόκρυψη για συγκεκριμένες σελίδες ή χρήστες</h3>
+          <p data-i18n-id="s-e874">
+            Ο ευκολότερος τρόπος για να το κάνετε αυτό είναι περνώντας CSS κλάσεις ή αναγνωριστικά σε αυτές τις
+            επιλογές:
+          </p>
+          <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
+            <label for="edit-no-load" class="form-item__label">Να μην γίνεται έλεγχος σε σελίδες με αυτά τα
+              στοιχεία</label>
+            <div class="form-textarea-wrapper">
+              <textarea data-drupal-selector="edit-no-load" aria-describedby="edit-no-load--description"
+                id="edit-no-load" name="no_load" rows="1" cols="20" class="form-control"></textarea>
+            </div>
+
+            <label for="edit-ignore-all-if-absent" class="form-item__label">Απόκρυψη όλων των ειδοποιήσεων σε σελίδες
+              όπου αυτά τα στοιχεία δεν υπάρχουν</label>
+            <div class="form-textarea-wrapper">
+              <textarea data-drupal-selector="edit-ignore-all-if-absent"
+                aria-describedby="edit-ignore-all-if-absent--description" id="edit-ignore-all-if-absent"
+                name="ignore_all_if_absent" rows="1" cols="20" class="form-control"></textarea>
+            </div>
+
+          </div>
+          <p data-i18n-id="s-0877">
+            Το πρώτο θα αποτρέψει την εκτέλεση των ελέγχων και η γραμμή εργαλείων δεν θα εμφανιστεί.
+          </p>
+          <p data-i18n-id="s-5cbd">
+            Το δεύτερο θα εκκινήσει τον ελεγκτή ελαχιστοποιημένο και θα επισημάνει αυτόματα (για τον τρέχοντα χρήστη)
+            όλα τα ζητήματα ως «Αγνοημένα», ακόμη κι αν πρόκειται για σφάλματα. Αυτό επιτρέπει τους ελέγχους να
+            εκτελούνται και να ενημερώνουν τον πίνακα ελέγχου χωρίς να ενοχλούν τον χρήστη.
+          </p>
+          <p data-i18n-id="s-1661">
+            Εάν θέλετε να τα χρησιμοποιήσετε για να ελέγξετε ποιοι χρήστες βλέπουν τον ελεγκτή, μπορεί να χρειαστεί να
+            προσαρμόσετε το θέμα σας ώστε να εξάγει μια κλάση, π.χ. <code>.user-247</code>
+          </p>
+
+          <h2 id="dashboard" data-i18n-id="s-f4d7">Διαχείριση αποτελεσμάτων σε επίπεδο ιστοτόπου</h2>
+          <section id="refresh">
+            <h3 class="pt-3" data-i18n-id="s-012a">Σάρωση και ενημέρωση αποτελεσμάτων</h3>
+            <p data-i18n-id="s-75a9">Το Editoria11y είναι ένα <strong>εργαλείο παρακολούθησης σε πραγματικό χρόνο, όχι ένας
+                ανιχνευτής</strong>. Οι αναφορές σε επίπεδο ιστοτόπου ενημερώνονται όταν οι συγγραφείς βλέπουν σελίδες,
+              οπότε η τακτική σάρωση δεν είναι γενικά απαραίτητη. Το άρθρωμα CSA <em>περιλαμβάνει</em> έναν ανιχνευτή,
+              αλλά θα πρέπει να χρειαστεί μόνο σε αυτές τις τρεις περιπτώσεις:</p>
+            <ol>
+              <li data-i18n-id="s-dfb1">
+                Κατά την πρώτη εγκατάσταση του Editoria11y σε υπάρχοντα ιστότοπο με πολλές σελίδες. Οι σελίδες πρέπει να
+                επισκεφθούν πριν εμφανιστούν στον πίνακα ελέγχου, οπότε μια γρήγορη αρχική σάρωση εξοικονομεί χρόνο.
+              </li>
+              <li data-i18n-id="s-f602">
+                Σημαντικές ενημερώσεις θεμάτων ή αρθρωμάτων μπορεί να διορθώσουν (ή να προκαλέσουν) ζητήματα σε πολλές
+                σελίδες που δεν θα εμφανιστούν μέχρι να επισκεφθούν ή να σαρωθούν.
+              </li>
+              <li data-i18n-id="s-a530">
+                Μαζικές ενέργειες στη διεπαφή διαχείρισης, όπως η διαγραφή σελίδων ή ανακατευθύνσεων, τείνουν να αφήνουν
+                πίσω αποτελέσματα από σελίδες που δεν υπάρχουν πλέον ή έχουν μετακινηθεί. Σε αυτές τις περιπτώσεις βοηθά
+                η χρήση των ενεργειών συντήρησης της καρτέλας «Ανανέωση» για ανανέωση URL σελίδων και εντοπισμό και
+                αφαίρεση διαγραμμένων σελίδων.
+              </li>
+            </ol>
+            <p data-i18n-id="s-8e5a">Κανένα δεδομένο δεν φεύγει από τον ιστότοπό σας κατά τη σάρωση. Ο ανιχνευτής CSA δεν είναι εργαλείο
+              cloud· χρησιμοποιεί τον περιηγητή σας για να φορτώσει και να ελέγξει τις σελίδες στον δικό σας ιστότοπο.
+              Το μειονέκτημα αυτής της προσέγγισης είναι ότι <strong>οι περιηγητές παγώνουν τις καρτέλες
+                παρασκηνίου</strong>. Θα πρέπει να κρατήσετε τον υπολογιστή σας αναμμένο και ξύπνιο κατά τη σάρωση.
+              Ανοίξτε ένα νέο παράθυρο για τον ανιχνευτή και αφήστε το ως ενεργή καρτέλα αυτού του παραθύρου καθώς
+              εργάζεται. Μπορείτε να συνεχίσετε να εργάζεστε σε άλλο παράθυρο. Ο ανιχνευτής θα ενημερώνει την εκτίμησή
+              του μετά από κάθε παρτίδα σελίδων.</p>
+          </section>
+          <section id="reports">
+            <h3 data-i18n-id="s-a242">Προβολή αναφορών</h3>
+            <div class="my-4 border shadow"
+              style="background: url(/assets/images/3x-dashboard.png) 86% 0%; padding-top: 28%; background-size: 106%;">
+            </div>
+            <ul>
+              <li data-i18n-id="s-e328">
+                <strong>Πρόσφατα</strong> επιτρέπει την εξερεύνηση ανά μεμονωμένη ειδοποίηση. Αυτό σας επιτρέπει να
+                κάνετε πράγματα όπως φιλτράρισμα για εύρεση όλων των περιπτώσεων του ίδιου τύπου ειδοποίησης, ή να δείτε
+                ποιες ειδοποιήσεις εμφανίζονται συχνά σε πρόσφατο περιεχόμενο, ή ποιοι συγγραφείς εξακολουθούν να κάνουν
+                το ίδιο λάθος.
+              </li>
+              <li data-i18n-id="s-796f">
+                <strong>Σελίδες</strong> εμφανίζει αριθμούς ειδοποιήσεων ανά σελίδα, ομαδοποιημένους ανά σελίδα. Αυτό
+                σας επιτρέπει να βρείτε σελίδες με τα περισσότερα ζητήματα και να φιλτράρετε κατά χαρακτηριστικά σελίδας
+                όπως τύπος περιεχομένου και κατάσταση δημοσίευσης.
+              </li>
+              <li data-i18n-id="s-9423">
+                <strong>Ειδοποιήσεις</strong> εμφανίζει ζητήματα ανά τύπο.
+              </li>
+              <li data-i18n-id="s-52ed">
+                <strong>Απορρίψεις</strong> επιτρέπει την παρακολούθηση του αν οι συγγραφείς απορρίπτουν σωστά, και
+                διαθέτει κουμπιά «επαναφοράς» για αποκατάσταση απορριφθεισών ειδοποιήσεων.
+              </li>
+              <li data-i18n-id="s-3379">
+                <strong>Εξαγωγή</strong> περιέχει εκδόσεις των αναφορών Σελίδων, Ειδοποιήσεων και Απορρίψεων που μπορούν
+                να φιλτραριστούν για προετοιμασία λήψεων CSV. <em>Παρέχεται από το υποάρθρωμα CSV Export</em>
+              </li>
+              <li data-i18n-id="s-9814">
+                <strong>Ανανέωση</strong> περιέχει εργαλεία συντήρησης πίνακα ελέγχου για αφαίρεση ειδοποιήσεων από
+                διαγραμμένες σελίδες, αφαίρεση ειδοποιήσεων από παραμετροποιημένες ψευδο-σελίδες όπως
+                /search?query=example, ενημέρωση αποθηκευμένων τίτλων και URL σελίδων, και εκτέλεση χειροκίνητης
+                σάρωσης. <em>Παρέχεται από το υποάρθρωμα CSA</em>
+              </li>
+            </ul>
+          </section>
+
+          <h2 id="positioning" data-i18n-id="s-c35b">Διόρθωση κρυφών ή εκτός οθόνης συμβουλών</h2>
+
+          <p data-i18n-id="s-68ce">Το άρθρωμα παρέχει πεδία για δύο από τις επιλογές διαμόρφωσης της βιβλιοθήκης που αλλάζουν τον τρόπο
+            τοποθέτησης των συμβουλών:</p>
+
+          <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
+            <label for="edit-element-hides-overflow" class="form-item__label">Στοιχεία με κρυφή υπερχείλιση</label>
+            <textarea data-drupal-selector="edit-element-hides-overflow"
+              aria-describedby="edit-element-hides-overflow--description" id="edit-element-hides-overflow"
+              name="element_hides_overflow" rows="1" cols="60" class="form-control"></textarea>
+            <label for="edit-hidden-handlers" class="form-item__label">Η JavaScript του θέματος θα χειρίζεται την
+              αποκάλυψη κρυφών επεξηγήσεων μέσα σε αυτά τα containers</label>
+            <textarea data-drupal-selector="edit-hidden-handlers" aria-describedby="edit-hidden-handlers--description"
+              id="edit-hidden-handlers" name="hidden_handlers" rows="1" cols="60" class="form-control"></textarea>
+          </div>
+          <p data-i18n-id="s-34e4">Ορισμένα θέματα έχουν στήλες ή widgets που αποκρύπτουν οριζόντια ή κατακόρυφη υπερχείλιση. Η βιβλιοθήκη
+            ανιχνεύει αυτόματα πότε ένα εναλλασσόμενο στοιχείο θα πέσει εκτός του ορατού τμήματος της
+            <strong>σελίδας.</strong> Ενημερώνοντας τη βιβλιοθήκη ότι ορισμένα containers αποκρύπτουν υπερχείλιση
+            σημαίνει ότι θα προσπαθήσει επίσης να τοποθετήσει τις συμβουλές για στοιχεία σε αυτά τα containers εντός των
+            ορίων τους.
+          </p>
+          <p data-i18n-id="s-7cb7">Ορισμένα θέματα έχουν widgets που εναλλάσσουν την ορατότητα του περιεχομένου, όπως ακορντεόν, καρτέλες και
+            slideshows. Οι συμβουλές μέσα σε αυτά τα στοιχεία θα είναι επίσης κρυφές. Η παροχή μιας λίστας επιλογέων για
+            αυτά τα widgets σημαίνει ότι το Editoria11y θα κάνει σύντομη παύση όταν ένας χρήστης προσπαθήσει να μεταβεί
+            σε αυτές τις συμβουλές χρησιμοποιώντας τα κουμπιά επόμενο ή προηγούμενο. Τα θέματα και τα αρθρώματα Drupal
+            μπορούν στη συνέχεια να ακολουθήσουν τις οδηγίες από την ενότητα της βιβλιοθήκης σχετικά με τη <a href="/en/install/#hidden-content">διαχείριση συμβουλών σε κρυφό περιεχόμενο</a> για αποκάλυψη του κρυφού
+            περιεχομένου.</p>
+
+          <h2 id="runtime" data-i18n-id="s-7e38">Γράψτε τη δική σας διαμόρφωση</h2>
+          <p data-i18n-id="s-a5d3">Σε PHP: το άρθρωμα Drupal παρέχει ένα <code>hook_editoria11y_alter_config</code> για αλλαγή του
+            περιεχομένου του <code>drupalSettings.editoria11y</code> σε ένα άρθρωμα ή θέμα. Για παράδειγμα:</p>
+          <pre class="language-php"><code><!--<?php
+/**
+ * @file
+ * MY_MODULE module file.
+ */
+
+use Drupal\Core\Cache\CacheableMetadata;
+
+/**
+ * Implements hook_editoria11y_alter_config().
+ *
+ * Attaches Editoria11y library and config based on context.
+ */
+function MY_MODULE_editoria11y_alter_config(array &$attach, CacheableMetadata $cacheableMetadata): void {
+  $config = Drupal::config('editoria11y.settings');
+
+  // Module settings being changed need to bust the cache.
+  $cacheableMetadata->addCacheableDependency($config);
+
+  // Get and modify any of the values being passed to drupalSettings.editoria11y.
+  if (!empty($attach['allow_ok'])) {
+    $attach['allow_ok'] = 'okAll';
+  }
+}--></code></pre>
+          <p data-i18n-id="s-2368">Η τροποποίηση του <code>drupalSettings</code> βοηθά μόνο εάν η JavaScript του αρθρώματος είναι ήδη
+            ρυθμισμένη να περνά αυτή την τιμή στη βιβλιοθήκη. Για να προσθέσετε επιπλέον παραμέτρους, πρέπει να
+            τροποποιήσετε απευθείας το αντικείμενο JavaScript <code>options</code>. Το άρθρωμα ελέγχει για μια καθολική
+            μεταβλητή JavaScript <code>editoria11yOptionsOverride</code>. Εάν αυτή έχει οριστεί, θα περάσει το
+            αντικείμενο <code>options</code> σε μια συνάρτηση <code>editoria11yOptions</code> που έχετε παρέχει στο
+            άρθρωμα ή θέμα σας. Μπορείτε πλέον να ορίσετε οποιαδήποτε από τις <a               href="https://editorsally.ddev.site/en/install/#params">παραμέτρους βιβλιοθήκης</a>.</p>
+          <pre class="language-javascript"><code><!--var editoria11yOptionsOverride = true;
+var editoria11yOptions = function(options) {
+  // You now have access to the processed options object that will be passed to the library.
+
+  // E.g., to add a selector to the ignore list:
+  if (options['ignoreElements'] === false) {
+    // Provide the selector as the only value.
+    options['ignoreElements'] = `.example`;
+  } else {
+    // Append additional selectors with comma separator.
+    options['ignoreElements'] = `${options['ignoreElements']}, .example`
+  }
+
+  // Return your processed options.
+  return options;
+}
+--></code></pre>
+          <section id="custom-tests">
+            <h2 data-i18n-id="s-e0f0">Γράψτε τους δικούς σας ελέγχους</h2>
+            <p data-i18n-id="s-6ece">Πρώτα, στη διαμόρφωση του αρθρώματος, προσθέστε 1 στις επιλογές «Προσαρμοσμένοι έλεγχοι» ώστε να γνωρίζει
+              ότι πρέπει να
+              παρακολουθεί για τους ελέγχους.</p>
+            <p data-i18n-id="s-4316">Στη συνέχεια δημιουργήστε μια βιβλιοθήκη JavaScript Drupal με τους ελέγχους σας στο θέμα ή άρθρωμά σας,
+              χρησιμοποιώντας τον <a href="/en/install/#custom-tests">οδηγό της βιβλιοθήκης για τη συγγραφή
+                προσαρμοσμένων ελέγχων</a>.</p>
+            <p data-i18n-id="s-b4ea">Ακολουθεί ένα λειτουργικό παράδειγμα από το Princeton, ενός προσαρμοσμένου ελέγχου για ειδοποίηση σχετικά
+              με Safe Links. Σημειώστε ότι αποκτά πρόσβαση στην κλάση Editoria11y μέσω του <code>Drupal.Ed11y.</code>
+            </p>
+            <pre class="language-javascript"><code><!--const psEd11yCustomTests = function() {
+
+  // 1.
+  // Get elements to test, via Drupal.Ed11y.getElements.
+  // The 'root' parameter tells it to respect config for check areas and ignores.
+  const safeLinks = Drupal.Ed11y.getElements('a[href*="safelinks.protection.outlook.com/?"]', 'root');
+
+  // Add the test name to the lang object.
+  Drupal.ed11yLang.lang.testNames.outlookSafeLink = 'URL is Safe Link encoded';
+
+  // 2.
+  // Create the tip content.
+  const decodeSafelink = function(url) {
+    const params = new URL(url).searchParams;
+    let decoded = params.get('url');
+    const p = document.createElement('p');
+    if (!!decoded) {
+      p.innerHTML = `<p><span class="badge">To fix</span>Update this link with the correct URL, which is probably:<br>
+    <em style='word-wrap: break-word;font-size: 90%;line-height: 1.2;display: block;'></em></p>`
+      p.querySelector('em').textContent = Drupal.Ed11y.sanitizeHTML(decoded);
+    }
+    return p;
+  };
+  safeLinks?.forEach((el) => {
+    const content = document.createElement('div');
+    content.innerHTML = `<div class="title">Please fix this Outlook "Safe Link"</div>
+            <div class="why">
+                <p>The URL for this link is an Outlook "Safe Link" that was copied from an email.
+                It includes the original recipient's email address,
+                and will break if Microsoft shuts down the service.</p>
+                <p>The pasted URL is:<br>
+                <em style='word-break: break-all;font-size: 90%;line-height: 1.2;
+                display: block;'></em></p>
+            </div>
+            `;
+    content.querySelector('em').textContent = Drupal.Ed11y.sanitizeHTML(el.href);
+    content.querySelector('.why').insertAdjacentElement('beforebegin', decodeSafelink(el.href));
+
+    // 3.
+    // Push the tip to the library results object.
+    Drupal.Ed11y.State.results.push({
+      element: el,
+      test: 'outlookSafeLink',
+      type: 'error',
+      content: content,
+      position: 'beforebegin',
+      inline: false,
+      dismiss: false,
+    });
+  });
+
+  // 4.
+  // Tell Editoria11y you are done adding custom results.
+  const allDone = new CustomEvent('ed11yResume');
+  document.dispatchEvent(allDone);
+};--></code></pre>
+
+          </section>
+          <section id="help">
+            <h2 data-i18n-id="s-4690">Λήψη βοήθειας</h2>
+            <p data-i18n-id="s-f149">Δείτε τη σελίδα <a href="../contacts">επικοινωνίας</a> για επιλογές υποστήριξης από την κοινότητα. Ο
+              @itmaybejj βρίσκεται συνήθως συνδεδεμένος στο Drupal Slack όταν ο ήλιος είναι πάνω από το δυτικό
+              ημισφαίριο.</p>
+            <p data-i18n-id="s-4a16">Τα περισσότερα <a href="../license/">επίπεδα συνεισφοράς CSA</a> περιλαμβάνουν έναν ετήσιο έλεγχο, ο
+              οποίος μπορεί να περιλαμβάνει άμεση βοήθεια με την εγκατάσταση και τη διαμόρφωση</p>
+          </section>
+
+        </div>
+      </div>
+    </div>
+  </main>
