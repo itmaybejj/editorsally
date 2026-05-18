@@ -28,6 +28,25 @@ const i18n = loadI18n();
 const langArg = process.argv[2];
 const pageArg = process.argv[3];
 
+const DOMAIN = 'https://editoria11y.com';
+
+// hreflang region subtags should be uppercase per BCP 47 (`pt-BR`, not `pt-br`).
+const HREFLANG_MAP = {
+  'pt-br': 'pt-BR',
+  'pt-pt': 'pt-PT',
+};
+
+function hreflangFor(lang) {
+  return HREFLANG_MAP[lang] || lang;
+}
+
+function urlForPage(lang, page) {
+  const slug = i18n.getPath(lang, page);
+  return page === 'about'
+    ? `${DOMAIN}/${lang}/`
+    : `${DOMAIN}/${lang}/${slug}/`;
+}
+
 const languages = langArg ? [langArg] : i18n.allLanguages;
 for (const l of languages) {
   if (!i18n.allLanguages.includes(l)) {
@@ -41,6 +60,20 @@ const template = fs.readFileSync(TEMPLATE_PATH, 'utf8');
 
 function fragmentPath(lang, page) {
   return path.join(ROOT, 'content', lang, `${page}.html`);
+}
+
+function buildHreflangAlternates(page) {
+  const langsWithPage = i18n.allLanguages.filter(
+    (l) => fs.existsSync(fragmentPath(l, page))
+  );
+  const lines = [];
+  for (const altLang of langsWithPage) {
+    lines.push(`  <link rel="alternate" hreflang="${hreflangFor(altLang)}" href="${urlForPage(altLang, page)}" />`);
+  }
+  if (langsWithPage.includes('en')) {
+    lines.push(`  <link rel="alternate" hreflang="x-default" href="${urlForPage('en', page)}" />`);
+  }
+  return lines.join('\n');
 }
 
 function outputPath(lang, page) {
@@ -117,6 +150,8 @@ function buildPage(lang, page) {
   out = out.replaceAll('@@TITLE@@', htmlText(title));
   out = out.replaceAll('@@TOGGLE_NAV@@', htmlAttr(nav.toggleNav));
   out = out.replaceAll('@@CLOSE@@', htmlAttr(nav.close));
+  out = out.replaceAll('@@CANONICAL_URL@@', urlForPage(lang, page));
+  out = out.replace('@@HREFLANG_ALTERNATES@@', buildHreflangAlternates(page));
 
   // Footer labels (nav.label)
   for (const slug of Object.keys(nav.label)) {

@@ -37,9 +37,9 @@ const pageArg = process.argv[3];
 const languages = langArg ? [langArg] : i18n.allLanguages;
 
 function outputRelPath(lang, page) {
-  return page === 'about'
-    ? `${lang}/index.html`
-    : `${lang}/${page}/index.html`;
+  if (page === 'about') return `${lang}/index.html`;
+  const slug = i18n.getPath(lang, page);
+  return `${lang}/${slug}/index.html`;
 }
 
 function readGitHead(relPath) {
