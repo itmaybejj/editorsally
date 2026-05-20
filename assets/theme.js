@@ -435,4 +435,17 @@
     arrow.classList.add('icon-link', 'mb-1');
     arrow.prepend(linkIcon.cloneNode(true));
   });
+
+  /* Demo page: load the live accessibility checker. */
+  if (document.getElementById('ed11y-demo')) {
+    const demoCSS = document.createElement('link');
+    demoCSS.rel = 'stylesheet';
+    demoCSS.href = '/assets/ed11y/css/editoria11y.css';
+    document.body.appendChild(demoCSS);
+
+    const demoScript = document.createElement('script');
+    demoScript.src = '/assets/demo.js';
+    document.body.appendChild(demoScript);
+
+  }
 })()
