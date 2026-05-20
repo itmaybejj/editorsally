@@ -1,6 +1,6 @@
 /*!
 			* Editoria11y accessibility checker
-			* @version 3.0.1-510
+			* @version 3.0.1-513
 			* @author John Jameson
 			* @license GPLv2
 			* @copyright © 2026 Princeton University.
@@ -417,11 +417,16 @@
       Global.scrollBehaviour = !reducedMotion || reducedMotion.matches ? "auto" : "smooth";
       Global.langDirection = Global.html.getAttribute("dir")?.trim()?.toLowerCase() === "rtl" ? "rtl" : "ltr";
       const documentSources = State.option.checks.QA_DOCUMENT.sources;
-      const defaultDocumentSources = 'a[href$=".doc"], a[href$=".docx"], a[href*=".doc?"], a[href*=".docx?"], a[href$=".ppt"], a[href$=".pptx"], a[href*=".ppt?"], a[href*=".pptx?"], a[href^="https://drive.google.com/file"], a[href^="https://docs.google."], a[href^="https://sway."]';
-      if (documentSources) {
-        Global.documentSources = `${defaultDocumentSources}, ${documentSources}`;
+      if (State.option.checks.QA_DOCUMENT !== false) {
+        const defaultDocumentSources = 'a[href$=".doc"], a[href$=".docx"], a[href*=".doc?"], a[href*=".docx?"], a[href$=".ppt"], a[href$=".pptx"], a[href*=".ppt?"], a[href*=".pptx?"], a[href^="https://drive.google.com/file"], a[href^="https://docs.google."], a[href^="https://sway."]';
+        Global.documentSources = State.option.checks.QA_DOCUMENT.sources ? `${defaultDocumentSources}, ${documentSources}` : defaultDocumentSources;
       } else {
-        Global.documentSources = defaultDocumentSources;
+        Global.documentSources = false;
+      }
+      if (State.option.checks.QA_PDF !== false) {
+        Global.pdfSources = State.option.checks.QA_PDF.sources ? State.option.checks.QA_PDF.sources : 'a[href$=".pdf"], a[href*=".pdf?"]';
+      } else {
+        Global.pdfSources = false;
       }
       Global.susAltWords = State.option.susAltStopWords ? State.option.susAltStopWords.split(",").map((word) => word.trim().toLowerCase()).filter(Boolean) : Lang._("SUS_ALT_STOPWORDS");
       Global.placeholderAltSet = new Set(Lang._("PLACEHOLDER_ALT_STOPWORDS"));
@@ -1839,7 +1844,7 @@
       });
     }
   }
-  const version = "3.0.1-510";
+  const version = "3.0.1-513";
   const sprite = {
     alts: '<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 576 512"><path fill="currentColor" d="M160 80l352 0c9 0 16 7 16 16l0 224c0 8.8-7.2 16-16 16l-21 0L388 179c-4-7-12-11-20-11s-16 4-20 11l-52 80-12-17c-5-6-12-10-19-10s-15 4-19 10L176 336 160 336c-9 0-16-7-16-16l0-224c0-9 7-16 16-16zM96 96l0 224c0 35 29 64 64 64l352 0c35 0 64-29 64-64l0-224c0-35-29-64-64-64L160 32c-35 0-64 29-64 64zM48 120c0-13-11-24-24-24S0 107 0 120L0 344c0 75 61 136 136 136l320 0c13 0 24-11 24-24s-11-24-24-24l-320 0c-49 0-88-39-88-88l0-224zm208 24a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z"></path></svg>',
     close: '<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 384 512"><path fill="currentColor" d="M343 151c13-13 13-33 0-46s-33-13-45 0L192 211 87 105c-13-13-33-13-45 0s-13 33 0 45L147 256 41 361c-13 13-13 33 0 45s33 13 45 0L192 301 297 407c13 13 33 13 45 0s13-33 0-45L237 256 343 151z"></path></svg>',
@@ -2827,17 +2832,15 @@ ${this.error.stack}
           });
         }
       }
-      const hasExtension = $el.matches(Constants.Global.documentSources);
-      const hasPDF = State.option.checks.QA_PDF?.sources ? $el.matches(State.option.checks.QA_PDF.sources) : $el.matches('a[href$=".pdf"], a[href*=".pdf?"]');
-      if (hasExtension) {
+      if (Constants.Global.pdfSources && $el.matches(Constants.Global.pdfSources)) {
         logResult({
-          test: "QA_DOCUMENT",
+          test: "QA_PDF",
           args: [linkText],
           dismissSuffix: href
         });
-      } else if (hasPDF) {
+      } else if (Constants.Global.documentSources && $el.matches(Constants.Global.documentSources)) {
         logResult({
-          test: "QA_PDF",
+          test: "QA_DOCUMENT",
           args: [linkText],
           dismissSuffix: href
         });
@@ -8622,7 +8625,7 @@ ${this.error.stack}
     QA_DOCUMENT: `<p><strong>Link:</strong> <i>%(TEXT)</i></p><p>Linked documents are considered web content and must be made accessible as well. Check that this document has tagged its headings, table headers and image alt text.</p><div class="why"><ul><li>Make your <a href="https://support.google.com/docs/answer/6199477?hl=en">Google Workspace document or presentation more accessible.</a></li><li>Make your <a href="https://support.microsoft.com/en-us/office/create-accessible-office-documents-868ecfcd-4f00-4224-b881-a65537a7c155">Office documents more accessible.</a></li></ul></div>`,
     QA_FAKE_HEADING: `<p><strong>Bold text:</strong> <i>%(TEXT)</i></p><p>${why.fix}If this text is bold to mark a topic change, tag it as a heading so that screen reader users can use it to navigate the page.</p><div class="why"> <p>Tip: bold and italic styles provide visual emphasis, but do not automatically add text to the document's table of contents for assistive technologies.</p></div>`,
     QA_FAKE_LIST: `<p>${why.fix}If this <i>%(TEXT)</i> is part of a list, replace it with list formatting.</p><div class="why"><p>Tip: list formatting is structural, both visually and navigationally:</p> <ol><li>Lists align their indents for easy reading.</li> <li>Lists are machine-readable. Screen readers orient their users by regularly announcing their position in the list ("item 3 of 7").</li></ol> <p>&nbsp;&nbsp;&nbsp;3. But a sentence with a number in front of it like this does not indent its second line on overflow, and is not included in the count of items for screen reader users.</p></div> `,
-    QA_IN_PAGE_LINK: `<p><strong>Link:</strong> <i>%(TEXT)</i></p><p><strong>URL:</strong> <code>#%(ID)</code></p><p>The link target does not match any elements on this page.</p><div class="why"><p>Note for developers: if this is not a normal link, and the link target is a placeholder for a JavaScript event, make sure to test that it works when clicked with a keyboard before adding this to the checker ignore list.</p></div>`,
+    QA_IN_PAGE_LINK: `<p><strong>URL:</strong> <i>#%(ID)</i></p><p><strong>Link:</strong> <code>%(TEXT)</code></p><p>The link target does not match any elements on this page.</p><div class="why"><p>Note for developers: if this is not a normal link, and the link target is a placeholder for a JavaScript event, make sure to test that it works when clicked with a keyboard before adding this to the checker ignore list.</p></div>`,
     QA_JUSTIFY: `<p>Justified text inserts extra spaces to align paragraphs to both the left and right margins. The irregular gaps from line to line make the text more difficult to read for many people.</p><p>${why.fix}Use left-aligned text.</p>`,
     QA_NESTED_COMPONENTS: "Avoid nesting interactive layout components, such as placing accordions within other accordions, or placing tabs inside accordions and vice versa. This can complicate navigation, increase cognitive overload, and lead to people overlooking content.",
     QA_PDF: `<p><strong>Link:</strong> <i>%(TEXT)</i></p><p>${why.fix}Do one of the following:</p><ul><li>Link to a Web page instead,</li><li><em>Also</em> link to a Web page or editable document, so this PDF is only the "printable" option, or</li><li>At a minimum make sure this PDF is readable with screen readers by <a href='https://webaim.org/techniques/acrobat/' target='_blank'>manually checking that it has been tagged</a> with headings, column reading order, table headers, and alt text.</li>	</ul>	<div class="why"><p>Tip: mobile and assistive device users almost universally prefer Web pages to PDFs. PDFs do not reflow for mobile devices, and are often missing tags that must be present to navigate their text with screen readers.</p></div>`,
@@ -9111,7 +9114,7 @@ ${this.error.stack}
       LINK_DOI: true,
       // Todo consider.
       LINK_URL: {
-        maxLength: 40
+        maxLength: 20
       },
       LINK_LABEL: {
         dismissAll: true
@@ -9119,11 +9122,8 @@ ${this.error.stack}
       LINK_EMPTY: true,
       LINK_IDENTICAL_NAME: false,
       // Todo pro.
-      LINK_NEW_TAB: {
-        dismissAll: true
-      },
-      LINK_FILE_EXT: false,
-      // Todo test vs LinkPurpose.
+      LINK_NEW_TAB: true,
+      LINK_FILE_EXT: true,
       LINK_UNPRONOUNCEABLE: true,
       LINK_MAYBE_BUTTON: true,
       // Form label checks module not yet enabled.
@@ -9146,14 +9146,13 @@ ${this.error.stack}
         sources: ""
       },
       EMBED_UNFOCUSABLE: true,
-      EMBED_MISSING_TITLE: {
-        type: "warning"
-      },
       EMBED_GENERAL: true,
+      EMBED_MISSING_TITLE: true,
       // Quality assurance checks
       QA_BAD_LINK: {
         sources: ""
       },
+      // useless without sources.
       QA_STRONG_ITALICS: true,
       QA_IN_PAGE_LINK: true,
       QA_DOCUMENT: false,

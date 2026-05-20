@@ -16,23 +16,9 @@ const demo = async () => {
   });
 
   const langFiles = [
-    'en-us',
-    'en',
-    'da',
-    'de',
-    'el',
-    'es',
-    'fr',
-    'hu',
-    'it',
-    'ja',
-    'nb',
-    'nl',
-    'pl',
-    'pt-br',
-    'pt-pt',
-    'sv',
-    'zh',
+    'bg', 'cs', 'da', 'de', 'el', 'es', 'et', 'fi', 'fr', 'hu', 'id', 'it',
+    'ja', 'ko', 'lt', 'lv', 'nb', 'nl', 'pl', 'pt-br', 'pt-pt', 'ro',
+    'sk', 'sl', 'sv', 'tr', 'uk', 'zh', 'en'
   ];
   const docLang = document.documentElement.lang;
   let lang = langFiles.includes(docLang) ? docLang : 'en-us';
