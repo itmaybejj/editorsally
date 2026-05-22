@@ -28,6 +28,7 @@
 
 const fs = require('fs');
 const path = require('path');
+const crypto = require('crypto');
 const { loadI18n, ROOT } = require('./lib/i18n-loader.js');
 const { parseFragment, stripI18nIds } = require('./lib/parse-fragment.js');
 
@@ -36,6 +37,41 @@ const langArg = process.argv[2];
 const pageArg = process.argv[3];
 
 const DOMAIN = 'https://editoria11y.com';
+
+// Chrome assets referenced from template.html. Cache-busted per-file by
+// content hash so a returning visitor only re-fetches assets that actually
+// changed. Hashes are stable across builds when content is unchanged, so
+// the built HTML is byte-identical on a no-op rebuild.
+const CACHE_BUSTED_ASSETS = [
+  '/assets/bootstrap/css/bootstrap.min.css',
+  '/assets/theme.css',
+  '/assets/prism/prism.css',
+  '/assets/bootstrap/js/bootstrap.bundle.min.js',
+  '/assets/lang/i18n.js',
+  '/assets/theme.js',
+  '/assets/prism/prism.js',
+];
+
+function buildAssetHashes() {
+  const out = {};
+  for (const url of CACHE_BUSTED_ASSETS) {
+    const fp = path.join(ROOT, url);
+    if (!fs.existsSync(fp)) continue;
+    out[url] = crypto.createHash('sha1').update(fs.readFileSync(fp)).digest('hex').slice(0, 8);
+  }
+  return out;
+}
+
+const ASSET_HASHES = buildAssetHashes();
+
+// Append ?v=<hash> to each cache-busted asset URL in `html`. Idempotent
+// against already-stamped URLs because we only match the exact bare form.
+function stampCacheBust(html) {
+  for (const [url, hash] of Object.entries(ASSET_HASHES)) {
+    html = html.replaceAll(`"${url}"`, `"${url}?v=${hash}"`);
+  }
+  return html;
+}
 
 // hreflang region subtags should be uppercase per BCP 47 (`pt-BR`, not `pt-br`).
 const HREFLANG_MAP = {
@@ -240,6 +276,9 @@ function buildPage(lang, page) {
     throw new Error(`Unresolved markers in ${lang}/${page}: ${[...new Set(unresolved)].join(', ')}`);
   }
 
+  // Cache-bust chrome asset URLs.
+  out = stampCacheBust(out);
+
   // Write the canonical page.
   const outPath = outputPath(lang, page);
   fs.mkdirSync(path.dirname(outPath), { recursive: true });
@@ -260,6 +299,13 @@ function buildPage(lang, page) {
 
   return { ok: true, outPath, aliases };
 }
+
+// Hand-written entry points outside the fragment pipeline that still load
+// cache-busted assets directly. Stamped at the end of the build so a stale
+// cached copy can't break them.
+const EXTRA_STAMPED_FILES = [
+  path.join(ROOT, 'codes', 'index.htm'),
+];
 
 let ok = 0, skipped = 0, errors = 0, redirects = 0;
 const pages = pageArg ? [pageArg] : i18n.canonicalPaths;
@@ -286,5 +332,22 @@ for (const lang of languages) {
     }
   }
 }
+// Re-stamp hand-written entry points (outside the fragment pipeline).
+// Idempotent: re-running with unchanged assets leaves bytes untouched.
+for (const file of EXTRA_STAMPED_FILES) {
+  if (!fs.existsSync(file)) continue;
+  const original = fs.readFileSync(file, 'utf8');
+  // Strip any existing ?v=… first so re-runs replace rather than stack.
+  const cleaned = original.replace(
+    new RegExp(`("(?:${CACHE_BUSTED_ASSETS.map(u => u.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|')}))(?:\\?v=[a-f0-9]+)?(")`, 'g'),
+    '$1$2'
+  );
+  const stamped = stampCacheBust(cleaned);
+  if (stamped !== original) {
+    fs.writeFileSync(file, stamped);
+    console.log(`  ↻ stamped ${path.relative(ROOT, file)}`);
+  }
+}
+
 console.log(`\nDone: ${ok} built, ${redirects} redirect stub(s), ${skipped} skipped, ${errors} errors.`);
 process.exit(errors > 0 ? 1 : 0);

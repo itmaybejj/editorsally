@@ -48,6 +48,8 @@ assets/lang/i18n.js          ─┘       /<lang>/<en-slug>/index.html          
 - `node scripts/build-pages.js <lang> [page]` — build a subset.
 - Built files are tracked in git; rebuild after editing any fragment.
 
+Chrome assets (Bootstrap, Prism, `theme.css`/`theme.js`, `i18n.js`) are cache-busted per-file with a SHA-1 of file contents (`?v=<hash>`). The build stamps the current hash into every emitted page and into `codes/index.htm`. Returning visitors only re-fetch an asset when its content actually changes — and a rebuild with no asset changes is byte-identical, so the working tree stays clean. If you add a new chrome asset, register it in `CACHE_BUSTED_ASSETS` in `scripts/build-pages.js`.
+
 Other scripts under `scripts/`:
 - `normalize-segments.js` — assign `data-i18n-id` to translatable blocks in English fragments and refresh hashes in `assets/lang/manifest.json` under `source`. Idempotent.
 - `migrate-to-fragments.js` — one-shot extraction of legacy full-page HTML into fragments (used once during the fragment-pipeline migration).
