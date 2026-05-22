@@ -37,15 +37,27 @@ const pageArg = process.argv[3];
 const languages = langArg ? [langArg] : i18n.allLanguages;
 
 function outputRelPath(lang, page) {
-  if (page === 'about') return `${lang}/index.html`;
-  const slug = i18n.getPath(lang, page);
-  return `${lang}/${slug}/index.html`;
+  // Mirror i18n.buildPath as a relative filesystem path.
+  const p = i18n.buildPath(lang, page).replace(/^\//, '').replace(/\/$/, '');
+  return p ? `${p}/index.html` : 'index.html';
 }
 
-function readGitHead(relPath) {
+// Pre-restructure path for an English page (when English lived under /en/).
+// Used as a fallback when comparing against an older git HEAD.
+function legacyEnRelPath(page) {
+  if (page === 'about') return 'en/index.html';
+  return `en/${page}/index.html`;
+}
+
+function readGitHead(relPath, fallbackRelPath = null) {
   try {
     return execFileSync('git', ['show', `HEAD:${relPath}`], { cwd: ROOT, encoding: 'utf8' });
   } catch {
+    if (fallbackRelPath) {
+      try {
+        return execFileSync('git', ['show', `HEAD:${fallbackRelPath}`], { cwd: ROOT, encoding: 'utf8' });
+      } catch { /* fall through */ }
+    }
     return null;
   }
 }
@@ -135,7 +147,28 @@ function captureLinkSet(root) {
 
 function canonicalizeLink(href, lang) {
   if (/^(https?:|mailto:|tel:|#)/i.test(href)) return href;
-  // Relative ./ or ../ from the old format → canonical /<lang>/...
+  // Normalize English URLs to their root-canonical form regardless of whether
+  // the source uses the new (/<slug>/) or legacy (/en/<slug>/) shape.
+  if (lang === 'en') {
+    if (href === '/' || href === '/en/' || href === '/en') return '/';
+    let m = href.match(/^\/(?:en\/)?([a-z0-9-]+)\/?(#.*)?$/i);
+    if (m) {
+      const canonicalSlug = i18n.getCanonicalSlug(lang, m[1]);
+      if (canonicalSlug === 'about') return `/${m[2] || ''}`;
+      return `/${canonicalSlug}/${m[2] || ''}`;
+    }
+    // Relative ./ or ../ — coerce to root.
+    if (href === './' || href === '../') return '/';
+    m = href.match(/^\.\.?\/(#.*)?$/);
+    if (m) return '/' + (m[1] || '');
+    m = href.match(/^\.\.?\/([a-z0-9-]+)\/?(#.*)?$/i);
+    if (m) {
+      const canonicalSlug = i18n.getCanonicalSlug(lang, m[1]);
+      return `/${canonicalSlug}/${m[2] || ''}`;
+    }
+    return href;
+  }
+  // Non-English: canonical paths live under /<lang>/.
   if (href === './' || href === '../') return `/${lang}/`;
   let m = href.match(/^\.\.?\/(#.*)?$/);
   if (m) return `/${lang}/` + (m[1] || '');
@@ -150,11 +183,9 @@ function canonicalizeLink(href, lang) {
   m = href.match(new RegExp(`^/${lang}/([^/?#]+)/?(#.*)?$`));
   if (m) {
     const canonicalSlug = i18n.getCanonicalSlug(lang, m[1]);
-    // The about page lives at /<lang>/, not /<lang>/about/.
     if (canonicalSlug === 'about') return `/${lang}/${m[2] || ''}`;
     return `/${lang}/${canonicalSlug}/${m[2] || ''}`;
   }
-  // /<lang>/  (home)
   m = href.match(new RegExp(`^/${lang}/?(#.*)?$`));
   if (m) return `/${lang}/` + (m[1] || '');
   return href;
@@ -217,7 +248,10 @@ for (const lang of languages) {
     const newPath = path.join(ROOT, rel);
     if (!fs.existsSync(newPath)) continue;
 
-    const oldHtml = readGitHead(rel);
+    // For English, fall back to the pre-restructure /en/... path when comparing
+    // against git HEAD so the migration commit can still verify against history.
+    const fallback = lang === 'en' ? legacyEnRelPath(page) : null;
+    const oldHtml = readGitHead(rel, fallback);
     if (oldHtml === null) {
       console.log(`  - ${rel}: no git HEAD version (skipping)`);
       continue;

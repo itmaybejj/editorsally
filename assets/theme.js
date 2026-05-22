@@ -3,8 +3,6 @@
 
   /* i18n configuration from assets/lang/i18n.js (loaded before theme.js) */
   const i18n = (typeof defined_i18n !== 'undefined') ? defined_i18n : null;
-  const validTranslations = i18n ? i18n.supportedLanguages : [];
-  const validPaths = i18n ? i18n.canonicalPaths.concat(['codes']) : ['about', 'features', 'demo', 'contacts', 'install', 'drupal', 'license', 'codes'];
   const allLangs = i18n ? i18n.allLanguages : ['en'];
   const langCode = allLangs.includes(document.documentElement.lang) ? document.documentElement.lang : 'en';
   const strings = i18n ? i18n.getNav(langCode) : null;
@@ -13,7 +11,7 @@
 </svg>`;
 
   function p(enSlug) {
-    return i18n ? i18n.buildPath(langCode, enSlug) : `/${langCode}/${enSlug}`;
+    return i18n ? i18n.buildPath(langCode, enSlug) : (langCode === 'en' ? `/${enSlug}/` : `/${langCode}/${enSlug}/`);
   }
   function l(enSlug) {
     return strings ? strings.label[enSlug] : { about: 'About', features: 'Features', demo: 'Demo', contacts: 'Contacts', install: 'Install &amp; configure', drupal: 'Drupal module', license: 'Support the project' }[enSlug];
@@ -44,10 +42,18 @@
   const brandLink = document.querySelector('header .navbar-brand');
   if (brandLink) brandLink.setAttribute('href', p('about'));
 
-  /* Determine current canonical slug from URL */
-  const currentPath = window.location.pathname;
-  const pathParts = currentPath.replace(/^\/|\/$/g, '').split('/');
-  const currentSlug = pathParts.length > 1 ? pathParts[pathParts.length - 1] : 'about';
+  /* Extract the page slug from a site-root-relative path.
+     English lives at the site root (/, /<slug>/); other languages at
+     /<lang>/[<slug>/]. Strip the language prefix (if any) and treat the
+     last remaining segment as the slug — or "about" if there's nothing
+     left (the language root is the about page). */
+  function slugFromPath(pathname) {
+    const parts = pathname.replace(/^\/|\/$/g, '').split('/').filter(Boolean);
+    if (parts[0] === langCode) parts.shift();
+    return parts.length === 0 ? 'about' : parts[parts.length - 1];
+  }
+
+  const currentSlug = slugFromPath(window.location.pathname);
   const currentCanonical = i18n ? i18n.getCanonicalSlug(langCode, currentSlug) : currentSlug;
 
   /* Active link highlighting */
@@ -55,8 +61,7 @@
   navLinks.forEach(link => {
     const href = link.getAttribute('href');
     if (!href || href === '#' || href.startsWith('http')) return;
-    const linkParts = href.replace(/^\/|\/$/g, '').split('/');
-    const linkSlug = linkParts.length > 1 ? linkParts[linkParts.length - 1] : 'about';
+    const linkSlug = slugFromPath(href);
     const linkCanonical = i18n ? i18n.getCanonicalSlug(langCode, linkSlug) : linkSlug;
     if (linkCanonical === currentCanonical) {
       link.classList.add('active');
@@ -97,27 +102,6 @@
         </button>
         <ul class="dropdown-menu">${items}</ul>
       </div>`;
-  }
-
-  if (currentPath === '/' || (currentPath === '/codes/')) {
-    const queryString = window.location.search;
-    const urlParams = new URLSearchParams(queryString);
-    const typeValue = urlParams.get('p');
-    let goTo = 'en'
-    if (navigator.languages
-    ) {
-      const intersection = navigator.languages.filter(item => validTranslations.includes(item));
-      if (intersection.length) {
-        goTo = intersection[0];
-      }
-    };
-    if (currentPath === '/codes/') {
-      window.location.replace(`/${langCode}/license`);
-    } else if (typeValue && validPaths.includes(typeValue)) {
-      window.location.replace(i18n ? i18n.buildPath(goTo, typeValue) : `/${goTo}/${typeValue}`);
-    } else {
-      window.location.replace(`/${goTo}/`);
-    }
   }
 
   /* On this page **********************/

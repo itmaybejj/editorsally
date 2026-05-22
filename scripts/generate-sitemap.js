@@ -45,18 +45,16 @@ function hreflangFor(lang) {
 }
 
 // ── Path helpers ────────────────────────────────────────────────────────────
+// English is canonical at the site root (/, /<slug>/); other languages
+// live under /<lang>/...  i18n.buildPath returns the right shape.
 function fileFor(lang, page) {
-  const slug = i18n.getPath(lang, page);
-  return page === 'about'
-    ? path.join(ROOT, lang, 'index.html')
-    : path.join(ROOT, lang, slug, 'index.html');
+  const p = i18n.buildPath(lang, page);
+  // Trailing-slash paths map to <dir>/index.html.
+  return path.join(ROOT, p.replace(/\/$/, ''), 'index.html');
 }
 
 function urlFor(lang, page) {
-  const slug = i18n.getPath(lang, page);
-  return page === 'about'
-    ? `${DOMAIN}/${lang}/`
-    : `${DOMAIN}/${lang}/${slug}/`;
+  return `${DOMAIN}${i18n.buildPath(lang, page)}`;
 }
 
 // ── Build sitemap ───────────────────────────────────────────────────────────

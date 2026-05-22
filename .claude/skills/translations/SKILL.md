@@ -7,7 +7,7 @@ description: Translate page fragments and update stale segments for the project'
 
 The site is built from `<main>`-only HTML fragments at `content/<lang>/<page>.html`. Each translatable block carries a `data-i18n-id` attribute. `assets/lang/manifest.json` hashes each English segment under `source` and tracks per-language hash-last-translated-from under `translations`. The translation skill diffs hashes to do incremental updates.
 
-Built `<lang>/<page>/index.html` files are produced by `scripts/build-pages.js` and **are not edited directly**.
+Built pages are produced by `scripts/build-pages.js` and **are not edited directly**. English is canonical at the site root (`/index.html`, `/<slug>/index.html`); other languages live under `/<lang>/.../`  with translated slugs. Redirect stubs in `/en/` and at non-English English-slug paths are also emitted by the build — never hand-edit them.
 
 ## The Target Languages
 
@@ -79,7 +79,7 @@ After splicing, set `translations[lang][page][segId]` to `source[page][segId]` f
 node scripts/build-pages.js <lang> [page]
 ```
 
-This produces the deployed `<lang>/<page>/index.html` from the fragment + `template.html`. The build strips `data-i18n-id` from the output.
+This produces the deployed page (English at the site root, other languages under `/<lang>/.../`) from the fragment + `template.html`, plus any redirect-stub aliases. The build strips `data-i18n-id` from the output.
 
 ### 8. Verify (recommended for big changes)
 
@@ -102,8 +102,7 @@ Not needed for content edits within an existing (lang, page).
 1. Add the lang code to `i18n.allLanguages` and `nativeNames` in `assets/lang/i18n.js`. Add a full `nav` entry with translated chrome strings.
 2. Run `node scripts/scaffold-translation.js <langCode>` to create empty fragments under `content/<langCode>/` (initially seeded from English text). The script also adds empty manifest entries.
 3. Run the translation workflow above to populate the content.
-4. Uncomment the lang code in `supportedLanguages` when ready to surface to visitors.
-5. Run `node scripts/generate-sitemap.js`.
+4. Run `node scripts/generate-sitemap.js`.
 
 ## Quality Guidelines
 

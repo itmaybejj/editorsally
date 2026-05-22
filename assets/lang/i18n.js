@@ -4,14 +4,16 @@
  * Provides path mappings, navigation strings, and lookup helpers
  * consumed by theme.js for multilingual routing and navigation.
  *
+ * URL scheme: English pages live at the site root (/, /features/, …);
+ * other languages live under /<langCode>/.../  with translated slugs.
+ *
  * To add a new language:
- *  1. Add the lang code to `supportedLanguages`.
+ *  1. Add the lang code to `allLanguages` and `nativeNames`.
  *  2. Add a `paths` entry mapping English slugs to translated slugs.
  *  3. Add a `nav` entry with translated navigation strings.
  *  4. Create translated pages at `/<langCode>/<translatedSlug>/index.html`.
  *  5. Set `<html lang="<langCode>">` in every translated page.
  *  6. Update manifest.json with the new language.
- *  7. Uncomment the lang code in `supportedLanguages` below.
  */
 
 // eslint-disable-next-line no-unused-vars
@@ -19,18 +21,8 @@ const defined_i18n = (() => {
   'use strict';
 
   /**
-   * Language codes that are ready for visitors.
-   * Commented-out codes have translations in progress.
-   */
-  const supportedLanguages = [
-    'bg', 'cs', 'da', 'de', 'el', 'es', 'et', 'fi', 'fr', 'hu', 'id', 'it',
-    'ja', 'ko', 'lt', 'lv', 'nb', 'nl', 'pl', 'pt-br', 'pt-pt', 'ro',
-    'sk', 'sl', 'sv', 'tr', 'uk', 'zh',
-  ];
-
-  /**
-   * All languages with translated pages (used by the language picker).
-   * Unlike supportedLanguages, this always includes every translation.
+   * All languages with translated pages (used by the language picker
+   * and the build pipeline). Includes English plus every translation.
    */
   const allLanguages = [
     'en', 'bg', 'cs', 'da', 'de', 'el', 'es', 'et', 'fi', 'fr', 'hu', 'id',
@@ -1140,15 +1132,25 @@ const defined_i18n = (() => {
   }
 
   /**
-   * Build the full path for a page: /<langCode>/<slug>/
+   * Path prefix for a language: `''` for English (root), `/<lang>` for others.
+   */
+  function langPrefix(lang) {
+    return lang === 'en' ? '' : `/${lang}`;
+  }
+
+  /**
+   * Build the canonical site-root-relative path for a page in a language:
+   *   English about     → /
+   *   English other     → /<slug>/
+   *   Other  about      → /<lang>/
+   *   Other  other      → /<lang>/<translated-slug>/
    */
   function buildPath(lang, enSlug) {
-    if (enSlug === 'about') return `/${lang}/`;
-    return `/${lang}/${getPath(lang, enSlug)}`;
+    if (enSlug === 'about') return `${langPrefix(lang)}/`;
+    return `${langPrefix(lang)}/${getPath(lang, enSlug)}/`;
   }
 
   return {
-    supportedLanguages,
     allLanguages,
     nativeNames,
     canonicalPaths,
@@ -1157,6 +1159,7 @@ const defined_i18n = (() => {
     getPath,
     getCanonicalSlug,
     getNav,
+    langPrefix,
     buildPath,
   };
 })();

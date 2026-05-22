@@ -3,21 +3,33 @@
 
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="refresh" content="0;url=/en/license/">
-  <meta name="robots" content="noindex">
   <title>Redirecting…</title>
-  <link rel="canonical" href="https://editoria11y.com/en/license/">
+  <!-- Static fallback for crawlers and no-JS clients: license in English. -->
+  <link rel="canonical" href="https://editoria11y.com/license/">
+  <meta http-equiv="refresh" content="0;url=/license/">
 </head>
 
 <body>
-  <p>Redirecting to <a href="/en/license/">the licensing page</a>…</p>
+  <p>Redirecting to <a href="/license/">the licensing page</a>…</p>
   <script src="/assets/lang/i18n.js"></script>
   <script>
-    const i18n = (typeof defined_i18n !== 'undefined') ? defined_i18n : null;
-    if (i18n) {
-      const match = (navigator.languages || []).find(l => i18n.supportedLanguages.includes(l));
-      if (match) window.location.replace(i18n.buildPath(match, 'license'));
-    }
+    // Short-URL entry point (used in QR codes / print). Optionally picks
+    // a translated destination from the browser's language preferences;
+    // otherwise falls back to the English page.
+    (() => {
+      const i18n = (typeof defined_i18n !== 'undefined') ? defined_i18n : null;
+      const params = new URLSearchParams(window.location.search);
+      const requested = params.get('p');
+      const validPages = i18n ? i18n.canonicalPaths : [];
+      const page = (requested && validPages.includes(requested)) ? requested : 'license';
+      let lang = 'en';
+      if (i18n) {
+        const preferred = (navigator.languages || []).find(l => i18n.allLanguages.includes(l));
+        if (preferred) lang = preferred;
+      }
+      const target = i18n ? i18n.buildPath(lang, page) : `/${page}/`;
+      window.location.replace(target);
+    })();
   </script>
 </body>
 
