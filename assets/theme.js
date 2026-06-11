@@ -220,7 +220,8 @@
       const billingCycle = annualCheckbox.checked || forceAnnual ? 'annual' : 'monthly';
       const couponPrefix = couponCodes[parseInt(supportSelect.value, 10)];
       const licenseUrl = `https://editoria11y.com/${langCode}/license`;
-      let url = `https://checkout.freemius.com/bundle/26223/plan/43392/licenses/${licenses}/currency/${currency}/?show_upsells=false&disable_licenses_selector=true&billing_cycle=${billingCycle}&annual_discount=false&cart=false&&bundle_discount=false&multisite_discount=false&cancel_url=${encodeURIComponent(licenseUrl)}`;
+      // &annual_discount=false
+      let url = `https://checkout.freemius.com/bundle/26223/plan/43392/licenses/${licenses}/currency/${currency}/?show_upsells=false&disable_licenses_selector=true&billing_cycle=${billingCycle}&cart=false&bundle_discount=false&multisite_discount=false&cancel_url=${encodeURIComponent(licenseUrl)}`;
       if (couponPrefix) {
         url += `&coupon=${couponPrefix}px&hide_coupon=true`;
       }
