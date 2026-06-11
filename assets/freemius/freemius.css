@@ -1,7 +1,7 @@
 .promotional-code__description::after {
-    content: "This is subtracted to match the support level at editoria11y.com/license";
+    content: "Discounts are subtracted to match the support level at editoria11y.com/license";
     display: block;
-    font-weight: 700;
+    font-weight: 300;
     opacity: .9;
 }
 

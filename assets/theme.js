@@ -154,8 +154,7 @@
         50: '331',
         200: '748',
         500: '1665',
-        1000: '3331',
-        unlimited: '4498'
+        unlimited: '2998'
       },
       GBP: {
         1: '13.33',
@@ -164,8 +163,7 @@
         50: '265',
         200: '548',
         500: '1331',
-        1000: '2665',
-        unlimited: '3331'
+        unlimited: '2654'
       },
       EUR: {
         1: '14.99',
@@ -174,8 +172,7 @@
         50: '331',
         200: '664',
         500: '1497',
-        1000: '2998',
-        unlimited: '3998'
+        unlimited: '2998'
       }
     },
     yearly: {
@@ -186,8 +183,7 @@
         50: '3331',
         200: '4998',
         500: '16665',
-        1000: '29998',
-        unlimited: '44998'
+        unlimited: '29997'
       },
       GBP: {
         1: '131',
@@ -196,8 +192,7 @@
         50: '2664',
         200: '5498',
         500: '13331',
-        1000: '26664',
-        unlimited: '33331'
+        unlimited: '26664'
       },
       EUR: {
         1: '148',
@@ -206,8 +201,7 @@
         50: '2998',
         200: '4665',
         500: '14998',
-        1000: '28333',
-        unlimited: '39998'
+        unlimited: '29997'
       }
     }
   };
@@ -217,7 +211,7 @@
     const annualCheckbox = document.getElementById('annual-pricing');
     const supportSelect = document.getElementById('support-level');
     const currencySymbols = { EUR: '€', USD: '$', GBP: '£' };
-    const couponCodes = { 100: null, 80: '120', 60: '100', 50: '75', 44: '66', 33: '50', 22: '33', 17: '25' };
+    const couponCodes = { 100: null, 80: '120', 60: '100', 50: '75', 44: '66', 33: '50', 22: '33', 17: '25', 8: '10' };
 
     function buildCheckoutUrl(licenses, forceAnnual = false) {
       console.log(licenses, forceAnnual);
@@ -226,7 +220,7 @@
       const billingCycle = annualCheckbox.checked || forceAnnual ? 'annual' : 'monthly';
       const couponPrefix = couponCodes[parseInt(supportSelect.value, 10)];
       const licenseUrl = `https://editoria11y.com/${langCode}/license`;
-      let url = `https://checkout.freemius.com/bundle/26223/plan/43392/licenses/${licenses}/currency/${currency}/?show_upsells=false&disable_licenses_selector=true&billing_cycle=${billingCycle}&annual_discount=false&cart=false&bundle_discount=false&multisite_discount=false&cancel_url=${encodeURIComponent(licenseUrl)}`;
+      let url = `https://checkout.freemius.com/bundle/26223/plan/43392/licenses/${licenses}/currency/${currency}/?show_upsells=false&disable_licenses_selector=true&billing_cycle=${billingCycle}&annual_discount=false&cart=false&&bundle_discount=false&multisite_discount=false&cancel_url=${encodeURIComponent(licenseUrl)}`;
       if (couponPrefix) {
         url += `&coupon=${couponPrefix}px&hide_coupon=true`;
       }
@@ -235,7 +229,7 @@
 
     function formatPrice(num) {
       const str = num.toFixed(2);
-      const clean = str.endsWith('.00') || num > 16 ? Math.ceil(num).toString() : str;
+      const clean = str.endsWith('.00') || num > 10 ? (Math.ceil(num)).toString() : str;
       return clean.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
     }
 
