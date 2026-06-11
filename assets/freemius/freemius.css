@@ -1,18 +1,27 @@
 .promotional-code__description::after {
-    content: "editoria11y.com/codes";
+    content: "This is subtracted to match the support level at editoria11y.com/license";
     display: block;
     font-weight: 700;
     opacity: .9;
 }
-.fs-line-item--has-smart-input .fs-line-item__wrapper > div, .fs-line-item__description {
+
+.fs-line-item--has-smart-input .fs-line-item__wrapper>div,
+.fs-line-item__description {
     width: 100%;
 }
+
 .promotional-code__description {
     justify-content: space-between;
 }
-fs-upsell {
+
+fs-upsell,
+fs-cart-header-line-items,
+.subtotal,
+.fs-cart-header-footer .fs-line-item__amount,
+.promotional-code .fs-line-item__amount {
     display: none;
 }
+
 .fs-select__dropdown-items {
     max-height: calc(var(--fs-ds-appearance-control-height) * 9.5);
     overflow-y: auto;
