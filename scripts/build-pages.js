@@ -38,6 +38,13 @@ const pageArg = process.argv[3];
 
 const DOMAIN = 'https://editoria11y.com';
 
+// Open Graph image (hard-coded for now). Absolute URL — OG requires it.
+const OG_IMAGE = `${DOMAIN}/assets/images/og-image.png`;
+
+// Fallback og:description for pages with no [data-og="description"] element.
+const DEFAULT_DESCRIPTION =
+  'Editoria11y is a community-supported, open-source accessibility checker with deep integrations for Drupal, WordPress, and more.';
+
 // Chrome assets referenced from template.html. Cache-busted per-file by
 // content hash so a returning visitor only re-fetches assets that actually
 // changed. Hashes are stable across builds when content is unchanged, so
@@ -154,6 +161,22 @@ function deriveTitle(mainNode) {
   return text ? `${text} — Editoria11y` : 'Editoria11y';
 }
 
+// og:description — collapsed text content of the [data-og="description"]
+// element, or the site default when none is present.
+function deriveDescription(mainNode) {
+  const node = mainNode.querySelector('[data-og="description"]');
+  if (!node) return DEFAULT_DESCRIPTION;
+  const text = node.text.replace(/\s+/g, ' ').trim();
+  return text || DEFAULT_DESCRIPTION;
+}
+
+// Remove authoring-only data-og attributes from the deployed output.
+function stripOgAttrs(root) {
+  for (const n of root.querySelectorAll('[data-og]')) {
+    n.removeAttribute('data-og');
+  }
+}
+
 function htmlAttr(str) {
   return String(str).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 }
@@ -226,11 +249,14 @@ function buildPage(lang, page) {
   const main = fragRoot.querySelector('main');
   if (!main) return { skipped: true, reason: 'no <main>' };
 
-  // Derive title first (from source HTML that still has data-i18n-id; doesn't affect text).
+  // Derive title and description first (from source HTML that still has the
+  // authoring attributes; reading text doesn't affect them).
   const title = deriveTitle(main);
+  const description = deriveDescription(main);
 
-  // Strip IDs (mutates the clone we'll inject).
+  // Strip authoring-only attributes (mutates the clone we'll inject).
   stripI18nIds(main);
+  stripOgAttrs(main);
 
   // Rewrite slugs for the target language.
   rewriteSlugsInMain(main, lang);
@@ -245,6 +271,10 @@ function buildPage(lang, page) {
   out = out.replaceAll('@@CLOSE@@', htmlAttr(nav.close));
   out = out.replaceAll('@@CANONICAL_URL@@', urlForPage(lang, page));
   out = out.replace('@@HREFLANG_ALTERNATES@@', buildHreflangAlternates(page));
+  out = out.replaceAll('@@OG_TITLE@@', htmlAttr(title));
+  out = out.replaceAll('@@OG_DESCRIPTION@@', htmlAttr(description));
+  out = out.replaceAll('@@OG_IMAGE@@', htmlAttr(OG_IMAGE));
+  out = out.replaceAll('@@OG_URL@@', htmlAttr(urlForPage(lang, page)));
 
   // Footer labels (nav.label)
   for (const slug of Object.keys(nav.label)) {

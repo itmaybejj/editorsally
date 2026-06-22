@@ -41,6 +41,11 @@
   <link rel="alternate" hreflang="uk" href="https://editoria11y.com/uk/install/" />
   <link rel="alternate" hreflang="zh" href="https://editoria11y.com/zh/install/" />
   <link rel="alternate" hreflang="x-default" href="https://editoria11y.com/install/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Install &amp; configure — Editoria11y" />
+  <meta property="og:description" content="To build your own implementation, download a local copy (or reference a CDN version) of a Language pack, the JS min file, and the CSS min file, and then create a new “Ed11y” instance." />
+  <meta property="og:image" content="https://editoria11y.com/assets/images/og-image.png" />
+  <meta property="og:url" content="https://editoria11y.com/install/" />
   <link href="/assets/bootstrap/css/bootstrap.min.css?v=7575987f" rel="stylesheet" />
   <link href="/assets/theme.css?v=b0b90bcb" rel="stylesheet" />
   <link href="/assets/prism/prism.css?v=21cde701" rel="preload" as="style" onload="this.rel='stylesheet'" />
@@ -108,8 +113,8 @@
         <h2>
           Custom installation
         </h2>
-        <p>To build your own implementation, <a href="https://github.com/itmaybejj/editoria11y"
-            data-type="URL" data-id="https://github.com/itmaybejj/editoria11y" class="liinternal">download a local
+        <p>To build your own implementation, <a             href="https://github.com/itmaybejj/editoria11y" data-type="URL"
+            data-id="https://github.com/itmaybejj/editoria11y" class="liinternal">download a local
             copy</a> (or
           reference a <a href="https://cdn.jsdelivr.net/gh/itmaybejj/editoria11y@2/dist/editoria11y.min.js"
             class="liinternal">CDN version</a>) of a Language pack, the JS min file, and the CSS min file, and then
@@ -303,7 +308,8 @@ baseFontFamily: '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica N
 
         <p>The Drupal module also adds custom edit links to the tips, using the
           <code>editLinks</code> parameter. Note
-          “Page editor” and “Layout editor:”</p>
+          “Page editor” and “Layout editor:”
+        </p>
 
         <figure class="wp-block-image size-full"><img loading="lazy" data-recalc-dims="1" fetchpriority="high" decoding="async" width="580" height="300" src="https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?resize=580%2C300&amp;ssl=1" alt="Tooltip with &quot;Page editor&quot; and &quot;Layout editor&quot; links inserted." class="wp-image-523" srcset="https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?w=1290&amp;ssl=1 1290w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?resize=600%2C311&amp;ssl=1 600w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?resize=768%2C398&amp;ssl=1 768w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?resize=1200%2C621&amp;ssl=1 1200w" sizes="(max-width: 580px) 100vw, 580px" /></figure>
 
@@ -340,7 +346,8 @@ document.addEventListener('ed11yPop', e => {
         <p>If the <strong><em>customTests</em></strong> parameter is a
           <strong><em>number</em></strong>, Editoria11y
           will dispatch an “ed11yRunCustomTests” event while checking, and then pause for up to 500ms while listening
-          for that number of “<code>ed11yResume</code>” events.</p>
+          for that number of “<code>ed11yResume</code>” events.
+        </p>
 
         <p>This can be leveraged to call as many scripts containing custom tests as you like,
           which can push their
@@ -541,7 +548,7 @@ document.addEventListener('ed11yPop', e => {
   </footer>
   <script async src="/assets/bootstrap/js/bootstrap.bundle.min.js?v=69f68885" class="astro-vvvwv3sm"></script>
   <script async src="/assets/lang/i18n.js?v=9063c00b"></script>
-  <script async src="/assets/theme.js?v=133f2cfc"></script>
+  <script async src="/assets/theme.js?v=39536f05"></script>
   <script async src="/assets/prism/prism.js?v=3bbae506"></script>
 </body>
 
