@@ -210,9 +210,7 @@
         <p class="fs-5" data-i18n-id="s-7d6d">
           The CSA fills the gap: project members fund the development of the Editoria11y library, its CMS plugins, and
           the CSA suite: a rapidly growing set of open source quality assurance tools that provide similar
-          functionality to commercial products, at a much lower price point.
-
-          The CSA suite for Drupal is currently free in beta, and will arrive for WordPress in Q3 2026.
+          functionality to closed-source products, at a much lower price point.
         </p>
         <figure class="figure my-4 shadow border rounded p-0 m-2 col-sm-12 col-xl-11">
           <img alt="Site crawl in progress" src="../../assets/images/3x-crawl.png" height="786" width="1986"
@@ -280,6 +278,54 @@
       <section id="active-projects">
         <h3 class="pt-4" data-section="active-projects" data-i18n-id="s-52da">Active</h3>
         <div class="accord">
+          <div class="accord">
+          <details>
+            <summary>
+              Q2 2027: Create pre-publish governance tools for WordPress
+            </summary>
+            <div>
+              <p class="fs-6">This project has been fully funded by a generous grant from a group of universities interested in co-designing the functionality.</p>
+                <ul class="fs-6">
+                  <li>Create role-based configuration for which users are allowed to save pages with known problems.</li>
+                  <li>Create an in-editor wizard that authors step through to review alerts they have not addressed before publishing content.</li>
+                </ul>
+            </div>
+          </details>
+          <details>
+            <summary>
+              Early 2027: Broken link checking for Drupal & WordPress
+            </summary>
+            <div>
+              <p class="fs-6">
+                Status: Looking for partners and collaborators. This project has been partially funded by an academic grant, but work has not yet begun.
+              </p>
+              <ul class="fs-6">
+                    <li>Create DB tables to store detected URLs, mapped to pages.</li>
+                    <li>Create cron jobs to validate local paths using CMS validation tools and remote tasks using HTTP get requests.</li>
+                    <li>Create reports and report exports.</li>
+                    <li>Create in-page highlighting.</li>
+                  </ul>
+            </div>
+          </details>
+          <details>
+            <summary>
+              Early 2027: PDF checking for Drupal & WordPress
+            </summary>
+            <div>
+              <p class="fs-6">Status: looking for partners and collaborators. This project has been partially funded by an academic grant, but work has not yet begun.</p>
+              <ul class="fs-6">
+                <li>Create DB tables to store detected PDFs, mapped to pages.</li>
+                <li>Use PHP tools to scrape markup, checking for basic tags.</li>
+                <li>Create reports with goverance tools. E.g., "This PDF is OK if this alternate format URL is present on the page."</li>
+                <li>Modify in-page highlighting based on whether the PDF is known-bad or possibly OK.</li>
+              </ul>
+            </div>
+          </details>
+        </div>
+      </section>
+      <section id="finished">
+        <h3 data-section="finished" class="pt-5" data-i18n-id="s-4646">Recently finished</h3>
+        <div class="accord">
           <details>
             <summary data-i18n-id="s-8ea4">
               Q2 2026: Launch the Editoria11y CSA community
@@ -303,7 +349,7 @@
             <div>
               <ol class="fs-6">
                 <li data-i18n-id="s-4265">Finished for Drupal.</li>
-                <li data-i18n-id="s-4ab7">Todo: port builder to WordPress.</li>
+                <li data-i18n-id="s-4ab7">Port builder to WordPress.</li>
               </ol>
             </div>
           </details>
@@ -328,11 +374,6 @@
               </ol>
             </div>
           </details>
-        </div>
-      </section>
-      <section id="finished">
-        <h3 data-section="finished" class="pt-5" data-i18n-id="s-4646">Recently finished</h3>
-        <div class="accord">
           <details>
             <summary data-i18n-id="s-8545">
               Q1 2026: Library 3.x rewrite
@@ -390,12 +431,9 @@
         <h3 data-section="project-ideas" class="pt-5" data-i18n-id="s-e19c">Under discussion</h3>
         <p data-i18n-id="s-511c">Discuss and vote on these ideas in the <a
             href="https://github.com/itmaybejj/editoria11y/discussions">Editoria11y library forums</a>.</p>
-        <p data-i18n-id="s-99ee">Ideas are tagged with difficulty/priority estimates based on current community chatter.
         </p>
         <ul class="mt-1 p-5 pt-0">
           <li data-i18n-id="s-47b0">Multi-site monitoring dashboard</li>
-          <li data-i18n-id="s-b625">Broken link detection</li>
-          <li data-i18n-id="s-347e">PDF scanning</li>
           <li data-i18n-id="s-b7fa">Tooltip code location tab</li>
           <li data-i18n-id="s-ec9e">Tooltip page report export</li>
           <li data-i18n-id="s-1a54">Flagged words</li>

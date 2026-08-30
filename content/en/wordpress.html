@@ -10,9 +10,10 @@
         <section id="features">
           <h2 class="pt-3" data-i18n-id="s-1dcf">Core features</h2>
 
-          <p class="fs-6" data-i18n-id="s-a8c0" data-og="description">The WordPress plugin connects the checker
-            library to the editorial backend,and adds many server-side tools for reporting, governance and configuration
-          </p>
+          <p class="fs-6" data-i18n-id="s-a8c0" data-og="description">The WordPress plugin connects the checker library to
+            the editorial backend,
+            and adds many server-side tools for reporting, governance and configuration</p>
+
           <figure class="figure my-4 row">
             <div class="col-lg-8">
               <img loading="lazy" src="/assets/images/3x-editing.png" class="rounded border figure-img img-fluid"
@@ -66,20 +67,8 @@
 
         </section>
         <h2 data-i18n-id="s-8fec">Installation and key setup steps</h2>
-        <p data-i18n-id="s-7627">The <a href="https://www.WordPress.org/project/editoria11y/">bundled installer</a> at
-          WordPress.org includes
-          several modules:</p>
-        <ul>
-          <li data-i18n-id="s-b830">
-            Editoria11y: the core content checker and dashboard.
-          </li>
-          <li data-i18n-id="s-b351">
-            Editoria11y CSA: developer tests and dashboard maintenance tools.
-          </li>
-          <li data-i18n-id="s-74fe">
-            Editoria11y Export: CSV reporting tools.
-          </li>
-        </ul>
+        <p data-i18n-id="s-7627">The <a href="https://wordpress.org/plugins/editoria11y-accessibility-checker/">bundled installer</a> at
+          WordPress.org includes the free checker, including content tests, a site-wide dashboard and multi-site administrator tools. CSA members download and activate an additional plugin with developer and auditor tools.</p>
         <p data-i18n-id="s-88fd">Install like any other module, and then take these key steps:</p>
         <ol>
           <li data-i18n-id="s-7187"><strong>Check permissions.</strong> Trusted authors should have "Mark OK," "Mark as
@@ -97,10 +86,6 @@
             appear in reports until they are crawled or visited by a logged in user.
           </li>
         </ol>
-        <p data-i18n-id="s-e025">View a <a href="https://youtu.be/uYvNYPg38nU?si=dqADyWpTtOhniHTP&t=696">video
-            introduction to the
-            configuration options</a> (v2.4).</p>
-
         <h2 id="check-roots" data-i18n-id="s-9202">Hide unhelpful alerts</h2>
         <p data-i18n-id="s-fa47">
           <strong>Good configurations suppress unhelpful alerts, so content authors can focus on issues they should
@@ -138,12 +123,10 @@
               <li data-i18n-id="s-72c9"><strong>Drop</strong> results from tests set to "Developer only."</li>
               <li data-i18n-id="s-576e"><strong>Drop</strong> results on elements from outside specified
                 <strong><em>content</em></strong>
-                regions, e.g.:<br /><code>main, footer</code>
-              </li>
+                regions, e.g.:<br /><code>main, footer</code></li>
               <li data-i18n-id="s-bb1d"><strong>Drop</strong> results on elements that match
                 <strong><em>content</em></strong> ignore
-                selectors.
-              </li>
+                selectors.</li>
             </ul>
             <span data-translate data-i18n-id="s-bc47">Note that there is not a second "gather" phase. The developer
               page regions must include the content
@@ -158,15 +141,15 @@
           There are two types of dismissals available from the footer of each tooltip:</p>
         <div class="my-2"
           style="background: url(/assets/images/3x-generic-tip.png) 100% 98%; max-width: 600px; padding-top: 6%; background-size: 108%;">
-        </div>
+        </div>∑
         <ul>
           <li data-i18n-id="s-7b65">"Ignore" is stored as a user preference: the alert is now hidden for the current
             user, but only the
             current user.</li>
           <li data-i18n-id="s-654c">"Mark OK" hides the alert for all users.</li>
         </ul>
-        <p data-i18n-id="s-dc14">Whether a user is able to dismiss an alert is controlled at the role level in
-          WordPress's user permissions.
+        <p data-i18n-id="s-dc14">Whether a user is able to dismiss an alert is controlled at the role level in WordPress's
+          user permissions.
           <strong>Most authors should be allowed to dismiss alerts</strong>. There is no point in assigning someone a
           manual check if they cannot mark the item as having been checked.
         </p>
@@ -264,8 +247,8 @@
         <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
           <label for="edit-no-load" class="form-item__label">Do not check on pages with these elements</label>
           <div class="form-textarea-wrapper">
-            <textarea data-WordPress-selector="edit-no-load" aria-describedby="edit-no-load--description"
-              id="edit-no-load" name="no_load" rows="1" cols="20" class="form-control"></textarea>
+            <textarea data-WordPress-selector="edit-no-load" aria-describedby="edit-no-load--description" id="edit-no-load"
+              name="no_load" rows="1" cols="20" class="form-control"></textarea>
           </div>
 
           <label for="edit-ignore-all-if-absent" class="form-item__label">Hide all alerts on pages where these
@@ -410,8 +393,8 @@ function MY_MODULE_editoria11y_alter_config(array &$attach, CacheableMetadata $c
     $attach['allow_ok'] = 'okAll';
   }
 }--></code></pre>
-        <p data-i18n-id="s-2368">Modifying <code>WordPressSettings</code> only helps if the module JS is already set up
-          to pass that value to
+        <p data-i18n-id="s-2368">Modifying <code>WordPressSettings</code> only helps if the module JS is already set up to
+          pass that value to
           the library. To add additional parameters, you need to modify the JS <code>options</code> object directly.
           The module checks for one global JS variable of <code>editoria11yOptionsOverride</code>. If this is set, it
           will pass the <code>options</code> object to an <code>editoria11yOptions</code> function you have provided
@@ -438,9 +421,8 @@ var editoria11yOptions = function(options) {
           <h2 data-i18n-id="s-e0f0">Write your own tests</h2>
           <p data-i18n-id="s-6ece">First, in the module config, add 1 to the "Custom tests" options so it knows to
             watch for the tests.</p>
-          <p data-i18n-id="s-4316">Then create a WordPress JS library with your tests in your theme or module, using the
-            <a href="/en/install/#custom-tests">library guide to writing custom tests</a>.
-          </p>
+          <p data-i18n-id="s-4316">Then create a WordPress JS library with your tests in your theme or module, using the <a
+              href="/en/install/#custom-tests">library guide to writing custom tests</a>.</p>
           <p data-i18n-id="s-b4ea">Here's a working example from Princeton, of a custom test to alert on Safe Links.
             Note that it accesses
             the Editoria11y class through <code>WordPress.Ed11y.</code></p>
