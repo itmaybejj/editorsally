@@ -30,7 +30,7 @@ const fs = require('fs');
 const path = require('path');
 const crypto = require('crypto');
 const { loadI18n, ROOT } = require('./lib/i18n-loader.js');
-const { parseFragment, stripI18nIds } = require('./lib/parse-fragment.js');
+const { parseFragment, stripI18nIds, assertWellFormed } = require('./lib/parse-fragment.js');
 
 const i18n = loadI18n();
 const langArg = process.argv[2];
@@ -245,6 +245,9 @@ function buildPage(lang, page) {
     return { skipped: true, reason: 'no fragment' };
   }
   const fragHtml = fs.readFileSync(fragPath, 'utf8');
+  // Fail loudly on malformed source: the parser would otherwise silently
+  // drop or re-parent elements, corrupting the page layout.
+  assertWellFormed(fragHtml, `content/${lang}/${page}.html`);
   const fragRoot = parseFragment(fragHtml);
   const main = fragRoot.querySelector('main');
   if (!main) return { skipped: true, reason: 'no <main>' };

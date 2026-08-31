@@ -99,6 +99,89 @@ function collectExistingIds(root) {
   return ids;
 }
 
+// Void elements — never carry a closing tag, so they're skipped by the
+// structural check below.
+const VOID_TAGS = new Set([
+  'area', 'base', 'br', 'col', 'embed', 'hr', 'img', 'input',
+  'link', 'meta', 'param', 'source', 'track', 'wbr',
+]);
+
+// Tags whose contents may hold `<`/`>` that aren't markup.
+const RAW_TEXT_TAGS = new Set(['script', 'style']);
+
+/**
+ * Verify a fragment's tags are balanced and properly nested.
+ *
+ * node-html-parser silently recovers from mismatched tags by discarding or
+ * re-parenting elements, which corrupts the built page instead of failing the
+ * build. Checking first turns a silent layout bug into a build error.
+ *
+ * Returns an array of human-readable problems (empty when the fragment is well
+ * formed). Line numbers are 1-indexed.
+ */
+function findStructuralErrors(html) {
+  const errors = [];
+  const stack = [];
+  const tagRe = /<(\/?)([a-zA-Z][a-zA-Z0-9-]*)((?:"[^"]*"|'[^']*'|[^>])*)>/g;
+  const lineAt = (index) => html.slice(0, index).split('\n').length;
+  let m;
+  while ((m = tagRe.exec(html)) !== null) {
+    const isClose = m[1] === '/';
+    const tag = m[2].toLowerCase();
+    const attrs = m[3];
+    const line = lineAt(m.index);
+
+    if (!isClose && RAW_TEXT_TAGS.has(tag)) {
+      // Skip to the matching close tag; the body isn't markup.
+      const close = new RegExp(`</${tag}\\s*>`, 'i');
+      close.lastIndex = tagRe.lastIndex;
+      const rest = html.slice(tagRe.lastIndex);
+      const found = rest.match(close);
+      if (found) tagRe.lastIndex += found.index + found[0].length;
+      continue;
+    }
+    if (VOID_TAGS.has(tag) || (!isClose && attrs.trimEnd().endsWith('/'))) continue;
+
+    if (!isClose) {
+      stack.push({ tag, line });
+      continue;
+    }
+    const top = stack[stack.length - 1];
+    if (!top) {
+      errors.push(`line ${line}: stray </${tag}> with no matching open tag`);
+      continue;
+    }
+    if (top.tag === tag) {
+      stack.pop();
+      continue;
+    }
+    const openIdx = stack.map((f) => f.tag).lastIndexOf(tag);
+    if (openIdx === -1) {
+      errors.push(`line ${line}: stray </${tag}> (innermost open tag is <${top.tag}> from line ${top.line})`);
+      continue;
+    }
+    for (let i = stack.length - 1; i > openIdx; i--) {
+      errors.push(`line ${stack[i].line}: <${stack[i].tag}> is never closed (</${tag}> at line ${line} closes it implicitly)`);
+    }
+    stack.length = openIdx;
+  }
+  for (const frame of stack) {
+    errors.push(`line ${frame.line}: <${frame.tag}> is never closed`);
+  }
+  return errors;
+}
+
+// Throw when `html` is not well formed. `label` identifies the source in the
+// message (e.g. "en/features").
+function assertWellFormed(html, label) {
+  const errors = findStructuralErrors(html);
+  if (errors.length) {
+    throw new Error(
+      `Malformed HTML in ${label}:\n    ${errors.join('\n    ')}`
+    );
+  }
+}
+
 function stripI18nIds(root) {
   for (const n of root.querySelectorAll('[data-i18n-id]')) {
     n.removeAttribute('data-i18n-id');
@@ -116,6 +199,8 @@ module.exports = {
   assignNewId,
   collectExistingIds,
   stripI18nIds,
+  findStructuralErrors,
+  assertWellFormed,
   isImg,
   isSkipped,
   isLeafBlock,
