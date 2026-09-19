@@ -43,7 +43,7 @@
   <link rel="alternate" hreflang="x-default" href="https://editoria11y.com/demo/" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Editoria11y" />
-  <meta property="og:description" content="Editoria11y is a community-supported, open-source accessibility checker with deep integrations for Drupal, WordPress, and more." />
+  <meta property="og:description" content="このデモは TinyMCE エディターを使用しています。Editoria11y はほとんどのテキストエディターと互換性があり、WordPress および Drupal では CKEditor と Gutenberg へのターンキー実装も用意されています。" />
   <meta property="og:image" content="https://editoria11y.com/assets/images/og-image.png" />
   <meta property="og:url" content="https://editoria11y.com/ja/demo/" />
   <link href="/assets/bootstrap/css/bootstrap.min.css?v=7575987f" rel="stylesheet" />
@@ -143,7 +143,7 @@
             <p>alt属性がまったくない画像：</p>
             <p class="positive"><img loading="lazy" src="/assets/images/px20240813sm.jpg" /></p>
 
-            <p>無効なalt属性を持つ画像、例：<code class="language-plaintext highlighter-rouge">alt=”'”</code></p>
+            <p>無効なalt属性を持つ画像、例：<code class="language-plaintext highlighter-rouge">alt="'"</code></p>
 
             <p class="positive"><img loading="lazy" alt="'" src="/assets/images/px20240813sm.jpg" /></p>
 
@@ -210,7 +210,7 @@
               <p style="background: linear-gradient(45deg,#ccc 25%,#0000 25% 75%,#ccc 75%,#ccc),linear-gradient(45deg,#ccc 25%,#0000 25% 75%,#ccc 75%,#ccc)">
                 計算不可能です。</p>
             </div>
-            <div class="positive"><label>コントラストが低い入力フィールド
+            <div class="positive"><label data-translate>コントラストが低い入力フィールド
                 <input class="form-text" type="text" style="color: #777;" /></label></div>
 
             <style>
@@ -219,9 +219,8 @@
               }
             </style>
 
-            <label for="unsupported-placeholder">プレースホルダーの色を計算できません</label>
-            <div class="positive" style="background: transparent;"><input type="text" id="unsupported-placeholder"
-                placeholder="Rec2020 color space" /></div>
+            <label for="unsupported-placeholder" data-translate>プレースホルダーの色を計算できません</label>
+            <div class="positive" style="background: transparent;"><input type="text" id="unsupported-placeholder" placeholder="Rec2020 色空間" data-translate /></div>
 
 
             <p>コントラストが不十分なSVGグラフィック</p>
@@ -248,13 +247,8 @@
 
             <p>字幕の手動チェックが必要なビデオ：</p>
             <div class="positive" style="width: 560px; aspect-ratio: 560 / 315; max-width: 100%; cursor: not-allowed;">
-              <iframe width="560" height="315" inert=""
-                src="https://www.youtube-nocookie.com/embed/QGsevnbItdU?si=W_b2i2o_n5v1ArvA"
-                style="width: 560px; aspect-ratio: 560 / 315; max-width: 100%; cursor: not-allowed;"
-                title="YouTube: 実施方法の動画。再生は無効になっています。" sandbox="allow-scripts allow-same-origin"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="origin" allowfullscreen></iframe>
-              <div><small><em>クッキーを防ぐため再生を無効にしています。</em></small></div>
+              <iframe width="560" height="315" inert src="https://www.youtube-nocookie.com/embed/QGsevnbItdU?si=W_b2i2o_n5v1ArvA" style="width: 560px; aspect-ratio: 560 / 315; max-width: 100%; cursor: not-allowed;" title="YouTube: 実施方法の動画。再生は無効になっています。" sandbox="allow-scripts allow-same-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="origin" allowfullscreen data-translate></iframe>
+              <div><small><em data-translate>クッキーを防ぐため再生を無効にしています。</em></small></div>
             </div>
 
             <p>音声にはトランスクリプトが必要です：</p>
@@ -270,7 +264,7 @@
 
             <p>フォーカスできないiframe：</p>
             <div class="positive">
-              <iframe title="example" sandbox="" tabindex="-1" data-needs-src=""></iframe>
+              <iframe title="例" sandbox tabindex="-1" data-needs-src data-translate></iframe>
             </div>
 
             <p>ネストされたインタラクティブコンポーネント</p>
@@ -278,7 +272,7 @@
               <details>
                 <summary>アコーディオン</summary>
                 <details>
-                  <summary>アコーディオン</summary>サプライズ！
+                  <summary>アコーディオン</summary><span data-translate>サプライズ！</span>
                 </details>
               </details>
             </div>
@@ -449,12 +443,12 @@
 
             <p>非表示ラベルを持つ入力フィールド（表示ラベルもあるかどうか確認します）。</p>
             <div class="positive">
-              <input type="text" title="Email" />
+              <input type="text" title="メールアドレス" data-translate />
             </div>
 
             <p>プレースホルダーラベルのみの入力フィールド（表示ラベルもあるかどうか確認します）。</p>
             <div class="positive">
-              <input type="text" placeholder="Email" />
+              <input type="text" placeholder="メールアドレス" data-translate />
             </div>
 
             <div class="positive">
@@ -541,8 +535,8 @@
     </div>
   </footer>
   <script async src="/assets/bootstrap/js/bootstrap.bundle.min.js?v=69f68885" class="astro-vvvwv3sm"></script>
-  <script async src="/assets/lang/i18n.js?v=9063c00b"></script>
-  <script async src="/assets/theme.js?v=39536f05"></script>
+  <script async src="/assets/lang/i18n.js?v=650b32df"></script>
+  <script async src="/assets/theme.js?v=0ee05eec"></script>
   <script async src="/assets/prism/prism.js?v=3bbae506"></script>
 </body>
 

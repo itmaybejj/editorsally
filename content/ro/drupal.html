@@ -10,7 +10,7 @@
           <section id="features">
             <h2 class="pt-3" data-i18n-id="s-1dcf">Funcții principale</h2>
 
-            <p class="fs-6" data-i18n-id="s-a8c0">Modulul Drupal conectează biblioteca verificatorului la backend-ul editorial,
+            <p class="fs-6" data-i18n-id="s-a8c0" data-og="description">Modulul Drupal conectează biblioteca verificatorului la backend-ul editorial,
               și adaugă multe instrumente server-side pentru raportare, guvernanță și configurare</p>
 
             <figure class="figure my-4 row">
@@ -95,8 +95,7 @@
           </p>
           <hr/>
           <p data-i18n-id="s-7918">
-            În timpul fiecărei rulări de test, Editoria11y adună un singur set de elemente din setarea „Check content in these
-            containers", și apoi îl filtrează de mai multe ori. Iată cum arată o rulare de test:
+            În timpul fiecărei rulări de test, Editoria11y adună un singur set de elemente din setarea „Verifică conținutul din aceste containere", și apoi îl filtrează de mai multe ori. Iată cum arată o rulare de test:
           </p>
           <ol>
             <li data-i18n-id="s-994a">
@@ -148,12 +147,12 @@
           <h3 id="roots" data-i18n-id="s-d932">Ignorați elementele</h3>
           <p data-i18n-id="s-9d1e">Aceste două setări de configurare sunt cele mai importante!</p>
           <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
-            <label for="edit-content-root">Check content in these containers</label>
+            <label for="edit-content-root" data-translate data-i18n-id="s-15bb">Verifică conținutul din aceste containere</label>
             <div><textarea class="form-control" id="edit-content-root" name="content_root" rows="1" cols="30"
                 disabled></textarea>
             </div>
             <div class="mt-3">
-              <label for="edit-ignore-elements">Skip over these elements</label>
+              <label for="edit-ignore-elements" data-translate data-i18n-id="s-be3e">Sari peste aceste elemente</label>
               <div>
                 <textarea class="form-control" id="edit-ignore-elements" disabled name="ignore_elements" rows="1"
                   cols="30" class=""></textarea>
@@ -173,8 +172,8 @@
           <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
             <div>
               <fieldset>
-                <legend>
-                  Developer check area
+                <legend data-translate data-i18n-id="s-430d">
+                  Zonă de verificare pentru dezvoltatori
                 </legend>
                 <div class="fieldset__wrapper fieldset__wrapper--group">
 
@@ -182,20 +181,19 @@
                     <div>
                       <input aria-describedby="edit-dev-check-root--description" type="radio"
                         id="edit-dev-check-root-automatic" name="dev_check_root" value="automatic" checked="checked" />
-                      <label for="edit-dev-check-root-automatic" class="form-item__label option">All elements</label>
+                      <label for="edit-dev-check-root-automatic" class="form-item__label option" data-translate data-i18n-id="s-76df">Toate elementele</label>
                     </div>
                     <div class="d-flex">
                       <input aria-describedby="edit-dev-check-root--description" type="radio"
                         id="edit-dev-check-root-match" name="dev_check_root" value="match"
                         class="align-self-baseline mt-1 me-1" />
-                      <label for="edit-dev-check-root-match" class="form-item__label option">Only the containers listed
-                        in the Content Setting tab</label>
+                      <label for="edit-dev-check-root-match" class="form-item__label option" data-translate data-i18n-id="s-75dc">Doar containerele listate în fila Setări conținut</label>
                     </div>
                     <div class="">
                       <input aria-describedby="edit-dev-check-root--description" type="radio"
                         id="edit-dev-check-root-specify" name="dev_check_root" value="specify"
                         class="form-radio form-boolean form-boolean--type-radio" />
-                      <label for="edit-dev-check-root-specify" class="">The specific containers listed below</label>
+                      <label for="edit-dev-check-root-specify" class="" data-translate data-i18n-id="s-8f65">Containerele specifice listate mai jos</label>
                     </div>
                   </div>
 
@@ -203,7 +201,7 @@
               </fieldset>
 
               <div class="">
-                <label for="edit-always-ignore" class="mt-3">Ignore for both developers and content editors</label>
+                <label for="edit-always-ignore" class="mt-3" data-translate data-i18n-id="s-eec7">Ignoră pentru dezvoltatori și editori de conținut</label>
                 <div class="form-textarea-wrapper">
                   <textarea id="edit-always-ignore" class="form-control" name="always_ignore" rows="1" cols="20"
                     placeholder=""></textarea>
@@ -231,14 +229,13 @@
             Cea mai simplă modalitate de a face acest lucru este prin transmiterea claselor CSS sau ID-urilor la aceste opțiuni:
           </p>
           <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
-            <label for="edit-no-load" class="form-item__label">Do not check on pages with these elements</label>
+            <label for="edit-no-load" class="form-item__label" data-translate data-i18n-id="s-f57b">Nu verifica paginile care conțin aceste elemente</label>
             <div class="form-textarea-wrapper">
               <textarea data-drupal-selector="edit-no-load" aria-describedby="edit-no-load--description"
                 id="edit-no-load" name="no_load" rows="1" cols="20" class="form-control"></textarea>
             </div>
 
-            <label for="edit-ignore-all-if-absent" class="form-item__label">Hide all alerts on pages where these
-              elements are not present</label>
+            <label for="edit-ignore-all-if-absent" class="form-item__label" data-translate data-i18n-id="s-07a0">Ascunde toate alertele pe paginile unde aceste elemente lipsesc</label>
             <div class="form-textarea-wrapper">
               <textarea data-drupal-selector="edit-ignore-all-if-absent"
                 aria-describedby="edit-ignore-all-if-absent--description" id="edit-ignore-all-if-absent"
@@ -325,12 +322,11 @@
           </p>
 
           <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
-            <label for="edit-element-hides-overflow" class="form-item__label">Elements with overflow hidden</label>
+            <label for="edit-element-hides-overflow" class="form-item__label" data-translate data-i18n-id="s-c6d7">Elemente cu overflow ascuns</label>
             <textarea data-drupal-selector="edit-element-hides-overflow"
               aria-describedby="edit-element-hides-overflow--description" id="edit-element-hides-overflow"
               name="element_hides_overflow" rows="1" cols="60" class="form-control"></textarea>
-            <label for="edit-hidden-handlers" class="form-item__label">Theme JS will handle revealing hidden tooltips
-              inside these containers</label>
+            <label for="edit-hidden-handlers" class="form-item__label" data-translate data-i18n-id="s-dc25">JS-ul temei se va ocupa de afișarea tooltip-urilor ascunse din aceste containere</label>
             <textarea data-drupal-selector="edit-hidden-handlers" aria-describedby="edit-hidden-handlers--description"
               id="edit-hidden-handlers" name="hidden_handlers" rows="1" cols="60" class="form-control"></textarea>
           </div>

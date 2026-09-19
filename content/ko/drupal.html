@@ -10,7 +10,7 @@
           <section id="features">
             <h2 class="pt-3" data-i18n-id="s-1dcf">핵심 기능</h2>
 
-            <p class="fs-6" data-i18n-id="s-a8c0">Drupal 모듈은 검사기 라이브러리를 편집 백엔드와 연결하고,
+            <p class="fs-6" data-i18n-id="s-a8c0" data-og="description">Drupal 모듈은 검사기 라이브러리를 편집 백엔드와 연결하고,
               보고, 거버넌스 및 구성을 위한 여러 서버 측 도구를 추가합니다</p>
 
             <figure class="figure my-4 row">
@@ -133,12 +133,12 @@
           <h3 id="roots" data-i18n-id="s-d932">요소 무시</h3>
           <p data-i18n-id="s-9d1e">이 두 가지 구성 설정이 가장 중요합니다!</p>
           <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
-            <label for="edit-content-root">Check content in these containers</label>
+            <label for="edit-content-root" data-translate data-i18n-id="s-15bb">이 컨테이너에서 콘텐츠 확인</label>
             <div><textarea class="form-control" id="edit-content-root" name="content_root" rows="1" cols="30"
                 disabled></textarea>
             </div>
             <div class="mt-3">
-              <label for="edit-ignore-elements">Skip over these elements</label>
+              <label for="edit-ignore-elements" data-translate data-i18n-id="s-be3e">이 요소 건너뛰기</label>
               <div>
                 <textarea class="form-control" id="edit-ignore-elements" disabled name="ignore_elements" rows="1"
                   cols="30" class=""></textarea>
@@ -155,8 +155,8 @@
           <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
             <div>
               <fieldset>
-                <legend>
-                  Developer check area
+                <legend data-translate data-i18n-id="s-430d">
+                  개발자 확인 영역
                 </legend>
                 <div class="fieldset__wrapper fieldset__wrapper--group">
 
@@ -164,20 +164,19 @@
                     <div>
                       <input aria-describedby="edit-dev-check-root--description" type="radio"
                         id="edit-dev-check-root-automatic" name="dev_check_root" value="automatic" checked="checked" />
-                      <label for="edit-dev-check-root-automatic" class="form-item__label option">All elements</label>
+                      <label for="edit-dev-check-root-automatic" class="form-item__label option" data-translate data-i18n-id="s-76df">모든 요소</label>
                     </div>
                     <div class="d-flex">
                       <input aria-describedby="edit-dev-check-root--description" type="radio"
                         id="edit-dev-check-root-match" name="dev_check_root" value="match"
                         class="align-self-baseline mt-1 me-1" />
-                      <label for="edit-dev-check-root-match" class="form-item__label option">Only the containers listed
-                        in the Content Setting tab</label>
+                      <label for="edit-dev-check-root-match" class="form-item__label option" data-translate data-i18n-id="s-75dc">콘텐츠 설정 탭에 나열된 컨테이너만</label>
                     </div>
                     <div class="">
                       <input aria-describedby="edit-dev-check-root--description" type="radio"
                         id="edit-dev-check-root-specify" name="dev_check_root" value="specify"
                         class="form-radio form-boolean form-boolean--type-radio" />
-                      <label for="edit-dev-check-root-specify" class="">The specific containers listed below</label>
+                      <label for="edit-dev-check-root-specify" class="" data-translate data-i18n-id="s-8f65">아래에 나열된 특정 컨테이너</label>
                     </div>
                   </div>
 
@@ -185,7 +184,7 @@
               </fieldset>
 
               <div class="">
-                <label for="edit-always-ignore" class="mt-3">Ignore for both developers and content editors</label>
+                <label for="edit-always-ignore" class="mt-3" data-translate data-i18n-id="s-eec7">개발자와 콘텐츠 편집자 모두에서 무시</label>
                 <div class="form-textarea-wrapper">
                   <textarea id="edit-always-ignore" class="form-control" name="always_ignore" rows="1" cols="20"
                     placeholder=""></textarea>
@@ -210,14 +209,13 @@
             이를 수행하는 가장 쉬운 방법은 이 옵션에 CSS 클래스 또는 ID를 전달하는 것입니다:
           </p>
           <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
-            <label for="edit-no-load" class="form-item__label">Do not check on pages with these elements</label>
+            <label for="edit-no-load" class="form-item__label" data-translate data-i18n-id="s-f57b">이 요소가 있는 페이지에서는 확인하지 않음</label>
             <div class="form-textarea-wrapper">
               <textarea data-drupal-selector="edit-no-load" aria-describedby="edit-no-load--description"
                 id="edit-no-load" name="no_load" rows="1" cols="20" class="form-control"></textarea>
             </div>
 
-            <label for="edit-ignore-all-if-absent" class="form-item__label">Hide all alerts on pages where these
-              elements are not present</label>
+            <label for="edit-ignore-all-if-absent" class="form-item__label" data-translate data-i18n-id="s-07a0">이 요소가 없는 페이지에서는 모든 알림 숨기기</label>
             <div class="form-textarea-wrapper">
               <textarea data-drupal-selector="edit-ignore-all-if-absent"
                 aria-describedby="edit-ignore-all-if-absent--description" id="edit-ignore-all-if-absent"
@@ -285,12 +283,11 @@
           </p>
 
           <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
-            <label for="edit-element-hides-overflow" class="form-item__label">Elements with overflow hidden</label>
+            <label for="edit-element-hides-overflow" class="form-item__label" data-translate data-i18n-id="s-c6d7">오버플로가 숨겨진 요소</label>
             <textarea data-drupal-selector="edit-element-hides-overflow"
               aria-describedby="edit-element-hides-overflow--description" id="edit-element-hides-overflow"
               name="element_hides_overflow" rows="1" cols="60" class="form-control"></textarea>
-            <label for="edit-hidden-handlers" class="form-item__label">Theme JS will handle revealing hidden tooltips
-              inside these containers</label>
+            <label for="edit-hidden-handlers" class="form-item__label" data-translate data-i18n-id="s-dc25">테마 JS가 이 컨테이너 내부의 숨겨진 툴팁 표시를 처리함</label>
             <textarea data-drupal-selector="edit-hidden-handlers" aria-describedby="edit-hidden-handlers--description"
               id="edit-hidden-handlers" name="hidden_handlers" rows="1" cols="60" class="form-control"></textarea>
           </div>

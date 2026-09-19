@@ -43,7 +43,7 @@
   <link rel="alternate" hreflang="x-default" href="https://editoria11y.com/features/" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Funkcijos — Editoria11y" />
-  <meta property="og:description" content="Editoria11y is a community-supported, open-source accessibility checker with deep integrations for Drupal, WordPress, and more." />
+  <meta property="og:description" content="Tai, kas išskiria Editoria11y tarp prieinamumo įrankių, yra tai, kad jos testai vykdomi tiesiogiai naršyklėje, kai autoriai redaguoja ir peržiūri savo darbą. Autoriai labiau linkę reaguoti į tiesioginį, įterptinį grįžtamąjį ryšį, pastebėti įspėjimus ir atlikti pataisymus, nei prisiminti apsilankymą prietaisų skydelyje ar vykdyti rankinį patikrinimą." />
   <meta property="og:image" content="https://editoria11y.com/assets/images/og-image.png" />
   <meta property="og:url" content="https://editoria11y.com/lt/funkcijos/" />
   <link href="/assets/bootstrap/css/bootstrap.min.css?v=7575987f" rel="stylesheet" />
@@ -104,7 +104,7 @@
             <p>Autoriai mato Editoria11y įrankių juostą redaguodami turinį. Aptikus problemų, ji tampa geltona arba raudona ir rodo problemų skaičių. Paspaudus skaičių, ekranas perslenka prie pirmojo įspėjimo ir atsidaro jo patarimas.</p>
           </div>
           <div class="row">
-            <img loading="lazy" src="/assets/images/3x-generic-tip.png" class="img-fluid col-6 col-lg-8" height="798" width="1278" alt="Patarimas, nurodantis, kad nuoroda pavadinta tik „spustelėkite čia&quot;." />
+            <img loading="lazy" src="/assets/images/3x-generic-tip.png" class="img-fluid col-6 col-lg-8" height="798" width="1278" alt="Patarimas, nurodantis, kad nuoroda pavadinta tik „spustelėkite čia“." />
             <p class="col-6 col-lg-4 align-content-center">Patarimai rodomi įterptiniai, su aiškiu klaidos aprašymu, taisymo pasiūlymais ir pastabomis apie tai, kodėl problema svarbi.</p>
           </div>
           <div class="row">
@@ -258,11 +258,7 @@
           <p class="fs-5">
             Tačiau Editoria11y nėra nemokamas kurti ar palaikyti.
           </p>
-          <p class="fs-5">
-            CSA užpildo šią spragą: projekto nariai finansuoja Editoria11y bibliotekos, jos CMS papildinių ir CSA paketo plėtrą – sparčiai augančio atvirojo kodo kokybės užtikrinimo įrankių rinkinio, teikiančio panašias funkcijas kaip komerciniai produktai, žymiai mažesne kaina.
-
-            CSA paketas Drupal sistemai šiuo metu nemokamas beta versijoje ir bus pristatytas WordPress sistemai 2026 m. III ketvirtį.
-          </p>
+          <p class="fs-5">CSA užpildo šią spragą: projekto nariai finansuoja Editoria11y bibliotekos, jos CMS papildinių ir CSA paketo plėtrą – sparčiai augančio atvirojo kodo kokybės užtikrinimo įrankių rinkinio, teikiančio panašias funkcijas kaip uždarojo kodo produktai, tik už gerokai mažesnę kainą.</p>
           <figure class="figure my-4 shadow border rounded p-0 m-2 col-sm-12 col-xl-11">
             <img alt="Svetainės naršymas vyksta" src="../../assets/images/3x-crawl.png" height="786" width="1986" class="img-fluid rounded-top figure-img" />
             <figcaption class="figure-caption p-2 pt-2">CSA naršyklė atnaujina prietaisų skydelį.</figcaption>
@@ -325,6 +321,45 @@
           <h3 class="pt-4" data-section="active-projects">Aktyvūs</h3>
           <div class="accord">
             <details>
+              <summary>2027 m. II ketv.: sukurti išankstinio publikavimo valdysenos įrankius WordPress sistemai</summary>
+              <div>
+                <p class="fs-6">Šis projektas yra visiškai finansuotas dosnia dotacija, kurią skyrė universitetų grupė, suinteresuota kartu kurti šias funkcijas.</p>
+                  <ul class="fs-6">
+                    <li>Sukurti rolėmis pagrįstą konfigūraciją, nurodančią, kuriems naudotojams leidžiama išsaugoti puslapius su žinomomis problemomis.</li>
+                    <li>Sukurti redaktoriuje veikiantį vediklį, kuriuo autoriai žingsnis po žingsnio peržiūrėtų dar neišspręstus įspėjimus prieš publikuodami turinį.</li>
+                  </ul>
+              </div>
+            </details>
+            <details>
+              <summary>2027 m. pradžia: neveikiančių nuorodų tikrinimas Drupal ir WordPress sistemoms</summary>
+              <div>
+                <p class="fs-6">Būsena: ieškome partnerių ir bendradarbių. Šis projektas iš dalies finansuojamas akademine dotacija, tačiau darbai dar neprasidėjo.</p>
+                <ul class="fs-6">
+                      <li>Sukurti DB lenteles aptiktiems URL saugoti, susiejant juos su puslapiais.</li>
+                      <li>Sukurti cron užduotis, kurios vietinius kelius tikrintų CMS patvirtinimo įrankiais, o nutolusius – HTTP get užklausomis.</li>
+                      <li>Sukurti ataskaitas ir jų eksportavimą.</li>
+                      <li>Sukurti paryškinimą puslapyje.</li>
+                    </ul>
+              </div>
+            </details>
+            <details>
+              <summary>2027 m. pradžia: PDF tikrinimas Drupal ir WordPress sistemoms</summary>
+              <div>
+                <p class="fs-6">Būsena: ieškome partnerių ir bendradarbių. Šis projektas iš dalies finansuojamas akademine dotacija, tačiau darbai dar neprasidėjo.</p>
+                <ul class="fs-6">
+                  <li>Sukurti DB lenteles aptiktiems PDF saugoti, susiejant juos su puslapiais.</li>
+                  <li>PHP įrankiais nuskaityti žymėjimą ir patikrinti pagrindines žymas.</li>
+                  <li>Sukurti ataskaitas su valdysenos įrankiais. Pvz.: „Šis PDF tinkamas, jei puslapyje yra alternatyvaus formato URL.“</li>
+                  <li>Keisti paryškinimą puslapyje atsižvelgiant į tai, ar PDF yra žinomai netinkamas, ar galbūt tinkamas.</li>
+                </ul>
+              </div>
+            </details>
+          </div>
+        </section>
+        <section id="finished">
+          <h3 data-section="finished" class="pt-5">Neseniai baigta</h3>
+          <div class="accord">
+            <details>
               <summary>
                 2026 m. II ketv.: Paleisti Editoria11y CSA bendruomenę
               </summary>
@@ -347,7 +382,7 @@
               <div>
                 <ol class="fs-6">
                   <li>Drupal sistemai baigta.</li>
-                  <li>Užduotis: perkelti kūrėją į WordPress.</li>
+                  <li>Perkelti kūriklį į WordPress.</li>
                 </ol>
               </div>
             </details>
@@ -368,11 +403,6 @@
                 </ol>
               </div>
             </details>
-          </div>
-        </section>
-        <section id="finished">
-          <h3 data-section="finished" class="pt-5">Neseniai baigta</h3>
-          <div class="accord">
             <details>
               <summary>
                 2026 m. I ketv.: Bibliotekos 3.x perrašymas
@@ -417,11 +447,8 @@
         <section id="project-ideas">
           <h3 data-section="project-ideas" class="pt-5">Svarstoma</h3>
           <p>Aptarkite ir balsuokite dėl šių idėjų <a href="https://github.com/itmaybejj/editoria11y/discussions">Editoria11y bibliotekos forumuose</a>.</p>
-          <p>Idėjos žymimos sunkumo/prioriteto įvertinimais pagal dabartines bendruomenės diskusijas.</p>
           <ul class="mt-1 p-5 pt-0">
             <li>Kelių svetainių stebėjimo prietaisų skydelis</li>
-            <li>Sugedusių nuorodų aptikimas</li>
-            <li>PDF nuskaitymas</li>
             <li>Patarimo kodo vietos skirtukas</li>
             <li>Patarimo puslapio ataskaitos eksportas</li>
             <li>Pažymėti žodžiai</li>
@@ -487,8 +514,8 @@
     </div>
   </footer>
   <script async src="/assets/bootstrap/js/bootstrap.bundle.min.js?v=69f68885" class="astro-vvvwv3sm"></script>
-  <script async src="/assets/lang/i18n.js?v=9063c00b"></script>
-  <script async src="/assets/theme.js?v=39536f05"></script>
+  <script async src="/assets/lang/i18n.js?v=650b32df"></script>
+  <script async src="/assets/theme.js?v=0ee05eec"></script>
   <script async src="/assets/prism/prism.js?v=3bbae506"></script>
 </body>
 

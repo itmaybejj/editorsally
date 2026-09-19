@@ -43,7 +43,7 @@
   <link rel="alternate" hreflang="x-default" href="https://editoria11y.com/demo/" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Editoria11y" />
-  <meta property="og:description" content="Editoria11y is a community-supported, open-source accessibility checker with deep integrations for Drupal, WordPress, and more." />
+  <meta property="og:description" content="Esta demonstração utiliza um editor TinyMCE. O Editoria11y é compatível com a maioria dos editores de texto e dispõe de implementações prontas a usar para CKEditor e Gutenberg no WordPress e no Drupal." />
   <meta property="og:image" content="https://editoria11y.com/assets/images/og-image.png" />
   <meta property="og:url" content="https://editoria11y.com/pt-pt/demo/" />
   <link href="/assets/bootstrap/css/bootstrap.min.css?v=7575987f" rel="stylesheet" />
@@ -146,7 +146,7 @@
             <p>Imagem sem nenhum atributo alt:</p>
             <p class="positive"><img loading="lazy" src="/assets/images/px20240813sm.jpg" /></p>
 
-            <p>Imagem com um atributo alt inválido, por exemplo, <code                 class="language-plaintext highlighter-rouge">alt=”'”</code></p>
+            <p>Imagem com um atributo alt inválido, por exemplo, <code                 class="language-plaintext highlighter-rouge">alt="'"</code></p>
 
             <p class="positive"><img loading="lazy" alt="'" src="/assets/images/px20240813sm.jpg" /></p>
 
@@ -217,7 +217,7 @@
               <p style="background: linear-gradient(45deg,#ccc 25%,#0000 25% 75%,#ccc 75%,#ccc),linear-gradient(45deg,#ccc 25%,#0000 25% 75%,#ccc 75%,#ccc)">
                 E incalculável.</p>
             </div>
-            <div class="positive"><label>Campo com contraste reduzido
+            <div class="positive"><label data-translate>Campo com contraste reduzido
                 <input class="form-text" type="text" style="color: #777;" /></label></div>
 
             <style>
@@ -226,9 +226,8 @@
               }
             </style>
 
-            <label for="unsupported-placeholder">A cor do marcador de posição não pode ser calculada</label>
-            <div class="positive" style="background: transparent;"><input type="text" id="unsupported-placeholder"
-                placeholder="Espaço de cor Rec2020" /></div>
+            <label for="unsupported-placeholder" data-translate>A cor do marcador de posição não pode ser calculada</label>
+            <div class="positive" style="background: transparent;"><input type="text" id="unsupported-placeholder" placeholder="Espaço de cor Rec2020" data-translate /></div>
 
 
             <p>Gráfico SVG sem contraste suficiente</p>
@@ -255,13 +254,8 @@
 
             <p>Vídeo assinalado como necessitando de verificação manual das legendas:</p>
             <div class="positive" style="width: 560px; aspect-ratio: 560 / 315; max-width: 100%; cursor: not-allowed;">
-              <iframe width="560" height="315" inert=""
-                src="https://www.youtube-nocookie.com/embed/QGsevnbItdU?si=W_b2i2o_n5v1ArvA"
-                style="width: 560px; aspect-ratio: 560 / 315; max-width: 100%; cursor: not-allowed;"
-                title="YouTube: How it's done video. Playback is disabled." sandbox="allow-scripts allow-same-origin"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="origin" allowfullscreen></iframe>
-              <div><small><em>Reprodução desativada para evitar cookies.</em></small></div>
+              <iframe width="560" height="315" inert src="https://www.youtube-nocookie.com/embed/QGsevnbItdU?si=W_b2i2o_n5v1ArvA" style="width: 560px; aspect-ratio: 560 / 315; max-width: 100%; cursor: not-allowed;" title="YouTube: vídeo sobre como se faz. A reprodução está desativada." sandbox="allow-scripts allow-same-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="origin" allowfullscreen data-translate></iframe>
+              <div><small><em data-translate>Reprodução desativada para evitar cookies.</em></small></div>
             </div>
 
             <p>O áudio necessita de uma transcrição:</p>
@@ -277,7 +271,7 @@
 
             <p>Iframe sem possibilidade de foco:</p>
             <div class="positive">
-              <iframe title="example" sandbox="" tabindex="-1" data-needs-src=""></iframe>
+              <iframe title="exemplo" sandbox tabindex="-1" data-needs-src data-translate></iframe>
             </div>
 
             <p>Componentes interativos aninhados</p>
@@ -285,7 +279,7 @@
               <details>
                 <summary>Acordeão</summary>
                 <details>
-                  <summary>Acordeão</summary>Surpresa!
+                  <summary>Acordeão</summary><span data-translate>Surpresa!</span>
                 </details>
               </details>
             </div>
@@ -460,13 +454,13 @@
 
             <p>Campos com uma etiqueta invisível, a perguntar se existe também uma etiqueta visível.</p>
             <div class="positive">
-              <input type="text" title="Email" />
+              <input type="text" title="E-mail" data-translate />
             </div>
 
             <p>Campos com apenas um marcador de posição como etiqueta, a perguntar se existe também uma etiqueta
               visível.</p>
             <div class="positive">
-              <input type="text" placeholder="Email" />
+              <input type="text" placeholder="E-mail" data-translate />
             </div>
 
             <div class="positive">
@@ -553,8 +547,8 @@
     </div>
   </footer>
   <script async src="/assets/bootstrap/js/bootstrap.bundle.min.js?v=69f68885" class="astro-vvvwv3sm"></script>
-  <script async src="/assets/lang/i18n.js?v=9063c00b"></script>
-  <script async src="/assets/theme.js?v=39536f05"></script>
+  <script async src="/assets/lang/i18n.js?v=650b32df"></script>
+  <script async src="/assets/theme.js?v=0ee05eec"></script>
   <script async src="/assets/prism/prism.js?v=3bbae506"></script>
 </body>
 

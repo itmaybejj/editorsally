@@ -43,7 +43,7 @@
   <link rel="alternate" hreflang="x-default" href="https://editoria11y.com/demo/" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="데모 — Editoria11y" />
-  <meta property="og:description" content="Editoria11y is a community-supported, open-source accessibility checker with deep integrations for Drupal, WordPress, and more." />
+  <meta property="og:description" content="이 데모는 TinyMCE 편집기를 사용합니다. Editoria11y는 대부분의 텍스트 편집기와 호환되며, WordPress와 Drupal의 CKEditor 및 Gutenberg에 대한 턴키 구현을 제공합니다." />
   <meta property="og:image" content="https://editoria11y.com/assets/images/og-image.png" />
   <meta property="og:url" content="https://editoria11y.com/ko/demo/" />
   <link href="/assets/bootstrap/css/bootstrap.min.css?v=7575987f" rel="stylesheet" />
@@ -209,7 +209,7 @@
               <p style="background: linear-gradient(45deg,#ccc 25%,#0000 25% 75%,#ccc 75%,#ccc),linear-gradient(45deg,#ccc 25%,#0000 25% 75%,#ccc 75%,#ccc)">
                 계산 불가능합니다.</p>
             </div>
-            <div class="positive"><label>Input with low contrast
+            <div class="positive"><label data-translate>대비가 낮은 입력 필드
                 <input class="form-text" type="text" style="color: #777;" /></label></div>
 
             <style>
@@ -218,9 +218,8 @@
               }
             </style>
 
-            <label for="unsupported-placeholder">Color of placeholder cannot be calculated</label>
-            <div class="positive" style="background: transparent;"><input type="text" id="unsupported-placeholder"
-                placeholder="Rec2020 color space" /></div>
+            <label for="unsupported-placeholder" data-translate>플레이스홀더 색상을 계산할 수 없음</label>
+            <div class="positive" style="background: transparent;"><input type="text" id="unsupported-placeholder" placeholder="Rec2020 색 공간" data-translate /></div>
 
 
             <p>명도 대비가 부족한 SVG 그래픽</p>
@@ -247,13 +246,8 @@
 
             <p>캡션 확인이 필요하다고 플래그된 동영상:</p>
             <div class="positive" style="width: 560px; aspect-ratio: 560 / 315; max-width: 100%; cursor: not-allowed;">
-              <iframe width="560" height="315" inert=""
-                src="https://www.youtube-nocookie.com/embed/QGsevnbItdU?si=W_b2i2o_n5v1ArvA"
-                style="width: 560px; aspect-ratio: 560 / 315; max-width: 100%; cursor: not-allowed;"
-                title="YouTube: How it's done video. Playback is disabled." sandbox="allow-scripts allow-same-origin"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="origin" allowfullscreen></iframe>
-              <div><small><em>Playback disabled to prevent cookies.</em></small></div>
+              <iframe width="560" height="315" inert src="https://www.youtube-nocookie.com/embed/QGsevnbItdU?si=W_b2i2o_n5v1ArvA" style="width: 560px; aspect-ratio: 560 / 315; max-width: 100%; cursor: not-allowed;" title="YouTube: 제작 방법 동영상. 재생이 비활성화되어 있습니다." sandbox="allow-scripts allow-same-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="origin" allowfullscreen data-translate></iframe>
+              <div><small><em data-translate>쿠키를 방지하기 위해 재생을 비활성화했습니다.</em></small></div>
             </div>
 
             <p>오디오에는 자막이 필요합니다:</p>
@@ -269,7 +263,7 @@
 
             <p>포커스할 수 없는 iframe:</p>
             <div class="positive">
-              <iframe title="example" sandbox="" tabindex="-1" data-needs-src=""></iframe>
+              <iframe title="예시" sandbox tabindex="-1" data-needs-src data-translate></iframe>
             </div>
 
             <p>중첩된 인터랙티브 컴포넌트</p>
@@ -277,7 +271,7 @@
               <details>
                 <summary>아코디언</summary>
                 <details>
-                  <summary>아코디언</summary>Surprise!
+                  <summary>아코디언</summary><span data-translate>짜잔!</span>
                 </details>
               </details>
             </div>
@@ -445,12 +439,12 @@
 
             <p>표시되는 레이블도 있는지 묻는, 보이지 않는 레이블이 있는 입력 필드.</p>
             <div class="positive">
-              <input type="text" title="Email" />
+              <input type="text" title="이메일" data-translate />
             </div>
 
             <p>표시되는 레이블도 있는지 묻는, 자리 표시자 레이블만 있는 입력 필드.</p>
             <div class="positive">
-              <input type="text" placeholder="Email" />
+              <input type="text" placeholder="이메일" data-translate />
             </div>
 
             <div class="positive">
@@ -535,8 +529,8 @@
     </div>
   </footer>
   <script async src="/assets/bootstrap/js/bootstrap.bundle.min.js?v=69f68885" class="astro-vvvwv3sm"></script>
-  <script async src="/assets/lang/i18n.js?v=9063c00b"></script>
-  <script async src="/assets/theme.js?v=39536f05"></script>
+  <script async src="/assets/lang/i18n.js?v=650b32df"></script>
+  <script async src="/assets/theme.js?v=0ee05eec"></script>
   <script async src="/assets/prism/prism.js?v=3bbae506"></script>
 </body>
 

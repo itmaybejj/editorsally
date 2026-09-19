@@ -964,6 +964,14 @@ const defined_i18n = (() => {
       close: 'Uždaryti',
       perYear: '/metai',
       perMonth: '/mėn.',
+      // Lithuanian declines the noun after a numeral: 5/25 svetainės (few),
+      // but 50/200/500 svetainių (other). Keys are CLDR plural categories,
+      // resolved at runtime with Intl.PluralRules.
+      sitesPlural: {
+        one: 'svetainė',
+        few: 'svetainės',
+        other: 'svetainių',
+      },
     },
     lv: {
       label: {

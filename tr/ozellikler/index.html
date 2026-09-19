@@ -43,7 +43,7 @@
   <link rel="alternate" hreflang="x-default" href="https://editoria11y.com/features/" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Özellikler — Editoria11y" />
-  <meta property="og:description" content="Editoria11y is a community-supported, open-source accessibility checker with deep integrations for Drupal, WordPress, and more." />
+  <meta property="og:description" content="Editoria11y'yi erişilebilirlik araçları arasında öne çıkaran şey, testlerinin yazarlar çalışmalarını düzenleyip önizlerken tarayıcıda canlı olarak çalışmasıdır. Yazarların anında, satır içi geri bildirime tepki verme ihtiyaçları daha fazladır; uyarıları fark ederek düzeltmeler yaparlar; bir kontrol panelini ziyaret etmeyi veya manuel kontrol çalıştırmayı hatırlamalarına gerek yoktur." />
   <meta property="og:image" content="https://editoria11y.com/assets/images/og-image.png" />
   <meta property="og:url" content="https://editoria11y.com/tr/ozellikler/" />
   <link href="/assets/bootstrap/css/bootstrap.min.css?v=7575987f" rel="stylesheet" />
@@ -256,9 +256,7 @@
             Editoria11y'nin geliştirilmesi ve desteklenmesi ise ücretsiz değildir.
           </p>
           <p class="fs-5">
-            CSA bu boşluğu doldurur: proje üyeleri Editoria11y kütüphanesinin, CMS eklentilerinin ve CSA paketinin geliştirilmesini finanse eder. CSA paketi, ticari ürünlere benzer işlevsellik sunan, çok daha düşük maliyetli ve hızla büyüyen açık kaynaklı kalite güvence araçları setidir.
-
-            Drupal için CSA paketi şu an beta sürümünde ücretsizdir ve WordPress için 3. çeyrekte (2026) yayınlanacaktır.
+            CSA bu boşluğu doldurur: proje üyeleri Editoria11y kütüphanesinin, CMS eklentilerinin ve CSA paketinin geliştirilmesini finanse eder. CSA paketi, kapalı kaynaklı ürünlere benzer işlevsellik sunan, çok daha uygun fiyatlı ve hızla büyüyen açık kaynaklı kalite güvence araçları setidir.
           </p>
           <figure class="figure my-4 shadow border rounded p-0 m-2 col-sm-12 col-xl-11">
             <img alt="Devam eden site taraması" src="../../assets/images/3x-crawl.png" height="786" width="1986" class="img-fluid rounded-top figure-img" />
@@ -322,6 +320,53 @@
           <div class="accord">
             <details>
               <summary>
+                2. Çeyrek 2027: WordPress için yayın öncesi yönetişim araçları oluşturma
+              </summary>
+              <div>
+                <p class="fs-6">Bu proje, işlevselliğin tasarımına birlikte katkıda bulunmak isteyen bir üniversite grubunun cömert bağışıyla tamamen finanse edilmiştir.</p>
+                  <ul class="fs-6">
+                    <li>Hangi kullanıcıların bilinen sorunlar içeren sayfaları kaydedebileceğini belirleyen rol tabanlı yapılandırma oluşturma.</li>
+                    <li>Yazarların, içeriği yayımlamadan önce ele almadıkları uyarıları gözden geçirmek için adım adım ilerlediği, düzenleyici içinde çalışan bir sihirbaz oluşturma.</li>
+                  </ul>
+              </div>
+            </details>
+            <details>
+              <summary>
+                2027 başı: Drupal ve WordPress için kırık bağlantı denetimi
+              </summary>
+              <div>
+                <p class="fs-6">
+                  Durum: Ortaklar ve iş birlikçiler aranıyor. Bu proje akademik bir hibeyle kısmen finanse edildi, ancak çalışmalara henüz başlanmadı.
+                </p>
+                <ul class="fs-6">
+                      <li>Tespit edilen URL'leri sayfalarla eşleştirerek saklamak için DB tabloları oluşturma.</li>
+                      <li>Yerel yolları CMS doğrulama araçlarıyla, uzak adresleri ise HTTP get istekleriyle doğrulayan cron görevleri oluşturma.</li>
+                      <li>Raporlar ve rapor dışa aktarımları oluşturma.</li>
+                      <li>Sayfa içi vurgulama oluşturma.</li>
+                    </ul>
+              </div>
+            </details>
+            <details>
+              <summary>
+                2027 başı: Drupal ve WordPress için PDF denetimi
+              </summary>
+              <div>
+                <p class="fs-6">Durum: ortaklar ve iş birlikçiler aranıyor. Bu proje akademik bir hibeyle kısmen finanse edildi, ancak çalışmalara henüz başlanmadı.</p>
+                <ul class="fs-6">
+                  <li>Tespit edilen PDF'leri sayfalarla eşleştirerek saklamak için DB tabloları oluşturma.</li>
+                  <li>Temel etiketleri denetlemek üzere işaretlemeyi ayıklamak için PHP araçlarını kullanma.</li>
+                  <li>Yönetişim araçları içeren raporlar oluşturma. Örneğin: “Sayfada alternatif biçime ait bir URL varsa bu PDF uygundur.”</li>
+                  <li>Sayfa içi vurgulamayı, PDF'nin bilinen bir sorunlu dosya mı yoksa muhtemelen uygun mu olduğuna göre değiştirme.</li>
+                </ul>
+              </div>
+            </details>
+          </div>
+        </section>
+        <section id="finished">
+          <h3 data-section="finished" class="pt-5">Son zamanlarda tamamlandı</h3>
+          <div class="accord">
+            <details>
+              <summary>
                 2. Çeyrek 2026: Editoria11y CSA topluluğunu başlatma
               </summary>
               <div>
@@ -343,7 +388,7 @@
               <div>
                 <ol class="fs-6">
                   <li>Drupal için tamamlandı.</li>
-                  <li>Yapılacak: oluşturucuyu WordPress'e taşı.</li>
+                  <li>Oluşturucuyu WordPress'e taşı.</li>
                 </ol>
               </div>
             </details>
@@ -363,11 +408,6 @@
                 </ol>
               </div>
             </details>
-          </div>
-        </section>
-        <section id="finished">
-          <h3 data-section="finished" class="pt-5">Son zamanlarda tamamlandı</h3>
-          <div class="accord">
             <details>
               <summary>
                 1. Çeyrek 2026: Kütüphane 3.x yeniden yazımı
@@ -411,11 +451,8 @@
         <section id="project-ideas">
           <h3 data-section="project-ideas" class="pt-5">Tartışma altında</h3>
           <p>Bu fikirler hakkında <a href="https://github.com/itmaybejj/editoria11y/discussions">Editoria11y kütüphanesi forumlarında</a> tartışın ve oy kullanın.</p>
-          <p>Fikirler, mevcut topluluk tartışmalarına göre zorluk/öncelik tahmini etiketleriyle işaretlenir.</p>
           <ul class="mt-1 p-5 pt-0">
             <li>Çok siteli izleme kontrol paneli</li>
-            <li>Bozuk bağlantı tespiti</li>
-            <li>PDF tarama</li>
             <li>İpucu kaynak konumu sekmesi</li>
             <li>İpucu sayfa raporu dışa aktarımı</li>
             <li>İşaretlenmiş sözcükler</li>
@@ -481,8 +518,8 @@
     </div>
   </footer>
   <script async src="/assets/bootstrap/js/bootstrap.bundle.min.js?v=69f68885" class="astro-vvvwv3sm"></script>
-  <script async src="/assets/lang/i18n.js?v=9063c00b"></script>
-  <script async src="/assets/theme.js?v=39536f05"></script>
+  <script async src="/assets/lang/i18n.js?v=650b32df"></script>
+  <script async src="/assets/theme.js?v=0ee05eec"></script>
   <script async src="/assets/prism/prism.js?v=3bbae506"></script>
 </body>
 

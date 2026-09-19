@@ -95,20 +95,20 @@
           Vývoj a podpora Editoria11y ale zdarma nejsou.
         </p>
         <p class="fs-5">
-          Projekt „Komunitně podporované doplňky" (CSA) tuto mezeru vyplňuje: členové projektu financují vývoj
+          Projekt „Komunitně podporované doplňky" (CSA) tuto mezeru vyplňuje: členové projektu podporují vývoj
           knihovny Editoria11y, jejích pluginů pro CMS a
           sady CSA: rychle rostoucí sady nástrojů pro zajišťování kvality, které poskytují podobnou
           funkcionalitu jako komerční produkty, a to open-source a provozovány on-prem.</p>
         <h3 class="fs-5">Fundraisingové cíle:</h3>
         <ol class="fs-6">
           <li>
-            2 000 $/měsíc: <strong>udržitelný projekt</strong>.<br/><em>Pokrývá fixní náklady a stávající potřeby podpory.</em>
+            2 000 $/měsíc: <strong>udržitelný projekt</strong>.<br/><em>Pokrývá fixní náklady a čas vývojářů.</em>
           </li>
           <li>
-            5 000 $/měsíc: <strong>zrychlený vývoj</strong>.<br/><em>Umožňuje najímat vývojáře pro řešení a podporu složitějších <a href="https://github.com/itmaybejj/editoria11y/discussions">požadavků na funkce</a>.</em>
+            5 000 $/měsíc: <strong>zrychlený vývoj</strong>.<br/><em>Umožňuje najmout další pomoc a zvládnout tak složitější <a href="https://github.com/itmaybejj/editoria11y/discussions">požadavky na funkce</a>.</em>
           </li>
           <li>
-            10 000 $/měsíc: <strong>skutečný ekosystém</strong>.<br/><em>Umožňuje zkoumat nabídku hostovaných/cloudových API funkcí s výraznými počátečními náklady.</em>
+            10 000 $ a více: <strong>skutečný ekosystém</strong>.<br/><em>Umožňuje zkoumat nabídku hostovaných/cloudových API funkcí s výraznými počátečními náklady.</em>
           </li>
         </ol>
       </div>
@@ -119,20 +119,20 @@
           <div class="row col-lg-9 py-4 pt-0 align-items-start text-start">
             <h2 class="nomenu pt-3">Podpořte předplatným</h2>
             <div class="col-md-4 mb-3">
-              <label for="support-level">Contribution</label>
+              <label for="support-level" data-translate>Úroveň podpory</label>
               <select id="support-level" class="form-select ">
                 <option value="100">150%</option>
                 <option value="80">120%</option>
-                <option value="60">100% of estimated need</option>
+                <option value="60" selected>100%</option>
                 <option value="50">75%</option>
                 <option value="44">66%</option>
                 <option value="33">50%</option>
                 <option value="22">33%</option>
                 <option value="17">25%</option>
-              <option value="8" selected>10%</option></select>
+              <option value="8">10%</option></select>
             </div>
             <div class="col-md-4 mb-3">
-              <label for="currency">Currency</label>
+              <label for="currency" data-translate>Měna</label>
               <select class="form-select" id="currency">
                 <option value="EUR">€ EUR</option>
                 <option value="USD">$ USD</option>
@@ -142,8 +142,8 @@
 
             <div class="col-md-4 mb-3">
               <div class="row pb-3 form-check form-switch ps-0">
-                <div><label class="" for="annual-pricing">
-                    Annual
+                <div><label class for="annual-pricing" data-translate>
+                    Ročně
                   </label></div>
                 <input class="form-check-input ms-3 fs-3 border-2" type="checkbox" value="" id="annual-pricing" switch />
 
@@ -155,7 +155,7 @@
         <div class="row">
           <div class="col-lg-3 py-4 px-0" id="free">
             <div class="bg-light me-3 border border-secondary-subtle shadow overflow-hidden rounded">
-              <div class="p-2 border-bottom border-secondary-subtle">Free</div>
+              <div class="p-2 border-bottom border-secondary-subtle" data-translate>Open source</div>
               <div class="p-3 pb-1">
                 <div class="fs-6 text-start">
                   <ul class="small ms-3">
@@ -176,19 +176,20 @@
           </div>
           <div class="col-lg-3 py-4 px-0" id="individual">
             <div class="bg-light shadow overflow-hidden rounded-start">
-              <div class="text-bg-info p-2 border-bottom border-light-subtle">Personal</div>
+              <div class="text-bg-info p-2 border-bottom border-light-subtle" data-translate>Podporovatel</div>
               <div class="text-bg-info p-3 pb-1 d-flex flex-column justify-content-center">
                 <p class="lh-1"><span class="currency">€</span><span class="price fs-3">9</span><span                     class="period">/měsíc</span></p>
                 <div class="fs-5 text-start">
-                  <p class="fs-6 text-center"><em class="fs-6 ms-1 mb-2">Vše z bezplatné verze, navíc:</em></p>
+                  <p class="fs-6 text-center"><em class="fs-6 ms-1 mb-2">Funkce tarifu Open source, navíc:</em></p>
                   <ul class="small">
                     <li><strong>30+ vývojářských testů</strong></li>
                     <li><strong>Tvůrce vlastních testů</strong></li>
                     <li><strong>Skrývání upozornění pro celý web</strong></li>
                     <li><strong>Panel čitelnosti</strong></li>
                     <li><strong>Prohledávací crawlery</strong></li>
+                    <li>Licence pro jeden web</li>
                     <li class="credit"><strong>Asistence při nastavení</strong></li>
-                    <li class="credit"><strong><a href="https://form.jotform.com/260627656020150">Zápis jako podporovatel</a></strong></li>
+                    <li class="credit"><strong><a href="https://form.jotform.com/260627656020150">Uvedení mezi podporovateli</a></strong></li>
                   </ul>
                 </div>
 
@@ -200,7 +201,7 @@
             </div>
           </div>
           <div class="col-lg-3 border-info px-0 fs-4 border rounded-3 shadow-lg" style="z-index: 3;" id="team">
-            <div class="text-bg-info p-2 rounded-top">Team</div>
+            <div class="text-bg-info p-2 rounded-top" data-translate>Tým</div>
             <div class="p-3 rounded-bottom">
               <div class="py-3 pb-4">
                 <select class="form-select fw-bold" style="width: auto; display: inline-block;" id="price-pick">
@@ -210,17 +211,17 @@
                   <option value="200">200</option>
                   <option value="500">500</option>
                   
-                </select> <label for="price-pick" class="fs-6">sites</label>
+                </select> <label for="price-pick" class="fs-6" data-translate>webů</label>
               </div>
               <div id="price-result">
                 <p class="lh-1"><span class="currency">€</span><span class="price fs-3">9,99</span><span                     class="period fs-5">/měsíc</span></p>
                 <div class="fs-5 text-start">
-                  <p class="fs-6 text-center full"><em class="fs-6 ms-1 mb-2">Vše z tarifu Personal, navíc:</em></p>
+                  <p class="fs-6 text-center full"><em class="fs-6 ms-1 mb-2">Funkce tarifu Podporovatel, navíc:</em></p>
                   <ul class="small">
                     <li class="full"><strong>Asistence při nastavení</strong></li>
                     <li class="credit"><strong>E-mailová podpora</strong></li>
                     <li class="credit"><strong>Roční konzultace</strong></li>
-                    <li class="credit"><strong><a href="https://form.jotform.com/260627656020150">Zápis jako podporovatel</a></strong></li>
+                    <li class="credit"><strong><a href="https://form.jotform.com/260627656020150">Uvedení mezi podporovateli</a></strong></li>
                   </ul>
                 </div>
 
@@ -233,17 +234,17 @@
           </div>
           <div class="col-lg-3 py-4 px-0">
             <div class="shadow overflow-hidden rounded-end" id="enterprise">
-              <div class="text-bg-info p-2 border-bottom border-light-subtle">Unlimited</div>
+              <div class="text-bg-info p-2 border-bottom border-light-subtle" data-translate>Partner</div>
               <div class="text-bg-info p-3 pb-1 d-flex flex-column justify-content-center">
                 <p class="lh-1"><span class="currency">€</span><span class="price fs-3">2700</span><span                     class="period">/měsíc</span></p>
                 <div class="fs-5 text-start">
-                  <p class="fs-6 text-center"><em class="fs-6 ms-1 mb-2">Vše z tarifu Personal, navíc:</em></p>
+                  <p class="fs-6 text-center"><em class="fs-6 ms-1 mb-2">Funkce tarifu Podporovatel, navíc:</em></p>
                   <ul class="small">
                     <li><strong>Neomezený počet webů</strong></li>
                     <li><strong>Asistence při nastavení</strong></li>
                     <li class="full"><strong>E-mailová podpora</strong></li>
                     <li><strong>Roční konzultace</strong></li>
-                    <li><strong><a href="https://form.jotform.com/260627656020150">Zápis jako podporovatel</a></strong></li>
+                    <li><strong><a href="https://form.jotform.com/260627656020150">Uvedení mezi podporovateli</a></strong></li>
                   </ul>
                 </div>
                 <p class><a class="btn btn-dark" title="Enterprise">Přihlásit odběr</a></p>
@@ -341,6 +342,10 @@
                     <td>25 %</td>
                     <td>25px</td>
                   </tr>
+                  <tr>
+                    <td>10%</td>
+                    <td>10px</td>
+                  </tr>
                 </tbody>
               </table>
             </details>
@@ -404,8 +409,8 @@
     </div>
   </footer>
   <script async src="/assets/bootstrap/js/bootstrap.bundle.min.js?v=69f68885" class="astro-vvvwv3sm"></script>
-  <script async src="/assets/lang/i18n.js?v=9063c00b"></script>
-  <script async src="/assets/theme.js?v=39536f05"></script>
+  <script async src="/assets/lang/i18n.js?v=650b32df"></script>
+  <script async src="/assets/theme.js?v=0ee05eec"></script>
   <script async src="/assets/prism/prism.js?v=3bbae506"></script>
 </body>
 

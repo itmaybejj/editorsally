@@ -15,7 +15,7 @@
           oppure prova a modificare il contenuto demo qui sotto, aprendo e ignorando gli avvisi,
           e usando la barra degli strumenti <span style="text-wrap: nowrap;">(<img src="/assets/images/3x-toolbar" class="inline-block" style="width: 5rem; height: auto;" alt="Screenshot della barra degli strumenti di Editoria11y, con 4 errori." width="97" height="50" loading="lazy" data-i18n-id="s-65d5" />)</span> per visualizzare la struttura dei titoli. Questa demo include sia i test
           principali che la suite CSA.</p>
-        <p class="fs-5 mb-5 pb-5" data-i18n-id="s-7580">Questa demo utilizza un editor TinyMCE. Editoria11y è compatibile con la maggior parte
+        <p class="fs-5 mb-5 pb-5" data-i18n-id="s-7580" data-og="description">Questa demo utilizza un editor TinyMCE. Editoria11y è compatibile con la maggior parte
           degli editor di testo e dispone di implementazioni pronte all'uso per CKEditor e Gutenberg in WordPress e
           Drupal.</p>
         <div id="ed11y-demo" class="p-5" contenteditable="">
@@ -62,7 +62,7 @@
             <p data-i18n-id="s-875a">Immagine senza attributo alt:</p>
             <p class="positive" data-i18n-id="s-2b48"><img loading="lazy" src="/assets/images/px20240813sm.jpg" data-i18n-id="s-95a0" /></p>
 
-            <p data-i18n-id="s-5df5">Immagine con un attributo alt non valido, ad es. <code                 class="language-plaintext highlighter-rouge">alt=”'”</code></p>
+            <p data-i18n-id="s-5df5">Immagine con un attributo alt non valido, ad es. <code                 class="language-plaintext highlighter-rouge">alt="'"</code></p>
 
             <p class="positive" data-i18n-id="s-47b7"><img loading="lazy" alt="'" src="/assets/images/px20240813sm.jpg" data-i18n-id="s-87b9" /></p>
 
@@ -135,7 +135,7 @@
               <p style="background: linear-gradient(45deg,#ccc 25%,#0000 25% 75%,#ccc 75%,#ccc),linear-gradient(45deg,#ccc 25%,#0000 25% 75%,#ccc 75%,#ccc)" data-i18n-id="s-490b">
                 E incalcolabile.</p>
             </div>
-            <div class="positive"><label>Campo con basso contrasto
+            <div class="positive"><label data-translate data-i18n-id="s-769f">Campo con basso contrasto
                 <input class="form-text" type="text" style="color: #777;" /></label></div>
 
             <style>
@@ -144,9 +144,9 @@
               }
             </style>
 
-            <label for="unsupported-placeholder">Il colore del segnaposto non può essere calcolato</label>
+            <label for="unsupported-placeholder" data-translate data-i18n-id="s-34b7">Il colore del segnaposto non può essere calcolato</label>
             <div class="positive" style="background: transparent;"><input type="text" id="unsupported-placeholder"
-                placeholder="Spazio colore Rec2020" /></div>
+                placeholder="Spazio colore Rec2020"  data-translate data-i18n-id="s-8ce5" /></div>
 
 
             <p data-i18n-id="s-0774">Grafico SVG senza contrasto sufficiente</p>
@@ -179,8 +179,8 @@
                 title="YouTube: Video su come si fa. La riproduzione è disabilitata."
                 sandbox="allow-scripts allow-same-origin"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="origin" allowfullscreen></iframe>
-              <div><small><em>Riproduzione disabilitata per evitare i cookie.</em></small></div>
+                referrerpolicy="origin" allowfullscreen data-translate data-i18n-id="s-056d"></iframe>
+              <div><small><em data-translate data-i18n-id="s-0b03">Riproduzione disabilitata per evitare i cookie.</em></small></div>
             </div>
 
             <p data-i18n-id="s-e14a">L'audio necessita di una trascrizione:</p>
@@ -196,7 +196,7 @@
 
             <p data-i18n-id="s-fe95">Iframe non focalizzabile:</p>
             <div class="positive">
-              <iframe title="example" sandbox="" tabindex="-1" data-needs-src=""></iframe>
+              <iframe title="esempio" sandbox="" tabindex="-1" data-needs-src="" data-translate data-i18n-id="s-ec77"></iframe>
             </div>
 
             <p data-i18n-id="s-e27f">Componenti interattivi annidati</p>
@@ -204,7 +204,7 @@
               <details>
                 <summary data-i18n-id="s-5064">Fisarmonica</summary>
                 <details>
-                  <summary data-i18n-id="s-2b8d">Fisarmonica</summary>Sorpresa!
+                  <summary data-i18n-id="s-2b8d">Fisarmonica</summary><span data-translate data-i18n-id="s-c8e3">Sorpresa!</span>
                 </details>
               </details>
             </div>
@@ -381,12 +381,12 @@
 
             <p data-i18n-id="s-296d">Campi con un'etichetta invisibile, che chiedono se esiste anche un'etichetta visibile.</p>
             <div class="positive">
-              <input type="text" title="Email" />
+              <input type="text" title="Email"  data-translate data-i18n-id="s-95d7" />
             </div>
 
             <p data-i18n-id="s-7c79">Campi con solo un'etichetta segnaposto, che chiedono se esiste anche un'etichetta visibile.</p>
             <div class="positive">
-              <input type="text" placeholder="Email" />
+              <input type="text" placeholder="Email"  data-translate data-i18n-id="s-f516" />
             </div>
 
             <div class="positive">

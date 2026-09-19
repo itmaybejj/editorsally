@@ -43,7 +43,7 @@
   <link rel="alternate" hreflang="x-default" href="https://editoria11y.com/features/" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Funksjoner — Editoria11y" />
-  <meta property="og:description" content="Editoria11y is a community-supported, open-source accessibility checker with deep integrations for Drupal, WordPress, and more." />
+  <meta property="og:description" content="Det som skiller Editoria11y fra andre tilgjengelighetsverktøy er at testene kjøres direkte i nettleseren mens forfattere redigerer og forhåndsviser arbeidet sitt. Forfattere reagerer lettere på umiddelbar, innebygd tilbakemelding, legger merke til varsler og gjør korreksjoner, enn om de måtte huske å besøke et dashbord eller kjøre en manuell sjekk." />
   <meta property="og:image" content="https://editoria11y.com/assets/images/og-image.png" />
   <meta property="og:url" content="https://editoria11y.com/nb/funksjoner/" />
   <link href="/assets/bootstrap/css/bootstrap.min.css?v=7575987f" rel="stylesheet" />
@@ -280,7 +280,7 @@
           <p class="fs-5">
             CSA fyller dette gapet: prosjektmedlemmer finansierer utviklingen av Editoria11y-biblioteket, dets
             CMS-tillegg og CSA-pakken: et raskt voksende sett med åpen kildekode-kvalitetssikringsverktøy som gir
-            lignende funksjonalitet som kommersielle produkter, til en mye lavere pris.
+            lignende funksjonalitet som produkter med lukket kildekode, til en mye lavere pris.
 
             CSA-pakken for Drupal er for øyeblikket gratis i beta, og vil komme for WordPress i Q3 2026.
           </p>
@@ -350,6 +350,53 @@
           <div class="accord">
             <details>
               <summary>
+                Q2 2027: Lage styringsverktøy for WordPress som brukes før publisering
+              </summary>
+              <div>
+                <p class="fs-6">Dette prosjektet er fullfinansiert gjennom en raus bevilgning fra en gruppe universiteter som ønsker å være med på å utforme funksjonaliteten.</p>
+                  <ul class="fs-6">
+                    <li>Lage rollebasert konfigurasjon for hvilke brukere som har lov til å lagre sider med kjente problemer.</li>
+                    <li>Lage en veiviser i redigeringsverktøyet som forfattere går gjennom for å se over varsler de ikke har tatt tak i, før de publiserer innhold.</li>
+                  </ul>
+              </div>
+            </details>
+            <details>
+              <summary>
+                Tidlig i 2027: Sjekk av brutte lenker for Drupal og WordPress
+              </summary>
+              <div>
+                <p class="fs-6">
+                  Status: Ser etter partnere og bidragsytere. Dette prosjektet er delvis finansiert gjennom et akademisk stipend, men arbeidet har ennå ikke startet.
+                </p>
+                <ul class="fs-6">
+                      <li>Lage DB-tabeller for å lagre oppdagede URL-er, koblet til sider.</li>
+                      <li>Lage cron-jobber som validerer lokale stier med CMS-ets valideringsverktøy og eksterne adresser med HTTP get-forespørsler.</li>
+                      <li>Lage rapporter og rapporteksport.</li>
+                      <li>Lage utheving direkte på siden.</li>
+                    </ul>
+              </div>
+            </details>
+            <details>
+              <summary>
+                Tidlig i 2027: PDF-sjekk for Drupal og WordPress
+              </summary>
+              <div>
+                <p class="fs-6">Status: ser etter partnere og bidragsytere. Dette prosjektet er delvis finansiert gjennom et akademisk stipend, men arbeidet har ennå ikke startet.</p>
+                <ul class="fs-6">
+                  <li>Lage DB-tabeller for å lagre oppdagede PDF-er, koblet til sider.</li>
+                  <li>Bruke PHP-verktøy til å hente ut markup og sjekke grunnleggende tagger.</li>
+                  <li>Lage rapporter med styringsverktøy. For eksempel: «Denne PDF-en er OK hvis en URL til et alternativt format finnes på siden.»</li>
+                  <li>Endre uthevingen på siden ut fra om PDF-en er kjent som dårlig eller muligens OK.</li>
+                </ul>
+              </div>
+            </details>
+          </div>
+        </section>
+        <section id="finished">
+          <h3 data-section="finished" class="pt-5">Nylig fullført</h3>
+          <div class="accord">
+            <details>
+              <summary>
                 Q2 2026: Lansere Editoria11y CSA-fellesskapet
               </summary>
               <div>
@@ -371,7 +418,7 @@
               <div>
                 <ol class="fs-6">
                   <li>Ferdig for Drupal.</li>
-                  <li>Gjenstående: portere byggeren til WordPress.</li>
+                  <li>Portere byggeren til WordPress.</li>
                 </ol>
               </div>
             </details>
@@ -393,11 +440,6 @@
                 </ol>
               </div>
             </details>
-          </div>
-        </section>
-        <section id="finished">
-          <h3 data-section="finished" class="pt-5">Nylig fullført</h3>
-          <div class="accord">
             <details>
               <summary>
                 Q1 2026: Omskriving av bibliotek 3.x
@@ -450,11 +492,8 @@
         <section id="project-ideas">
           <h3 data-section="project-ideas" class="pt-5">Under diskusjon</h3>
           <p>Diskuter og stem på disse ideene i <a               href="https://github.com/itmaybejj/editoria11y/discussions">Editoria11y-bibliotekets forum</a>.</p>
-          <p>Ideer er merket med estimater for vanskelighetsgrad/prioritet basert på diskusjoner i fellesskapet.</p>
           <ul class="mt-1 p-5 pt-0">
             <li>Dashbord for overvåking av flere nettsteder</li>
-            <li>Oppdagelse av ødelagte lenker</li>
-            <li>PDF-skanning</li>
             <li>Fane for kodeposisjon i verktøytipset</li>
             <li>Eksport av siderapport fra verktøytipset</li>
             <li>Flaggede ord</li>
@@ -520,8 +559,8 @@
     </div>
   </footer>
   <script async src="/assets/bootstrap/js/bootstrap.bundle.min.js?v=69f68885" class="astro-vvvwv3sm"></script>
-  <script async src="/assets/lang/i18n.js?v=9063c00b"></script>
-  <script async src="/assets/theme.js?v=39536f05"></script>
+  <script async src="/assets/lang/i18n.js?v=650b32df"></script>
+  <script async src="/assets/theme.js?v=0ee05eec"></script>
   <script async src="/assets/prism/prism.js?v=3bbae506"></script>
 </body>
 

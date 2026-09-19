@@ -110,7 +110,7 @@
         <p data-i18n-id="s-996e">While you can turn off tests altogether, it is usually better to hide alerts on
           specific elements or pages.
         </p>
-        <hr />
+        <hr/>
         <p data-i18n-id="s-7918">
           During each test run, Editoria11y gathers a single set of elements from the "Check content in these
           containers" setting, and then filters it several times. This is what a test run looks like:
@@ -121,12 +121,12 @@
           </li>
           <li data-i18n-id="s-10c9">
             <strong>Gather</strong> elements in specified page regions,
-            e.g.:<br /><code>body > *:not('.ed11y-element')</code><br />
+            e.g.:<br/><code>body > *:not('.ed11y-element')</code><br/>
             <em>For Editoria11y CSA users, these are the regions on the <strong>Developer tests</strong> tab.</em>
           </li>
           <li data-i18n-id="s-7524">
             <strong>Drop</strong> elements that match ignore selectors,
-            e.g.:<br /><code>.widgets, .utility-menu</code><br />
+            e.g.:<br/><code>.widgets, .utility-menu</code><br/>
             <em>For Editoria11y CSA users, these are the selectors on the <strong>Developer tests</strong> tab.</em>
           </li>
           <li data-i18n-id="s-58d0">
@@ -139,7 +139,7 @@
               <li data-i18n-id="s-72c9"><strong>Drop</strong> results from tests set to "Developer only."</li>
               <li data-i18n-id="s-576e"><strong>Drop</strong> results on elements from outside specified
                 <strong><em>content</em></strong>
-                regions, e.g.:<br /><code>main, footer</code></li>
+                regions, e.g.:<br/><code>main, footer</code></li>
               <li data-i18n-id="s-bb1d"><strong>Drop</strong> results on elements that match
                 <strong><em>content</em></strong> ignore
                 selectors.</li>
@@ -173,12 +173,12 @@
         <h3 id="roots" data-i18n-id="s-d932">Ignore elements</h3>
         <p data-i18n-id="s-9d1e">These two configuration settings are the most important!</p>
         <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
-          <label for="edit-content-root">Check content in these containers</label>
+          <label for="edit-content-root" data-translate data-i18n-id="s-15bb">Check content in these containers</label>
           <div><textarea class="form-control" id="edit-content-root" name="content_root" rows="1" cols="30"
               disabled></textarea>
           </div>
           <div class="mt-3">
-            <label for="edit-ignore-elements">Skip over these elements</label>
+            <label for="edit-ignore-elements" data-translate data-i18n-id="s-be3e">Skip over these elements</label>
             <div>
               <textarea class="form-control" id="edit-ignore-elements" disabled name="ignore_elements" rows="1"
                 cols="30" class=""></textarea>
@@ -200,7 +200,7 @@
         <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
           <div>
             <fieldset>
-              <legend>
+              <legend data-translate data-i18n-id="s-430d">
                 Developer check area
               </legend>
               <div class="fieldset__wrapper fieldset__wrapper--group">
@@ -209,20 +209,20 @@
                   <div>
                     <input aria-describedby="edit-dev-check-root--description" type="radio"
                       id="edit-dev-check-root-automatic" name="dev_check_root" value="automatic" checked="checked" />
-                    <label for="edit-dev-check-root-automatic" class="form-item__label option">All elements</label>
+                    <label for="edit-dev-check-root-automatic" class="form-item__label option" data-translate data-i18n-id="s-76df">All elements</label>
                   </div>
                   <div class="d-flex">
                     <input aria-describedby="edit-dev-check-root--description" type="radio"
                       id="edit-dev-check-root-match" name="dev_check_root" value="match"
                       class="align-self-baseline mt-1 me-1" />
-                    <label for="edit-dev-check-root-match" class="form-item__label option">Only the containers listed
+                    <label for="edit-dev-check-root-match" class="form-item__label option" data-translate data-i18n-id="s-75dc">Only the containers listed
                       in the Content Setting tab</label>
                   </div>
                   <div class="">
                     <input aria-describedby="edit-dev-check-root--description" type="radio"
                       id="edit-dev-check-root-specify" name="dev_check_root" value="specify"
                       class="form-radio form-boolean form-boolean--type-radio" />
-                    <label for="edit-dev-check-root-specify" class="">The specific containers listed below</label>
+                    <label for="edit-dev-check-root-specify" class data-translate data-i18n-id="s-8f65">The specific containers listed below</label>
                   </div>
                 </div>
 
@@ -230,7 +230,7 @@
             </fieldset>
 
             <div class="">
-              <label for="edit-always-ignore" class="mt-3">Ignore for both developers and content editors</label>
+              <label for="edit-always-ignore" class="mt-3" data-translate data-i18n-id="s-eec7">Ignore for both developers and content editors</label>
               <div class="form-textarea-wrapper">
                 <textarea id="edit-always-ignore" class="form-control" name="always_ignore" rows="1" cols="20"
                   placeholder=""></textarea>
@@ -261,13 +261,13 @@
           The easiest way to do this is by passing CSS classes or IDs to these options:
         </p>
         <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
-          <label for="edit-no-load" class="form-item__label">Do not check on pages with these elements</label>
+          <label for="edit-no-load" class="form-item__label" data-translate data-i18n-id="s-f57b">Do not check on pages with these elements</label>
           <div class="form-textarea-wrapper">
             <textarea data-drupal-selector="edit-no-load" aria-describedby="edit-no-load--description" id="edit-no-load"
               name="no_load" rows="1" cols="20" class="form-control"></textarea>
           </div>
 
-          <label for="edit-ignore-all-if-absent" class="form-item__label">Hide all alerts on pages where these
+          <label for="edit-ignore-all-if-absent" class="form-item__label" data-translate data-i18n-id="s-07a0">Hide all alerts on pages where these
             elements are not present</label>
           <div class="form-textarea-wrapper">
             <textarea data-drupal-selector="edit-ignore-all-if-absent"
@@ -358,11 +358,11 @@
         </p>
 
         <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
-          <label for="edit-element-hides-overflow" class="form-item__label">Elements with overflow hidden</label>
+          <label for="edit-element-hides-overflow" class="form-item__label" data-translate data-i18n-id="s-c6d7">Elements with overflow hidden</label>
           <textarea data-drupal-selector="edit-element-hides-overflow"
             aria-describedby="edit-element-hides-overflow--description" id="edit-element-hides-overflow"
             name="element_hides_overflow" rows="1" cols="60" class="form-control"></textarea>
-          <label for="edit-hidden-handlers" class="form-item__label">Theme JS will handle revealing hidden tooltips
+          <label for="edit-hidden-handlers" class="form-item__label" data-translate data-i18n-id="s-dc25">Theme JS will handle revealing hidden tooltips
             inside these containers</label>
           <textarea data-drupal-selector="edit-hidden-handlers" aria-describedby="edit-hidden-handlers--description"
             id="edit-hidden-handlers" name="hidden_handlers" rows="1" cols="60" class="form-control"></textarea>
@@ -376,8 +376,7 @@
           tabs and slideshows.
           Tips inside these elements will also be hidden. Providing a list of selectors for these widgets means
           Editoria11y will pause briefly when a user tries to jump to those tips using a next or previous button.
-          Drupal themes and modules can then follow the directions from the library section on <a
-            href="/en/install/#hidden-content">dealing with tips on hidden content</a> to reveal the hidden content.
+          Drupal themes and modules can then follow the directions from the library section on <a             href="/en/install/#hidden-content">dealing with tips on hidden content</a> to reveal the hidden content.
         </p>
 
         <h2 id="runtime" data-i18n-id="s-7e38">Write your own config</h2>
@@ -414,8 +413,7 @@ function MY_MODULE_editoria11y_alter_config(array &$attach, CacheableMetadata $c
           the library. To add additional parameters, you need to modify the JS <code>options</code> object directly.
           The module checks for one global JS variable of <code>editoria11yOptionsOverride</code>. If this is set, it
           will pass the <code>options</code> object to an <code>editoria11yOptions</code> function you have provided
-          in your module or theme. You can now set any of the <a
-            href="https://editorsally.ddev.site/en/install/#params">library parameters</a>.</p>
+          in your module or theme. You can now set any of the <a             href="https://editorsally.ddev.site/en/install/#params">library parameters</a>.</p>
         <pre class="language-javascript"><code><!--var editoria11yOptionsOverride = true;
 var editoria11yOptions = function(options) {
   // You now have access to the processed options object that will be passed to the library.
@@ -437,8 +435,7 @@ var editoria11yOptions = function(options) {
           <h2 data-i18n-id="s-e0f0">Write your own tests</h2>
           <p data-i18n-id="s-6ece">First, in the module config, add 1 to the "Custom tests" options so it knows to
             watch for the tests.</p>
-          <p data-i18n-id="s-4316">Then create a Drupal JS library with your tests in your theme or module, using the <a
-              href="/en/install/#custom-tests">library guide to writing custom tests</a>.</p>
+          <p data-i18n-id="s-4316">Then create a Drupal JS library with your tests in your theme or module, using the <a               href="/en/install/#custom-tests">library guide to writing custom tests</a>.</p>
           <p data-i18n-id="s-b4ea">Here's a working example from Princeton, of a custom test to alert on Safe Links.
             Note that it accesses
             the Editoria11y class through <code>Drupal.Ed11y.</code></p>

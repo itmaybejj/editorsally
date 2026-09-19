@@ -43,7 +43,7 @@
   <link rel="alternate" hreflang="x-default" href="https://editoria11y.com/features/" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Functies — Editoria11y" />
-  <meta property="og:description" content="Editoria11y is a community-supported, open-source accessibility checker with deep integrations for Drupal, WordPress, and more." />
+  <meta property="og:description" content="Wat Editoria11y onderscheidt van andere toegankelijkheidstools, is dat de tests live, in de browser, worden uitgevoerd terwijl auteurs hun werk bewerken en bekijken. Auteurs reageren sneller op directe, inline feedback — ze merken meldingen op en brengen correcties aan — dan dat ze eraan denken een dashboard te bezoeken of een handmatige controle uit te voeren." />
   <meta property="og:image" content="https://editoria11y.com/assets/images/og-image.png" />
   <meta property="og:url" content="https://editoria11y.com/nl/functies/" />
   <link href="/assets/bootstrap/css/bootstrap.min.css?v=7575987f" rel="stylesheet" />
@@ -281,7 +281,7 @@
           <p class="fs-5">
             De CSA vult dit gat: projectleden financieren de ontwikkeling van de Editoria11y-bibliotheek, de CMS-plugins
             en de CSA-suite: een snel groeiende set open source kwaliteitsborgingstools die vergelijkbare
-            functionaliteit bieden als commerciële producten, maar tegen een veel lagere prijs.
+            functionaliteit bieden als producten met gesloten broncode, maar tegen een veel lagere prijs.
 
             De CSA-suite voor Drupal is momenteel gratis in bèta en komt beschikbaar voor WordPress in Q3 2026.
           </p>
@@ -351,6 +351,53 @@
           <div class="accord">
             <details>
               <summary>
+                Q2 2027: Pre-publicatie-governancetools voor WordPress maken
+              </summary>
+              <div>
+                <p class="fs-6">Dit project is volledig gefinancierd dankzij een genereuze subsidie van een groep universiteiten die de functionaliteit graag mee wil ontwerpen.</p>
+                  <ul class="fs-6">
+                    <li>Rolgebaseerde configuratie maken voor welke gebruikers pagina's met bekende problemen mogen opslaan.</li>
+                    <li>Een wizard in de editor maken die auteurs doorlopen om meldingen die ze nog niet hebben aangepakt te bekijken voordat ze content publiceren.</li>
+                  </ul>
+              </div>
+            </details>
+            <details>
+              <summary>
+                Begin 2027: Controle op gebroken links voor Drupal en WordPress
+              </summary>
+              <div>
+                <p class="fs-6">
+                  Status: Op zoek naar partners en medewerkers. Dit project is deels gefinancierd met een academische subsidie, maar het werk is nog niet begonnen.
+                </p>
+                <ul class="fs-6">
+                      <li>DB-tabellen maken om gedetecteerde URL's op te slaan, gekoppeld aan pagina's.</li>
+                      <li>Cronjobs maken die lokale paden valideren met de validatietools van het CMS en externe adressen met HTTP get-verzoeken.</li>
+                      <li>Rapporten en rapportexports maken.</li>
+                      <li>Markering op de pagina zelf maken.</li>
+                    </ul>
+              </div>
+            </details>
+            <details>
+              <summary>
+                Begin 2027: PDF-controle voor Drupal en WordPress
+              </summary>
+              <div>
+                <p class="fs-6">Status: op zoek naar partners en medewerkers. Dit project is deels gefinancierd met een academische subsidie, maar het werk is nog niet begonnen.</p>
+                <ul class="fs-6">
+                  <li>DB-tabellen maken om gedetecteerde PDF's op te slaan, gekoppeld aan pagina's.</li>
+                  <li>PHP-tools gebruiken om de markup uit te lezen en te controleren op basistags.</li>
+                  <li>Rapporten met governancetools maken. Bijvoorbeeld: “Deze PDF is in orde als er op de pagina een URL naar een alternatief formaat staat.”</li>
+                  <li>De markering op de pagina aanpassen afhankelijk van of de PDF bekend problematisch of mogelijk in orde is.</li>
+                </ul>
+              </div>
+            </details>
+          </div>
+        </section>
+        <section id="finished">
+          <h3 data-section="finished" class="pt-5">Onlangs afgerond</h3>
+          <div class="accord">
+            <details>
+              <summary>
                 Q2 2026: De Editoria11y CSA-gemeenschap lanceren
               </summary>
               <div>
@@ -372,7 +419,7 @@
               <div>
                 <ol class="fs-6">
                   <li>Klaar voor Drupal.</li>
-                  <li>Te doen: bouwer porten naar WordPress.</li>
+                  <li>Bouwer porten naar WordPress.</li>
                 </ol>
               </div>
             </details>
@@ -394,11 +441,6 @@
                 </ol>
               </div>
             </details>
-          </div>
-        </section>
-        <section id="finished">
-          <h3 data-section="finished" class="pt-5">Onlangs afgerond</h3>
-          <div class="accord">
             <details>
               <summary>
                 Q1 2026: Herschrijving van bibliotheek 3.x
@@ -451,12 +493,8 @@
         <section id="project-ideas">
           <h3 data-section="project-ideas" class="pt-5">In bespreking</h3>
           <p>Bespreek en stem op deze ideeën in de <a               href="https://github.com/itmaybejj/editoria11y/discussions">Editoria11y-bibliotheekforums</a>.</p>
-          <p>Ideeën zijn voorzien van schattingen voor moeilijkheidsgraad en prioriteit op basis van de huidige
-            communityopinie.</p>
           <ul class="mt-1 p-5 pt-0">
             <li>Monitoringdashboard voor meerdere sites</li>
-            <li>Detectie van verbroken koppelingen</li>
-            <li>PDF-scanning</li>
             <li>Tabblad met codelocatie in tooltip</li>
             <li>Paginarapportexport vanuit tooltip</li>
             <li>Gemarkeerde woorden</li>
@@ -522,8 +560,8 @@
     </div>
   </footer>
   <script async src="/assets/bootstrap/js/bootstrap.bundle.min.js?v=69f68885" class="astro-vvvwv3sm"></script>
-  <script async src="/assets/lang/i18n.js?v=9063c00b"></script>
-  <script async src="/assets/theme.js?v=39536f05"></script>
+  <script async src="/assets/lang/i18n.js?v=650b32df"></script>
+  <script async src="/assets/theme.js?v=0ee05eec"></script>
   <script async src="/assets/prism/prism.js?v=3bbae506"></script>
 </body>
 

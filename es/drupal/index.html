@@ -43,7 +43,7 @@
   <link rel="alternate" hreflang="x-default" href="https://editoria11y.com/drupal/" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Editoria11y para Drupal — Editoria11y" />
-  <meta property="og:description" content="Editoria11y is a community-supported, open-source accessibility checker with deep integrations for Drupal, WordPress, and more." />
+  <meta property="og:description" content="El módulo de Drupal conecta la biblioteca del verificador con el backend editorial, y añade numerosas herramientas del lado del servidor para informes, gobernanza y configuración" />
   <meta property="og:image" content="https://editoria11y.com/assets/images/og-image.png" />
   <meta property="og:url" content="https://editoria11y.com/es/drupal/" />
   <link href="/assets/bootstrap/css/bootstrap.min.css?v=7575987f" rel="stylesheet" />
@@ -241,12 +241,12 @@
           <h3 id="roots">Ignorar elementos</h3>
           <p>¡Estas dos configuraciones son las más importantes!</p>
           <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
-            <label for="edit-content-root">Verificar contenido en estos contenedores</label>
+            <label for="edit-content-root" data-translate>Verificar contenido en estos contenedores</label>
             <div><textarea class="form-control" id="edit-content-root" name="content_root" rows="1" cols="30"
                 disabled></textarea>
             </div>
             <div class="mt-3">
-              <label for="edit-ignore-elements">Omitir estos elementos</label>
+              <label for="edit-ignore-elements" data-translate>Omitir estos elementos</label>
               <div>
                 <textarea class="form-control" id="edit-ignore-elements" disabled name="ignore_elements" rows="1"
                   cols="30" class=""></textarea>
@@ -268,7 +268,7 @@
           <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
             <div>
               <fieldset>
-                <legend>
+                <legend data-translate>
                   Área de verificación del desarrollador
                 </legend>
                 <div class="fieldset__wrapper fieldset__wrapper--group">
@@ -277,21 +277,21 @@
                     <div>
                       <input aria-describedby="edit-dev-check-root--description" type="radio"
                         id="edit-dev-check-root-automatic" name="dev_check_root" value="automatic" checked="checked" />
-                      <label for="edit-dev-check-root-automatic" class="form-item__label option">Todos los
+                      <label for="edit-dev-check-root-automatic" class="form-item__label option" data-translate>Todos los
                         elementos</label>
                     </div>
                     <div class="d-flex">
                       <input aria-describedby="edit-dev-check-root--description" type="radio"
                         id="edit-dev-check-root-match" name="dev_check_root" value="match"
                         class="align-self-baseline mt-1 me-1" />
-                      <label for="edit-dev-check-root-match" class="form-item__label option">Solo los contenedores
+                      <label for="edit-dev-check-root-match" class="form-item__label option" data-translate>Solo los contenedores
                         indicados en la pestaña de Configuración de contenido</label>
                     </div>
                     <div class="">
                       <input aria-describedby="edit-dev-check-root--description" type="radio"
                         id="edit-dev-check-root-specify" name="dev_check_root" value="specify"
                         class="form-radio form-boolean form-boolean--type-radio" />
-                      <label for="edit-dev-check-root-specify" class="">Los contenedores específicos indicados a
+                      <label for="edit-dev-check-root-specify" class data-translate>Los contenedores específicos indicados a
                         continuación</label>
                     </div>
                   </div>
@@ -300,7 +300,7 @@
               </fieldset>
 
               <div class="">
-                <label for="edit-always-ignore" class="mt-3">Ignorar tanto para desarrolladores como para editores de
+                <label for="edit-always-ignore" class="mt-3" data-translate>Ignorar tanto para desarrolladores como para editores de
                   contenido</label>
                 <div class="form-textarea-wrapper">
                   <textarea id="edit-always-ignore" class="form-control" name="always_ignore" rows="1" cols="20"
@@ -331,13 +331,13 @@
             La forma más fácil de hacerlo es pasando clases o IDs de CSS a estas opciones:
           </p>
           <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
-            <label for="edit-no-load" class="form-item__label">No verificar en páginas con estos elementos</label>
+            <label for="edit-no-load" class="form-item__label" data-translate>No verificar en páginas con estos elementos</label>
             <div class="form-textarea-wrapper">
               <textarea data-drupal-selector="edit-no-load" aria-describedby="edit-no-load--description"
                 id="edit-no-load" name="no_load" rows="1" cols="20" class="form-control"></textarea>
             </div>
 
-            <label for="edit-ignore-all-if-absent" class="form-item__label">Ocultar todas las alertas en páginas donde
+            <label for="edit-ignore-all-if-absent" class="form-item__label" data-translate>Ocultar todas las alertas en páginas donde
               estos elementos no están presentes</label>
             <div class="form-textarea-wrapper">
               <textarea data-drupal-selector="edit-ignore-all-if-absent"
@@ -433,11 +433,11 @@
             se ubican los consejos:</p>
 
           <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
-            <label for="edit-element-hides-overflow" class="form-item__label">Elementos con overflow hidden</label>
+            <label for="edit-element-hides-overflow" class="form-item__label" data-translate>Elementos con overflow hidden</label>
             <textarea data-drupal-selector="edit-element-hides-overflow"
               aria-describedby="edit-element-hides-overflow--description" id="edit-element-hides-overflow"
               name="element_hides_overflow" rows="1" cols="60" class="form-control"></textarea>
-            <label for="edit-hidden-handlers" class="form-item__label">El JS del tema se encargará de revelar los
+            <label for="edit-hidden-handlers" class="form-item__label" data-translate>El JS del tema se encargará de revelar los
               consejos ocultos dentro de estos contenedores</label>
             <textarea data-drupal-selector="edit-hidden-handlers" aria-describedby="edit-hidden-handlers--description"
               id="edit-hidden-handlers" name="hidden_handlers" rows="1" cols="60" class="form-control"></textarea>
@@ -633,8 +633,8 @@ var editoria11yOptions = function(options) {
     </div>
   </footer>
   <script async src="/assets/bootstrap/js/bootstrap.bundle.min.js?v=69f68885" class="astro-vvvwv3sm"></script>
-  <script async src="/assets/lang/i18n.js?v=9063c00b"></script>
-  <script async src="/assets/theme.js?v=39536f05"></script>
+  <script async src="/assets/lang/i18n.js?v=650b32df"></script>
+  <script async src="/assets/theme.js?v=0ee05eec"></script>
   <script async src="/assets/prism/prism.js?v=3bbae506"></script>
 </body>
 

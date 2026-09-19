@@ -17,7 +17,7 @@
               viser 4 feil." width="97" height="50" loading="lazy" data-i18n-id="s-65d5" />)</span> for å se overskriftsstrukturen. Denne
           demoen
           inkluderer både kjernetester og CSA-pakken.</p>
-        <p class="fs-5 mb-5 pb-5" data-i18n-id="s-7580">Denne demoen bruker en TinyMCE-editor. Editoria11y er kompatibel med de fleste
+        <p class="fs-5 mb-5 pb-5" data-i18n-id="s-7580" data-og="description">Denne demoen bruker en TinyMCE-editor. Editoria11y er kompatibel med de fleste
           tekstredigerere, og har ferdige implementasjoner for CKEditor og Gutenberg i WordPress og Drupal.</p>
         <div id="ed11y-demo" class="p-5" contenteditable="">
           <section id="headings">
@@ -64,7 +64,7 @@
             <p class="positive" data-i18n-id="s-2b48"><img loading="lazy" src="/assets/images/px20240813sm.jpg" data-i18n-id="s-95a0" /></p>
 
             <p data-i18n-id="s-5df5">Bilde med et ugyldig alt-attributt, f.eks. <code class="language-plaintext
-                highlighter-rouge">alt=”'”</code></p>
+                highlighter-rouge">alt="'"</code></p>
 
             <p class="positive" data-i18n-id="s-47b7"><img loading="lazy" alt="'" src="/assets/images/px20240813sm.jpg" data-i18n-id="s-87b9" /></p>
 
@@ -135,7 +135,7 @@
               <p style="background: linear-gradient(45deg,#ccc 25%,#0000 25% 75%,#ccc
                 75%,#ccc),linear-gradient(45deg,#ccc 25%,#0000 25% 75%,#ccc 75%,#ccc)" data-i18n-id="s-490b">Og uberegnelig.</p>
             </div>
-            <div class="positive"><label>Inndatafelt med lav kontrast
+            <div class="positive"><label data-translate data-i18n-id="s-769f">Inndatafelt med lav kontrast
                 <input class="form-text" type="text" style="color: #777;" /></label></div>
 
             <style>
@@ -144,9 +144,9 @@
               }
             </style>
 
-            <label for="unsupported-placeholder">Fargen på plassholderen kan ikke beregnes</label>
+            <label for="unsupported-placeholder" data-translate data-i18n-id="s-34b7">Fargen på plassholderen kan ikke beregnes</label>
             <div class="positive" style="background: transparent;"><input type="text" id="unsupported-placeholder"
-                placeholder="Rec2020-fargerom" /></div>
+                placeholder="Rec2020-fargerom"  data-translate data-i18n-id="s-8ce5" /></div>
 
 
             <p data-i18n-id="s-0774">SVG-grafikk uten tilstrekkelig kontrast</p>
@@ -182,8 +182,8 @@
                 aspect-ratio: 560 / 315; max-width: 100%; cursor: not-allowed;" title="YouTube: Slik gjøres det.
                 Avspilling er deaktivert." sandbox="allow-scripts allow-same-origin" allow="accelerometer; autoplay;
                 clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="origin"
-                allowfullscreen></iframe>
-              <div><small><em>Avspilling deaktivert for å forhindre informasjonskapsler.</em></small></div>
+                allowfullscreen data-translate data-i18n-id="s-056d"></iframe>
+              <div><small><em data-translate data-i18n-id="s-0b03">Avspilling deaktivert for å forhindre informasjonskapsler.</em></small></div>
             </div>
 
             <p data-i18n-id="s-e14a">Lyd trenger et transskript:</p>
@@ -200,7 +200,7 @@
 
             <p data-i18n-id="s-fe95">Ikke-fokuserbar iframe:</p>
             <div class="positive">
-              <iframe title="example" sandbox="" tabindex="-1" data-needs-src=""></iframe>
+              <iframe title="eksempel" sandbox="" tabindex="-1" data-needs-src="" data-translate data-i18n-id="s-ec77"></iframe>
             </div>
 
             <p data-i18n-id="s-e27f">Nestede interaktive komponenter</p>
@@ -208,7 +208,7 @@
               <details>
                 <summary data-i18n-id="s-5064">Trekkspill</summary>
                 <details>
-                  <summary data-i18n-id="s-2b8d">Trekkspill</summary>Overraskelse!
+                  <summary data-i18n-id="s-2b8d">Trekkspill</summary><span data-translate data-i18n-id="s-c8e3">Overraskelse!</span>
                 </details>
               </details>
             </div>
@@ -389,12 +389,12 @@
 
             <p data-i18n-id="s-296d">Inndatafelt med en usynlig etikett, spørsmål om det også finnes en synlig etikett.</p>
             <div class="positive">
-              <input type="text" title="E-post" />
+              <input type="text" title="E-post"  data-translate data-i18n-id="s-95d7" />
             </div>
 
             <p data-i18n-id="s-7c79">Inndatafelt med kun en plassholderetikett, spørsmål om det også finnes en synlig etikett.</p>
             <div class="positive">
-              <input type="text" placeholder="E-post" />
+              <input type="text" placeholder="E-post"  data-translate data-i18n-id="s-f516" />
             </div>
 
             <div class="positive">

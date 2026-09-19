@@ -43,7 +43,7 @@
   <link rel="alternate" hreflang="x-default" href="https://editoria11y.com/drupal/" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Editoria11y Drupalile — Editoria11y" />
-  <meta property="og:description" content="Editoria11y is a community-supported, open-source accessibility checker with deep integrations for Drupal, WordPress, and more." />
+  <meta property="og:description" content="Drupali moodul ühendab kontrolliteegi toimetamise taustaga ja lisab palju serveripoolseid tööriistu aruandluse, halduse ja konfiguratsiooni jaoks" />
   <meta property="og:image" content="https://editoria11y.com/assets/images/og-image.png" />
   <meta property="og:url" content="https://editoria11y.com/et/drupal/" />
   <link href="/assets/bootstrap/css/bootstrap.min.css?v=7575987f" rel="stylesheet" />
@@ -177,8 +177,7 @@
           </p>
           <hr/>
           <p>
-            Iga testkäivituse ajal kogub Editoria11y ühe elementide komplekti seadest „Check content in these
-            containers" ja filtreerib seda mitu korda. Testkäivitus näeb välja järgmiselt:
+            Iga testkäivituse ajal kogub Editoria11y ühe elementide komplekti seadest „Kontrolli sisu nendes konteinerites" ja filtreerib seda mitu korda. Testkäivitus näeb välja järgmiselt:
           </p>
           <ol>
             <li>
@@ -229,12 +228,12 @@
           <h3 id="roots">Ignoreeri elemente</h3>
           <p>Need kaks konfiguratsiooniseadet on kõige olulisemad!</p>
           <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
-            <label for="edit-content-root">Check content in these containers</label>
+            <label for="edit-content-root" data-translate>Kontrolli sisu nendes konteinerites</label>
             <div><textarea class="form-control" id="edit-content-root" name="content_root" rows="1" cols="30"
                 disabled></textarea>
             </div>
             <div class="mt-3">
-              <label for="edit-ignore-elements">Skip over these elements</label>
+              <label for="edit-ignore-elements" data-translate>Jäta need elemendid vahele</label>
               <div>
                 <textarea class="form-control" id="edit-ignore-elements" disabled name="ignore_elements" rows="1"
                   cols="30" class=""></textarea>
@@ -254,8 +253,8 @@
           <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
             <div>
               <fieldset>
-                <legend>
-                  Developer check area
+                <legend data-translate>
+                  Arendaja kontrollipiirkond
                 </legend>
                 <div class="fieldset__wrapper fieldset__wrapper--group">
 
@@ -263,20 +262,20 @@
                     <div>
                       <input aria-describedby="edit-dev-check-root--description" type="radio"
                         id="edit-dev-check-root-automatic" name="dev_check_root" value="automatic" checked="checked" />
-                      <label for="edit-dev-check-root-automatic" class="form-item__label option">All elements</label>
+                      <label for="edit-dev-check-root-automatic" class="form-item__label option" data-translate>Kõik elemendid</label>
                     </div>
                     <div class="d-flex">
                       <input aria-describedby="edit-dev-check-root--description" type="radio"
                         id="edit-dev-check-root-match" name="dev_check_root" value="match"
                         class="align-self-baseline mt-1 me-1" />
-                      <label for="edit-dev-check-root-match" class="form-item__label option">Only the containers listed
-                        in the Content Setting tab</label>
+                      <label for="edit-dev-check-root-match" class="form-item__label option" data-translate>Ainult sisuseadete vahekaardil
+                        loetletud konteinerid</label>
                     </div>
                     <div class="">
                       <input aria-describedby="edit-dev-check-root--description" type="radio"
                         id="edit-dev-check-root-specify" name="dev_check_root" value="specify"
                         class="form-radio form-boolean form-boolean--type-radio" />
-                      <label for="edit-dev-check-root-specify" class="">The specific containers listed below</label>
+                      <label for="edit-dev-check-root-specify" class data-translate>Allpool loetletud konkreetsed konteinerid</label>
                     </div>
                   </div>
 
@@ -284,7 +283,7 @@
               </fieldset>
 
               <div class="">
-                <label for="edit-always-ignore" class="mt-3">Ignore for both developers and content editors</label>
+                <label for="edit-always-ignore" class="mt-3" data-translate>Eira nii arendajate kui ka sisutoimetajate puhul</label>
                 <div class="form-textarea-wrapper">
                   <textarea id="edit-always-ignore" class="form-control" name="always_ignore" rows="1" cols="20"
                     placeholder=""></textarea>
@@ -312,14 +311,14 @@
             Lihtsaim viis selleks on edastada CSS-klassid või ID-d nendele suvanditele:
           </p>
           <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
-            <label for="edit-no-load" class="form-item__label">Do not check on pages with these elements</label>
+            <label for="edit-no-load" class="form-item__label" data-translate>Ära kontrolli lehti, millel on need elemendid</label>
             <div class="form-textarea-wrapper">
               <textarea data-drupal-selector="edit-no-load" aria-describedby="edit-no-load--description"
                 id="edit-no-load" name="no_load" rows="1" cols="20" class="form-control"></textarea>
             </div>
 
-            <label for="edit-ignore-all-if-absent" class="form-item__label">Hide all alerts on pages where these
-              elements are not present</label>
+            <label for="edit-ignore-all-if-absent" class="form-item__label" data-translate>Peida kõik teated lehtedel, kus
+              neid elemente ei ole</label>
             <div class="form-textarea-wrapper">
               <textarea data-drupal-selector="edit-ignore-all-if-absent"
                 aria-describedby="edit-ignore-all-if-absent--description" id="edit-ignore-all-if-absent"
@@ -388,12 +387,12 @@
           </p>
 
           <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
-            <label for="edit-element-hides-overflow" class="form-item__label">Elements with overflow hidden</label>
+            <label for="edit-element-hides-overflow" class="form-item__label" data-translate>Elemendid, millel on overflow hidden</label>
             <textarea data-drupal-selector="edit-element-hides-overflow"
               aria-describedby="edit-element-hides-overflow--description" id="edit-element-hides-overflow"
               name="element_hides_overflow" rows="1" cols="60" class="form-control"></textarea>
-            <label for="edit-hidden-handlers" class="form-item__label">Theme JS will handle revealing hidden tooltips
-              inside these containers</label>
+            <label for="edit-hidden-handlers" class="form-item__label" data-translate>Kujunduse JS hoolitseb peidetud vihjete
+              kuvamise eest nendes konteinerites</label>
             <textarea data-drupal-selector="edit-hidden-handlers" aria-describedby="edit-hidden-handlers--description"
               id="edit-hidden-handlers" name="hidden_handlers" rows="1" cols="60" class="form-control"></textarea>
           </div>
@@ -576,8 +575,8 @@ var editoria11yOptions = function(options) {
     </div>
   </footer>
   <script async src="/assets/bootstrap/js/bootstrap.bundle.min.js?v=69f68885" class="astro-vvvwv3sm"></script>
-  <script async src="/assets/lang/i18n.js?v=9063c00b"></script>
-  <script async src="/assets/theme.js?v=39536f05"></script>
+  <script async src="/assets/lang/i18n.js?v=650b32df"></script>
+  <script async src="/assets/theme.js?v=0ee05eec"></script>
   <script async src="/assets/prism/prism.js?v=3bbae506"></script>
 </body>
 

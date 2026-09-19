@@ -43,7 +43,7 @@
   <link rel="alternate" hreflang="x-default" href="https://editoria11y.com/features/" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Funktioner — Editoria11y" />
-  <meta property="og:description" content="Editoria11y is a community-supported, open-source accessibility checker with deep integrations for Drupal, WordPress, and more." />
+  <meta property="og:description" content="Det der adskiller Editoria11y fra andre tilgængelighedsværktøjer er, at testene kører live i browseren, mens forfattere redigerer og forhåndsviser deres arbejde. Forfattere er mere tilbøjelige til at reagere på umiddelbar, inline feedback, bemærke advarsler og foretage rettelser, end de er til at huske at besøge et dashboard eller køre et manuelt tjek." />
   <meta property="og:image" content="https://editoria11y.com/assets/images/og-image.png" />
   <meta property="og:url" content="https://editoria11y.com/da/funktioner/" />
   <link href="/assets/bootstrap/css/bootstrap.min.css?v=7575987f" rel="stylesheet" />
@@ -287,10 +287,8 @@
           <p class="fs-5">
             CSA'en udfylder hullet: projektmedlemmer finansierer udviklingen af Editoria11y-biblioteket, dets
             CMS-plugins og CSA-pakken: et hurtigt voksende s&aelig;t af open
-            source-kvalitetssikringsv&aelig;rkt&oslash;jer, der giver lignende funktionalitet som kommercielle produkter
-            til en langt lavere pris.
-
-            CSA-pakken til Drupal er i &oslash;jeblikket gratis i beta og vil komme til WordPress i Q3 2026.
+            source-kvalitetssikringsv&aelig;rkt&oslash;jer, der giver lignende funktionalitet som produkter med lukket
+            kildekode, men til en langt lavere pris.
           </p>
           <figure class="figure my-4 shadow border rounded p-0 m-2 col-sm-12 col-xl-11">
             <img alt="Site-crawl i gang" src="../../assets/images/3x-crawl.png" height="786" width="1986" class="img-fluid rounded-top figure-img" />
@@ -358,6 +356,53 @@
           <div class="accord">
             <details>
               <summary>
+                Q2 2027: Opret styringsværktøjer til WordPress til kontrol før udgivelse
+              </summary>
+              <div>
+                <p class="fs-6">Dette projekt er fuldt finansieret af en generøs bevilling fra en gruppe universiteter, der er interesserede i at være med til at designe funktionaliteten.</p>
+                  <ul class="fs-6">
+                    <li>Opret rollebaseret konfiguration af, hvilke brugere der må gemme sider med kendte problemer.</li>
+                    <li>Opret en guide i editoren, som forfattere gennemgår for at se de advarsler, de ikke har taget hånd om, inden de udgiver indhold.</li>
+                  </ul>
+              </div>
+            </details>
+            <details>
+              <summary>
+                Begyndelsen af 2027: Kontrol af døde links til Drupal & WordPress
+              </summary>
+              <div>
+                <p class="fs-6">
+                  Status: Vi søger partnere og samarbejdspartnere. Dette projekt er delvist finansieret af en akademisk bevilling, men arbejdet er endnu ikke påbegyndt.
+                </p>
+                <ul class="fs-6">
+                      <li>Opret DB-tabeller til at gemme fundne URL'er, knyttet til sider.</li>
+                      <li>Opret cron-job, der validerer lokale stier med CMS'ets valideringsværktøjer og eksterne adresser med HTTP GET-forespørgsler.</li>
+                      <li>Opret rapporter og rapporteksport.</li>
+                      <li>Opret fremhævning på selve siden.</li>
+                    </ul>
+              </div>
+            </details>
+            <details>
+              <summary>
+                Begyndelsen af 2027: PDF-kontrol til Drupal & WordPress
+              </summary>
+              <div>
+                <p class="fs-6">Status: Vi søger partnere og samarbejdspartnere. Dette projekt er delvist finansieret af en akademisk bevilling, men arbejdet er endnu ikke påbegyndt.</p>
+                <ul class="fs-6">
+                  <li>Opret DB-tabeller til at gemme fundne PDF'er, knyttet til sider.</li>
+                  <li>Brug PHP-værktøjer til at gennemgå markup og kontrollere for grundlæggende tags.</li>
+                  <li>Opret rapporter med styringsværktøjer. F.eks.: „Denne PDF er i orden, hvis denne URL til et alternativt format findes på siden.“</li>
+                  <li>Tilpas fremhævningen på siden efter, om PDF'en er kendt som problematisk eller muligvis i orden.</li>
+                </ul>
+              </div>
+            </details>
+          </div>
+        </section>
+        <section id="finished">
+          <h3 data-section="finished" class="pt-5">Nyligt afsluttet</h3>
+          <div class="accord">
+            <details>
+              <summary>
                 Q2 2026: Lancering af Editoria11y CSA-f&aelig;llesskabet
               </summary>
               <div>
@@ -379,7 +424,7 @@
               <div>
                 <ol class="fs-6">
                   <li>F&aelig;rdigt til Drupal.</li>
-                  <li>Mangler: port&eacute;r byggeværktøj til WordPress.</li>
+                  <li>Port&eacute;r byggeværktøjet til WordPress.</li>
                 </ol>
               </div>
             </details>
@@ -402,11 +447,6 @@
                 </ol>
               </div>
             </details>
-          </div>
-        </section>
-        <section id="finished">
-          <h3 data-section="finished" class="pt-5">Nyligt afsluttet</h3>
-          <div class="accord">
             <details>
               <summary>
                 Q1 2026: Omskrivning af bibliotek 3.x
@@ -460,12 +500,8 @@
         <section id="project-ideas">
           <h3 data-section="project-ideas" class="pt-5">Under dr&oslash;ftelse</h3>
           <p>Diskut&eacute;r og stem p&aring; disse ideer i <a               href="https://github.com/itmaybejj/editoria11y/discussions">Editoria11y-bibliotekets forum</a>.</p>
-          <p>Ideer er tagget med sv&aelig;rheds-/prioritetsestimater baseret p&aring; aktuel
-            f&aelig;llesskabsdiskussion.</p>
           <ul class="mt-1 p-5 pt-0">
             <li>Dashboard til overv&aring;gning af flere sites</li>
-            <li>Detektion af d&oslash;de links</li>
-            <li>PDF-scanning</li>
             <li>Tooltip-fane til kodeplacering</li>
             <li>Eksport af siderapport fra tooltip</li>
             <li>Markerede ord</li>
@@ -531,8 +567,8 @@
     </div>
   </footer>
   <script async src="/assets/bootstrap/js/bootstrap.bundle.min.js?v=69f68885" class="astro-vvvwv3sm"></script>
-  <script async src="/assets/lang/i18n.js?v=9063c00b"></script>
-  <script async src="/assets/theme.js?v=39536f05"></script>
+  <script async src="/assets/lang/i18n.js?v=650b32df"></script>
+  <script async src="/assets/theme.js?v=0ee05eec"></script>
   <script async src="/assets/prism/prism.js?v=3bbae506"></script>
 </body>
 

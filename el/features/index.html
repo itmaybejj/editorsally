@@ -43,7 +43,7 @@
   <link rel="alternate" hreflang="x-default" href="https://editoria11y.com/features/" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Λειτουργίες — Editoria11y" />
-  <meta property="og:description" content="Editoria11y is a community-supported, open-source accessibility checker with deep integrations for Drupal, WordPress, and more." />
+  <meta property="og:description" content="Αυτό που κάνει το Editoria11y να ξεχωρίζει ανάμεσα στα εργαλεία προσβασιμότητας είναι ότι οι έλεγχοί του εκτελούνται ζωντανά, στο πρόγραμμα περιήγησης, καθώς οι συντάκτες επεξεργάζονται και κάνουν προεπισκόπηση της εργασίας τους. Οι συντάκτες είναι πιο πιθανό να αντιδράσουν σε άμεση, ενσωματωμένη ανατροφοδότηση, να παρατηρήσουν ειδοποιήσεις και να κάνουν διορθώσεις, παρά να θυμηθούν να επισκεφτούν έναν πίνακα ελέγχου ή να εκτελέσουν χειροκίνητο έλεγχο." />
   <meta property="og:image" content="https://editoria11y.com/assets/images/og-image.png" />
   <meta property="og:url" content="https://editoria11y.com/el/features/" />
   <link href="/assets/bootstrap/css/bootstrap.min.css?v=7575987f" rel="stylesheet" />
@@ -280,14 +280,7 @@
           <p class="fs-5">
             Ωστόσο, το Editoria11y δεν είναι δωρεάν στην ανάπτυξη ή την υποστήριξη.
           </p>
-          <p class="fs-5">
-            Το CSA καλύπτει αυτό το κενό: τα μέλη του έργου χρηματοδοτούν την ανάπτυξη της βιβλιοθήκης Editoria11y, των
-            πρόσθετων CMS και της σουίτας CSA: ένα ταχέως αναπτυσσόμενο σύνολο εργαλείων διασφάλισης ποιότητας ανοιχτού
-            κώδικα που παρέχουν παρόμοια λειτουργικότητα με εμπορικά προϊόντα, σε πολύ χαμηλότερο κόστος.
-
-            Η σουίτα CSA για Drupal είναι αυτή τη στιγμή δωρεάν σε φάση beta και θα είναι διαθέσιμη για WordPress το 3ο
-            τρίμηνο του 2026.
-          </p>
+          <p class="fs-5">Το CSA καλύπτει αυτό το κενό: τα μέλη του έργου χρηματοδοτούν την ανάπτυξη της βιβλιοθήκης Editoria11y, των πρόσθετων CMS και της σουίτας CSA: ένα ταχέως αναπτυσσόμενο σύνολο εργαλείων διασφάλισης ποιότητας ανοιχτού κώδικα που παρέχουν παρόμοια λειτουργικότητα με προϊόντα κλειστού κώδικα, σε πολύ χαμηλότερο κόστος.</p>
           <figure class="figure my-4 shadow border rounded p-0 m-2 col-sm-12 col-xl-11">
             <img alt="Σάρωση ιστοτόπου σε εξέλιξη" src="../../assets/images/3x-crawl.png" height="786" width="1986" class="img-fluid rounded-top figure-img" />
             <figcaption class="figure-caption p-2 pt-2">Ο ανιχνευτής CSA ανανεώνει τον πίνακα ελέγχου.</figcaption>
@@ -354,6 +347,45 @@
           <h3 class="pt-4" data-section="active-projects">Ενεργά</h3>
           <div class="accord">
             <details>
+              <summary>2ο τρίμηνο 2027: Δημιουργία εργαλείων διακυβέρνησης πριν από τη δημοσίευση για το WordPress</summary>
+              <div>
+                <p class="fs-6">Το έργο αυτό έχει χρηματοδοτηθεί πλήρως από μια γενναιόδωρη επιχορήγηση ομάδας πανεπιστημίων που ενδιαφέρονται να συνδιαμορφώσουν τη λειτουργικότητα.</p>
+                  <ul class="fs-6">
+                    <li>Δημιουργία ρυθμίσεων βάσει ρόλων για το ποιοι χρήστες επιτρέπεται να αποθηκεύουν σελίδες με γνωστά προβλήματα.</li>
+                    <li>Δημιουργία οδηγού μέσα στον επεξεργαστή, τον οποίο ακολουθούν βήμα προς βήμα οι συντάκτες για να εξετάσουν τις ειδοποιήσεις που δεν έχουν αντιμετωπίσει, πριν δημοσιεύσουν το περιεχόμενο.</li>
+                  </ul>
+              </div>
+            </details>
+            <details>
+              <summary>Αρχές 2027: Έλεγχος κατεστραμμένων συνδέσμων για Drupal & WordPress</summary>
+              <div>
+                <p class="fs-6">Κατάσταση: Αναζητούμε εταίρους και συνεργάτες. Το έργο αυτό έχει χρηματοδοτηθεί εν μέρει από ακαδημαϊκή επιχορήγηση, αλλά οι εργασίες δεν έχουν ακόμη ξεκινήσει.</p>
+                <ul class="fs-6">
+                      <li>Δημιουργία πινάκων DB για την αποθήκευση των URL που εντοπίζονται, αντιστοιχισμένων στις σελίδες.</li>
+                      <li>Δημιουργία εργασιών cron για την επικύρωση τοπικών διαδρομών με τα εργαλεία επικύρωσης του CMS και απομακρυσμένων εργασιών με αιτήματα HTTP get.</li>
+                      <li>Δημιουργία αναφορών και εξαγωγών αναφορών.</li>
+                      <li>Δημιουργία επισήμανσης μέσα στη σελίδα.</li>
+                    </ul>
+              </div>
+            </details>
+            <details>
+              <summary>Αρχές 2027: Έλεγχος PDF για Drupal & WordPress</summary>
+              <div>
+                <p class="fs-6">Κατάσταση: αναζητούμε εταίρους και συνεργάτες. Το έργο αυτό έχει χρηματοδοτηθεί εν μέρει από ακαδημαϊκή επιχορήγηση, αλλά οι εργασίες δεν έχουν ακόμη ξεκινήσει.</p>
+                <ul class="fs-6">
+                  <li>Δημιουργία πινάκων DB για την αποθήκευση των PDF που εντοπίζονται, αντιστοιχισμένων στις σελίδες.</li>
+                  <li>Χρήση εργαλείων PHP για την ανάλυση της σήμανσης, με έλεγχο των βασικών ετικετών.</li>
+                  <li>Δημιουργία αναφορών με εργαλεία διακυβέρνησης. Π.χ., «Αυτό το PDF είναι εντάξει εφόσον υπάρχει στη σελίδα το URL αυτής της εναλλακτικής μορφής».</li>
+                  <li>Προσαρμογή της επισήμανσης μέσα στη σελίδα ανάλογα με το αν το PDF είναι γνωστό ως προβληματικό ή ενδεχομένως εντάξει.</li>
+                </ul>
+              </div>
+            </details>
+          </div>
+        </section>
+        <section id="finished">
+          <h3 data-section="finished" class="pt-5">Πρόσφατα ολοκληρωμένα</h3>
+          <div class="accord">
+            <details>
               <summary>
                 2ο τρίμηνο 2026: Εκκίνηση της κοινότητας CSA του Editoria11y
               </summary>
@@ -376,7 +408,7 @@
               <div>
                 <ol class="fs-6">
                   <li>Ολοκληρώθηκε για Drupal.</li>
-                  <li>Εκκρεμεί: μεταφορά εργαλείου σε WordPress.</li>
+                  <li>Μεταφορά του εργαλείου δημιουργίας στο WordPress.</li>
                 </ol>
               </div>
             </details>
@@ -399,11 +431,6 @@
                 </ol>
               </div>
             </details>
-          </div>
-        </section>
-        <section id="finished">
-          <h3 data-section="finished" class="pt-5">Πρόσφατα ολοκληρωμένα</h3>
-          <div class="accord">
             <details>
               <summary>
                 1ο τρίμηνο 2026: Επανεγγραφή βιβλιοθήκης 3.x
@@ -457,12 +484,8 @@
         <section id="project-ideas">
           <h3 data-section="project-ideas" class="pt-5">Υπό συζήτηση</h3>
           <p>Συζητήστε και ψηφίστε αυτές τις ιδέες στα <a               href="https://github.com/itmaybejj/editoria11y/discussions">φόρουμ της βιβλιοθήκης Editoria11y</a>.</p>
-          <p>Οι ιδέες έχουν ετικέτες εκτίμησης δυσκολίας/προτεραιότητας βάσει των τρεχουσών συζητήσεων της κοινότητας.
-          </p>
           <ul class="mt-1 p-5 pt-0">
             <li>Πίνακας παρακολούθησης πολλαπλών ιστοτόπων</li>
-            <li>Ανίχνευση κατεστραμμένων συνδέσμων</li>
-            <li>Σάρωση PDF</li>
             <li>Καρτέλα θέσης κώδικα στην επεξήγηση</li>
             <li>Εξαγωγή αναφοράς σελίδας από επεξήγηση</li>
             <li>Επισημασμένες λέξεις</li>
@@ -528,8 +551,8 @@
     </div>
   </footer>
   <script async src="/assets/bootstrap/js/bootstrap.bundle.min.js?v=69f68885" class="astro-vvvwv3sm"></script>
-  <script async src="/assets/lang/i18n.js?v=9063c00b"></script>
-  <script async src="/assets/theme.js?v=39536f05"></script>
+  <script async src="/assets/lang/i18n.js?v=650b32df"></script>
+  <script async src="/assets/theme.js?v=0ee05eec"></script>
   <script async src="/assets/prism/prism.js?v=3bbae506"></script>
 </body>
 

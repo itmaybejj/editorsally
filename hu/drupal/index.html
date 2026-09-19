@@ -43,7 +43,7 @@
   <link rel="alternate" hreflang="x-default" href="https://editoria11y.com/drupal/" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Editoria11y Drupalhoz — Editoria11y" />
-  <meta property="og:description" content="Editoria11y is a community-supported, open-source accessibility checker with deep integrations for Drupal, WordPress, and more." />
+  <meta property="og:description" content="A Drupal modul összekapcsolja az ellenőrző könyvtárat a szerkesztői háttérrendszerrel, és számos szerveroldali eszközt ad hozzá jelentéskészítéshez, irányításhoz és konfigurációhoz." />
   <meta property="og:image" content="https://editoria11y.com/assets/images/og-image.png" />
   <meta property="og:url" content="https://editoria11y.com/hu/drupal/" />
   <link href="/assets/bootstrap/css/bootstrap.min.css?v=7575987f" rel="stylesheet" />
@@ -107,7 +107,7 @@
 
             <figure class="figure my-4 row">
               <div class="col-lg-8">
-                <img loading="lazy" src="/assets/images/3x-generic-tip.png" class="rounded border figure-img img-fluid" height="798" width="1278" alt="A tipp jelzi, hogy a link neve csak „kattintson ide" . />
+                <img loading="lazy" src="/assets/images/3x-generic-tip.png" class="rounded border figure-img img-fluid" height="798" width="1278" alt="A tipp jelzi, hogy a link neve csak „kattintson ide”." />
               </div>
               <figcaption class="figure-caption col-lg-4">Az eszköztippek gombokat kapnak a szerkesztőbe ugráshoz, a
                 figyelmeztetés figyelmen kívül hagyásához (az aktuális felhasználó számára) vagy rendben jelöléséhez
@@ -241,12 +241,12 @@
           <h3 id="roots">Elemek figyelmen kívül hagyása</h3>
           <p>Ez a két konfigurációs beállítás a legfontosabb!</p>
           <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
-            <label for="edit-content-root">Tartalom ellenőrzése ezekben a konténerekben</label>
+            <label for="edit-content-root" data-translate>Tartalom ellenőrzése ezekben a konténerekben</label>
             <div><textarea class="form-control" id="edit-content-root" name="content_root" rows="1" cols="30"
                 disabled></textarea>
             </div>
             <div class="mt-3">
-              <label for="edit-ignore-elements">Ezen elemek átugrása</label>
+              <label for="edit-ignore-elements" data-translate>Ezen elemek átugrása</label>
               <div>
                 <textarea class="form-control" id="edit-ignore-elements" disabled name="ignore_elements" rows="1"
                   cols="30" class=""></textarea>
@@ -267,7 +267,7 @@
           <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
             <div>
               <fieldset>
-                <legend>
+                <legend data-translate>
                   Fejlesztői ellenőrzési terület
                 </legend>
                 <div class="fieldset__wrapper fieldset__wrapper--group">
@@ -276,20 +276,20 @@
                     <div>
                       <input aria-describedby="edit-dev-check-root--description" type="radio"
                         id="edit-dev-check-root-automatic" name="dev_check_root" value="automatic" checked="checked" />
-                      <label for="edit-dev-check-root-automatic" class="form-item__label option">Minden elem</label>
+                      <label for="edit-dev-check-root-automatic" class="form-item__label option" data-translate>Minden elem</label>
                     </div>
                     <div class="d-flex">
                       <input aria-describedby="edit-dev-check-root--description" type="radio"
                         id="edit-dev-check-root-match" name="dev_check_root" value="match"
                         class="align-self-baseline mt-1 me-1" />
-                      <label for="edit-dev-check-root-match" class="form-item__label option">Csak a Tartalombeállítások
+                      <label for="edit-dev-check-root-match" class="form-item__label option" data-translate>Csak a Tartalombeállítások
                         fülön felsorolt konténerek</label>
                     </div>
                     <div class="">
                       <input aria-describedby="edit-dev-check-root--description" type="radio"
                         id="edit-dev-check-root-specify" name="dev_check_root" value="specify"
                         class="form-radio form-boolean form-boolean--type-radio" />
-                      <label for="edit-dev-check-root-specify" class="">Az alább felsorolt konkrét konténerek</label>
+                      <label for="edit-dev-check-root-specify" class data-translate>Az alább felsorolt konkrét konténerek</label>
                     </div>
                   </div>
 
@@ -297,7 +297,7 @@
               </fieldset>
 
               <div class="">
-                <label for="edit-always-ignore" class="mt-3">Figyelmen kívül hagyás fejlesztők és tartalomszerkesztők
+                <label for="edit-always-ignore" class="mt-3" data-translate>Figyelmen kívül hagyás fejlesztők és tartalomszerkesztők
                   számára egyaránt</label>
                 <div class="form-textarea-wrapper">
                   <textarea id="edit-always-ignore" class="form-control" name="always_ignore" rows="1" cols="20"
@@ -328,14 +328,14 @@
             Ennek legegyszerűbb módja CSS osztályok vagy azonosítók megadása ezeknél a beállításoknál:
           </p>
           <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
-            <label for="edit-no-load" class="form-item__label">Ne ellenőrizzen az ilyen elemeket tartalmazó
+            <label for="edit-no-load" class="form-item__label" data-translate>Ne ellenőrizzen az ilyen elemeket tartalmazó
               oldalakon</label>
             <div class="form-textarea-wrapper">
               <textarea data-drupal-selector="edit-no-load" aria-describedby="edit-no-load--description"
                 id="edit-no-load" name="no_load" rows="1" cols="20" class="form-control"></textarea>
             </div>
 
-            <label for="edit-ignore-all-if-absent" class="form-item__label">Minden figyelmeztetés elrejtése olyan
+            <label for="edit-ignore-all-if-absent" class="form-item__label" data-translate>Minden figyelmeztetés elrejtése olyan
               oldalakon, ahol ezek az elemek nincsenek jelen</label>
             <div class="form-textarea-wrapper">
               <textarea data-drupal-selector="edit-ignore-all-if-absent"
@@ -430,12 +430,12 @@
             módosítják:</p>
 
           <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
-            <label for="edit-element-hides-overflow" class="form-item__label">Overflow hidden tulajdonságú
+            <label for="edit-element-hides-overflow" class="form-item__label" data-translate>Overflow hidden tulajdonságú
               elemek</label>
             <textarea data-drupal-selector="edit-element-hides-overflow"
               aria-describedby="edit-element-hides-overflow--description" id="edit-element-hides-overflow"
               name="element_hides_overflow" rows="1" cols="60" class="form-control"></textarea>
-            <label for="edit-hidden-handlers" class="form-item__label">A téma JavaScript-je kezeli a rejtett
+            <label for="edit-hidden-handlers" class="form-item__label" data-translate>A téma JavaScript-je kezeli a rejtett
               eszköztippek megjelenítését ezekben a konténerekben</label>
             <textarea data-drupal-selector="edit-hidden-handlers" aria-describedby="edit-hidden-handlers--description"
               id="edit-hidden-handlers" name="hidden_handlers" rows="1" cols="60" class="form-control"></textarea>
@@ -629,8 +629,8 @@ var editoria11yOptions = function(options) {
     </div>
   </footer>
   <script async src="/assets/bootstrap/js/bootstrap.bundle.min.js?v=69f68885" class="astro-vvvwv3sm"></script>
-  <script async src="/assets/lang/i18n.js?v=9063c00b"></script>
-  <script async src="/assets/theme.js?v=39536f05"></script>
+  <script async src="/assets/lang/i18n.js?v=650b32df"></script>
+  <script async src="/assets/theme.js?v=0ee05eec"></script>
   <script async src="/assets/prism/prism.js?v=3bbae506"></script>
 </body>
 

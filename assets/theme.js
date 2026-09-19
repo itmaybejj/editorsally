@@ -227,6 +227,29 @@
       return url;
     }
 
+    // Languages such as Lithuanian decline the noun after a numeral
+    // (5 svetainės, but 50 svetainių), so the "sites" label next to the
+    // picker has to track the selected count. Languages that declare no
+    // `sitesPlural` keep the single form baked in at build time.
+    const sitesLabel = document.querySelector('label[for="price-pick"]');
+    const sitesForms = strings?.sitesPlural;
+    let sitesPluralRules = null;
+    if (sitesLabel && sitesForms) {
+      try {
+        sitesPluralRules = new Intl.PluralRules(langCode);
+      } catch (e) {
+        sitesPluralRules = null;
+      }
+    }
+
+    function updateSitesLabel() {
+      if (!sitesPluralRules) return;
+      const count = parseInt(pricePicker.value, 10);
+      if (!Number.isFinite(count)) return;
+      const form = sitesForms[sitesPluralRules.select(count)] || sitesForms.other;
+      if (form) sitesLabel.textContent = form;
+    }
+
     function formatPrice(num) {
       const str = num.toFixed(2);
       const clean = str.endsWith('.00') || num > 10 ? (Math.ceil(num)).toString() : str;
@@ -294,6 +317,8 @@
       document.querySelector('#individual .btn').href = buildCheckoutUrl(1, forceSingleAnnual);
       document.querySelector('#price-result .btn').href = buildCheckoutUrl(pricePicker.value, forceTeamAnnual);
       document.querySelector('#enterprise .btn').href = buildCheckoutUrl('unlimited');
+
+      updateSitesLabel();
 
     }
 

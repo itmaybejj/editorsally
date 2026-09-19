@@ -43,7 +43,7 @@
   <link rel="alternate" hreflang="x-default" href="https://editoria11y.com/features/" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="功能 — Editoria11y" />
-  <meta property="og:description" content="Editoria11y is a community-supported, open-source accessibility checker with deep integrations for Drupal, WordPress, and more." />
+  <meta property="og:description" content="Editoria11y 在无障碍工具中脱颖而出的关键在于：其检测在浏览器中实时运行，贯穿作者编辑和预览内容的全过程。作者更容易对即时的内联反馈作出响应——注意到提示并加以修正——而不是专门去访问仪表板或手动运行检查。" />
   <meta property="og:image" content="https://editoria11y.com/assets/images/og-image.png" />
   <meta property="og:url" content="https://editoria11y.com/zh/features/" />
   <link href="/assets/bootstrap/css/bootstrap.min.css?v=7575987f" rel="stylesheet" />
@@ -261,9 +261,7 @@
             然而，Editoria11y 的开发和支持并非免费。
           </p>
           <p class="fs-5">
-            CSA 填补了这一空白：项目成员资助 Editoria11y 库、CMS 插件及 CSA 套件的开发——CSA 套件是一套快速成长的开源质量保证工具集，以远低于商业产品的价格提供同等功能。
-
-            Drupal 版 CSA 套件目前在测试阶段免费提供，WordPress 版将于 2026 年第三季度推出。
+            CSA 填补了这一空白：项目成员资助 Editoria11y 库、CMS 插件及 CSA 套件的开发——CSA 套件是一套快速成长的开源质量保证工具集，以远低于闭源产品的价格提供同等功能。
           </p>
           <figure class="figure my-4 shadow border rounded p-0 m-2 col-sm-12 col-xl-11">
             <img alt="站点爬取进行中" src="../../assets/images/3x-crawl.png" height="786" width="1986" class="img-fluid rounded-top figure-img" />
@@ -329,6 +327,53 @@
           <div class="accord">
             <details>
               <summary>
+                2027 年第二季度：为 WordPress 开发发布前的内容管控工具
+              </summary>
+              <div>
+                <p class="fs-6">本项目已获得一批有意共同设计该功能的高校慷慨资助，资金已全部到位。</p>
+                  <ul class="fs-6">
+                    <li>开发基于角色的配置，用于指定哪些用户可以保存存在已知问题的页面。</li>
+                    <li>开发编辑器内的向导，供作者在发布内容前逐步复查尚未处理的警告。</li>
+                  </ul>
+              </div>
+            </details>
+            <details>
+              <summary>
+                2027 年初：面向 Drupal 与 WordPress 的失效链接检查
+              </summary>
+              <div>
+                <p class="fs-6">
+                  状态：正在寻找合作伙伴与协作者。本项目已获得学术基金的部分资助，但尚未启动开发。
+                </p>
+                <ul class="fs-6">
+                      <li>建立 DB 数据表，存储检测到的 URL 并与页面建立映射。</li>
+                      <li>建立 cron 任务，使用 CMS 的校验工具验证本地路径，并通过 HTTP get 请求验证外部地址。</li>
+                      <li>开发报告及报告导出功能。</li>
+                      <li>开发页面内高亮功能。</li>
+                    </ul>
+              </div>
+            </details>
+            <details>
+              <summary>
+                2027 年初：面向 Drupal 与 WordPress 的 PDF 检查
+              </summary>
+              <div>
+                <p class="fs-6">状态：正在寻找合作伙伴与协作者。本项目已获得学术基金的部分资助，但尚未启动开发。</p>
+                <ul class="fs-6">
+                  <li>建立 DB 数据表，存储检测到的 PDF 并与页面建立映射。</li>
+                  <li>使用 PHP 工具抓取标记代码，检查基本标签。</li>
+                  <li>开发带管控功能的报告。例如：“如果页面上提供了替代格式的 URL，则该 PDF 可以接受。”</li>
+                  <li>根据 PDF 是已知存在问题还是可能合规，调整页面内的高亮显示。</li>
+                </ul>
+              </div>
+            </details>
+          </div>
+        </section>
+        <section id="finished">
+          <h3 data-section="finished" class="pt-5">近期完成</h3>
+          <div class="accord">
+            <details>
+              <summary>
                 2026 年第二季度：启动 Editoria11y CSA 社区
               </summary>
               <div>
@@ -350,7 +395,7 @@
               <div>
                 <ol class="fs-6">
                   <li>Drupal 版已完成。</li>
-                  <li>待办：将构建器移植到 WordPress。</li>
+                  <li>将构建器移植到 WordPress。</li>
                 </ol>
               </div>
             </details>
@@ -370,11 +415,6 @@
                 </ol>
               </div>
             </details>
-          </div>
-        </section>
-        <section id="finished">
-          <h3 data-section="finished" class="pt-5">近期完成</h3>
-          <div class="accord">
             <details>
               <summary>
                 2026 年第一季度：库 3.x 重写
@@ -417,11 +457,8 @@
         <section id="project-ideas">
           <h3 data-section="project-ideas" class="pt-5">讨论中</h3>
           <p>在 <a href="https://github.com/itmaybejj/editoria11y/discussions">Editoria11y 库论坛</a>中讨论这些想法并投票。</p>
-          <p>各想法已根据当前社区讨论情况标注难度与优先级估计。</p>
           <ul class="mt-1 p-5 pt-0">
             <li>多站点监控仪表板</li>
-            <li>失效链接检测</li>
-            <li>PDF 扫描</li>
             <li>提示气泡代码位置标签</li>
             <li>提示气泡页面报告导出</li>
             <li>标记词语</li>
@@ -487,8 +524,8 @@
     </div>
   </footer>
   <script async src="/assets/bootstrap/js/bootstrap.bundle.min.js?v=69f68885" class="astro-vvvwv3sm"></script>
-  <script async src="/assets/lang/i18n.js?v=9063c00b"></script>
-  <script async src="/assets/theme.js?v=39536f05"></script>
+  <script async src="/assets/lang/i18n.js?v=650b32df"></script>
+  <script async src="/assets/theme.js?v=0ee05eec"></script>
   <script async src="/assets/prism/prism.js?v=3bbae506"></script>
 </body>
 

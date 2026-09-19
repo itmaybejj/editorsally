@@ -43,7 +43,7 @@
   <link rel="alternate" hreflang="x-default" href="https://editoria11y.com/features/" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Funktionen — Editoria11y" />
-  <meta property="og:description" content="Editoria11y is a community-supported, open-source accessibility checker with deep integrations for Drupal, WordPress, and more." />
+  <meta property="og:description" content="Was Editoria11y unter den Barrierefreiheitswerkzeugen auszeichnet, ist, dass seine Tests live im Browser ausgeführt werden, während Autoren ihre Inhalte bearbeiten und in der Vorschau ansehen. Autoren reagieren eher auf unmittelbares, direktes Feedback, bemerken Warnungen und nehmen Korrekturen vor, als dass sie daran denken, ein Dashboard zu besuchen oder eine manuelle Prüfung durchzuführen." />
   <meta property="og:image" content="https://editoria11y.com/assets/images/og-image.png" />
   <meta property="og:url" content="https://editoria11y.com/de/funktionen/" />
   <link href="/assets/bootstrap/css/bootstrap.min.css?v=7575987f" rel="stylesheet" />
@@ -117,7 +117,7 @@
               Hinweis und öffnet seinen Tooltip.</p>
           </div>
           <div class="row">
-            <img loading="lazy" src="/assets/images/3x-generic-tip.png" class="img-fluid col-6 col-lg-8" height="798" width="1278" alt="Hinweis zeigt an, dass ein Link nur mit „Hier klicken" beschriftet ist. />
+            <img loading="lazy" src="/assets/images/3x-generic-tip.png" class="img-fluid col-6 col-lg-8" height="798" width="1278" alt="Hinweis zeigt an, dass ein Link nur mit „Hier klicken“ beschriftet ist." />
             <p class="col-6 col-lg-4 align-content-center">Hinweise erscheinen inline mit einer einfachsprachigen
               Fehlerbeschreibung, Korrekturvorschlägen und einer Erklärung, warum das Problem wichtig ist.</p>
           </div>
@@ -284,11 +284,8 @@
           <p class="fs-5">
             Das CSA schließt diese Lücke: Projektmitglieder finanzieren die Entwicklung der Editoria11y-Bibliothek,
             seiner CMS-Plugins und der CSA-Suite: eine schnell wachsende Sammlung von
-            Open-Source-Qualitätssicherungswerkzeugen, die ähnliche Funktionen wie kommerzielle Produkte zu einem
-            deutlich günstigeren Preis bieten.
-
-            Die CSA-Suite für Drupal ist derzeit kostenlos in der Beta und wird für WordPress im 3. Quartal 2026
-            verfügbar sein.
+            Open-Source-Qualitätssicherungswerkzeugen, die ähnliche Funktionen wie Produkte mit geschlossenem
+            Quellcode bieten, und das zu einem deutlich günstigeren Preis.
           </p>
           <figure class="figure my-4 shadow border rounded p-0 m-2 col-sm-12 col-xl-11">
             <img alt="Seiten-Crawl wird durchgeführt" src="../../assets/images/3x-crawl.png" height="786" width="1986" class="img-fluid rounded-top figure-img" />
@@ -356,6 +353,53 @@
           <div class="accord">
             <details>
               <summary>
+                Q2 2027: Governance-Werkzeuge für WordPress zur Prüfung vor der Veröffentlichung erstellen
+              </summary>
+              <div>
+                <p class="fs-6">Dieses Projekt wurde vollständig durch eine großzügige Förderung einer Gruppe von Universitäten finanziert, die an der gemeinsamen Gestaltung der Funktionalität interessiert sind.</p>
+                  <ul class="fs-6">
+                    <li>Eine rollenbasierte Konfiguration dafür erstellen, welche Benutzer Seiten mit bekannten Problemen speichern dürfen.</li>
+                    <li>Einen Assistenten im Editor erstellen, den Autoren Schritt für Schritt durchlaufen, um vor der Veröffentlichung von Inhalten noch offene Hinweise zu prüfen.</li>
+                  </ul>
+              </div>
+            </details>
+            <details>
+              <summary>
+                Anfang 2027: Prüfung defekter Links für Drupal & WordPress
+              </summary>
+              <div>
+                <p class="fs-6">
+                  Status: Wir suchen Partner und Mitwirkende. Dieses Projekt wurde teilweise durch eine akademische Förderung finanziert, die Arbeiten haben jedoch noch nicht begonnen.
+                </p>
+                <ul class="fs-6">
+                      <li>DB-Tabellen erstellen, um erkannte URLs zu speichern und Seiten zuzuordnen.</li>
+                      <li>Cron-Jobs erstellen, die lokale Pfade mit den Validierungswerkzeugen des CMS und externe Ziele über HTTP-GET-Anfragen prüfen.</li>
+                      <li>Berichte und Berichtsexporte erstellen.</li>
+                      <li>Hervorhebung direkt auf der Seite erstellen.</li>
+                    </ul>
+              </div>
+            </details>
+            <details>
+              <summary>
+                Anfang 2027: PDF-Prüfung für Drupal & WordPress
+              </summary>
+              <div>
+                <p class="fs-6">Status: Wir suchen Partner und Mitwirkende. Dieses Projekt wurde teilweise durch eine akademische Förderung finanziert, die Arbeiten haben jedoch noch nicht begonnen.</p>
+                <ul class="fs-6">
+                  <li>DB-Tabellen erstellen, um erkannte PDFs zu speichern und Seiten zuzuordnen.</li>
+                  <li>PHP-Werkzeuge nutzen, um das Markup auszulesen und auf grundlegende Tags zu prüfen.</li>
+                  <li>Berichte mit Governance-Werkzeugen erstellen. Zum Beispiel: „Dieses PDF ist in Ordnung, wenn diese URL zu einem alternativen Format auf der Seite vorhanden ist.“</li>
+                  <li>Die Hervorhebung auf der Seite danach anpassen, ob das PDF als fehlerhaft bekannt oder möglicherweise in Ordnung ist.</li>
+                </ul>
+              </div>
+            </details>
+          </div>
+        </section>
+        <section id="finished">
+          <h3 data-section="finished" class="pt-5">Kürzlich abgeschlossen</h3>
+          <div class="accord">
+            <details>
+              <summary>
                 Q2 2026: Editoria11y-CSA-Community starten
               </summary>
               <div>
@@ -377,7 +421,7 @@
               <div>
                 <ol class="fs-6">
                   <li>Für Drupal fertiggestellt.</li>
-                  <li>Aufgabe: Builder auf WordPress portieren.</li>
+                  <li>Builder auf WordPress portieren.</li>
                 </ol>
               </div>
             </details>
@@ -400,11 +444,6 @@
                 </ol>
               </div>
             </details>
-          </div>
-        </section>
-        <section id="finished">
-          <h3 data-section="finished" class="pt-5">Kürzlich abgeschlossen</h3>
-          <div class="accord">
             <details>
               <summary>
                 Q1 2026: Bibliothek 3.x Neuentwicklung
@@ -460,12 +499,8 @@
         <section id="project-ideas">
           <h3 data-section="project-ideas" class="pt-5">In Diskussion</h3>
           <p>Diskutieren und abstimmen Sie über diese Ideen in den <a               href="https://github.com/itmaybejj/editoria11y/discussions">Editoria11y-Bibliotheksforen</a>.</p>
-          <p>Ideen sind mit Einschätzungen zu Schwierigkeit und Priorität auf Basis aktueller Community-Diskussionen
-            versehen.</p>
           <ul class="mt-1 p-5 pt-0">
             <li>Multi-Site-Überwachungs-Dashboard</li>
-            <li>Erkennung defekter Links</li>
-            <li>PDF-Scanning</li>
             <li>Tab für Tooltip-Code-Herkunft</li>
             <li>Tooltip-Seitenberichtsexport</li>
             <li>Markierte Wörter</li>
@@ -531,8 +566,8 @@
     </div>
   </footer>
   <script async src="/assets/bootstrap/js/bootstrap.bundle.min.js?v=69f68885" class="astro-vvvwv3sm"></script>
-  <script async src="/assets/lang/i18n.js?v=9063c00b"></script>
-  <script async src="/assets/theme.js?v=39536f05"></script>
+  <script async src="/assets/lang/i18n.js?v=650b32df"></script>
+  <script async src="/assets/theme.js?v=0ee05eec"></script>
   <script async src="/assets/prism/prism.js?v=3bbae506"></script>
 </body>
 

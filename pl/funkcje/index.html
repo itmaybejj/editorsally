@@ -43,7 +43,7 @@
   <link rel="alternate" hreflang="x-default" href="https://editoria11y.com/features/" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Funkcje — Editoria11y" />
-  <meta property="og:description" content="Editoria11y is a community-supported, open-source accessibility checker with deep integrations for Drupal, WordPress, and more." />
+  <meta property="og:description" content="To, co wyróżnia Editoria11y spośród narzędzi do sprawdzania dostępności, to fakt, że testy działają na żywo, w przeglądarce, podczas gdy autorzy edytują i podglądają swoją pracę. Autorzy częściej reagują na natychmiastowe, śródtekstowe informacje zwrotne, zauważają alerty i wprowadzają poprawki, niż pamiętają o odwiedzeniu panelu administracyjnego czy przeprowadzeniu ręcznego sprawdzenia." />
   <meta property="og:image" content="https://editoria11y.com/assets/images/og-image.png" />
   <meta property="og:url" content="https://editoria11y.com/pl/funkcje/" />
   <link href="/assets/bootstrap/css/bootstrap.min.css?v=7575987f" rel="stylesheet" />
@@ -116,7 +116,7 @@
               otwiera jego podpowiedź.</p>
           </div>
           <div class="row">
-            <img loading="lazy" src="/assets/images/3x-generic-tip.png" class="img-fluid col-6 col-lg-8" height="798" width="1278" alt="Podpowiedź wskazuje, że link ma tylko nazwę „kliknij tutaj" . />
+            <img loading="lazy" src="/assets/images/3x-generic-tip.png" class="img-fluid col-6 col-lg-8" height="798" width="1278" alt="Podpowiedź wskazuje, że link ma tylko nazwę „kliknij tutaj”." />
             <p class="col-6 col-lg-4 align-content-center">Podpowiedzi pojawiają się śródtekstowo, z opisem błędu w
               przystępnym języku, sugestiami poprawek oraz informacją o tym, dlaczego dany problem ma znaczenie.</p>
           </div>
@@ -283,7 +283,7 @@
           <p class="fs-5">
             CSA wypełnia tę lukę: członkowie projektu finansują rozwój biblioteki Editoria11y, wtyczek CMS oraz pakietu
             CSA — szybko rosnącego zestawu narzędzi open source do zapewniania jakości, oferujących podobną
-            funkcjonalność do produktów komercyjnych, lecz w znacznie niższej cenie.
+            funkcjonalność do produktów o zamkniętym kodzie źródłowym, lecz w znacznie niższej cenie.
 
             Pakiet CSA dla Drupal jest obecnie bezpłatny w wersji beta, a dla WordPress pojawi się w III kwartale 2026
             roku.
@@ -355,6 +355,53 @@
           <div class="accord">
             <details>
               <summary>
+                II kw. 2027: Stworzenie narzędzi nadzoru przed publikacją dla WordPress
+              </summary>
+              <div>
+                <p class="fs-6">Projekt został w całości sfinansowany dzięki hojnemu grantowi od grupy uczelni zainteresowanych współprojektowaniem tej funkcjonalności.</p>
+                  <ul class="fs-6">
+                    <li>Stworzenie konfiguracji opartej na rolach, określającej, którzy użytkownicy mogą zapisywać strony ze znanymi problemami.</li>
+                    <li>Stworzenie kreatora w edytorze, przez który autorzy przechodzą, aby przejrzeć nieobsłużone alerty przed opublikowaniem treści.</li>
+                  </ul>
+              </div>
+            </details>
+            <details>
+              <summary>
+                Początek 2027: Sprawdzanie niedziałających odnośników dla Drupal i WordPress
+              </summary>
+              <div>
+                <p class="fs-6">
+                  Status: Poszukiwani partnerzy i współpracownicy. Projekt został częściowo sfinansowany z grantu naukowego, ale prace jeszcze się nie rozpoczęły.
+                </p>
+                <ul class="fs-6">
+                      <li>Stworzenie tabel DB do przechowywania wykrytych adresów URL, przypisanych do stron.</li>
+                      <li>Stworzenie zadań cron, które sprawdzają ścieżki lokalne za pomocą narzędzi walidacyjnych CMS, a adresy zewnętrzne za pomocą żądań HTTP get.</li>
+                      <li>Stworzenie raportów i eksportu raportów.</li>
+                      <li>Stworzenie podświetlania bezpośrednio na stronie.</li>
+                    </ul>
+              </div>
+            </details>
+            <details>
+              <summary>
+                Początek 2027: Sprawdzanie plików PDF dla Drupal i WordPress
+              </summary>
+              <div>
+                <p class="fs-6">Status: poszukiwani partnerzy i współpracownicy. Projekt został częściowo sfinansowany z grantu naukowego, ale prace jeszcze się nie rozpoczęły.</p>
+                <ul class="fs-6">
+                  <li>Stworzenie tabel DB do przechowywania wykrytych plików PDF, przypisanych do stron.</li>
+                  <li>Wykorzystanie narzędzi PHP do odczytania znaczników i sprawdzenia podstawowych tagów.</li>
+                  <li>Stworzenie raportów wraz z narzędziami nadzoru. Np. „Ten plik PDF jest w porządku, jeśli na stronie znajduje się adres URL alternatywnego formatu”.</li>
+                  <li>Zmiana podświetlania na stronie w zależności od tego, czy dany plik PDF jest uznany za wadliwy, czy potencjalnie poprawny.</li>
+                </ul>
+              </div>
+            </details>
+          </div>
+        </section>
+        <section id="finished">
+          <h3 data-section="finished" class="pt-5">Niedawno ukończone</h3>
+          <div class="accord">
+            <details>
+              <summary>
                 II kw. 2026: Uruchomienie społeczności Editoria11y CSA
               </summary>
               <div>
@@ -376,7 +423,7 @@
               <div>
                 <ol class="fs-6">
                   <li>Ukończono dla Drupal.</li>
-                  <li>Do zrobienia: przeniesienie kreatora do WordPress.</li>
+                  <li>Przeniesienie kreatora do WordPress.</li>
                 </ol>
               </div>
             </details>
@@ -399,11 +446,6 @@
                 </ol>
               </div>
             </details>
-          </div>
-        </section>
-        <section id="finished">
-          <h3 data-section="finished" class="pt-5">Niedawno ukończone</h3>
-          <div class="accord">
             <details>
               <summary>
                 I kw. 2026: Przepisanie biblioteki 3.x
@@ -460,12 +502,8 @@
           <h3 data-section="project-ideas" class="pt-5">W trakcie dyskusji</h3>
           <p>Dyskutuj i głosuj na te pomysły na <a href="https://github.com/itmaybejj/editoria11y/discussions">forach
               biblioteki Editoria11y</a>.</p>
-          <p>Pomysły są otagowane szacunkowymi wskaźnikami trudności i priorytetu na podstawie bieżącej aktywności
-            społeczności.</p>
           <ul class="mt-1 p-5 pt-0">
             <li>Panel monitorowania wielu witryn</li>
-            <li>Wykrywanie uszkodzonych linków</li>
-            <li>Skanowanie PDF</li>
             <li>Zakładka lokalizacji kodu w podpowiedzi</li>
             <li>Eksport raportu strony z podpowiedzi</li>
             <li>Oznaczone słowa</li>
@@ -531,8 +569,8 @@
     </div>
   </footer>
   <script async src="/assets/bootstrap/js/bootstrap.bundle.min.js?v=69f68885" class="astro-vvvwv3sm"></script>
-  <script async src="/assets/lang/i18n.js?v=9063c00b"></script>
-  <script async src="/assets/theme.js?v=39536f05"></script>
+  <script async src="/assets/lang/i18n.js?v=650b32df"></script>
+  <script async src="/assets/theme.js?v=0ee05eec"></script>
   <script async src="/assets/prism/prism.js?v=3bbae506"></script>
 </body>
 

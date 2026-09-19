@@ -15,7 +15,7 @@
           <p class="fs-6" data-i18n-id="s-0887">Pengujian konten berfokus pada isu yang muncul <strong>setelah</strong> situs diserahkan kepada
             penulis konten. Situs perlu diuji dengan alat audit manual, keyboard, dan pembaca layar sebelum
             diluncurkan, tetapi bahkan situs yang paling aksesibel sekalipun cenderung menurun kualitasnya seiring pengeditan yang membawa masalah baru.</p>
-          <p class="fs-6" data-i18n-id="s-44f1">Yang membuat Editoria11y menonjol di antara alat aksesibilitas adalah bahwa pengujiannya berjalan secara langsung, di
+          <p class="fs-6" data-i18n-id="s-44f1" data-og="description">Yang membuat Editoria11y menonjol di antara alat aksesibilitas adalah bahwa pengujiannya berjalan secara langsung, di
             browser, saat penulis mengedit dan melihat pratinjau pekerjaan mereka. <strong>Penulis lebih cenderung merespons umpan balik yang langsung dan
               inline</strong>, memperhatikan peringatan dan melakukan koreksi, daripada harus mengingat untuk membuka
             dasbor atau menjalankan pemeriksaan manual.</p>
@@ -191,11 +191,7 @@
             Namun, Editoria11y tidak gratis untuk dikembangkan atau didukung.
           </p>
           <p class="fs-5" data-i18n-id="s-7d6d">
-            CSA mengisi kesenjangan tersebut: anggota proyek mendanai pengembangan perpustakaan Editoria11y, plugin CMS-nya, dan
-            suite CSA: sekumpulan alat jaminan kualitas sumber terbuka yang terus berkembang pesat, memberikan fungsionalitas
-            serupa dengan produk komersial, dengan harga yang jauh lebih terjangkau.
-
-            Suite CSA untuk Drupal saat ini gratis dalam versi beta, dan akan hadir untuk WordPress pada Q3 2026.
+            CSA mengisi kesenjangan tersebut: anggota proyek mendanai pengembangan perpustakaan Editoria11y, plugin CMS-nya, dan suite CSA: sekumpulan alat jaminan kualitas sumber terbuka yang berkembang pesat, yang memberikan fungsionalitas serupa dengan produk sumber tertutup, dengan harga yang jauh lebih terjangkau.
           </p>
           <figure class="figure my-4 shadow border rounded p-0 m-2 col-sm-12 col-xl-11">
             <img alt="Crawl situs sedang berlangsung" src="../../assets/images/3x-crawl.png" height="786" width="1986" class="img-fluid rounded-top figure-img" data-i18n-id="s-34fd" />
@@ -260,6 +256,53 @@
           <h3 class="pt-4" data-section="active-projects" data-i18n-id="s-52da">Aktif</h3>
           <div class="accord">
             <details>
+              <summary data-i18n-id="s-4291">
+                Q2 2027: Membuat alat tata kelola pra-publikasi untuk WordPress
+              </summary>
+              <div>
+                <p class="fs-6" data-i18n-id="s-529a">Proyek ini telah didanai sepenuhnya oleh hibah besar dari sekelompok universitas yang tertarik untuk ikut merancang fungsionalitasnya.</p>
+                  <ul class="fs-6">
+                    <li data-i18n-id="s-f7b1">Membuat konfigurasi berbasis peran untuk menentukan pengguna mana yang boleh menyimpan halaman dengan masalah yang sudah diketahui.</li>
+                    <li data-i18n-id="s-2ce6">Membuat wizard di dalam editor yang dilalui penulis untuk meninjau peringatan yang belum ditangani sebelum menerbitkan konten.</li>
+                  </ul>
+              </div>
+            </details>
+            <details>
+              <summary data-i18n-id="s-b302">
+                Awal 2027: Pemeriksaan tautan rusak untuk Drupal &amp; WordPress
+              </summary>
+              <div>
+                <p class="fs-6" data-i18n-id="s-2fdf">
+                  Status: Mencari mitra dan kolaborator. Proyek ini telah didanai sebagian oleh hibah akademik, tetapi pengerjaannya belum dimulai.
+                </p>
+                <ul class="fs-6">
+                      <li data-i18n-id="s-da03">Membuat tabel DB untuk menyimpan URL yang terdeteksi, dipetakan ke halaman.</li>
+                      <li data-i18n-id="s-2ae1">Membuat tugas cron untuk memvalidasi jalur lokal menggunakan alat validasi CMS dan alamat jarak jauh menggunakan permintaan HTTP get.</li>
+                      <li data-i18n-id="s-c519">Membuat laporan dan ekspor laporan.</li>
+                      <li data-i18n-id="s-a504">Membuat penyorotan di dalam halaman.</li>
+                    </ul>
+              </div>
+            </details>
+            <details>
+              <summary data-i18n-id="s-e530">
+                Awal 2027: Pemeriksaan PDF untuk Drupal &amp; WordPress
+              </summary>
+              <div>
+                <p class="fs-6" data-i18n-id="s-e767">Status: mencari mitra dan kolaborator. Proyek ini telah didanai sebagian oleh hibah akademik, tetapi pengerjaannya belum dimulai.</p>
+                <ul class="fs-6">
+                  <li data-i18n-id="s-9607">Membuat tabel DB untuk menyimpan PDF yang terdeteksi, dipetakan ke halaman.</li>
+                  <li data-i18n-id="s-ca6c">Menggunakan alat PHP untuk mengekstrak markup dan memeriksa tag dasar.</li>
+                  <li data-i18n-id="s-24c9">Membuat laporan dengan alat tata kelola. Misalnya, "PDF ini boleh digunakan jika URL format alternatifnya tersedia di halaman tersebut."</li>
+                  <li data-i18n-id="s-9a3c">Mengubah penyorotan di dalam halaman berdasarkan apakah PDF tersebut diketahui bermasalah atau kemungkinan sudah sesuai.</li>
+                </ul>
+              </div>
+            </details>
+          </div>
+        </section>
+        <section id="finished">
+          <h3 data-section="finished" class="pt-5" data-i18n-id="s-4646">Baru selesai</h3>
+          <div class="accord">
+            <details>
               <summary data-i18n-id="s-8ea4">
                 Q2 2026: Meluncurkan komunitas CSA Editoria11y
               </summary>
@@ -282,7 +325,7 @@
               <div>
                 <ol class="fs-6">
                   <li data-i18n-id="s-4265">Selesai untuk Drupal.</li>
-                  <li data-i18n-id="s-4ab7">Tugas berikutnya: port pembangun ke WordPress.</li>
+                  <li data-i18n-id="s-4ab7">Port pembangun ke WordPress.</li>
                 </ol>
               </div>
             </details>
@@ -303,11 +346,6 @@
                 </ol>
               </div>
             </details>
-          </div>
-        </section>
-        <section id="finished">
-          <h3 data-section="finished" class="pt-5" data-i18n-id="s-4646">Baru selesai</h3>
-          <div class="accord">
             <details>
               <summary data-i18n-id="s-8545">
                 Q1 2026: Penulisan ulang perpustakaan 3.x
@@ -357,11 +395,8 @@
         <section id="project-ideas">
           <h3 data-section="project-ideas" class="pt-5" data-i18n-id="s-e19c">Dalam diskusi</h3>
           <p data-i18n-id="s-511c">Diskusikan dan beri suara pada ide-ide ini di <a               href="https://github.com/itmaybejj/editoria11y/discussions">forum perpustakaan Editoria11y</a>.</p>
-          <p data-i18n-id="s-99ee">Ide-ide diberi tag dengan perkiraan kesulitan/prioritas berdasarkan obrolan komunitas saat ini.</p>
           <ul class="mt-1 p-5 pt-0">
             <li data-i18n-id="s-47b0">Dasbor pemantauan multi-situs</li>
-            <li data-i18n-id="s-b625">Deteksi tautan rusak</li>
-            <li data-i18n-id="s-347e">Pemindaian PDF</li>
             <li data-i18n-id="s-b7fa">Tab lokasi kode tooltip</li>
             <li data-i18n-id="s-ec9e">Ekspor laporan halaman tooltip</li>
             <li data-i18n-id="s-1a54">Kata-kata yang ditandai</li>

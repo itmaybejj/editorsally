@@ -16,7 +16,7 @@
           et d'utiliser la barre d'outils <span style="text-wrap: nowrap;">(<img src="/assets/images/3x-toolbar" class="inline-block" style="width: 5rem; height: auto;" alt="Capture d'écran de la barre d'outils
               Editoria11y, affichant 4 erreurs." width="97" height="50" loading="lazy" data-i18n-id="s-65d5" />)</span> pour afficher le plan
           des titres. Cette démo inclut les tests de base et la suite CSA.</p>
-        <p class="fs-5 mb-5 pb-5" data-i18n-id="s-7580">Cette démo utilise un éditeur TinyMCE. Editoria11y est compatible avec la plupart des
+        <p class="fs-5 mb-5 pb-5" data-i18n-id="s-7580" data-og="description">Cette démo utilise un éditeur TinyMCE. Editoria11y est compatible avec la plupart des
           éditeurs de texte et propose des intégrations clés en main pour CKEditor et Gutenberg dans WordPress et
           Drupal.</p>
         <div id="ed11y-demo" class="p-5" contenteditable="">
@@ -64,7 +64,7 @@
             <p class="positive" data-i18n-id="s-2b48"><img loading="lazy" src="/assets/images/px20240813sm.jpg" data-i18n-id="s-95a0" /></p>
 
             <p data-i18n-id="s-5df5">Image avec un attribut alt invalide, par ex. <code class="language-plaintext
-                highlighter-rouge">alt=”'”</code></p>
+                highlighter-rouge">alt="'"</code></p>
 
             <p class="positive" data-i18n-id="s-47b7"><img loading="lazy" alt="'" src="/assets/images/px20240813sm.jpg" data-i18n-id="s-87b9" /></p>
 
@@ -136,7 +136,7 @@
               <p style="background: linear-gradient(45deg,#ccc 25%,#0000 25% 75%,#ccc
                 75%,#ccc),linear-gradient(45deg,#ccc 25%,#0000 25% 75%,#ccc 75%,#ccc)" data-i18n-id="s-490b">Et incalculable.</p>
             </div>
-            <div class="positive"><label>Champ avec un contraste insuffisant
+            <div class="positive"><label data-translate data-i18n-id="s-769f">Champ avec un contraste insuffisant
                 <input class="form-text" type="text" style="color: #777;" /></label></div>
 
             <style>
@@ -145,9 +145,9 @@
               }
             </style>
 
-            <label for="unsupported-placeholder">La couleur du placeholder ne peut pas être calculée</label>
+            <label for="unsupported-placeholder" data-translate data-i18n-id="s-34b7">La couleur du placeholder ne peut pas être calculée</label>
             <div class="positive" style="background: transparent;"><input type="text" id="unsupported-placeholder"
-                placeholder="Rec2020 color space" /></div>
+                placeholder="Espace colorimétrique Rec2020"  data-translate data-i18n-id="s-8ce5" /></div>
 
 
             <p data-i18n-id="s-0774">Graphique SVG avec un contraste insuffisant</p>
@@ -183,8 +183,8 @@
                 aspect-ratio: 560 / 315; max-width: 100%; cursor: not-allowed;" title="YouTube : vidéo Comment c'est
                 fait. La lecture est désactivée." sandbox="allow-scripts allow-same-origin" allow="accelerometer;
                 autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="origin" allowfullscreen></iframe>
-              <div><small><em>Lecture désactivée pour éviter les cookies.</em></small></div>
+                referrerpolicy="origin" allowfullscreen data-translate data-i18n-id="s-056d"></iframe>
+              <div><small><em data-translate data-i18n-id="s-0b03">Lecture désactivée pour éviter les cookies.</em></small></div>
             </div>
 
             <p data-i18n-id="s-e14a">L'audio nécessite une transcription :</p>
@@ -201,7 +201,7 @@
 
             <p data-i18n-id="s-fe95">Iframe non focalisable :</p>
             <div class="positive">
-              <iframe title="example" sandbox="" tabindex="-1" data-needs-src=""></iframe>
+              <iframe title="exemple" sandbox="" tabindex="-1" data-needs-src="" data-translate data-i18n-id="s-ec77"></iframe>
             </div>
 
             <p data-i18n-id="s-e27f">Composants interactifs imbriqués</p>
@@ -209,7 +209,7 @@
               <details>
                 <summary data-i18n-id="s-5064">Accordéon</summary>
                 <details>
-                  <summary data-i18n-id="s-2b8d">Accordéon</summary>Surprise !
+                  <summary data-i18n-id="s-2b8d">Accordéon</summary><span data-translate data-i18n-id="s-c8e3">Surprise !</span>
                 </details>
               </details>
             </div>
@@ -391,12 +391,12 @@
 
             <p data-i18n-id="s-296d">Champs avec un libellé invisible, demandant s'il y a aussi un libellé visible.</p>
             <div class="positive">
-              <input type="text" title="Email" />
+              <input type="text" title="E-mail"  data-translate data-i18n-id="s-95d7" />
             </div>
 
             <p data-i18n-id="s-7c79">Champs avec uniquement un placeholder comme libellé, demandant s'il y a aussi un libellé visible.</p>
             <div class="positive">
-              <input type="text" placeholder="Email" />
+              <input type="text" placeholder="E-mail"  data-translate data-i18n-id="s-f516" />
             </div>
 
             <div class="positive">

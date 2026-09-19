@@ -17,7 +17,7 @@
             der Website an Content-Autoren auftreten. Websites müssen vor dem Launch mit manuellen Prüfwerkzeugen,
             Tastaturen und Screenreadern getestet werden — aber selbst die barrierefreieste Website neigt dazu, sich mit
             der Zeit zu verschlechtern, wenn Bearbeitungen neue Probleme einbringen.</p>
-          <p class="fs-6" data-i18n-id="s-44f1">Was Editoria11y unter den Barrierefreiheitswerkzeugen auszeichnet, ist, dass seine Tests live
+          <p class="fs-6" data-i18n-id="s-44f1" data-og="description">Was Editoria11y unter den Barrierefreiheitswerkzeugen auszeichnet, ist, dass seine Tests live
             im Browser ausgeführt werden, während Autoren ihre Inhalte bearbeiten und in der Vorschau ansehen.
             <strong>Autoren reagieren eher auf unmittelbares, direktes Feedback</strong>, bemerken Warnungen und nehmen
             Korrekturen vor, als dass sie daran denken, ein Dashboard zu besuchen oder eine manuelle Prüfung
@@ -33,7 +33,7 @@
               Hinweis und öffnet seinen Tooltip.</p>
           </div>
           <div class="row">
-            <img loading="lazy" src="/assets/images/3x-generic-tip.png" class="img-fluid col-6 col-lg-8" height="798" width="1278" alt="Hinweis zeigt an, dass ein Link nur mit „Hier klicken" beschriftet ist. data-i18n-id="s-bff1" />
+            <img loading="lazy" src="/assets/images/3x-generic-tip.png" class="img-fluid col-6 col-lg-8" height="798" width="1278" alt="Hinweis zeigt an, dass ein Link nur mit „Hier klicken“ beschriftet ist." data-i18n-id="s-bff1" />
             <p class="col-6 col-lg-4 align-content-center" data-i18n-id="s-6a38">Hinweise erscheinen inline mit einer einfachsprachigen
               Fehlerbeschreibung, Korrekturvorschlägen und einer Erklärung, warum das Problem wichtig ist.</p>
           </div>
@@ -200,11 +200,8 @@
           <p class="fs-5" data-i18n-id="s-7d6d">
             Das CSA schließt diese Lücke: Projektmitglieder finanzieren die Entwicklung der Editoria11y-Bibliothek,
             seiner CMS-Plugins und der CSA-Suite: eine schnell wachsende Sammlung von
-            Open-Source-Qualitätssicherungswerkzeugen, die ähnliche Funktionen wie kommerzielle Produkte zu einem
-            deutlich günstigeren Preis bieten.
-
-            Die CSA-Suite für Drupal ist derzeit kostenlos in der Beta und wird für WordPress im 3. Quartal 2026
-            verfügbar sein.
+            Open-Source-Qualitätssicherungswerkzeugen, die ähnliche Funktionen wie Produkte mit geschlossenem
+            Quellcode bieten, und das zu einem deutlich günstigeren Preis.
           </p>
           <figure class="figure my-4 shadow border rounded p-0 m-2 col-sm-12 col-xl-11">
             <img alt="Seiten-Crawl wird durchgeführt" src="../../assets/images/3x-crawl.png" height="786" width="1986" class="img-fluid rounded-top figure-img" data-i18n-id="s-34fd" />
@@ -271,6 +268,53 @@
           <h3 class="pt-4" data-section="active-projects" data-i18n-id="s-52da">Aktiv</h3>
           <div class="accord">
             <details>
+              <summary data-i18n-id="s-4291">
+                Q2 2027: Governance-Werkzeuge für WordPress zur Prüfung vor der Veröffentlichung erstellen
+              </summary>
+              <div>
+                <p class="fs-6" data-i18n-id="s-529a">Dieses Projekt wurde vollständig durch eine großzügige Förderung einer Gruppe von Universitäten finanziert, die an der gemeinsamen Gestaltung der Funktionalität interessiert sind.</p>
+                  <ul class="fs-6">
+                    <li data-i18n-id="s-f7b1">Eine rollenbasierte Konfiguration dafür erstellen, welche Benutzer Seiten mit bekannten Problemen speichern dürfen.</li>
+                    <li data-i18n-id="s-2ce6">Einen Assistenten im Editor erstellen, den Autoren Schritt für Schritt durchlaufen, um vor der Veröffentlichung von Inhalten noch offene Hinweise zu prüfen.</li>
+                  </ul>
+              </div>
+            </details>
+            <details>
+              <summary data-i18n-id="s-b302">
+                Anfang 2027: Prüfung defekter Links für Drupal & WordPress
+              </summary>
+              <div>
+                <p class="fs-6" data-i18n-id="s-2fdf">
+                  Status: Wir suchen Partner und Mitwirkende. Dieses Projekt wurde teilweise durch eine akademische Förderung finanziert, die Arbeiten haben jedoch noch nicht begonnen.
+                </p>
+                <ul class="fs-6">
+                      <li data-i18n-id="s-da03">DB-Tabellen erstellen, um erkannte URLs zu speichern und Seiten zuzuordnen.</li>
+                      <li data-i18n-id="s-2ae1">Cron-Jobs erstellen, die lokale Pfade mit den Validierungswerkzeugen des CMS und externe Ziele über HTTP-GET-Anfragen prüfen.</li>
+                      <li data-i18n-id="s-c519">Berichte und Berichtsexporte erstellen.</li>
+                      <li data-i18n-id="s-a504">Hervorhebung direkt auf der Seite erstellen.</li>
+                    </ul>
+              </div>
+            </details>
+            <details>
+              <summary data-i18n-id="s-e530">
+                Anfang 2027: PDF-Prüfung für Drupal & WordPress
+              </summary>
+              <div>
+                <p class="fs-6" data-i18n-id="s-e767">Status: Wir suchen Partner und Mitwirkende. Dieses Projekt wurde teilweise durch eine akademische Förderung finanziert, die Arbeiten haben jedoch noch nicht begonnen.</p>
+                <ul class="fs-6">
+                  <li data-i18n-id="s-9607">DB-Tabellen erstellen, um erkannte PDFs zu speichern und Seiten zuzuordnen.</li>
+                  <li data-i18n-id="s-ca6c">PHP-Werkzeuge nutzen, um das Markup auszulesen und auf grundlegende Tags zu prüfen.</li>
+                  <li data-i18n-id="s-24c9">Berichte mit Governance-Werkzeugen erstellen. Zum Beispiel: „Dieses PDF ist in Ordnung, wenn diese URL zu einem alternativen Format auf der Seite vorhanden ist.“</li>
+                  <li data-i18n-id="s-9a3c">Die Hervorhebung auf der Seite danach anpassen, ob das PDF als fehlerhaft bekannt oder möglicherweise in Ordnung ist.</li>
+                </ul>
+              </div>
+            </details>
+          </div>
+        </section>
+        <section id="finished">
+          <h3 data-section="finished" class="pt-5" data-i18n-id="s-4646">Kürzlich abgeschlossen</h3>
+          <div class="accord">
+            <details>
               <summary data-i18n-id="s-8ea4">
                 Q2 2026: Editoria11y-CSA-Community starten
               </summary>
@@ -293,7 +337,7 @@
               <div>
                 <ol class="fs-6">
                   <li data-i18n-id="s-4265">Für Drupal fertiggestellt.</li>
-                  <li data-i18n-id="s-4ab7">Aufgabe: Builder auf WordPress portieren.</li>
+                  <li data-i18n-id="s-4ab7">Builder auf WordPress portieren.</li>
                 </ol>
               </div>
             </details>
@@ -316,11 +360,6 @@
                 </ol>
               </div>
             </details>
-          </div>
-        </section>
-        <section id="finished">
-          <h3 data-section="finished" class="pt-5" data-i18n-id="s-4646">Kürzlich abgeschlossen</h3>
-          <div class="accord">
             <details>
               <summary data-i18n-id="s-8545">
                 Q1 2026: Bibliothek 3.x Neuentwicklung
@@ -376,12 +415,8 @@
         <section id="project-ideas">
           <h3 data-section="project-ideas" class="pt-5" data-i18n-id="s-e19c">In Diskussion</h3>
           <p data-i18n-id="s-511c">Diskutieren und abstimmen Sie über diese Ideen in den <a               href="https://github.com/itmaybejj/editoria11y/discussions">Editoria11y-Bibliotheksforen</a>.</p>
-          <p data-i18n-id="s-99ee">Ideen sind mit Einschätzungen zu Schwierigkeit und Priorität auf Basis aktueller Community-Diskussionen
-            versehen.</p>
           <ul class="mt-1 p-5 pt-0">
             <li data-i18n-id="s-47b0">Multi-Site-Überwachungs-Dashboard</li>
-            <li data-i18n-id="s-b625">Erkennung defekter Links</li>
-            <li data-i18n-id="s-347e">PDF-Scanning</li>
             <li data-i18n-id="s-b7fa">Tab für Tooltip-Code-Herkunft</li>
             <li data-i18n-id="s-ec9e">Tooltip-Seitenberichtsexport</li>
             <li data-i18n-id="s-1a54">Markierte Wörter</li>
