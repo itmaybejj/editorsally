@@ -16,7 +16,7 @@
           a także korzystać z paska narzędzi <span style="text-wrap: nowrap;">(<img src="/assets/images/3x-toolbar" class="inline-block" style="width: 5rem; height: auto;" alt="Zrzut ekranu paska narzędzi Editoria11y
               pokazujący 4 błędy." width="97" height="50" loading="lazy" data-i18n-id="s-65d5" />)</span>, aby przeglądać strukturę nagłówków.
           Ta wersja demo zawiera zarówno testy podstawowe, jak i pakiet CSA.</p>
-        <p class="fs-5 mb-5 pb-5" data-i18n-id="s-7580">Ta wersja demo używa edytora TinyMCE. Editoria11y jest zgodny z większością edytorów
+        <p class="fs-5 mb-5 pb-5" data-i18n-id="s-7580" data-og="description">Ta wersja demo używa edytora TinyMCE. Editoria11y jest zgodny z większością edytorów
           tekstu i posiada gotowe implementacje dla CKEditor oraz Gutenberg w WordPress i Drupal.</p>
         <div id="ed11y-demo" class="p-5" contenteditable="">
           <section id="headings">
@@ -63,7 +63,7 @@
             <p class="positive" data-i18n-id="s-2b48"><img loading="lazy" src="/assets/images/px20240813sm.jpg" data-i18n-id="s-95a0" /></p>
 
             <p data-i18n-id="s-5df5">Obraz z nieprawidłowym atrybutem alt, np. <code class="language-plaintext
-                highlighter-rouge">alt=”'”</code></p>
+                highlighter-rouge">alt="'"</code></p>
 
             <p class="positive" data-i18n-id="s-47b7"><img loading="lazy" alt="'" src="/assets/images/px20240813sm.jpg" data-i18n-id="s-87b9" /></p>
 
@@ -75,7 +75,7 @@
 
             <p class="positive" data-i18n-id="s-7003"><img loading="lazy" alt="Zdjęcie psa." src="/assets/images/px20240813sm.jpg" data-i18n-id="s-2149" /></p>
 
-            <p id="”linked-image-with-redundant-text-in-its-alt”" data-i18n-id="s-6554">Obraz w linku z nadmiarowym tekstem w atrybucie alt,
+            <p id="linked-image-with-redundant-text-in-its-alt" data-i18n-id="s-6554">Obraz w linku z nadmiarowym tekstem w atrybucie alt,
               np. „zdjęcie:”</p>
 
             <p class="positive" data-i18n-id="s-d93d"><a href="./editable.htm"><img loading="lazy" alt="Zdjęcie psa." src="/assets/images/px20240813sm.jpg" data-i18n-id="s-2642" /></a></p>
@@ -133,7 +133,7 @@
               <p style="background: linear-gradient(45deg,#ccc 25%,#0000 25% 75%,#ccc
                 75%,#ccc),linear-gradient(45deg,#ccc 25%,#0000 25% 75%,#ccc 75%,#ccc)" data-i18n-id="s-490b">I niepoliczalne.</p>
             </div>
-            <div class="positive"><label>Pole tekstowe z niskim kontrastem
+            <div class="positive"><label data-translate data-i18n-id="s-769f">Pole tekstowe z niskim kontrastem
                 <input class="form-text" type="text" style="color: #777;" /></label></div>
 
             <style>
@@ -142,9 +142,9 @@
               }
             </style>
 
-            <label for="unsupported-placeholder">Nie można obliczyć koloru symbolu zastępczego</label>
+            <label for="unsupported-placeholder" data-translate data-i18n-id="s-34b7">Nie można obliczyć koloru symbolu zastępczego</label>
             <div class="positive" style="background: transparent;"><input type="text" id="unsupported-placeholder"
-                placeholder="Przestrzeń kolorów Rec2020" /></div>
+                placeholder="Przestrzeń kolorów Rec2020"  data-translate data-i18n-id="s-8ce5" /></div>
 
 
             <p data-i18n-id="s-0774">Grafika SVG bez wystarczającego kontrastu</p>
@@ -180,8 +180,8 @@
                 aspect-ratio: 560 / 315; max-width: 100%; cursor: not-allowed;" title="YouTube: Wideo instruktażowe.
                 Odtwarzanie jest wyłączone." sandbox="allow-scripts allow-same-origin" allow="accelerometer; autoplay;
                 clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="origin"
-                allowfullscreen></iframe>
-              <div><small><em>Odtwarzanie wyłączone, aby zapobiec plikom cookie.</em></small></div>
+                allowfullscreen data-translate data-i18n-id="s-056d"></iframe>
+              <div><small><em data-translate data-i18n-id="s-0b03">Odtwarzanie wyłączone, aby zapobiec plikom cookie.</em></small></div>
             </div>
 
             <p data-i18n-id="s-e14a">Plik audio wymaga transkrypcji:</p>
@@ -198,7 +198,7 @@
 
             <p data-i18n-id="s-fe95">Iframe niedostępny z klawiatury:</p>
             <div class="positive">
-              <iframe title="example" sandbox="" tabindex="-1" data-needs-src=""></iframe>
+              <iframe title="przykład" sandbox="" tabindex="-1" data-needs-src="" data-translate data-i18n-id="s-ec77"></iframe>
             </div>
 
             <p data-i18n-id="s-e27f">Zagnieżdżone komponenty interaktywne</p>
@@ -206,7 +206,7 @@
               <details>
                 <summary data-i18n-id="s-5064">Akordeon</summary>
                 <details>
-                  <summary data-i18n-id="s-2b8d">Akordeon</summary>Niespodzianka!
+                  <summary data-i18n-id="s-2b8d">Akordeon</summary><span data-translate data-i18n-id="s-c8e3">Niespodzianka!</span>
                 </details>
               </details>
             </div>
@@ -389,12 +389,12 @@
 
             <p data-i18n-id="s-296d">Pola z niewidoczną etykietą — sprawdzenie, czy istnieje też widoczna etykieta.</p>
             <div class="positive">
-              <input type="text" title="Email" />
+              <input type="text" title="E-mail"  data-translate data-i18n-id="s-95d7" />
             </div>
 
             <p data-i18n-id="s-7c79">Pola z wyłącznie zastępczą etykietą — sprawdzenie, czy istnieje też widoczna etykieta.</p>
             <div class="positive">
-              <input type="text" placeholder="Email" />
+              <input type="text" placeholder="E-mail"  data-translate data-i18n-id="s-f516" />
             </div>
 
             <div class="positive">

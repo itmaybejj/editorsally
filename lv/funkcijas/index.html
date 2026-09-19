@@ -43,7 +43,7 @@
   <link rel="alternate" hreflang="x-default" href="https://editoria11y.com/features/" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Funkcijas — Editoria11y" />
-  <meta property="og:description" content="Editoria11y is a community-supported, open-source accessibility checker with deep integrations for Drupal, WordPress, and more." />
+  <meta property="og:description" content="Tas, kas Editoria11y izceļ starp pieejamības rīkiem, ir tas, ka tā pārbaudes darbojas pārlūkprogrammā reāllaikā, kamēr autori rediģē un priekšskatās savu darbu. Autori, visticamāk, reaģēs uz tūlītēju, iekļauto atgriezenisko saiti, pamanīs brīdinājumus un veiks labojumus, nekā atcerēsies apmeklēt informācijas paneli vai palaist manuālo pārbaudi." />
   <meta property="og:image" content="https://editoria11y.com/assets/images/og-image.png" />
   <meta property="og:url" content="https://editoria11y.com/lv/funkcijas/" />
   <link href="/assets/bootstrap/css/bootstrap.min.css?v=7575987f" rel="stylesheet" />
@@ -273,13 +273,7 @@
           <p class="fs-5">
             Tomēr Editoria11y nav bezmaksas izstrādē vai atbalstā.
           </p>
-          <p class="fs-5">
-            CSA aizpilda šo robu: projekta dalībnieki finansē Editoria11y bibliotēkas, tās CMS spraudņu un
-            CSA komplekta izstrādi: strauji augošs atvērtā koda kvalitātes nodrošināšanas rīku komplekts, kas nodrošina līdzīgu
-            funkcionalitāti kā komerciālie produkti, par daudz zemāku cenu.
-
-            CSA komplekts Drupal ir pašlaik bezmaksas beta versijā un ieradīsies WordPress versijā 2026. gada 3. ceturksnī.
-          </p>
+          <p class="fs-5">CSA aizpilda šo robu: projekta dalībnieki finansē Editoria11y bibliotēkas, tās CMS spraudņu un CSA komplekta izstrādi – strauji augoša atvērtā pirmkoda kvalitātes nodrošināšanas rīku komplekta, kas piedāvā līdzīgu funkcionalitāti kā slēgtā pirmkoda produkti, tikai par daudz zemāku cenu.</p>
           <figure class="figure my-4 shadow border rounded p-0 m-2 col-sm-12 col-xl-11">
             <img alt="Vietnes rāpināšana notiek" src="../../assets/images/3x-crawl.png" height="786" width="1986" class="img-fluid rounded-top figure-img" />
             <figcaption class="figure-caption p-2 pt-2">CSA rāpuļprogramma atsvaidzina informācijas paneli.</figcaption>
@@ -343,6 +337,45 @@
           <h3 class="pt-4" data-section="active-projects">Aktīvs</h3>
           <div class="accord">
             <details>
+              <summary>Q2 2027: izveidot pirmspublicēšanas pārvaldības rīkus WordPress platformai</summary>
+              <div>
+                <p class="fs-6">Šis projekts ir pilnībā finansēts ar dāsnu grantu no universitāšu grupas, kas ir ieinteresēta šīs funkcionalitātes kopīgā izstrādē.</p>
+                  <ul class="fs-6">
+                    <li>Izveidot uz lomām balstītu konfigurāciju, kas nosaka, kuri lietotāji drīkst saglabāt lapas ar zināmām problēmām.</li>
+                    <li>Izveidot redaktorā iebūvētu vedni, ar kuru autori soli pa solim pārskata vēl nenovērstos brīdinājumus pirms satura publicēšanas.</li>
+                  </ul>
+              </div>
+            </details>
+            <details>
+              <summary>2027. gada sākums: bojātu saišu pārbaude Drupal un WordPress platformām</summary>
+              <div>
+                <p class="fs-6">Statuss: meklējam partnerus un sadarbības partnerus. Šis projekts ir daļēji finansēts ar akadēmisku grantu, taču darbs vēl nav sācies.</p>
+                <ul class="fs-6">
+                      <li>Izveidot DB tabulas, kurās glabāt atrastos URL, sasaistot tos ar lapām.</li>
+                      <li>Izveidot cron uzdevumus, kas vietējos ceļus pārbauda ar CMS validācijas rīkiem, bet attālinātos – ar HTTP get pieprasījumiem.</li>
+                      <li>Izveidot atskaites un atskaišu eksportu.</li>
+                      <li>Izveidot izcelšanu lapā.</li>
+                    </ul>
+              </div>
+            </details>
+            <details>
+              <summary>2027. gada sākums: PDF pārbaude Drupal un WordPress platformām</summary>
+              <div>
+                <p class="fs-6">Statuss: meklējam partnerus un sadarbības partnerus. Šis projekts ir daļēji finansēts ar akadēmisku grantu, taču darbs vēl nav sācies.</p>
+                <ul class="fs-6">
+                  <li>Izveidot DB tabulas, kurās glabāt atrastos PDF, sasaistot tos ar lapām.</li>
+                  <li>Izmantot PHP rīkus marķējuma nolasīšanai, pārbaudot pamata tagus.</li>
+                  <li>Izveidot atskaites ar pārvaldības rīkiem. Piemēram: „Šis PDF ir pieņemams, ja lapā ir norādīts alternatīvā formāta URL.“</li>
+                  <li>Mainīt izcelšanu lapā atkarībā no tā, vai PDF ir zināms kā nederīgs vai, iespējams, pieņemams.</li>
+                </ul>
+              </div>
+            </details>
+          </div>
+        </section>
+        <section id="finished">
+          <h3 data-section="finished" class="pt-5">Nesen pabeigts</h3>
+          <div class="accord">
+            <details>
               <summary>
                 Q2 2026: Editoria11y CSA kopienas palaišana
               </summary>
@@ -365,7 +398,7 @@
               <div>
                 <ol class="fs-6">
                   <li>Pabeigts Drupal.</li>
-                  <li>Uzdevums: pārnest veidotāju uz WordPress.</li>
+                  <li>Pārnest veidotāju uz WordPress.</li>
                 </ol>
               </div>
             </details>
@@ -386,11 +419,6 @@
                 </ol>
               </div>
             </details>
-          </div>
-        </section>
-        <section id="finished">
-          <h3 data-section="finished" class="pt-5">Nesen pabeigts</h3>
-          <div class="accord">
             <details>
               <summary>
                 Q1 2026: Bibliotēkas 3.x pārrakstīšana
@@ -438,11 +466,8 @@
         <section id="project-ideas">
           <h3 data-section="project-ideas" class="pt-5">Apspriešanā</h3>
           <p>Apspriediet un balsojiet par šīm idejām <a               href="https://github.com/itmaybejj/editoria11y/discussions">Editoria11y bibliotēkas forumos</a>.</p>
-          <p>Idejas ir atzīmētas ar sarežģītības/prioritātes novērtējumiem, pamatojoties uz pašreizējo kopienas saziņu.</p>
           <ul class="mt-1 p-5 pt-0">
             <li>Vairāku vietņu uzraudzības informācijas panelis</li>
-            <li>Bojātu saišu noteikšana</li>
-            <li>PDF skenēšana</li>
             <li>Rīka padoma koda atrašanās vietas cilne</li>
             <li>Rīka padoma lapas atskaites eksports</li>
             <li>Atzīmētie vārdi</li>
@@ -508,8 +533,8 @@
     </div>
   </footer>
   <script async src="/assets/bootstrap/js/bootstrap.bundle.min.js?v=69f68885" class="astro-vvvwv3sm"></script>
-  <script async src="/assets/lang/i18n.js?v=9063c00b"></script>
-  <script async src="/assets/theme.js?v=39536f05"></script>
+  <script async src="/assets/lang/i18n.js?v=650b32df"></script>
+  <script async src="/assets/theme.js?v=0ee05eec"></script>
   <script async src="/assets/prism/prism.js?v=3bbae506"></script>
 </body>
 

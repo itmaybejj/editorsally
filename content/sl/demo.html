@@ -14,7 +14,7 @@
             zgodovino in funkcije preverjevalnika</a>,
           ali preizkusite urejanje demonstracijske vsebine spodaj, odpiranje in opuščanje opozoril
           ter uporabo orodne vrstice <span style="text-wrap: nowrap;">(<img src="/assets/images/3x-toolbar" class="inline-block" style="width: 5rem; height: auto;" alt="Posnetek zaslona orodne vrstice Editoria11y s 4 napakami." width="97" height="50" loading="lazy" data-i18n-id="s-65d5" />)</span> za prikaz strukture naslovov. Ta demonstracija vključuje tako osnovne teste kot zbirko CSA.</p>
-        <p class="fs-5 mb-5 pb-5" data-i18n-id="s-7580">Ta demonstracija uporablja urejevalnik TinyMCE. Editoria11y je združljiv z večino urejevalnikov besedila in
+        <p class="fs-5 mb-5 pb-5" data-i18n-id="s-7580" data-og="description">Ta demonstracija uporablja urejevalnik TinyMCE. Editoria11y je združljiv z večino urejevalnikov besedila in
           ima ključne implementacije za CKEditor in Gutenberg v WordPressu in Drupal.</p>
         <div id="ed11y-demo" class="p-5" contenteditable="">
           <section id="headings">
@@ -129,7 +129,7 @@
               <p style="background: linear-gradient(45deg,#ccc 25%,#0000 25% 75%,#ccc 75%,#ccc),linear-gradient(45deg,#ccc 25%,#0000 25% 75%,#ccc 75%,#ccc)" data-i18n-id="s-490b">
                 In neizračunljivo.</p>
             </div>
-            <div class="positive"><label>Input with low contrast
+            <div class="positive"><label data-translate data-i18n-id="s-769f">Vnosno polje z nizkim kontrastom
                 <input class="form-text" type="text" style="color: #777;" /></label></div>
 
             <style>
@@ -138,9 +138,9 @@
               }
             </style>
 
-            <label for="unsupported-placeholder">Color of placeholder cannot be calculated</label>
+            <label for="unsupported-placeholder" data-translate data-i18n-id="s-34b7">Barve ogradnega besedila ni mogoče izračunati</label>
             <div class="positive" style="background: transparent;"><input type="text" id="unsupported-placeholder"
-                placeholder="Rec2020 color space" /></div>
+                placeholder="Barvni prostor Rec2020"  data-translate data-i18n-id="s-8ce5" /></div>
 
 
             <p data-i18n-id="s-0774">SVG grafika z nezadostnim kontrastom</p>
@@ -170,10 +170,10 @@
               <iframe width="560" height="315" inert=""
                 src="https://www.youtube-nocookie.com/embed/QGsevnbItdU?si=W_b2i2o_n5v1ArvA"
                 style="width: 560px; aspect-ratio: 560 / 315; max-width: 100%; cursor: not-allowed;"
-                title="YouTube: How it's done video. Playback is disabled." sandbox="allow-scripts allow-same-origin"
+                title="YouTube: videoposnetek o tem, kako se to naredi. Predvajanje je onemogočeno." sandbox="allow-scripts allow-same-origin"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="origin" allowfullscreen></iframe>
-              <div><small><em>Playback disabled to prevent cookies.</em></small></div>
+                referrerpolicy="origin" allowfullscreen data-translate data-i18n-id="s-056d"></iframe>
+              <div><small><em data-translate data-i18n-id="s-0b03">Predvajanje je onemogočeno za preprečevanje piškotkov.</em></small></div>
             </div>
 
             <p data-i18n-id="s-e14a">Zvok potrebuje zapis:</p>
@@ -189,7 +189,7 @@
 
             <p data-i18n-id="s-fe95">Iframe, ki ga tipkovnica ne more doseči:</p>
             <div class="positive">
-              <iframe title="example" sandbox="" tabindex="-1" data-needs-src=""></iframe>
+              <iframe title="primer" sandbox="" tabindex="-1" data-needs-src="" data-translate data-i18n-id="s-ec77"></iframe>
             </div>
 
             <p data-i18n-id="s-e27f">Gnezdene interaktivne komponente</p>
@@ -197,7 +197,7 @@
               <details>
                 <summary data-i18n-id="s-5064">Akordeoni</summary>
                 <details>
-                  <summary data-i18n-id="s-2b8d">Akordeoni</summary>Surprise!
+                  <summary data-i18n-id="s-2b8d">Akordeoni</summary><span data-translate data-i18n-id="s-c8e3">Presenečenje!</span>
                 </details>
               </details>
             </div>
@@ -366,12 +366,12 @@
 
             <p data-i18n-id="s-296d">Vnosna polja z nevidno oznako, pri katerih se vprašamo, ali obstaja tudi vidna oznaka.</p>
             <div class="positive">
-              <input type="text" title="Email" />
+              <input type="text" title="E-pošta"  data-translate data-i18n-id="s-95d7" />
             </div>
 
             <p data-i18n-id="s-7c79">Vnosna polja z le nadomestno oznako, pri katerih se vprašamo, ali obstaja tudi vidna oznaka.</p>
             <div class="positive">
-              <input type="text" placeholder="Email" />
+              <input type="text" placeholder="E-pošta"  data-translate data-i18n-id="s-f516" />
             </div>
 
             <div class="positive">

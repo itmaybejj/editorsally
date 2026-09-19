@@ -43,7 +43,7 @@
   <link rel="alternate" hreflang="x-default" href="https://editoria11y.com/drupal/" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Editoria11y для Drupal — Editoria11y" />
-  <meta property="og:description" content="Editoria11y is a community-supported, open-source accessibility checker with deep integrations for Drupal, WordPress, and more." />
+  <meta property="og:description" content="Модуль Drupal з'єднує бібліотеку перевірки з редакторським бекендом і додає багато серверних інструментів для звітності, керування та налаштування" />
   <meta property="og:image" content="https://editoria11y.com/assets/images/og-image.png" />
   <meta property="og:url" content="https://editoria11y.com/uk/drupal/" />
   <link href="/assets/bootstrap/css/bootstrap.min.css?v=7575987f" rel="stylesheet" />
@@ -236,12 +236,12 @@
           <h3 id="roots">Ігнорування елементів</h3>
           <p>Ці два параметри конфігурації є найважливішими!</p>
           <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
-            <label for="edit-content-root">Перевірити контент у цих контейнерах</label>
+            <label for="edit-content-root" data-translate>Перевірити контент у цих контейнерах</label>
             <div><textarea class="form-control" id="edit-content-root" name="content_root" rows="1" cols="30"
                 disabled></textarea>
             </div>
             <div class="mt-3">
-              <label for="edit-ignore-elements">Пропустити ці елементи</label>
+              <label for="edit-ignore-elements" data-translate>Пропустити ці елементи</label>
               <div>
                 <textarea class="form-control" id="edit-ignore-elements" disabled name="ignore_elements" rows="1"
                   cols="30" class=""></textarea>
@@ -263,7 +263,7 @@
           <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
             <div>
               <fieldset>
-                <legend>
+                <legend data-translate>
                   Область перевірки розробника
                 </legend>
                 <div class="fieldset__wrapper fieldset__wrapper--group">
@@ -272,20 +272,20 @@
                     <div>
                       <input aria-describedby="edit-dev-check-root--description" type="radio"
                         id="edit-dev-check-root-automatic" name="dev_check_root" value="automatic" checked="checked" />
-                      <label for="edit-dev-check-root-automatic" class="form-item__label option">Усі елементи</label>
+                      <label for="edit-dev-check-root-automatic" class="form-item__label option" data-translate>Усі елементи</label>
                     </div>
                     <div class="d-flex">
                       <input aria-describedby="edit-dev-check-root--description" type="radio"
                         id="edit-dev-check-root-match" name="dev_check_root" value="match"
                         class="align-self-baseline mt-1 me-1" />
-                      <label for="edit-dev-check-root-match" class="form-item__label option">Лише контейнери, зазначені
+                      <label for="edit-dev-check-root-match" class="form-item__label option" data-translate>Лише контейнери, зазначені
                         на вкладці «Content Setting»</label>
                     </div>
                     <div class="">
                       <input aria-describedby="edit-dev-check-root--description" type="radio"
                         id="edit-dev-check-root-specify" name="dev_check_root" value="specify"
                         class="form-radio form-boolean form-boolean--type-radio" />
-                      <label for="edit-dev-check-root-specify" class="">Конкретні контейнери, зазначені нижче</label>
+                      <label for="edit-dev-check-root-specify" class data-translate>Конкретні контейнери, зазначені нижче</label>
                     </div>
                   </div>
 
@@ -293,7 +293,7 @@
               </fieldset>
 
               <div class="">
-                <label for="edit-always-ignore" class="mt-3">Ігнорувати як для розробників, так і для редакторів
+                <label for="edit-always-ignore" class="mt-3" data-translate>Ігнорувати як для розробників, так і для редакторів
                   контенту</label>
                 <div class="form-textarea-wrapper">
                   <textarea id="edit-always-ignore" class="form-control" name="always_ignore" rows="1" cols="20"
@@ -324,13 +324,13 @@
             Найпростіший спосіб — передати CSS-класи або ідентифікатори до цих параметрів:
           </p>
           <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
-            <label for="edit-no-load" class="form-item__label">Не перевіряти на сторінках із цими елементами</label>
+            <label for="edit-no-load" class="form-item__label" data-translate>Не перевіряти на сторінках із цими елементами</label>
             <div class="form-textarea-wrapper">
               <textarea data-drupal-selector="edit-no-load" aria-describedby="edit-no-load--description"
                 id="edit-no-load" name="no_load" rows="1" cols="20" class="form-control"></textarea>
             </div>
 
-            <label for="edit-ignore-all-if-absent" class="form-item__label">Приховати всі попередження на сторінках, де
+            <label for="edit-ignore-all-if-absent" class="form-item__label" data-translate>Приховати всі попередження на сторінках, де
               ці елементи відсутні</label>
             <div class="form-textarea-wrapper">
               <textarea data-drupal-selector="edit-ignore-all-if-absent"
@@ -422,12 +422,12 @@
           <p>Модуль надає поля для двох параметрів конфігурації бібліотеки, що змінюють розміщення підказок:</p>
 
           <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
-            <label for="edit-element-hides-overflow" class="form-item__label">Елементи з прихованим
+            <label for="edit-element-hides-overflow" class="form-item__label" data-translate>Елементи з прихованим
               переповненням</label>
             <textarea data-drupal-selector="edit-element-hides-overflow"
               aria-describedby="edit-element-hides-overflow--description" id="edit-element-hides-overflow"
               name="element_hides_overflow" rows="1" cols="60" class="form-control"></textarea>
-            <label for="edit-hidden-handlers" class="form-item__label">JavaScript теми оброблятиме відображення
+            <label for="edit-hidden-handlers" class="form-item__label" data-translate>JavaScript теми оброблятиме відображення
               прихованих підказок усередині цих контейнерів</label>
             <textarea data-drupal-selector="edit-hidden-handlers" aria-describedby="edit-hidden-handlers--description"
               id="edit-hidden-handlers" name="hidden_handlers" rows="1" cols="60" class="form-control"></textarea>
@@ -623,8 +623,8 @@ var editoria11yOptions = function(options) {
     </div>
   </footer>
   <script async src="/assets/bootstrap/js/bootstrap.bundle.min.js?v=69f68885" class="astro-vvvwv3sm"></script>
-  <script async src="/assets/lang/i18n.js?v=9063c00b"></script>
-  <script async src="/assets/theme.js?v=39536f05"></script>
+  <script async src="/assets/lang/i18n.js?v=650b32df"></script>
+  <script async src="/assets/theme.js?v=0ee05eec"></script>
   <script async src="/assets/prism/prism.js?v=3bbae506"></script>
 </body>
 

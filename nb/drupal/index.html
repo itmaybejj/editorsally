@@ -43,7 +43,7 @@
   <link rel="alternate" hreflang="x-default" href="https://editoria11y.com/drupal/" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Editoria11y for Drupal — Editoria11y" />
-  <meta property="og:description" content="Editoria11y is a community-supported, open-source accessibility checker with deep integrations for Drupal, WordPress, and more." />
+  <meta property="og:description" content="Drupal-modulen kobler kontrollerbiblioteket til den redaksjonelle backend-en, og legger til en rekke serverside-verktøy for rapportering, styring og konfigurasjon" />
   <meta property="og:image" content="https://editoria11y.com/assets/images/og-image.png" />
   <meta property="og:url" content="https://editoria11y.com/nb/drupal/" />
   <link href="/assets/bootstrap/css/bootstrap.min.css?v=7575987f" rel="stylesheet" />
@@ -233,12 +233,12 @@
           <h3 id="roots">Ignorer elementer</h3>
           <p>Disse to konfigurasjonsinnstillingene er de viktigste!</p>
           <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
-            <label for="edit-content-root">Sjekk innhold i disse beholderne</label>
+            <label for="edit-content-root" data-translate>Sjekk innhold i disse beholderne</label>
             <div><textarea class="form-control" id="edit-content-root" name="content_root" rows="1" cols="30"
                 disabled></textarea>
             </div>
             <div class="mt-3">
-              <label for="edit-ignore-elements">Hopp over disse elementene</label>
+              <label for="edit-ignore-elements" data-translate>Hopp over disse elementene</label>
               <div>
                 <textarea class="form-control" id="edit-ignore-elements" disabled name="ignore_elements" rows="1"
                   cols="30" class=""></textarea>
@@ -258,7 +258,7 @@
           <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
             <div>
               <fieldset>
-                <legend>
+                <legend data-translate>
                   Utviklerkontrollområde
                 </legend>
                 <div class="fieldset__wrapper fieldset__wrapper--group">
@@ -267,20 +267,20 @@
                     <div>
                       <input aria-describedby="edit-dev-check-root--description" type="radio"
                         id="edit-dev-check-root-automatic" name="dev_check_root" value="automatic" checked="checked" />
-                      <label for="edit-dev-check-root-automatic" class="form-item__label option">Alle elementer</label>
+                      <label for="edit-dev-check-root-automatic" class="form-item__label option" data-translate>Alle elementer</label>
                     </div>
                     <div class="d-flex">
                       <input aria-describedby="edit-dev-check-root--description" type="radio"
                         id="edit-dev-check-root-match" name="dev_check_root" value="match"
                         class="align-self-baseline mt-1 me-1" />
-                      <label for="edit-dev-check-root-match" class="form-item__label option">Kun beholderne oppført i
+                      <label for="edit-dev-check-root-match" class="form-item__label option" data-translate>Kun beholderne oppført i
                         fanen Innholdsinnstilling</label>
                     </div>
                     <div class="">
                       <input aria-describedby="edit-dev-check-root--description" type="radio"
                         id="edit-dev-check-root-specify" name="dev_check_root" value="specify"
                         class="form-radio form-boolean form-boolean--type-radio" />
-                      <label for="edit-dev-check-root-specify" class="">De spesifikke beholderne oppført
+                      <label for="edit-dev-check-root-specify" class data-translate>De spesifikke beholderne oppført
                         nedenfor</label>
                     </div>
                   </div>
@@ -289,7 +289,7 @@
               </fieldset>
 
               <div class="">
-                <label for="edit-always-ignore" class="mt-3">Ignorer for både utviklere og innholdsredaktører</label>
+                <label for="edit-always-ignore" class="mt-3" data-translate>Ignorer for både utviklere og innholdsredaktører</label>
                 <div class="form-textarea-wrapper">
                   <textarea id="edit-always-ignore" class="form-control" name="always_ignore" rows="1" cols="20"
                     placeholder=""></textarea>
@@ -319,13 +319,13 @@
             Den enkleste måten å gjøre dette på er ved å sende CSS-klasser eller ID-er til disse alternativene:
           </p>
           <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
-            <label for="edit-no-load" class="form-item__label">Ikke sjekk sider med disse elementene</label>
+            <label for="edit-no-load" class="form-item__label" data-translate>Ikke sjekk sider med disse elementene</label>
             <div class="form-textarea-wrapper">
               <textarea data-drupal-selector="edit-no-load" aria-describedby="edit-no-load--description"
                 id="edit-no-load" name="no_load" rows="1" cols="20" class="form-control"></textarea>
             </div>
 
-            <label for="edit-ignore-all-if-absent" class="form-item__label">Skjul alle varsler på sider der disse
+            <label for="edit-ignore-all-if-absent" class="form-item__label" data-translate>Skjul alle varsler på sider der disse
               elementene ikke er til stede</label>
             <div class="form-textarea-wrapper">
               <textarea data-drupal-selector="edit-ignore-all-if-absent"
@@ -416,11 +416,11 @@
           <p>Modulen gir felt for to av bibliotekets konfigurasjonsalternativer for å endre hvordan tips plasseres:</p>
 
           <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
-            <label for="edit-element-hides-overflow" class="form-item__label">Elementer med skjult overflyt</label>
+            <label for="edit-element-hides-overflow" class="form-item__label" data-translate>Elementer med skjult overflyt</label>
             <textarea data-drupal-selector="edit-element-hides-overflow"
               aria-describedby="edit-element-hides-overflow--description" id="edit-element-hides-overflow"
               name="element_hides_overflow" rows="1" cols="60" class="form-control"></textarea>
-            <label for="edit-hidden-handlers" class="form-item__label">Tema-JS vil håndtere avsløring av skjulte
+            <label for="edit-hidden-handlers" class="form-item__label" data-translate>Tema-JS vil håndtere avsløring av skjulte
               verktøytips inne i disse beholderne</label>
             <textarea data-drupal-selector="edit-hidden-handlers" aria-describedby="edit-hidden-handlers--description"
               id="edit-hidden-handlers" name="hidden_handlers" rows="1" cols="60" class="form-control"></textarea>
@@ -612,8 +612,8 @@ var editoria11yOptions = function(options) {
     </div>
   </footer>
   <script async src="/assets/bootstrap/js/bootstrap.bundle.min.js?v=69f68885" class="astro-vvvwv3sm"></script>
-  <script async src="/assets/lang/i18n.js?v=9063c00b"></script>
-  <script async src="/assets/theme.js?v=39536f05"></script>
+  <script async src="/assets/lang/i18n.js?v=650b32df"></script>
+  <script async src="/assets/theme.js?v=0ee05eec"></script>
   <script async src="/assets/prism/prism.js?v=3bbae506"></script>
 </body>
 

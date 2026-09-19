@@ -43,7 +43,7 @@
   <link rel="alternate" hreflang="x-default" href="https://editoria11y.com/features/" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Funcții — Editoria11y" />
-  <meta property="og:description" content="Editoria11y is a community-supported, open-source accessibility checker with deep integrations for Drupal, WordPress, and more." />
+  <meta property="og:description" content="Ceea ce îl diferențiază pe Editoria11y față de alte instrumente de accesibilitate este că testele rulează live, în browser, pe măsură ce autorii editează și previzualizează munca. Autorii au mai multe șanse să reacționeze la feedback imediat, inline, să observe alertele și să facă corecțiile, decât să-și amintească să viziteze un panou de control sau să ruleze o verificare manuală." />
   <meta property="og:image" content="https://editoria11y.com/assets/images/og-image.png" />
   <meta property="og:url" content="https://editoria11y.com/ro/functionalitati/" />
   <link href="/assets/bootstrap/css/bootstrap.min.css?v=7575987f" rel="stylesheet" />
@@ -275,11 +275,7 @@
             Editoria11y nu este, totuși, gratuit de dezvoltat sau susținut.
           </p>
           <p class="fs-5">
-            CSA completează golul: membrii proiectului finanțează dezvoltarea bibliotecii Editoria11y, a pluginurilor sale CMS și
-            a suitei CSA: un set de instrumente de asigurare a calității open-source, în creștere rapidă, care oferă
-            funcționalitate similară cu produsele comerciale, la un preț mult mai mic.
-
-            Suita CSA pentru Drupal este momentan gratuită în versiune beta și va fi disponibilă pentru WordPress în T3 2026.
+            CSA acoperă acest gol: membrii proiectului finanțează dezvoltarea bibliotecii Editoria11y, a pluginurilor sale pentru CMS și a suitei CSA: un set de instrumente open source de asigurare a calității, în creștere rapidă, care oferă funcționalități similare cu cele ale produselor cu sursă închisă, la un preț mult mai mic.
           </p>
           <figure class="figure my-4 shadow border rounded p-0 m-2 col-sm-12 col-xl-11">
             <img alt="Crawler de site în funcțiune" src="../../assets/images/3x-crawl.png" height="786" width="1986" class="img-fluid rounded-top figure-img" />
@@ -345,6 +341,53 @@
           <div class="accord">
             <details>
               <summary>
+                T2 2027: Crearea de instrumente de guvernanță înainte de publicare pentru WordPress
+              </summary>
+              <div>
+                <p class="fs-6">Acest proiect a fost finanțat integral printr-un grant generos oferit de un grup de universități interesate să participe la proiectarea acestei funcționalități.</p>
+                  <ul class="fs-6">
+                    <li>Crearea unei configurări bazate pe roluri, care stabilește ce utilizatori au voie să salveze pagini cu probleme cunoscute.</li>
+                    <li>Crearea unui asistent în editor, pe care autorii îl parcurg pas cu pas pentru a analiza alertele nerezolvate înainte de a publica conținutul.</li>
+                  </ul>
+              </div>
+            </details>
+            <details>
+              <summary>
+                Începutul anului 2027: Verificarea linkurilor nefuncționale pentru Drupal și WordPress
+              </summary>
+              <div>
+                <p class="fs-6">
+                  Stare: căutăm parteneri și colaboratori. Acest proiect a fost finanțat parțial printr-un grant academic, dar lucrările nu au început încă.
+                </p>
+                <ul class="fs-6">
+                      <li>Crearea de tabele în DB pentru stocarea URL-urilor detectate, asociate paginilor.</li>
+                      <li>Crearea de sarcini cron care validează căile locale folosind instrumentele de validare ale CMS-ului și sarcinile la distanță folosind cereri HTTP get.</li>
+                      <li>Crearea de rapoarte și de exporturi ale rapoartelor.</li>
+                      <li>Crearea evidențierii în pagină.</li>
+                    </ul>
+              </div>
+            </details>
+            <details>
+              <summary>
+                Începutul anului 2027: Verificarea fișierelor PDF pentru Drupal și WordPress
+              </summary>
+              <div>
+                <p class="fs-6">Stare: căutăm parteneri și colaboratori. Acest proiect a fost finanțat parțial printr-un grant academic, dar lucrările nu au început încă.</p>
+                <ul class="fs-6">
+                  <li>Crearea de tabele în DB pentru stocarea fișierelor PDF detectate, asociate paginilor.</li>
+                  <li>Folosirea instrumentelor PHP pentru extragerea marcajului și verificarea etichetelor de bază.</li>
+                  <li>Crearea de rapoarte cu instrumente de guvernanță. De exemplu: „Acest PDF este în regulă dacă URL-ul formatului alternativ este prezent în pagină.”</li>
+                  <li>Modificarea evidențierii în pagină în funcție de faptul că PDF-ul este cunoscut ca problematic sau posibil în regulă.</li>
+                </ul>
+              </div>
+            </details>
+          </div>
+        </section>
+        <section id="finished">
+          <h3 data-section="finished" class="pt-5">Recent finalizate</h3>
+          <div class="accord">
+            <details>
+              <summary>
                 T2 2026: Lansarea comunității Editoria11y CSA
               </summary>
               <div>
@@ -366,7 +409,7 @@
               <div>
                 <ol class="fs-6">
                   <li>Finalizat pentru Drupal.</li>
-                  <li>De făcut: portarea constructorului la WordPress.</li>
+                  <li>Portarea constructorului la WordPress.</li>
                 </ol>
               </div>
             </details>
@@ -386,11 +429,6 @@
                 </ol>
               </div>
             </details>
-          </div>
-        </section>
-        <section id="finished">
-          <h3 data-section="finished" class="pt-5">Recent finalizate</h3>
-          <div class="accord">
             <details>
               <summary>
                 T1 2026: Rescrierea bibliotecii 3.x
@@ -439,11 +477,8 @@
         <section id="project-ideas">
           <h3 data-section="project-ideas" class="pt-5">În discuție</h3>
           <p>Discutați și votați aceste idei pe <a               href="https://github.com/itmaybejj/editoria11y/discussions">forumurile bibliotecii Editoria11y</a>.</p>
-          <p>Ideile sunt marcate cu estimări de dificultate/prioritate bazate pe discuțiile curente ale comunității.</p>
           <ul class="mt-1 p-5 pt-0">
             <li>Panou de monitorizare multi-site</li>
-            <li>Detectarea linkurilor rupte</li>
-            <li>Scanare PDF</li>
             <li>Tab de locație a codului în indiciu</li>
             <li>Export raport pagină din indiciu</li>
             <li>Cuvinte marcate</li>
@@ -509,8 +544,8 @@
     </div>
   </footer>
   <script async src="/assets/bootstrap/js/bootstrap.bundle.min.js?v=69f68885" class="astro-vvvwv3sm"></script>
-  <script async src="/assets/lang/i18n.js?v=9063c00b"></script>
-  <script async src="/assets/theme.js?v=39536f05"></script>
+  <script async src="/assets/lang/i18n.js?v=650b32df"></script>
+  <script async src="/assets/theme.js?v=0ee05eec"></script>
   <script async src="/assets/prism/prism.js?v=3bbae506"></script>
 </body>
 

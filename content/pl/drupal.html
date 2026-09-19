@@ -10,7 +10,7 @@
           <section id="features">
             <h2 class="pt-3" data-i18n-id="s-1dcf">Podstawowe funkcje</h2>
 
-            <p class="fs-6" data-i18n-id="s-a8c0">Moduł Drupal łączy bibliotekę narzędzia sprawdzającego z zapleczem redakcyjnym i dodaje
+            <p class="fs-6" data-i18n-id="s-a8c0" data-og="description">Moduł Drupal łączy bibliotekę narzędzia sprawdzającego z zapleczem redakcyjnym i dodaje
               wiele narzędzi po stronie serwera do raportowania, zarządzania i konfiguracji</p>
 
             <figure class="figure my-4 row">
@@ -155,12 +155,12 @@
           <h3 id="roots" data-i18n-id="s-d932">Ignorowanie elementów</h3>
           <p data-i18n-id="s-9d1e">Te dwa ustawienia konfiguracyjne są najważniejsze!</p>
           <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
-            <label for="edit-content-root">Sprawdzaj treść w tych kontenerach</label>
+            <label for="edit-content-root" data-translate data-i18n-id="s-15bb">Sprawdzaj treść w tych kontenerach</label>
             <div><textarea class="form-control" id="edit-content-root" name="content_root" rows="1" cols="30"
                 disabled></textarea>
             </div>
             <div class="mt-3">
-              <label for="edit-ignore-elements">Pomiń te elementy</label>
+              <label for="edit-ignore-elements" data-translate data-i18n-id="s-be3e">Pomiń te elementy</label>
               <div>
                 <textarea class="form-control" id="edit-ignore-elements" disabled name="ignore_elements" rows="1"
                   cols="30" class=""></textarea>
@@ -181,7 +181,7 @@
           <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
             <div>
               <fieldset>
-                <legend>
+                <legend data-translate data-i18n-id="s-430d">
                   Obszar sprawdzania deweloperskiego
                 </legend>
                 <div class="fieldset__wrapper fieldset__wrapper--group">
@@ -190,21 +190,21 @@
                     <div>
                       <input aria-describedby="edit-dev-check-root--description" type="radio"
                         id="edit-dev-check-root-automatic" name="dev_check_root" value="automatic" checked="checked" />
-                      <label for="edit-dev-check-root-automatic" class="form-item__label option">Wszystkie
+                      <label for="edit-dev-check-root-automatic" class="form-item__label option" data-translate data-i18n-id="s-76df">Wszystkie
                         elementy</label>
                     </div>
                     <div class="d-flex">
                       <input aria-describedby="edit-dev-check-root--description" type="radio"
                         id="edit-dev-check-root-match" name="dev_check_root" value="match"
                         class="align-self-baseline mt-1 me-1" />
-                      <label for="edit-dev-check-root-match" class="form-item__label option">Tylko kontenery wymienione
+                      <label for="edit-dev-check-root-match" class="form-item__label option" data-translate data-i18n-id="s-75dc">Tylko kontenery wymienione
                         w zakładce Ustawienia treści</label>
                     </div>
                     <div class="">
                       <input aria-describedby="edit-dev-check-root--description" type="radio"
                         id="edit-dev-check-root-specify" name="dev_check_root" value="specify"
                         class="form-radio form-boolean form-boolean--type-radio" />
-                      <label for="edit-dev-check-root-specify" class="">Konkretne kontenery wymienione poniżej</label>
+                      <label for="edit-dev-check-root-specify" class="" data-translate data-i18n-id="s-8f65">Konkretne kontenery wymienione poniżej</label>
                     </div>
                   </div>
 
@@ -212,7 +212,7 @@
               </fieldset>
 
               <div class="">
-                <label for="edit-always-ignore" class="mt-3">Ignoruj zarówno dla deweloperów, jak i redaktorów
+                <label for="edit-always-ignore" class="mt-3" data-translate data-i18n-id="s-eec7">Ignoruj zarówno dla deweloperów, jak i redaktorów
                   treści</label>
                 <div class="form-textarea-wrapper">
                   <textarea id="edit-always-ignore" class="form-control" name="always_ignore" rows="1" cols="20"
@@ -242,13 +242,13 @@
             Najprostszym sposobem jest przekazanie klas CSS lub identyfikatorów do tych opcji:
           </p>
           <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
-            <label for="edit-no-load" class="form-item__label">Nie sprawdzaj stron zawierających te elementy</label>
+            <label for="edit-no-load" class="form-item__label" data-translate data-i18n-id="s-f57b">Nie sprawdzaj stron zawierających te elementy</label>
             <div class="form-textarea-wrapper">
               <textarea data-drupal-selector="edit-no-load" aria-describedby="edit-no-load--description"
                 id="edit-no-load" name="no_load" rows="1" cols="20" class="form-control"></textarea>
             </div>
 
-            <label for="edit-ignore-all-if-absent" class="form-item__label">Ukryj wszystkie powiadomienia na stronach,
+            <label for="edit-ignore-all-if-absent" class="form-item__label" data-translate data-i18n-id="s-07a0">Ukryj wszystkie powiadomienia na stronach,
               gdzie te elementy nie są obecne</label>
             <div class="form-textarea-wrapper">
               <textarea data-drupal-selector="edit-ignore-all-if-absent"
@@ -341,11 +341,11 @@
             pozycjonowania podpowiedzi:</p>
 
           <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
-            <label for="edit-element-hides-overflow" class="form-item__label">Elementy z overflow hidden</label>
+            <label for="edit-element-hides-overflow" class="form-item__label" data-translate data-i18n-id="s-c6d7">Elementy z overflow hidden</label>
             <textarea data-drupal-selector="edit-element-hides-overflow"
               aria-describedby="edit-element-hides-overflow--description" id="edit-element-hides-overflow"
               name="element_hides_overflow" rows="1" cols="60" class="form-control"></textarea>
-            <label for="edit-hidden-handlers" class="form-item__label">Motyw JS zajmie się ujawnianiem ukrytych
+            <label for="edit-hidden-handlers" class="form-item__label" data-translate data-i18n-id="s-dc25">Motyw JS zajmie się ujawnianiem ukrytych
               podpowiedzi wewnątrz tych kontenerów</label>
             <textarea data-drupal-selector="edit-hidden-handlers" aria-describedby="edit-hidden-handlers--description"
               id="edit-hidden-handlers" name="hidden_handlers" rows="1" cols="60" class="form-control"></textarea>

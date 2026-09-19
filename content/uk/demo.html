@@ -15,7 +15,7 @@
           або спробуйте редагувати демо-вміст нижче, відкривати та закривати сповіщення,
           і використовувати панель інструментів <span style="text-wrap: nowrap;">(<img src="/assets/images/3x-toolbar" class="inline-block" style="width: 5rem; height: auto;" alt="Знімок панелі інструментів Editoria11y з 4 помилками." width="97" height="50" loading="lazy" data-i18n-id="s-65d5" />)</span>
           для перегляду структури заголовків. Це демо містить як основні перевірки, так і набір CSA.</p>
-        <p class="fs-5 mb-5 pb-5" data-i18n-id="s-7580">У цьому демо використовується редактор TinyMCE. Editoria11y сумісний з більшістю
+        <p class="fs-5 mb-5 pb-5" data-i18n-id="s-7580" data-og="description">У цьому демо використовується редактор TinyMCE. Editoria11y сумісний з більшістю
           текстових редакторів і має готові реалізації для CKEditor та Gutenberg у WordPress і Drupal.</p>
         <div id="ed11y-demo" class="p-5" contenteditable="">
           <section id="headings">
@@ -61,7 +61,7 @@
             <p data-i18n-id="s-875a">Зображення без атрибута alt взагалі:</p>
             <p class="positive" data-i18n-id="s-2b48"><img loading="lazy" src="/assets/images/px20240813sm.jpg" data-i18n-id="s-95a0" /></p>
 
-            <p data-i18n-id="s-5df5">Зображення з недійсним атрибутом alt, наприклад <code                 class="language-plaintext highlighter-rouge">alt=”'”</code></p>
+            <p data-i18n-id="s-5df5">Зображення з недійсним атрибутом alt, наприклад <code                 class="language-plaintext highlighter-rouge">alt="'"</code></p>
 
             <p class="positive" data-i18n-id="s-47b7"><img loading="lazy" alt="'" src="/assets/images/px20240813sm.jpg" data-i18n-id="s-87b9" /></p>
 
@@ -131,7 +131,7 @@
               <p style="background: linear-gradient(45deg,#ccc 25%,#0000 25% 75%,#ccc 75%,#ccc),linear-gradient(45deg,#ccc 25%,#0000 25% 75%,#ccc 75%,#ccc)" data-i18n-id="s-490b">
                 І не піддається обчисленню.</p>
             </div>
-            <div class="positive"><label>Поле введення з низькою контрастністю
+            <div class="positive"><label data-translate data-i18n-id="s-769f">Поле введення з низькою контрастністю
                 <input class="form-text" type="text" style="color: #777;" /></label></div>
 
             <style>
@@ -140,9 +140,9 @@
               }
             </style>
 
-            <label for="unsupported-placeholder">Колір заповнювача не вдається обчислити</label>
+            <label for="unsupported-placeholder" data-translate data-i18n-id="s-34b7">Колір заповнювача не вдається обчислити</label>
             <div class="positive" style="background: transparent;"><input type="text" id="unsupported-placeholder"
-                placeholder="Rec2020 color space" /></div>
+                placeholder="Колірний простір Rec2020"  data-translate data-i18n-id="s-8ce5" /></div>
 
 
             <p data-i18n-id="s-0774">SVG-графіка з недостатньою контрастністю</p>
@@ -172,10 +172,10 @@
               <iframe width="560" height="315" inert=""
                 src="https://www.youtube-nocookie.com/embed/QGsevnbItdU?si=W_b2i2o_n5v1ArvA"
                 style="width: 560px; aspect-ratio: 560 / 315; max-width: 100%; cursor: not-allowed;"
-                title="YouTube: How it's done video. Playback is disabled." sandbox="allow-scripts allow-same-origin"
+                title="YouTube: відео про те, як це зроблено. Відтворення вимкнено." sandbox="allow-scripts allow-same-origin"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="origin" allowfullscreen></iframe>
-              <div><small><em>Відтворення вимкнено для запобігання файлам cookie.</em></small></div>
+                referrerpolicy="origin" allowfullscreen data-translate data-i18n-id="s-056d"></iframe>
+              <div><small><em data-translate data-i18n-id="s-0b03">Відтворення вимкнено для запобігання файлам cookie.</em></small></div>
             </div>
 
             <p data-i18n-id="s-e14a">Аудіо потребує транскрипту:</p>
@@ -191,7 +191,7 @@
 
             <p data-i18n-id="s-fe95">Iframe, недоступний для фокусування:</p>
             <div class="positive">
-              <iframe title="example" sandbox="" tabindex="-1" data-needs-src=""></iframe>
+              <iframe title="приклад" sandbox="" tabindex="-1" data-needs-src="" data-translate data-i18n-id="s-ec77"></iframe>
             </div>
 
             <p data-i18n-id="s-e27f">Вкладені інтерактивні компоненти</p>
@@ -199,7 +199,7 @@
               <details>
                 <summary data-i18n-id="s-5064">Акордеон</summary>
                 <details>
-                  <summary data-i18n-id="s-2b8d">Акордеон</summary>Сюрприз!
+                  <summary data-i18n-id="s-2b8d">Акордеон</summary><span data-translate data-i18n-id="s-c8e3">Сюрприз!</span>
                 </details>
               </details>
             </div>
@@ -374,12 +374,12 @@
 
             <p data-i18n-id="s-296d">Поля введення з невидимим підписом — перевірка наявності також видимого підпису.</p>
             <div class="positive">
-              <input type="text" title="Email" />
+              <input type="text" title="Електронна пошта"  data-translate data-i18n-id="s-95d7" />
             </div>
 
             <p data-i18n-id="s-7c79">Поля введення лише з підписом-заповнювачем — перевірка наявності також видимого підпису.</p>
             <div class="positive">
-              <input type="text" placeholder="Email" />
+              <input type="text" placeholder="Електронна пошта"  data-translate data-i18n-id="s-f516" />
             </div>
 
             <div class="positive">

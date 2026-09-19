@@ -43,7 +43,7 @@
   <link rel="alternate" hreflang="x-default" href="https://editoria11y.com/demo/" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Demonstracija — Editoria11y" />
-  <meta property="og:description" content="Editoria11y is a community-supported, open-source accessibility checker with deep integrations for Drupal, WordPress, and more." />
+  <meta property="og:description" content="Ši demonstracija naudoja TinyMCE redaktorių. Editoria11y suderinamas su dauguma teksto redaktorių ir turi integruotus CKEditor ir Gutenberg sprendimus WordPress ir Drupal sistemoms." />
   <meta property="og:image" content="https://editoria11y.com/assets/images/og-image.png" />
   <meta property="og:url" content="https://editoria11y.com/lt/demo/" />
   <link href="/assets/bootstrap/css/bootstrap.min.css?v=7575987f" rel="stylesheet" />
@@ -210,7 +210,7 @@
               <p style="background: linear-gradient(45deg,#ccc 25%,#0000 25% 75%,#ccc 75%,#ccc),linear-gradient(45deg,#ccc 25%,#0000 25% 75%,#ccc 75%,#ccc)">
                 Ir neskaičiuojama.</p>
             </div>
-            <div class="positive"><label>Input with low contrast
+            <div class="positive"><label data-translate>Mažo kontrasto įvesties laukas
                 <input class="form-text" type="text" style="color: #777;" /></label></div>
 
             <style>
@@ -219,9 +219,8 @@
               }
             </style>
 
-            <label for="unsupported-placeholder">Color of placeholder cannot be calculated</label>
-            <div class="positive" style="background: transparent;"><input type="text" id="unsupported-placeholder"
-                placeholder="Rec2020 color space" /></div>
+            <label for="unsupported-placeholder" data-translate>Vietaženklio spalvos negalima apskaičiuoti</label>
+            <div class="positive" style="background: transparent;"><input type="text" id="unsupported-placeholder" placeholder="Rec2020 spalvų erdvė" data-translate /></div>
 
 
             <p>SVG grafika su nepakankamu kontrastu</p>
@@ -248,13 +247,8 @@
 
             <p>Vaizdo įrašas, pažymėtas kaip reikalaujantis rankinio subtitravimo patikrinimo:</p>
             <div class="positive" style="width: 560px; aspect-ratio: 560 / 315; max-width: 100%; cursor: not-allowed;">
-              <iframe width="560" height="315" inert=""
-                src="https://www.youtube-nocookie.com/embed/QGsevnbItdU?si=W_b2i2o_n5v1ArvA"
-                style="width: 560px; aspect-ratio: 560 / 315; max-width: 100%; cursor: not-allowed;"
-                title="YouTube: How it's done video. Playback is disabled." sandbox="allow-scripts allow-same-origin"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="origin" allowfullscreen></iframe>
-              <div><small><em>Playback disabled to prevent cookies.</em></small></div>
+              <iframe width="560" height="315" inert src="https://www.youtube-nocookie.com/embed/QGsevnbItdU?si=W_b2i2o_n5v1ArvA" style="width: 560px; aspect-ratio: 560 / 315; max-width: 100%; cursor: not-allowed;" title="YouTube: vaizdo įrašas apie tai, kaip tai daroma. Atkūrimas išjungtas." sandbox="allow-scripts allow-same-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="origin" allowfullscreen data-translate></iframe>
+              <div><small><em data-translate>Atkūrimas išjungtas, kad būtų išvengta slapukų.</em></small></div>
             </div>
 
             <p>Garso įrašui reikia transkripcijos:</p>
@@ -270,7 +264,7 @@
 
             <p>Iframe neprieinamas klaviatūrai:</p>
             <div class="positive">
-              <iframe title="example" sandbox="" tabindex="-1" data-needs-src=""></iframe>
+              <iframe title="pavyzdys" sandbox tabindex="-1" data-needs-src data-translate></iframe>
             </div>
 
             <p>Įdėtiniai interaktyvieji komponentai</p>
@@ -278,7 +272,7 @@
               <details>
                 <summary>Akordeonas</summary>
                 <details>
-                  <summary>Akordeonas</summary>Surprise!
+                  <summary>Akordeonas</summary><span data-translate>Staigmena!</span>
                 </details>
               </details>
             </div>
@@ -448,12 +442,12 @@
 
             <p>Įvestys su nematoma žyme, klausiančios ar yra ir matoma žymė.</p>
             <div class="positive">
-              <input type="text" title="Email" />
+              <input type="text" title="El. paštas" data-translate />
             </div>
 
             <p>Įvestys su tik laikiname tekste esančia žyme, klausiančios ar yra ir matoma žymė.</p>
             <div class="positive">
-              <input type="text" placeholder="Email" />
+              <input type="text" placeholder="El. paštas" data-translate />
             </div>
 
             <div class="positive">
@@ -538,8 +532,8 @@
     </div>
   </footer>
   <script async src="/assets/bootstrap/js/bootstrap.bundle.min.js?v=69f68885" class="astro-vvvwv3sm"></script>
-  <script async src="/assets/lang/i18n.js?v=9063c00b"></script>
-  <script async src="/assets/theme.js?v=39536f05"></script>
+  <script async src="/assets/lang/i18n.js?v=650b32df"></script>
+  <script async src="/assets/theme.js?v=0ee05eec"></script>
   <script async src="/assets/prism/prism.js?v=3bbae506"></script>
 </body>
 

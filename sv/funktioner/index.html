@@ -43,7 +43,7 @@
   <link rel="alternate" hreflang="x-default" href="https://editoria11y.com/features/" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Funktioner — Editoria11y" />
-  <meta property="og:description" content="Editoria11y is a community-supported, open-source accessibility checker with deep integrations for Drupal, WordPress, and more." />
+  <meta property="og:description" content="Det som skiljer Editoria11y från andra tillgänglighetsverktyg är att kontrollerna körs live, i webbläsaren, medan redaktörer redigerar och förhandsgranskar sitt arbete. Redaktörer reagerar mer sannolikt på omedelbar, infälld återkoppling, uppmärksammar varningar och gör korrigeringar, än att de kommer ihåg att besöka en kontrollpanel eller köra en manuell kontroll." />
   <meta property="og:image" content="https://editoria11y.com/assets/images/og-image.png" />
   <meta property="og:url" content="https://editoria11y.com/sv/funktioner/" />
   <link href="/assets/bootstrap/css/bootstrap.min.css?v=7575987f" rel="stylesheet" />
@@ -279,13 +279,7 @@
             Editoria11y är dock inte gratis att utveckla eller underhålla.
           </p>
           <p class="fs-5">
-            CSA fyller luckan: projektmedlemmar finansierar utvecklingen av Editoria11y-biblioteket, dess
-            CMS-insticksprogram och CSA-sviten: en snabbt växande uppsättning verktyg med öppen källkod för
-            kvalitetssäkring som erbjuder liknande funktionalitet som kommersiella produkter, till en betydligt lägre
-            kostnad.
-
-            CSA-sviten för Drupal är för närvarande gratis i beta och kommer att finnas tillgänglig för WordPress under
-            kvartal 3 2026.
+            CSA fyller luckan: projektmedlemmar finansierar utvecklingen av Editoria11y-biblioteket, dess CMS-insticksprogram och CSA-sviten: en snabbt växande uppsättning kvalitetssäkringsverktyg med öppen källkod som erbjuder liknande funktionalitet som produkter med sluten källkod, till ett betydligt lägre pris.
           </p>
           <figure class="figure my-4 shadow border rounded p-0 m-2 col-sm-12 col-xl-11">
             <img alt="Webbplatscrawling pågår" src="../../assets/images/3x-crawl.png" height="786" width="1986" class="img-fluid rounded-top figure-img" />
@@ -353,6 +347,53 @@
           <div class="accord">
             <details>
               <summary>
+                Kvartal 2 2027: Skapa styrningsverktyg för WordPress inför publicering
+              </summary>
+              <div>
+                <p class="fs-6">Det här projektet är helt finansierat genom ett generöst anslag från en grupp universitet som vill vara med och utforma funktionaliteten.</p>
+                  <ul class="fs-6">
+                    <li>Skapa rollbaserad konfiguration för vilka användare som får spara sidor med kända problem.</li>
+                    <li>Skapa en guide i redigeraren som redaktörer går igenom för att granska varningar de inte har åtgärdat innan innehållet publiceras.</li>
+                  </ul>
+              </div>
+            </details>
+            <details>
+              <summary>
+                Början av 2027: Kontroll av brutna länkar för Drupal och WordPress
+              </summary>
+              <div>
+                <p class="fs-6">
+                  Status: Vi söker partner och medverkande. Det här projektet är delvis finansierat genom ett akademiskt anslag, men arbetet har ännu inte påbörjats.
+                </p>
+                <ul class="fs-6">
+                      <li>Skapa DB-tabeller för att lagra upptäckta URL:er, kopplade till sidor.</li>
+                      <li>Skapa cron-jobb som validerar lokala sökvägar med CMS-systemets valideringsverktyg och externa adresser med HTTP get-anrop.</li>
+                      <li>Skapa rapporter och rapportexporter.</li>
+                      <li>Skapa markering direkt på sidan.</li>
+                    </ul>
+              </div>
+            </details>
+            <details>
+              <summary>
+                Början av 2027: PDF-kontroll för Drupal och WordPress
+              </summary>
+              <div>
+                <p class="fs-6">Status: vi söker partner och medverkande. Det här projektet är delvis finansierat genom ett akademiskt anslag, men arbetet har ännu inte påbörjats.</p>
+                <ul class="fs-6">
+                  <li>Skapa DB-tabeller för att lagra upptäckta PDF-filer, kopplade till sidor.</li>
+                  <li>Använda PHP-verktyg för att läsa av markup och kontrollera grundläggande taggar.</li>
+                  <li>Skapa rapporter med styrningsverktyg. Till exempel: ”Den här PDF-filen är godkänd om sidan innehåller en URL till ett alternativt format.”</li>
+                  <li>Anpassa markeringen på sidan utifrån om PDF-filen är känd som felaktig eller möjligen godkänd.</li>
+                </ul>
+              </div>
+            </details>
+          </div>
+        </section>
+        <section id="finished">
+          <h3 data-section="finished" class="pt-5">Nyligen färdigställt</h3>
+          <div class="accord">
+            <details>
+              <summary>
                 Kvartal 2 2026: Lansering av Editoria11y CSA-gemenskapen
               </summary>
               <div>
@@ -374,7 +415,7 @@
               <div>
                 <ol class="fs-6">
                   <li>Klart för Drupal.</li>
-                  <li>Att göra: porta verktyget till WordPress.</li>
+                  <li>Porta byggverktyget till WordPress.</li>
                 </ol>
               </div>
             </details>
@@ -396,11 +437,6 @@
                 </ol>
               </div>
             </details>
-          </div>
-        </section>
-        <section id="finished">
-          <h3 data-section="finished" class="pt-5">Nyligen färdigställt</h3>
-          <div class="accord">
             <details>
               <summary>
                 Kvartal 1 2026: Omskrivning av biblioteket 3.x
@@ -453,12 +489,8 @@
         <section id="project-ideas">
           <h3 data-section="project-ideas" class="pt-5">Under diskussion</h3>
           <p>Diskutera och rösta på dessa idéer i <a               href="https://github.com/itmaybejj/editoria11y/discussions">Editoria11y-bibliotekets forum</a>.</p>
-          <p>Idéer är märkta med uppskattningar av svårighetsgrad och prioritet baserat på nuvarande
-            gemenskapsdiskussioner.</p>
           <ul class="mt-1 p-5 pt-0">
             <li>Övervakningskontrollpanel för flera webbplatser</li>
-            <li>Identifiering av brutna länkar</li>
-            <li>PDF-skanning</li>
             <li>Flik för kodplats i verktygstips</li>
             <li>Sidrapportexport i verktygstips</li>
             <li>Flaggade ord</li>
@@ -524,8 +556,8 @@
     </div>
   </footer>
   <script async src="/assets/bootstrap/js/bootstrap.bundle.min.js?v=69f68885" class="astro-vvvwv3sm"></script>
-  <script async src="/assets/lang/i18n.js?v=9063c00b"></script>
-  <script async src="/assets/theme.js?v=39536f05"></script>
+  <script async src="/assets/lang/i18n.js?v=650b32df"></script>
+  <script async src="/assets/theme.js?v=0ee05eec"></script>
   <script async src="/assets/prism/prism.js?v=3bbae506"></script>
 </body>
 

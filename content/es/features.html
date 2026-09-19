@@ -17,7 +17,7 @@
             los sitios se entregan a los autores de contenido. Los sitios deben probarse con herramientas de auditoría
             manual, teclados y lectores de pantalla antes del lanzamiento, pero incluso el sitio más accesible el primer
             día tiende a deteriorarse a medida que las ediciones introducen nuevos problemas.</p>
-          <p class="fs-6" data-i18n-id="s-44f1">Lo que distingue a Editoria11y entre las herramientas de accesibilidad es que sus pruebas se
+          <p class="fs-6" data-i18n-id="s-44f1" data-og="description">Lo que distingue a Editoria11y entre las herramientas de accesibilidad es que sus pruebas se
             ejecutan en vivo, en el navegador, mientras los autores editan y previsualizan su trabajo. <strong>Los
               autores tienen más probabilidades de reaccionar ante comentarios inmediatos y en línea</strong>, notar
             alertas y hacer correcciones, que a recordar visitar un panel o ejecutar una verificación manual.</p>
@@ -195,15 +195,7 @@
           <p class="fs-5" data-i18n-id="s-b419">
             Sin embargo, desarrollar y mantener Editoria11y no es gratis.
           </p>
-          <p class="fs-5" data-i18n-id="s-7d6d">
-            El CSA cubre la diferencia: los miembros del proyecto financian el desarrollo de la biblioteca Editoria11y,
-            sus complementos para CMS y el paquete CSA: un conjunto de herramientas de control de calidad de código
-            abierto en rápida expansión que ofrecen funcionalidad similar a la de los productos comerciales, a un precio
-            mucho menor.
-
-            El paquete CSA para Drupal está actualmente en versión beta gratuita y llegará a WordPress en el tercer
-            trimestre de 2026.
-          </p>
+          <p class="fs-5" data-i18n-id="s-7d6d">El CSA cubre esa carencia: los miembros del proyecto financian el desarrollo de la biblioteca Editoria11y, sus complementos para CMS y el paquete CSA: un conjunto de herramientas de control de calidad de código abierto en rápida expansión que ofrecen una funcionalidad similar a la de los productos de código cerrado, a un precio mucho menor.</p>
           <figure class="figure my-4 shadow border rounded p-0 m-2 col-sm-12 col-xl-11">
             <img alt="Rastreo del sitio en curso" src="../../assets/images/3x-crawl.png" height="786" width="1986" class="img-fluid rounded-top figure-img" data-i18n-id="s-34fd" />
             <figcaption class="figure-caption p-2 pt-2" data-i18n-id="s-8a9c">El rastreador CSA actualizando un panel.</figcaption>
@@ -269,6 +261,45 @@
           <h3 class="pt-4" data-section="active-projects" data-i18n-id="s-52da">Activos</h3>
           <div class="accord">
             <details>
+              <summary data-i18n-id="s-4291">T2 2027: Crear herramientas de gobernanza previas a la publicación para WordPress</summary>
+              <div>
+                <p class="fs-6" data-i18n-id="s-529a">Este proyecto se ha financiado íntegramente con una generosa subvención de un grupo de universidades interesadas en codiseñar la funcionalidad.</p>
+                  <ul class="fs-6">
+                    <li data-i18n-id="s-f7b1">Crear una configuración basada en roles que determine qué usuarios pueden guardar páginas con problemas conocidos.</li>
+                    <li data-i18n-id="s-2ce6">Crear un asistente dentro del editor que los autores recorran paso a paso para revisar las alertas que no hayan resuelto antes de publicar el contenido.</li>
+                  </ul>
+              </div>
+            </details>
+            <details>
+              <summary data-i18n-id="s-b302">Principios de 2027: Comprobación de enlaces rotos para Drupal & WordPress</summary>
+              <div>
+                <p class="fs-6" data-i18n-id="s-2fdf">Estado: Buscamos socios y colaboradores. Este proyecto se ha financiado parcialmente con una subvención académica, pero el trabajo aún no ha comenzado.</p>
+                <ul class="fs-6">
+                      <li data-i18n-id="s-da03">Crear tablas de DB para almacenar las URL detectadas, asociadas a las páginas.</li>
+                      <li data-i18n-id="s-2ae1">Crear tareas cron que validen las rutas locales con las herramientas de validación del CMS y tareas remotas que usen peticiones HTTP get.</li>
+                      <li data-i18n-id="s-c519">Crear informes y exportaciones de informes.</li>
+                      <li data-i18n-id="s-a504">Crear resaltado dentro de la página.</li>
+                    </ul>
+              </div>
+            </details>
+            <details>
+              <summary data-i18n-id="s-e530">Principios de 2027: Comprobación de PDF para Drupal & WordPress</summary>
+              <div>
+                <p class="fs-6" data-i18n-id="s-e767">Estado: buscamos socios y colaboradores. Este proyecto se ha financiado parcialmente con una subvención académica, pero el trabajo aún no ha comenzado.</p>
+                <ul class="fs-6">
+                  <li data-i18n-id="s-9607">Crear tablas de DB para almacenar los PDF detectados, asociados a las páginas.</li>
+                  <li data-i18n-id="s-ca6c">Usar herramientas de PHP para extraer el marcado y comprobar las etiquetas básicas.</li>
+                  <li data-i18n-id="s-24c9">Crear informes con herramientas de gobernanza. Por ejemplo: «Este PDF es correcto si la URL de este formato alternativo está presente en la página».</li>
+                  <li data-i18n-id="s-9a3c">Modificar el resaltado dentro de la página según si el PDF tiene problemas conocidos o es posiblemente correcto.</li>
+                </ul>
+              </div>
+            </details>
+          </div>
+        </section>
+        <section id="finished">
+          <h3 data-section="finished" class="pt-5" data-i18n-id="s-4646">Terminados recientemente</h3>
+          <div class="accord">
+            <details>
               <summary data-i18n-id="s-8ea4">
                 T2 2026: Lanzamiento de la comunidad Editoria11y CSA
               </summary>
@@ -291,7 +322,7 @@
               <div>
                 <ol class="fs-6">
                   <li data-i18n-id="s-4265">Terminado para Drupal.</li>
-                  <li data-i18n-id="s-4ab7">Pendiente: portar el constructor a WordPress.</li>
+                  <li data-i18n-id="s-4ab7">Portar el constructor a WordPress.</li>
                 </ol>
               </div>
             </details>
@@ -313,11 +344,6 @@
                 </ol>
               </div>
             </details>
-          </div>
-        </section>
-        <section id="finished">
-          <h3 data-section="finished" class="pt-5" data-i18n-id="s-4646">Terminados recientemente</h3>
-          <div class="accord">
             <details>
               <summary data-i18n-id="s-8545">
                 T1 2026: Reescritura de la biblioteca 3.x
@@ -371,12 +397,8 @@
           <h3 data-section="project-ideas" class="pt-5" data-i18n-id="s-e19c">En debate</h3>
           <p data-i18n-id="s-511c">Debate y vota estas ideas en los <a href="https://github.com/itmaybejj/editoria11y/discussions">foros de la
               biblioteca Editoria11y</a>.</p>
-          <p data-i18n-id="s-99ee">Las ideas están etiquetadas con estimaciones de dificultad/prioridad según los debates actuales de la
-            comunidad.</p>
           <ul class="mt-1 p-5 pt-0">
             <li data-i18n-id="s-47b0">Panel de monitoreo multisitio</li>
-            <li data-i18n-id="s-b625">Detección de enlaces rotos</li>
-            <li data-i18n-id="s-347e">Escaneo de PDF</li>
             <li data-i18n-id="s-b7fa">Pestaña de ubicación del código en la información emergente</li>
             <li data-i18n-id="s-ec9e">Exportación del informe de la página en la información emergente</li>
             <li data-i18n-id="s-1a54">Palabras marcadas</li>

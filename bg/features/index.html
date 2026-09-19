@@ -43,7 +43,7 @@
   <link rel="alternate" hreflang="x-default" href="https://editoria11y.com/features/" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Функции — Editoria11y" />
-  <meta property="og:description" content="Editoria11y is a community-supported, open-source accessibility checker with deep integrations for Drupal, WordPress, and more." />
+  <meta property="og:description" content="Това, което отличава Editoria11y сред инструментите за достъпност, е, че тестовете му се изпълняват на живо, в браузъра, докато авторите редактират и преглеждат работата си. Авторите са по-склонни да реагират на незабавна, вградена обратна връзка, да забелязват сигнали и да правят корекции, отколкото да помнят да посетят табло или да изпълнят ръчна проверка." />
   <meta property="og:image" content="https://editoria11y.com/assets/images/og-image.png" />
   <meta property="og:url" content="https://editoria11y.com/bg/features/" />
   <link href="/assets/bootstrap/css/bootstrap.min.css?v=7575987f" rel="stylesheet" />
@@ -259,9 +259,7 @@
             Разработването и поддръжката на Editoria11y обаче не са безплатни.
           </p>
           <p class="fs-5">
-            CSA запълва тази празнина: членовете на проекта финансират разработката на библиотеката Editoria11y, нейните CMS плъгини и пакета CSA — бързо разрастваща се колекция от инструменти за гарантиране на качеството с отворен код, предоставящи подобна функционалност на търговски продукти на много по-ниска цена.
-
-            Пакетът CSA за Drupal в момента е безплатен (бета версия), а версията за WordPress се очаква в третото тримесечие на 2026 г.
+            CSA запълва тази празнина: членовете на проекта финансират разработката на библиотеката Editoria11y, нейните CMS плъгини и пакета CSA — бързо разрастваща се колекция от инструменти с отворен код за гарантиране на качеството, които предлагат функционалност, подобна на тази на продуктите със затворен код, но на много по-ниска цена.
           </p>
           <figure class="figure my-4 shadow border rounded p-0 m-2 col-sm-12 col-xl-11">
             <img alt="Обхождане на сайт в процес" src="../../assets/images/3x-crawl.png" height="786" width="1986" class="img-fluid rounded-top figure-img" />
@@ -325,6 +323,53 @@
           <div class="accord">
             <details>
               <summary>
+                Q2 2027: Създаване на инструменти за контрол преди публикуване в WordPress
+              </summary>
+              <div>
+                <p class="fs-6">Този проект е изцяло финансиран от щедра субсидия, отпусната от група университети, които имат интерес да участват в проектирането на функционалността.</p>
+                  <ul class="fs-6">
+                    <li>Създаване на конфигурация въз основа на роли за това кои потребители имат право да запазват страници с известни проблеми.</li>
+                    <li>Създаване на съветник в редактора, през който авторите преминават, за да прегледат сигналите, по които не са предприели действия, преди да публикуват съдържанието.</li>
+                  </ul>
+              </div>
+            </details>
+            <details>
+              <summary>
+                Началото на 2027 г.: Проверка за повредени връзки за Drupal & WordPress
+              </summary>
+              <div>
+                <p class="fs-6">
+                  Състояние: Търсим партньори и сътрудници. Този проект е частично финансиран от академична субсидия, но работата по него още не е започнала.
+                </p>
+                <ul class="fs-6">
+                      <li>Създаване на DB таблици за съхранение на откритите URL адреси, свързани със страниците.</li>
+                      <li>Създаване на cron задачи, които проверяват локалните пътища чрез инструментите за валидиране на CMS, а отдалечените — чрез HTTP GET заявки.</li>
+                      <li>Създаване на отчети и експорт на отчети.</li>
+                      <li>Създаване на открояване в самата страница.</li>
+                    </ul>
+              </div>
+            </details>
+            <details>
+              <summary>
+                Началото на 2027 г.: Проверка на PDF файлове за Drupal & WordPress
+              </summary>
+              <div>
+                <p class="fs-6">Състояние: Търсим партньори и сътрудници. Този проект е частично финансиран от академична субсидия, но работата по него още не е започнала.</p>
+                <ul class="fs-6">
+                  <li>Създаване на DB таблици за съхранение на откритите PDF файлове, свързани със страниците.</li>
+                  <li>Използване на PHP инструменти за извличане на кода и проверка за основните тагове.</li>
+                  <li>Създаване на отчети с инструменти за контрол. Например: „Този PDF файл е наред, ако на страницата присъства този URL адрес към алтернативен формат.“</li>
+                  <li>Променяне на открояването в самата страница в зависимост от това дали PDF файлът е известен като проблемен, или е вероятно наред.</li>
+                </ul>
+              </div>
+            </details>
+          </div>
+        </section>
+        <section id="finished">
+          <h3 data-section="finished" class="pt-5">Наскоро завършени</h3>
+          <div class="accord">
+            <details>
+              <summary>
                 Q2 2026: Стартиране на общността Editoria11y CSA
               </summary>
               <div>
@@ -346,7 +391,7 @@
               <div>
                 <ol class="fs-6">
                   <li>Завършено за Drupal.</li>
-                  <li>Предстои: пренасяне на конструктора за WordPress.</li>
+                  <li>Пренасяне на конструктора към WordPress.</li>
                 </ol>
               </div>
             </details>
@@ -366,11 +411,6 @@
                 </ol>
               </div>
             </details>
-          </div>
-        </section>
-        <section id="finished">
-          <h3 data-section="finished" class="pt-5">Наскоро завършени</h3>
-          <div class="accord">
             <details>
               <summary>
                 Q1 2026: Пренаписване на библиотека 3.x
@@ -412,11 +452,8 @@
         <section id="project-ideas">
           <h3 data-section="project-ideas" class="pt-5">В обсъждане</h3>
           <p>Обсъдете тези идеи и гласувайте в тяхна подкрепа в <a               href="https://github.com/itmaybejj/editoria11y/discussions">форумите на библиотеката Editoria11y</a>.</p>
-          <p>Идеите са маркирани с оценки за трудност/приоритет въз основа на текущите разговори в общността.</p>
           <ul class="mt-1 p-5 pt-0">
             <li>Табло за мониторинг на множество сайтове</li>
-            <li>Засичане на счупени връзки</li>
-            <li>Сканиране на PDF</li>
             <li>Таб с местоположение на кода в подсказка</li>
             <li>Експорт на отчет за страница в подсказка</li>
             <li>Маркирани думи</li>
@@ -482,8 +519,8 @@
     </div>
   </footer>
   <script async src="/assets/bootstrap/js/bootstrap.bundle.min.js?v=69f68885" class="astro-vvvwv3sm"></script>
-  <script async src="/assets/lang/i18n.js?v=9063c00b"></script>
-  <script async src="/assets/theme.js?v=39536f05"></script>
+  <script async src="/assets/lang/i18n.js?v=650b32df"></script>
+  <script async src="/assets/theme.js?v=0ee05eec"></script>
   <script async src="/assets/prism/prism.js?v=3bbae506"></script>
 </body>
 

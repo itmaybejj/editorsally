@@ -43,7 +43,7 @@
   <link rel="alternate" hreflang="x-default" href="https://editoria11y.com/features/" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Funkciók — Editoria11y" />
-  <meta property="og:description" content="Editoria11y is a community-supported, open-source accessibility checker with deep integrations for Drupal, WordPress, and more." />
+  <meta property="og:description" content="Az Editoria11y-t az teszi különlegessé az akadálymentességi eszközök között, hogy tesztjei élőben, a böngészőben futnak, miközben a szerzők szerkesztik és előnézetben megtekintik munkájukat. A szerzők nagyobb valószínűséggel reagálnak az azonnali, szövegközi visszajelzésekre, észreveszik a figyelmeztetéseket és javítják a hibákat, mint hogy emlékezzenek felkeresni egy vezérlőpultot vagy lefuttatni egy manuális ellenőrzést." />
   <meta property="og:image" content="https://editoria11y.com/assets/images/og-image.png" />
   <meta property="og:url" content="https://editoria11y.com/hu/funkciok/" />
   <link href="/assets/bootstrap/css/bootstrap.min.css?v=7575987f" rel="stylesheet" />
@@ -117,7 +117,7 @@
               görget, és megnyitja az eszköztippet.</p>
           </div>
           <div class="row">
-            <img loading="lazy" src="/assets/images/3x-generic-tip.png" class="img-fluid col-6 col-lg-8" height="798" width="1278" alt="Az eszköztipp jelzi, hogy a link neve csak „kattintson ide" . />
+            <img loading="lazy" src="/assets/images/3x-generic-tip.png" class="img-fluid col-6 col-lg-8" height="798" width="1278" alt="Az eszköztipp jelzi, hogy a link neve csak „kattintson ide”." />
             <p class="col-6 col-lg-4 align-content-center">Az eszköztippek szövegközi módon jelennek meg, közérthető
               leírással a hibáról, javítási javaslatokkal és megjegyzésekkel arról, miért fontos a probléma.</p>
           </div>
@@ -283,12 +283,7 @@
             Az Editoria11y fejlesztése és támogatása azonban nem ingyenes.
           </p>
           <p class="fs-5">
-            A CSA tölti ki ezt a hiányt: a projekt tagjai finanszírozzák az Editoria11y könyvtár, CMS bővítményeinek és
-            a CSA csomagjának fejlesztését: egy gyorsan bővülő, nyílt forráskódú minőségbiztosítási eszközkészletet,
-            amely a kereskedelmi termékekhez hasonló funkcionalitást nyújt, jóval alacsonyabb áron.
-
-            A CSA csomag Drupal-hoz jelenleg ingyenesen elérhető bétaverzióban, és 2026 harmadik negyedévében érkezik
-            WordPress-hez.
+            A CSA tölti ki ezt a hiányt: a projekt tagjai finanszírozzák az Editoria11y könyvtár, annak CMS-bővítményei és a CSA csomag fejlesztését – ez utóbbi egy gyorsan bővülő, nyílt forráskódú minőségbiztosítási eszközkészlet, amely a zárt forráskódú termékekhez hasonló funkcionalitást nyújt, jóval alacsonyabb áron.
           </p>
           <figure class="figure my-4 shadow border rounded p-0 m-2 col-sm-12 col-xl-11">
             <img alt="Webhely-feltérképezés folyamatban" src="../../assets/images/3x-crawl.png" height="786" width="1986" class="img-fluid rounded-top figure-img" />
@@ -357,6 +352,53 @@
           <div class="accord">
             <details>
               <summary>
+                2027 Q2: Publikálás előtti irányítási eszközök létrehozása WordPress-hez
+              </summary>
+              <div>
+                <p class="fs-6">Ezt a projektet teljes egészében egy nagylelkű támogatás finanszírozta, amelyet olyan egyetemek csoportja nyújtott, amelyek részt kívánnak venni a funkciók közös megtervezésében.</p>
+                  <ul class="fs-6">
+                    <li>Szerepkör alapú beállítás létrehozása arra vonatkozóan, hogy mely felhasználók menthetnek el ismert hibákat tartalmazó oldalakat.</li>
+                    <li>Szerkesztőbe épített varázsló létrehozása, amelyen végighaladva a szerzők áttekinthetik a még nem kezelt riasztásokat, mielőtt közzéteszik a tartalmat.</li>
+                  </ul>
+              </div>
+            </details>
+            <details>
+              <summary>
+                2027 eleje: Hibás hivatkozások ellenőrzése Drupal &amp; WordPress rendszerhez
+              </summary>
+              <div>
+                <p class="fs-6">
+                  Állapot: Partnereket és együttműködőket keresünk. Ezt a projektet részben egy tudományos támogatás finanszírozta, de a munka még nem kezdődött el.
+                </p>
+                <ul class="fs-6">
+                      <li>DB-táblák létrehozása az észlelt URL-ek tárolására, az oldalakhoz rendelve.</li>
+                      <li>Cron-feladatok létrehozása a helyi útvonalak ellenőrzésére a CMS validálási eszközeivel, a távoli címek ellenőrzésére pedig HTTP get kérésekkel.</li>
+                      <li>Jelentések és jelentésexportok létrehozása.</li>
+                      <li>Oldalon belüli kiemelés létrehozása.</li>
+                    </ul>
+              </div>
+            </details>
+            <details>
+              <summary>
+                2027 eleje: PDF-ek ellenőrzése Drupal &amp; WordPress rendszerhez
+              </summary>
+              <div>
+                <p class="fs-6">Állapot: partnereket és együttműködőket keresünk. Ezt a projektet részben egy tudományos támogatás finanszírozta, de a munka még nem kezdődött el.</p>
+                <ul class="fs-6">
+                  <li>DB-táblák létrehozása az észlelt PDF-ek tárolására, az oldalakhoz rendelve.</li>
+                  <li>PHP-eszközök használata a jelölőkód kinyerésére és az alapvető címkék ellenőrzésére.</li>
+                  <li>Jelentések létrehozása irányítási eszközökkel. Például: „Ez a PDF rendben van, ha az alternatív formátum URL-je szerepel az oldalon."</li>
+                  <li>Az oldalon belüli kiemelés módosítása aszerint, hogy a PDF ismerten hibás vagy esetleg megfelelő.</li>
+                </ul>
+              </div>
+            </details>
+          </div>
+        </section>
+        <section id="finished">
+          <h3 data-section="finished" class="pt-5">Nemrég befejezett</h3>
+          <div class="accord">
+            <details>
+              <summary>
                 2026 Q2: Az Editoria11y CSA közösség elindítása
               </summary>
               <div>
@@ -378,7 +420,7 @@
               <div>
                 <ol class="fs-6">
                   <li>Elkészült Drupal-hoz.</li>
-                  <li>Teendő: az építő portolása WordPress-re.</li>
+                  <li>Az építő portolása WordPress-re.</li>
                 </ol>
               </div>
             </details>
@@ -400,11 +442,6 @@
                 </ol>
               </div>
             </details>
-          </div>
-        </section>
-        <section id="finished">
-          <h3 data-section="finished" class="pt-5">Nemrég befejezett</h3>
-          <div class="accord">
             <details>
               <summary>
                 2026 Q1: A könyvtár 3.x újraírása
@@ -457,12 +494,8 @@
         <section id="project-ideas">
           <h3 data-section="project-ideas" class="pt-5">Megbeszélés alatt</h3>
           <p>Vitassa meg és szavazzon ezekre az ötletekre az <a               href="https://github.com/itmaybejj/editoria11y/discussions">Editoria11y könyvtár fórumain</a>.</p>
-          <p>Az ötletek nehézségi/prioritási becslésekkel vannak címkézve a jelenlegi közösségi visszajelzések alapján.
-          </p>
           <ul class="mt-1 p-5 pt-0">
             <li>Több webhely monitorozó vezérlőpult</li>
-            <li>Hibás hivatkozások észlelése</li>
-            <li>PDF vizsgálat</li>
             <li>Eszköztipp kódhely fül</li>
             <li>Eszköztipp oldaljelentés exportálás</li>
             <li>Megjelölt szavak</li>
@@ -528,8 +561,8 @@
     </div>
   </footer>
   <script async src="/assets/bootstrap/js/bootstrap.bundle.min.js?v=69f68885" class="astro-vvvwv3sm"></script>
-  <script async src="/assets/lang/i18n.js?v=9063c00b"></script>
-  <script async src="/assets/theme.js?v=39536f05"></script>
+  <script async src="/assets/lang/i18n.js?v=650b32df"></script>
+  <script async src="/assets/theme.js?v=0ee05eec"></script>
   <script async src="/assets/prism/prism.js?v=3bbae506"></script>
 </body>
 

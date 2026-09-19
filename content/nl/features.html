@@ -17,7 +17,7 @@
             overgedragen aan inhoudsauteurs. Sites moeten vóór de lancering worden getest met handmatige audittools,
             toetsenborden en schermlezers, maar zelfs de meest toegankelijke site verslechtert na verloop van tijd
             naarmate bewerkingen nieuwe problemen introduceren.</p>
-          <p class="fs-6" data-i18n-id="s-44f1">Wat Editoria11y onderscheidt van andere toegankelijkheidstools, is dat de tests live, in de
+          <p class="fs-6" data-i18n-id="s-44f1" data-og="description">Wat Editoria11y onderscheidt van andere toegankelijkheidstools, is dat de tests live, in de
             browser, worden uitgevoerd terwijl auteurs hun werk bewerken en bekijken. <strong>Auteurs reageren sneller
               op directe, inline feedback</strong> — ze merken meldingen op en brengen correcties aan — dan dat ze eraan
             denken een dashboard te bezoeken of een handmatige controle uit te voeren.</p>
@@ -197,7 +197,7 @@
           <p class="fs-5" data-i18n-id="s-7d6d">
             De CSA vult dit gat: projectleden financieren de ontwikkeling van de Editoria11y-bibliotheek, de CMS-plugins
             en de CSA-suite: een snel groeiende set open source kwaliteitsborgingstools die vergelijkbare
-            functionaliteit bieden als commerciële producten, maar tegen een veel lagere prijs.
+            functionaliteit bieden als producten met gesloten broncode, maar tegen een veel lagere prijs.
 
             De CSA-suite voor Drupal is momenteel gratis in bèta en komt beschikbaar voor WordPress in Q3 2026.
           </p>
@@ -266,6 +266,53 @@
           <h3 class="pt-4" data-section="active-projects" data-i18n-id="s-52da">Actief</h3>
           <div class="accord">
             <details>
+              <summary data-i18n-id="s-4291">
+                Q2 2027: Pre-publicatie-governancetools voor WordPress maken
+              </summary>
+              <div>
+                <p class="fs-6" data-i18n-id="s-529a">Dit project is volledig gefinancierd dankzij een genereuze subsidie van een groep universiteiten die de functionaliteit graag mee wil ontwerpen.</p>
+                  <ul class="fs-6">
+                    <li data-i18n-id="s-f7b1">Rolgebaseerde configuratie maken voor welke gebruikers pagina's met bekende problemen mogen opslaan.</li>
+                    <li data-i18n-id="s-2ce6">Een wizard in de editor maken die auteurs doorlopen om meldingen die ze nog niet hebben aangepakt te bekijken voordat ze content publiceren.</li>
+                  </ul>
+              </div>
+            </details>
+            <details>
+              <summary data-i18n-id="s-b302">
+                Begin 2027: Controle op gebroken links voor Drupal en WordPress
+              </summary>
+              <div>
+                <p class="fs-6" data-i18n-id="s-2fdf">
+                  Status: Op zoek naar partners en medewerkers. Dit project is deels gefinancierd met een academische subsidie, maar het werk is nog niet begonnen.
+                </p>
+                <ul class="fs-6">
+                      <li data-i18n-id="s-da03">DB-tabellen maken om gedetecteerde URL's op te slaan, gekoppeld aan pagina's.</li>
+                      <li data-i18n-id="s-2ae1">Cronjobs maken die lokale paden valideren met de validatietools van het CMS en externe adressen met HTTP get-verzoeken.</li>
+                      <li data-i18n-id="s-c519">Rapporten en rapportexports maken.</li>
+                      <li data-i18n-id="s-a504">Markering op de pagina zelf maken.</li>
+                    </ul>
+              </div>
+            </details>
+            <details>
+              <summary data-i18n-id="s-e530">
+                Begin 2027: PDF-controle voor Drupal en WordPress
+              </summary>
+              <div>
+                <p class="fs-6" data-i18n-id="s-e767">Status: op zoek naar partners en medewerkers. Dit project is deels gefinancierd met een academische subsidie, maar het werk is nog niet begonnen.</p>
+                <ul class="fs-6">
+                  <li data-i18n-id="s-9607">DB-tabellen maken om gedetecteerde PDF's op te slaan, gekoppeld aan pagina's.</li>
+                  <li data-i18n-id="s-ca6c">PHP-tools gebruiken om de markup uit te lezen en te controleren op basistags.</li>
+                  <li data-i18n-id="s-24c9">Rapporten met governancetools maken. Bijvoorbeeld: “Deze PDF is in orde als er op de pagina een URL naar een alternatief formaat staat.”</li>
+                  <li data-i18n-id="s-9a3c">De markering op de pagina aanpassen afhankelijk van of de PDF bekend problematisch of mogelijk in orde is.</li>
+                </ul>
+              </div>
+            </details>
+          </div>
+        </section>
+        <section id="finished">
+          <h3 data-section="finished" class="pt-5" data-i18n-id="s-4646">Onlangs afgerond</h3>
+          <div class="accord">
+            <details>
               <summary data-i18n-id="s-8ea4">
                 Q2 2026: De Editoria11y CSA-gemeenschap lanceren
               </summary>
@@ -288,7 +335,7 @@
               <div>
                 <ol class="fs-6">
                   <li data-i18n-id="s-4265">Klaar voor Drupal.</li>
-                  <li data-i18n-id="s-4ab7">Te doen: bouwer porten naar WordPress.</li>
+                  <li data-i18n-id="s-4ab7">Bouwer porten naar WordPress.</li>
                 </ol>
               </div>
             </details>
@@ -310,11 +357,6 @@
                 </ol>
               </div>
             </details>
-          </div>
-        </section>
-        <section id="finished">
-          <h3 data-section="finished" class="pt-5" data-i18n-id="s-4646">Onlangs afgerond</h3>
-          <div class="accord">
             <details>
               <summary data-i18n-id="s-8545">
                 Q1 2026: Herschrijving van bibliotheek 3.x
@@ -367,12 +409,8 @@
         <section id="project-ideas">
           <h3 data-section="project-ideas" class="pt-5" data-i18n-id="s-e19c">In bespreking</h3>
           <p data-i18n-id="s-511c">Bespreek en stem op deze ideeën in de <a               href="https://github.com/itmaybejj/editoria11y/discussions">Editoria11y-bibliotheekforums</a>.</p>
-          <p data-i18n-id="s-99ee">Ideeën zijn voorzien van schattingen voor moeilijkheidsgraad en prioriteit op basis van de huidige
-            communityopinie.</p>
           <ul class="mt-1 p-5 pt-0">
             <li data-i18n-id="s-47b0">Monitoringdashboard voor meerdere sites</li>
-            <li data-i18n-id="s-b625">Detectie van verbroken koppelingen</li>
-            <li data-i18n-id="s-347e">PDF-scanning</li>
             <li data-i18n-id="s-b7fa">Tabblad met codelocatie in tooltip</li>
             <li data-i18n-id="s-ec9e">Paginarapportexport vanuit tooltip</li>
             <li data-i18n-id="s-1a54">Gemarkeerde woorden</li>

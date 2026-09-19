@@ -43,7 +43,7 @@
   <link rel="alternate" hreflang="x-default" href="https://editoria11y.com/features/" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="기능 — Editoria11y" />
-  <meta property="og:description" content="Editoria11y is a community-supported, open-source accessibility checker with deep integrations for Drupal, WordPress, and more." />
+  <meta property="og:description" content="Editoria11y가 접근성 도구 중에서 두드러지는 이유는 테스트가 작성자가 작업을 편집하고 미리볼 때 브라우저에서 실시간으로 실행되기 때문입니다. 작성자는 즉각적인 인라인 피드백에 더 잘 반응하여 알림을 인식하고 수정하는 경향이 있으며, 대시보드를 방문하거나 수동 검사를 직접 실행하는 방식보다 효과적입니다." />
   <meta property="og:image" content="https://editoria11y.com/assets/images/og-image.png" />
   <meta property="og:url" content="https://editoria11y.com/ko/features/" />
   <link href="/assets/bootstrap/css/bootstrap.min.css?v=7575987f" rel="stylesheet" />
@@ -257,11 +257,7 @@
           <p class="fs-5">
             그러나 Editoria11y의 개발과 지원은 무료가 아닙니다.
           </p>
-          <p class="fs-5">
-            CSA가 이 격차를 채웁니다. 프로젝트 멤버는 Editoria11y 라이브러리, CMS 플러그인 및 CSA 스위트의 개발을 지원합니다. CSA 스위트는 상용 제품과 유사한 기능을 오픈 소스로, 훨씬 낮은 가격에 제공하는 빠르게 성장하는 품질 보증 도구 모음입니다.
-
-            Drupal용 CSA 스위트는 현재 베타 버전으로 무료이며, 2026년 3분기에 WordPress용으로 출시될 예정입니다.
-          </p>
+          <p class="fs-5">CSA가 이 격차를 채웁니다. 프로젝트 멤버는 Editoria11y 라이브러리, 그 CMS 플러그인 및 CSA 스위트의 개발을 지원합니다. CSA 스위트는 비공개 소스 제품과 비슷한 기능을 훨씬 낮은 가격에 제공하는, 빠르게 성장하는 오픈 소스 품질 보증 도구 모음입니다.</p>
           <figure class="figure my-4 shadow border rounded p-0 m-2 col-sm-12 col-xl-11">
             <img alt="사이트 크롤링 진행 중" src="../../assets/images/3x-crawl.png" height="786" width="1986" class="img-fluid rounded-top figure-img" />
             <figcaption class="figure-caption p-2 pt-2">CSA 크롤러가 대시보드를 업데이트하는 중.</figcaption>
@@ -323,6 +319,45 @@
           <h3 class="pt-4" data-section="active-projects">진행 중</h3>
           <div class="accord">
             <details>
+              <summary>2027년 2분기: WordPress용 게시 전 거버넌스 도구 개발</summary>
+              <div>
+                <p class="fs-6">이 프로젝트는 해당 기능을 함께 설계하는 데 관심이 있는 여러 대학이 제공한 후한 보조금으로 전액 지원을 받았습니다.</p>
+                  <ul class="fs-6">
+                    <li>알려진 문제가 있는 페이지를 저장할 수 있는 사용자를 역할 기반으로 설정하는 기능 개발.</li>
+                    <li>작성자가 콘텐츠를 게시하기 전에 아직 처리하지 않은 알림을 단계별로 검토할 수 있는 편집기 내 마법사 개발.</li>
+                  </ul>
+              </div>
+            </details>
+            <details>
+              <summary>2027년 초: Drupal 및 WordPress 깨진 링크 검사</summary>
+              <div>
+                <p class="fs-6">현황: 파트너와 협력자를 찾고 있습니다. 이 프로젝트는 학술 보조금으로 일부 지원을 받았으나 아직 작업이 시작되지 않았습니다.</p>
+                <ul class="fs-6">
+                      <li>감지된 URL을 페이지에 연결해 저장하는 DB 테이블 개발.</li>
+                      <li>CMS 검증 도구로 로컬 경로를, HTTP get 요청으로 원격 경로를 검사하는 cron 작업 개발.</li>
+                      <li>보고서 및 보고서 내보내기 기능 개발.</li>
+                      <li>페이지 내 강조 표시 기능 개발.</li>
+                    </ul>
+              </div>
+            </details>
+            <details>
+              <summary>2027년 초: Drupal 및 WordPress PDF 검사</summary>
+              <div>
+                <p class="fs-6">현황: 파트너와 협력자를 찾고 있습니다. 이 프로젝트는 학술 보조금으로 일부 지원을 받았으나 아직 작업이 시작되지 않았습니다.</p>
+                <ul class="fs-6">
+                  <li>감지된 PDF를 페이지에 연결해 저장하는 DB 테이블 개발.</li>
+                  <li>PHP 도구로 마크업을 수집해 기본 태그를 확인.</li>
+                  <li>거버넌스 기능을 갖춘 보고서 개발. 예: “이 페이지에 대체 형식 URL이 있으면 이 PDF는 문제없음.”</li>
+                  <li>PDF가 확실히 문제가 있는지 아니면 괜찮을 수도 있는지에 따라 페이지 내 강조 표시를 변경.</li>
+                </ul>
+              </div>
+            </details>
+          </div>
+        </section>
+        <section id="finished">
+          <h3 data-section="finished" class="pt-5">최근 완료</h3>
+          <div class="accord">
+            <details>
               <summary>
                 2026년 2분기: Editoria11y CSA 커뮤니티 런칭
               </summary>
@@ -345,7 +380,7 @@
               <div>
                 <ol class="fs-6">
                   <li>Drupal에서 완료.</li>
-                  <li>할 일: WordPress용 빌더 포팅.</li>
+                  <li>빌더를 WordPress로 포팅.</li>
                 </ol>
               </div>
             </details>
@@ -365,11 +400,6 @@
                 </ol>
               </div>
             </details>
-          </div>
-        </section>
-        <section id="finished">
-          <h3 data-section="finished" class="pt-5">최근 완료</h3>
-          <div class="accord">
             <details>
               <summary>
                 2026년 1분기: 라이브러리 3.x 재작성
@@ -413,11 +443,8 @@
         <section id="project-ideas">
           <h3 data-section="project-ideas" class="pt-5">논의 중</h3>
           <p><a href="https://github.com/itmaybejj/editoria11y/discussions">Editoria11y 라이브러리 포럼</a>에서 이 아이디어에 대해 토론하고 투표하세요.</p>
-          <p>아이디어는 커뮤니티 논의를 기반으로 난이도/우선순위 추정치와 함께 표시됩니다.</p>
           <ul class="mt-1 p-5 pt-0">
             <li>멀티 사이트 모니터링 대시보드</li>
-            <li>깨진 링크 감지</li>
-            <li>PDF 스캔</li>
             <li>툴팁 코드 위치 탭</li>
             <li>툴팁 페이지 보고서 내보내기</li>
             <li>플래그 단어</li>
@@ -483,8 +510,8 @@
     </div>
   </footer>
   <script async src="/assets/bootstrap/js/bootstrap.bundle.min.js?v=69f68885" class="astro-vvvwv3sm"></script>
-  <script async src="/assets/lang/i18n.js?v=9063c00b"></script>
-  <script async src="/assets/theme.js?v=39536f05"></script>
+  <script async src="/assets/lang/i18n.js?v=650b32df"></script>
+  <script async src="/assets/theme.js?v=0ee05eec"></script>
   <script async src="/assets/prism/prism.js?v=3bbae506"></script>
 </body>
 

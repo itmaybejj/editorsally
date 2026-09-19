@@ -43,7 +43,7 @@
   <link rel="alternate" hreflang="x-default" href="https://editoria11y.com/features/" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Funcionalidades — Editoria11y" />
-  <meta property="og:description" content="Editoria11y is a community-supported, open-source accessibility checker with deep integrations for Drupal, WordPress, and more." />
+  <meta property="og:description" content="O que faz o Editoria11y se destacar entre as ferramentas de acessibilidade é que seus testes rodam ao vivo, no navegador, enquanto os autores editam e visualizam seu trabalho. Os autores reagem com muito mais facilidade a um feedback imediato e inline, percebem os alertas e fazem correções, do que se lembram de visitar um painel ou executar uma verificação manual." />
   <meta property="og:image" content="https://editoria11y.com/assets/images/og-image.png" />
   <meta property="og:url" content="https://editoria11y.com/pt-br/funcionalidades/" />
   <link href="/assets/bootstrap/css/bootstrap.min.css?v=7575987f" rel="stylesheet" />
@@ -282,7 +282,7 @@
           <p class="fs-5">
             A CSA preenche essa lacuna: os membros do projeto financiam o desenvolvimento da biblioteca Editoria11y,
             seus plugins de CMS e o conjunto CSA: um conjunto de ferramentas de código aberto para garantia de
-            qualidade, em rápido crescimento, que oferece funcionalidades similares às de produtos comerciais, com um
+            qualidade, em rápido crescimento, que oferece funcionalidades similares às de produtos de código fechado, com
             custo muito mais acessível.
 
             O conjunto CSA para Drupal está atualmente gratuito em versão beta, e chegará ao WordPress no terceiro
@@ -355,6 +355,53 @@
           <div class="accord">
             <details>
               <summary>
+                2º trim. 2027: Criar ferramentas de governança pré-publicação para WordPress
+              </summary>
+              <div>
+                <p class="fs-6">Este projeto foi integralmente financiado por uma generosa doação de um grupo de universidades interessadas em participar do desenho da funcionalidade.</p>
+                  <ul class="fs-6">
+                    <li>Criar uma configuração baseada em papéis que defina quais usuários podem salvar páginas com problemas conhecidos.</li>
+                    <li>Criar um assistente dentro do editor pelo qual os autores passam para revisar os alertas que ainda não trataram antes de publicar o conteúdo.</li>
+                  </ul>
+              </div>
+            </details>
+            <details>
+              <summary>
+                Início de 2027: Verificação de links quebrados para Drupal e WordPress
+              </summary>
+              <div>
+                <p class="fs-6">
+                  Status: Em busca de parceiros e colaboradores. Este projeto foi parcialmente financiado por uma bolsa acadêmica, mas o trabalho ainda não começou.
+                </p>
+                <ul class="fs-6">
+                      <li>Criar tabelas no DB para armazenar as URLs detectadas, vinculadas às páginas.</li>
+                      <li>Criar tarefas de cron para validar caminhos locais usando as ferramentas de validação do CMS e endereços externos usando requisições HTTP get.</li>
+                      <li>Criar relatórios e exportação de relatórios.</li>
+                      <li>Criar o destaque na própria página.</li>
+                    </ul>
+              </div>
+            </details>
+            <details>
+              <summary>
+                Início de 2027: Verificação de PDFs para Drupal e WordPress
+              </summary>
+              <div>
+                <p class="fs-6">Status: em busca de parceiros e colaboradores. Este projeto foi parcialmente financiado por uma bolsa acadêmica, mas o trabalho ainda não começou.</p>
+                <ul class="fs-6">
+                  <li>Criar tabelas no DB para armazenar os PDFs detectados, vinculados às páginas.</li>
+                  <li>Usar ferramentas PHP para extrair a marcação, verificando as tags básicas.</li>
+                  <li>Criar relatórios com ferramentas de governança. Por exemplo: “Este PDF está OK se a URL de um formato alternativo estiver presente na página.”</li>
+                  <li>Ajustar o destaque na página dependendo de o PDF ser reconhecidamente problemático ou possivelmente adequado.</li>
+                </ul>
+              </div>
+            </details>
+          </div>
+        </section>
+        <section id="finished">
+          <h3 data-section="finished" class="pt-5">Concluídos recentemente</h3>
+          <div class="accord">
+            <details>
+              <summary>
                 2º trim. 2026: Lançamento da comunidade Editoria11y CSA
               </summary>
               <div>
@@ -376,7 +423,7 @@
               <div>
                 <ol class="fs-6">
                   <li>Concluído para Drupal.</li>
-                  <li>A fazer: portar o construtor para WordPress.</li>
+                  <li>Portar o construtor para WordPress.</li>
                 </ol>
               </div>
             </details>
@@ -399,11 +446,6 @@
                 </ol>
               </div>
             </details>
-          </div>
-        </section>
-        <section id="finished">
-          <h3 data-section="finished" class="pt-5">Concluídos recentemente</h3>
-          <div class="accord">
             <details>
               <summary>
                 1º trim. 2026: Reescrita da biblioteca 3.x
@@ -458,12 +500,8 @@
           <h3 data-section="project-ideas" class="pt-5">Em discussão</h3>
           <p>Discuta e vote nessas ideias nos <a href="https://github.com/itmaybejj/editoria11y/discussions">fóruns da
               biblioteca Editoria11y</a>.</p>
-          <p>As ideias são marcadas com estimativas de dificuldade/prioridade com base nas conversas atuais da
-            comunidade.</p>
           <ul class="mt-1 p-5 pt-0">
             <li>Painel de monitoramento de múltiplos sites</li>
-            <li>Detecção de links quebrados</li>
-            <li>Verificação de PDF</li>
             <li>Aba de localização de código no tooltip</li>
             <li>Exportação de relatório de página via tooltip</li>
             <li>Palavras sinalizadas</li>
@@ -529,8 +567,8 @@
     </div>
   </footer>
   <script async src="/assets/bootstrap/js/bootstrap.bundle.min.js?v=69f68885" class="astro-vvvwv3sm"></script>
-  <script async src="/assets/lang/i18n.js?v=9063c00b"></script>
-  <script async src="/assets/theme.js?v=39536f05"></script>
+  <script async src="/assets/lang/i18n.js?v=650b32df"></script>
+  <script async src="/assets/theme.js?v=0ee05eec"></script>
   <script async src="/assets/prism/prism.js?v=3bbae506"></script>
 </body>
 

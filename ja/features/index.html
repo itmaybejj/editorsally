@@ -43,7 +43,7 @@
   <link rel="alternate" hreflang="x-default" href="https://editoria11y.com/features/" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="機能 — Editoria11y" />
-  <meta property="og:description" content="Editoria11y is a community-supported, open-source accessibility checker with deep integrations for Drupal, WordPress, and more." />
+  <meta property="og:description" content="Editoria11y がアクセシビリティツールの中で際立っている理由は、テストがブラウザ内でリアルタイムに実行され、作成者がコンテンツを編集・プレビューする際に即座にフィードバックを受け取れる点です。作成者は後でダッシュボードを確認したり手動チェックを実行したりするよりも、その場でインラインに表示されるフィードバックを見て、警告に気づいて修正する可能性がはるかに高まります。" />
   <meta property="og:image" content="https://editoria11y.com/assets/images/og-image.png" />
   <meta property="og:url" content="https://editoria11y.com/ja/features/" />
   <link href="/assets/bootstrap/css/bootstrap.min.css?v=7575987f" rel="stylesheet" />
@@ -267,12 +267,7 @@
           <p class="fs-5">
             ただし、Editoria11y の開発とサポートは無料ではありません。
           </p>
-          <p class="fs-5">
-            CSA はそのギャップを埋めます。プロジェクトメンバーが Editoria11y ライブラリ・CMS プラグイン・CSA スイートの開発を資金面で支えています。CSA
-            スイートは急速に成長しているオープンソースの品質保証ツール群で、商用製品に匹敵する機能をはるかに低いコストで提供します。
-
-            Drupal 向け CSA スイートは現在ベータ版として無料で提供されており、WordPress 向けは 2026 年第 3 四半期に提供予定です。
-          </p>
+          <p class="fs-5">CSA はそのギャップを埋めます。プロジェクトメンバーが Editoria11y ライブラリ、その CMS プラグイン、そして CSA スイートの開発を資金面で支えています。CSA スイートは急速に成長しているオープンソースの品質保証ツール群で、クローズドソース製品に匹敵する機能をはるかに低いコストで提供します。</p>
           <figure class="figure my-4 shadow border rounded p-0 m-2 col-sm-12 col-xl-11">
             <img alt="サイトクロール進行中" src="../../assets/images/3x-crawl.png" height="786" width="1986" class="img-fluid rounded-top figure-img" />
             <figcaption class="figure-caption p-2 pt-2">ダッシュボードを更新している CSA クローラー。</figcaption>
@@ -336,6 +331,45 @@
           <h3 class="pt-4" data-section="active-projects">進行中</h3>
           <div class="accord">
             <details>
+              <summary>2027 年第 2 四半期：WordPress 向けの公開前ガバナンスツールを作成する</summary>
+              <div>
+                <p class="fs-6">このプロジェクトは、機能の共同設計に関心を持つ大学グループからの手厚い助成金により、全額の資金提供を受けています。</p>
+                  <ul class="fs-6">
+                    <li>既知の問題があるページの保存を許可するユーザーを、ロールベースで設定できるようにする。</li>
+                    <li>コンテンツを公開する前に、未対応のアラートを著者が順に確認していくエディター内ウィザードを作成する。</li>
+                  </ul>
+              </div>
+            </details>
+            <details>
+              <summary>2027 年初頭：Drupal と WordPress のリンク切れチェック</summary>
+              <div>
+                <p class="fs-6">ステータス：パートナーと協力者を募集中。このプロジェクトは学術助成金により一部の資金提供を受けていますが、作業はまだ始まっていません。</p>
+                <ul class="fs-6">
+                      <li>検出した URL をページに紐づけて保存する DB テーブルを作成する。</li>
+                      <li>CMS の検証ツールでローカルパスを、HTTP GET リクエストでリモートのパスを検証する cron ジョブを作成する。</li>
+                      <li>レポートとレポートのエクスポート機能を作成する。</li>
+                      <li>ページ内のハイライト表示を作成する。</li>
+                    </ul>
+              </div>
+            </details>
+            <details>
+              <summary>2027 年初頭：Drupal と WordPress の PDF チェック</summary>
+              <div>
+                <p class="fs-6">ステータス：パートナーと協力者を募集中。このプロジェクトは学術助成金により一部の資金提供を受けていますが、作業はまだ始まっていません。</p>
+                <ul class="fs-6">
+                  <li>検出した PDF をページに紐づけて保存する DB テーブルを作成する。</li>
+                  <li>PHP のツールでマークアップを抽出し、基本的なタグの有無を確認する。</li>
+                  <li>ガバナンス機能を備えたレポートを作成する。例：「このページに代替形式の URL があれば、この PDF は問題なし」。</li>
+                  <li>PDF が既知の問題ありか、問題ない可能性があるかに応じて、ページ内のハイライト表示を変える。</li>
+                </ul>
+              </div>
+            </details>
+          </div>
+        </section>
+        <section id="finished">
+          <h3 data-section="finished" class="pt-5">最近完了したもの</h3>
+          <div class="accord">
+            <details>
               <summary>
                 2026 年第 2 四半期：Editoria11y CSA コミュニティの立ち上げ
               </summary>
@@ -358,7 +392,7 @@
               <div>
                 <ol class="fs-6">
                   <li>Drupal 向けは完成。</li>
-                  <li>課題：ビルダーを WordPress に移植する。</li>
+                  <li>ビルダーを WordPress に移植する。</li>
                 </ol>
               </div>
             </details>
@@ -378,11 +412,6 @@
                 </ol>
               </div>
             </details>
-          </div>
-        </section>
-        <section id="finished">
-          <h3 data-section="finished" class="pt-5">最近完了したもの</h3>
-          <div class="accord">
             <details>
               <summary>
                 2026 年第 1 四半期：ライブラリ 3.x の書き直し
@@ -430,11 +459,8 @@
           <h3 data-section="project-ideas" class="pt-5">検討中</h3>
           <p>これらのアイデアについて <a href="https://github.com/itmaybejj/editoria11y/discussions">Editoria11y
               ライブラリフォーラム</a>で議論・投票してください。</p>
-          <p>各アイデアには、現在のコミュニティの議論に基づく難易度・優先度の目安がタグ付けされています。</p>
           <ul class="mt-1 p-5 pt-0">
             <li>マルチサイト監視ダッシュボード</li>
-            <li>壊れたリンクの検出</li>
-            <li>PDF スキャン</li>
             <li>ツールチップのコード位置タブ</li>
             <li>ツールチップのページレポートエクスポート</li>
             <li>フラグ付き語句</li>
@@ -500,8 +526,8 @@
     </div>
   </footer>
   <script async src="/assets/bootstrap/js/bootstrap.bundle.min.js?v=69f68885" class="astro-vvvwv3sm"></script>
-  <script async src="/assets/lang/i18n.js?v=9063c00b"></script>
-  <script async src="/assets/theme.js?v=39536f05"></script>
+  <script async src="/assets/lang/i18n.js?v=650b32df"></script>
+  <script async src="/assets/theme.js?v=0ee05eec"></script>
   <script async src="/assets/prism/prism.js?v=3bbae506"></script>
 </body>
 

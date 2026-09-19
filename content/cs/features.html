@@ -14,7 +14,7 @@
             nástroje pro zajišťování kvality celého webu.</p>
           <p class="fs-6" data-i18n-id="s-0887">Testy obsahu se zaměřují na problémy, které se objevují <strong>po</strong> předání webů
             autorům obsahu. Weby musí být před spuštěním otestovány manuálními auditorskými nástroji, klávesnicemi a odečítači obrazovky, ale i nejpřístupnější web v den spuštění má tendenci se zhoršovat, jak úpravy přinášejí nové problémy.</p>
-          <p class="fs-6" data-i18n-id="s-44f1">To, co odlišuje Editoria11y od ostatních nástrojů přístupnosti, je to, že jeho testy běží živě, v
+          <p class="fs-6" data-i18n-id="s-44f1" data-og="description">To, co odlišuje Editoria11y od ostatních nástrojů přístupnosti, je to, že jeho testy běží živě, v
             prohlížeči, jak autoři upravují a prohlížejí svou práci. <strong>Autoři s větší pravděpodobností reagují na okamžitou,
               inline zpětnou vazbu</strong>, všimnou si upozornění a provedou opravy, než aby si pamatovali navštívit
             dashboard nebo spustit manuální kontrolu.</p>
@@ -187,10 +187,8 @@
           </p>
           <p class="fs-5" data-i18n-id="s-7d6d">
             CSA tuto mezeru vyplňuje: členové projektu financují vývoj knihovny Editoria11y, jejích pluginů pro CMS a
-            sady CSA: rychle rostoucí sady open-source nástrojů pro zajišťování kvality, které poskytují podobnou
-            funkcionalitu jako komerční produkty za výrazně nižší cenu.
-
-            Sada CSA pro Drupal je momentálně dostupná zdarma v beta verzi a pro WordPress přijde ve 3. čtvrtletí 2026.
+            sady CSA: rychle rostoucí sady open-source nástrojů pro zajišťování kvality, které nabízejí podobnou
+            funkcionalitu jako produkty s uzavřeným zdrojovým kódem, a to za výrazně nižší cenu.
           </p>
           <figure class="figure my-4 shadow border rounded p-0 m-2 col-sm-12 col-xl-11">
             <img alt="Probíhá prohledávání webu" src="../../assets/images/3x-crawl.png" height="786" width="1986" class="img-fluid rounded-top figure-img" data-i18n-id="s-34fd" />
@@ -254,6 +252,53 @@
           <h3 class="pt-4" data-section="active-projects" data-i18n-id="s-52da">Aktivní</h3>
           <div class="accord">
             <details>
+              <summary data-i18n-id="s-4291">
+                2. čtvrtletí 2027: Vytvořit nástroje pro kontrolu obsahu před publikováním ve WordPressu
+              </summary>
+              <div>
+                <p class="fs-6" data-i18n-id="s-529a">Tento projekt je plně financován z velkorysého grantu skupiny univerzit, které mají zájem podílet se na návrhu jeho funkcí.</p>
+                  <ul class="fs-6">
+                    <li data-i18n-id="s-f7b1">Vytvořit konfiguraci podle rolí určující, kteří uživatelé smějí ukládat stránky se známými problémy.</li>
+                    <li data-i18n-id="s-2ce6">Vytvořit průvodce přímo v editoru, kterým autoři projdou, aby si před publikováním obsahu prošli upozornění, jimž se dosud nevěnovali.</li>
+                  </ul>
+              </div>
+            </details>
+            <details>
+              <summary data-i18n-id="s-b302">
+                Začátek roku 2027: Kontrola nefunkčních odkazů pro Drupal & WordPress
+              </summary>
+              <div>
+                <p class="fs-6" data-i18n-id="s-2fdf">
+                  Stav: Hledáme partnery a spolupracovníky. Tento projekt je částečně financován z akademického grantu, práce však dosud nezačaly.
+                </p>
+                <ul class="fs-6">
+                      <li data-i18n-id="s-da03">Vytvořit DB tabulky pro ukládání nalezených URL a jejich přiřazení ke stránkám.</li>
+                      <li data-i18n-id="s-2ae1">Vytvořit cron úlohy, které ověřují místní cesty pomocí validačních nástrojů CMS a vzdálené cíle pomocí HTTP GET požadavků.</li>
+                      <li data-i18n-id="s-c519">Vytvořit reporty a jejich export.</li>
+                      <li data-i18n-id="s-a504">Vytvořit zvýrazňování přímo na stránce.</li>
+                    </ul>
+              </div>
+            </details>
+            <details>
+              <summary data-i18n-id="s-e530">
+                Začátek roku 2027: Kontrola PDF pro Drupal & WordPress
+              </summary>
+              <div>
+                <p class="fs-6" data-i18n-id="s-e767">Stav: Hledáme partnery a spolupracovníky. Tento projekt je částečně financován z akademického grantu, práce však dosud nezačaly.</p>
+                <ul class="fs-6">
+                  <li data-i18n-id="s-9607">Vytvořit DB tabulky pro ukládání nalezených PDF a jejich přiřazení ke stránkám.</li>
+                  <li data-i18n-id="s-ca6c">Pomocí PHP nástrojů procházet značkování a kontrolovat základní tagy.</li>
+                  <li data-i18n-id="s-24c9">Vytvořit reporty s nástroji pro řízení kvality. Např. „Toto PDF je v pořádku, pokud je na stránce uvedena tato URL alternativního formátu.“</li>
+                  <li data-i18n-id="s-9a3c">Upravit zvýrazňování na stránce podle toho, zda je PDF známé jako vadné, nebo je možná v pořádku.</li>
+                </ul>
+              </div>
+            </details>
+          </div>
+        </section>
+        <section id="finished">
+          <h3 data-section="finished" class="pt-5" data-i18n-id="s-4646">Nedávno dokončeno</h3>
+          <div class="accord">
+            <details>
               <summary data-i18n-id="s-8ea4">
                 2. čtvrtletí 2026: Spuštění komunity Editoria11y CSA
               </summary>
@@ -276,7 +321,7 @@
               <div>
                 <ol class="fs-6">
                   <li data-i18n-id="s-4265">Hotovo pro Drupal.</li>
-                  <li data-i18n-id="s-4ab7">Úkol: portovat tvůrce do WordPressu.</li>
+                  <li data-i18n-id="s-4ab7">Portovat tvůrce do WordPressu.</li>
                 </ol>
               </div>
             </details>
@@ -296,11 +341,6 @@
                 </ol>
               </div>
             </details>
-          </div>
-        </section>
-        <section id="finished">
-          <h3 data-section="finished" class="pt-5" data-i18n-id="s-4646">Nedávno dokončeno</h3>
-          <div class="accord">
             <details>
               <summary data-i18n-id="s-8545">
                 1. čtvrtletí 2026: Přepis knihovny 3.x
@@ -347,11 +387,8 @@
         <section id="project-ideas">
           <h3 data-section="project-ideas" class="pt-5" data-i18n-id="s-e19c">Ve fázi diskuse</h3>
           <p data-i18n-id="s-511c">Diskutujte a hlasujte o těchto nápadech v <a               href="https://github.com/itmaybejj/editoria11y/discussions">fórech knihovny Editoria11y</a>.</p>
-          <p data-i18n-id="s-99ee">U každého nápadu je uveden odhadovaný stupeň obtížnosti a priorita na základě aktuálních komunitních diskusí.</p>
           <ul class="mt-1 p-5 pt-0">
             <li data-i18n-id="s-47b0">Dashboard pro monitorování více webů</li>
-            <li data-i18n-id="s-b625">Detekce nefunkčních odkazů</li>
-            <li data-i18n-id="s-347e">Skenování PDF</li>
             <li data-i18n-id="s-b7fa">Záložka s umístěním kódu v tooltipu</li>
             <li data-i18n-id="s-ec9e">Export přehledu stránky z tooltipu</li>
             <li data-i18n-id="s-1a54">Označená slova</li>

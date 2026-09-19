@@ -15,7 +15,7 @@
           oder bearbeiten Sie den Demo-Inhalt unten, öffnen und schließen Sie Warnungen,
           und nutzen Sie die Symbolleiste <span style="text-wrap: nowrap;">(<img src="/assets/images/3x-toolbar" class="inline-block" style="width: 5rem; height: auto;" alt="Screenshot der Editoria11y-Symbolleiste mit 4 Fehlern." width="97" height="50" loading="lazy" data-i18n-id="s-65d5" />)</span> um die Überschriftenstruktur anzuzeigen. Diese Demo umfasst sowohl die Kerntests
           als auch das CSA-Paket.</p>
-        <p class="fs-5 mb-5 pb-5" data-i18n-id="s-7580">Diese Demo verwendet einen TinyMCE-Editor. Editoria11y ist mit den meisten
+        <p class="fs-5 mb-5 pb-5" data-i18n-id="s-7580" data-og="description">Diese Demo verwendet einen TinyMCE-Editor. Editoria11y ist mit den meisten
           Texteditoren kompatibel und verfügt über fertige Implementierungen für CKEditor und Gutenberg in WordPress und
           Drupal.</p>
         <div id="ed11y-demo" class="p-5" contenteditable="">
@@ -62,7 +62,7 @@
             <p data-i18n-id="s-875a">Bild ohne alt-Attribut:</p>
             <p class="positive" data-i18n-id="s-2b48"><img loading="lazy" src="/assets/images/px20240813sm.jpg" data-i18n-id="s-95a0" /></p>
 
-            <p data-i18n-id="s-5df5">Bild mit einem ungültigen alt-Attribut, z. B. <code                 class="language-plaintext highlighter-rouge">alt=”'”</code></p>
+            <p data-i18n-id="s-5df5">Bild mit einem ungültigen alt-Attribut, z. B. <code                 class="language-plaintext highlighter-rouge">alt="'"</code></p>
 
             <p class="positive" data-i18n-id="s-47b7"><img loading="lazy" alt="'" src="/assets/images/px20240813sm.jpg" data-i18n-id="s-87b9" /></p>
 
@@ -134,7 +134,7 @@
               <p style="background: linear-gradient(45deg,#ccc 25%,#0000 25% 75%,#ccc 75%,#ccc),linear-gradient(45deg,#ccc 25%,#0000 25% 75%,#ccc 75%,#ccc)" data-i18n-id="s-490b">
                 Und nicht berechenbar.</p>
             </div>
-            <div class="positive"><label>Eingabefeld mit zu geringem Kontrast
+            <div class="positive"><label data-translate data-i18n-id="s-769f">Eingabefeld mit zu geringem Kontrast
                 <input class="form-text" type="text" style="color: #777;" /></label></div>
 
             <style>
@@ -143,9 +143,9 @@
               }
             </style>
 
-            <label for="unsupported-placeholder">Farbe des Platzhalters kann nicht berechnet werden</label>
+            <label for="unsupported-placeholder" data-translate data-i18n-id="s-34b7">Farbe des Platzhalters kann nicht berechnet werden</label>
             <div class="positive" style="background: transparent;"><input type="text" id="unsupported-placeholder"
-                placeholder="Rec2020-Farbraum" /></div>
+                placeholder="Rec2020-Farbraum"  data-translate data-i18n-id="s-8ce5" /></div>
 
 
             <p data-i18n-id="s-0774">SVG-Grafik mit zu geringem Kontrast</p>
@@ -178,8 +178,8 @@
                 title="YouTube: So wird es gemacht. Wiedergabe ist deaktiviert."
                 sandbox="allow-scripts allow-same-origin"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="origin" allowfullscreen></iframe>
-              <div><small><em>Wiedergabe deaktiviert, um Cookies zu verhindern.</em></small></div>
+                referrerpolicy="origin" allowfullscreen data-translate data-i18n-id="s-056d"></iframe>
+              <div><small><em data-translate data-i18n-id="s-0b03">Wiedergabe deaktiviert, um Cookies zu verhindern.</em></small></div>
             </div>
 
             <p data-i18n-id="s-e14a">Audio benötigt ein Transkript:</p>
@@ -195,7 +195,7 @@
 
             <p data-i18n-id="s-fe95">Nicht fokussierbarer Iframe:</p>
             <div class="positive">
-              <iframe title="Beispiel" sandbox="" tabindex="-1" data-needs-src=""></iframe>
+              <iframe title="Beispiel" sandbox="" tabindex="-1" data-needs-src="" data-translate data-i18n-id="s-ec77"></iframe>
             </div>
 
             <p data-i18n-id="s-e27f">Verschachtelte interaktive Komponenten</p>
@@ -203,7 +203,7 @@
               <details>
                 <summary data-i18n-id="s-5064">Accordion</summary>
                 <details>
-                  <summary data-i18n-id="s-2b8d">Accordion</summary>Surprise!
+                  <summary data-i18n-id="s-2b8d">Accordion</summary><span data-translate data-i18n-id="s-c8e3">Überraschung!</span>
                 </details>
               </details>
             </div>
@@ -379,13 +379,13 @@
             <p data-i18n-id="s-296d">Eingabefelder mit einer unsichtbaren Beschriftung – Frage, ob auch eine sichtbare Beschriftung vorhanden
               ist.</p>
             <div class="positive">
-              <input type="text" title="E-Mail" />
+              <input type="text" title="E-Mail"  data-translate data-i18n-id="s-95d7" />
             </div>
 
             <p data-i18n-id="s-7c79">Eingabefelder mit nur einer Platzhalter-Beschriftung – Frage, ob auch eine sichtbare Beschriftung
               vorhanden ist.</p>
             <div class="positive">
-              <input type="text" placeholder="E-Mail" />
+              <input type="text" placeholder="E-Mail"  data-translate data-i18n-id="s-f516" />
             </div>
 
             <div class="positive">

@@ -43,7 +43,7 @@
   <link rel="alternate" hreflang="x-default" href="https://editoria11y.com/demo/" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Editoria11y" />
-  <meta property="og:description" content="Editoria11y is a community-supported, open-source accessibility checker with deep integrations for Drupal, WordPress, and more." />
+  <meta property="og:description" content="Ta wersja demo używa edytora TinyMCE. Editoria11y jest zgodny z większością edytorów tekstu i posiada gotowe implementacje dla CKEditor oraz Gutenberg w WordPress i Drupal." />
   <meta property="og:image" content="https://editoria11y.com/assets/images/og-image.png" />
   <meta property="og:url" content="https://editoria11y.com/pl/demo/" />
   <link href="/assets/bootstrap/css/bootstrap.min.css?v=7575987f" rel="stylesheet" />
@@ -147,7 +147,7 @@
             <p class="positive"><img loading="lazy" src="/assets/images/px20240813sm.jpg" /></p>
 
             <p>Obraz z nieprawidłowym atrybutem alt, np. <code class="language-plaintext
-                highlighter-rouge">alt=”'”</code></p>
+                highlighter-rouge">alt="'"</code></p>
 
             <p class="positive"><img loading="lazy" alt="'" src="/assets/images/px20240813sm.jpg" /></p>
 
@@ -159,7 +159,7 @@
 
             <p class="positive"><img loading="lazy" alt="Zdjęcie psa." src="/assets/images/px20240813sm.jpg" /></p>
 
-            <p id="”linked-image-with-redundant-text-in-its-alt”">Obraz w linku z nadmiarowym tekstem w atrybucie alt,
+            <p id="linked-image-with-redundant-text-in-its-alt">Obraz w linku z nadmiarowym tekstem w atrybucie alt,
               np. „zdjęcie:”</p>
 
             <p class="positive"><a href="./editable.htm"><img loading="lazy" alt="Zdjęcie psa." src="/assets/images/px20240813sm.jpg" /></a></p>
@@ -217,7 +217,7 @@
               <p style="background: linear-gradient(45deg,#ccc 25%,#0000 25% 75%,#ccc
                 75%,#ccc),linear-gradient(45deg,#ccc 25%,#0000 25% 75%,#ccc 75%,#ccc)">I niepoliczalne.</p>
             </div>
-            <div class="positive"><label>Pole tekstowe z niskim kontrastem
+            <div class="positive"><label data-translate>Pole tekstowe z niskim kontrastem
                 <input class="form-text" type="text" style="color: #777;" /></label></div>
 
             <style>
@@ -226,9 +226,8 @@
               }
             </style>
 
-            <label for="unsupported-placeholder">Nie można obliczyć koloru symbolu zastępczego</label>
-            <div class="positive" style="background: transparent;"><input type="text" id="unsupported-placeholder"
-                placeholder="Przestrzeń kolorów Rec2020" /></div>
+            <label for="unsupported-placeholder" data-translate>Nie można obliczyć koloru symbolu zastępczego</label>
+            <div class="positive" style="background: transparent;"><input type="text" id="unsupported-placeholder" placeholder="Przestrzeń kolorów Rec2020" data-translate /></div>
 
 
             <p>Grafika SVG bez wystarczającego kontrastu</p>
@@ -259,13 +258,11 @@
 
             <p>Wideo oznaczone jako wymagające ręcznego sprawdzenia napisów:</p>
             <div class="positive" style="width: 560px; aspect-ratio: 560 / 315; max-width: 100%; cursor: not-allowed;">
-              <iframe width="560" height="315" inert=""
-                src="https://www.youtube-nocookie.com/embed/QGsevnbItdU?si=W_b2i2o_n5v1ArvA" style="width: 560px;
+              <iframe width="560" height="315" inert src="https://www.youtube-nocookie.com/embed/QGsevnbItdU?si=W_b2i2o_n5v1ArvA" style="width: 560px;
                 aspect-ratio: 560 / 315; max-width: 100%; cursor: not-allowed;" title="YouTube: Wideo instruktażowe.
                 Odtwarzanie jest wyłączone." sandbox="allow-scripts allow-same-origin" allow="accelerometer; autoplay;
-                clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="origin"
-                allowfullscreen></iframe>
-              <div><small><em>Odtwarzanie wyłączone, aby zapobiec plikom cookie.</em></small></div>
+                clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="origin" allowfullscreen data-translate></iframe>
+              <div><small><em data-translate>Odtwarzanie wyłączone, aby zapobiec plikom cookie.</em></small></div>
             </div>
 
             <p>Plik audio wymaga transkrypcji:</p>
@@ -282,7 +279,7 @@
 
             <p>Iframe niedostępny z klawiatury:</p>
             <div class="positive">
-              <iframe title="example" sandbox="" tabindex="-1" data-needs-src=""></iframe>
+              <iframe title="przykład" sandbox tabindex="-1" data-needs-src data-translate></iframe>
             </div>
 
             <p>Zagnieżdżone komponenty interaktywne</p>
@@ -290,7 +287,7 @@
               <details>
                 <summary>Akordeon</summary>
                 <details>
-                  <summary>Akordeon</summary>Niespodzianka!
+                  <summary>Akordeon</summary><span data-translate>Niespodzianka!</span>
                 </details>
               </details>
             </div>
@@ -473,12 +470,12 @@
 
             <p>Pola z niewidoczną etykietą — sprawdzenie, czy istnieje też widoczna etykieta.</p>
             <div class="positive">
-              <input type="text" title="Email" />
+              <input type="text" title="E-mail" data-translate />
             </div>
 
             <p>Pola z wyłącznie zastępczą etykietą — sprawdzenie, czy istnieje też widoczna etykieta.</p>
             <div class="positive">
-              <input type="text" placeholder="Email" />
+              <input type="text" placeholder="E-mail" data-translate />
             </div>
 
             <div class="positive">
@@ -565,8 +562,8 @@
     </div>
   </footer>
   <script async src="/assets/bootstrap/js/bootstrap.bundle.min.js?v=69f68885" class="astro-vvvwv3sm"></script>
-  <script async src="/assets/lang/i18n.js?v=9063c00b"></script>
-  <script async src="/assets/theme.js?v=39536f05"></script>
+  <script async src="/assets/lang/i18n.js?v=650b32df"></script>
+  <script async src="/assets/theme.js?v=0ee05eec"></script>
   <script async src="/assets/prism/prism.js?v=3bbae506"></script>
 </body>
 

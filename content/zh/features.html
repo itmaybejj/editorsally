@@ -13,7 +13,7 @@
           <p class="fs-6" data-i18n-id="s-0887">
             内容检测聚焦于网站移交给内容作者<strong>之后</strong>出现的问题。网站在上线前需借助手动审计工具、键盘和屏幕阅读器进行测试，但即便是第一天无障碍性最优的网站，随着编辑不断引入新问题，质量也往往会逐渐下滑。
           </p>
-          <p class="fs-6" data-i18n-id="s-44f1">Editoria11y
+          <p class="fs-6" data-i18n-id="s-44f1" data-og="description">Editoria11y
             在无障碍工具中脱颖而出的关键在于：其检测在浏览器中实时运行，贯穿作者编辑和预览内容的全过程。<strong>作者更容易对即时的内联反馈作出响应</strong>——注意到提示并加以修正——而不是专门去访问仪表板或手动运行检查。
           </p>
         </section>
@@ -177,9 +177,7 @@
             然而，Editoria11y 的开发和支持并非免费。
           </p>
           <p class="fs-5" data-i18n-id="s-7d6d">
-            CSA 填补了这一空白：项目成员资助 Editoria11y 库、CMS 插件及 CSA 套件的开发——CSA 套件是一套快速成长的开源质量保证工具集，以远低于商业产品的价格提供同等功能。
-
-            Drupal 版 CSA 套件目前在测试阶段免费提供，WordPress 版将于 2026 年第三季度推出。
+            CSA 填补了这一空白：项目成员资助 Editoria11y 库、CMS 插件及 CSA 套件的开发——CSA 套件是一套快速成长的开源质量保证工具集，以远低于闭源产品的价格提供同等功能。
           </p>
           <figure class="figure my-4 shadow border rounded p-0 m-2 col-sm-12 col-xl-11">
             <img alt="站点爬取进行中" src="../../assets/images/3x-crawl.png" height="786" width="1986" class="img-fluid rounded-top figure-img" data-i18n-id="s-34fd" />
@@ -244,6 +242,53 @@
           <h3 class="pt-4" data-section="active-projects" data-i18n-id="s-52da">进行中</h3>
           <div class="accord">
             <details>
+              <summary data-i18n-id="s-4291">
+                2027 年第二季度：为 WordPress 开发发布前的内容管控工具
+              </summary>
+              <div>
+                <p class="fs-6" data-i18n-id="s-529a">本项目已获得一批有意共同设计该功能的高校慷慨资助，资金已全部到位。</p>
+                  <ul class="fs-6">
+                    <li data-i18n-id="s-f7b1">开发基于角色的配置，用于指定哪些用户可以保存存在已知问题的页面。</li>
+                    <li data-i18n-id="s-2ce6">开发编辑器内的向导，供作者在发布内容前逐步复查尚未处理的警告。</li>
+                  </ul>
+              </div>
+            </details>
+            <details>
+              <summary data-i18n-id="s-b302">
+                2027 年初：面向 Drupal 与 WordPress 的失效链接检查
+              </summary>
+              <div>
+                <p class="fs-6" data-i18n-id="s-2fdf">
+                  状态：正在寻找合作伙伴与协作者。本项目已获得学术基金的部分资助，但尚未启动开发。
+                </p>
+                <ul class="fs-6">
+                      <li data-i18n-id="s-da03">建立 DB 数据表，存储检测到的 URL 并与页面建立映射。</li>
+                      <li data-i18n-id="s-2ae1">建立 cron 任务，使用 CMS 的校验工具验证本地路径，并通过 HTTP get 请求验证外部地址。</li>
+                      <li data-i18n-id="s-c519">开发报告及报告导出功能。</li>
+                      <li data-i18n-id="s-a504">开发页面内高亮功能。</li>
+                    </ul>
+              </div>
+            </details>
+            <details>
+              <summary data-i18n-id="s-e530">
+                2027 年初：面向 Drupal 与 WordPress 的 PDF 检查
+              </summary>
+              <div>
+                <p class="fs-6" data-i18n-id="s-e767">状态：正在寻找合作伙伴与协作者。本项目已获得学术基金的部分资助，但尚未启动开发。</p>
+                <ul class="fs-6">
+                  <li data-i18n-id="s-9607">建立 DB 数据表，存储检测到的 PDF 并与页面建立映射。</li>
+                  <li data-i18n-id="s-ca6c">使用 PHP 工具抓取标记代码，检查基本标签。</li>
+                  <li data-i18n-id="s-24c9">开发带管控功能的报告。例如：“如果页面上提供了替代格式的 URL，则该 PDF 可以接受。”</li>
+                  <li data-i18n-id="s-9a3c">根据 PDF 是已知存在问题还是可能合规，调整页面内的高亮显示。</li>
+                </ul>
+              </div>
+            </details>
+          </div>
+        </section>
+        <section id="finished">
+          <h3 data-section="finished" class="pt-5" data-i18n-id="s-4646">近期完成</h3>
+          <div class="accord">
+            <details>
               <summary data-i18n-id="s-8ea4">
                 2026 年第二季度：启动 Editoria11y CSA 社区
               </summary>
@@ -266,7 +311,7 @@
               <div>
                 <ol class="fs-6">
                   <li data-i18n-id="s-4265">Drupal 版已完成。</li>
-                  <li data-i18n-id="s-4ab7">待办：将构建器移植到 WordPress。</li>
+                  <li data-i18n-id="s-4ab7">将构建器移植到 WordPress。</li>
                 </ol>
               </div>
             </details>
@@ -286,11 +331,6 @@
                 </ol>
               </div>
             </details>
-          </div>
-        </section>
-        <section id="finished">
-          <h3 data-section="finished" class="pt-5" data-i18n-id="s-4646">近期完成</h3>
-          <div class="accord">
             <details>
               <summary data-i18n-id="s-8545">
                 2026 年第一季度：库 3.x 重写
@@ -333,11 +373,8 @@
         <section id="project-ideas">
           <h3 data-section="project-ideas" class="pt-5" data-i18n-id="s-e19c">讨论中</h3>
           <p data-i18n-id="s-511c">在 <a href="https://github.com/itmaybejj/editoria11y/discussions">Editoria11y 库论坛</a>中讨论这些想法并投票。</p>
-          <p data-i18n-id="s-99ee">各想法已根据当前社区讨论情况标注难度与优先级估计。</p>
           <ul class="mt-1 p-5 pt-0">
             <li data-i18n-id="s-47b0">多站点监控仪表板</li>
-            <li data-i18n-id="s-b625">失效链接检测</li>
-            <li data-i18n-id="s-347e">PDF 扫描</li>
             <li data-i18n-id="s-b7fa">提示气泡代码位置标签</li>
             <li data-i18n-id="s-ec9e">提示气泡页面报告导出</li>
             <li data-i18n-id="s-1a54">标记词语</li>

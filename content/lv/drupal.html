@@ -10,7 +10,7 @@
           <section id="features">
             <h2 class="pt-3" data-i18n-id="s-1dcf">Pamata funkcijas</h2>
 
-            <p class="fs-6" data-i18n-id="s-a8c0">Drupal modulis savieno pārbaudītāja bibliotēku ar redakcijas aizmuguri
+            <p class="fs-6" data-i18n-id="s-a8c0" data-og="description">Drupal modulis savieno pārbaudītāja bibliotēku ar redakcijas aizmuguri
               un pievieno virkni servera puses rīkus atskaišu, pārvaldības un konfigurācijas vajadzībām</p>
 
             <figure class="figure my-4 row">
@@ -141,12 +141,12 @@
           <h3 id="roots" data-i18n-id="s-d932">Ignorēt elementus</h3>
           <p data-i18n-id="s-9d1e">Šie divi konfigurācijas iestatījumi ir vissvarīgākie!</p>
           <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
-            <label for="edit-content-root">Check content in these containers</label>
+            <label for="edit-content-root" data-translate data-i18n-id="s-15bb">Pārbaudīt saturu šajos konteineros</label>
             <div><textarea class="form-control" id="edit-content-root" name="content_root" rows="1" cols="30"
                 disabled></textarea>
             </div>
             <div class="mt-3">
-              <label for="edit-ignore-elements">Skip over these elements</label>
+              <label for="edit-ignore-elements" data-translate data-i18n-id="s-be3e">Izlaist šos elementus</label>
               <div>
                 <textarea class="form-control" id="edit-ignore-elements" disabled name="ignore_elements" rows="1"
                   cols="30" class=""></textarea>
@@ -166,8 +166,8 @@
           <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
             <div>
               <fieldset>
-                <legend>
-                  Developer check area
+                <legend data-translate data-i18n-id="s-430d">
+                  Izstrādātāju pārbaudes apgabals
                 </legend>
                 <div class="fieldset__wrapper fieldset__wrapper--group">
 
@@ -175,20 +175,19 @@
                     <div>
                       <input aria-describedby="edit-dev-check-root--description" type="radio"
                         id="edit-dev-check-root-automatic" name="dev_check_root" value="automatic" checked="checked" />
-                      <label for="edit-dev-check-root-automatic" class="form-item__label option">All elements</label>
+                      <label for="edit-dev-check-root-automatic" class="form-item__label option" data-translate data-i18n-id="s-76df">Visi elementi</label>
                     </div>
                     <div class="d-flex">
                       <input aria-describedby="edit-dev-check-root--description" type="radio"
                         id="edit-dev-check-root-match" name="dev_check_root" value="match"
                         class="align-self-baseline mt-1 me-1" />
-                      <label for="edit-dev-check-root-match" class="form-item__label option">Only the containers listed
-                        in the Content Setting tab</label>
+                      <label for="edit-dev-check-root-match" class="form-item__label option" data-translate data-i18n-id="s-75dc">Tikai konteineri, kas uzskaitīti cilnē Satura iestatījumi</label>
                     </div>
                     <div class="">
                       <input aria-describedby="edit-dev-check-root--description" type="radio"
                         id="edit-dev-check-root-specify" name="dev_check_root" value="specify"
                         class="form-radio form-boolean form-boolean--type-radio" />
-                      <label for="edit-dev-check-root-specify" class="">The specific containers listed below</label>
+                      <label for="edit-dev-check-root-specify" class="" data-translate data-i18n-id="s-8f65">Konkrētie tālāk uzskaitītie konteineri</label>
                     </div>
                   </div>
 
@@ -196,7 +195,7 @@
               </fieldset>
 
               <div class="">
-                <label for="edit-always-ignore" class="mt-3">Ignore for both developers and content editors</label>
+                <label for="edit-always-ignore" class="mt-3" data-translate data-i18n-id="s-eec7">Ignorēt gan izstrādātājiem, gan satura redaktoriem</label>
                 <div class="form-textarea-wrapper">
                   <textarea id="edit-always-ignore" class="form-control" name="always_ignore" rows="1" cols="20"
                     placeholder=""></textarea>
@@ -221,14 +220,13 @@
             Vienkāršākais veids to izdarīt ir nodot CSS klases vai ID šīm opcijām:
           </p>
           <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
-            <label for="edit-no-load" class="form-item__label">Do not check on pages with these elements</label>
+            <label for="edit-no-load" class="form-item__label" data-translate data-i18n-id="s-f57b">Nepārbaudīt lapas ar šiem elementiem</label>
             <div class="form-textarea-wrapper">
               <textarea data-drupal-selector="edit-no-load" aria-describedby="edit-no-load--description"
                 id="edit-no-load" name="no_load" rows="1" cols="20" class="form-control"></textarea>
             </div>
 
-            <label for="edit-ignore-all-if-absent" class="form-item__label">Hide all alerts on pages where these
-              elements are not present</label>
+            <label for="edit-ignore-all-if-absent" class="form-item__label" data-translate data-i18n-id="s-07a0">Slēpt visus brīdinājumus lapās, kurās šo elementu nav</label>
             <div class="form-textarea-wrapper">
               <textarea data-drupal-selector="edit-ignore-all-if-absent"
                 aria-describedby="edit-ignore-all-if-absent--description" id="edit-ignore-all-if-absent"
@@ -296,12 +294,11 @@
           </p>
 
           <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
-            <label for="edit-element-hides-overflow" class="form-item__label">Elements with overflow hidden</label>
+            <label for="edit-element-hides-overflow" class="form-item__label" data-translate data-i18n-id="s-c6d7">Elementi ar slēptu pārplūšanu</label>
             <textarea data-drupal-selector="edit-element-hides-overflow"
               aria-describedby="edit-element-hides-overflow--description" id="edit-element-hides-overflow"
               name="element_hides_overflow" rows="1" cols="60" class="form-control"></textarea>
-            <label for="edit-hidden-handlers" class="form-item__label">Theme JS will handle revealing hidden tooltips
-              inside these containers</label>
+            <label for="edit-hidden-handlers" class="form-item__label" data-translate data-i18n-id="s-dc25">Tēmas JS parūpēsies par slēpto padomu atklāšanu šajos konteineros</label>
             <textarea data-drupal-selector="edit-hidden-handlers" aria-describedby="edit-hidden-handlers--description"
               id="edit-hidden-handlers" name="hidden_handlers" rows="1" cols="60" class="form-control"></textarea>
           </div>

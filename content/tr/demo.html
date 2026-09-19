@@ -13,7 +13,7 @@
         <p class="fs-5" data-i18n-id="s-e32c"><a href="https://youtu.be/uYvNYPg38nU?si=6YANYrJpVzNAJYDl&t=260">Denetleyicinin tarihine ve özelliklerine video girişini izleyin</a>,
           veya aşağıdaki demo içeriğini düzenlemeyi, uyarıları açıp kapatmayı
           ve başlık ana hatlarını görüntülemek için araç çubuğunu <span style="text-wrap: nowrap;">(<img src="/assets/images/3x-toolbar" class="inline-block" style="width: 5rem; height: auto;" alt="Editoria11y araç çubuğunun 4 hata gösteren ekran görüntüsü." width="97" height="50" loading="lazy" data-i18n-id="s-65d5" />)</span> kullanmayı deneyin. Bu demo hem temel testleri hem de CSA paketini içerir.</p>
-        <p class="fs-5 mb-5 pb-5" data-i18n-id="s-7580">Bu demo bir TinyMCE editörü kullanır. Editoria11y çoğu metin editörüyle uyumludur ve WordPress ile Drupal'da CKEditor ve Gutenberg için anahtar teslim uygulamalara sahiptir.</p>
+        <p class="fs-5 mb-5 pb-5" data-i18n-id="s-7580" data-og="description">Bu demo bir TinyMCE editörü kullanır. Editoria11y çoğu metin editörüyle uyumludur ve WordPress ile Drupal'da CKEditor ve Gutenberg için anahtar teslim uygulamalara sahiptir.</p>
         <div id="ed11y-demo" class="p-5" contenteditable="">
           <section id="headings">
 
@@ -122,7 +122,7 @@
               <p style="background: linear-gradient(45deg,#ccc 25%,#0000 25% 75%,#ccc 75%,#ccc),linear-gradient(45deg,#ccc 25%,#0000 25% 75%,#ccc 75%,#ccc)" data-i18n-id="s-490b">
                 Ve hesaplanamaz.</p>
             </div>
-            <div class="positive"><label>Input with low contrast
+            <div class="positive"><label data-translate data-i18n-id="s-769f">Düşük kontrastlı giriş alanı
                 <input class="form-text" type="text" style="color: #777;" /></label></div>
 
             <style>
@@ -131,9 +131,9 @@
               }
             </style>
 
-            <label for="unsupported-placeholder">Color of placeholder cannot be calculated</label>
+            <label for="unsupported-placeholder" data-translate data-i18n-id="s-34b7">Yer tutucunun rengi hesaplanamıyor</label>
             <div class="positive" style="background: transparent;"><input type="text" id="unsupported-placeholder"
-                placeholder="Rec2020 color space" /></div>
+                placeholder="Rec2020 renk uzayı"  data-translate data-i18n-id="s-8ce5" /></div>
 
 
             <p data-i18n-id="s-0774">Yeterli kontrastı olmayan SVG grafik</p>
@@ -163,10 +163,10 @@
               <iframe width="560" height="315" inert=""
                 src="https://www.youtube-nocookie.com/embed/QGsevnbItdU?si=W_b2i2o_n5v1ArvA"
                 style="width: 560px; aspect-ratio: 560 / 315; max-width: 100%; cursor: not-allowed;"
-                title="YouTube: How it's done video. Playback is disabled." sandbox="allow-scripts allow-same-origin"
+                title="YouTube: Nasıl yapıldığını anlatan video. Oynatma devre dışı bırakıldı." sandbox="allow-scripts allow-same-origin"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="origin" allowfullscreen></iframe>
-              <div><small><em>Playback disabled to prevent cookies.</em></small></div>
+                referrerpolicy="origin" allowfullscreen data-translate data-i18n-id="s-056d"></iframe>
+              <div><small><em data-translate data-i18n-id="s-0b03">Çerezleri önlemek için oynatma devre dışı bırakıldı.</em></small></div>
             </div>
 
             <p data-i18n-id="s-e14a">Ses transkript gerektiriyor:</p>
@@ -182,7 +182,7 @@
 
             <p data-i18n-id="s-fe95">Odaklanamayan iframe:</p>
             <div class="positive">
-              <iframe title="example" sandbox="" tabindex="-1" data-needs-src=""></iframe>
+              <iframe title="örnek" sandbox="" tabindex="-1" data-needs-src="" data-translate data-i18n-id="s-ec77"></iframe>
             </div>
 
             <p data-i18n-id="s-e27f">İç içe etkileşimli bileşenler</p>
@@ -190,7 +190,7 @@
               <details>
                 <summary data-i18n-id="s-5064">Akordiyon</summary>
                 <details>
-                  <summary data-i18n-id="s-2b8d">Akordiyon</summary>Surprise!
+                  <summary data-i18n-id="s-2b8d">Akordiyon</summary><span data-translate data-i18n-id="s-c8e3">Sürpriz!</span>
                 </details>
               </details>
             </div>
@@ -356,12 +356,12 @@
 
             <p data-i18n-id="s-296d">Görünmez etiketli girişler; görünür bir etiket olup olmadığını sorar.</p>
             <div class="positive">
-              <input type="text" title="Email" />
+              <input type="text" title="E-posta"  data-translate data-i18n-id="s-95d7" />
             </div>
 
             <p data-i18n-id="s-7c79">Yalnızca yer tutucu etikete sahip girişler; görünür bir etiket olup olmadığını sorar.</p>
             <div class="positive">
-              <input type="text" placeholder="Email" />
+              <input type="text" placeholder="E-posta"  data-translate data-i18n-id="s-f516" />
             </div>
 
             <div class="positive">

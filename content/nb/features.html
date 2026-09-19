@@ -16,7 +16,7 @@
             overlevert til innholdsforfattere. Nettsteder må testes med manuelle revisjonsverktøy, tastatur og
             skjermlesere før lansering, men selv det mest tilgjengelige nettstedet på dag én har en tendens til å
             forfalle etter hvert som redigeringer bringer inn nye problemer.</p>
-          <p class="fs-6" data-i18n-id="s-44f1">Det som skiller Editoria11y fra andre tilgjengelighetsverktøy er at testene kjøres direkte i
+          <p class="fs-6" data-i18n-id="s-44f1" data-og="description">Det som skiller Editoria11y fra andre tilgjengelighetsverktøy er at testene kjøres direkte i
             nettleseren mens forfattere redigerer og forhåndsviser arbeidet sitt. <strong>Forfattere reagerer lettere på
               umiddelbar, innebygd tilbakemelding</strong>, legger merke til varsler og gjør korreksjoner, enn om de
             måtte huske å besøke et dashbord eller kjøre en manuell sjekk.</p>
@@ -196,7 +196,7 @@
           <p class="fs-5" data-i18n-id="s-7d6d">
             CSA fyller dette gapet: prosjektmedlemmer finansierer utviklingen av Editoria11y-biblioteket, dets
             CMS-tillegg og CSA-pakken: et raskt voksende sett med åpen kildekode-kvalitetssikringsverktøy som gir
-            lignende funksjonalitet som kommersielle produkter, til en mye lavere pris.
+            lignende funksjonalitet som produkter med lukket kildekode, til en mye lavere pris.
 
             CSA-pakken for Drupal er for øyeblikket gratis i beta, og vil komme for WordPress i Q3 2026.
           </p>
@@ -265,6 +265,53 @@
           <h3 class="pt-4" data-section="active-projects" data-i18n-id="s-52da">Aktive</h3>
           <div class="accord">
             <details>
+              <summary data-i18n-id="s-4291">
+                Q2 2027: Lage styringsverktøy for WordPress som brukes før publisering
+              </summary>
+              <div>
+                <p class="fs-6" data-i18n-id="s-529a">Dette prosjektet er fullfinansiert gjennom en raus bevilgning fra en gruppe universiteter som ønsker å være med på å utforme funksjonaliteten.</p>
+                  <ul class="fs-6">
+                    <li data-i18n-id="s-f7b1">Lage rollebasert konfigurasjon for hvilke brukere som har lov til å lagre sider med kjente problemer.</li>
+                    <li data-i18n-id="s-2ce6">Lage en veiviser i redigeringsverktøyet som forfattere går gjennom for å se over varsler de ikke har tatt tak i, før de publiserer innhold.</li>
+                  </ul>
+              </div>
+            </details>
+            <details>
+              <summary data-i18n-id="s-b302">
+                Tidlig i 2027: Sjekk av brutte lenker for Drupal og WordPress
+              </summary>
+              <div>
+                <p class="fs-6" data-i18n-id="s-2fdf">
+                  Status: Ser etter partnere og bidragsytere. Dette prosjektet er delvis finansiert gjennom et akademisk stipend, men arbeidet har ennå ikke startet.
+                </p>
+                <ul class="fs-6">
+                      <li data-i18n-id="s-da03">Lage DB-tabeller for å lagre oppdagede URL-er, koblet til sider.</li>
+                      <li data-i18n-id="s-2ae1">Lage cron-jobber som validerer lokale stier med CMS-ets valideringsverktøy og eksterne adresser med HTTP get-forespørsler.</li>
+                      <li data-i18n-id="s-c519">Lage rapporter og rapporteksport.</li>
+                      <li data-i18n-id="s-a504">Lage utheving direkte på siden.</li>
+                    </ul>
+              </div>
+            </details>
+            <details>
+              <summary data-i18n-id="s-e530">
+                Tidlig i 2027: PDF-sjekk for Drupal og WordPress
+              </summary>
+              <div>
+                <p class="fs-6" data-i18n-id="s-e767">Status: ser etter partnere og bidragsytere. Dette prosjektet er delvis finansiert gjennom et akademisk stipend, men arbeidet har ennå ikke startet.</p>
+                <ul class="fs-6">
+                  <li data-i18n-id="s-9607">Lage DB-tabeller for å lagre oppdagede PDF-er, koblet til sider.</li>
+                  <li data-i18n-id="s-ca6c">Bruke PHP-verktøy til å hente ut markup og sjekke grunnleggende tagger.</li>
+                  <li data-i18n-id="s-24c9">Lage rapporter med styringsverktøy. For eksempel: «Denne PDF-en er OK hvis en URL til et alternativt format finnes på siden.»</li>
+                  <li data-i18n-id="s-9a3c">Endre uthevingen på siden ut fra om PDF-en er kjent som dårlig eller muligens OK.</li>
+                </ul>
+              </div>
+            </details>
+          </div>
+        </section>
+        <section id="finished">
+          <h3 data-section="finished" class="pt-5" data-i18n-id="s-4646">Nylig fullført</h3>
+          <div class="accord">
+            <details>
               <summary data-i18n-id="s-8ea4">
                 Q2 2026: Lansere Editoria11y CSA-fellesskapet
               </summary>
@@ -287,7 +334,7 @@
               <div>
                 <ol class="fs-6">
                   <li data-i18n-id="s-4265">Ferdig for Drupal.</li>
-                  <li data-i18n-id="s-4ab7">Gjenstående: portere byggeren til WordPress.</li>
+                  <li data-i18n-id="s-4ab7">Portere byggeren til WordPress.</li>
                 </ol>
               </div>
             </details>
@@ -309,11 +356,6 @@
                 </ol>
               </div>
             </details>
-          </div>
-        </section>
-        <section id="finished">
-          <h3 data-section="finished" class="pt-5" data-i18n-id="s-4646">Nylig fullført</h3>
-          <div class="accord">
             <details>
               <summary data-i18n-id="s-8545">
                 Q1 2026: Omskriving av bibliotek 3.x
@@ -366,11 +408,8 @@
         <section id="project-ideas">
           <h3 data-section="project-ideas" class="pt-5" data-i18n-id="s-e19c">Under diskusjon</h3>
           <p data-i18n-id="s-511c">Diskuter og stem på disse ideene i <a               href="https://github.com/itmaybejj/editoria11y/discussions">Editoria11y-bibliotekets forum</a>.</p>
-          <p data-i18n-id="s-99ee">Ideer er merket med estimater for vanskelighetsgrad/prioritet basert på diskusjoner i fellesskapet.</p>
           <ul class="mt-1 p-5 pt-0">
             <li data-i18n-id="s-47b0">Dashbord for overvåking av flere nettsteder</li>
-            <li data-i18n-id="s-b625">Oppdagelse av ødelagte lenker</li>
-            <li data-i18n-id="s-347e">PDF-skanning</li>
             <li data-i18n-id="s-b7fa">Fane for kodeposisjon i verktøytipset</li>
             <li data-i18n-id="s-ec9e">Eksport av siderapport fra verktøytipset</li>
             <li data-i18n-id="s-1a54">Flaggede ord</li>

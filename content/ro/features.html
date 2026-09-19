@@ -15,7 +15,7 @@
           <p class="fs-6" data-i18n-id="s-0887">Testele de conținut vizează probleme care apar <strong>după</strong> ce site-urile sunt predate
             autorilor de conținut. Site-urile trebuie testate cu instrumente de audit manual, tastaturi și cititoare de ecran înainte
             de lansare, dar chiar și cel mai accesibil site de la lansare tinde să se degradeze pe măsură ce editările aduc probleme noi.</p>
-          <p class="fs-6" data-i18n-id="s-44f1">Ceea ce îl diferențiază pe Editoria11y față de alte instrumente de accesibilitate este că testele rulează live, în
+          <p class="fs-6" data-i18n-id="s-44f1" data-og="description">Ceea ce îl diferențiază pe Editoria11y față de alte instrumente de accesibilitate este că testele rulează live, în
             browser, pe măsură ce autorii editează și previzualizează munca. <strong>Autorii au mai multe șanse să reacționeze la feedback imediat,
               inline</strong>, să observe alertele și să facă corecțiile, decât să-și amintească să viziteze un
             panou de control sau să ruleze o verificare manuală.</p>
@@ -191,11 +191,7 @@
             Editoria11y nu este, totuși, gratuit de dezvoltat sau susținut.
           </p>
           <p class="fs-5" data-i18n-id="s-7d6d">
-            CSA completează golul: membrii proiectului finanțează dezvoltarea bibliotecii Editoria11y, a pluginurilor sale CMS și
-            a suitei CSA: un set de instrumente de asigurare a calității open-source, în creștere rapidă, care oferă
-            funcționalitate similară cu produsele comerciale, la un preț mult mai mic.
-
-            Suita CSA pentru Drupal este momentan gratuită în versiune beta și va fi disponibilă pentru WordPress în T3 2026.
+            CSA acoperă acest gol: membrii proiectului finanțează dezvoltarea bibliotecii Editoria11y, a pluginurilor sale pentru CMS și a suitei CSA: un set de instrumente open source de asigurare a calității, în creștere rapidă, care oferă funcționalități similare cu cele ale produselor cu sursă închisă, la un preț mult mai mic.
           </p>
           <figure class="figure my-4 shadow border rounded p-0 m-2 col-sm-12 col-xl-11">
             <img alt="Crawler de site în funcțiune" src="../../assets/images/3x-crawl.png" height="786" width="1986" class="img-fluid rounded-top figure-img" data-i18n-id="s-34fd" />
@@ -260,6 +256,53 @@
           <h3 class="pt-4" data-section="active-projects" data-i18n-id="s-52da">Activ</h3>
           <div class="accord">
             <details>
+              <summary data-i18n-id="s-4291">
+                T2 2027: Crearea de instrumente de guvernanță înainte de publicare pentru WordPress
+              </summary>
+              <div>
+                <p class="fs-6" data-i18n-id="s-529a">Acest proiect a fost finanțat integral printr-un grant generos oferit de un grup de universități interesate să participe la proiectarea acestei funcționalități.</p>
+                  <ul class="fs-6">
+                    <li data-i18n-id="s-f7b1">Crearea unei configurări bazate pe roluri, care stabilește ce utilizatori au voie să salveze pagini cu probleme cunoscute.</li>
+                    <li data-i18n-id="s-2ce6">Crearea unui asistent în editor, pe care autorii îl parcurg pas cu pas pentru a analiza alertele nerezolvate înainte de a publica conținutul.</li>
+                  </ul>
+              </div>
+            </details>
+            <details>
+              <summary data-i18n-id="s-b302">
+                Începutul anului 2027: Verificarea linkurilor nefuncționale pentru Drupal și WordPress
+              </summary>
+              <div>
+                <p class="fs-6" data-i18n-id="s-2fdf">
+                  Stare: căutăm parteneri și colaboratori. Acest proiect a fost finanțat parțial printr-un grant academic, dar lucrările nu au început încă.
+                </p>
+                <ul class="fs-6">
+                      <li data-i18n-id="s-da03">Crearea de tabele în DB pentru stocarea URL-urilor detectate, asociate paginilor.</li>
+                      <li data-i18n-id="s-2ae1">Crearea de sarcini cron care validează căile locale folosind instrumentele de validare ale CMS-ului și sarcinile la distanță folosind cereri HTTP get.</li>
+                      <li data-i18n-id="s-c519">Crearea de rapoarte și de exporturi ale rapoartelor.</li>
+                      <li data-i18n-id="s-a504">Crearea evidențierii în pagină.</li>
+                    </ul>
+              </div>
+            </details>
+            <details>
+              <summary data-i18n-id="s-e530">
+                Începutul anului 2027: Verificarea fișierelor PDF pentru Drupal și WordPress
+              </summary>
+              <div>
+                <p class="fs-6" data-i18n-id="s-e767">Stare: căutăm parteneri și colaboratori. Acest proiect a fost finanțat parțial printr-un grant academic, dar lucrările nu au început încă.</p>
+                <ul class="fs-6">
+                  <li data-i18n-id="s-9607">Crearea de tabele în DB pentru stocarea fișierelor PDF detectate, asociate paginilor.</li>
+                  <li data-i18n-id="s-ca6c">Folosirea instrumentelor PHP pentru extragerea marcajului și verificarea etichetelor de bază.</li>
+                  <li data-i18n-id="s-24c9">Crearea de rapoarte cu instrumente de guvernanță. De exemplu: „Acest PDF este în regulă dacă URL-ul formatului alternativ este prezent în pagină.”</li>
+                  <li data-i18n-id="s-9a3c">Modificarea evidențierii în pagină în funcție de faptul că PDF-ul este cunoscut ca problematic sau posibil în regulă.</li>
+                </ul>
+              </div>
+            </details>
+          </div>
+        </section>
+        <section id="finished">
+          <h3 data-section="finished" class="pt-5" data-i18n-id="s-4646">Recent finalizate</h3>
+          <div class="accord">
+            <details>
               <summary data-i18n-id="s-8ea4">
                 T2 2026: Lansarea comunității Editoria11y CSA
               </summary>
@@ -282,7 +325,7 @@
               <div>
                 <ol class="fs-6">
                   <li data-i18n-id="s-4265">Finalizat pentru Drupal.</li>
-                  <li data-i18n-id="s-4ab7">De făcut: portarea constructorului la WordPress.</li>
+                  <li data-i18n-id="s-4ab7">Portarea constructorului la WordPress.</li>
                 </ol>
               </div>
             </details>
@@ -302,11 +345,6 @@
                 </ol>
               </div>
             </details>
-          </div>
-        </section>
-        <section id="finished">
-          <h3 data-section="finished" class="pt-5" data-i18n-id="s-4646">Recent finalizate</h3>
-          <div class="accord">
             <details>
               <summary data-i18n-id="s-8545">
                 T1 2026: Rescrierea bibliotecii 3.x
@@ -355,11 +393,8 @@
         <section id="project-ideas">
           <h3 data-section="project-ideas" class="pt-5" data-i18n-id="s-e19c">În discuție</h3>
           <p data-i18n-id="s-511c">Discutați și votați aceste idei pe <a               href="https://github.com/itmaybejj/editoria11y/discussions">forumurile bibliotecii Editoria11y</a>.</p>
-          <p data-i18n-id="s-99ee">Ideile sunt marcate cu estimări de dificultate/prioritate bazate pe discuțiile curente ale comunității.</p>
           <ul class="mt-1 p-5 pt-0">
             <li data-i18n-id="s-47b0">Panou de monitorizare multi-site</li>
-            <li data-i18n-id="s-b625">Detectarea linkurilor rupte</li>
-            <li data-i18n-id="s-347e">Scanare PDF</li>
             <li data-i18n-id="s-b7fa">Tab de locație a codului în indiciu</li>
             <li data-i18n-id="s-ec9e">Export raport pagină din indiciu</li>
             <li data-i18n-id="s-1a54">Cuvinte marcate</li>

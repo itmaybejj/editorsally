@@ -10,7 +10,7 @@
           <section id="features">
             <h2 class="pt-3" data-i18n-id="s-1dcf">Kernefunktioner</h2>
 
-            <p class="fs-6" data-i18n-id="s-a8c0">Drupal-modulet forbinder tjekkerbiblioteket med den redaktionelle backend og tilf&oslash;jer
+            <p class="fs-6" data-i18n-id="s-a8c0" data-og="description">Drupal-modulet forbinder tjekkerbiblioteket med den redaktionelle backend og tilf&oslash;jer
               mange serverside-v&aelig;rkt&oslash;jer til rapportering, governance og konfiguration</p>
 
             <figure class="figure my-4 row">
@@ -153,12 +153,12 @@
           <h3 id="roots" data-i18n-id="s-d932">Ignor&eacute;r elementer</h3>
           <p data-i18n-id="s-9d1e">Disse to konfigurationsindstillinger er de vigtigste!</p>
           <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
-            <label for="edit-content-root">Tjek indhold i disse containere</label>
+            <label for="edit-content-root" data-translate data-i18n-id="s-15bb">Tjek indhold i disse containere</label>
             <div><textarea class="form-control" id="edit-content-root" name="content_root" rows="1" cols="30"
                 disabled></textarea>
             </div>
             <div class="mt-3">
-              <label for="edit-ignore-elements">Spring disse elementer over</label>
+              <label for="edit-ignore-elements" data-translate data-i18n-id="s-be3e">Spring disse elementer over</label>
               <div>
                 <textarea class="form-control" id="edit-ignore-elements" disabled name="ignore_elements" rows="1"
                   cols="30" class=""></textarea>
@@ -180,7 +180,7 @@
           <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
             <div>
               <fieldset>
-                <legend>
+                <legend data-translate data-i18n-id="s-430d">
                   Udvikler-tjek-omr&aring;de
                 </legend>
                 <div class="fieldset__wrapper fieldset__wrapper--group">
@@ -189,20 +189,20 @@
                     <div>
                       <input aria-describedby="edit-dev-check-root--description" type="radio"
                         id="edit-dev-check-root-automatic" name="dev_check_root" value="automatic" checked="checked" />
-                      <label for="edit-dev-check-root-automatic" class="form-item__label option">Alle elementer</label>
+                      <label for="edit-dev-check-root-automatic" class="form-item__label option" data-translate data-i18n-id="s-76df">Alle elementer</label>
                     </div>
                     <div class="d-flex">
                       <input aria-describedby="edit-dev-check-root--description" type="radio"
                         id="edit-dev-check-root-match" name="dev_check_root" value="match"
                         class="align-self-baseline mt-1 me-1" />
-                      <label for="edit-dev-check-root-match" class="form-item__label option">Kun de containere, der er
+                      <label for="edit-dev-check-root-match" class="form-item__label option" data-translate data-i18n-id="s-75dc">Kun de containere, der er
                         angivet p&aring; fanen Indholdsindstillinger</label>
                     </div>
                     <div class="">
                       <input aria-describedby="edit-dev-check-root--description" type="radio"
                         id="edit-dev-check-root-specify" name="dev_check_root" value="specify"
                         class="form-radio form-boolean form-boolean--type-radio" />
-                      <label for="edit-dev-check-root-specify" class="">De specifikke containere angivet
+                      <label for="edit-dev-check-root-specify" class="" data-translate data-i18n-id="s-8f65">De specifikke containere angivet
                         nedenfor</label>
                     </div>
                   </div>
@@ -211,7 +211,7 @@
               </fieldset>
 
               <div class="">
-                <label for="edit-always-ignore" class="mt-3">Ignor&eacute;r for b&aring;de udviklere og
+                <label for="edit-always-ignore" class="mt-3" data-translate data-i18n-id="s-eec7">Ignor&eacute;r for b&aring;de udviklere og
                   indholdsredakt&oslash;rer</label>
                 <div class="form-textarea-wrapper">
                   <textarea id="edit-always-ignore" class="form-control" name="always_ignore" rows="1" cols="20"
@@ -244,13 +244,13 @@
             muligheder:
           </p>
           <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
-            <label for="edit-no-load" class="form-item__label">Tjek ikke p&aring; sider med disse elementer</label>
+            <label for="edit-no-load" class="form-item__label" data-translate data-i18n-id="s-f57b">Tjek ikke p&aring; sider med disse elementer</label>
             <div class="form-textarea-wrapper">
               <textarea data-drupal-selector="edit-no-load" aria-describedby="edit-no-load--description"
                 id="edit-no-load" name="no_load" rows="1" cols="20" class="form-control"></textarea>
             </div>
 
-            <label for="edit-ignore-all-if-absent" class="form-item__label">Skjul alle advarsler p&aring; sider hvor
+            <label for="edit-ignore-all-if-absent" class="form-item__label" data-translate data-i18n-id="s-07a0">Skjul alle advarsler p&aring; sider hvor
               disse elementer ikke er til stede</label>
             <div class="form-textarea-wrapper">
               <textarea data-drupal-selector="edit-ignore-all-if-absent"
@@ -345,11 +345,11 @@
             placeres:</p>
 
           <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
-            <label for="edit-element-hides-overflow" class="form-item__label">Elementer med skjult overflow</label>
+            <label for="edit-element-hides-overflow" class="form-item__label" data-translate data-i18n-id="s-c6d7">Elementer med skjult overflow</label>
             <textarea data-drupal-selector="edit-element-hides-overflow"
               aria-describedby="edit-element-hides-overflow--description" id="edit-element-hides-overflow"
               name="element_hides_overflow" rows="1" cols="60" class="form-control"></textarea>
-            <label for="edit-hidden-handlers" class="form-item__label">Tema-JavaScript h&aring;ndterer visning af
+            <label for="edit-hidden-handlers" class="form-item__label" data-translate data-i18n-id="s-dc25">Tema-JavaScript h&aring;ndterer visning af
               skjulte tooltips i disse containere</label>
             <textarea data-drupal-selector="edit-hidden-handlers" aria-describedby="edit-hidden-handlers--description"
               id="edit-hidden-handlers" name="hidden_handlers" rows="1" cols="60" class="form-control"></textarea>

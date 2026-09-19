@@ -43,7 +43,7 @@
   <link rel="alternate" hreflang="x-default" href="https://editoria11y.com/features/" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Funktsioonid — Editoria11y" />
-  <meta property="og:description" content="Editoria11y is a community-supported, open-source accessibility checker with deep integrations for Drupal, WordPress, and more." />
+  <meta property="og:description" content="See, mis eristab Editoria11y-d teiste juurdepääsetavusvahendite seas, on see, et selle testid töötavad reaalajas, brauseris, kui autorid muudavad ja eelvaatavad oma tööd. Autorid reageerivad tõenäolisemalt vahetule, reasisesele tagasisidele, märkavad hoiatusi ja teevad parandusi, kui nad peavad meeles käima armatuurlaual või käsitsi kontrollimist tegema." />
   <meta property="og:image" content="https://editoria11y.com/assets/images/og-image.png" />
   <meta property="og:url" content="https://editoria11y.com/et/funktsioonid/" />
   <link href="/assets/bootstrap/css/bootstrap.min.css?v=7575987f" rel="stylesheet" />
@@ -274,13 +274,7 @@
           <p class="fs-5">
             Editoria11y ei ole aga tasuta arendada ega toetada.
           </p>
-          <p class="fs-5">
-            CSA täidab lünga: projekti liikmed rahastavad Editoria11y teegi, selle CMS-i pistikprogrammide arendamist ning
-            CSA komplekti: kiiresti kasvavat avatud lähtekoodiga kvaliteeditagamisvahendite komplekti, mis pakub sarnaseid
-            funktsioone ärilistele toodetele, palju madalama hinnaga.
-
-            CSA komplekt Drupalile on praegu tasuta beetaversioonis ja saabub WordPressi Q3 2026.
-          </p>
+          <p class="fs-5">CSA täidab selle lünga: projekti liikmed rahastavad Editoria11y teegi, selle CMS-i pistikprogrammide ja CSA komplekti arendamist – kiiresti kasvava avatud lähtekoodiga kvaliteeditagamise tööriistade kogumi, mis pakub suletud lähtekoodiga toodetega sarnast funktsionaalsust palju madalama hinnaga.</p>
           <figure class="figure my-4 shadow border rounded p-0 m-2 col-sm-12 col-xl-11">
             <img alt="Saidi roomamine on pooleli" src="../../assets/images/3x-crawl.png" height="786" width="1986" class="img-fluid rounded-top figure-img" />
             <figcaption class="figure-caption p-2 pt-2">CSA roomaja värskendab armatuurlauda.</figcaption>
@@ -342,6 +336,45 @@
           <h3 class="pt-4" data-section="active-projects">Aktiivne</h3>
           <div class="accord">
             <details>
+              <summary>K2 2027: avaldamiseelsete haldusvahendite loomine WordPressi jaoks</summary>
+              <div>
+                <p class="fs-6">Seda projekti on täies mahus rahastatud helde toetusega ülikoolide rühmalt, kes soovib funktsionaalsuse kaaskavandamises osaleda.</p>
+                  <ul class="fs-6">
+                    <li>Rollipõhise seadistuse loomine selle kohta, millised kasutajad tohivad salvestada teadaolevate probleemidega lehti.</li>
+                    <li>Redaktorisisese viisardi loomine, mille autorid enne sisu avaldamist samm-sammult läbivad, et üle vaadata märguanded, millega nad pole tegelenud.</li>
+                  </ul>
+              </div>
+            </details>
+            <details>
+              <summary>2027. aasta algus: katkiste linkide kontroll Drupali ja WordPressi jaoks</summary>
+              <div>
+                <p class="fs-6">Olek: otsime partnereid ja kaastöötajaid. Projekti on osaliselt rahastatud akadeemilisest toetusest, kuid töö ei ole veel alanud.</p>
+                <ul class="fs-6">
+                      <li>DB-tabelite loomine tuvastatud URL-ide salvestamiseks koos viidetega lehtedele.</li>
+                      <li>Cron-tööde loomine, mis valideerivad kohalikke teid CMS-i valideerimisvahenditega ja kaugaadresse HTTP get-päringutega.</li>
+                      <li>Aruannete ja nende eksportimise võimaluse loomine.</li>
+                      <li>Lehesisese esiletõstmise loomine.</li>
+                    </ul>
+              </div>
+            </details>
+            <details>
+              <summary>2027. aasta algus: PDF-ide kontroll Drupali ja WordPressi jaoks</summary>
+              <div>
+                <p class="fs-6">Olek: otsime partnereid ja kaastöötajaid. Projekti on osaliselt rahastatud akadeemilisest toetusest, kuid töö ei ole veel alanud.</p>
+                <ul class="fs-6">
+                  <li>DB-tabelite loomine tuvastatud PDF-ide salvestamiseks koos viidetega lehtedele.</li>
+                  <li>PHP-tööriistade kasutamine märgistuse läbivaatamiseks ja põhisiltide kontrollimiseks.</li>
+                  <li>Haldusvahenditega aruannete loomine. Nt „See PDF on korras, kui lehel on olemas selle alternatiivse vormingu URL“.</li>
+                  <li>Lehesisese esiletõstmise muutmine vastavalt sellele, kas PDF on teadaolevalt vigane või võib-olla korras.</li>
+                </ul>
+              </div>
+            </details>
+          </div>
+        </section>
+        <section id="finished">
+          <h3 data-section="finished" class="pt-5">Hiljuti lõpetatud</h3>
+          <div class="accord">
+            <details>
               <summary>
                 K2 2026: Käivita Editoria11y CSA kogukond
               </summary>
@@ -364,7 +397,7 @@
               <div>
                 <ol class="fs-6">
                   <li>Drupalile lõpetatud.</li>
-                  <li>Teha: vii koostaja WordPressi üle.</li>
+                  <li>Koostaja portimine WordPressi.</li>
                 </ol>
               </div>
             </details>
@@ -384,11 +417,6 @@
                 </ol>
               </div>
             </details>
-          </div>
-        </section>
-        <section id="finished">
-          <h3 data-section="finished" class="pt-5">Hiljuti lõpetatud</h3>
-          <div class="accord">
             <details>
               <summary>
                 K1 2026: Teegi 3.x ümberkiri
@@ -435,11 +463,8 @@
         <section id="project-ideas">
           <h3 data-section="project-ideas" class="pt-5">Arutelu all</h3>
           <p>Arutage ja hääletage neid ideid <a               href="https://github.com/itmaybejj/editoria11y/discussions">Editoria11y teegi foorumites</a>.</p>
-          <p>Ideed on märgistatud raskuse/prioriteedi hinnangutega vastavalt praegusele kogukonna vestlusele.</p>
           <ul class="mt-1 p-5 pt-0">
             <li>Mitme saidi jälgimise armatuurlaud</li>
-            <li>Katkiste linkide tuvastamine</li>
-            <li>PDF-i skannimine</li>
             <li>Tööriistavihje koodi asukoha vahekaart</li>
             <li>Tööriistavihje lehe aruande eksport</li>
             <li>Märgistatud sõnad</li>
@@ -505,8 +530,8 @@
     </div>
   </footer>
   <script async src="/assets/bootstrap/js/bootstrap.bundle.min.js?v=69f68885" class="astro-vvvwv3sm"></script>
-  <script async src="/assets/lang/i18n.js?v=9063c00b"></script>
-  <script async src="/assets/theme.js?v=39536f05"></script>
+  <script async src="/assets/lang/i18n.js?v=650b32df"></script>
+  <script async src="/assets/theme.js?v=0ee05eec"></script>
   <script async src="/assets/prism/prism.js?v=3bbae506"></script>
 </body>
 

@@ -18,7 +18,7 @@
             revisionsv&aelig;rkt&oslash;jer, tastaturer og sk&aelig;rml&aelig;sere f&oslash;r lancering, men selv det
             mest tilg&aelig;ngelige site p&aring; dag &eacute;t har en tendens til at glide, n&aring;r redigeringer
             medf&oslash;rer nye problemer.</p>
-          <p class="fs-6" data-i18n-id="s-44f1">Det der adskiller Editoria11y fra andre tilg&aelig;ngelighedsv&aelig;rkt&oslash;jer er, at
+          <p class="fs-6" data-i18n-id="s-44f1" data-og="description">Det der adskiller Editoria11y fra andre tilg&aelig;ngelighedsv&aelig;rkt&oslash;jer er, at
             testene k&oslash;rer live i browseren, mens forfattere redigerer og forh&aring;ndsviser deres arbejde.
             <strong>Forfattere er mere tilb&oslash;jelige til at reagere p&aring; umiddelbar, inline feedback</strong>,
             bem&aelig;rke advarsler og foretage rettelser, end de er til at huske at bes&oslash;ge et dashboard eller
@@ -203,10 +203,8 @@
           <p class="fs-5" data-i18n-id="s-7d6d">
             CSA'en udfylder hullet: projektmedlemmer finansierer udviklingen af Editoria11y-biblioteket, dets
             CMS-plugins og CSA-pakken: et hurtigt voksende s&aelig;t af open
-            source-kvalitetssikringsv&aelig;rkt&oslash;jer, der giver lignende funktionalitet som kommercielle produkter
-            til en langt lavere pris.
-
-            CSA-pakken til Drupal er i &oslash;jeblikket gratis i beta og vil komme til WordPress i Q3 2026.
+            source-kvalitetssikringsv&aelig;rkt&oslash;jer, der giver lignende funktionalitet som produkter med lukket
+            kildekode, men til en langt lavere pris.
           </p>
           <figure class="figure my-4 shadow border rounded p-0 m-2 col-sm-12 col-xl-11">
             <img alt="Site-crawl i gang" src="../../assets/images/3x-crawl.png" height="786" width="1986" class="img-fluid rounded-top figure-img" data-i18n-id="s-34fd" />
@@ -273,6 +271,53 @@
           <h3 class="pt-4" data-section="active-projects" data-i18n-id="s-52da">Aktive</h3>
           <div class="accord">
             <details>
+              <summary data-i18n-id="s-4291">
+                Q2 2027: Opret styringsværktøjer til WordPress til kontrol før udgivelse
+              </summary>
+              <div>
+                <p class="fs-6" data-i18n-id="s-529a">Dette projekt er fuldt finansieret af en generøs bevilling fra en gruppe universiteter, der er interesserede i at være med til at designe funktionaliteten.</p>
+                  <ul class="fs-6">
+                    <li data-i18n-id="s-f7b1">Opret rollebaseret konfiguration af, hvilke brugere der må gemme sider med kendte problemer.</li>
+                    <li data-i18n-id="s-2ce6">Opret en guide i editoren, som forfattere gennemgår for at se de advarsler, de ikke har taget hånd om, inden de udgiver indhold.</li>
+                  </ul>
+              </div>
+            </details>
+            <details>
+              <summary data-i18n-id="s-b302">
+                Begyndelsen af 2027: Kontrol af døde links til Drupal & WordPress
+              </summary>
+              <div>
+                <p class="fs-6" data-i18n-id="s-2fdf">
+                  Status: Vi søger partnere og samarbejdspartnere. Dette projekt er delvist finansieret af en akademisk bevilling, men arbejdet er endnu ikke påbegyndt.
+                </p>
+                <ul class="fs-6">
+                      <li data-i18n-id="s-da03">Opret DB-tabeller til at gemme fundne URL'er, knyttet til sider.</li>
+                      <li data-i18n-id="s-2ae1">Opret cron-job, der validerer lokale stier med CMS'ets valideringsværktøjer og eksterne adresser med HTTP GET-forespørgsler.</li>
+                      <li data-i18n-id="s-c519">Opret rapporter og rapporteksport.</li>
+                      <li data-i18n-id="s-a504">Opret fremhævning på selve siden.</li>
+                    </ul>
+              </div>
+            </details>
+            <details>
+              <summary data-i18n-id="s-e530">
+                Begyndelsen af 2027: PDF-kontrol til Drupal & WordPress
+              </summary>
+              <div>
+                <p class="fs-6" data-i18n-id="s-e767">Status: Vi søger partnere og samarbejdspartnere. Dette projekt er delvist finansieret af en akademisk bevilling, men arbejdet er endnu ikke påbegyndt.</p>
+                <ul class="fs-6">
+                  <li data-i18n-id="s-9607">Opret DB-tabeller til at gemme fundne PDF'er, knyttet til sider.</li>
+                  <li data-i18n-id="s-ca6c">Brug PHP-værktøjer til at gennemgå markup og kontrollere for grundlæggende tags.</li>
+                  <li data-i18n-id="s-24c9">Opret rapporter med styringsværktøjer. F.eks.: „Denne PDF er i orden, hvis denne URL til et alternativt format findes på siden.“</li>
+                  <li data-i18n-id="s-9a3c">Tilpas fremhævningen på siden efter, om PDF'en er kendt som problematisk eller muligvis i orden.</li>
+                </ul>
+              </div>
+            </details>
+          </div>
+        </section>
+        <section id="finished">
+          <h3 data-section="finished" class="pt-5" data-i18n-id="s-4646">Nyligt afsluttet</h3>
+          <div class="accord">
+            <details>
               <summary data-i18n-id="s-8ea4">
                 Q2 2026: Lancering af Editoria11y CSA-f&aelig;llesskabet
               </summary>
@@ -295,7 +340,7 @@
               <div>
                 <ol class="fs-6">
                   <li data-i18n-id="s-4265">F&aelig;rdigt til Drupal.</li>
-                  <li data-i18n-id="s-4ab7">Mangler: port&eacute;r byggeværktøj til WordPress.</li>
+                  <li data-i18n-id="s-4ab7">Port&eacute;r byggeværktøjet til WordPress.</li>
                 </ol>
               </div>
             </details>
@@ -318,11 +363,6 @@
                 </ol>
               </div>
             </details>
-          </div>
-        </section>
-        <section id="finished">
-          <h3 data-section="finished" class="pt-5" data-i18n-id="s-4646">Nyligt afsluttet</h3>
-          <div class="accord">
             <details>
               <summary data-i18n-id="s-8545">
                 Q1 2026: Omskrivning af bibliotek 3.x
@@ -376,12 +416,8 @@
         <section id="project-ideas">
           <h3 data-section="project-ideas" class="pt-5" data-i18n-id="s-e19c">Under dr&oslash;ftelse</h3>
           <p data-i18n-id="s-511c">Diskut&eacute;r og stem p&aring; disse ideer i <a               href="https://github.com/itmaybejj/editoria11y/discussions">Editoria11y-bibliotekets forum</a>.</p>
-          <p data-i18n-id="s-99ee">Ideer er tagget med sv&aelig;rheds-/prioritetsestimater baseret p&aring; aktuel
-            f&aelig;llesskabsdiskussion.</p>
           <ul class="mt-1 p-5 pt-0">
             <li data-i18n-id="s-47b0">Dashboard til overv&aring;gning af flere sites</li>
-            <li data-i18n-id="s-b625">Detektion af d&oslash;de links</li>
-            <li data-i18n-id="s-347e">PDF-scanning</li>
             <li data-i18n-id="s-b7fa">Tooltip-fane til kodeplacering</li>
             <li data-i18n-id="s-ec9e">Eksport af siderapport fra tooltip</li>
             <li data-i18n-id="s-1a54">Markerede ord</li>

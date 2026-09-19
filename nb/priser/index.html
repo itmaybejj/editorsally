@@ -95,20 +95,20 @@
           Editoria11y er imidlertid ikke gratis å utvikle eller støtte.
         </p>
         <p class="fs-5">
-          «Community Supported Add-ons» (CSA)-prosjektet fyller gapet: prosjektmedlemmer finansierer utviklingen
+          «Community Supported Add-ons» (CSA)-prosjektet fyller gapet: prosjektmedlemmer støtter utviklingen
           av Editoria11y-biblioteket, CMS-programtilleggene, og CSA-pakken: et raskt voksende sett med
           kvalitetssikringsverktøy som gir lignende funksjonalitet som kommersielle produkter, åpen kildekode og
           on-prem.</p>
         <h3 class="fs-5">Innsamlingsmål:</h3>
         <ol class="fs-6">
           <li>
-            $2 000/måned: <strong>et bærekraftig prosjekt</strong>.<br/><em>Dekker faste kostnader og eksisterende støttebehov.</em>
+            $2 000/måned: <strong>et bærekraftig prosjekt</strong>.<br/><em>Dekker faste kostnader og utviklertid.</em>
           </li>
           <li>
-            $5 000/måned: <strong>akselerert utvikling</strong>.<br/><em>Muliggjør ansettelse av utviklere til å håndtere og støtte mer <a href="https://github.com/itmaybejj/editoria11y/discussions">komplekse funksjonsforespørsler</a>.</em>
+            $5 000/måned: <strong>akselerert utvikling</strong>.<br/><em>Muliggjør innleie av ekstra hjelp for å realisere flere <a href="https://github.com/itmaybejj/editoria11y/discussions">komplekse funksjonsforespørsler</a>.</em>
           </li>
           <li>
-            $10 000/måned: <strong>et ekte økosystem</strong>.<br/><em>Muliggjør utforsking av vertede/skybaserte API-funksjoner med store oppstartskostnader.</em>
+            $10 000+: <strong>et ekte økosystem</strong>.<br/><em>Muliggjør utforsking av vertede/skybaserte API-funksjoner med store oppstartskostnader.</em>
           </li>
         </ol>
       </div>
@@ -119,20 +119,20 @@
           <div class="row col-lg-9 py-4 pt-0 align-items-start text-start">
             <h2 class="nomenu pt-3">Støtt med et abonnement</h2>
             <div class="col-md-4 mb-3">
-              <label for="support-level">Bidrag</label>
+              <label for="support-level" data-translate>Støttenivå</label>
               <select id="support-level" class="form-select ">
                 <option value="100">150%</option>
                 <option value="80">120%</option>
-                <option value="60">100% av estimert behov</option>
+                <option value="60" selected>100%</option>
                 <option value="50">75%</option>
                 <option value="44">66%</option>
                 <option value="33">50%</option>
                 <option value="22">33%</option>
                 <option value="17">25%</option>
-              <option value="8" selected>10%</option></select>
+              <option value="8">10%</option></select>
             </div>
             <div class="col-md-4 mb-3">
-              <label for="currency">Valuta</label>
+              <label for="currency" data-translate>Valuta</label>
               <select class="form-select" id="currency">
                 <option value="EUR">€ EUR</option>
                 <option value="USD">$ USD</option>
@@ -142,7 +142,7 @@
 
             <div class="col-md-4 mb-3">
               <div class="row pb-3 form-check form-switch ps-0">
-                <div><label class="" for="annual-pricing">
+                <div><label class for="annual-pricing" data-translate>
                     Årlig
                   </label></div>
                 <input class="form-check-input ms-3 fs-3 border-2" type="checkbox" value="" id="annual-pricing" switch />
@@ -155,7 +155,7 @@
         <div class="row">
           <div class="col-lg-3 py-4 px-0" id="free">
             <div class="bg-light me-3 border border-secondary-subtle shadow overflow-hidden rounded">
-              <div class="p-2 border-bottom border-secondary-subtle">Gratis</div>
+              <div class="p-2 border-bottom border-secondary-subtle" data-translate>Åpen kildekode</div>
               <div class="p-3 pb-1">
                 <div class="fs-6 text-start">
                   <ul class="small ms-3">
@@ -176,19 +176,20 @@
           </div>
           <div class="col-lg-3 py-4 px-0" id="individual">
             <div class="bg-light shadow overflow-hidden rounded-start">
-              <div class="text-bg-info p-2 border-bottom border-light-subtle">Personlig</div>
+              <div class="text-bg-info p-2 border-bottom border-light-subtle" data-translate>Støttespiller</div>
               <div class="text-bg-info p-3 pb-1 d-flex flex-column justify-content-center">
                 <p class="lh-1"><span class="currency">€</span><span class="price fs-3">9</span><span class="period">/måned</span></p>
                 <div class="fs-5 text-start">
-                  <p class="fs-6 text-center"><em class="fs-6 ms-1 mb-2">Alt i Gratis pluss:</em></p>
+                  <p class="fs-6 text-center"><em class="fs-6 ms-1 mb-2">Alt i Åpen kildekode pluss:</em></p>
                   <ul class="small">
                     <li><strong>30+ utviklertester</strong></li>
                     <li><strong>Tilpasset testbygger</strong></li>
                     <li><strong>Nettstedsvide avvisninger</strong></li>
                     <li><strong>Lesbarhetspanel</strong></li>
                     <li><strong>Oppdater gjennomsøkere</strong></li>
+                    <li>Lisens for ett nettsted</li>
                     <li class="credit"><strong>Oppsettshjelp</strong></li>
-                    <li class="credit"><strong><a href="https://form.jotform.com/260627656020150">Støttespillerkreditt</a></strong></li>
+                    <li class="credit"><strong><a href="https://form.jotform.com/260627656020150">Oppføring som støttespiller</a></strong></li>
                   </ul>
                 </div>
 
@@ -199,7 +200,7 @@
             </div>
           </div>
           <div class="col-lg-3 border-info px-0 fs-4 border rounded-3 shadow-lg" style="z-index: 3;" id="team">
-            <div class="text-bg-info p-2 rounded-top">Team</div>
+            <div class="text-bg-info p-2 rounded-top" data-translate>Team</div>
             <div class="p-3 rounded-bottom">
               <div class="py-3 pb-4">
                 <select class="form-select fw-bold" style="width: auto; display: inline-block;" id="price-pick">
@@ -209,17 +210,17 @@
                   <option value="200">200</option>
                   <option value="500">500</option>
                   
-                </select> <label for="price-pick" class="fs-6">nettsteder</label>
+                </select> <label for="price-pick" class="fs-6" data-translate>nettsteder</label>
               </div>
               <div id="price-result">
                 <p class="lh-1"><span class="currency">€</span><span class="price fs-3">9.99</span><span class="period fs-5">/måned</span></p>
                 <div class="fs-5 text-start">
-                  <p class="fs-6 text-center full"><em class="fs-6 ms-1 mb-2">Alt i Personlig pluss:</em></p>
+                  <p class="fs-6 text-center full"><em class="fs-6 ms-1 mb-2">Alt i Støttespiller pluss:</em></p>
                   <ul class="small">
                     <li class="full"><strong>Oppsettshjelp</strong></li>
                     <li class="credit"><strong>E-poststøtte</strong></li>
                     <li class="credit"><strong>Årlig konsultasjon</strong></li>
-                    <li class="credit"><strong><a href="https://form.jotform.com/260627656020150">Støttespillerkreditt</a></strong></li>
+                    <li class="credit"><strong><a href="https://form.jotform.com/260627656020150">Oppføring som støttespiller</a></strong></li>
                   </ul>
                 </div>
 
@@ -231,17 +232,17 @@
           </div>
           <div class="col-lg-3 py-4 px-0">
             <div class="shadow overflow-hidden rounded-end" id="enterprise">
-              <div class="text-bg-info p-2 border-bottom border-light-subtle">Unlimited</div>
+              <div class="text-bg-info p-2 border-bottom border-light-subtle" data-translate>Partner</div>
               <div class="text-bg-info p-3 pb-1 d-flex flex-column justify-content-center">
                 <p class="lh-1"><span class="currency">€</span><span class="price fs-3">2700</span><span class="period">/måned</span></p>
                 <div class="fs-5 text-start">
-                  <p class="fs-6 text-center"><em class="fs-6 ms-1 mb-2">Alt i Personlig pluss:</em></p>
+                  <p class="fs-6 text-center"><em class="fs-6 ms-1 mb-2">Alt i Støttespiller pluss:</em></p>
                   <ul class="small">
                     <li><strong>Ubegrensede nettsteder</strong></li>
                     <li><strong>Oppsettshjelp</strong></li>
                     <li class="full"><strong>E-poststøtte</strong></li>
                     <li><strong>Årlig konsultasjon</strong></li>
-                    <li><strong><a href="https://form.jotform.com/260627656020150">Støttespillerkreditt</a></strong></li>
+                    <li><strong><a href="https://form.jotform.com/260627656020150">Oppføring som støttespiller</a></strong></li>
                   </ul>
                 </div>
                 <p class><a class="btn btn-dark" title="Enterprise">Abonner</a></p>
@@ -339,6 +340,10 @@
                     <td>25%</td>
                     <td>25px</td>
                   </tr>
+                  <tr>
+                    <td>10%</td>
+                    <td>10px</td>
+                  </tr>
                 </tbody>
               </table>
             </details>
@@ -402,8 +407,8 @@
     </div>
   </footer>
   <script async src="/assets/bootstrap/js/bootstrap.bundle.min.js?v=69f68885" class="astro-vvvwv3sm"></script>
-  <script async src="/assets/lang/i18n.js?v=9063c00b"></script>
-  <script async src="/assets/theme.js?v=39536f05"></script>
+  <script async src="/assets/lang/i18n.js?v=650b32df"></script>
+  <script async src="/assets/theme.js?v=0ee05eec"></script>
   <script async src="/assets/prism/prism.js?v=3bbae506"></script>
 </body>
 
