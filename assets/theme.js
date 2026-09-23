@@ -212,13 +212,31 @@
     const supportSelect = document.getElementById('support-level');
     const currencySymbols = { EUR: '€', USD: '$', GBP: '£' };
     const couponCodes = { 100: null, 80: '120', 60: '100', 50: '75', 44: '66', 33: '50', 22: '33', 17: '25', 8: '10' };
+    let supportLevel = 'default'
+    const defaultSupport = {
+      1: 60,
+      team: 17,
+      unlimited: 8,
+    }
+
+    function getSupportLevel(sites, forMath) {
+      console.log(sites);
+      if (sites !== 1 && sites !== 'unlimited') {
+        sites = 'team';
+      }
+      const computed = supportLevel === 'default' ? defaultSupport[sites] : supportLevel;
+      console.log(sites, computed);
+      return forMath ? computed / 100 : computed;
+    }
 
     function buildCheckoutUrl(licenses, forceAnnual = false) {
-      console.log(licenses, forceAnnual);
+      console.log(licenses, supportLevel, getSupportLevel(licenses));
       // @todo: include language code in URL and re-enable when checkout supports it.
+      
       const currency = currencySelect.value.toLowerCase();
       const billingCycle = annualCheckbox.checked || forceAnnual ? 'annual' : 'monthly';
-      const couponPrefix = couponCodes[parseInt(supportSelect.value, 10)];
+      const couponPrefix = couponCodes[getSupportLevel(licenses)];
+      //console.log('coupon', couponPrefix);
       const licenseUrl = `https://editoria11y.com/${langCode}/license`;
       let url = `https://checkout.freemius.com/bundle/26223/plan/43392/licenses/${licenses}/currency/${currency}/?show_upsells=false&disable_licenses_selector=true&billing_cycle=${billingCycle}&annual_discount=false&cart=false&&bundle_discount=false&multisite_discount=false&cancel_url=${encodeURIComponent(licenseUrl)}`;
       if (couponPrefix) {
@@ -257,6 +275,7 @@
     }
 
     function applyPrice(container, baseStr, multiplier, symbol, periodText) {
+      console.log(baseStr, multiplier)
       const base = parseFloat(baseStr.replace(/,/g, ''));
       const final = base * multiplier;
       container.querySelector('.currency').textContent = symbol;
@@ -265,10 +284,9 @@
     }
 
     function updatePrices() {
-      const supportLevel = parseInt(supportSelect.value, 10);
+      supportLevel = supportSelect.value === 'default' ? 'default' : parseInt(supportSelect.value, 10);
       const currency = currencySelect.value;
       const symbol = currencySymbols[currency];
-      const multiplier = supportLevel / 100;
       const isAnnual = annualCheckbox.checked;
       const period = isAnnual ? 'yearly' : 'monthly';
       const periodText = isAnnual ? (strings?.perYear || '/year') : (strings?.perMonth || '/month');
@@ -282,37 +300,39 @@
 
       // Individual logic.
 
-      if (supportLevel < 50) {
-        applyPrice(document.getElementById('individual'), pricing['yearly'][currency]['1'], multiplier, symbol, strings?.perYear || '/year');
+      if (getSupportLevel(1) < 50) {
+        console.log('lt100')
+        applyPrice(document.getElementById('individual'), pricing['yearly'][currency]['1'], getSupportLevel('individual', true), symbol, strings?.perYear || '/year');
         document.querySelector('#individual').classList.add('annual-only');
         forceSingleAnnual = true;
       } else {
-        applyPrice(document.getElementById('individual'), prices['1'], multiplier, symbol, periodText);
+        console.log('gt100');
+        applyPrice(document.getElementById('individual'), prices['1'], getSupportLevel(1, true), symbol, periodText);
         document.querySelector('#individual').classList.remove('annual-only');
       }
-      if (supportLevel < 100) {
+      if (getSupportLevel(1) < 100) {
         document.querySelector('#individual').classList.add('no-credit');
       }
 
       // team Credits
       if (
-        (supportLevel < 22 && ['5', '10', '25', '50', '200'].includes(pricePicker.value)) ||
-        (supportLevel < 33 && ['5', '10', '25', '50'].includes(pricePicker.value)) ||
-        (supportLevel < 50 && ['5', '10', '25', '50'].includes(pricePicker.value))
+        (getSupportLevel('team') < 22 && ['5', '10', '25', '50', '200'].includes(getSupportLevel('team'))) ||
+        (getSupportLevel('team') < 33 && ['5', '10', '25', '50'].includes(getSupportLevel('team'))) ||
+        (getSupportLevel('team') < 50 && ['5', '10', '25', '50'].includes(getSupportLevel('team')))
       ) {
         document.querySelector('#team').classList.add('no-credit');
       }
 
       // team annual-only.
-      if (['5', '10'].includes(pricePicker.value) && supportLevel < 22) {
-        applyPrice(document.getElementById('price-result'), pricing['yearly'][currency][pricePicker.value], multiplier, symbol, strings?.perYear || '/year');
+      if (['5', '10'].includes(pricePicker.value) && getSupportLevel('team') < 22) {
+        applyPrice(document.getElementById('price-result'), pricing['yearly'][currency][pricePicker.value], getSupportLevel('team', true), symbol, strings?.perYear || '/year');
         document.querySelector('#team').classList.add('annual-only');
         forceTeamAnnual = true;
       } else {
-        applyPrice(document.getElementById('price-result'), prices[pricePicker.value], multiplier, symbol, periodText);
+        applyPrice(document.getElementById('price-result'), prices[pricePicker.value], getSupportLevel('team', true), symbol, periodText);
         document.querySelector('#team').classList.remove('annual-only');
       }
-      applyPrice(document.getElementById('enterprise'), prices['unlimited'], multiplier, symbol, periodText);
+      applyPrice(document.getElementById('enterprise'), prices['unlimited'], getSupportLevel('unlimited', true), symbol, periodText);
 
       document.querySelector('#individual .btn').href = buildCheckoutUrl(1, forceSingleAnnual);
       document.querySelector('#price-result .btn').href = buildCheckoutUrl(pricePicker.value, forceTeamAnnual);
