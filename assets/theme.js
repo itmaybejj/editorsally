@@ -220,23 +220,19 @@
     }
 
     function getSupportLevel(sites, forMath) {
-      console.log(sites);
       if (sites !== 1 && sites !== 'unlimited') {
         sites = 'team';
       }
       const computed = supportLevel === 'default' ? defaultSupport[sites] : supportLevel;
-      console.log(sites, computed);
       return forMath ? computed / 100 : computed;
     }
 
     function buildCheckoutUrl(licenses, forceAnnual = false) {
-      console.log(licenses, supportLevel, getSupportLevel(licenses));
       // @todo: include language code in URL and re-enable when checkout supports it.
       
       const currency = currencySelect.value.toLowerCase();
       const billingCycle = annualCheckbox.checked || forceAnnual ? 'annual' : 'monthly';
       const couponPrefix = couponCodes[getSupportLevel(licenses)];
-      //console.log('coupon', couponPrefix);
       const licenseUrl = `https://editoria11y.com/${langCode}/license`;
       let url = `https://checkout.freemius.com/bundle/26223/plan/43392/licenses/${licenses}/currency/${currency}/?show_upsells=false&disable_licenses_selector=true&billing_cycle=${billingCycle}&annual_discount=false&cart=false&&bundle_discount=false&multisite_discount=false&cancel_url=${encodeURIComponent(licenseUrl)}`;
       if (couponPrefix) {
@@ -275,7 +271,6 @@
     }
 
     function applyPrice(container, baseStr, multiplier, symbol, periodText) {
-      console.log(baseStr, multiplier)
       const base = parseFloat(baseStr.replace(/,/g, ''));
       const final = base * multiplier;
       container.querySelector('.currency').textContent = symbol;
@@ -301,12 +296,10 @@
       // Individual logic.
 
       if (getSupportLevel(1) < 50) {
-        console.log('lt100')
         applyPrice(document.getElementById('individual'), pricing['yearly'][currency]['1'], getSupportLevel('individual', true), symbol, strings?.perYear || '/year');
         document.querySelector('#individual').classList.add('annual-only');
         forceSingleAnnual = true;
       } else {
-        console.log('gt100');
         applyPrice(document.getElementById('individual'), prices['1'], getSupportLevel(1, true), symbol, periodText);
         document.querySelector('#individual').classList.remove('annual-only');
       }
