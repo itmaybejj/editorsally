@@ -33,7 +33,7 @@
             href="https://github.com/itmaybejj/editoria11y" data-type="URL"
             data-id="https://github.com/itmaybejj/editoria11y" class="liinternal">download a local
             copy</a> (or
-          reference a <a href="https://cdn.jsdelivr.net/gh/itmaybejj/editoria11y@2/dist/editoria11y.min.js"
+          reference a <a href="https://cdn.jsdelivr.net/gh/itmaybejj/editoria11y@3/dist/js/ed11y.umd.min.js"
             class="liinternal">CDN version</a>) of a Language pack, the JS min file, and the CSS min file, and then
           create a new “Ed11y” instance.</p>
         <p data-i18n-id="s-4e8a">For <strong>ESM/JS module imports</strong>: </p>
@@ -53,14 +53,14 @@
         <p data-i18n-id="s-b7f0">Use the .umd JavaScript files for legacy browsers and systems:</p>
         <pre class="language-markup"><code><!--
 // Call CSS, JS and a Language Pack
-<link href="/dist/editoria11y.min.css" rel="stylesheet">
-<script src="/dist/js/ed11y.umd.js"></script>;
-<script src="/dist/js/lang/en.umd.js"></script>
+<link href="https://cdn.jsdelivr.net/gh/itmaybejj/editoria11y@3.0.1/dist/css/editoria11y.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/gh/itmaybejj/editoria11y@3.0.1/dist/js/ed11y.umd.min.js"></script>;
+<script src="https://cdn.jsdelivr.net/gh/itmaybejj/editoria11y@3.0.1/dist/js/lang/en.umd.js""></script>
 // Create a new Ed11y instance
 <script>
   const ed11y = new Ed11y.Ed11y({
     lang: 'en',
-    cssUrls: ["/dist/css/editoria11y.min.css"]
+    cssUrls: ["https://cdn.jsdelivr.net/gh/itmaybejj/editoria11y@3.0.1/dist/css/editoria11y.min.css"]
   });
 </script>
                 --></code></pre>
