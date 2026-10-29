@@ -148,60 +148,60 @@
   const pricing = {
     monthly: {
       USD: {
-        1: '16.65',
-        5: '81',
-        25: '181',
-        50: '331',
-        200: '748',
-        500: '1665',
-        unlimited: '2998'
+        1: '5',
+        5: '19',
+        25: '49',
+        50: '89',
+        200: '249',
+        500: '499',
+        unlimited: '999'
       },
       GBP: {
-        1: '13.33',
-        5: '65',
-        25: '148',
-        50: '265',
-        200: '548',
-        500: '1331',
-        unlimited: '2654'
+        1: '4',
+        5: '16',
+        25: '39',
+        50: '69',
+        200: '199',
+        500: '399',
+        unlimited: '799'
       },
       EUR: {
-        1: '14.99',
-        5: '73',
-        25: '165',
-        50: '331',
-        200: '664',
-        500: '1497',
-        unlimited: '2998'
+        1: '5',
+        5: '19',
+        25: '49',
+        50: '89',
+        200: '229',
+        500: '449',
+        unlimited: '899'
       }
     },
     yearly: {
       USD: {
-        1: '165',
-        5: '708',
-        25: '1831',
-        50: '3331',
-        200: '4998',
-        500: '16665',
-        unlimited: '29997'
+        1: '49',
+        5: '199',
+        25: '499',
+        50: '899',
+        200: '2499',
+        500: '4999',
+        unlimited: '9999'
       },
       GBP: {
-        1: '131',
-        5: '648',
-        25: '1498',
-        50: '2664',
-        200: '5498',
-        500: '13331',
-        unlimited: '26664'
+        1: '43',
+        5: '159',
+        25: '399',
+        50: '699',
+        200: '1999',
+        500: '3999',
+        unlimited: '7999'
       },
       EUR: {
-        1: '148',
-        5: '665',
-        25: '1665',
-        50: '2998',
-        200: '4665',
-        500: '14998',
-        unlimited: '29997'
+        1: '45',
+        5: '175',
+        25: '475',
+        50: '875',
+        200: '2299',
+        500: '4499',
+        unlimited: '8999'
       }
     }
   };
@@ -211,20 +211,16 @@
     const annualCheckbox = document.getElementById('annual-pricing');
     const supportSelect = document.getElementById('support-level');
     const currencySymbols = { EUR: '€', USD: '$', GBP: '£' };
-    const couponCodes = { 100: null, 80: '120', 60: '100', 50: '75', 44: '66', 33: '50', 22: '33', 17: '25', 8: '10' };
-    let supportLevel = 'default'
-    const defaultSupport = {
-      1: 60,
-      team: 17,
-      unlimited: 8,
-    }
+    // Support level (percent of list price) => Freemius coupon prefix.
+    const couponCodes = { 100: null, 75: '75', 66: '66', 50: '50', 33: '33', 25: '25' };
+    // Smallest monthly charge worth processing; anything less is annual-only.
+    const minMonthly = { USD: 8, EUR: 7.5, GBP: 6.5 };
+    // Lowest support level that includes credit benefits, per team size.
+    const teamCreditLevel = { 5: 75, 25: 75, 50: 75, 200: 33 };
 
-    function getSupportLevel(sites, forMath) {
-      if (sites !== 1 && sites !== 'unlimited') {
-        sites = 'team';
-      }
-      const computed = supportLevel === 'default' ? defaultSupport[sites] : supportLevel;
-      return forMath ? computed / 100 : computed;
+    function getSupportLevel(forMath) {
+      const level = parseInt(supportSelect.value, 10);
+      return forMath ? level / 100 : level;
     }
 
     function buildCheckoutUrl(licenses, forceAnnual = false) {
@@ -232,7 +228,7 @@
       
       const currency = currencySelect.value.toLowerCase();
       const billingCycle = annualCheckbox.checked || forceAnnual ? 'annual' : 'monthly';
-      const couponPrefix = couponCodes[getSupportLevel(licenses)];
+      const couponPrefix = couponCodes[getSupportLevel()];
       const licenseUrl = `https://editoria11y.com/${langCode}/license`;
       let url = `https://checkout.freemius.com/bundle/26223/plan/43392/licenses/${licenses}/currency/${currency}/?show_upsells=false&disable_licenses_selector=true&billing_cycle=${billingCycle}&annual_discount=false&cart=false&&bundle_discount=false&multisite_discount=false&cancel_url=${encodeURIComponent(licenseUrl)}`;
       if (couponPrefix) {
@@ -278,8 +274,12 @@
       container.querySelector('.period').textContent = periodText;
     }
 
+    function isAnnualOnly(currency, sites) {
+      const monthlyBase = parseFloat(pricing.monthly[currency][sites]);
+      return monthlyBase * getSupportLevel(true) < minMonthly[currency];
+    }
+
     function updatePrices() {
-      supportLevel = supportSelect.value === 'default' ? 'default' : parseInt(supportSelect.value, 10);
       const currency = currencySelect.value;
       const symbol = currencySymbols[currency];
       const isAnnual = annualCheckbox.checked;
@@ -289,43 +289,37 @@
       let forceSingleAnnual = false;
       let forceTeamAnnual = false;
 
-      // 75px aka 50% is the lowest value to allow for monthly.
-
       document.querySelectorAll('.no-credit')?.forEach(el => el.classList.remove('no-credit'));
 
       // Individual logic.
 
-      if (getSupportLevel(1) < 50) {
-        applyPrice(document.getElementById('individual'), pricing['yearly'][currency]['1'], getSupportLevel('individual', true), symbol, strings?.perYear || '/year');
+      if (isAnnualOnly(currency, 1)) {
+        applyPrice(document.getElementById('individual'), pricing['yearly'][currency]['1'], getSupportLevel(true), symbol, strings?.perYear || '/year');
         document.querySelector('#individual').classList.add('annual-only');
         forceSingleAnnual = true;
       } else {
-        applyPrice(document.getElementById('individual'), prices['1'], getSupportLevel(1, true), symbol, periodText);
+        applyPrice(document.getElementById('individual'), prices['1'], getSupportLevel(true), symbol, periodText);
         document.querySelector('#individual').classList.remove('annual-only');
       }
-      if (getSupportLevel(1) < 100) {
+      if (getSupportLevel() < 100) {
         document.querySelector('#individual').classList.add('no-credit');
       }
 
       // team Credits
-      if (
-        (getSupportLevel('team') < 22 && ['5', '10', '25', '50', '200'].includes(getSupportLevel('team'))) ||
-        (getSupportLevel('team') < 33 && ['5', '10', '25', '50'].includes(getSupportLevel('team'))) ||
-        (getSupportLevel('team') < 50 && ['5', '10', '25', '50'].includes(getSupportLevel('team')))
-      ) {
+      if (getSupportLevel() < (teamCreditLevel[pricePicker.value] ?? 0)) {
         document.querySelector('#team').classList.add('no-credit');
       }
 
       // team annual-only.
-      if (['5', '10'].includes(pricePicker.value) && getSupportLevel('team') < 22) {
-        applyPrice(document.getElementById('price-result'), pricing['yearly'][currency][pricePicker.value], getSupportLevel('team', true), symbol, strings?.perYear || '/year');
+      if (isAnnualOnly(currency, pricePicker.value)) {
+        applyPrice(document.getElementById('price-result'), pricing['yearly'][currency][pricePicker.value], getSupportLevel(true), symbol, strings?.perYear || '/year');
         document.querySelector('#team').classList.add('annual-only');
         forceTeamAnnual = true;
       } else {
-        applyPrice(document.getElementById('price-result'), prices[pricePicker.value], getSupportLevel('team', true), symbol, periodText);
+        applyPrice(document.getElementById('price-result'), prices[pricePicker.value], getSupportLevel(true), symbol, periodText);
         document.querySelector('#team').classList.remove('annual-only');
       }
-      applyPrice(document.getElementById('enterprise'), prices['unlimited'], getSupportLevel('unlimited', true), symbol, periodText);
+      applyPrice(document.getElementById('enterprise'), prices['unlimited'], getSupportLevel(true), symbol, periodText);
 
       document.querySelector('#individual .btn').href = buildCheckoutUrl(1, forceSingleAnnual);
       document.querySelector('#price-result .btn').href = buildCheckoutUrl(pricePicker.value, forceTeamAnnual);
