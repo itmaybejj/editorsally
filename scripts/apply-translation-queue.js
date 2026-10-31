@@ -54,7 +54,8 @@ function decodeOverEscape(s) {
   // Heal over-escaped HTML the agent may emit: &lt; → <, &gt; → >, &amp; → & (only if it looks like a tag)
   // Only apply if string contains HTML-looking entities likely from over-escape.
   if (typeof s !== 'string') return s;
-  if (!/&(lt|gt|amp|quot);/.test(s)) return s;
+  // Require an escaped tag: a lone &amp; ("Drupal &amp; WordPress") is correct as-is.
+  if (!/&lt;[a-z\/!]/i.test(s)) return s;
   // Only heal if there are no real <tags> already present; otherwise leave alone.
   if (/<[a-z\/!]/i.test(s)) return s;
   return s

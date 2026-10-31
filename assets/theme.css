@@ -792,6 +792,22 @@ label {
     }
 }
 
+.ytlink {
+    display: inline-block;
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        left: 1rem;
+        bottom: 1rem;
+        width: 90px;
+        z-index: 2;
+        height: 60px;
+        background-image: url(/assets/images/yt.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+}
 
 footer {
     margin-bottom: 3rem;
@@ -828,4 +844,12 @@ footer {
         }
     }
 
+}
+.newspage {
+    h2 {
+        border-top: 1px solid;
+        font-size: 2rem;
+        padding-top: 1rem;
+        margin-top: 4rem;
+    }
 }

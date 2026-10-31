@@ -71,7 +71,7 @@ const defined_i18n = (() => {
    */
   const canonicalPaths = [
     'about', 'features', 'demo', 'contacts', 'install', 'drupal', 'license',
-    'privacy-policy', 'cookie-policy', 'terms-of-use', 'legal-notice',
+    'news', 'privacy-policy', 'cookie-policy', 'terms-of-use', 'legal-notice',
   ];
 
   /**
@@ -92,6 +92,7 @@ const defined_i18n = (() => {
       contacts: 'kontakty',
       install: 'instalace',
       license: 'ceny',
+      news: 'novinky',
       'privacy-policy': 'ochrana-osobnich-udaju',
       'cookie-policy': 'zasady-cookie',
       'terms-of-use': 'podminky-pouzivani',
@@ -101,6 +102,7 @@ const defined_i18n = (() => {
       features: 'funktioner',
       contacts: 'kontakt',
       license: 'priser',
+      news: 'nyheder',
       'privacy-policy': 'privatlivspolitik',
       'cookie-policy': 'cookiepolitik',
       'terms-of-use': 'vilkaar',
@@ -110,6 +112,7 @@ const defined_i18n = (() => {
       features: 'funktionen',
       contacts: 'kontakt',
       license: 'preise',
+      news: 'neuigkeiten',
       'privacy-policy': 'datenschutz',
       'cookie-policy': 'cookies',
       'terms-of-use': 'nutzungsbedingungen',
@@ -120,6 +123,7 @@ const defined_i18n = (() => {
       contacts: 'contacto',
       install: 'instalacion',
       license: 'precios',
+      news: 'noticias',
       'privacy-policy': 'privacidad',
       'cookie-policy': 'cookies',
       'terms-of-use': 'condiciones',
@@ -130,6 +134,7 @@ const defined_i18n = (() => {
       contacts: 'kontaktid',
       install: 'paigaldamine',
       license: 'hinnad',
+      news: 'uudised',
       'privacy-policy': 'privaatsuspoliitika',
       'cookie-policy': 'kupsiste-poliitika',
       'terms-of-use': 'kasutustingimused',
@@ -140,6 +145,7 @@ const defined_i18n = (() => {
       contacts: 'yhteystiedot',
       install: 'asennus',
       license: 'hinnat',
+      news: 'uutiset',
       'privacy-policy': 'tietosuoja',
       'cookie-policy': 'evasteet',
       'terms-of-use': 'kayttoehdot',
@@ -149,6 +155,7 @@ const defined_i18n = (() => {
       features: 'fonctionnalites',
       contacts: 'contact',
       license: 'tarifs',
+      news: 'actualites',
       'privacy-policy': 'confidentialite',
       'cookie-policy': 'cookies',
       'terms-of-use': 'conditions',
@@ -159,6 +166,7 @@ const defined_i18n = (() => {
       contacts: 'kapcsolat',
       install: 'telepites',
       license: 'arak',
+      news: 'hirek',
       'privacy-policy': 'adatvedelem',
       'cookie-policy': 'cookie-szabalyzat',
       'terms-of-use': 'felhasznalasi-feltetelek',
@@ -169,6 +177,7 @@ const defined_i18n = (() => {
       contacts: 'kontak',
       install: 'instalasi',
       license: 'harga',
+      news: 'berita',
       'privacy-policy': 'kebijakan-privasi',
       'cookie-policy': 'kebijakan-cookie',
       'terms-of-use': 'syarat-penggunaan',
@@ -179,6 +188,7 @@ const defined_i18n = (() => {
       contacts: 'contatti',
       install: 'installazione',
       license: 'prezzi',
+      news: 'notizie',
       'privacy-policy': 'privacy',
       'cookie-policy': 'cookie',
       'terms-of-use': 'condizioni',
@@ -189,6 +199,7 @@ const defined_i18n = (() => {
       contacts: 'kontaktai',
       install: 'diegimas',
       license: 'kainos',
+      news: 'naujienos',
       'privacy-policy': 'privatumo-politika',
       'cookie-policy': 'slapuku-politika',
       'terms-of-use': 'salygos',
@@ -199,6 +210,7 @@ const defined_i18n = (() => {
       contacts: 'kontakti',
       install: 'uzstadisana',
       license: 'cenas',
+      news: 'jaunumi',
       'privacy-policy': 'privatuma-politika',
       'cookie-policy': 'sikdatnu-politika',
       'terms-of-use': 'noteikumi',
@@ -209,6 +221,7 @@ const defined_i18n = (() => {
       contacts: 'kontakt',
       install: 'installasjon',
       license: 'priser',
+      news: 'nyheter',
       'privacy-policy': 'personvern',
       'cookie-policy': 'informasjonskapsler',
       'terms-of-use': 'bruksvilkaar',
@@ -219,6 +232,7 @@ const defined_i18n = (() => {
       contacts: 'contact',
       install: 'installatie',
       license: 'prijzen',
+      news: 'nieuws',
       'privacy-policy': 'privacybeleid',
       'cookie-policy': 'cookiebeleid',
       'terms-of-use': 'voorwaarden',
@@ -229,6 +243,7 @@ const defined_i18n = (() => {
       contacts: 'kontakt',
       install: 'instalacja',
       license: 'cennik',
+      news: 'aktualnosci',
       'privacy-policy': 'prywatnosc',
       'cookie-policy': 'cookies',
       'terms-of-use': 'warunki',
@@ -239,6 +254,7 @@ const defined_i18n = (() => {
       contacts: 'contato',
       install: 'instalacao',
       license: 'precos',
+      news: 'noticias',
       'privacy-policy': 'privacidade',
       'cookie-policy': 'cookies',
       'terms-of-use': 'termos',
@@ -249,6 +265,7 @@ const defined_i18n = (() => {
       contacts: 'contacto',
       install: 'instalacao',
       license: 'precos',
+      news: 'noticias',
       'privacy-policy': 'privacidade',
       'cookie-policy': 'cookies',
       'terms-of-use': 'termos',
@@ -259,6 +276,7 @@ const defined_i18n = (() => {
       contacts: 'contact',
       install: 'instalare',
       license: 'preturi',
+      news: 'stiri',
       'privacy-policy': 'confidentialitate',
       'cookie-policy': 'cookies',
       'terms-of-use': 'termeni',
@@ -269,6 +287,7 @@ const defined_i18n = (() => {
       contacts: 'kontakty',
       install: 'instalacia',
       license: 'ceny',
+      news: 'novinky',
       'privacy-policy': 'ochrana-osobnych-udajov',
       'cookie-policy': 'zasady-cookie',
       'terms-of-use': 'podmienky-pouzivania',
@@ -280,6 +299,7 @@ const defined_i18n = (() => {
       contacts: 'stiki',
       install: 'namestitev',
       license: 'cene',
+      news: 'novice',
       'privacy-policy': 'zasebnost',
       'cookie-policy': 'piskotki',
       'terms-of-use': 'pogoji',
@@ -290,6 +310,7 @@ const defined_i18n = (() => {
       contacts: 'kontakt',
       install: 'installation',
       license: 'priser',
+      news: 'nyheter',
       'privacy-policy': 'integritet',
       'cookie-policy': 'cookiepolicy',
       'terms-of-use': 'anvandarvillkor',
@@ -300,6 +321,7 @@ const defined_i18n = (() => {
       contacts: 'iletisim',
       install: 'kurulum',
       license: 'fiyatlar',
+      news: 'haberler',
       'privacy-policy': 'gizlilik',
       'cookie-policy': 'cerez-politikasi',
       'terms-of-use': 'kullanim-kosullari',
@@ -321,6 +343,7 @@ const defined_i18n = (() => {
       label: {
         about: 'About',
         features: 'Features',
+        news: 'News',
         demo: 'Demo',
         contacts: 'Contacts',
         install: 'Install & configure',
@@ -348,6 +371,7 @@ const defined_i18n = (() => {
       label: {
         about: 'Acerca de',
         features: 'Características',
+        news: 'Noticias',
         demo: 'Demo',
         contacts: 'Contacto',
         install: 'Instalar y configurar',
@@ -375,6 +399,7 @@ const defined_i18n = (() => {
       label: {
         about: 'Über uns',
         features: 'Funktionen',
+        news: 'Neuigkeiten',
         demo: 'Demo',
         contacts: 'Kontakt',
         install: 'Installation & Konfiguration',
@@ -402,6 +427,7 @@ const defined_i18n = (() => {
       label: {
         about: 'За проекта',
         features: 'Функции',
+        news: 'Новини',
         demo: 'Демо',
         contacts: 'Контакти',
         install: 'Инсталация и настройка',
@@ -429,6 +455,7 @@ const defined_i18n = (() => {
       label: {
         about: 'Om os',
         features: 'Funktioner',
+        news: 'Nyheder',
         demo: 'Demo',
         contacts: 'Kontakt',
         install: 'Installer og konfigurer',
@@ -456,6 +483,7 @@ const defined_i18n = (() => {
       label: {
         about: 'Σχετικά',
         features: 'Λειτουργίες',
+        news: 'Νέα',
         demo: 'Demo',
         contacts: 'Επικοινωνία',
         install: 'Εγκατάσταση και ρύθμιση',
@@ -483,6 +511,7 @@ const defined_i18n = (() => {
       label: {
         about: 'À propos',
         features: 'Fonctionnalités',
+        news: 'Actualités',
         demo: 'Démo',
         contacts: 'Contact',
         install: 'Installation et configuration',
@@ -510,6 +539,7 @@ const defined_i18n = (() => {
       label: {
         about: 'Rólunk',
         features: 'Funkciók',
+        news: 'Hírek',
         demo: 'Demo',
         contacts: 'Kapcsolat',
         install: 'Telepítés és beállítás',
@@ -537,6 +567,7 @@ const defined_i18n = (() => {
       label: {
         about: 'Informazioni',
         features: 'Funzionalità',
+        news: 'Notizie',
         demo: 'Demo',
         contacts: 'Contatti',
         install: 'Installazione e configurazione',
@@ -564,6 +595,7 @@ const defined_i18n = (() => {
       label: {
         about: '概要',
         features: '機能',
+        news: 'ニュース',
         demo: 'デモ',
         contacts: 'お問い合わせ',
         install: 'インストールと設定',
@@ -591,6 +623,7 @@ const defined_i18n = (() => {
       label: {
         about: 'Om oss',
         features: 'Funksjoner',
+        news: 'Nyheter',
         demo: 'Demo',
         contacts: 'Kontakt',
         install: 'Installer og konfigurer',
@@ -618,6 +651,7 @@ const defined_i18n = (() => {
       label: {
         about: 'Over ons',
         features: 'Functies',
+        news: 'Nieuws',
         demo: 'Demo',
         contacts: 'Contact',
         install: 'Installeren en configureren',
@@ -645,6 +679,7 @@ const defined_i18n = (() => {
       label: {
         about: 'O nas',
         features: 'Funkcje',
+        news: 'Aktualności',
         demo: 'Demo',
         contacts: 'Kontakt',
         install: 'Instalacja i konfiguracja',
@@ -672,6 +707,7 @@ const defined_i18n = (() => {
       label: {
         about: 'Sobre',
         features: 'Funcionalidades',
+        news: 'Notícias',
         demo: 'Demo',
         contacts: 'Contato',
         install: 'Instalar e configurar',
@@ -699,6 +735,7 @@ const defined_i18n = (() => {
       label: {
         about: 'Sobre',
         features: 'Funcionalidades',
+        news: 'Notícias',
         demo: 'Demo',
         contacts: 'Contacto',
         install: 'Instalar e configurar',
@@ -726,6 +763,7 @@ const defined_i18n = (() => {
       label: {
         about: 'Om oss',
         features: 'Funktioner',
+        news: 'Nyheter',
         demo: 'Demo',
         contacts: 'Kontakt',
         install: 'Installera och konfigurera',
@@ -753,6 +791,7 @@ const defined_i18n = (() => {
       label: {
         about: 'Про нас',
         features: 'Функції',
+        news: 'Новини',
         demo: 'Демо',
         contacts: 'Контакти',
         install: 'Встановлення та налаштування',
@@ -780,6 +819,7 @@ const defined_i18n = (() => {
       label: {
         about: '关于',
         features: '功能',
+        news: '新闻',
         demo: '演示',
         contacts: '联系',
         install: '安装与配置',
@@ -807,6 +847,7 @@ const defined_i18n = (() => {
       label: {
         about: 'O nás',
         features: 'Funkce',
+        news: 'Novinky',
         demo: 'Demo',
         contacts: 'Kontakty',
         install: 'Instalace a konfigurace',
@@ -834,6 +875,7 @@ const defined_i18n = (() => {
       label: {
         about: 'Meist',
         features: 'Funktsioonid',
+        news: 'Uudised',
         demo: 'Demo',
         contacts: 'Kontaktid',
         install: 'Paigaldamine ja seadistamine',
@@ -861,6 +903,7 @@ const defined_i18n = (() => {
       label: {
         about: 'Tietoa',
         features: 'Ominaisuudet',
+        news: 'Uutiset',
         demo: 'Demo',
         contacts: 'Yhteystiedot',
         install: 'Asennus ja määritykset',
@@ -888,6 +931,7 @@ const defined_i18n = (() => {
       label: {
         about: 'Tentang',
         features: 'Fitur',
+        news: 'Berita',
         demo: 'Demo',
         contacts: 'Kontak',
         install: 'Instalasi dan konfigurasi',
@@ -915,6 +959,7 @@ const defined_i18n = (() => {
       label: {
         about: '소개',
         features: '기능',
+        news: '뉴스',
         demo: '데모',
         contacts: '연락처',
         install: '설치 및 구성',
@@ -942,6 +987,7 @@ const defined_i18n = (() => {
       label: {
         about: 'Apie',
         features: 'Funkcijos',
+        news: 'Naujienos',
         demo: 'Demonstracija',
         contacts: 'Kontaktai',
         install: 'Diegimas ir konfigūracija',
@@ -977,6 +1023,7 @@ const defined_i18n = (() => {
       label: {
         about: 'Par mums',
         features: 'Funkcijas',
+        news: 'Jaunumi',
         demo: 'Demonstrācija',
         contacts: 'Kontakti',
         install: 'Uzstādīšana un konfigurēšana',
@@ -1004,6 +1051,7 @@ const defined_i18n = (() => {
       label: {
         about: 'Despre',
         features: 'Funcționalități',
+        news: 'Știri',
         demo: 'Demo',
         contacts: 'Contact',
         install: 'Instalare și configurare',
@@ -1031,6 +1079,7 @@ const defined_i18n = (() => {
       label: {
         about: 'O nás',
         features: 'Funkcie',
+        news: 'Novinky',
         demo: 'Demo',
         contacts: 'Kontakty',
         install: 'Inštalácia a konfigurácia',
@@ -1058,6 +1107,7 @@ const defined_i18n = (() => {
       label: {
         about: 'O nas',
         features: 'Funkcije',
+        news: 'Novice',
         demo: 'Predstavitev',
         contacts: 'Stiki',
         install: 'Namestitev in konfiguracija',
@@ -1085,6 +1135,7 @@ const defined_i18n = (() => {
       label: {
         about: 'Hakkında',
         features: 'Özellikler',
+        news: 'Haberler',
         demo: 'Demo',
         contacts: 'İletişim',
         install: 'Kurulum ve yapılandırma',

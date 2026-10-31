@@ -14,7 +14,7 @@
     return i18n ? i18n.buildPath(langCode, enSlug) : (langCode === 'en' ? `/${enSlug}/` : `/${langCode}/${enSlug}/`);
   }
   function l(enSlug) {
-    return strings ? strings.label[enSlug] : { about: 'About', features: 'Features', demo: 'Demo', contacts: 'Contacts', install: 'Install &amp; configure', drupal: 'Drupal module', license: 'Support the project' }[enSlug];
+    return strings ? strings.label[enSlug] : { about: 'About', features: 'Features', news: 'News', demo: 'Demo', contacts: 'Contacts', install: 'Install &amp; configure', drupal: 'Drupal module', license: 'Support the project' }[enSlug];
   }
 
   const navTemplate = `
@@ -22,18 +22,20 @@
               <a href="${p('about')}" class="nav-link">${l('about')}</a>
             </li>
             <li class="nav-item"><a href="${p('features')}" class="nav-link">${l('features')}</a></li>
-            <li class="nav-item"><a href="${p('demo')}" class="nav-link">${l('demo')}</a></li>
+            <li class="nav-item"><a href="${p('news')}" class="nav-link">${l('news')}</a></li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 ${strings ? strings.gettingStarted : 'Get started'}
               </a>
               <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="${p('demo')}">${l('demo')}</a></li>
                 <li><a class="dropdown-item" href="${p('install')}">${l('install')}</a></li>
                 <li><a class="dropdown-item" href="${p('license')}">${l('license')}</a></li>
                 <li><a class="dropdown-item" href="${p('drupal')}">${l('drupal')}</a></li>
                 <li><a class="dropdown-item" href="https://wordpress.org/plugins/editoria11y-accessibility-checker/" title="External link">${strings ? strings.wpLabel : 'WordPress plugin'} ${externalIcon}</a></li>
                 <li><a class="dropdown-item" href="${p('contacts')}">${l('contacts')}</a></li>
-
+              </ul>
+            </li>
     `;
   const nav = document.querySelector('header .navbar-nav');
   nav.innerHTML = navTemplate;
@@ -109,14 +111,16 @@
   const onThisPage = document.querySelector('#on-this-page');
   if (onThisPage) {
     const headings = document.querySelectorAll(':is(h1, h2, h3):not(.nomenu)');
-    headings?.forEach(heading => {
+    headings?.forEach((heading, index) => {
       heading.setAttribute('tabindex', '-1');
       const link = document.createElement('a');
       link.setAttribute('class', 'list-group-item list-group-item-action was-h2')
       link.textContent = heading.textContent;
       let theLink = heading.id ? heading.id : heading.closest('[id]')?.id;
       if (!theLink) {
-        theLink = heading.textContent.toLowerCase().replace(/\s+/g, '-').replace(/[^\w-]+/g, '');
+        // Unicode-aware: \w would strip non-Latin headings down to an empty id.
+        theLink = heading.textContent.trim().toLowerCase().replace(/\s+/g, '-').replace(/[^\p{L}\p{N}_-]+/gu, '');
+        theLink = theLink || `section-${index}`;
         heading.setAttribute('id', theLink);
       }
       link.setAttribute('href', `#${theLink}`);
@@ -133,7 +137,7 @@
       onThisPage.appendChild(link);
       link.addEventListener('click', (e) => {
         const href = link.getAttribute('href');
-        const target = document.querySelector(href);
+        const target = document.getElementById(theLink);
         if (target) {
           target.focus();
           window.location.replace(href)

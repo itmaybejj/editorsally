@@ -16,7 +16,7 @@ cs	de	en	et	fr	id	ja	lt	nb	pl	pt-pt	sk	sv	uk
 
 ## Pages
 
-`about`, `features`, `demo`, `contacts`, `install`, `drupal`, `license`, `privacy-policy`, `cookie-policy`, `terms-of-use`, `legal-notice`
+`about`, `features`, `news`, `demo`, `contacts`, `install`, `drupal`, `license`, `privacy-policy`, `cookie-policy`, `terms-of-use`, `legal-notice`
 
 ## Invoking
 
