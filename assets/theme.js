@@ -181,7 +181,7 @@
     },
     yearly: {
       USD: {
-        1: '49',
+        1: '59',
         5: '199',
         25: '499',
         50: '899',
@@ -190,7 +190,7 @@
         unlimited: '9999'
       },
       GBP: {
-        1: '43',
+        1: '49',
         5: '159',
         25: '399',
         50: '699',
@@ -199,7 +199,7 @@
         unlimited: '7999'
       },
       EUR: {
-        1: '45',
+        1: '59',
         5: '175',
         25: '475',
         50: '875',
@@ -216,11 +216,11 @@
     const supportSelect = document.getElementById('support-level');
     const currencySymbols = { EUR: '€', USD: '$', GBP: '£' };
     // Support level (percent of list price) => Freemius coupon prefix.
-    const couponCodes = { 100: null, 75: '75', 66: '66', 50: '50', 33: '33', 25: '25' };
+    const couponCodes = { 100: null, 75: '75', 50: '50' };
     // Smallest monthly charge worth processing; anything less is annual-only.
     const minMonthly = { USD: 8, EUR: 7.5, GBP: 6.5 };
     // Lowest support level that includes credit benefits, per team size.
-    const teamCreditLevel = { 5: 75, 25: 75, 50: 75, 200: 33 };
+    const teamCreditLevel = { 5: 75, 25: 75, 50: 75, 200: 50 };
 
     function getSupportLevel(forMath) {
       const level = parseInt(supportSelect.value, 10);
