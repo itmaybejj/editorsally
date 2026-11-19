@@ -46,7 +46,9 @@ const manifest = JSON.parse(fs.readFileSync(MANIFEST_PATH, 'utf8'));
 manifest.translations = manifest.translations || {};
 manifest.translations[langArg] = manifest.translations[langArg] || {};
 
-const pages = pageArg ? [pageArg] : i18n.canonicalPaths;
+// English-only pages (i18n.englishOnlyPages) are never translated.
+const pages = (pageArg ? [pageArg] : i18n.canonicalPaths)
+  .filter((p) => !i18n.isEnglishOnly(p));
 
 let created = 0, skipped = 0;
 for (const page of pages) {

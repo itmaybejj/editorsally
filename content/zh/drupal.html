@@ -324,7 +324,7 @@ function MY_MODULE_editoria11y_alter_config(array &$attach, CacheableMetadata $c
 }--></code></pre>
           <p data-i18n-id="s-2368">修改 <code>drupalSettings</code> 仅在模块 JavaScript 已配置好将该值传递给库的情况下才有效。若要添加额外参数，需要直接修改 JavaScript 的
             <code>options</code> 对象。该模块会检测一个名为 <code>editoria11yOptionsOverride</code> 的全局 JavaScript 变量。若该变量已设置，模块将把
-            <code>options</code> 对象传递给您在模块或主题中提供的 <code>editoria11yOptions</code> 函数，届时即可设置任意<a               href="https://editorsally.ddev.site/en/install/#params">库参数</a>。
+            <code>options</code> 对象传递给您在模块或主题中提供的 <code>editoria11yOptions</code> 函数，届时即可设置任意<a               href="/en/install/#params">库参数</a>。
           </p>
           <pre class="language-javascript"><code><!--var editoria11yOptionsOverride = true;
 var editoria11yOptions = function(options) {

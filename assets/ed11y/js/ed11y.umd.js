@@ -1,6 +1,6 @@
 /*!
 			* Editoria11y accessibility checker
-			* @version 3.0.2-1026
+			* @version 3.0.2-1108
 			* @author John Jameson
 			* @license GPLv2
 			* @copyright © 2026 Princeton University.
@@ -836,6 +836,23 @@
   }
   function normalizeStopWord(string) {
     return foldForMatching(string).replace(/[^\p{L}\p{M}\p{N}\s]/gu, "").replace(/\s+/g, " ").trim();
+  }
+  let wordSegmenter;
+  function containsWord(text, word) {
+    const haystack = foldForMatching(text);
+    const needle = foldForMatching(word);
+    if (!needle) return false;
+    if (typeof Intl !== "undefined" && Intl.Segmenter) {
+      wordSegmenter ??= new Intl.Segmenter(void 0, { granularity: "word" });
+      for (const { segment, isWordLike } of wordSegmenter.segment(haystack)) {
+        if (isWordLike && segment === needle) return true;
+      }
+      return false;
+    }
+    const escaped = needle.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    return new RegExp(`(?<![\\p{L}\\p{M}\\p{N}])${escaped}(?![\\p{L}\\p{M}\\p{N}])`, "u").test(
+      haystack
+    );
   }
   const invalidProtocolRegex = /^([^\w]*)(javascript|data|vbscript)/im;
   const htmlEntitiesRegex = /&#(\w+)(^\w|;)?/g;
@@ -1859,7 +1876,7 @@
       });
     }
   }
-  const version = "3.0.2-1026";
+  const version = "3.0.2-1108";
   const sprite = {
     alts: '<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 576 512"><path fill="currentColor" d="M160 80l352 0c9 0 16 7 16 16l0 224c0 8.8-7.2 16-16 16l-21 0L388 179c-4-7-12-11-20-11s-16 4-20 11l-52 80-12-17c-5-6-12-10-19-10s-15 4-19 10L176 336 160 336c-9 0-16-7-16-16l0-224c0-9 7-16 16-16zM96 96l0 224c0 35 29 64 64 64l352 0c35 0 64-29 64-64l0-224c0-35-29-64-64-64L160 32c-35 0-64 29-64 64zM48 120c0-13-11-24-24-24S0 107 0 120L0 344c0 75 61 136 136 136l320 0c13 0 24-11 24-24s-11-24-24-24l-320 0c-49 0-88-39-88-88l0-224zm208 24a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z"></path></svg>',
     close: '<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 384 512"><path fill="currentColor" d="M343 151c13-13 13-33 0-46s-33-13-45 0L192 211 87 105c-13-13-33-13-45 0s-13 33 0 45L147 256 41 361c-13 13-13 33 0 45s33 13 45 0L192 301 297 407c13 13 33 13 45 0s13-33 0-45L237 256 343 151z"></path></svg>',
@@ -2121,6 +2138,7 @@ ${this.error.stack}
     panelJumpNext: {},
     panelShowDismissed: {},
     theme: {},
+    baseFont: document.createElement("div"),
     version,
     english: true,
     running: false,
@@ -2178,7 +2196,7 @@ ${this.error.stack}
     visualizing: false,
     /* Annotations initial states */
     jumpList: [],
-    openJumpPosition: Number - 1,
+    openJumpPosition: -1,
     viaJump: false,
     toggledFrom: false,
     scrollPending: 0,
@@ -4960,7 +4978,7 @@ ${this.error.stack}
           developer: true
         });
       }
-      if (accName.includes(Lang._("BTN"))) {
+      if (containsWord(accName, Lang._("BTN"))) {
         pushResult$1({
           test: "BTN_ROLE_IN_NAME",
           element: $el,
@@ -5804,13 +5822,147 @@ ${this.error.stack}
       Constants.Panel.readabilityInfo.innerHTML = `<br>${Lang._("READABILITY_NOT_ENOUGH")}`;
     }
   }
+  const stripPrefix = (path, prefix) => {
+    const clean = String(prefix ?? "").replace(/\/+$/, "");
+    if (!clean || !path.startsWith(clean)) {
+      return path;
+    }
+    const rest = path.slice(clean.length);
+    if (rest === "") {
+      return "/";
+    }
+    return rest.startsWith("/") ? rest : path;
+  };
+  const paramName = (pair) => {
+    const name = pair.split("=", 1)[0];
+    try {
+      return decodeURIComponent(name);
+    } catch {
+      return name;
+    }
+  };
+  const isWeb = (url2) => url2.protocol === "http:" || url2.protocol === "https:";
+  const REDACTED_CREDENTIALS = "***";
+  const hasCredentials = (url2) => url2.username !== "" || url2.password !== "";
+  class UrlNormalizer {
+    /**
+     * @param {Object} [config]
+     * @param {string[]} [config.internalHosts] Hosts (with any port) of this site.
+     * @param {string[]} [config.prefixes] Path prefixes to strip, in order.
+     * @param {?string[]} [config.preserve] Parameters that identify an internal
+     *   link. Any other is dropped; null keeps every parameter.
+     * @param {string[]} [config.strip] Parameters always dropped.
+     * @param {string} [config.base] Resolves relative hrefs; without it they do
+     *   not parse.
+     */
+    constructor({ internalHosts, prefixes, preserve, strip, base } = {}) {
+      this.internalHosts = new Set(
+        (Array.isArray(internalHosts) ? internalHosts : []).map((host) => String(host).toLowerCase())
+      );
+      this.prefixes = Array.isArray(prefixes) ? prefixes : [];
+      this.preserve = Array.isArray(preserve) ? new Set(preserve) : null;
+      this.strip = new Set(Array.isArray(strip) ? strip : []);
+      this.base = base;
+    }
+    // The canonical form with its whole query. For rules that read parameters
+    // the stored form drops, such as an ignored "?destination=" route.
+    canonical(href) {
+      return this.reduce(href, (url2) => url2.search);
+    }
+    // The form the checker stores: canonical, less the dropped parameters.
+    identity(href) {
+      return this.reduce(href, (url2) => this.filteredSearch(url2));
+    }
+    // The URL as written but without the dropped parameters, for reporting an
+    // anchor to the server. Returns what it was given when there is nothing to
+    // filter or the URL does not parse.
+    stripParams(href) {
+      const url2 = this.parse(href);
+      if (!url2 || !this.isInternal(url2)) {
+        return href;
+      }
+      url2.search = this.filteredSearch(url2);
+      return url2.href;
+    }
+    // Whether a parsed URL is a web link to this site, without credentials.
+    isInternal(url2) {
+      return isWeb(url2) && !hasCredentials(url2) && this.internalHosts.has(url2.host.toLowerCase());
+    }
+    parse(href) {
+      try {
+        return new URL(String(href), this.base);
+      } catch {
+        return null;
+      }
+    }
+    reduce(href, internalSearch) {
+      const url2 = this.parse(href);
+      if (!url2) {
+        return null;
+      }
+      if (hasCredentials(url2)) {
+        url2.username = REDACTED_CREDENTIALS;
+        url2.password = "";
+        url2.hash = "";
+        return url2.href;
+      }
+      if (!isWeb(url2)) {
+        url2.hash = "";
+        return url2.href;
+      }
+      if (this.isInternal(url2)) {
+        const path = this.prefixes.reduce(stripPrefix, url2.pathname);
+        return `${path}${internalSearch(url2)}`;
+      }
+      return `${url2.origin}${url2.pathname}${url2.search}`;
+    }
+    // Names are compared decoded; pairs keep their encoding and order.
+    filteredSearch(url2) {
+      const kept = url2.search.slice(1).split("&").filter((pair) => {
+        if (pair === "") {
+          return false;
+        }
+        const name = paramName(pair);
+        return !this.strip.has(name) && (this.preserve === null || this.preserve.has(name));
+      });
+      return kept.length ? `?${kept.join("&")}` : "";
+    }
+  }
   const LINK_STATUSES = {
     broken: { test: "HREF_BROKEN", type: "link", label: "linkStatusBroken" },
     unpublished: { test: "HREF_UNPUBLISHED", type: "link", label: "linkStatusUnpublished" },
     markedBroken: { test: "HREF_MARKED_BROKEN", type: "link", label: "linkStatusMarkedBroken" },
     access: { test: "HREF_ACCESS", type: "linkManual", label: "linkStatusAccess" },
     unverifiable: { test: "HREF_UNVERIFIABLE", type: "linkManual", label: "linkStatusUnverifiable" },
-    redirect: { test: "HREF_REDIRECT", type: "linkManual", label: "linkStatusRedirect" }
+    redirect: { test: "HREF_REDIRECT", type: "linkManual", label: "linkStatusRedirect" },
+    serverError: { test: "HREF_SERVER_ERROR", type: "linkManual", label: "linkStatusServerError" }
+  };
+  const LINK_REASONS = {
+    broken: {
+      invalid_host: { test: "HREF_BAD_HOST", label: "linkReasonBadHost" },
+      malformed_url: { test: "HREF_MALFORMED", label: "linkReasonMalformed" },
+      scheme_typo: { test: "HREF_SCHEME_TYPO", label: "linkReasonSchemeTypo" },
+      missing_scheme: { test: "HREF_MISSING_HTTPS", label: "linkReasonMissingHttps" },
+      missing_mailto: { test: "HREF_MISSING_MAILTO", label: "linkReasonMissingMailto" },
+      invalid_email: { test: "HREF_EMAIL_INVALID", label: "linkReasonEmailInvalid" },
+      invalid_phone: { test: "HREF_PHONE_INVALID", label: "linkReasonPhoneInvalid" },
+      local_file: { test: "HREF_LOCAL_FILE", label: "linkReasonLocalFile" }
+    },
+    unverifiable: {
+      private: { test: "HREF_PRIVATE", label: "linkReasonPrivate" },
+      private_address: { test: "HREF_PRIVATE", label: "linkReasonPrivate" },
+      userinfo: { test: "HREF_USERINFO", label: "linkReasonUserinfo" },
+      ftp_link: { test: "HREF_FTP", label: "linkReasonFtp" },
+      app_scheme: { test: "HREF_APP_LINK", label: "linkReasonAppLink" }
+    },
+    redirect: {
+      redirect_scheme: { test: "HREF_REDIRECT_APP", label: "linkReasonRedirectApp" }
+    }
+  };
+  const describeEntry = (entry) => {
+    const status = LINK_STATUSES[entry.status];
+    const reason = typeof entry.reason === "string" && Object.hasOwn(LINK_REASONS[entry.status] ?? {}, entry.reason) ? LINK_REASONS[entry.status][entry.reason] : null;
+    return { ...status, ...reason };
   };
   const DISMISSED_LABELS = { ok: "linkDismissedOk", hide: "linkDismissedHide" };
   const isKnownLinkStatus = (status) => typeof status === "string" && Object.hasOwn(LINK_STATUSES, status);
@@ -5824,43 +5976,19 @@ ${this.error.stack}
     if (isKnownDismissal(entry.dismissed)) {
       return Lang._(DISMISSED_LABELS[entry.dismissed]);
     }
-    return isKnownLinkStatus(entry.status) ? Lang._(LINK_STATUSES[entry.status].label) : entry.status;
+    return isKnownLinkStatus(entry.status) ? Lang._(describeEntry(entry).label) : entry.status;
   };
   const displayHref = (href) => String(href).replace(/^https?:\/\//i, "");
-  const stripPrefix = (path, prefix) => {
-    const clean = String(prefix ?? "").replace(/\/+$/, "");
-    if (!clean || !path.startsWith(clean)) {
-      return path;
-    }
-    const rest = path.slice(clean.length);
-    if (rest === "" || rest.startsWith("?")) {
-      return `/${rest}`;
-    }
-    return rest.startsWith("/") ? rest : path;
-  };
-  const canonicalHref = (href, options = State.option, base = document.baseURI) => {
-    let url2;
-    try {
-      url2 = new URL(String(href), base);
-    } catch {
-      return null;
-    }
-    if (url2.protocol !== "http:" && url2.protocol !== "https:" && url2.protocol !== "file:") {
-      return null;
-    }
-    const search = url2.search === "?" ? "" : url2.search;
-    const host = url2.host.toLowerCase();
-    const internalHosts = Array.isArray(options.brokenLinksInternalHosts) ? options.brokenLinksInternalHosts.map((h) => String(h).toLowerCase()) : [];
-    if (host === window.location.host.toLowerCase() || internalHosts.includes(host)) {
-      let path = url2.pathname;
-      const prefixes = Array.isArray(options.brokenLinksPathPrefixes) ? options.brokenLinksPathPrefixes : [];
-      for (const prefix of prefixes) {
-        path = stripPrefix(path, prefix);
-      }
-      return `${path || "/"}${search}`;
-    }
-    return `${url2.origin}${url2.pathname}${search}`;
-  };
+  const matchNormalizer = () => new UrlNormalizer({
+    internalHosts: [
+      window.location.host,
+      ...Array.isArray(State.option.brokenLinksInternalHosts) ? State.option.brokenLinksInternalHosts : []
+    ],
+    prefixes: State.option.brokenLinksPathPrefixes,
+    preserve: State.option.brokenLinksPreserveParams,
+    strip: State.option.brokenLinksStripParams,
+    base: document.baseURI
+  });
   function prepareBrokenLinks() {
     if (!Array.isArray(State.option.brokenLinks)) {
       if (State.option.brokenLinks) {
@@ -5884,6 +6012,16 @@ ${this.error.stack}
       }
       return true;
     });
+    const preserve = State.option.brokenLinksPreserveParams;
+    if (preserve !== null && preserve !== void 0 && !Array.isArray(preserve)) {
+      console.warn("Editoria11y: brokenLinksPreserveParams must be an array of names or null.");
+      State.option.brokenLinksPreserveParams = null;
+    }
+    const strip = State.option.brokenLinksStripParams;
+    if (strip !== void 0 && !Array.isArray(strip)) {
+      console.warn("Editoria11y: brokenLinksStripParams must be an array of names.");
+      State.option.brokenLinksStripParams = [];
+    }
     if (State.option.brokenLinksRoots && typeof State.option.brokenLinksRoots !== "string") {
       console.warn("Editoria11y: brokenLinksRoots must be a CSS selector string.");
       State.option.brokenLinksRoots = false;
@@ -5900,12 +6038,12 @@ ${this.error.stack}
       }
     });
   }
-  const indexEntries = () => {
+  const indexEntries = (normalizer) => {
     const byHref = /* @__PURE__ */ new Map();
     for (const entry of State.option.brokenLinks) {
-      const canonical = canonicalHref(entry.href);
-      if (canonical && !byHref.has(canonical)) {
-        byHref.set(canonical, entry);
+      const identity = normalizer.identity(entry.href);
+      if (identity && !byHref.has(identity)) {
+        byHref.set(identity, entry);
       }
       if (!byHref.has(entry.href)) {
         byHref.set(entry.href, entry);
@@ -5913,8 +6051,8 @@ ${this.error.stack}
     }
     return byHref;
   };
-  const buildContent = (entry, status) => {
-    const content = Lang.sprintf(status.test, entry.redirectsTo ?? null);
+  const buildContent = (entry, test) => {
+    const content = Lang.sprintf(test, entry.redirectsTo ?? null);
     const target = document.createElement("p");
     const linkWrap = document.createElement("i");
     const link = document.createElement("a");
@@ -5924,7 +6062,7 @@ ${this.error.stack}
     link.setAttribute("rel", "noopener noreferrer");
     const prefix = document.createElement("strong");
     link.textContent = displayHref(entry.href);
-    prefix.textContent = entry.redirectsTo ? Lang._("linkRedirectTarget") : Lang._("linksCheckThis");
+    prefix.textContent = entry.redirectsTo ? Lang._("linkRedirectOriginal") : Lang._("linksCheckThis");
     prefix.textContent += " ";
     target.append(prefix);
     linkWrap.append(link);
@@ -5948,22 +6086,23 @@ ${this.error.stack}
     if (!State.option.brokenLinks?.length) {
       return;
     }
-    const byHref = indexEntries();
+    const normalizer = matchNormalizer();
+    const byHref = indexEntries(normalizer);
     for (const anchor of linkAnchors()) {
       if (!anchor.matches("a[href]")) {
         continue;
       }
-      const entry = byHref.get(canonicalHref(anchor.href)) ?? byHref.get(anchor.getAttribute("href"));
+      const entry = byHref.get(normalizer.identity(anchor.href)) ?? byHref.get(anchor.getAttribute("href"));
       if (!entry) {
         continue;
       }
-      const status = LINK_STATUSES[entry.status];
+      const status = describeEntry(entry);
       const hash = entry.hash ?? entry.href;
       const result = {
         test: status.test,
         element: anchor,
         type: status.type,
-        content: buildContent(entry, status),
+        content: buildContent(entry, status.test),
         dismiss: prepareDismissal(`link${hash}`),
         data: { hash, href: entry.href, status: entry.status, redirectsTo: entry.redirectsTo },
         brokenLink: entry
@@ -6220,7 +6359,7 @@ ${this.error.stack}
         const leftPad = 7 * result.headingLevel - 7;
         const li = document.createElement("li");
         li.classList.add(`level${result.headingLevel}`);
-        li.style.setProperty("margin-left", `${leftPad}px`);
+        li.style.setProperty("margin-inline-start", `${leftPad}px`);
         const levelPrefix = document.createElement("strong");
         levelPrefix.textContent = `H${result.headingLevel}: `;
         const userText = document.createElement("span");
@@ -6743,7 +6882,7 @@ ${this.error.stack}
     sweepOrphans();
     UI.jumpList.forEach((el, i) => {
       el.dataset.ed11yJumpPosition = `${i}`;
-      const newLabel = `${Lang._("ALERT_TEXT")} ${i + 1} / ${UI.jumpList.length - 1}, ${el.shadowRoot.querySelector(".toggle").getAttribute("aria-label")}`;
+      const newLabel = `${Lang._("ALERT_TEXT")} ${i + 1} / ${UI.jumpList.length},${el.shadowRoot.querySelector(".toggle").getAttribute("aria-label")}`;
       el.shadowRoot.querySelector(".toggle").setAttribute("aria-label", newLabel);
     });
     const tipsPainted = new CustomEvent("ed11yResultsPainted");
@@ -6896,6 +7035,11 @@ ${this.error.stack}
     for (const [key, value] of Object.entries(UI.theme)) {
       document.documentElement.style.setProperty(`--ed11y-${key}`, `${value}`);
     }
+    UI.baseFont.style.setProperty("visibility", "hidden");
+    UI.baseFont.style.setProperty("pointer-events", "none");
+    UI.baseFont.style.setProperty("width", "1rem");
+    UI.baseFont.ariaHidden = true;
+    document.documentElement.appendChild(UI.baseFont);
     if (document.querySelector("body")) {
       UI.attachCSS(document);
     }
@@ -7003,34 +7147,23 @@ ${this.error.stack}
       return false;
     }
     UI.viaJump = true;
-    const goMax = UI.jumpList.length - 1;
-    let goNum = next ? +UI.openJumpPosition + 1 : +UI.openJumpPosition - 1;
-    if (goNum < 0) {
-      goNum = goMax;
-      UI.nextText = `${Lang._("SKIP_TO_ISSUE")} 1`;
-    } else if (goNum > goMax) {
-      goNum = 0;
-      UI.nextText = `${Lang._("SKIP_TO_ISSUE")} ${goNum + 1}`;
-    } else {
-      let showNum = Number.isNaN(goNum) ? 2 : goNum + 2;
-      if (showNum > goMax + 1) {
-        showNum = 1;
-      }
-      UI.nextText = `${Lang._("SKIP_TO_ISSUE")} ${showNum}`;
-    }
-    UI.openJumpPosition = goNum;
-    window.setTimeout(() => {
-      UI.panelJumpNext.querySelector(".ed11y-sr-only").textContent = UI.nextText;
-    }, 250);
     resetClass(["ed11y-hidden-highlight"]);
     if (UI.jumpList.length === 0) {
       buildJumpList();
     }
-    let goto = UI.jumpList[goNum];
-    if (!goto) {
-      goto = UI.jumpList[0];
-      UI.openJumpPosition = 0;
+    const count = UI.jumpList.length;
+    if (count === 0) {
+      UI.viaJump = false;
+      return false;
     }
+    const current = Number.isInteger(+UI.openJumpPosition) ? +UI.openJumpPosition : -1;
+    const goNum = ((next ? current + 1 : current - 1) % count + count) % count;
+    UI.openJumpPosition = goNum;
+    const goto = UI.jumpList[goNum];
+    UI.nextText = `${Lang._("SKIP_TO_ISSUE")} ${(goNum + 1) % count + 1}`;
+    window.setTimeout(() => {
+      UI.panelJumpNext.querySelector(".ed11y-sr-only").textContent = UI.nextText;
+    }, 250);
     const result = goto.getAttribute("data-ed11y-result");
     const gotoResult = State.results[result];
     const target = gotoResult.element;
@@ -7087,6 +7220,14 @@ ${this.error.stack}
         tip
       );
     }
+    let containWidth = window.innerWidth;
+    if (UI.baseFont && (containWidth < 20 * UI.baseFont.clientWidth || window.innerHeight < 20 * UI.baseFont.clientWidth)) {
+      tip.removeAttribute("style");
+      tip.classList.add("overflow");
+      return;
+    } else {
+      tip.classList.remove("overflow");
+    }
     const mark = button.getRootNode().host;
     const resultNum = button.dataset.ed11yResult;
     const result = State.results[resultNum];
@@ -7098,7 +7239,6 @@ ${this.error.stack}
     let buttonTop = buttonOffset.top + scrollTop;
     let containTop = scrollTop;
     let containLeft = 0;
-    let containWidth = window.innerWidth;
     let containBottom = window.innerHeight + scrollTop;
     let absoluteBottom = containBottom;
     if (!UI.inlineAlerts && result.scrollableParent) {
@@ -7126,8 +7266,19 @@ ${this.error.stack}
     const containRight = Math.min(window.innerWidth, containLeft + containWidth);
     const tipWidth = tip.offsetWidth;
     const tipHeight = tip.offsetHeight;
+    const footer = tip.querySelector(".footer");
+    const footerElements = tip.querySelectorAll(".footer > *");
+    let footerWidth = 0;
+    footerElements?.forEach((el) => {
+      footerWidth += el.clientWidth;
+    });
     toolTip.style.setProperty("top", `${buttonOffset.top + scrollTop}px`);
     toolTip.style.setProperty("left", `${buttonOffset.left + leftAdd}px`);
+    if (footerWidth > tipWidth + 5) {
+      footer.classList.add("overflow");
+    } else {
+      footer.classList.remove("overflow");
+    }
     let direction = "under";
     if (buttonTop === 0 && buttonLeft === 0) {
       direction = "whompWhomp";
@@ -7138,7 +7289,7 @@ ${this.error.stack}
         direction = "above";
       } else if (containLeft < buttonLeft - (buttonSize + tipWidth + 30) && containTop + tipHeight + 30 < containBottom) {
         direction = "left";
-      } else if (buttonTop + tipHeight + buttonSize > absoluteBottom) {
+      } else if (buttonTop + tipHeight + buttonSize > absoluteBottom && buttonTop - tipHeight > 0) {
         direction = "above";
       }
     }
@@ -7927,7 +8078,7 @@ ${this.error.stack}
     handleHover(event) {
       event.preventDefault();
       const host = this.getRootNode().host;
-      if (!this.classList.contains("intersecting") && host.open !== true && host.racing === false) {
+      if (!this.classList.contains("intersecting") && host.open !== true && host.racing === false && window.innerWidth > 320) {
         this.open = true;
         host.racing = true;
         host.toggleTip(true);
@@ -8684,12 +8835,14 @@ ${this.error.stack}
       if (UI.jumpList.length > 1) {
         this.prev = this.wrapper.querySelector(".prev");
         this.prev.setAttribute("title", `${Lang._("SKIP_TO_ISSUE")} ${this.issuePrev}`);
+        this.prev.setAttribute("aria-label", Lang._("buttonPrev"));
         this.prev.addEventListener("click", (event) => {
           event.preventDefault();
           jumpTo(false);
         });
         this.next = this.wrapper.querySelector(".next");
         this.next.setAttribute("title", `${Lang._("SKIP_TO_ISSUE")} ${this.issueNext}`);
+        this.next.setAttribute("aria-label", Lang._("buttonNext"));
         this.next.addEventListener("click", (event) => {
           event.preventDefault();
           jumpTo();
@@ -9311,12 +9464,27 @@ ${this.error.stack}
     LINK_MAYBE_BUTTON: "Is this link actually a button?",
     LINK_NEW_TAB: "Does this link open a new tab without warning?",
     // Link checker results (see rulesets/broken-links.js).
-    HREF_BROKEN: "Broken link",
-    HREF_UNPUBLISHED: "Link to unpublished content",
-    HREF_MARKED_BROKEN: "Link marked broken by an editor",
-    HREF_ACCESS: "Link to restricted content",
-    HREF_UNVERIFIABLE: "Link needs a manual check",
-    HREF_REDIRECT: "Link redirects to a different site",
+    HREF_BROKEN: "This link is broken",
+    HREF_UNPUBLISHED: "Did you mean to link to an unpublished page?",
+    HREF_MARKED_BROKEN: "This link was marked broken by an editor",
+    HREF_ACCESS: "Did you mean to link to password-protected content?",
+    HREF_UNVERIFIABLE: "This link needs a manual check",
+    HREF_REDIRECT: "This link redirects to a different site",
+    HREF_SERVER_ERROR: "The linked site may be down",
+    // Link checker reasons, which refine the statuses above.
+    HREF_BAD_HOST: "This link is broken",
+    HREF_MALFORMED: "This link address has a typo",
+    HREF_SCHEME_TYPO: "This link address starts with a typo",
+    HREF_MISSING_HTTPS: 'This link is missing "https://"',
+    HREF_MISSING_MAILTO: 'This email link is missing "mailto:"',
+    HREF_EMAIL_INVALID: "This email link has no valid address",
+    HREF_PHONE_INVALID: "This phone link has no number to dial",
+    HREF_LOCAL_FILE: `This link points to a file on someone's computer`,
+    HREF_PRIVATE: "This link needs a manual check",
+    HREF_USERINFO: "This link contains a username or password",
+    HREF_FTP: "FTP links no longer open in browsers",
+    HREF_APP_LINK: "This link opens an app",
+    HREF_REDIRECT_APP: "This link redirects to an app or email address",
     LINK_PLACEHOLDER_ALT: "This linked alt text may be a placeholder",
     LINK_STOPWORD: "This link only contains generic words",
     LINK_STOPWORD_ARIA: "The purpose of this link is visually hidden",
@@ -9403,9 +9571,9 @@ ${this.error.stack}
     LABELS_INPUT_RESET: `<p>Reset buttons are easy to activate by mistake, causing data loss without an opportunity to cancel or undo.</p><p>${why.fix}Unless this is resetting a single field, consider removing it or providing a method to cancel before executing the action.</p>`,
     LABELS_MISSING_IMAGE_INPUT: "Image button is missing alt text. Please add alt text to provide an accessible name. For example: <em>Search</em> or <em>Submit</em>.",
     LABELS_MISSING_LABEL: `<p>${why.fix}Add an <code>id</code> to this input, and add a matching <code>for</code> attribute to the label.</p>`,
-    LABELS_NO_FOR_ATTRIBUTE: "There is no label associated with this input. Add a <code>for</code> attribute to the label that matches the <code>id</code> of this input. <hr> <strong>ID:</strong> <code>#%(ID)</code>",
+    LABELS_NO_FOR_ATTRIBUTE: "<p>There is no label associated with this input. Add a <code>for</code> attribute to the label that matches the <code>id</code> of this input.</p><p><strong>ID:</strong> <code>#%(ID)</code></p>",
     LABELS_PLACEHOLDER: `<p>Placeholder text can be mistaken for previously entered content if it has good contrast, or be illegible if it does not. It then disappears on input, which may remove information users needed to check for errors.</p><p>${why.fix}Make sure key information like the field label, help text and format instructions remain visible when there is content in this field, and consider dropping the placeholder altogether.</p>`,
-    LABEL_IN_NAME: `<p><strong>Visible text:</strong> <i>%(VISIBLE)</i></p><p><strong>Label for screen readers:</strong> <i>%(LABEL)</i></p><p>The visible text for this element appears to be different from the accessible name. This may cause confusion for screen reader users, and may break voice control.</p><p>${why.fix}Make sure the visible label starts with the text of the invisible label, and does not contain any meaningful information that is missing from the invisible label.</p>`,
+    LABEL_IN_NAME: `<p><strong>Visible text:</strong> <i>%(VISIBLE)</i></p><p><strong>Label for screen readers:</strong> <i>%(LABEL)</i></p><p>The visible text for this element appears to be different from the accessible name. This may cause confusion for screen reader users, and may break voice control.</p><p>${why.fix}Make sure the invisible label starts with the text of the visible label, and does not contain any meaningful information that is missing from the visible label.</p>`,
     LINK_ALT_FILE_EXT: `<p>This alt text is probably a filename instead of a meaningful label for a link:<br><span hidden>%(ALT)</span><i>%(alt)</i></p><p>${why.fix}Use the title of the link destination as alt text for linked images.</p><div class="why"> <p>The purpose of alt text is to provide an alternative for what an image means, not what it contains. The meaning of a linked image is the link destination:</p><ul><li>"Page with writing" describes the image, not a link.</li><li>"IMG_1234.jpg" is just a filename.</li><li>"Event registration form (.doc)" is a link destination.</li></ul></div>`,
     LINK_ALT_MAYBE_BAD: `<p><strong>Alt text:</strong> <i>%(alt)</i></p><p>${why.fix}Use the title of the link destination as alt text for linked images.</p>${why.imageLinks}`,
     LINK_ALT_MAYBE_BAD_WARNING: `<p><strong>Alt text:</strong> <i>%(alt)</i></p><p>${why.fix}Use the title of the link destination as alt text for linked images.</p>${why.imageLinks}`,
@@ -9425,12 +9593,26 @@ ${this.error.stack}
     LINK_IMAGE_TEXT: "Image is marked as decorative, although the link is using the surrounding text as a descriptive label.",
     LINK_MAYBE_BUTTON: `<p><strong>Link:</strong> <i>%(TEXT)</i></p><p>This link has an invalid target, and has a name that suggests it might be working as a button or toggle instead of a link.</p><p>${why.fix}Use a <a href="https://www.w3.org/WAI/ARIA/apg/patterns/button/">&lt;button&gt;</a> instead, or correct the link's target.</p><div class="why"><p>Tip: Assistive technologies treat buttons and links differently. Using the correct HTML element ensures users know which keyboard shortcuts to use and what action will trigger.</p></div>`,
     // Link checker results. The ruleset appends the link target after these.
-    HREF_BROKEN: "<p>The link checker could not reach this link. It may have moved or been deleted:</p>",
+    HREF_BROKEN: "<p>The target page did not exist when last checked. Please confirm it is gone, then fix or remove this link:</p>",
     HREF_UNPUBLISHED: "<p>Please publish the linked page or update this link:</p>",
-    HREF_MARKED_BROKEN: "<p>An editor marked this link as broken:</p>",
+    HREF_MARKED_BROKEN: "<p>Please update this link if it is still broken:</p>",
     HREF_ACCESS: "<p>This link points to content that anonymous visitors cannot see. Confirm that this is intentional:</p>",
-    HREF_UNVERIFIABLE: "<p>The linked site is blocking automated link checking. Please check this URL manually and confirm it works as expected:</p>",
-    HREF_REDIRECT: "<p>Confirm that the linked URL below is the correct redirect, or update this link with a new URL.</p><p><strong>Original:</strong> %(redirectsTo)</p>",
+    HREF_UNVERIFIABLE: "<p>The link might be fine, but the server blocked the link checker. Please open the link and confirm it works:</p>",
+    HREF_REDIRECT: "<p>Please confirm the redirect is valid, and consider updating the link to the new address.</p><p><strong>Redirects to:</strong> %(redirectsTo)</p>",
+    HREF_SERVER_ERROR: "<p>The linked site returned an error or did not respond. Open the link and confirm it works:</p>",
+    HREF_BAD_HOST: "<p>The site name in this link is not valid. Look for a typo:</p>",
+    HREF_MALFORMED: "<p>The address may contain a space or a character that is not allowed in links:</p>",
+    HREF_SCHEME_TYPO: '<p>The start of this link (such as "https://" or "mailto:") is misspelled or incomplete, so browsers cannot open it:</p>',
+    HREF_MISSING_HTTPS: '<p>Without "https://" at the start, browsers treat this address as a page on this site, and no such page exists. Add "https://" to the start of this link:</p>',
+    HREF_MISSING_MAILTO: '<p>Add "mailto:" to the start of a link to an email address:</p>',
+    HREF_EMAIL_INVALID: '<p>The link starts with "mailto:", so clicking it will open an email program, but it is not followed by a valid email address. If this should open a web page, replace "mailto:" with "https://":</p>',
+    HREF_PHONE_INVALID: '<p>Phones can only dial digits, so this link will not place a call. After "tel:" in the link address, use only the number, such as tel:+1-555-010-0199. The visible link text can still spell a word:</p>',
+    HREF_LOCAL_FILE: "<p>The link points to a file on the computer where the page was written; the link will not work for other people. Upload the file to the site and link to it there:</p>",
+    HREF_PRIVATE: `<p>This link points to a private address, such as an intranet or a personal computer. Confirm that this is intentional, or link to a public address:</p>`,
+    HREF_USERINFO: `<p>Anyone who can view this page can read the username or password written into this link's address. Remove it from the link and, if it is a real password, change it. This link was not checked:</p>`,
+    HREF_FTP: '<p>Web browsers cannot open "ftp:" links. Check whether the file is also available at an "https://" address, or provide users with instructions for downloading file transfer software:</p>',
+    HREF_APP_LINK: "<p>This link opens another program, such as a calendar, meeting or music app, instead of a web page. Confirm it opens the right app, and that visitors without that app have another way to reach this content:</p>",
+    HREF_REDIRECT_APP: "<p>This link forwards visitors to an app or an email address instead of a web page. Confirm that this is intentional, or update the link.</p><p><strong>Redirects to:</strong> %(redirectsTo)</p>",
     LINK_NEW_TAB: `<p><strong>Link text:</strong> <i>%(TEXT)</i></p><p>${why.fix}Set this link to open in the same tab, or <a href="https://itmaybejj.github.io/linkpurpose/">warn users</a> first.</p><div class="why"><p>Readers can always <em>choose</em> to open a link in a new tab. When a link forces open a new tab, it is often confusing or annoying, especially for assistive device users who wonder why their browser's "back" button stopped working.</p><p>Note: forms are the exception. When the user is filling out a form, opening a link in the same window could cause them to lose their work, so links within forms usually open in new tabs.</p></div>`,
     LINK_PLACEHOLDER_ALT: `<p><strong>Alt text:</strong> <i>%(alt)</i></p><p>${why.fix}Use the title of the link destination as alt text for linked images.</p>${why.imageLinks}`,
     LINK_STOPWORD: `<p>Link text: <i>%(ERROR)</i></p><p>${why.fix}Use link text that describes its destination.</p>${why.links}`,
@@ -9488,6 +9670,8 @@ ${this.error.stack}
     PANEL_DISMISS_BUTTON: `Show %(dismissCount) hidden alerts`,
     PANEL_HEADING: "Show visualizers",
     SKIP_TO_ISSUE: "Show alert",
+    buttonNext: "Next",
+    buttonPrev: "Previous",
     WARNING: "Manual check",
     WARNINGS: "manual checks",
     // Not in use?
@@ -9521,11 +9705,24 @@ ${this.error.stack}
     linkStatusAccess: "Restricted",
     linkStatusUnverifiable: "Unverified",
     linkStatusRedirect: "Redirected",
+    linkStatusServerError: "Not responding",
+    linkReasonBadHost: "Bad site name",
+    linkReasonMalformed: "Malformed",
+    linkReasonSchemeTypo: "Typo",
+    linkReasonMissingHttps: "Missing https://",
+    linkReasonMissingMailto: "Missing mailto:",
+    linkReasonEmailInvalid: "Bad email",
+    linkReasonPhoneInvalid: "Bad phone number",
+    linkReasonLocalFile: "Local file",
+    linkReasonPrivate: "Private network",
+    linkReasonUserinfo: "Username or password",
+    linkReasonFtp: "FTP",
+    linkReasonAppLink: "Opens an app",
+    linkReasonRedirectApp: "Redirects to app",
     linkDismissedOk: "Marked OK",
     linkDismissedHide: "Ignored",
     linksCheckThis: "URL to check:",
     linkRedirectOriginal: "Original:",
-    linkRedirectTarget: "Redirects to:",
     main_toggle_hide: "Hide accessibility tools",
     main_toggle_hide_alerts: "Hide accessibility alerts",
     main_toggle_show: "Show accessibility tools",
@@ -9706,7 +9903,11 @@ ${this.error.stack}
      * {
      *  href         Required. The URL as the checker stored it.
      *  status       Required. The problem: 'broken' | 'unpublished' |
-     *               'access' | 'unverifiable' | 'redirect' | 'markedBroken'
+     *               'access' | 'unverifiable' | 'redirect' | 'serverError' |
+     *               'markedBroken'
+     *  reason       The checker's machine reason, e.g. 'invalid_email'. A
+     *               reason listed under the status in LINK_REASONS gets its
+     *               own title and tip; any other falls back to the status.
      *  dismissed    The verdict, if any: 'ok' (an editor marked the link OK
      *               site-wide) or 'hide' (this editor ignored the alert).
      *  redirectsTo  Where a 'redirect' link now lands.
@@ -9720,18 +9921,26 @@ ${this.error.stack}
     // Path prefixes the checker strips from internal links before storing
     // them, e.g. a subdirectory base path or a language prefix: ['/en'].
     brokenLinksPathPrefixes: [],
+    // Query parameters that identify an internal link when the checker stores
+    // only some of them; an anchor is matched without the others, e.g. an image
+    // token: ['page']. Null keeps every parameter. External links are untouched.
+    brokenLinksPreserveParams: null,
+    // Query parameters the checker always drops from internal links, even with
+    // no preserve list, e.g. those a report adds to its links: ['ed1ref'].
+    brokenLinksStripParams: [],
     // Where to look for the flagged links: a CSS selector for the containers
     // the checker harvested, e.g. 'body' when it read menus and footers too.
     // False paints only links inside the check roots. Container ignores
     // (containerIgnore, ignoreElements) apply either way.
     brokenLinksRoots: false,
-    // Which link checker manual checks ('access', 'unverifiable', 'redirect')
+    // Which link checker manual checks ('access', 'unverifiable', 'redirect',
+    // 'serverError')
     // are painted like any other manual check. Statuses removed from this list
     // hide until the visualizer panel opens. A site with many links the checker
     // cannot verify is overwhelming; this convert checking to a manual task:
     //   brokenLinksShowChecks: ['redirect'],  // unverifiable and access hide
     //   brokenLinksShowChecks: [],            // every manual check hides
-    brokenLinksShowChecks: ["access", "unverifiable", "redirect"],
+    brokenLinksShowChecks: ["access", "unverifiable", "redirect", "serverError"],
     // Whether editors may Mark OK and Mark broken on flagged links. Null
     // follows allowOK.
     allowLinkMarks: null,
@@ -9830,8 +10039,8 @@ ${this.error.stack}
     checkVisible: true,
     // Selector list for elements where the tip opening JS should wait for your theme to modify the DOM or CSS before opening the tip.
     hiddenHandlers: "",
-    panelOffsetX: "25px",
-    panelOffsetY: "25px",
+    panelOffsetX: "min(25px, 2vw)",
+    panelOffsetY: "min(25px, 2vh)",
     panelNoCover: "",
     // select other buttons to avoid.
     panelAttachTo: document.body,
@@ -10468,6 +10677,7 @@ ${this.error.stack}
   exports2.Lang = Lang;
   exports2.State = State;
   exports2.UI = UI;
+  exports2.UrlNormalizer = UrlNormalizer;
   exports2.computeAccessibleName = computeAccessibleName;
   exports2.createDismissalKey = createDismissalKey;
   exports2.elements = elements;

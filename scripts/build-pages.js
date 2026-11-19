@@ -17,6 +17,9 @@
  *     for English; /<lang>/<en-slug>/ for non-English where the slug is
  *     translated). Stubs are crawlable (no `noindex`) so search engines pick
  *     up the redirect and update their index.
+ *   - English-only pages (i18n.englishOnlyPages) are never built in other
+ *     languages; their former /<lang>/... URLs become redirect stubs to the
+ *     English page.
  *
  * Usage:
  *   node scripts/build-pages.js              # all languages, all pages
@@ -51,6 +54,7 @@ const DEFAULT_DESCRIPTION =
 // the built HTML is byte-identical on a no-op rebuild.
 const CACHE_BUSTED_ASSETS = [
   '/assets/bootstrap/css/bootstrap.min.css',
+  '/assets/bootstrap/css/bootstrap.rtl.min.css',
   '/assets/theme.css',
   '/assets/prism/prism.css',
   '/assets/bootstrap/js/bootstrap.bundle.min.js',
@@ -202,6 +206,10 @@ function rewriteSlugsInMain(mainNode, lang) {
       a.setAttribute('href', `${i18n.langPrefix(lang)}/${rest}`);
       continue;
     }
+    if (i18n.isEnglishOnly(slug)) {
+      a.setAttribute('href', `/${slug}${trailing}${rest}`);
+      continue;
+    }
     if (slug === 'about' || i18n.canonicalPaths.includes(slug)) {
       const translatedSlug = slug === 'about' ? '' : i18n.getPath(lang, slug);
       if (slug === 'about') {
@@ -239,7 +247,28 @@ function writeRedirectStub(stubPath, targetPath, lang) {
   fs.writeFileSync(stubPath, redirectStub(targetPath, lang));
 }
 
+// English-only pages have no translations. Every URL the page used to have
+// in `lang` (translated slug and English-slug alias) becomes a redirect
+// stub pointing at the English page.
+function buildEnglishOnlyRedirects(lang, page) {
+  const target = i18n.buildPath('en', page);
+  const stubPaths = new Set([
+    path.join(ROOT, lang, i18n.getPath(lang, page), 'index.html'),
+    path.join(ROOT, lang, page, 'index.html'),
+  ]);
+  for (const stubPath of stubPaths) {
+    writeRedirectStub(stubPath, target, lang);
+  }
+  return { ok: true, outPath: null, aliases: [...stubPaths] };
+}
+
 function buildPage(lang, page) {
+  if (lang !== 'en' && i18n.isEnglishOnly(page)) {
+    if (fs.existsSync(fragmentPath(lang, page))) {
+      throw new Error(`content/${lang}/${page}.html exists but "${page}" is English-only; delete the fragment`);
+    }
+    return buildEnglishOnlyRedirects(lang, page);
+  }
   const fragPath = fragmentPath(lang, page);
   if (!fs.existsSync(fragPath)) {
     return { skipped: true, reason: 'no fragment' };
@@ -268,6 +297,14 @@ function buildPage(lang, page) {
   const nav = i18n.getNav(lang);
   let out = template;
   out = out.replaceAll('@@LANG@@', lang);
+  // Right-to-left languages get dir="rtl" and Bootstrap's mirrored build.
+  // LTR pages omit the attribute (ltr is the default), keeping their output
+  // unchanged.
+  const isRtl = i18n.getDir(lang) === 'rtl';
+  out = out.replaceAll('@@DIR_ATTR@@', isRtl ? ' dir="rtl"' : '');
+  out = out.replaceAll('@@BOOTSTRAP_CSS@@', isRtl
+    ? '/assets/bootstrap/css/bootstrap.rtl.min.css'
+    : '/assets/bootstrap/css/bootstrap.min.css');
   out = out.replaceAll('@@LANG_PREFIX@@', i18n.langPrefix(lang));
   out = out.replaceAll('@@TITLE@@', htmlText(title));
   out = out.replaceAll('@@TOGGLE_NAV@@', htmlAttr(nav.toggleNav));
@@ -349,8 +386,10 @@ for (const lang of languages) {
     try {
       const r = buildPage(lang, page);
       if (r.ok) {
-        console.log(`  ✓ ${path.relative(ROOT, r.outPath)}`);
-        ok++;
+        if (r.outPath) {
+          console.log(`  ✓ ${path.relative(ROOT, r.outPath)}`);
+          ok++;
+        }
         for (const a of r.aliases) {
           console.log(`    ↪ redirect: ${path.relative(ROOT, a)}`);
           redirects++;

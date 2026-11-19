@@ -16,7 +16,7 @@ const demo = async () => {
   });
 
   const langFiles = [
-    'bg', 'cs', 'da', 'de', 'el', 'es', 'et', 'fi', 'fr', 'hu', 'id', 'it',
+    'ar', 'bg', 'cs', 'da', 'de', 'el', 'es', 'et', 'fi', 'fr', 'hu', 'id', 'it',
     'ja', 'ko', 'lt', 'lv', 'nb', 'nl', 'pl', 'pt-br', 'pt-pt', 'ro',
     'sk', 'sl', 'sv', 'tr', 'uk', 'zh', 'en'
   ];

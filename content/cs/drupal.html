@@ -342,7 +342,7 @@ function MY_MODULE_editoria11y_alter_config(array &$attach, CacheableMetadata $c
   }
 }--></code></pre>
           <p data-i18n-id="s-2368">Úprava <code>drupalSettings</code> pomáhá pouze tehdy, pokud je JS modulu již nastaven tak, aby předával tuto hodnotu knihovně. Pro přidání dalších parametrů je třeba přímo upravit JS objekt <code>options</code>.
-            Modul kontroluje jednu globální JS proměnnou <code>editoria11yOptionsOverride</code>. Pokud je nastavena, předá objekt <code>options</code> funkci <code>editoria11yOptions</code>, kterou jste uvedli ve svém modulu nebo motivu. Nyní můžete nastavit libovolné <a               href="https://editorsally.ddev.site/en/install/#params">parametry knihovny</a>.</p>
+            Modul kontroluje jednu globální JS proměnnou <code>editoria11yOptionsOverride</code>. Pokud je nastavena, předá objekt <code>options</code> funkci <code>editoria11yOptions</code>, kterou jste uvedli ve svém modulu nebo motivu. Nyní můžete nastavit libovolné <a               href="/en/install/#params">parametry knihovny</a>.</p>
           <pre class="language-javascript"><code><!--var editoria11yOptionsOverride = true;
 var editoria11yOptions = function(options) {
   // You now have access to the processed options object that will be passed to the library.

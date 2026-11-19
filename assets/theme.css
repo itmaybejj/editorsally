@@ -38,7 +38,7 @@ label {
 }
 
 .listgrid ul {
-    padding-left: 1rem;
+    padding-inline-start: 1rem;
 }
 
 [data-bs-theme="light"] {
@@ -79,8 +79,8 @@ label {
         color: var(--bs-body-bg);
 
         @media (max-width: 768px) {
-            padding-left: .5rem;
-            margin-left: -.5rem;
+            padding-inline-start: .5rem;
+            margin-inline-start: -.5rem;
         }
     }
 
@@ -187,7 +187,7 @@ label {
 .logo-icon {
     height: 1em;
     width: 1em;
-    margin-right: .25em;
+    margin-inline-end: .25em;
     border: 1.5px solid;
     border-radius: 1em;
     opacity: .99;
@@ -320,7 +320,7 @@ label {
         }
 
         .container .nav-link {
-            margin-right: 0;
+            margin-inline-end: 0;
             display: flex;
             align-items: center;
             border-radius: 0;
@@ -370,7 +370,7 @@ label {
     .navbar-expand-md .navbar-nav .dropdown-menu {
         min-width: 12.25rem;
         border-top: 0;
-        left: -2px;
+        inset-inline-start: -2px;
         border-radius: 0 0 5px 5px;
         background: white;
         box-shadow: 1px 4px 4px #0002;
@@ -384,7 +384,7 @@ label {
             font-weight: 100;
 
             &::after {
-                margin-left: -.175em;
+                margin-inline-start: -.175em;
                 vertical-align: initial;
                 content: ":";
                 border: 0;
@@ -403,7 +403,7 @@ label {
             display: block;
             padding: 0;
             border: 0;
-            border-left: 2px solid var(--bs-navbar-active-color);
+            border-inline-start: 2px solid var(--bs-navbar-active-color);
             ;
             border-radius: 0;
         }
@@ -431,14 +431,14 @@ label {
         .dropdown-item:focus {
             color: var(--bs-body-bg);
             background-color: rgb(var(--bs-link-color-rgb));
-            margin-left: 0;
+            margin-inline-start: 0;
         }
 
         .dropdown-menu[data-bs-popper] {
             top: calc(100% - 3px);
             padding: 0;
-            left: auto;
-            right: 0;
+            inset-inline-start: auto;
+            inset-inline-end: 0;
             border-radius: 0;
             --bs-dropdown-border-color: rgb(var(--bs-link-color-rgb));
             min-width: calc(100% + 4px);
@@ -519,7 +519,7 @@ label {
         font-size: 1rem;
         font-weight: 500;
         color: var(--bs-accordion-btn-color);
-        text-align: left;
+        text-align: start;
         background-color: var(--bs-accordion-btn-bg);
         border: 0;
         border-radius: 0;
@@ -538,7 +538,7 @@ label {
             flex-shrink: 0;
             width: var(--bs-accordion-btn-icon-width);
             height: var(--bs-accordion-btn-icon-width);
-            margin-left: auto;
+            margin-inline-start: auto;
             content: "";
             background-image: var(--bs-accordion-btn-icon);
             background-repeat: no-repeat;
@@ -573,7 +573,7 @@ label {
 
         div>ul,
         div>ol {
-            padding-left: 1rem;
+            padding-inline-start: 1rem;
         }
     }
 }
@@ -737,8 +737,9 @@ label {
 
     ul {
         max-width: max-content;
-        margin: 0 1rem 1rem 1.5rem;
-        padding-left: 0;
+        margin-block: 0 1rem;
+        margin-inline: 1.5rem 1rem;
+        padding-inline-start: 0;
     }
 
     .credit,
@@ -851,5 +852,27 @@ footer {
         font-size: 2rem;
         padding-top: 1rem;
         margin-top: 4rem;
+    }
+}
+
+/* Right-to-left pages. */
+[dir="rtl"] {
+    /* Code reads left-to-right in any language. Isolating it keeps its
+       punctuation from being reordered by the surrounding Arabic text. */
+    pre,
+    code {
+        direction: ltr;
+        unicode-bidi: isolate;
+    }
+
+    pre {
+        text-align: left;
+    }
+
+    /* Mirror icons that point in the reading direction. */
+    .arrow svg.bi,
+    .bi-chevron-right,
+    .bi-arrow-right-square {
+        transform: scaleX(-1);
     }
 }

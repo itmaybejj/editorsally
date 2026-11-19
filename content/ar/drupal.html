@@ -1,0 +1,350 @@
+<main class="container col-lg-12 mx-auto py-5">
+  <div class="row docs">
+    <div class="col-12 col-md-5 col-lg-4 mb-5">
+      <div id="on-this-page" class="list-group ms-2 ms-lg-5 position-sticky top-0 pt-3">
+      </div>
+    </div>
+    <div class="col-12 col-md-7 col-lg-8 pt-3">
+      <div data-bs-spy="scroll" data-bs-target="#on-this-page" data-bs-smooth-scroll="true">
+        <h1 data-i18n-id="s-e367">Editoria11y لـ Drupal</h1>
+        <section id="features">
+          <h2 class="pt-3" data-i18n-id="s-1dcf">الميزات الأساسية</h2>
+
+          <p class="fs-6" data-i18n-id="s-a8c0" data-og="description">تربط وحدة Drupal مكتبة المدقق بالواجهة الخلفية للتحرير، وتضيف كثيرًا من الأدوات العاملة على الخادم لإعداد التقارير والحوكمة والضبط</p>
+
+          <figure class="figure my-4 row">
+            <div class="col-lg-8">
+              <img loading="lazy" src="/assets/images/3x-editing.png" class="rounded border figure-img img-fluid" height="1088" width="2237" alt="واجهة التحرير في Drupal مع تلميحات مضمّنة" data-i18n-id="s-ee36" />
+            </div>
+            <figcaption class="figure-caption col-lg-4" data-i18n-id="s-8e69">تُكتشف المشكلات عند تحميل الصفحة في الواجهة الأمامية، وفي أثناء الكتابة في CKEditor و Gutenberg.</figcaption>
+          </figure>
+
+          <figure class="figure my-4 row">
+            <div class="col-lg-8">
+              <img loading="lazy" src="/assets/images/3x-generic-tip.png" class="rounded border figure-img img-fluid" height="798" width="1278" alt="تلميح يشير إلى أن اسم الرابط هو «انقر هنا» فقط." data-i18n-id="s-1639" />
+            </div>
+            <figcaption class="figure-caption col-lg-4" data-i18n-id="s-9881">تضم التلميحات أزرارًا للانتقال إلى واجهة التحرير، أو تجاهل التنبيه (للمستخدم الحالي)، أو وضع علامة «سليم» عليه (لجميع المستخدمين). وتوفر التنبيهات المتكررة إجراءات على مستوى الصفحة أو الموقع بأكمله.</figcaption>
+          </figure>
+
+          <figure class="figure my-4 row">
+            <div class="col-lg-8">
+              <img loading="lazy" src="/assets/images/3x-drupal-custom-tests.png" class="rounded border figure-img img-fluid" alt="واجهة منشئ الاختبارات المخصصة، تعرض حقولًا لعنوان التلميح ومحتواه، إضافةً إلى محددات العناصر والاستثناءات." data-i18n-id="s-0830" />
+            </div>
+            <figcaption class="figure-caption col-lg-4">
+              <p class="mb-2" data-i18n-id="s-37bf">تضيف الوحدة الفرعية CSA ما يلي:</p>
+              <ul class="ps-3">
+                <li data-i18n-id="s-caff"><strong>منشئ اختبارات مخصصة</strong></li>
+                <li data-i18n-id="s-b145">أكثر من 40 اختبارًا للمطورين</li>
+                <li data-i18n-id="s-f55d">فحص التباين</li>
+                <li data-i18n-id="s-b70c">برامج زحف للموقع</li>
+                <li data-i18n-id="s-5377">تحليل سهولة القراءة</li>
+                <li data-i18n-id="s-6602">إعدادات منفصلة للمطورين والمحررين</li>
+              </ul>
+            </figcaption>
+          </figure>
+
+          <figure class="figure">
+            <img loading="lazy" class="figure-img img-fluid rounded border" src="/assets/images/3x-dashboard.png" height="765" width="1600" alt="لوحة تحكم التقارير تعرض أحدث المشكلات والصفحات التي تضم أكبر عدد من المشكلات." data-i18n-id="s-2559" />
+            <figcaption class="figure-caption p-3 pt-2" data-i18n-id="s-cdbf">توفر لوحة تحكم على مستوى الموقع تقارير قابلة للتصفية والتصدير عن التنبيهات وحالات التجاهل.</figcaption>
+          </figure>
+
+        </section>
+        <h2 data-i18n-id="s-8fec">التثبيت وخطوات الإعداد الأساسية</h2>
+        <p data-i18n-id="s-7627">يتضمن <a href="https://www.drupal.org/project/editoria11y/">المثبّت المجمّع</a> على Drupal.org عدة وحدات:</p>
+        <ul>
+          <li data-i18n-id="s-b830">Editoria11y: المدقق الأساسي للمحتوى ولوحة التحكم.</li>
+          <li data-i18n-id="s-b351">Editoria11y CSA: اختبارات المطورين وأدوات صيانة لوحة التحكم.</li>
+          <li data-i18n-id="s-74fe">Editoria11y Export: أدوات تقارير CSV.</li>
+        </ul>
+        <p data-i18n-id="s-88fd">ثبّتها كأي وحدة أخرى، ثم اتبع هذه الخطوات الأساسية:</p>
+        <ol>
+          <li data-i18n-id="s-7187"><strong>تحقق من الصلاحيات.</strong> ينبغي أن يمتلك الكتّاب الموثوقون صلاحيات «وضع علامة سليم» و«وضع علامة متجاهَل» و«عرض لوحة التحكم».</li>
+          <li data-i18n-id="s-1ac1"><strong>افحص الصفحات الرئيسية بحثًا عن تنبيهات متكررة أو غير مفيدة.</strong> إما أن تضع عليها علامة «سليم» من التلميح، وإما أن تعدّل الإعدادات لتجاهل العناصر باستخدام المحددات.</li>
+          <li data-i18n-id="s-e5b2">ابحث عن التلميحات التي يصعب رؤيتها: الواقعة خارج الشاشة، أو المقطوعة، أو المحجوبة خلف عناصر أخرى، أو الموجودة على عناصر مخفية. استعن بالنصائح الواردة في قسم «إصلاح التلميحات المخفية أو الواقعة خارج الشاشة» أدناه لإصلاحها.</li>
+          <li data-i18n-id="s-c564">إذا كان الموقع يحتوي على محتوى بالفعل ولديك اشتراك في CSA، فانتقل إلى تبويب «إعادة الفحص» في لوحة التحكم، ثم <strong>شغّل الزحف على الموقع</strong> لتحميل تقارير الموقع مسبقًا. هذه الخطوة اختيارية، لكن الصفحات الأقدم لن تظهر في التقارير حتى يزحف عليها البرنامج أو يزورها مستخدم مسجّل الدخول.</li>
+        </ol>
+        <p data-i18n-id="s-e025">شاهد <a href="https://youtu.be/uYvNYPg38nU?si=dqADyWpTtOhniHTP&t=696">مقدمة بالفيديو عن خيارات الإعداد</a> (الإصدار 2.4).</p>
+
+        <h2 id="check-roots" data-i18n-id="s-9202">إخفاء التنبيهات غير المفيدة</h2>
+        <p data-i18n-id="s-fa47"><strong>الإعدادات الجيدة تحجب التنبيهات غير المفيدة، ليتمكن كتّاب المحتوى من التركيز على المشكلات التي ينبغي لهم إصلاحها</strong>.</p>
+        <p data-i18n-id="s-996e">يمكنك إيقاف الاختبارات كليًا، لكن الأفضل عادةً إخفاء التنبيهات على عناصر أو صفحات محددة.</p>
+        <hr/>
+        <p data-i18n-id="s-7918">في كل دورة فحص، يجمع Editoria11y مجموعة واحدة من العناصر وفق إعداد «افحص المحتوى في هذه الحاويات»، ثم يصفّيها عدة مرات. هكذا تبدو دورة الفحص:</p>
+        <ol>
+          <li data-i18n-id="s-994a">إلغاء الفحص إذا كانت الإعدادات تمنع الفحص في هذه الصفحة أو لهذا المستخدم.</li>
+          <li data-i18n-id="s-10c9"><strong>جمع</strong> العناصر من مناطق الصفحة المحددة، مثل:<br/><code>body > *:not('.ed11y-element')</code><br/>
+            <em>لمستخدمي Editoria11y CSA، هذه هي المناطق الموجودة في تبويب <strong>اختبارات المطورين</strong>.</em></li>
+          <li data-i18n-id="s-7524"><strong>استبعاد</strong> العناصر التي تطابق محددات التجاهل، مثل:<br/><code>.widgets, .utility-menu</code><br/>
+            <em>لمستخدمي Editoria11y CSA، هذه هي المحددات الموجودة في تبويب <strong>اختبارات المطورين</strong>.</em></li>
+          <li data-i18n-id="s-58d0">تشغيل الاختبارات ومزامنة النتائج مع لوحة التحكم.</li>
+          <li>
+            <span data-translate data-i18n-id="s-f8c6">إذا كانت الإعدادات المنفصلة مفعّلة وكان المستخدم محرر محتوى، تُصفّى نتائج المطورين:</span>
+            <ul>
+              <li data-i18n-id="s-72c9"><strong>استبعاد</strong> نتائج الاختبارات المضبوطة على «للمطورين فقط».</li>
+              <li data-i18n-id="s-576e"><strong>استبعاد</strong> النتائج الخاصة بالعناصر الواقعة خارج مناطق <strong><em>المحتوى</em></strong> المحددة، مثل:<br/><code>main, footer</code></li>
+              <li data-i18n-id="s-bb1d"><strong>استبعاد</strong> النتائج الخاصة بالعناصر التي تطابق محددات التجاهل الخاصة بـ<strong><em>المحتوى</em></strong>.</li>
+            </ul>
+            <span data-translate data-i18n-id="s-bc47">لاحظ أنه لا توجد مرحلة «جمع» ثانية، لذا يجب أن تشمل مناطق الصفحة الخاصة بالمطورين مناطقَ المحتوى.</span>
+          </li>
+          <li data-i18n-id="s-b79c">فتح اللوحة وعرض التنبيهات إذا طابقت الإعدادات أحد خيارات الفتح التلقائي.</li>
+        </ol>
+
+        <h3 id="dismiss" data-i18n-id="s-be02">تجاهل التنبيهات</h3>
+        <p data-i18n-id="s-2ae3">يمكن ضبط الاختبارات في المكتبة لتكون أخطاءً أو تحذيرات («فحوصات يدوية»). ويمكن تجاهل التحذيرات. ويتوفر نوعان من التجاهل في تذييل كل تلميح:</p>
+        <div class="my-2"
+          style="background: url(/assets/images/3x-generic-tip.png) 100% 98%; max-width: 600px; padding-top: 6%; background-size: 108%;">
+        </div>
+        <ul>
+          <li data-i18n-id="s-7b65">يُحفظ «تجاهل» كتفضيل للمستخدم: يُخفى التنبيه عن المستخدم الحالي، وعنه وحده فقط.</li>
+          <li data-i18n-id="s-654c">يُخفي «وضع علامة سليم» التنبيه عن جميع المستخدمين.</li>
+        </ul>
+        <p data-i18n-id="s-dc14">يُتحكَّم في قدرة المستخدم على تجاهل التنبيهات على مستوى الدور، من خلال صلاحيات المستخدمين في Drupal. <strong>ينبغي السماح لمعظم الكتّاب بتجاهل التنبيهات</strong>. فلا جدوى من تكليف شخص بفحص يدوي إن لم يكن بإمكانه وضع علامة تفيد بأن العنصر قد فُحص.</p>
+
+        <h3 id="roots" data-i18n-id="s-d932">تجاهل العناصر</h3>
+        <p data-i18n-id="s-9d1e">هذان الإعدادان هما الأهم!</p>
+        <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
+          <label for="edit-content-root" data-translate data-i18n-id="s-15bb">افحص المحتوى في هذه الحاويات</label>
+          <div><textarea class="form-control" id="edit-content-root" name="content_root" rows="1" cols="30"
+              disabled></textarea>
+          </div>
+          <div class="mt-3">
+            <label for="edit-ignore-elements" data-translate data-i18n-id="s-be3e">تخطَّ هذه العناصر</label>
+            <div>
+              <textarea class="form-control" id="edit-ignore-elements" disabled name="ignore_elements" rows="1"
+                cols="30" class=""></textarea>
+            </div>
+          </div>
+        </div>
+        <p data-i18n-id="s-6051">اضبط الإعداد الأول ليشمل أي أجزاء من الصفحة يستطيع كتّاب المحتوى تحريرها. على سبيل المثال، إذا كانوا يستطيعون تحرير منطقة المحتوى <code>main</code> و<code>.sidebar</code> و<code>.footer-column-two</code>، فاجعل هذه المحددات منطقة فحص المحتوى.</p>
+        <p data-i18n-id="s-f29c">استخدم الإعداد الثاني «لاستبعاد» أقسام فرعية. على سبيل المثال، إذا كان <code>main</code> يحتوي على عناصر واجهة ومحتويات مضمَّنة متنوعة لا يستطيع تعديلها إلا المطورون، فأدرجها: <code>.widget-1, .social-embed</code>؛</p>
+        <p data-i18n-id="s-10ef">إذا كنت تستخدم الإعدادات المنفصلة، فسترى زوجًا مشابهًا من الإعدادات في تبويب «اختبارات المطورين»:</p>
+        <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
+          <div>
+            <fieldset>
+              <legend data-translate data-i18n-id="s-430d">منطقة فحص المطورين</legend>
+              <div class="fieldset__wrapper fieldset__wrapper--group">
+
+                <div id="edit-dev-check-root">
+                  <div>
+                    <input aria-describedby="edit-dev-check-root--description" type="radio"
+                      id="edit-dev-check-root-automatic" name="dev_check_root" value="automatic" checked="checked" />
+                    <label for="edit-dev-check-root-automatic" class="form-item__label option" data-translate data-i18n-id="s-76df">جميع العناصر</label>
+                  </div>
+                  <div class="d-flex">
+                    <input aria-describedby="edit-dev-check-root--description" type="radio"
+                      id="edit-dev-check-root-match" name="dev_check_root" value="match"
+                      class="align-self-baseline mt-1 me-1" />
+                    <label for="edit-dev-check-root-match" class="form-item__label option" data-translate data-i18n-id="s-75dc">الحاويات المدرجة في تبويب «إعدادات المحتوى» فقط</label>
+                  </div>
+                  <div class="">
+                    <input aria-describedby="edit-dev-check-root--description" type="radio"
+                      id="edit-dev-check-root-specify" name="dev_check_root" value="specify"
+                      class="form-radio form-boolean form-boolean--type-radio" />
+                    <label for="edit-dev-check-root-specify" class data-translate data-i18n-id="s-8f65">الحاويات المحددة المدرجة أدناه</label>
+                  </div>
+                </div>
+
+              </div>
+            </fieldset>
+
+            <div class="">
+              <label for="edit-always-ignore" class="mt-3" data-translate data-i18n-id="s-eec7">التجاهل لكل من المطورين ومحرري المحتوى</label>
+              <div class="form-textarea-wrapper">
+                <textarea id="edit-always-ignore" class="form-control" name="always_ignore" rows="1" cols="20"
+                  placeholder=""></textarea>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+        <p data-i18n-id="s-8c02">أهم ما يجب معرفته عن مناطق فحص المطورين أنها <strong>ليست مستقلة</strong> عن مناطق فحص المحتوى. ففي الإعدادات المنفصلة، تُفحص مناطق المطورين أولًا، ثم <strong>تُصفّى</strong> تلك النتائج لتطابق مناطق المحتوى. وأي مناطق مستبعدة للمطورين ستُستبعد أيضًا لمحرري المحتوى. لا تستبعد مناطق المحتوى القابلة للتحرير!</p>
+
+        <p data-i18n-id="s-0312">تتيح بعض الاختبارات ضبطًا أدق، لإخفاء تنبيهات معينة فقط على العناصر المتأثرة. ابحث عنها ضمن:</p>
+        <ul>
+          <li data-i18n-id="s-d53d">اختبارات المحتوى: الروابط المطلوب فحصها</li>
+          <li data-i18n-id="s-0d1e">اختبارات المحتوى: المحتوى المضمَّن المطلوب فحصه</li>
+          <li data-i18n-id="s-10c1">اختبارات المحتوى: اكتشاف المحتوى الديناميكي ومحتوى Shadow DOM</li>
+          <li data-i18n-id="s-e6e4">اختبارات المطورين: التباين</li>
+        </ul>
+
+        <h3 id="pages" data-i18n-id="s-177c">الإخفاء في صفحات محددة أو لمستخدمين محددين</h3>
+        <p data-i18n-id="s-e874">أسهل طريقة لذلك هي تمرير أصناف CSS أو معرّفات ID إلى هذه الخيارات:</p>
+        <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
+          <label for="edit-no-load" class="form-item__label" data-translate data-i18n-id="s-f57b">عدم الفحص في الصفحات التي تحتوي على هذه العناصر</label>
+          <div class="form-textarea-wrapper">
+            <textarea data-drupal-selector="edit-no-load" aria-describedby="edit-no-load--description" id="edit-no-load"
+              name="no_load" rows="1" cols="20" class="form-control"></textarea>
+          </div>
+
+          <label for="edit-ignore-all-if-absent" class="form-item__label" data-translate data-i18n-id="s-07a0">إخفاء جميع التنبيهات في الصفحات التي لا توجد فيها هذه العناصر</label>
+          <div class="form-textarea-wrapper">
+            <textarea data-drupal-selector="edit-ignore-all-if-absent"
+              aria-describedby="edit-ignore-all-if-absent--description" id="edit-ignore-all-if-absent"
+              name="ignore_all_if_absent" rows="1" cols="20" class="form-control"></textarea>
+          </div>
+
+        </div>
+        <p data-i18n-id="s-0877">يمنع الخيار الأول تشغيل الفحوصات، ولن يظهر شريط الأدوات.</p>
+        <p data-i18n-id="s-5cbd">أما الخيار الثاني فيشغّل المدقق مصغّرًا، ويضع تلقائيًا (للمستخدم الحالي) علامة «متجاهَل» على جميع المشكلات، حتى لو كانت أخطاءً. وهذا يتيح تشغيل الاختبارات وتحديث لوحة التحكم دون إزعاج المستخدم.</p>
+        <p data-i18n-id="s-1661">إذا أردت استخدام هذه الخيارات للتحكم في المستخدمين الذين يرون المدقق، فقد تحتاج إلى تعديل قالبك ليُخرج صنفًا، مثل <code>.user-247</code></p>
+
+        <h2 id="dashboard" data-i18n-id="s-f4d7">إدارة النتائج على مستوى الموقع</h2>
+        <section id="refresh">
+          <h3 class="pt-3" data-i18n-id="s-012a">الزحف وتحديث النتائج</h3>
+          <p data-i18n-id="s-75a9">Editoria11y <strong>أداة مراقبة فورية، لا برنامج زحف</strong>. تتحدّث تقاريره على مستوى الموقع عندما يعرض الكتّاب الصفحات، لذا لا حاجة عادةً إلى الزحف المنتظم. تتضمن وحدة CSA برنامج زحف <em>بالفعل</em>، لكن لا ينبغي أن تحتاج إليه إلا في هذه الحالات الثلاث:</p>
+          <ol>
+            <li data-i18n-id="s-dfb1">عند تثبيت Editoria11y لأول مرة على موقع قائم يضم صفحات كثيرة. يجب أن تُزار الصفحات قبل أن تظهر في لوحة التحكم، لذا يوفّر الزحف الأولي السريع الوقت.</li>
+            <li data-i18n-id="s-f602">قد تُصلح التحديثات الكبرى للقوالب أو الوحدات مشكلات في صفحات كثيرة (أو تتسبب فيها)، ولن تظهر هذه المشكلات حتى تُزار الصفحات أو يُزحف عليها.</li>
+            <li data-i18n-id="s-a530">تميل الإجراءات الجماعية في واجهة الإدارة، مثل حذف الصفحات أو عمليات إعادة التوجيه، إلى ترك نتائج من صفحات لم تعد موجودة أو نُقلت. وفي هذه الحالات، من المفيد استخدام إجراءات الصيانة في تبويب «التحديث» لتحديث عناوين URL للصفحات، واكتشاف الصفحات المحذوفة واستبعادها.</li>
+          </ol>
+          <p data-i18n-id="s-8e5a">لا تغادر أي بيانات موقعك في أثناء الزحف. فبرنامج الزحف في CSA ليس أداة سحابية، بل يستخدم متصفحك لتحميل الصفحات وفحصها على موقعك أنت. وعيب هذا الأسلوب أن <strong>المتصفحات توقف علامات التبويب الخلفية مؤقتًا</strong>. لذا ستحتاج إلى إبقاء حاسوبك قيد التشغيل ومنعه من الدخول في وضع السكون في أثناء الزحف. خطّط لفتح نافذة جديدة لبرنامج الزحف، واتركه في علامة التبويب الأمامية لتلك النافذة في أثناء عمله. ويمكنك مواصلة العمل في نافذة أخرى. سيحدّث برنامج الزحف تقديره للوقت المتبقي بعد كل دفعة من الصفحات.</p>
+        </section>
+        <section id="reports">
+          <h3 data-i18n-id="s-a242">عرض التقارير</h3>
+          <div class="my-4 border shadow"
+            style="background: url(/assets/images/3x-dashboard.png) 86% 0%; padding-top: 28%; background-size: 106%;">
+          </div>
+          <ul>
+            <li data-i18n-id="s-e328">يتيح تبويب <strong>الأحدث</strong> الاستكشاف حسب التنبيهات الفردية. فيمكنك مثلًا التصفية للعثور على جميع حالات نوع التنبيه نفسه، أو معرفة التنبيهات التي تتكرر كثيرًا في المحتوى الحديث، أو الكتّاب الذين ما زالوا يقعون في الخطأ نفسه.</li>
+            <li data-i18n-id="s-796f">يعرض تبويب <strong>الصفحات</strong> عدد التنبيهات في كل صفحة، مجمّعةً حسب الصفحة. وهذا يساعدك على العثور على الصفحات التي تضم أكبر عدد من المشكلات، وعلى التصفية حسب خصائص الصفحة مثل نوع المحتوى وحالة النشر.</li>
+            <li data-i18n-id="s-9423">يعرض تبويب <strong>التنبيهات</strong> المشكلات حسب النوع.</li>
+            <li data-i18n-id="s-52ed">يتيح تبويب <strong>حالات التجاهل</strong> مراقبة ما إذا كان الكتّاب يتجاهلون التنبيهات على نحو صحيح، ويحتوي على أزرار «إعادة تعيين» لاستعادة التنبيهات المتجاهَلة.</li>
+            <li data-i18n-id="s-3379">يحتوي تبويب <strong>التصدير</strong> على نسخ من تقارير الصفحات والتنبيهات وحالات التجاهل يمكن تصفيتها لتجهيز ملفات CSV للتنزيل. <em>توفره الوحدة الفرعية CSV Export</em></li>
+            <li data-i18n-id="s-9814">يحتوي تبويب <strong>التحديث</strong> على أدوات صيانة لوحة التحكم، لاستبعاد التنبيهات من الصفحات المحذوفة، واستبعاد التنبيهات من الصفحات الزائفة ذات المعاملات مثل /search?query=example، وتحديث عناوين الصفحات وعناوين URL المخزنة، وتشغيل زحف يدوي. <em>توفره الوحدة الفرعية CSA</em></li>
+          </ul>
+        </section>
+
+        <h2 id="positioning" data-i18n-id="s-c35b">إصلاح التلميحات المخفية أو الواقعة خارج الشاشة</h2>
+
+        <p data-i18n-id="s-68ce">توفر الوحدة حقولًا لاثنين من خيارات إعداد المكتبة لتغيير طريقة وضع التلميحات:</p>
+
+        <div class="shadow-lg p-3 mt-4 mb-4 bg-body-secondary rounded-4 border border-secondary">
+          <label for="edit-element-hides-overflow" class="form-item__label" data-translate data-i18n-id="s-c6d7">العناصر التي تُخفي المحتوى الفائض</label>
+          <textarea data-drupal-selector="edit-element-hides-overflow"
+            aria-describedby="edit-element-hides-overflow--description" id="edit-element-hides-overflow"
+            name="element_hides_overflow" rows="1" cols="60" class="form-control"></textarea>
+          <label for="edit-hidden-handlers" class="form-item__label" data-translate data-i18n-id="s-dc25">ستتولى شيفرة JS في القالب إظهار التلميحات المخفية داخل هذه الحاويات</label>
+          <textarea data-drupal-selector="edit-hidden-handlers" aria-describedby="edit-hidden-handlers--description"
+            id="edit-hidden-handlers" name="hidden_handlers" rows="1" cols="60" class="form-control"></textarea>
+        </div>
+        <p data-i18n-id="s-34e4">تحتوي بعض القوالب على أعمدة أو عناصر واجهة تُخفي المحتوى الفائض أفقيًا أو عموديًا. تكتشف المكتبة تلقائيًا متى يقع زر التنبيه خارج الجزء المرئي من <strong>الصفحة.</strong> وإخبار المكتبة بأن حاويات معينة تُخفي المحتوى الفائض يعني أنها ستحاول أيضًا وضع تلميحات العناصر الموجودة في تلك الحاويات داخل حدودها.</p>
+        <p data-i18n-id="s-7cb7">تحتوي بعض القوالب على عناصر واجهة تبدّل ظهور المحتوى، مثل القوائم القابلة للطي وعلامات التبويب وعروض الشرائح. وتكون التلميحات داخل هذه العناصر مخفية أيضًا. وتقديم قائمة بمحددات هذه العناصر يعني أن Editoria11y سيتوقف لحظة عندما يحاول المستخدم الانتقال إلى تلك التلميحات بزر «التالي» أو «السابق». ويمكن لقوالب Drupal ووحداته بعد ذلك اتباع التعليمات الواردة في قسم المكتبة حول <a             href="/en/install/#hidden-content">التعامل مع التلميحات في المحتوى المخفي</a> لإظهار المحتوى المخفي.</p>
+
+        <h2 id="runtime" data-i18n-id="s-7e38">اكتب إعداداتك الخاصة</h2>
+        <p data-i18n-id="s-a5d3">في PHP: توفر وحدة Drupal الخطّاف <code>hook_editoria11y_alter_config</code> لتغيير محتوى <code>drupalSettings.editoria11y</code> في وحدة أو قالب. على سبيل المثال:</p>
+        <pre class="language-php"><code><!--<?php
+/**
+ * @file
+ * MY_MODULE module file.
+ */
+
+use Drupal\Core\Cache\CacheableMetadata;
+
+/**
+ * Implements hook_editoria11y_alter_config().
+ *
+ * Attaches Editoria11y library and config based on context.
+ */
+function MY_MODULE_editoria11y_alter_config(array &$attach, CacheableMetadata $cacheableMetadata): void {
+  $config = Drupal::config('editoria11y.settings');
+
+  // Module settings being changed need to bust the cache.
+  $cacheableMetadata->addCacheableDependency($config);
+
+  // Get and modify any of the values being passed to drupalSettings.editoria11y.
+  if (!empty($attach['allow_ok'])) {
+    $attach['allow_ok'] = 'okAll';
+  }
+}--></code></pre>
+        <p data-i18n-id="s-2368">لا يفيد تعديل <code>drupalSettings</code> إلا إذا كانت شيفرة JS في الوحدة مهيأة بالفعل لتمرير تلك القيمة إلى المكتبة. ولإضافة معاملات أخرى، عليك تعديل كائن <code>options</code> في JS مباشرةً. تتحقق الوحدة من وجود متغير JS عام واحد هو <code>editoria11yOptionsOverride</code>. فإذا كان معيّنًا، فستمرر كائن <code>options</code> إلى دالة <code>editoria11yOptions</code> توفرها أنت في وحدتك أو قالبك. وبذلك يمكنك ضبط أي من <a             href="/en/install/#params">معاملات المكتبة</a>.</p>
+        <pre class="language-javascript"><code><!--var editoria11yOptionsOverride = true;
+var editoria11yOptions = function(options) {
+  // You now have access to the processed options object that will be passed to the library.
+
+  // E.g., to add a selector to the ignore list:
+  if (options['ignoreElements'] === false) {
+    // Provide the selector as the only value.
+    options['ignoreElements'] = `.example`;
+  } else {
+    // Append additional selectors with comma separator.
+    options['ignoreElements'] = `${options['ignoreElements']}, .example`
+  }
+
+  // Return your processed options.
+  return options;
+}
+--></code></pre>
+        <section id="custom-tests">
+          <h2 data-i18n-id="s-e0f0">اكتب اختباراتك الخاصة</h2>
+          <p data-i18n-id="s-6ece">أولًا، في إعدادات الوحدة، أضف 1 إلى خيار «الاختبارات المخصصة» لكي تعرف الوحدة أن عليها انتظار الاختبارات.</p>
+          <p data-i18n-id="s-4316">ثم أنشئ مكتبة Drupal JS تضم اختباراتك في قالبك أو وحدتك، مستعينًا بـ<a               href="/en/install/#custom-tests">دليل المكتبة لكتابة اختبارات مخصصة</a>.</p>
+          <p data-i18n-id="s-b4ea">إليك مثالًا عمليًا من Princeton لاختبار مخصص يُطلق تنبيهًا عند وجود روابط Safe Links. لاحظ أنه يصل إلى صنف Editoria11y عبر <code>Drupal.Ed11y.</code></p>
+          <pre class="language-javascript"><code><!--const psEd11yCustomTests = function() {
+
+  // 1.
+  // Get elements to test, via Drupal.Ed11y.getElements.
+  // The 'root' parameter tells it to respect config for check areas and ignores.
+  const safeLinks = Drupal.Ed11y.getElements('a[href*="safelinks.protection.outlook.com/?"]', 'root');
+
+  // Add the test name to the lang object.
+  Drupal.ed11yLang.lang.testNames.outlookSafeLink = 'URL is Safe Link encoded';
+
+  // 2.
+  // Create the tip content.
+  const decodeSafelink = function(url) {
+    const params = new URL(url).searchParams;
+    let decoded = params.get('url');
+    const p = document.createElement('p');
+    if (!!decoded) {
+      p.innerHTML = `<p><span class="badge">To fix</span>Update this link with the correct URL, which is probably:<br>
+    <em style='word-wrap: break-word;font-size: 90%;line-height: 1.2;display: block;'></em></p>`
+      p.querySelector('em').textContent = Drupal.Ed11y.sanitizeHTML(decoded);
+    }
+    return p;
+  };
+  safeLinks?.forEach((el) => {
+    const content = document.createElement('div');
+    content.innerHTML = `<div class="title">Please fix this Outlook "Safe Link"</div>
+            <div class="why">
+                <p>The URL for this link is an Outlook "Safe Link" that was copied from an email.
+                It includes the original recipient's email address,
+                and will break if Microsoft shuts down the service.</p>
+                <p>The pasted URL is:<br>
+                <em style='word-break: break-all;font-size: 90%;line-height: 1.2;
+                display: block;'></em></p>
+            </div>
+            `;
+    content.querySelector('em').textContent = Drupal.Ed11y.sanitizeHTML(el.href);
+    content.querySelector('.why').insertAdjacentElement('beforebegin', decodeSafelink(el.href));
+
+    // 3.
+    // Push the tip to the library results object.
+    Drupal.Ed11y.State.results.push({
+      element: el,
+      test: 'outlookSafeLink',
+      type: 'error',
+      content: content,
+      position: 'beforebegin',
+      inline: false,
+      dismiss: false,
+    });
+  });
+
+  // 4.
+  // Tell Editoria11y you are done adding custom results.
+  const allDone = new CustomEvent('ed11yResume');
+  document.dispatchEvent(allDone);
+};--></code></pre>
+
+        </section>
+        <section id="help">
+          <h2 data-i18n-id="s-4690">الحصول على المساعدة</h2>
+          <p data-i18n-id="s-f149">راجع صفحة <a href="/en/contacts/">جهات الاتصال</a> للاطلاع على خيارات الدعم المجتمعي. عادةً ما يكون @itmaybejj متصلًا في Drupal Slack عندما تكون الشمس مشرقة في نصف الكرة الغربي.</p>
+          <p data-i18n-id="s-4a16">تتضمن معظم <a href="/en/license/">مستويات المساهمة في CSA</a> جلسة متابعة سنوية، قد تشمل مساعدة مباشرة في الإعداد والضبط</p>
+        </section>
+
+      </div>
+    </div>
+  </div>
+</main>

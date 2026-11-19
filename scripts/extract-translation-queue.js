@@ -37,7 +37,9 @@ const MANIFEST = path.join(ROOT, 'assets', 'lang', 'manifest.json');
 const manifest = JSON.parse(fs.readFileSync(MANIFEST, 'utf8'));
 const sourceHashes = manifest.source;
 const langHashes = manifest.translations[lang] || {};
-const pages = pageArg ? [pageArg] : i18n.canonicalPaths;
+// English-only pages (i18n.englishOnlyPages) are never translated.
+const pages = (pageArg ? [pageArg] : i18n.canonicalPaths)
+  .filter((p) => !i18n.isEnglishOnly(p));
 
 const IMG_TR_ATTRS = ['alt', 'aria-label', 'title', 'longdesc'];
 const BLOCK_OWN_ATTRS = ['aria-label', 'title', 'placeholder'];

@@ -90,9 +90,12 @@
     const items = i18n.allLanguages
       .filter(code => code !== langCode)
       .map(code => {
-        const href = i18n.buildPath(code, currentCanonical);
+        // English-only pages have no translation; send the visitor to the
+        // chosen language's home page rather than back to this same page.
+        const target = i18n.isEnglishOnly(currentCanonical) ? 'about' : currentCanonical;
+        const href = i18n.buildPath(code, target);
         const name = i18n.nativeNames[code] || code;
-        return `<li><a class="dropdown-item" href="${href}">${name}</a></li>`;
+        return `<li><a class="dropdown-item" href="${href}" lang="${code}" hreflang="${code}">${name}</a></li>`;
       })
       .join('');
     pickerEl.innerHTML = `

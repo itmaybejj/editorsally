@@ -66,7 +66,10 @@ out.push('  xmlns:xhtml="http://www.w3.org/1999/xhtml">');
 let urlCount = 0;
 
 for (const page of i18n.canonicalPaths) {
-  const langsWithPage = i18n.allLanguages.filter(
+  // English-only pages: buildPath() maps every language to the English URL,
+  // so only list English to avoid duplicate <loc>s and bogus alternates.
+  const candidateLangs = i18n.isEnglishOnly(page) ? ['en'] : i18n.allLanguages;
+  const langsWithPage = candidateLangs.filter(
     (lang) => fs.existsSync(fileFor(lang, page))
   );
 

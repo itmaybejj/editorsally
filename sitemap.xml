@@ -9,6 +9,137 @@
                href="https://editoria11y.com/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="bg"
+               href="https://editoria11y.com/bg/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="cs"
+               href="https://editoria11y.com/cs/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="da"
+               href="https://editoria11y.com/da/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="de"
+               href="https://editoria11y.com/de/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="el"
+               href="https://editoria11y.com/el/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="es"
+               href="https://editoria11y.com/es/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="et"
+               href="https://editoria11y.com/et/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="fi"
+               href="https://editoria11y.com/fi/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="fr"
+               href="https://editoria11y.com/fr/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="hu"
+               href="https://editoria11y.com/hu/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="id"
+               href="https://editoria11y.com/id/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="it"
+               href="https://editoria11y.com/it/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ja"
+               href="https://editoria11y.com/ja/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ko"
+               href="https://editoria11y.com/ko/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="lt"
+               href="https://editoria11y.com/lt/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="lv"
+               href="https://editoria11y.com/lv/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="nb"
+               href="https://editoria11y.com/nb/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="nl"
+               href="https://editoria11y.com/nl/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="pl"
+               href="https://editoria11y.com/pl/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="pt-BR"
+               href="https://editoria11y.com/pt-br/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="pt-PT"
+               href="https://editoria11y.com/pt-pt/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ro"
+               href="https://editoria11y.com/ro/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="sk"
+               href="https://editoria11y.com/sk/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="sl"
+               href="https://editoria11y.com/sl/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="sv"
+               href="https://editoria11y.com/sv/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="tr"
+               href="https://editoria11y.com/tr/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="uk"
+               href="https://editoria11y.com/uk/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="zh"
+               href="https://editoria11y.com/zh/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="x-default"
+               href="https://editoria11y.com/"/>
+  </url>
+  <url>
+    <loc>https://editoria11y.com/ar/</loc>
+    <xhtml:link
+               rel="alternate"
+               hreflang="en"
+               href="https://editoria11y.com/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/"/>
     <xhtml:link
@@ -130,6 +261,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -255,6 +390,10 @@
                href="https://editoria11y.com/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/"/>
     <xhtml:link
@@ -376,6 +515,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -501,6 +644,10 @@
                href="https://editoria11y.com/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/"/>
     <xhtml:link
@@ -622,6 +769,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -747,6 +898,10 @@
                href="https://editoria11y.com/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/"/>
     <xhtml:link
@@ -868,6 +1023,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -993,6 +1152,10 @@
                href="https://editoria11y.com/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/"/>
     <xhtml:link
@@ -1114,6 +1277,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -1239,6 +1406,10 @@
                href="https://editoria11y.com/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/"/>
     <xhtml:link
@@ -1360,6 +1531,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -1485,6 +1660,10 @@
                href="https://editoria11y.com/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/"/>
     <xhtml:link
@@ -1606,6 +1785,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -1731,6 +1914,10 @@
                href="https://editoria11y.com/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/"/>
     <xhtml:link
@@ -1852,6 +2039,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -1977,6 +2168,10 @@
                href="https://editoria11y.com/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/"/>
     <xhtml:link
@@ -2098,6 +2293,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -2223,6 +2422,10 @@
                href="https://editoria11y.com/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/"/>
     <xhtml:link
@@ -2344,6 +2547,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -2469,6 +2676,10 @@
                href="https://editoria11y.com/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/"/>
     <xhtml:link
@@ -2590,6 +2801,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -2715,6 +2930,10 @@
                href="https://editoria11y.com/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/"/>
     <xhtml:link
@@ -2836,6 +3055,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -2961,6 +3184,10 @@
                href="https://editoria11y.com/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/"/>
     <xhtml:link
@@ -3082,6 +3309,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -3207,6 +3438,10 @@
                href="https://editoria11y.com/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/"/>
     <xhtml:link
@@ -3328,6 +3563,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -3453,6 +3692,10 @@
                href="https://editoria11y.com/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/"/>
     <xhtml:link
@@ -3574,6 +3817,137 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/features/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/features/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="bg"
+               href="https://editoria11y.com/bg/features/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="cs"
+               href="https://editoria11y.com/cs/funkce/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="da"
+               href="https://editoria11y.com/da/funktioner/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="de"
+               href="https://editoria11y.com/de/funktionen/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="el"
+               href="https://editoria11y.com/el/features/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="es"
+               href="https://editoria11y.com/es/caracteristicas/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="et"
+               href="https://editoria11y.com/et/funktsioonid/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="fi"
+               href="https://editoria11y.com/fi/ominaisuudet/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="fr"
+               href="https://editoria11y.com/fr/fonctionnalites/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="hu"
+               href="https://editoria11y.com/hu/funkciok/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="id"
+               href="https://editoria11y.com/id/fitur/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="it"
+               href="https://editoria11y.com/it/funzionalita/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ja"
+               href="https://editoria11y.com/ja/features/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ko"
+               href="https://editoria11y.com/ko/features/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="lt"
+               href="https://editoria11y.com/lt/funkcijos/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="lv"
+               href="https://editoria11y.com/lv/funkcijas/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="nb"
+               href="https://editoria11y.com/nb/funksjoner/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="nl"
+               href="https://editoria11y.com/nl/functies/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="pl"
+               href="https://editoria11y.com/pl/funkcje/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="pt-BR"
+               href="https://editoria11y.com/pt-br/funcionalidades/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="pt-PT"
+               href="https://editoria11y.com/pt-pt/funcionalidades/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ro"
+               href="https://editoria11y.com/ro/functionalitati/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="sk"
+               href="https://editoria11y.com/sk/funkcie/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="sl"
+               href="https://editoria11y.com/sl/funkcije/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="sv"
+               href="https://editoria11y.com/sv/funktioner/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="tr"
+               href="https://editoria11y.com/tr/ozellikler/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="uk"
+               href="https://editoria11y.com/uk/features/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="zh"
+               href="https://editoria11y.com/zh/features/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="x-default"
+               href="https://editoria11y.com/features/"/>
+  </url>
+  <url>
+    <loc>https://editoria11y.com/ar/features/</loc>
+    <xhtml:link
+               rel="alternate"
+               hreflang="en"
+               href="https://editoria11y.com/features/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/features/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -3699,6 +4073,10 @@
                href="https://editoria11y.com/features/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/features/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/features/"/>
     <xhtml:link
@@ -3820,6 +4198,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/features/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/features/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -3945,6 +4327,10 @@
                href="https://editoria11y.com/features/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/features/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/features/"/>
     <xhtml:link
@@ -4066,6 +4452,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/features/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/features/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -4191,6 +4581,10 @@
                href="https://editoria11y.com/features/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/features/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/features/"/>
     <xhtml:link
@@ -4312,6 +4706,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/features/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/features/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -4437,6 +4835,10 @@
                href="https://editoria11y.com/features/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/features/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/features/"/>
     <xhtml:link
@@ -4558,6 +4960,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/features/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/features/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -4683,6 +5089,10 @@
                href="https://editoria11y.com/features/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/features/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/features/"/>
     <xhtml:link
@@ -4804,6 +5214,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/features/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/features/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -4929,6 +5343,10 @@
                href="https://editoria11y.com/features/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/features/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/features/"/>
     <xhtml:link
@@ -5050,6 +5468,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/features/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/features/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -5175,6 +5597,10 @@
                href="https://editoria11y.com/features/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/features/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/features/"/>
     <xhtml:link
@@ -5296,6 +5722,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/features/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/features/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -5421,6 +5851,10 @@
                href="https://editoria11y.com/features/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/features/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/features/"/>
     <xhtml:link
@@ -5542,6 +5976,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/features/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/features/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -5667,6 +6105,10 @@
                href="https://editoria11y.com/features/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/features/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/features/"/>
     <xhtml:link
@@ -5788,6 +6230,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/features/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/features/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -5913,6 +6359,10 @@
                href="https://editoria11y.com/features/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/features/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/features/"/>
     <xhtml:link
@@ -6034,6 +6484,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/features/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/features/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -6159,6 +6613,10 @@
                href="https://editoria11y.com/features/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/features/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/features/"/>
     <xhtml:link
@@ -6280,6 +6738,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/features/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/features/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -6405,6 +6867,10 @@
                href="https://editoria11y.com/features/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/features/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/features/"/>
     <xhtml:link
@@ -6526,6 +6992,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/features/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/features/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -6651,6 +7121,10 @@
                href="https://editoria11y.com/features/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/features/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/features/"/>
     <xhtml:link
@@ -6772,6 +7246,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/features/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/features/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -6897,6 +7375,10 @@
                href="https://editoria11y.com/features/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/features/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/features/"/>
     <xhtml:link
@@ -7018,6 +7500,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/features/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/features/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -7143,6 +7629,137 @@
                href="https://editoria11y.com/demo/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/demo/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="bg"
+               href="https://editoria11y.com/bg/demo/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="cs"
+               href="https://editoria11y.com/cs/demo/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="da"
+               href="https://editoria11y.com/da/demo/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="de"
+               href="https://editoria11y.com/de/demo/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="el"
+               href="https://editoria11y.com/el/demo/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="es"
+               href="https://editoria11y.com/es/demo/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="et"
+               href="https://editoria11y.com/et/demo/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="fi"
+               href="https://editoria11y.com/fi/demo/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="fr"
+               href="https://editoria11y.com/fr/demo/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="hu"
+               href="https://editoria11y.com/hu/demo/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="id"
+               href="https://editoria11y.com/id/demo/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="it"
+               href="https://editoria11y.com/it/demo/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ja"
+               href="https://editoria11y.com/ja/demo/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ko"
+               href="https://editoria11y.com/ko/demo/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="lt"
+               href="https://editoria11y.com/lt/demo/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="lv"
+               href="https://editoria11y.com/lv/demo/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="nb"
+               href="https://editoria11y.com/nb/demo/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="nl"
+               href="https://editoria11y.com/nl/demo/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="pl"
+               href="https://editoria11y.com/pl/demo/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="pt-BR"
+               href="https://editoria11y.com/pt-br/demo/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="pt-PT"
+               href="https://editoria11y.com/pt-pt/demo/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ro"
+               href="https://editoria11y.com/ro/demo/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="sk"
+               href="https://editoria11y.com/sk/demo/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="sl"
+               href="https://editoria11y.com/sl/predstavitev/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="sv"
+               href="https://editoria11y.com/sv/demo/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="tr"
+               href="https://editoria11y.com/tr/demo/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="uk"
+               href="https://editoria11y.com/uk/demo/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="zh"
+               href="https://editoria11y.com/zh/demo/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="x-default"
+               href="https://editoria11y.com/demo/"/>
+  </url>
+  <url>
+    <loc>https://editoria11y.com/ar/demo/</loc>
+    <xhtml:link
+               rel="alternate"
+               hreflang="en"
+               href="https://editoria11y.com/demo/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/demo/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/demo/"/>
     <xhtml:link
@@ -7264,6 +7881,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/demo/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/demo/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -7389,6 +8010,10 @@
                href="https://editoria11y.com/demo/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/demo/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/demo/"/>
     <xhtml:link
@@ -7510,6 +8135,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/demo/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/demo/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -7635,6 +8264,10 @@
                href="https://editoria11y.com/demo/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/demo/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/demo/"/>
     <xhtml:link
@@ -7756,6 +8389,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/demo/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/demo/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -7881,6 +8518,10 @@
                href="https://editoria11y.com/demo/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/demo/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/demo/"/>
     <xhtml:link
@@ -8002,6 +8643,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/demo/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/demo/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -8127,6 +8772,10 @@
                href="https://editoria11y.com/demo/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/demo/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/demo/"/>
     <xhtml:link
@@ -8248,6 +8897,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/demo/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/demo/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -8373,6 +9026,10 @@
                href="https://editoria11y.com/demo/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/demo/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/demo/"/>
     <xhtml:link
@@ -8494,6 +9151,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/demo/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/demo/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -8619,6 +9280,10 @@
                href="https://editoria11y.com/demo/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/demo/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/demo/"/>
     <xhtml:link
@@ -8740,6 +9405,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/demo/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/demo/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -8865,6 +9534,10 @@
                href="https://editoria11y.com/demo/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/demo/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/demo/"/>
     <xhtml:link
@@ -8986,6 +9659,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/demo/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/demo/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -9111,6 +9788,10 @@
                href="https://editoria11y.com/demo/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/demo/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/demo/"/>
     <xhtml:link
@@ -9232,6 +9913,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/demo/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/demo/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -9357,6 +10042,10 @@
                href="https://editoria11y.com/demo/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/demo/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/demo/"/>
     <xhtml:link
@@ -9478,6 +10167,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/demo/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/demo/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -9603,6 +10296,10 @@
                href="https://editoria11y.com/demo/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/demo/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/demo/"/>
     <xhtml:link
@@ -9724,6 +10421,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/demo/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/demo/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -9849,6 +10550,10 @@
                href="https://editoria11y.com/demo/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/demo/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/demo/"/>
     <xhtml:link
@@ -9970,6 +10675,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/demo/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/demo/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -10095,6 +10804,10 @@
                href="https://editoria11y.com/demo/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/demo/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/demo/"/>
     <xhtml:link
@@ -10216,6 +10929,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/demo/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/demo/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -10341,6 +11058,10 @@
                href="https://editoria11y.com/demo/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/demo/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/demo/"/>
     <xhtml:link
@@ -10462,6 +11183,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/demo/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/demo/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -10587,6 +11312,10 @@
                href="https://editoria11y.com/demo/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/demo/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/demo/"/>
     <xhtml:link
@@ -10708,6 +11437,137 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/contacts/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/contacts/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="bg"
+               href="https://editoria11y.com/bg/contacts/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="cs"
+               href="https://editoria11y.com/cs/kontakty/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="da"
+               href="https://editoria11y.com/da/kontakt/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="de"
+               href="https://editoria11y.com/de/kontakt/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="el"
+               href="https://editoria11y.com/el/contacts/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="es"
+               href="https://editoria11y.com/es/contacto/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="et"
+               href="https://editoria11y.com/et/kontaktid/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="fi"
+               href="https://editoria11y.com/fi/yhteystiedot/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="fr"
+               href="https://editoria11y.com/fr/contact/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="hu"
+               href="https://editoria11y.com/hu/kapcsolat/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="id"
+               href="https://editoria11y.com/id/kontak/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="it"
+               href="https://editoria11y.com/it/contatti/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ja"
+               href="https://editoria11y.com/ja/contacts/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ko"
+               href="https://editoria11y.com/ko/contacts/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="lt"
+               href="https://editoria11y.com/lt/kontaktai/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="lv"
+               href="https://editoria11y.com/lv/kontakti/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="nb"
+               href="https://editoria11y.com/nb/kontakt/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="nl"
+               href="https://editoria11y.com/nl/contact/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="pl"
+               href="https://editoria11y.com/pl/kontakt/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="pt-BR"
+               href="https://editoria11y.com/pt-br/contato/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="pt-PT"
+               href="https://editoria11y.com/pt-pt/contacto/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ro"
+               href="https://editoria11y.com/ro/contact/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="sk"
+               href="https://editoria11y.com/sk/kontakty/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="sl"
+               href="https://editoria11y.com/sl/stiki/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="sv"
+               href="https://editoria11y.com/sv/kontakt/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="tr"
+               href="https://editoria11y.com/tr/iletisim/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="uk"
+               href="https://editoria11y.com/uk/contacts/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="zh"
+               href="https://editoria11y.com/zh/contacts/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="x-default"
+               href="https://editoria11y.com/contacts/"/>
+  </url>
+  <url>
+    <loc>https://editoria11y.com/ar/contacts/</loc>
+    <xhtml:link
+               rel="alternate"
+               hreflang="en"
+               href="https://editoria11y.com/contacts/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/contacts/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -10833,6 +11693,10 @@
                href="https://editoria11y.com/contacts/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/contacts/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/contacts/"/>
     <xhtml:link
@@ -10954,6 +11818,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/contacts/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/contacts/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -11079,6 +11947,10 @@
                href="https://editoria11y.com/contacts/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/contacts/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/contacts/"/>
     <xhtml:link
@@ -11200,6 +12072,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/contacts/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/contacts/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -11325,6 +12201,10 @@
                href="https://editoria11y.com/contacts/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/contacts/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/contacts/"/>
     <xhtml:link
@@ -11446,6 +12326,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/contacts/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/contacts/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -11571,6 +12455,10 @@
                href="https://editoria11y.com/contacts/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/contacts/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/contacts/"/>
     <xhtml:link
@@ -11692,6 +12580,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/contacts/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/contacts/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -11817,6 +12709,10 @@
                href="https://editoria11y.com/contacts/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/contacts/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/contacts/"/>
     <xhtml:link
@@ -11938,6 +12834,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/contacts/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/contacts/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -12063,6 +12963,10 @@
                href="https://editoria11y.com/contacts/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/contacts/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/contacts/"/>
     <xhtml:link
@@ -12184,6 +13088,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/contacts/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/contacts/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -12309,6 +13217,10 @@
                href="https://editoria11y.com/contacts/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/contacts/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/contacts/"/>
     <xhtml:link
@@ -12430,6 +13342,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/contacts/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/contacts/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -12555,6 +13471,10 @@
                href="https://editoria11y.com/contacts/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/contacts/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/contacts/"/>
     <xhtml:link
@@ -12676,6 +13596,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/contacts/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/contacts/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -12801,6 +13725,10 @@
                href="https://editoria11y.com/contacts/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/contacts/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/contacts/"/>
     <xhtml:link
@@ -12922,6 +13850,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/contacts/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/contacts/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -13047,6 +13979,10 @@
                href="https://editoria11y.com/contacts/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/contacts/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/contacts/"/>
     <xhtml:link
@@ -13168,6 +14104,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/contacts/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/contacts/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -13293,6 +14233,10 @@
                href="https://editoria11y.com/contacts/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/contacts/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/contacts/"/>
     <xhtml:link
@@ -13414,6 +14358,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/contacts/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/contacts/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -13539,6 +14487,10 @@
                href="https://editoria11y.com/contacts/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/contacts/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/contacts/"/>
     <xhtml:link
@@ -13660,6 +14612,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/contacts/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/contacts/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -13785,6 +14741,10 @@
                href="https://editoria11y.com/contacts/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/contacts/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/contacts/"/>
     <xhtml:link
@@ -13906,6 +14866,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/contacts/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/contacts/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -14031,6 +14995,10 @@
                href="https://editoria11y.com/contacts/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/contacts/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/contacts/"/>
     <xhtml:link
@@ -14152,6 +15120,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/contacts/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/contacts/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -14277,6 +15249,137 @@
                href="https://editoria11y.com/install/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/install/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="bg"
+               href="https://editoria11y.com/bg/install/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="cs"
+               href="https://editoria11y.com/cs/instalace/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="da"
+               href="https://editoria11y.com/da/install/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="de"
+               href="https://editoria11y.com/de/install/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="el"
+               href="https://editoria11y.com/el/install/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="es"
+               href="https://editoria11y.com/es/instalacion/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="et"
+               href="https://editoria11y.com/et/paigaldamine/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="fi"
+               href="https://editoria11y.com/fi/asennus/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="fr"
+               href="https://editoria11y.com/fr/install/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="hu"
+               href="https://editoria11y.com/hu/telepites/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="id"
+               href="https://editoria11y.com/id/instalasi/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="it"
+               href="https://editoria11y.com/it/installazione/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ja"
+               href="https://editoria11y.com/ja/install/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ko"
+               href="https://editoria11y.com/ko/install/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="lt"
+               href="https://editoria11y.com/lt/diegimas/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="lv"
+               href="https://editoria11y.com/lv/uzstadisana/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="nb"
+               href="https://editoria11y.com/nb/installasjon/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="nl"
+               href="https://editoria11y.com/nl/installatie/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="pl"
+               href="https://editoria11y.com/pl/instalacja/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="pt-BR"
+               href="https://editoria11y.com/pt-br/instalacao/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="pt-PT"
+               href="https://editoria11y.com/pt-pt/instalacao/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ro"
+               href="https://editoria11y.com/ro/instalare/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="sk"
+               href="https://editoria11y.com/sk/instalacia/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="sl"
+               href="https://editoria11y.com/sl/namestitev/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="sv"
+               href="https://editoria11y.com/sv/installation/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="tr"
+               href="https://editoria11y.com/tr/kurulum/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="uk"
+               href="https://editoria11y.com/uk/install/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="zh"
+               href="https://editoria11y.com/zh/install/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="x-default"
+               href="https://editoria11y.com/install/"/>
+  </url>
+  <url>
+    <loc>https://editoria11y.com/ar/install/</loc>
+    <xhtml:link
+               rel="alternate"
+               hreflang="en"
+               href="https://editoria11y.com/install/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/install/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/install/"/>
     <xhtml:link
@@ -14398,6 +15501,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/install/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/install/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -14523,6 +15630,10 @@
                href="https://editoria11y.com/install/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/install/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/install/"/>
     <xhtml:link
@@ -14644,6 +15755,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/install/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/install/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -14769,6 +15884,10 @@
                href="https://editoria11y.com/install/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/install/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/install/"/>
     <xhtml:link
@@ -14890,6 +16009,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/install/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/install/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -15015,6 +16138,10 @@
                href="https://editoria11y.com/install/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/install/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/install/"/>
     <xhtml:link
@@ -15136,6 +16263,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/install/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/install/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -15261,6 +16392,10 @@
                href="https://editoria11y.com/install/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/install/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/install/"/>
     <xhtml:link
@@ -15382,6 +16517,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/install/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/install/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -15507,6 +16646,10 @@
                href="https://editoria11y.com/install/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/install/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/install/"/>
     <xhtml:link
@@ -15628,6 +16771,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/install/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/install/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -15753,6 +16900,10 @@
                href="https://editoria11y.com/install/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/install/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/install/"/>
     <xhtml:link
@@ -15874,6 +17025,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/install/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/install/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -15999,6 +17154,10 @@
                href="https://editoria11y.com/install/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/install/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/install/"/>
     <xhtml:link
@@ -16120,6 +17279,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/install/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/install/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -16245,6 +17408,10 @@
                href="https://editoria11y.com/install/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/install/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/install/"/>
     <xhtml:link
@@ -16366,6 +17533,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/install/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/install/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -16491,6 +17662,10 @@
                href="https://editoria11y.com/install/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/install/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/install/"/>
     <xhtml:link
@@ -16612,6 +17787,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/install/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/install/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -16737,6 +17916,10 @@
                href="https://editoria11y.com/install/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/install/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/install/"/>
     <xhtml:link
@@ -16858,6 +18041,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/install/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/install/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -16983,6 +18170,10 @@
                href="https://editoria11y.com/install/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/install/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/install/"/>
     <xhtml:link
@@ -17104,6 +18295,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/install/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/install/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -17229,6 +18424,10 @@
                href="https://editoria11y.com/install/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/install/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/install/"/>
     <xhtml:link
@@ -17350,6 +18549,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/install/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/install/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -17475,6 +18678,10 @@
                href="https://editoria11y.com/install/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/install/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/install/"/>
     <xhtml:link
@@ -17596,6 +18803,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/install/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/install/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -17721,6 +18932,10 @@
                href="https://editoria11y.com/install/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/install/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/install/"/>
     <xhtml:link
@@ -17842,6 +19057,137 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/drupal/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/drupal/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="bg"
+               href="https://editoria11y.com/bg/drupal/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="cs"
+               href="https://editoria11y.com/cs/drupal/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="da"
+               href="https://editoria11y.com/da/drupal/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="de"
+               href="https://editoria11y.com/de/drupal/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="el"
+               href="https://editoria11y.com/el/drupal/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="es"
+               href="https://editoria11y.com/es/drupal/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="et"
+               href="https://editoria11y.com/et/drupal/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="fi"
+               href="https://editoria11y.com/fi/drupal/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="fr"
+               href="https://editoria11y.com/fr/drupal/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="hu"
+               href="https://editoria11y.com/hu/drupal/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="id"
+               href="https://editoria11y.com/id/drupal/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="it"
+               href="https://editoria11y.com/it/drupal/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ja"
+               href="https://editoria11y.com/ja/drupal/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ko"
+               href="https://editoria11y.com/ko/drupal/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="lt"
+               href="https://editoria11y.com/lt/drupal/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="lv"
+               href="https://editoria11y.com/lv/drupal/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="nb"
+               href="https://editoria11y.com/nb/drupal/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="nl"
+               href="https://editoria11y.com/nl/drupal/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="pl"
+               href="https://editoria11y.com/pl/drupal/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="pt-BR"
+               href="https://editoria11y.com/pt-br/drupal/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="pt-PT"
+               href="https://editoria11y.com/pt-pt/drupal/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ro"
+               href="https://editoria11y.com/ro/drupal/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="sk"
+               href="https://editoria11y.com/sk/drupal/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="sl"
+               href="https://editoria11y.com/sl/drupal/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="sv"
+               href="https://editoria11y.com/sv/drupal/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="tr"
+               href="https://editoria11y.com/tr/drupal/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="uk"
+               href="https://editoria11y.com/uk/drupal/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="zh"
+               href="https://editoria11y.com/zh/drupal/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="x-default"
+               href="https://editoria11y.com/drupal/"/>
+  </url>
+  <url>
+    <loc>https://editoria11y.com/ar/drupal/</loc>
+    <xhtml:link
+               rel="alternate"
+               hreflang="en"
+               href="https://editoria11y.com/drupal/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/drupal/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -17967,6 +19313,10 @@
                href="https://editoria11y.com/drupal/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/drupal/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/drupal/"/>
     <xhtml:link
@@ -18088,6 +19438,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/drupal/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/drupal/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -18213,6 +19567,10 @@
                href="https://editoria11y.com/drupal/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/drupal/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/drupal/"/>
     <xhtml:link
@@ -18334,6 +19692,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/drupal/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/drupal/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -18459,6 +19821,10 @@
                href="https://editoria11y.com/drupal/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/drupal/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/drupal/"/>
     <xhtml:link
@@ -18580,6 +19946,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/drupal/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/drupal/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -18705,6 +20075,10 @@
                href="https://editoria11y.com/drupal/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/drupal/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/drupal/"/>
     <xhtml:link
@@ -18826,6 +20200,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/drupal/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/drupal/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -18951,6 +20329,10 @@
                href="https://editoria11y.com/drupal/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/drupal/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/drupal/"/>
     <xhtml:link
@@ -19072,6 +20454,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/drupal/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/drupal/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -19197,6 +20583,10 @@
                href="https://editoria11y.com/drupal/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/drupal/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/drupal/"/>
     <xhtml:link
@@ -19318,6 +20708,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/drupal/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/drupal/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -19443,6 +20837,10 @@
                href="https://editoria11y.com/drupal/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/drupal/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/drupal/"/>
     <xhtml:link
@@ -19564,6 +20962,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/drupal/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/drupal/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -19689,6 +21091,10 @@
                href="https://editoria11y.com/drupal/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/drupal/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/drupal/"/>
     <xhtml:link
@@ -19810,6 +21216,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/drupal/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/drupal/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -19935,6 +21345,10 @@
                href="https://editoria11y.com/drupal/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/drupal/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/drupal/"/>
     <xhtml:link
@@ -20056,6 +21470,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/drupal/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/drupal/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -20181,6 +21599,10 @@
                href="https://editoria11y.com/drupal/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/drupal/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/drupal/"/>
     <xhtml:link
@@ -20302,6 +21724,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/drupal/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/drupal/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -20427,6 +21853,10 @@
                href="https://editoria11y.com/drupal/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/drupal/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/drupal/"/>
     <xhtml:link
@@ -20548,6 +21978,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/drupal/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/drupal/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -20673,6 +22107,10 @@
                href="https://editoria11y.com/drupal/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/drupal/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/drupal/"/>
     <xhtml:link
@@ -20794,6 +22232,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/drupal/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/drupal/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -20919,6 +22361,10 @@
                href="https://editoria11y.com/drupal/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/drupal/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/drupal/"/>
     <xhtml:link
@@ -21040,6 +22486,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/drupal/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/drupal/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -21165,6 +22615,10 @@
                href="https://editoria11y.com/drupal/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/drupal/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/drupal/"/>
     <xhtml:link
@@ -21286,6 +22740,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/drupal/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/drupal/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -21411,6 +22869,137 @@
                href="https://editoria11y.com/license/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/license/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="bg"
+               href="https://editoria11y.com/bg/license/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="cs"
+               href="https://editoria11y.com/cs/ceny/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="da"
+               href="https://editoria11y.com/da/priser/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="de"
+               href="https://editoria11y.com/de/preise/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="el"
+               href="https://editoria11y.com/el/license/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="es"
+               href="https://editoria11y.com/es/precios/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="et"
+               href="https://editoria11y.com/et/hinnad/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="fi"
+               href="https://editoria11y.com/fi/hinnat/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="fr"
+               href="https://editoria11y.com/fr/tarifs/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="hu"
+               href="https://editoria11y.com/hu/arak/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="id"
+               href="https://editoria11y.com/id/harga/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="it"
+               href="https://editoria11y.com/it/prezzi/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ja"
+               href="https://editoria11y.com/ja/license/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ko"
+               href="https://editoria11y.com/ko/license/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="lt"
+               href="https://editoria11y.com/lt/kainos/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="lv"
+               href="https://editoria11y.com/lv/cenas/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="nb"
+               href="https://editoria11y.com/nb/priser/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="nl"
+               href="https://editoria11y.com/nl/prijzen/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="pl"
+               href="https://editoria11y.com/pl/cennik/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="pt-BR"
+               href="https://editoria11y.com/pt-br/precos/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="pt-PT"
+               href="https://editoria11y.com/pt-pt/precos/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ro"
+               href="https://editoria11y.com/ro/preturi/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="sk"
+               href="https://editoria11y.com/sk/ceny/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="sl"
+               href="https://editoria11y.com/sl/cene/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="sv"
+               href="https://editoria11y.com/sv/priser/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="tr"
+               href="https://editoria11y.com/tr/fiyatlar/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="uk"
+               href="https://editoria11y.com/uk/license/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="zh"
+               href="https://editoria11y.com/zh/license/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="x-default"
+               href="https://editoria11y.com/license/"/>
+  </url>
+  <url>
+    <loc>https://editoria11y.com/ar/license/</loc>
+    <xhtml:link
+               rel="alternate"
+               hreflang="en"
+               href="https://editoria11y.com/license/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/license/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/license/"/>
     <xhtml:link
@@ -21532,6 +23121,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/license/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/license/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -21657,6 +23250,10 @@
                href="https://editoria11y.com/license/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/license/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/license/"/>
     <xhtml:link
@@ -21778,6 +23375,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/license/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/license/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -21903,6 +23504,10 @@
                href="https://editoria11y.com/license/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/license/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/license/"/>
     <xhtml:link
@@ -22024,6 +23629,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/license/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/license/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -22149,6 +23758,10 @@
                href="https://editoria11y.com/license/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/license/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/license/"/>
     <xhtml:link
@@ -22270,6 +23883,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/license/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/license/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -22395,6 +24012,10 @@
                href="https://editoria11y.com/license/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/license/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/license/"/>
     <xhtml:link
@@ -22516,6 +24137,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/license/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/license/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -22641,6 +24266,10 @@
                href="https://editoria11y.com/license/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/license/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/license/"/>
     <xhtml:link
@@ -22762,6 +24391,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/license/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/license/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -22887,6 +24520,10 @@
                href="https://editoria11y.com/license/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/license/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/license/"/>
     <xhtml:link
@@ -23008,6 +24645,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/license/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/license/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -23133,6 +24774,10 @@
                href="https://editoria11y.com/license/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/license/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/license/"/>
     <xhtml:link
@@ -23254,6 +24899,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/license/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/license/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -23379,6 +25028,10 @@
                href="https://editoria11y.com/license/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/license/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/license/"/>
     <xhtml:link
@@ -23500,6 +25153,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/license/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/license/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -23625,6 +25282,10 @@
                href="https://editoria11y.com/license/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/license/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/license/"/>
     <xhtml:link
@@ -23746,6 +25407,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/license/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/license/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -23871,6 +25536,10 @@
                href="https://editoria11y.com/license/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/license/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/license/"/>
     <xhtml:link
@@ -23992,6 +25661,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/license/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/license/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -24117,6 +25790,10 @@
                href="https://editoria11y.com/license/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/license/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/license/"/>
     <xhtml:link
@@ -24238,6 +25915,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/license/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/license/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -24363,6 +26044,10 @@
                href="https://editoria11y.com/license/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/license/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/license/"/>
     <xhtml:link
@@ -24484,6 +26169,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/license/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/license/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -24609,6 +26298,10 @@
                href="https://editoria11y.com/license/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/license/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/license/"/>
     <xhtml:link
@@ -24730,6 +26423,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/license/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/license/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -24855,6 +26552,10 @@
                href="https://editoria11y.com/license/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/license/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/license/"/>
     <xhtml:link
@@ -24976,6 +26677,137 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/news/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/news/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="bg"
+               href="https://editoria11y.com/bg/news/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="cs"
+               href="https://editoria11y.com/cs/novinky/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="da"
+               href="https://editoria11y.com/da/nyheder/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="de"
+               href="https://editoria11y.com/de/neuigkeiten/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="el"
+               href="https://editoria11y.com/el/news/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="es"
+               href="https://editoria11y.com/es/noticias/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="et"
+               href="https://editoria11y.com/et/uudised/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="fi"
+               href="https://editoria11y.com/fi/uutiset/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="fr"
+               href="https://editoria11y.com/fr/actualites/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="hu"
+               href="https://editoria11y.com/hu/hirek/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="id"
+               href="https://editoria11y.com/id/berita/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="it"
+               href="https://editoria11y.com/it/notizie/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ja"
+               href="https://editoria11y.com/ja/news/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ko"
+               href="https://editoria11y.com/ko/news/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="lt"
+               href="https://editoria11y.com/lt/naujienos/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="lv"
+               href="https://editoria11y.com/lv/jaunumi/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="nb"
+               href="https://editoria11y.com/nb/nyheter/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="nl"
+               href="https://editoria11y.com/nl/nieuws/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="pl"
+               href="https://editoria11y.com/pl/aktualnosci/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="pt-BR"
+               href="https://editoria11y.com/pt-br/noticias/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="pt-PT"
+               href="https://editoria11y.com/pt-pt/noticias/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ro"
+               href="https://editoria11y.com/ro/stiri/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="sk"
+               href="https://editoria11y.com/sk/novinky/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="sl"
+               href="https://editoria11y.com/sl/novice/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="sv"
+               href="https://editoria11y.com/sv/nyheter/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="tr"
+               href="https://editoria11y.com/tr/haberler/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="uk"
+               href="https://editoria11y.com/uk/news/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="zh"
+               href="https://editoria11y.com/zh/news/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="x-default"
+               href="https://editoria11y.com/news/"/>
+  </url>
+  <url>
+    <loc>https://editoria11y.com/ar/news/</loc>
+    <xhtml:link
+               rel="alternate"
+               hreflang="en"
+               href="https://editoria11y.com/news/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/news/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -25101,6 +26933,10 @@
                href="https://editoria11y.com/news/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/news/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/news/"/>
     <xhtml:link
@@ -25222,6 +27058,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/news/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/news/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -25347,6 +27187,10 @@
                href="https://editoria11y.com/news/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/news/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/news/"/>
     <xhtml:link
@@ -25468,6 +27312,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/news/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/news/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -25593,6 +27441,10 @@
                href="https://editoria11y.com/news/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/news/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/news/"/>
     <xhtml:link
@@ -25714,6 +27566,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/news/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/news/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -25839,6 +27695,10 @@
                href="https://editoria11y.com/news/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/news/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/news/"/>
     <xhtml:link
@@ -25960,6 +27820,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/news/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/news/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -26085,6 +27949,10 @@
                href="https://editoria11y.com/news/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/news/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/news/"/>
     <xhtml:link
@@ -26206,6 +28074,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/news/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/news/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -26331,6 +28203,10 @@
                href="https://editoria11y.com/news/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/news/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/news/"/>
     <xhtml:link
@@ -26452,6 +28328,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/news/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/news/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -26577,6 +28457,10 @@
                href="https://editoria11y.com/news/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/news/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/news/"/>
     <xhtml:link
@@ -26698,6 +28582,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/news/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/news/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -26823,6 +28711,10 @@
                href="https://editoria11y.com/news/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/news/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/news/"/>
     <xhtml:link
@@ -26944,6 +28836,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/news/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/news/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -27069,6 +28965,10 @@
                href="https://editoria11y.com/news/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/news/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/news/"/>
     <xhtml:link
@@ -27190,6 +29090,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/news/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/news/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -27315,6 +29219,10 @@
                href="https://editoria11y.com/news/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/news/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/news/"/>
     <xhtml:link
@@ -27436,6 +29344,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/news/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/news/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -27561,6 +29473,10 @@
                href="https://editoria11y.com/news/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/news/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/news/"/>
     <xhtml:link
@@ -27682,6 +29598,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/news/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/news/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -27807,6 +29727,10 @@
                href="https://editoria11y.com/news/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/news/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/news/"/>
     <xhtml:link
@@ -27928,6 +29852,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/news/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/news/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -28053,6 +29981,10 @@
                href="https://editoria11y.com/news/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/news/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/news/"/>
     <xhtml:link
@@ -28174,6 +30106,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/news/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/news/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -28299,6 +30235,10 @@
                href="https://editoria11y.com/news/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/news/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/news/"/>
     <xhtml:link
@@ -28420,6 +30360,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/news/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/news/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -28545,6 +30489,137 @@
                href="https://editoria11y.com/privacy-policy/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/privacy-policy/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="bg"
+               href="https://editoria11y.com/bg/privacy-policy/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="cs"
+               href="https://editoria11y.com/cs/ochrana-osobnich-udaju/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="da"
+               href="https://editoria11y.com/da/privatlivspolitik/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="de"
+               href="https://editoria11y.com/de/datenschutz/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="el"
+               href="https://editoria11y.com/el/privacy-policy/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="es"
+               href="https://editoria11y.com/es/privacidad/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="et"
+               href="https://editoria11y.com/et/privaatsuspoliitika/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="fi"
+               href="https://editoria11y.com/fi/tietosuoja/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="fr"
+               href="https://editoria11y.com/fr/confidentialite/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="hu"
+               href="https://editoria11y.com/hu/adatvedelem/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="id"
+               href="https://editoria11y.com/id/kebijakan-privasi/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="it"
+               href="https://editoria11y.com/it/privacy/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ja"
+               href="https://editoria11y.com/ja/privacy-policy/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ko"
+               href="https://editoria11y.com/ko/privacy-policy/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="lt"
+               href="https://editoria11y.com/lt/privatumo-politika/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="lv"
+               href="https://editoria11y.com/lv/privatuma-politika/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="nb"
+               href="https://editoria11y.com/nb/personvern/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="nl"
+               href="https://editoria11y.com/nl/privacybeleid/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="pl"
+               href="https://editoria11y.com/pl/prywatnosc/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="pt-BR"
+               href="https://editoria11y.com/pt-br/privacidade/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="pt-PT"
+               href="https://editoria11y.com/pt-pt/privacidade/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ro"
+               href="https://editoria11y.com/ro/confidentialitate/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="sk"
+               href="https://editoria11y.com/sk/ochrana-osobnych-udajov/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="sl"
+               href="https://editoria11y.com/sl/zasebnost/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="sv"
+               href="https://editoria11y.com/sv/integritet/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="tr"
+               href="https://editoria11y.com/tr/gizlilik/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="uk"
+               href="https://editoria11y.com/uk/privacy-policy/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="zh"
+               href="https://editoria11y.com/zh/privacy-policy/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="x-default"
+               href="https://editoria11y.com/privacy-policy/"/>
+  </url>
+  <url>
+    <loc>https://editoria11y.com/ar/privacy-policy/</loc>
+    <xhtml:link
+               rel="alternate"
+               hreflang="en"
+               href="https://editoria11y.com/privacy-policy/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/privacy-policy/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/privacy-policy/"/>
     <xhtml:link
@@ -28666,6 +30741,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/privacy-policy/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/privacy-policy/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -28791,6 +30870,10 @@
                href="https://editoria11y.com/privacy-policy/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/privacy-policy/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/privacy-policy/"/>
     <xhtml:link
@@ -28912,6 +30995,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/privacy-policy/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/privacy-policy/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -29037,6 +31124,10 @@
                href="https://editoria11y.com/privacy-policy/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/privacy-policy/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/privacy-policy/"/>
     <xhtml:link
@@ -29158,6 +31249,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/privacy-policy/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/privacy-policy/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -29283,6 +31378,10 @@
                href="https://editoria11y.com/privacy-policy/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/privacy-policy/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/privacy-policy/"/>
     <xhtml:link
@@ -29404,6 +31503,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/privacy-policy/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/privacy-policy/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -29529,6 +31632,10 @@
                href="https://editoria11y.com/privacy-policy/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/privacy-policy/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/privacy-policy/"/>
     <xhtml:link
@@ -29650,6 +31757,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/privacy-policy/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/privacy-policy/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -29775,6 +31886,10 @@
                href="https://editoria11y.com/privacy-policy/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/privacy-policy/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/privacy-policy/"/>
     <xhtml:link
@@ -29896,6 +32011,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/privacy-policy/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/privacy-policy/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -30021,6 +32140,10 @@
                href="https://editoria11y.com/privacy-policy/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/privacy-policy/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/privacy-policy/"/>
     <xhtml:link
@@ -30142,6 +32265,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/privacy-policy/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/privacy-policy/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -30267,6 +32394,10 @@
                href="https://editoria11y.com/privacy-policy/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/privacy-policy/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/privacy-policy/"/>
     <xhtml:link
@@ -30388,6 +32519,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/privacy-policy/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/privacy-policy/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -30513,6 +32648,10 @@
                href="https://editoria11y.com/privacy-policy/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/privacy-policy/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/privacy-policy/"/>
     <xhtml:link
@@ -30634,6 +32773,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/privacy-policy/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/privacy-policy/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -30759,6 +32902,10 @@
                href="https://editoria11y.com/privacy-policy/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/privacy-policy/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/privacy-policy/"/>
     <xhtml:link
@@ -30880,6 +33027,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/privacy-policy/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/privacy-policy/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -31005,6 +33156,10 @@
                href="https://editoria11y.com/privacy-policy/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/privacy-policy/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/privacy-policy/"/>
     <xhtml:link
@@ -31126,6 +33281,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/privacy-policy/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/privacy-policy/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -31251,6 +33410,10 @@
                href="https://editoria11y.com/privacy-policy/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/privacy-policy/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/privacy-policy/"/>
     <xhtml:link
@@ -31372,6 +33535,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/privacy-policy/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/privacy-policy/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -31497,6 +33664,10 @@
                href="https://editoria11y.com/privacy-policy/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/privacy-policy/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/privacy-policy/"/>
     <xhtml:link
@@ -31618,6 +33789,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/privacy-policy/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/privacy-policy/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -31743,6 +33918,10 @@
                href="https://editoria11y.com/privacy-policy/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/privacy-policy/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/privacy-policy/"/>
     <xhtml:link
@@ -31864,6 +34043,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/privacy-policy/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/privacy-policy/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -31989,6 +34172,10 @@
                href="https://editoria11y.com/privacy-policy/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/privacy-policy/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/privacy-policy/"/>
     <xhtml:link
@@ -32110,6 +34297,137 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/cookie-policy/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/cookie-policy/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="bg"
+               href="https://editoria11y.com/bg/cookie-policy/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="cs"
+               href="https://editoria11y.com/cs/zasady-cookie/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="da"
+               href="https://editoria11y.com/da/cookiepolitik/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="de"
+               href="https://editoria11y.com/de/cookies/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="el"
+               href="https://editoria11y.com/el/cookie-policy/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="es"
+               href="https://editoria11y.com/es/cookies/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="et"
+               href="https://editoria11y.com/et/kupsiste-poliitika/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="fi"
+               href="https://editoria11y.com/fi/evasteet/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="fr"
+               href="https://editoria11y.com/fr/cookies/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="hu"
+               href="https://editoria11y.com/hu/cookie-szabalyzat/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="id"
+               href="https://editoria11y.com/id/kebijakan-cookie/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="it"
+               href="https://editoria11y.com/it/cookie/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ja"
+               href="https://editoria11y.com/ja/cookie-policy/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ko"
+               href="https://editoria11y.com/ko/cookie-policy/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="lt"
+               href="https://editoria11y.com/lt/slapuku-politika/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="lv"
+               href="https://editoria11y.com/lv/sikdatnu-politika/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="nb"
+               href="https://editoria11y.com/nb/informasjonskapsler/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="nl"
+               href="https://editoria11y.com/nl/cookiebeleid/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="pl"
+               href="https://editoria11y.com/pl/cookies/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="pt-BR"
+               href="https://editoria11y.com/pt-br/cookies/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="pt-PT"
+               href="https://editoria11y.com/pt-pt/cookies/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ro"
+               href="https://editoria11y.com/ro/cookies/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="sk"
+               href="https://editoria11y.com/sk/zasady-cookie/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="sl"
+               href="https://editoria11y.com/sl/piskotki/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="sv"
+               href="https://editoria11y.com/sv/cookiepolicy/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="tr"
+               href="https://editoria11y.com/tr/cerez-politikasi/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="uk"
+               href="https://editoria11y.com/uk/cookie-policy/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="zh"
+               href="https://editoria11y.com/zh/cookie-policy/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="x-default"
+               href="https://editoria11y.com/cookie-policy/"/>
+  </url>
+  <url>
+    <loc>https://editoria11y.com/ar/cookie-policy/</loc>
+    <xhtml:link
+               rel="alternate"
+               hreflang="en"
+               href="https://editoria11y.com/cookie-policy/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/cookie-policy/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -32235,6 +34553,10 @@
                href="https://editoria11y.com/cookie-policy/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/cookie-policy/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/cookie-policy/"/>
     <xhtml:link
@@ -32356,6 +34678,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/cookie-policy/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/cookie-policy/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -32481,6 +34807,10 @@
                href="https://editoria11y.com/cookie-policy/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/cookie-policy/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/cookie-policy/"/>
     <xhtml:link
@@ -32602,6 +34932,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/cookie-policy/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/cookie-policy/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -32727,6 +35061,10 @@
                href="https://editoria11y.com/cookie-policy/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/cookie-policy/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/cookie-policy/"/>
     <xhtml:link
@@ -32848,6 +35186,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/cookie-policy/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/cookie-policy/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -32973,6 +35315,10 @@
                href="https://editoria11y.com/cookie-policy/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/cookie-policy/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/cookie-policy/"/>
     <xhtml:link
@@ -33094,6 +35440,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/cookie-policy/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/cookie-policy/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -33219,6 +35569,10 @@
                href="https://editoria11y.com/cookie-policy/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/cookie-policy/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/cookie-policy/"/>
     <xhtml:link
@@ -33340,6 +35694,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/cookie-policy/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/cookie-policy/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -33465,6 +35823,10 @@
                href="https://editoria11y.com/cookie-policy/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/cookie-policy/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/cookie-policy/"/>
     <xhtml:link
@@ -33586,6 +35948,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/cookie-policy/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/cookie-policy/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -33711,6 +36077,10 @@
                href="https://editoria11y.com/cookie-policy/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/cookie-policy/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/cookie-policy/"/>
     <xhtml:link
@@ -33832,6 +36202,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/cookie-policy/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/cookie-policy/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -33957,6 +36331,10 @@
                href="https://editoria11y.com/cookie-policy/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/cookie-policy/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/cookie-policy/"/>
     <xhtml:link
@@ -34078,6 +36456,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/cookie-policy/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/cookie-policy/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -34203,6 +36585,10 @@
                href="https://editoria11y.com/cookie-policy/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/cookie-policy/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/cookie-policy/"/>
     <xhtml:link
@@ -34324,6 +36710,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/cookie-policy/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/cookie-policy/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -34449,6 +36839,10 @@
                href="https://editoria11y.com/cookie-policy/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/cookie-policy/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/cookie-policy/"/>
     <xhtml:link
@@ -34570,6 +36964,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/cookie-policy/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/cookie-policy/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -34695,6 +37093,10 @@
                href="https://editoria11y.com/cookie-policy/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/cookie-policy/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/cookie-policy/"/>
     <xhtml:link
@@ -34816,6 +37218,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/cookie-policy/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/cookie-policy/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -34941,6 +37347,10 @@
                href="https://editoria11y.com/cookie-policy/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/cookie-policy/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/cookie-policy/"/>
     <xhtml:link
@@ -35062,6 +37472,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/cookie-policy/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/cookie-policy/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -35187,6 +37601,10 @@
                href="https://editoria11y.com/cookie-policy/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/cookie-policy/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/cookie-policy/"/>
     <xhtml:link
@@ -35308,6 +37726,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/cookie-policy/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/cookie-policy/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -35433,6 +37855,10 @@
                href="https://editoria11y.com/cookie-policy/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/cookie-policy/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/cookie-policy/"/>
     <xhtml:link
@@ -35554,6 +37980,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/cookie-policy/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/cookie-policy/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -35679,6 +38109,137 @@
                href="https://editoria11y.com/terms-of-use/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/terms-of-use/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="bg"
+               href="https://editoria11y.com/bg/terms-of-use/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="cs"
+               href="https://editoria11y.com/cs/podminky-pouzivani/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="da"
+               href="https://editoria11y.com/da/vilkaar/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="de"
+               href="https://editoria11y.com/de/nutzungsbedingungen/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="el"
+               href="https://editoria11y.com/el/terms-of-use/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="es"
+               href="https://editoria11y.com/es/condiciones/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="et"
+               href="https://editoria11y.com/et/kasutustingimused/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="fi"
+               href="https://editoria11y.com/fi/kayttoehdot/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="fr"
+               href="https://editoria11y.com/fr/conditions/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="hu"
+               href="https://editoria11y.com/hu/felhasznalasi-feltetelek/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="id"
+               href="https://editoria11y.com/id/syarat-penggunaan/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="it"
+               href="https://editoria11y.com/it/condizioni/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ja"
+               href="https://editoria11y.com/ja/terms-of-use/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ko"
+               href="https://editoria11y.com/ko/terms-of-use/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="lt"
+               href="https://editoria11y.com/lt/salygos/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="lv"
+               href="https://editoria11y.com/lv/noteikumi/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="nb"
+               href="https://editoria11y.com/nb/bruksvilkaar/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="nl"
+               href="https://editoria11y.com/nl/voorwaarden/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="pl"
+               href="https://editoria11y.com/pl/warunki/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="pt-BR"
+               href="https://editoria11y.com/pt-br/termos/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="pt-PT"
+               href="https://editoria11y.com/pt-pt/termos/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ro"
+               href="https://editoria11y.com/ro/termeni/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="sk"
+               href="https://editoria11y.com/sk/podmienky-pouzivania/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="sl"
+               href="https://editoria11y.com/sl/pogoji/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="sv"
+               href="https://editoria11y.com/sv/anvandarvillkor/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="tr"
+               href="https://editoria11y.com/tr/kullanim-kosullari/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="uk"
+               href="https://editoria11y.com/uk/terms-of-use/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="zh"
+               href="https://editoria11y.com/zh/terms-of-use/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="x-default"
+               href="https://editoria11y.com/terms-of-use/"/>
+  </url>
+  <url>
+    <loc>https://editoria11y.com/ar/terms-of-use/</loc>
+    <xhtml:link
+               rel="alternate"
+               hreflang="en"
+               href="https://editoria11y.com/terms-of-use/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/terms-of-use/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/terms-of-use/"/>
     <xhtml:link
@@ -35800,6 +38361,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/terms-of-use/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/terms-of-use/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -35925,6 +38490,10 @@
                href="https://editoria11y.com/terms-of-use/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/terms-of-use/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/terms-of-use/"/>
     <xhtml:link
@@ -36046,6 +38615,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/terms-of-use/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/terms-of-use/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -36171,6 +38744,10 @@
                href="https://editoria11y.com/terms-of-use/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/terms-of-use/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/terms-of-use/"/>
     <xhtml:link
@@ -36292,6 +38869,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/terms-of-use/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/terms-of-use/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -36417,6 +38998,10 @@
                href="https://editoria11y.com/terms-of-use/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/terms-of-use/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/terms-of-use/"/>
     <xhtml:link
@@ -36538,6 +39123,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/terms-of-use/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/terms-of-use/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -36663,6 +39252,10 @@
                href="https://editoria11y.com/terms-of-use/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/terms-of-use/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/terms-of-use/"/>
     <xhtml:link
@@ -36784,6 +39377,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/terms-of-use/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/terms-of-use/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -36909,6 +39506,10 @@
                href="https://editoria11y.com/terms-of-use/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/terms-of-use/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/terms-of-use/"/>
     <xhtml:link
@@ -37030,6 +39631,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/terms-of-use/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/terms-of-use/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -37155,6 +39760,10 @@
                href="https://editoria11y.com/terms-of-use/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/terms-of-use/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/terms-of-use/"/>
     <xhtml:link
@@ -37276,6 +39885,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/terms-of-use/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/terms-of-use/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -37401,6 +40014,10 @@
                href="https://editoria11y.com/terms-of-use/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/terms-of-use/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/terms-of-use/"/>
     <xhtml:link
@@ -37522,6 +40139,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/terms-of-use/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/terms-of-use/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -37647,6 +40268,10 @@
                href="https://editoria11y.com/terms-of-use/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/terms-of-use/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/terms-of-use/"/>
     <xhtml:link
@@ -37768,6 +40393,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/terms-of-use/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/terms-of-use/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -37893,6 +40522,10 @@
                href="https://editoria11y.com/terms-of-use/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/terms-of-use/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/terms-of-use/"/>
     <xhtml:link
@@ -38014,6 +40647,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/terms-of-use/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/terms-of-use/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -38139,6 +40776,10 @@
                href="https://editoria11y.com/terms-of-use/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/terms-of-use/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/terms-of-use/"/>
     <xhtml:link
@@ -38260,6 +40901,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/terms-of-use/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/terms-of-use/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -38385,6 +41030,10 @@
                href="https://editoria11y.com/terms-of-use/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/terms-of-use/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/terms-of-use/"/>
     <xhtml:link
@@ -38506,6 +41155,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/terms-of-use/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/terms-of-use/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -38631,6 +41284,10 @@
                href="https://editoria11y.com/terms-of-use/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/terms-of-use/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/terms-of-use/"/>
     <xhtml:link
@@ -38752,6 +41409,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/terms-of-use/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/terms-of-use/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -38877,6 +41538,10 @@
                href="https://editoria11y.com/terms-of-use/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/terms-of-use/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/terms-of-use/"/>
     <xhtml:link
@@ -38998,6 +41663,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/terms-of-use/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/terms-of-use/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -39123,6 +41792,10 @@
                href="https://editoria11y.com/terms-of-use/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/terms-of-use/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/terms-of-use/"/>
     <xhtml:link
@@ -39244,6 +41917,137 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/legal-notice/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/legal-notice/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="bg"
+               href="https://editoria11y.com/bg/legal-notice/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="cs"
+               href="https://editoria11y.com/cs/pravni-informace/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="da"
+               href="https://editoria11y.com/da/juridisk-meddelelse/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="de"
+               href="https://editoria11y.com/de/impressum/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="el"
+               href="https://editoria11y.com/el/legal-notice/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="es"
+               href="https://editoria11y.com/es/aviso-legal/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="et"
+               href="https://editoria11y.com/et/oiguslik-teave/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="fi"
+               href="https://editoria11y.com/fi/oikeudellinen-ilmoitus/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="fr"
+               href="https://editoria11y.com/fr/mentions-legales/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="hu"
+               href="https://editoria11y.com/hu/jogi-nyilatkozat/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="id"
+               href="https://editoria11y.com/id/pemberitahuan-hukum/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="it"
+               href="https://editoria11y.com/it/note-legali/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ja"
+               href="https://editoria11y.com/ja/legal-notice/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ko"
+               href="https://editoria11y.com/ko/legal-notice/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="lt"
+               href="https://editoria11y.com/lt/teisine-informacija/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="lv"
+               href="https://editoria11y.com/lv/juridiska-informacija/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="nb"
+               href="https://editoria11y.com/nb/juridisk-merknad/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="nl"
+               href="https://editoria11y.com/nl/juridische-kennisgeving/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="pl"
+               href="https://editoria11y.com/pl/informacje-prawne/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="pt-BR"
+               href="https://editoria11y.com/pt-br/aviso-legal/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="pt-PT"
+               href="https://editoria11y.com/pt-pt/aviso-legal/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ro"
+               href="https://editoria11y.com/ro/nota-juridica/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="sk"
+               href="https://editoria11y.com/sk/pravne-informacie/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="sl"
+               href="https://editoria11y.com/sl/pravno-obvestilo/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="sv"
+               href="https://editoria11y.com/sv/juridiskt-meddelande/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="tr"
+               href="https://editoria11y.com/tr/yasal-bildirim/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="uk"
+               href="https://editoria11y.com/uk/legal-notice/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="zh"
+               href="https://editoria11y.com/zh/legal-notice/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="x-default"
+               href="https://editoria11y.com/legal-notice/"/>
+  </url>
+  <url>
+    <loc>https://editoria11y.com/ar/legal-notice/</loc>
+    <xhtml:link
+               rel="alternate"
+               hreflang="en"
+               href="https://editoria11y.com/legal-notice/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/legal-notice/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -39369,6 +42173,10 @@
                href="https://editoria11y.com/legal-notice/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/legal-notice/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/legal-notice/"/>
     <xhtml:link
@@ -39490,6 +42298,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/legal-notice/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/legal-notice/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -39615,6 +42427,10 @@
                href="https://editoria11y.com/legal-notice/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/legal-notice/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/legal-notice/"/>
     <xhtml:link
@@ -39736,6 +42552,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/legal-notice/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/legal-notice/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -39861,6 +42681,10 @@
                href="https://editoria11y.com/legal-notice/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/legal-notice/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/legal-notice/"/>
     <xhtml:link
@@ -39982,6 +42806,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/legal-notice/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/legal-notice/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -40107,6 +42935,10 @@
                href="https://editoria11y.com/legal-notice/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/legal-notice/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/legal-notice/"/>
     <xhtml:link
@@ -40228,6 +43060,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/legal-notice/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/legal-notice/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -40353,6 +43189,10 @@
                href="https://editoria11y.com/legal-notice/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/legal-notice/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/legal-notice/"/>
     <xhtml:link
@@ -40474,6 +43314,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/legal-notice/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/legal-notice/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -40599,6 +43443,10 @@
                href="https://editoria11y.com/legal-notice/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/legal-notice/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/legal-notice/"/>
     <xhtml:link
@@ -40720,6 +43568,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/legal-notice/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/legal-notice/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -40845,6 +43697,10 @@
                href="https://editoria11y.com/legal-notice/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/legal-notice/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/legal-notice/"/>
     <xhtml:link
@@ -40966,6 +43822,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/legal-notice/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/legal-notice/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -41091,6 +43951,10 @@
                href="https://editoria11y.com/legal-notice/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/legal-notice/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/legal-notice/"/>
     <xhtml:link
@@ -41212,6 +44076,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/legal-notice/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/legal-notice/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -41337,6 +44205,10 @@
                href="https://editoria11y.com/legal-notice/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/legal-notice/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/legal-notice/"/>
     <xhtml:link
@@ -41458,6 +44330,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/legal-notice/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/legal-notice/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -41583,6 +44459,10 @@
                href="https://editoria11y.com/legal-notice/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/legal-notice/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/legal-notice/"/>
     <xhtml:link
@@ -41704,6 +44584,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/legal-notice/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/legal-notice/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -41829,6 +44713,10 @@
                href="https://editoria11y.com/legal-notice/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/legal-notice/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/legal-notice/"/>
     <xhtml:link
@@ -41950,6 +44838,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/legal-notice/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/legal-notice/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -42075,6 +44967,10 @@
                href="https://editoria11y.com/legal-notice/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/legal-notice/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/legal-notice/"/>
     <xhtml:link
@@ -42196,6 +45092,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/legal-notice/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/legal-notice/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -42321,6 +45221,10 @@
                href="https://editoria11y.com/legal-notice/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/legal-notice/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/legal-notice/"/>
     <xhtml:link
@@ -42442,6 +45346,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/legal-notice/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/legal-notice/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"
@@ -42567,6 +45475,10 @@
                href="https://editoria11y.com/legal-notice/"/>
     <xhtml:link
                rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/legal-notice/"/>
+    <xhtml:link
+               rel="alternate"
                hreflang="bg"
                href="https://editoria11y.com/bg/legal-notice/"/>
     <xhtml:link
@@ -42688,6 +45600,10 @@
                rel="alternate"
                hreflang="en"
                href="https://editoria11y.com/legal-notice/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ar"
+               href="https://editoria11y.com/ar/legal-notice/"/>
     <xhtml:link
                rel="alternate"
                hreflang="bg"

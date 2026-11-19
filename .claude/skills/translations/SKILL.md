@@ -11,12 +11,14 @@ Built pages are produced by `scripts/build-pages.js` and **are not edited direct
 
 ## The Target Languages
 
-bg	da	el	es	fi	hu	it	ko	lv	nl	pt-br	ro	sl	tr	zh
+ar bg	da	el	es	fi	hu	it	ko	lv	nl	pt-br	ro	sl	tr	zh
 cs	de	en	et	fr	id	ja	lt	nb	pl	pt-pt	sk	sv	uk
 
 ## Pages
 
-`about`, `features`, `news`, `demo`, `contacts`, `install`, `drupal`, `license`, `privacy-policy`, `cookie-policy`, `terms-of-use`, `legal-notice`
+For translation: `about`, `features`, `news`, `demo`, `contacts`, `install`, `drupal`, `license`.
+
+Do not translate the legal pages: `privacy-policy`, `cookie-policy`, `terms-of-use`, `legal-notice`. Redirect them to English.
 
 ## Invoking
 

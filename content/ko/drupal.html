@@ -322,7 +322,7 @@ function MY_MODULE_editoria11y_alter_config(array &$attach, CacheableMetadata $c
     $attach['allow_ok'] = 'okAll';
   }
 }--></code></pre>
-          <p data-i18n-id="s-2368"><code>drupalSettings</code> 수정은 모듈 JS가 이미 해당 값을 라이브러리에 전달하도록 설정되어 있는 경우에만 도움이 됩니다. 파라미터를 더 추가하려면 JS <code>options</code> 객체를 직접 수정해야 합니다. 모듈은 <code>editoria11yOptionsOverride</code>라는 하나의 전역 JS 변수를 확인합니다. 이것이 설정되면 모듈 또는 테마에서 제공한 <code>editoria11yOptions</code> 함수에 <code>options</code> 객체를 전달합니다. 이제 <a href="https://editorsally.ddev.site/en/install/#params">라이브러리 파라미터</a>를 모두 설정할 수 있습니다.</p>
+          <p data-i18n-id="s-2368"><code>drupalSettings</code> 수정은 모듈 JS가 이미 해당 값을 라이브러리에 전달하도록 설정되어 있는 경우에만 도움이 됩니다. 파라미터를 더 추가하려면 JS <code>options</code> 객체를 직접 수정해야 합니다. 모듈은 <code>editoria11yOptionsOverride</code>라는 하나의 전역 JS 변수를 확인합니다. 이것이 설정되면 모듈 또는 테마에서 제공한 <code>editoria11yOptions</code> 함수에 <code>options</code> 객체를 전달합니다. 이제 <a href="/en/install/#params">라이브러리 파라미터</a>를 모두 설정할 수 있습니다.</p>
           <pre class="language-javascript"><code><!--var editoria11yOptionsOverride = true;
 var editoria11yOptions = function(options) {
   // You now have access to the processed options object that will be passed to the library.

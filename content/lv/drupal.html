@@ -338,7 +338,7 @@ function MY_MODULE_editoria11y_alter_config(array &$attach, CacheableMetadata $c
   }
 }--></code></pre>
           <p data-i18n-id="s-2368"><code>drupalSettings</code> modificēšana palīdz tikai tad, ja moduļa JS jau ir iestatīts, lai nodotu šo vērtību bibliotēkai. Lai pievienotu papildu parametrus, jums ir jāmodificē JS <code>options</code> objekts tieši.
-            Modulis pārbauda vienu globālu JS mainīgo <code>editoria11yOptionsOverride</code>. Ja tas ir iestatīts, tas nodos <code>options</code> objektu <code>editoria11yOptions</code> funkcijai, ko esat nodrošinājis savā modulī vai tēmā. Tagad varat iestatīt jebkuru no <a               href="https://editorsally.ddev.site/en/install/#params">bibliotēkas parametriem</a>.</p>
+            Modulis pārbauda vienu globālu JS mainīgo <code>editoria11yOptionsOverride</code>. Ja tas ir iestatīts, tas nodos <code>options</code> objektu <code>editoria11yOptions</code> funkcijai, ko esat nodrošinājis savā modulī vai tēmā. Tagad varat iestatīt jebkuru no <a               href="/en/install/#params">bibliotēkas parametriem</a>.</p>
           <pre class="language-javascript"><code><!--var editoria11yOptionsOverride = true;
 var editoria11yOptions = function(options) {
   // You now have access to the processed options object that will be passed to the library.

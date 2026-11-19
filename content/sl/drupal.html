@@ -373,8 +373,7 @@ function MY_MODULE_editoria11y_alter_config(array &$attach, CacheableMetadata $c
 }--></code></pre>
           <p data-i18n-id="s-2368">Spreminjanje <code>drupalSettings</code> pomaga le, če je modul JS že nastavljen, da posreduje to vrednost
             knjižnici. Za dodajanje dodatnih parametrov morate neposredno spremeniti objekt JS <code>options</code>.
-            Modul preverja eno globalno spremenljivko JS <code>editoria11yConfig</code> za preglasitve pred
-            inicializacijo knjižnice.
+            Modul preverja eno globalno spremenljivko JS <code>editoria11yOptionsOverride</code>. Če je nastavljena, bo objekt <code>options</code> posredoval funkciji <code>editoria11yOptions</code>, ki ste jo zagotovili v svojem modulu ali temi. Zdaj lahko nastavite katerega koli od <a href="/en/install/#params">parametrov knjižnice</a>.
           </p>
           <pre class="language-javascript"><code><!--var editoria11yOptionsOverride = true;
 var editoria11yOptions = function(options) {

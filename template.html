@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="@@LANG@@" data-bs-theme="light">
+<html lang="@@LANG@@"@@DIR_ATTR@@ data-bs-theme="light">
 
 <head>
   <link rel="icon" type="image/png" href="/assets/favicons/favicon-512x512.png" sizes="512x512" />
@@ -17,7 +17,7 @@
   <meta property="og:description" content="@@OG_DESCRIPTION@@" />
   <meta property="og:image" content="@@OG_IMAGE@@" />
   <meta property="og:url" content="@@OG_URL@@" />
-  <link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="@@BOOTSTRAP_CSS@@" rel="stylesheet" />
   <link href="/assets/theme.css" rel="stylesheet" />
   <link href="/assets/prism/prism.css" rel="preload" as="style" onload="this.rel='stylesheet'" />
   <meta name="theme-color" content="#712cf9" />
@@ -94,10 +94,10 @@
             </svg> <strong>@@FOOTER_contacts@@</strong></a>
         </div>
         <div class="col col-12 subfooter">
-          <a href="@@LANG_PREFIX@@/privacy-policy/">@@LABEL_privacy-policy@@</a>
-          <a href="@@LANG_PREFIX@@/cookie-policy/">@@LABEL_cookie-policy@@</a>
-          <a href="@@LANG_PREFIX@@/terms-of-use/">@@LABEL_terms-of-use@@</a>
-          <a href="@@LANG_PREFIX@@/legal-notice/">@@LABEL_legal-notice@@</a>
+          <a href="/privacy-policy/" hreflang="en">@@LABEL_privacy-policy@@</a>
+          <a href="/cookie-policy/" hreflang="en">@@LABEL_cookie-policy@@</a>
+          <a href="/terms-of-use/" hreflang="en">@@LABEL_terms-of-use@@</a>
+          <a href="/legal-notice/" hreflang="en">@@LABEL_legal-notice@@</a>
           <span>&copy; 2026 Editoria11y LLC</span>
         </div>
       </div>

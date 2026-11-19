@@ -323,7 +323,7 @@ function MY_MODULE_editoria11y_alter_config(array &$attach, CacheableMetadata $c
     $attach['allow_ok'] = 'okAll';
   }
 }--></code></pre>
-          <p data-i18n-id="s-2368"><code>drupalSettings</code>'ı değiştirmek yalnızca modül JS'i bu değeri kütüphaneye iletecek şekilde zaten kurulmuşsa yardımcı olur. Ek parametreler eklemek için JS <code>options</code> nesnesini doğrudan değiştirmeniz gerekir. Modül, <code>editoria11yOptionsOverride</code> adında bir global JS değişkeni kontrol eder. Bu ayarlanmışsa modül veya temanda sağladığınız bir <code>editoria11yOptions</code> işlevine <code>options</code> nesnesini iletir. Artık <a href="https://editorsally.ddev.site/en/install/#params">kütüphane parametrelerinden</a> herhangi birini ayarlayabilirsiniz.</p>
+          <p data-i18n-id="s-2368"><code>drupalSettings</code>'ı değiştirmek yalnızca modül JS'i bu değeri kütüphaneye iletecek şekilde zaten kurulmuşsa yardımcı olur. Ek parametreler eklemek için JS <code>options</code> nesnesini doğrudan değiştirmeniz gerekir. Modül, <code>editoria11yOptionsOverride</code> adında bir global JS değişkeni kontrol eder. Bu ayarlanmışsa modül veya temanda sağladığınız bir <code>editoria11yOptions</code> işlevine <code>options</code> nesnesini iletir. Artık <a href="/en/install/#params">kütüphane parametrelerinden</a> herhangi birini ayarlayabilirsiniz.</p>
           <pre class="language-javascript"><code><!--var editoria11yOptionsOverride = true;
 var editoria11yOptions = function(options) {
   // You now have access to the processed options object that will be passed to the library.

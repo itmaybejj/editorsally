@@ -25,7 +25,7 @@ const defined_i18n = (() => {
    * and the build pipeline). Includes English plus every translation.
    */
   const allLanguages = [
-    'en', 'bg', 'cs', 'da', 'de', 'el', 'es', 'et', 'fi', 'fr', 'hu', 'id',
+    'en', 'ar', 'bg', 'cs', 'da', 'de', 'el', 'es', 'et', 'fi', 'fr', 'hu', 'id',
     'it', 'ja', 'ko', 'lt', 'lv', 'nb', 'nl', 'pl', 'pt-br', 'pt-pt', 'ro',
     'sk', 'sl', 'sv', 'tr', 'uk', 'zh',
   ];
@@ -35,6 +35,7 @@ const defined_i18n = (() => {
    */
   const nativeNames = {
     en: 'English',
+    ar: 'العربية',
     bg: 'Български',
     cs: 'Čeština',
     da: 'Dansk',
@@ -75,9 +76,24 @@ const defined_i18n = (() => {
   ];
 
   /**
+   * Pages published in English only. Every language links to the English
+   * page, and the build replaces any former translated URL with a redirect
+   * stub pointing at it. Their `paths` entries below are kept only so those
+   * legacy translated URLs keep resolving.
+   */
+  const englishOnlyPages = [
+    'privacy-policy', 'cookie-policy', 'terms-of-use', 'legal-notice',
+  ];
+
+  function isEnglishOnly(enSlug) {
+    return englishOnlyPages.includes(enSlug);
+  }
+
+  /**
    * Path mappings: English slug -> translated slug per language.
    * English is implicit (slug === slug). Only add entries where
-   * the translated slug differs from English.
+   * the translated slug differs from English. For English-only pages
+   * these are legacy slugs, used only to emit redirect stubs.
    *
    * Example for Spanish:
    *   es: { about: 'acerca', features: 'características', ... }
@@ -86,7 +102,7 @@ const defined_i18n = (() => {
    */
   const paths = {
     // Non-Latin-script languages keep English slugs for URL shareability:
-    // bg, el, ja, ko, uk, zh.
+    // ar, bg, el, ja, ko, uk, zh.
     cs: {
       features: 'funkce',
       contacts: 'kontakty',
@@ -366,6 +382,44 @@ const defined_i18n = (() => {
       close: 'Close',
       perYear: '/year',
       perMonth: '/month',
+    },
+    ar: {
+      label: {
+        about: 'نبذة',
+        features: 'الميزات',
+        news: 'الأخبار',
+        demo: 'عرض توضيحي',
+        contacts: 'التواصل',
+        install: 'التثبيت والإعداد',
+        drupal: 'وحدة Drupal',
+        license: 'ادعم المشروع',
+        'privacy-policy': 'سياسة الخصوصية',
+        'cookie-policy': 'سياسة ملفات تعريف الارتباط',
+        'terms-of-use': 'شروط الاستخدام',
+        'legal-notice': 'إشعار قانوني',
+      },
+      footer: {
+        library: 'المكتبة',
+        forum: 'المنتدى',
+        issues: 'البلاغات',
+        contacts: 'التواصل',
+      },
+      gettingStarted: 'ابدأ الآن',
+      wpLabel: 'إضافة WordPress',
+      toggleNav: 'إظهار القائمة أو إخفاؤها',
+      close: 'إغلاق',
+      perYear: '/سنويًا',
+      perMonth: '/شهريًا',
+      // Arabic picks the noun form by count: 3–10 take the plural (5 مواقع),
+      // 11–99 the accusative singular (25 موقعًا), 100+ the genitive
+      // singular (200 موقع).
+      sitesPlural: {
+        one: 'موقع',
+        two: 'موقعان',
+        few: 'مواقع',
+        many: 'موقعًا',
+        other: 'موقع',
+      },
     },
     es: {
       label: {
@@ -1184,6 +1238,19 @@ const defined_i18n = (() => {
   }
 
   /**
+   * Languages written right-to-left. Their pages get `dir="rtl"` on <html>
+   * and Bootstrap's RTL stylesheet.
+   */
+  const rtlLanguages = ['ar'];
+
+  /**
+   * Text direction for a language: `'rtl'` or `'ltr'`.
+   */
+  function getDir(lang) {
+    return rtlLanguages.includes(lang) ? 'rtl' : 'ltr';
+  }
+
+  /**
    * Get navigation strings for a language, falling back to English.
    */
   function getNav(lang) {
@@ -1203,8 +1270,10 @@ const defined_i18n = (() => {
    *   English other     → /<slug>/
    *   Other  about      → /<lang>/
    *   Other  other      → /<lang>/<translated-slug>/
+   *   English-only page → /<slug>/ regardless of language
    */
   function buildPath(lang, enSlug) {
+    if (isEnglishOnly(enSlug)) return `/${enSlug}/`;
     if (enSlug === 'about') return `${langPrefix(lang)}/`;
     return `${langPrefix(lang)}/${getPath(lang, enSlug)}/`;
   }
@@ -1213,11 +1282,14 @@ const defined_i18n = (() => {
     allLanguages,
     nativeNames,
     canonicalPaths,
+    englishOnlyPages,
+    isEnglishOnly,
     paths,
     nav,
     getPath,
     getCanonicalSlug,
     getNav,
+    getDir,
     langPrefix,
     buildPath,
   };

@@ -1,0 +1,324 @@
+<main class="container col-lg-12 mx-auto py-5">
+  <div class="row docs">
+    <div class="col-12 col-md-5 col-lg-4 mb-5">
+      <div id="on-this-page" class="list-group ms-2 ms-lg-5 position-sticky top-0 pt-3">
+      </div>
+    </div>
+    <div class="col-12 col-md-7 col-lg-8 pt-3" data-bs-spy="scroll" data-bs-target="#on-this-page"
+      data-bs-smooth-scroll="true">
+      <h1 data-i18n-id="s-fe89">التثبيت والإعداد</h1>
+
+      <section id="modules">
+        <h2 class="pt-3 pb-2" data-i18n-id="s-6f09">إصدارات جاهزة الإعداد</h2>
+        <ul class="list-unstyled ps-0">
+          <li data-i18n-id="s-a850"><a href="https://www.drupal.org/project/editoria11y" class="arrow"><strong>التثبيت على Drupal</strong></a></li>
+          <li data-i18n-id="s-c7b0"><a href="https://wordpress.org/plugins/editoria11y-accessibility-checker/" class="arrow"><strong>التثبيت على WordPress</strong></a></li>
+          <li data-i18n-id="s-128f"><a href="https://codeberg.org/sebastiangreger/kirby-a11yprompter" class="arrow"><strong>التثبيت على Kirby</strong></a> <em>(مساهمة من المجتمع)</em></li>
+          <li data-i18n-id="s-4002"><a href="https://plugins.craftcms.com/editoria11y" class="arrow"><strong>التثبيت على CraftCMS</strong></a> <em>(مساهمة من المجتمع)</em></li>
+        </ul>
+      </section>
+      <section id="diy">
+        <h2 data-i18n-id="s-cef2">التثبيت المخصص</h2>
+        <p data-i18n-id="s-df5a" data-og="description">لبناء تكاملك الخاص، <a href="https://github.com/itmaybejj/editoria11y" data-type="URL" data-id="https://github.com/itmaybejj/editoria11y" class="liinternal">نزّل نسخة محلية</a> (أو أشِر إلى <a href="https://cdn.jsdelivr.net/gh/itmaybejj/editoria11y@3/dist/js/ed11y.umd.min.js" class="liinternal">نسخة على CDN</a>) من حزمة لغة، وملف JS المصغَّر، وملف CSS المصغَّر، ثم أنشئ مثيلًا جديدًا من «Ed11y».</p>
+        <p data-i18n-id="s-4e8a">عند <strong>استيراد وحدات ESM/JS</strong>: </p>
+        <pre class="language-markup"><code><!--// Load CSS
+<link href="/dist/css/editoria11y.min.css?v=3.0" rel="stylesheet">
+// Load JS and language pack
+<script type="module">
+  import Ed11y from "/dist/js/ed11y.esm.min.js?v=3.0";
+  import ed11yLang from "/dist/js/lang/en.js";
+  // Instantiate with language and CSS
+  const ed11y = new Ed11y.Ed11y({
+    lang: 'en',
+    cssUrls: ["/dist/css/editoria11y.min.css"]
+  });
+</script>
+--></code></pre>
+        <p data-i18n-id="s-b7f0">استخدم ملفات JavaScript ذات الامتداد .umd مع المتصفحات والأنظمة القديمة:</p>
+        <pre class="language-markup"><code><!--
+// Call CSS, JS and a Language Pack
+<link href="https://cdn.jsdelivr.net/gh/itmaybejj/editoria11y@3.0.1/dist/css/editoria11y.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/gh/itmaybejj/editoria11y@3.0.1/dist/js/ed11y.umd.min.js"></script>;
+<script src="https://cdn.jsdelivr.net/gh/itmaybejj/editoria11y@3.0.1/dist/js/lang/en.umd.js"></script>
+// Create a new Ed11y instance
+<script>
+  const ed11y = new Ed11y.Ed11y({
+    lang: 'en',
+    cssUrls: ["https://cdn.jsdelivr.net/gh/itmaybejj/editoria11y@3.0.1/dist/css/editoria11y.min.css"]
+  });
+</script>
+                --></code></pre>
+      </section>
+
+      <section id="params">
+        <h2 data-i18n-id="s-c50b">المعاملات</h2>
+        <p data-i18n-id="s-6877">لا يُستدعى التكامل المكتمل إلا للمحررين المسجَّل دخولهم (فأنت لا تريد أن يرى زوار موقعك المدقق!)، ويمكنه تجاوز أيٍّ من <a href="https://github.com/itmaybejj/editoria11y/blob/3.0.x/src/js/utils/ed11y-default-options.js" class="liinternal"><strong>المعاملات الافتراضية</strong></a>.</p>
+        <p data-i18n-id="s-084e">لاحظ أن لجميع المعاملات قيمًا افتراضية؛ لذا لا تُضمِّن إلا ما تريد تجاوزه.</p>
+        <p data-i18n-id="s-a20c">قد يبدو التكامل المخصَّص بدرجة كبيرة على هذا النحو:</p>
+        <pre class="language-javascript"><code><!--const ed11y = new Ed11y.Ed11y({
+  // Define content regions
+  checkRoot: 'main, .footer-content-zone',
+  // Add custom CSS files
+  cssUrls: [
+    '/css/editoria11y.min.css',
+    '/css/custom.css'
+  ],
+  // Define Web components to include in checks
+  shadowComponents: 'accordion, lightbox',
+  // We want the box to open automatically for errors:
+  alertMode: 'assertive',
+  // Our external link icon has visually hidden text
+  // to delete before checking if the link has text:
+  linkIgnoreStrings: ['(opens in new window)'],
+  // Content editors cannot edit these elements:
+  ignoreElements: 'nav *, #social-block',
+  // Prevent this user from hiding alerts.
+  allowHide: false,
+  allowOK: true,
+  // Don't scan while the editor toolbar is open:
+  preventCheckingIfPresent: ".editor-toolbar",
+  // Turn off warnings that an element might be visually hidden:
+  checkVisible: false,
+  // Dispatch a JS event before highlighting this,
+  // so our JS can modify it first:
+  hiddenHandlers: ".accordion-panel",
+  // Dispatch a JS event when the library is ready
+  // for custom tests, then wait for 3 ed11yResume
+  // events from our 3 tests to continue.
+  customTests: 3,
+  checks: {
+    // Turn off the HEADING_FIRST test
+    HEADING_FIRST: false,
+    // Allow dismissing the HEADING_SKIPPED_LEVEL test
+    HEADING_SKIPPED_LEVEL: {
+       type: 'warning',
+    }
+  }
+
+}); --></code></pre>
+        <p data-i18n-id="s-18e0">كثيرًا ما تضبط التكاملات الجاهزة هذه المتغيرات أثناء التشغيل، فمثلًا تُحمِّل الصفحات في الوضع «assertive» إذا عُدِّلت مؤخرًا، ثم تعود إلى الوضع «polite» بعد عدة دقائق.</p>
+      </section>
+
+      <section id="theme">
+        <h2 data-i18n-id="s-6c0a">تخصيص المظهر</h2>
+
+        <p data-i18n-id="s-e058">تتيح عدة معاملات اختيار قالب، وتجاوز الألوان، وحقن CSS.</p>
+
+        <p data-i18n-id="s-ebc7">لا تُضمِّن إلا المعاملات التي تحتاج إلى تجاوزها، لتسهيل التحديثات المستقبلية.</p>
+        <pre           class="language-javascript"><code><!--// Add custom CSS file
+cssUrls: ['/css/editoria11y.min.css', '/css/custom.css'],
+theme : 'darkTheme', // Select base theme
+darkTheme: {         // Override base colors
+    bg: '#0a2051',
+    bgHighlight: '#7b1919',
+    text: '#f4f7ff',
+    primary: '#4930a0',
+    primaryText: '#f4f7ff',
+    secondary: '#20160c',
+    warning: '#fad859',
+    alert: '#b80519',
+    button: '#dde8ff',
+    focusRing: 'cyan',
+    activeTab: '#0a2051',
+    tipHeader: '#4930a0',
+},
+// Override fonts
+baseFontSize: 14, // px
+baseFontFamily: '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif', --></code></pre>
+      </section>
+
+      <section id="js-events">
+        <h2           class="wp-block-heading has-text-align-left has-secondary-background-color has-background has-large-font-size"
+          data-i18n-id="s-4568">أحداث JS مفيدة</h2>
+
+        <p data-i18n-id="s-3ca2">يمكن لمطوري القوالب الاستماع إلى هذه الأحداث للتفاعل معها وتعديل الصفحة حسب الحاجة.</p>
+
+        <p data-i18n-id="s-2fb1">بترتيب ظهورها المعتاد…</p>
+
+        <ul class="wp-block-list">
+          <li data-i18n-id="s-abfb"><strong><code>ed11yRunCustomTests</code></strong>: يُطلَق عندما يصبح كائن Results جاهزًا لحقن نتائج مخصصة فيه. لاحظ أنه يجب ضبط المعامل customTests على عدد دوال الاختبارات المخصصة التي ستشغّلها (…على الأرجح دالة واحدة…) كي يُطلَق هذا الحدث. التفاصيل في القسم التالي.</li>
+
+          <li data-i18n-id="s-16d6"><strong><code>ed11yResults</code></strong>: يُطلَق عند انتهاء جميع الفحوصات. يمكن لتكاملات API حينئذٍ استخراج البيانات من الكائن Ed11y.results.</li>
+
+          <li data-i18n-id="s-5693"><strong><code>ed11yPanelOpened</code></strong>: يُطلَق عند فتح اللوحة، تلقائيًا أو يدويًا.</li>
+
+          <li data-i18n-id="s-4100"><strong><code>ed11yShowHidden</code></strong>: يوفّر رقم <code>data-ed11y-result</code> وقيمة منطقية <code>viaJump</code>. لا يُطلَق إلا إذا ضُبط المعامل «ed11yShowHidden» <em><strong>و</strong></em>كان أحد العناصر الأصل للعنصر يطابق محددًا. يُستخدم لإظهار التنبيهات الموجودة داخل حاويات لم تُفتح بعد، مثل الأكورديونات وعلامات التبويب ودوّارات الشرائح. أمثلة الاستخدام في القسم التالي.</li>
+
+          <li data-i18n-id="s-20be"><strong><code>ed11yPop</code></strong>: يوفّر قيمة ID من <code>data-ed11y-result</code>، إضافةً إلى مراجع للكائنين <code>result</code> و<code>tip</code>. يُطلَق عند ظهور تلميح، مما يتيح لك تعديل التلميحات أثناء التشغيل.</li>
+
+          <li data-i18n-id="s-a26b"><strong><code>ed11yShut</code></strong>: يوفّر قيمة ID من <code>data-ed11y-result</code>. يُطلَق عند إغلاق تلميح.</li>
+
+          <li><span data-translate data-i18n-id="s-4631"><strong><code>ed11yDismissalUpdate</code></strong>: يوفّر معلومات موسّعة عندما يتجاهل مستخدم تنبيهًا أو يستعيده. يُستخدم لتكاملات API. يحتوي كائن الحدث على:</span>
+            <ul>
+              <li data-i18n-id="s-a6bd"><code>dismissPage</code></li>
+
+              <li data-i18n-id="s-754f"><code>dismissTest</code></li>
+
+              <li data-i18n-id="s-0a00"><code>dismissKey</code></li>
+
+              <li data-i18n-id="s-c8b0"><code>dismissAction</code></li>
+            </ul>
+          </li>
+        </ul>
+        <p data-i18n-id="s-ec32">ستجد أمثلة في الأقسام التالية.</p>
+      </section>
+
+      <section id="modify-tips">
+        <h2 class="wp-block-heading has-secondary-background-color has-background has-large-font-size"
+          data-i18n-id="s-ac90">تعديل التلميحات</h2>
+
+        <p data-i18n-id="s-edfa">إذا كان كل ما تريده هو تعديل نص تلميح، فيمكنك تجاوز العناصر مباشرةً في الكائن العام ed11yLang.en (قبل استدعاء المكتبة) أو في الكائن Ed11y.M (بعد استدعاء المكتبة). على سبيل المثال، في وحدة Drupal حيث جعلنا Drupal.ed11yLang اسمًا مستعارًا لحزمة اللغة:</p>
+
+        <p data-i18n-id="s-c4d7"><code>Drupal.ed11yLang.lang.testNames.title = "Please write shorter headings."</code></p>
+
+        <p data-i18n-id="s-f0b0">ينطبق هذا على أيٍّ من <a href="https://github.com/itmaybejj/editoria11y/blob/3.0.x/src/lang/baseAll.js" data-type="link" data-id="https://github.com/itmaybejj/editoria11y/blob/2.3.x/js/ed11y-localization.js" class="liinternal">المفاتيح الافتراضية في ملف التوطين</a> أو في الترجمة النشطة الخاصة باللغة.</p>
+
+        <p data-i18n-id="s-842f">تضيف وحدة Drupal أيضًا روابط تحرير مخصصة إلى التلميحات باستخدام المعامل <code>editLinks</code>. لاحظ الرابطين «Page editor» و«Layout editor»:</p>
+
+        <figure class="wp-block-image size-full"><img loading="lazy" data-recalc-dims="1" fetchpriority="high" decoding="async" width="580" height="300" src="https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?resize=580%2C300&amp;ssl=1" alt="تلميح أُدرج فيه رابطا «Page editor» و«Layout editor»." class="wp-image-523" srcset="https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?w=1290&amp;ssl=1 1290w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?resize=600%2C311&amp;ssl=1 600w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?resize=768%2C398&amp;ssl=1 768w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2025/01/edit-links.png?resize=1200%2C621&amp;ssl=1 1200w" sizes="(max-width: 580px) 100vw, 580px" data-i18n-id="s-6d4d" /></figure>
+
+        <p data-i18n-id="s-bcd2">نسخة مبسطة من الشيفرة التي تضبط هذا المعامل:</p>
+        <pre class="language-javascript"><code><!--const editLinks = document.createElement('div');
+const editLink = document.createElement('a');
+      editLink.href="/node/1/edit";
+      editLink.textContent = "Edit page";
+editLinks.appendChild(editLink);
+const ed11y = new Ed11y({
+               editLinks: editLinks,
+              }); --></code></pre>
+        <p data-i18n-id="s-14d9">ثم تستخدم وحدة Drupal الحدث <strong><code>ed11yPop</code></strong> لإظهار رابط التحرير أو إخفائه ديناميكيًا حسب السياق عند عرض التلميحات. </p>
+
+        <p data-i18n-id="s-78f4">يوفّر هذا الحدث مراجع للكائنين <code>result</code> و<code>tip</code>:</p>
+        <pre class="language-javascript"><code><!--// Listen for event
+document.addEventListener('ed11yPop', e => {
+  if (e.detail.result.element.closest(
+    drupalSettings.editoria11y.hide_edit_links)
+  ) {
+      e.detail.tip.shadowRoot.querySelector(
+        '.ed11y-custom-edit-links'
+        )?.setAttribute('hidden', '');
+     }
+}); --></code></pre>
+      </section>
+
+      <section id="custom-tests">
+        <h2 data-i18n-id="s-794a">الاختبارات المخصصة</h2>
+
+        <p data-i18n-id="s-921d">إذا كانت قيمة المعامل <strong><em>customTests</em></strong> <strong><em>رقمًا</em></strong>، فسيُطلق Editoria11y الحدث «ed11yRunCustomTests» أثناء الفحص، ثم يتوقف مؤقتًا لمدة تصل إلى 500 ميلي ثانية منتظرًا ذلك العدد من أحداث «<code>ed11yResume</code>».</p>
+
+        <p data-i18n-id="s-a897">يمكنك الاستفادة من ذلك لاستدعاء أي عدد تريده من السكربتات التي تحتوي على اختبارات مخصصة، بحيث تضيف نتائجها إلى مصفوفة النتائج قبل رسم التلميحات.</p>
+
+        <p data-i18n-id="s-820a">على سبيل المثال، إذا أردت إنشاء هذا التلميح للإشارة إلى الروابط الملصوقة من رسائل البريد الإلكتروني بعناوين URL مموّهة:</p>
+
+        <figure class="wp-block-image size-full"><img loading="lazy" data-recalc-dims="1" decoding="async" width="580" height="462" src="https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2023/12/Screenshot-2023-12-06-at-5.13.38-PM.png?resize=580%2C462&amp;ssl=1" alt="تلميح نصه «URL is Safe Link Encoded»" class="wp-image-323" srcset="https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2023/12/Screenshot-2023-12-06-at-5.13.38-PM.png?w=1056&amp;ssl=1 1056w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2023/12/Screenshot-2023-12-06-at-5.13.38-PM.png?resize=600%2C478&amp;ssl=1 600w, https://i0.wp.com/editoria11y.princeton.edu/wp-content/uploads/sites/915/2023/12/Screenshot-2023-12-06-at-5.13.38-PM.png?resize=768%2C612&amp;ssl=1 768w" sizes="(max-width: 580px) 100vw, 580px" data-i18n-id="s-f6c3" /></figure>
+
+        <p data-i18n-id="s-a3f5">ستحتاج إلى:</p>
+
+        <ol class="wp-block-list">
+          <li data-i18n-id="s-7c1e">إضافة مستمع للحدث <code>ed11yRunCustomTests</code></li>
+
+          <li data-i18n-id="s-b8b0">البحث عن العناصر المطابقة</li>
+
+          <li data-i18n-id="s-3ff7">تعريف رسالة التلميح</li>
+
+          <li data-i18n-id="s-181b">إطلاق الحدث «resume» ليرسم Editoria11y التلميح:</li>
+        </ol>
+
+        <pre class="language-javascript"><code><!--document.addEventListener('ed11yRunCustomTests', function() {
+  // 1. Write your custom test. This can be anything you want.
+  //
+  // This example searches the active root using the .getElements() function,
+  // which is aware of the checkRoots and ignoreElements parameters.
+  const safeLinks = Drupal.Ed11y.getElements('a[href*="safelinks.protection.outlook.com/?"]', 'root');
+
+  // This is just a utility function for this particular test...
+  const decodeSafelink = function(url) {
+      const params = new URL(url).searchParams;
+      let decoded = params.get('url');
+      if (!!decoded) {
+            decoded = Ed11y.sanitizeForHTML(decoded);
+            return `<p>The actual URL may be:<br><em style='word-wrap: break-word;'>${decoded}</em></p>`
+      }
+      return '';
+  }
+
+  // 2. Create your tip
+  // Add a title to the active language pack:
+  Drupal.ed11yLang.lang.testNames.outlookSafeLink = 'URL is Safe Link encoded';
+  const myContent = `<div class="title">Please fix the URL in this link</div>
+               ${decodeSafelink(el.href)}
+               <div class="why">
+                <p>The URL for this link is an Outlook "Safe Link" that was copied from an email.
+                It includes the original recipient's email address,
+                and will break if Microsoft shuts down the service.</p>
+                <p>The pasted URL is:<br>
+                <em style='word-break: break-all;font-size: 90%;line-height: 1.2;
+                display: block;'>${Drupal.Ed11y.sanitizeHTML(el.href)}</em></p>
+               </div>
+            `;
+
+  // 3. Push each item you want flagged to Ed11y.results.
+  //
+  // You must provide:
+  //   element:      The element itself
+  //   test:         A key for your test, matching step 2.
+  //   type:         warning or error
+  //   content:      The tip as a DOM node (was raw HTML in v2)
+  //   position:     "beforebegin" for interactive elements,
+  //                 "afterbegin" for paragraphs and table cells.
+  //   dismiss:      false for errors,
+  //                 a unique string for manual checks.
+  safeLinks?.forEach((el) => {
+   Drupal.Ed11y.State.results.push({
+     element:  el,
+     test:     'outlookSafeLink',
+     type:     'error',
+     content:  myContent,
+     position: 'beforebegin',
+     dismiss:  false,
+   });
+  });
+  // 4. When you are done with all your custom tests, dispatch an "ed11yResume" event:
+  let allDone = new CustomEvent('ed11yResume');
+  document.dispatchEvent(allDone);
+}) --></code></pre>
+      </section>
+
+      <section id="hidden-content">
+        <h2 data-i18n-id="s-a67a">التعامل مع التنبيهات في المحتوى المخفي أو محدود الحجم</h2>
+
+
+        <p data-i18n-id="s-be6c">تُخفي كثير من المكونات التفاعلية (علامات التبويب، وشرائح العرض، والأكورديونات) جزءًا من المحتوى. تتضمن لوحة معلومات Editoria11y زرَّي «التالي» و«السابق» للانتقال مباشرةً إلى المشكلات. إذا قدّر Editoria11y أن تلميح المشكلة غير ظاهر حاليًا، فسينبّه المستخدم إلى وجود خلل، ثم يُبرز أول عنصر أصل ظاهر، مثل عنصر div المحيط بالأكورديون.</p>
+
+        <p data-i18n-id="s-4f58">من الأفضل أن يُظهر قالبك تلك العناصر قبل أن يجري Editoria11y فحص الظهور، فيعمل كل شيء كالسحر لمستخدميك: تتقدم دوّارات الشرائح تلقائيًا وتنفتح الأكورديونات تلقائيًا لعرض المشكلة.</p>
+
+        <p data-i18n-id="s-7e11">لفعل ذلك عند فتح اللوحة أول مرة (مثل فتح <strong><em>جميع</em></strong> لوحات الأكورديون التي تحتوي على مشكلات)، أضف مستمع أحداث JS للحدث <code>ed11yPanelOpened</code>، ثم نفّذ querySelectorAll للعثور على عناصر <code>ed11y-element-result</code> المعنية، ثم استدعِ الدالة التي يستخدمها قالبك لإظهار ذلك الجزء من الصفحة.</p>
+
+        <p data-i18n-id="s-1c3f">إليك مثالًا يعتمد على jQuery. عند فتح اللوحة، يعطّل المثال قائمة مثبّتة (حتى لا تُغطّى العناصر)، ثم يبحث عن أي عناصر <code>ed11y-element-result</code> داخل عناصر أكورديون مغلقة ويحاكي النقر على زر التبديل الخاص بها:</p>
+        <pre class="language-javascript"><code><!--document.addEventListener("ed11yPanelOpened", function () {
+  $('body').addClass('no-stick');
+  $('ed11y-element-result').each(function () {
+    if ($(this).parents('.ps-accordion-content[style*="display"]').length > 0) {
+    $(this).parents('.ps-accordion-content').prev().find('.ps-accordion-item-button').click();
+    }
+}) --></code></pre>
+
+        <p data-i18n-id="s-fbae">لإظهار المحتوى فقط عند الانتقال إلى تلميح <strong><em>محدد</em></strong> عبر زر «التالي» في اللوحة (مثلًا في علامة تبويب مغلقة أو في الشريحة التالية من دوّار الشرائح)، ستحتاج إلى ضبط <code>hiddenHandlers</code> على محددات CSS المناسبة، وضبط <code>checkVisible</code> على TRUE في معاملاتك. ثم أضف مستمع أحداث للحدث <code>ed11yShowHidden</code>. يُطلَق هذا الحدث إذا تبيّن لـ Editoria11y أن التلميح موجود داخل حاوية تطابق أحد محددات <code>hiddenHandlers</code> المذكورة في قائمة الخيارات. يتضمن حدث JS هذا قيمة ID للتلميح الذي يوشك على فتحه. بعد إطلاق هذا الحدث، يتوقف Editoria11y برهةً ليمنح شيفرة JS لديك الوقت الكافي لإظهار العنصر.</p>
+
+        <p data-i18n-id="s-dae0">إليك مثالًا من تكامل لدى Penn State. يبحث المثال عن العنصر المطابق لقيمة ID المقدَّمة، ثم يعثر على الحاوية الأصل للمكوّن التفاعلي الذي يضمه، ويُطلق الحدث الخاص بها لتفعيل زر التبديل:</p>
+        <pre class="language-javascript"><code><!--context.addEventListener('ed11yShowHidden', e => {
+  if (!e.detail.viaJump) {
+       return;
+  }
+  context.getElementById(e.detail.id)
+    .closest('[data-interactive-component]')
+    .dispatchEvent(new CustomEvent('component:activate'));
+}); --></code></pre>
+        <p data-i18n-id="s-d99d">ملاحظة أخيرة: بعض القوالب لا تتوافق ببساطة مع فحص الظهور، كأن يكون ارتفاع الحاوية <code>&lt;main&gt;</code> مساويًا 0px. على هذه المواقع تعطيل فحص الظهور كليًا بضبط <code>checkVisible</code> على false.</p>
+
+      </section>
+
+    </div><!-- End content column -->
+
+  </div>
+</main>
